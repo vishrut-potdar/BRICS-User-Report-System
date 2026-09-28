@@ -1,0 +1,95 @@
+{
+  "generator": "scripts/generate_synthetic.py",
+  "licence": "CC-BY-4.0",
+  "pack": "IN-MH",
+  "seed": 42,
+  "as_of": "2026-09-28T18:00:00+05:30",
+  "window_days": 45,
+  "n_records": 1402,
+  "n_organic": 1202,
+  "brigade": {
+    "admin_code": "IN-MH-PUNE",
+    "district": "Pune",
+    "sector": "roads",
+    "n_messages": 200,
+    "n_senders": 12,
+    "window_start": "2026-09-25T13:00:00+05:30",
+    "window_minutes": 30,
+    "h3_cells": [
+      "876088424ffffff"
+    ],
+    "main_cluster_id": "IN-MH-PUNE.roads.876088424ffffff"
+  },
+  "records_by_district": {
+    "Pune": 434,
+    "Mumbai Suburban": 243,
+    "Thane": 154,
+    "Mumbai City": 79,
+    "Nagpur": 76,
+    "Nashik": 53,
+    "Kolhapur": 38,
+    "Aurangabad": 33,
+    "Jalgaon": 24,
+    "Ahmednagar": 22,
+    "Solapur": 21,
+    "Raigad": 18,
+    "Sangli": 18,
+    "Satara": 18,
+    "Latur": 14,
+    "Amravati": 11,
+    "Nanded": 11,
+    "Akola": 10,
+    "Buldhana": 10,
+    "Chandrapur": 10,
+    "Palghar": 10,
+    "Ratnagiri": 10,
+    "Yavatmal": 9,
+    "Dhule": 8,
+    "Gondia": 7,
+    "Parbhani": 7,
+    "Sindhudurg": 7,
+    "Wardha": 7,
+    "Beed": 6,
+    "Bhandara": 6,
+    "Jalna": 6,
+    "Osmanabad": 6,
+    "Nandurbar": 5,
+    "Gadchiroli": 4,
+    "Hingoli": 4,
+    "Washim": 3
+  },
+  "assumptions": {
+    "connectivity": {
+      "IN-MH-MUMBAI_CITY": 4.0,
+      "IN-MH-MUMBAI_SUBURBAN": 4.0,
+      "IN-MH-PUNE": 3.5,
+      "IN-MH-THANE": 3.0,
+      "IN-MH-NAGPUR": 2.5,
+      "IN-MH-NASHIK": 1.8,
+      "IN-MH-AURANGABAD": 1.8,
+      "IN-MH-KOLHAPUR": 1.5
+    },
+    "lang_mix_urban": {
+      "mr": 0.25,
+      "hi": 0.2,
+      "hi-Latn": 0.3,
+      "en": 0.25
+    },
+    "lang_mix_rural": {
+      "mr": 0.45,
+      "hi": 0.25,
+      "hi-Latn": 0.2,
+      "en": 0.1
+    },
+    "location_tiers": {
+      "A": 0.6,
+      "B": 0.25,
+      "C": 0.15
+    },
+    "channels": {
+      "whatsapp": 0.7,
+      "web": 0.2,
+      "telegram": 0.1
+    }
+  }
+}
