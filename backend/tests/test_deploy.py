@@ -17,7 +17,8 @@ import index
 
 client = TestClient(index.app)
 out = {path: client.get(path).status_code for path in ["/", "/admin", "/app.css", "/map.js", "/packs", "/config"]}
-out["ranked_in_maharashtra"] = len(client.get("/rankings", params={"pack": "IN-MH", "limit": 50}).json()["items"])
+out["health"] = client.get("/health").json()
+out["ranked_in_maharashtra"] =len(client.get("/rankings", params={"pack": "IN-MH", "limit": 50}).json()["items"])
 out["ingest"] = client.post("/ingest", json={"text": "No water for 5 days", "pack": "IN", "admin_code": "IN-MH-PUNE"}).status_code
 print(json.dumps(out))
 """
@@ -32,6 +33,7 @@ def test_vercel_entrypoint_serves_pages_and_seeded_data():
     assert result.returncode == 0, result.stderr[-2000:]
     out = json.loads(result.stdout.strip().splitlines()[-1])
     assert all(out[p] == 200 for p in ["/", "/admin", "/app.css", "/map.js", "/packs", "/config"]), out
+    assert out["health"]["pages"] is True and out["health"]["data"] is True, out["health"]
     assert out["ranked_in_maharashtra"] > 0, "synthetic demo data should be preloaded on Vercel"
     assert out["ingest"] == 201
 

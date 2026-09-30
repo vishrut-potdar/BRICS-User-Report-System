@@ -168,8 +168,14 @@ def create_app(settings: Settings | None = None, container: Container | None = N
     # --- meta ------------------------------------------------------------------------------------
 
     @app.get("/health")
-    def health() -> dict[str, str]:
-        return {"status": "ok", "version": __version__}
+    def health() -> dict[str, Any]:
+        """Liveness plus a deployment check: are the pages and the region data present on this server?"""
+        return {
+            "status": "ok",
+            "version": __version__,
+            "pages": all((FRONTEND / name).is_file() for name in ("index.html", "admin.html", "app.css", "map.js")),
+            "data": (settings.data_dir / "packs").is_dir() and any((settings.data_dir / "packs").glob("*.json")),
+        }
 
     @app.get("/packs")
     def packs() -> list[dict[str, Any]]:

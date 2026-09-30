@@ -3,7 +3,8 @@
   "functions": {
     "index.py": {
       "maxDuration": 30,
-      "excludeFiles": "{backend/tests/**,backend/scripts/**,docs/**,data/raw/**,data/cache/**,data/store/**,**/__pycache__/**,start.ps1,start.bat,Dockerfile}"
+      "excludeFiles": "{backend/tests/**,backend/scripts/**,docs/**,data/raw/**,data/cache/**,data/store/**,**/__pycache__/**,start.ps1,start.bat,Dockerfile}",
+      "includeFiles": "{frontend/**,data/packs/**,data/reference/**,data/processed/**,data/synthetic/**,backend/app/**}"
     }
   }
 }
