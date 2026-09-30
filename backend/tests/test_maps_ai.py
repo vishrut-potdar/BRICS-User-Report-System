@@ -214,3 +214,16 @@ def test_local_store_write_failure_keeps_serving(tmp_path, monkeypatch):
     monkeypatch.setattr("pathlib.Path.open", lambda *a, **k: (_ for _ in ()).throw(OSError(30, "Read-only file system")))
     request = CivicRequest(channel="web", lang="en", text_original="x", text_en="x", category="water", geo=Geo(), requester_hash="h")
     assert repo.add_many([request]) == 1 and repo.get(request.id) is not None  # accepted, kept in memory
+
+
+def test_refused_google_key_falls_back_to_nominatim():
+    import httpx
+
+    def handler(request):
+        if "googleapis" in str(request.url):
+            return httpx.Response(200, json={"status": "REQUEST_DENIED", "error_message": "This API is not activated"})
+        return httpx.Response(200, json=[{"lat": "21.14", "lon": "79.08", "addresstype": "suburb", "display_name": "Sitabuldi"}])
+
+    geocoder = Geocoder("google", google_key="k", http=httpx.Client(transport=httpx.MockTransport(handler)))
+    hit = geocoder.geocode("Sitabuldi", "IN", "Maharashtra")
+    assert hit is not None and hit.label == "Sitabuldi" and geocoder.name == "nominatim"

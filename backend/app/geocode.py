@@ -28,6 +28,14 @@ NOMINATIM_COARSE = frozenset(
 )
 
 
+# Google answers these when the key cannot be used (Geocoding API not enabled, no billing, quota gone).
+GOOGLE_REFUSED = frozenset({"REQUEST_DENIED", "OVER_DAILY_LIMIT", "OVER_QUERY_LIMIT"})
+
+
+class GoogleRefused(Exception):
+    pass
+
+
 @dataclass(frozen=True)
 class GeocodeHit:
     lat: float
@@ -63,7 +71,14 @@ class Geocoder:
         if key in self._cache:
             return self._cache[key]
         try:
-            hit = self._google(query, country, region) if self.name == "google" else self._nominatim(query, country, region)
+            try:
+                hit = self._google(query, country, region) if self.name == "google" else self._nominatim(query, country, region)
+            except GoogleRefused as exc:
+                # A refused key would otherwise make every place "not found"; say why once and use OpenStreetMap.
+                log.error("Google Geocoding refused the key (%s); using OpenStreetMap Nominatim instead. Enable the "
+                          "Geocoding API for this key in Google Cloud and restart to use Google.", exc)
+                self.name = "nominatim"
+                hit = self._nominatim(query, country, region)
         except (httpx.HTTPError, ValueError, KeyError) as exc:
             log.warning("geocoding failed (%s): %s", self.name, exc)
             return None
@@ -77,6 +92,8 @@ class Geocoder:
         response = self._http.get(GOOGLE_URL, params={"address": query, "components": components, "key": self._key})
         response.raise_for_status()
         data = response.json()
+        if data.get("status") in GOOGLE_REFUSED:
+            raise GoogleRefused(f"{data.get('status')}: {data.get('error_message', '')[:160]}")
         if data.get("status") != "OK" or not data.get("results"):
             return None
         top = data["results"][0]

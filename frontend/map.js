@@ -96,7 +96,20 @@
   const toLeaflet = s => ({fillColor:s.fill, fillOpacity:s.fillOpacity, color:s.stroke, weight:s.weight, opacity:s.opacity ?? 1});
 
   /* ---------------- Google Maps ---------------- */
+  // Google reports a rejected key (API not enabled, wrong referrer, no billing) through gm_authFailure and an error
+  // overlay, not through a failed script load, so both are watched.
+  let googleRejected = false;
+  const prevAuthFailure = window.gm_authFailure;
+  window.gm_authFailure = () => { googleRejected = true; if (prevAuthFailure) prevAuthFailure(); };
+  // Some key problems (ApiNotActivatedMapError, BillingNotEnabledMapError...) are only reported as a console error.
+  const consoleError = console.error;
+  console.error = function(...args){
+    if (args.some(a => /Google Maps JavaScript API error: \w+MapError/.test(String(a)))) googleRejected = true;
+    return consoleError.apply(this, args);
+  };
+
   async function google(el, key){
+    if (googleRejected) throw new Error('Google Maps key was rejected earlier');
     if (!window.google?.maps?.Map){
       await new Promise((ok, fail) => {
         window.__vvMapsReady = ok;
@@ -106,6 +119,21 @@
     const g = window.google.maps;
     const map = new g.Map(el, {center:{lat:20, lng:78}, zoom:4, mapId:'DEMO_MAP_ID', gestureHandling:'greedy',
       streetViewControl:false, mapTypeControl:false, fullscreenControl:false, clickableIcons:false});
+    // Wait until the map really draws; give up on a rejected key so the caller can fall back to OpenStreetMap.
+    // Google can report "tiles loaded" for its blank placeholder tiles and log the key error just after, so a short
+    // grace period follows tilesloaded before the map is trusted.
+    await new Promise((ok, fail) => {
+      const started = Date.now();
+      let loadedAt = null;
+      g.event.addListenerOnce(map, 'tilesloaded', () => { loadedAt = Date.now(); });
+      const poll = setInterval(() => {
+        const broken = googleRejected || el.querySelector('.gm-err-container, .gm-err-message');
+        if (broken){ clearInterval(poll); fail(new Error('Google Maps rejected the key (see the console for the reason)')); }
+        else if (loadedAt && Date.now() - loadedAt > 1500){ clearInterval(poll); ok(); }
+        // Nothing drawn at all: a key without the Maps JavaScript API enabled behaves like this.
+        else if (Date.now() - started > 8000){ clearInterval(poll); fail(new Error('Google Maps did not draw within 8 s')); }
+      }, 150);
+    });
     const points = new g.Data({map});
     let pins = [], marker = null, styleFn = null, tipFn = null;
     const tip = document.createElement('div'); tip.className = 'vv-tip vv-gtip'; el.appendChild(tip);
@@ -143,8 +171,8 @@
         pins.forEach(m => m.map = null);
         pins = list.map(p => {
           const div = document.createElement('div'); div.innerHTML = pinHtml(p);
-          const m = new g.marker.AdvancedMarkerElement({map, position:{lat:p.lat, lng:p.lon}, content:div.firstChild, zIndex:p.cls?.includes('on') ? 1000 : 1});
-          if (p.onClick) m.addListener('click', p.onClick);
+          const m = new g.marker.AdvancedMarkerElement({map, position:{lat:p.lat, lng:p.lon}, content:div.firstChild, zIndex:p.cls?.includes('on') ? 1000 : 1, gmpClickable:!!p.onClick});
+          if (p.onClick) m.addEventListener('gmp-click', p.onClick);
           return m;
         });
       },
@@ -169,7 +197,11 @@
       const key = config?.maps?.provider === 'google' && config.maps.browser_key;
       if (key){
         try { return await google(el, key); }
-        catch (e) { console.warn('Google Maps failed to load, using OpenStreetMap instead.', e); }
+        catch (e) {
+          console.warn('Google Maps is unavailable, using OpenStreetMap instead:', e.message);
+          const fresh = el.cloneNode(false);  // drop Google's leftovers; same id and classes
+          el.replaceWith(fresh); el = fresh;
+        }
       }
       return leaflet(el);
     }
