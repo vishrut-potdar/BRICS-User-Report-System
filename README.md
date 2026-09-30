@@ -169,6 +169,18 @@ Every read endpoint takes `?pack=<PACK_ID>` (default `PACK_ID`).
 | GET | `/requests`, `/requests/{id}` | Redacted request list (review queue: `?status=needs_review`) |
 | GET | `/export/aggregates.csv`, `.geojson` | Anonymised aggregates (`level=district\|h3`), groups under 5 people suppressed |
 
+## Deploy (Vercel)
+
+Import the GitHub repository in Vercel and keep **Root Directory at the repository root** (not `backend`), framework
+preset FastAPI or Other. `pyproject.toml` points Vercel at `index.py`, which serves the API, the portal and the
+dashboard together; `vercel.json` keeps tests and docs out of the bundle.
+
+Vercel's filesystem is read-only, so on Vercel the app keeps complaints in memory, preloaded with the synthetic demo
+data (`REPOSITORY=memory`, `SEED_SYNTHETIC=1` by default when `VERCEL` is set). New complaints last only as long as a
+function instance does; for durable storage set `REPOSITORY=firestore` with Google Cloud credentials. In Project
+Settings → Environment Variables, set at least `ADMIN_TOKEN` and `PHONE_HASH_SALT`, plus `GEMINI_API_KEY` and
+`GOOGLE_MAPS_BROWSER_KEY` if you have them.
+
 ## Deploy (Cloud Run)
 
 ```bash

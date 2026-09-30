@@ -1,0 +1,21 @@
+# Deployment metadata for Vercel (and any tool that reads pyproject.toml).
+# Local development uses backend/requirements*.txt via start.ps1; keep the two dependency lists in sync
+# (backend/tests/test_deploy.py checks this).
+[project]
+name = "vikas-vaani"
+version = "0.2.0"
+description = "Citizen complaint portal and government dashboard ranking public works for BRICS countries"
+requires-python = ">=3.12"
+dependencies = [
+    "fastapi>=0.115",
+    "uvicorn[standard]>=0.30",
+    "pydantic>=2.8",
+    "httpx>=0.27",
+    "h3>=4.1",
+    "google-genai>=1.0",
+    "google-cloud-firestore>=2.16",
+]
+
+[tool.vercel]
+# index.py adds backend/ to the import path and exposes the FastAPI app.
+entrypoint = "index:app"

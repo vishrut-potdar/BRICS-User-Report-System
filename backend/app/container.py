@@ -33,6 +33,16 @@ class Region:
     demand: DemandService
 
 
+def seed_from_synthetic(repo: RequestRepository, path) -> int:
+    """Load a pack's shipped synthetic complaints (serverless demos, where nothing persists on disk)."""
+    from .models import CivicRequest
+
+    if not path or not path.is_file():
+        return 0
+    with path.open(encoding="utf-8") as fh:
+        return repo.add_many(CivicRequest.model_validate_json(line) for line in fh if line.strip())
+
+
 def build_repository(settings: Settings, pack_id: str) -> RequestRepository:
     if settings.repository == "memory":
         return LocalRepository(None)
@@ -71,6 +81,8 @@ class Container:
                 self.config(pack_id)  # raises UnknownPack
                 ctx = load_pack(self.settings.data_dir, pack_id)
                 repo = build_repository(self.settings, pack_id)
+                if self.settings.seed_synthetic and self.settings.repository == "memory":
+                    seed_from_synthetic(repo, self.settings.data_dir / self.config(pack_id)["files"].get("synthetic_requests", ""))
                 self._regions[pack_id] = Region(
                     ctx=ctx,
                     repo=repo,

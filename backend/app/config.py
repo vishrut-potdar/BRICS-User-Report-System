@@ -39,6 +39,7 @@ class Settings:
     gemini_api_key: str | None = None
     gemini_model: str = "gemini-2.5-flash"
     repository: str = "local"  # local | memory | firestore
+    seed_synthetic: bool = False  # preload each pack's synthetic complaints into memory (serverless demos)
     local_store_dir: Path = REPO_ROOT / "data" / "store"  # one <dir>/<pack>/requests.jsonl per pack
     firestore_collection: str = "requests"  # one collection per pack: <name>_<pack>
     phone_hash_salt: str = DEV_SALT
@@ -69,7 +70,9 @@ class Settings:
             language_provider=env("LANGUAGE_PROVIDER", "gemini" if gemini_key else "offline"),
             gemini_api_key=gemini_key,
             gemini_model=env("GEMINI_MODEL", cls.gemini_model),
-            repository=env("REPOSITORY", "local"),
+            # On Vercel the filesystem is read-only: default to memory, preloaded with the demo complaints.
+            repository=env("REPOSITORY", "memory" if os.environ.get("VERCEL") else "local"),
+            seed_synthetic=env("SEED_SYNTHETIC", "1" if os.environ.get("VERCEL") else "0").lower() in ("1", "true", "yes"),
             local_store_dir=_path(env("LOCAL_STORE_DIR", "data/store")),
             firestore_collection=env("FIRESTORE_COLLECTION", "requests"),
             phone_hash_salt=env("PHONE_HASH_SALT", DEV_SALT),
