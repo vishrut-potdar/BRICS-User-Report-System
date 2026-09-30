@@ -53,6 +53,8 @@ class Settings:
     telegram_bot_token: str | None = None
     telegram_webhook_secret: str | None = None
     export_min_requesters: int = 5
+    admin_token: str | None = None  # when set, officials' actions need the X-Admin-Token header
+    rate_limit_scale: float = 1.0  # multiplies the per-minute limits in security.LIMITS; 0 disables them
     cors_origins: tuple[str, ...] = ("*",)
 
     @classmethod
@@ -82,6 +84,8 @@ class Settings:
             telegram_bot_token=env("TELEGRAM_BOT_TOKEN"),
             telegram_webhook_secret=env("TELEGRAM_WEBHOOK_SECRET"),
             export_min_requesters=int(env("EXPORT_MIN_REQUESTERS", "5")),
+            admin_token=env("ADMIN_TOKEN"),
+            rate_limit_scale=float(env("RATE_LIMIT_SCALE", "1")),
             cors_origins=tuple(o.strip() for o in env("CORS_ORIGINS", "*").split(",") if o.strip()),
         )
         if settings.phone_hash_salt == DEV_SALT:

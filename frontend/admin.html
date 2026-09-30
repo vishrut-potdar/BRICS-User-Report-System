@@ -8,6 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Geist:wght@400;500;600&family=Geist+Mono:wght@500&family=Noto+Sans+Devanagari:wght@400;500&display=swap">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 rx=%279%27 fill=%27%235E51BD%27/%3E%3Ctext x=%2716%27 y=%2722%27 font-size=%2718%27 text-anchor=%27middle%27 fill=%27white%27 font-family=%27Georgia%27%3EV%3C/text%3E%3C/svg%3E">
 <link rel="stylesheet" href="app.css">
 <style>
 .hbar{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
@@ -109,7 +110,7 @@ main.grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:14px;p
 .list button:hover{background:var(--sel)}
 .list button span:last-child{color:var(--muted);white-space:nowrap}
 .alert{box-shadow:0 0 0 1px #F2C9BD;background:#FFF8F5}
-.btn.ai{background:linear-gradient(135deg,#5E51BD,#8B7FD6);color:#fff}
+.btn.ai{background:linear-gradient(135deg,#5E51BD,#6C5FC7);color:#fff}
 .btn.ai:hover{filter:brightness(1.06)}
 .linkai{border:0;background:var(--sel);color:var(--selText);height:30px;border-radius:999px;padding:0 12px;font-size:12px;font-weight:500;white-space:nowrap}
 .linkai:hover{background:var(--lilac)}
@@ -165,6 +166,7 @@ dialog.brief::backdrop{background:rgba(38,43,64,.35)}
 </section>
 
 <main class="grid" id="app" hidden>
+  <h1 class="sr">Government dashboard: citizen demand ranked for public works</h1>
   <section class="tile t-map" aria-label="Map of citizen demand">
     <div class="mhead">
       <nav class="crumbs" id="crumbs" aria-label="Area"></nav>
@@ -175,7 +177,7 @@ dialog.brief::backdrop{background:rgba(38,43,64,.35)}
       </div>
     </div>
     <div class="map" id="map">
-      <div id="mapCanvas" role="application" aria-label="Map of the selected area"></div>
+      <div id="mapCanvas" role="region" aria-label="Map of complaints in the selected area. The priority list has the same problems in text."></div>
       <button type="button" class="fitbtn" id="zfit"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></svg>Fit area</button>
       <div class="legend" id="legend"></div>
       <div class="maploading" id="mapLoading">Loading map…</div>
@@ -186,7 +188,7 @@ dialog.brief::backdrop{background:rgba(38,43,64,.35)}
   <section class="tile t-rank" aria-label="Ranked problems">
     <div class="rhead">
       <div><h2>Priority</h2><div class="sub" id="rankSub">Fixed formula, public weights</div>
-        <button type="button" class="linkai" id="aiArea" style="margin-top:8px">✨ Brief me on this area</button></div>
+        <button type="button" class="linkai" id="aiArea" style="margin-top:8px"><span aria-hidden="true">✨ </span>Brief me on this area</button></div>
       <div class="seg" id="presetSeg" role="group" aria-label="Weighting">
         <span class="thumb"></span>
         <button type="button" data-v="volume">Volume</button>
@@ -209,7 +211,7 @@ dialog.brief::backdrop{background:rgba(38,43,64,.35)}
     <div style="display:flex;align-items:flex-end;gap:10px"><span class="big" id="sScore">0</span><span class="sub" id="sRank" style="padding-bottom:6px"></span></div>
     <div class="bars" id="sBars"></div>
     <div class="why"><div id="sWhy"></div><small>Explained from the score inputs. AI reads the messages but never sets the rank.</small></div>
-    <div><button type="button" class="btn ai" id="aiCluster">✨ AI brief on this problem</button></div>
+    <div><button type="button" class="btn ai" id="aiCluster"><span aria-hidden="true">✨ </span>AI brief on this problem</button></div>
   </section>
 
   <section class="tile t-act" aria-label="Citizen voice and actions">
@@ -267,8 +269,15 @@ dialog.brief::backdrop{background:rgba(38,43,64,.35)}
 const RM = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 const $ = s => document.querySelector(s);
 const esc = t => String(t ?? '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
-async function api(path, opts){
+function adminToken(){ try { return sessionStorage.getItem('vv-admin-token') || ''; } catch (e) { return ''; } }
+async function api(path, opts = {}, retried){
+  const tok = adminToken();
+  if (tok) opts = {...opts, headers:{...(opts.headers || {}), 'X-Admin-Token':tok}};
   const r = await fetch(path, opts);
+  if (r.status === 401 && !retried){
+    const t = window.prompt('This action needs the admin token (ADMIN_TOKEN on the server):');
+    if (t){ try { sessionStorage.setItem('vv-admin-token', t.trim()); } catch (e) {} return api(path, opts, true); }
+  }
   if (!r.ok){ let msg = r.status + ''; try { msg = (await r.json()).detail || msg; } catch (e) {} throw new Error(msg); }
   return r.json();
 }
@@ -327,14 +336,18 @@ const areaCode = () => (S.view === S.country ? S.state : S.unit) || null;
 async function loadPack(id, force){
   if (CACHE[id] && !force) return CACHE[id];
   const q = 'pack=' + encodeURIComponent(id);
-  const [meta, geo, ranked, all, dists, silent, points] = await Promise.all([
+  const [meta, geo, ranked, dists, silent, points] = await Promise.all([
     api('/meta?' + q), CACHE[id]?.geo || api('/boundaries?' + q), api('/rankings?' + q + '&preset=balanced&limit=5000&sensitivity=false'),
-    api('/rankings?' + q + '&preset=volume_only&limit=5000&sensitivity=false'), api('/districts?' + q), api('/districts/silent?' + q + '&k=4'), api('/points?' + q)]);
+    api('/districts?' + q), api('/districts/silent?' + q + '&k=4'), api('/points?' + q)]);
   const d = {id, meta, geo, dists, silent, distBy:Object.fromEntries(dists.map(x => [x.admin_code, x])), unitBy:Object.fromEntries(meta.units.map(u => [u.admin_code, u]))};
   PRESETS.balanced.w = W8(meta.presets.balanced); PRESETS.equity.w = W8(meta.presets.equity_first);
   d.P = ranked.items.map((c, i) => fromCluster(c, i, d));
   d.byId = Object.fromEntries(d.P.map(p => [p.id, p]));
-  d.all = all.items;
+  // Top issue per unit, counted once from the complaint points (the tooltip asks for it on every hover)
+  d.topIssue = {};
+  const counts = {};
+  points.points.forEach(p => { const c = counts[p[5]] ||= {}; c[p[2]] = (c[p[2]] || 0) + 1; });
+  Object.entries(counts).forEach(([code, c]) => { d.topIssue[code] = Object.entries(c).sort((a, b) => b[1] - a[1])[0][0]; });
   d.points = points.points;  // [lat, lon, sector, urgency, status, admin_code], rounded to ~100 m
   CACHE[id] = d; return d;
 }
@@ -520,10 +533,7 @@ function unitNeed(code){
   if (S.cat !== 'all') return n[S.cat] ?? 0;
   const v = Object.values(n); return v.length ? v.reduce((x, y) => x + y, 0) / v.length : 0;
 }
-function topIssue(code){
-  const t = {}; D().all.forEach(c => { if (c.admin_code === code) t[c.sector] = (t[c.sector] || 0) + c.n_requesters; });
-  const best = Object.entries(t).sort((a, b) => b[1] - a[1])[0]; return best ? SECTOR[best[0]][0] : null;
-}
+function topIssue(code){ const k = D().topIssue[code]; return k ? SECTOR[k][0] : null; }
 function buildMap(){
   const d = D(), pilots = new Set(S.packs.filter(p => p.parent === S.view).map(p => p.pack_id));
   MAP.setAreas(d.geo, {

@@ -111,6 +111,10 @@ Settings come from environment variables or a repo-root `.env`: `GEMINI_API_KEY`
 `LOCAL_STORE_DIR` (default `data/store`, one `<PACK>/requests.jsonl` per pack). Without `GEMINI_API_KEY`, an offline
 keyword stub is used: text only, no translation, no voice, and template briefings instead of AI ones. Don't demo with it.
 
+Security: set `ADMIN_TOKEN` to require the `X-Admin-Token` header for officials' actions (status changes, AI
+briefings); the dashboard asks for it once per session. Without it those actions are open (fine locally, never in
+production). `RATE_LIMIT_SCALE` scales the per-client limits on intake, AI and place search (default 1; 0 disables).
+
 Maps and place search:
 
 | Setting | Effect |
@@ -186,6 +190,11 @@ instead, which serves the shipped synthetic sets directly (the container disk is
 - The API never returns requester hashes or original text; exports are aggregates with k ≥ 5 suppression.
 - The LLM never computes or overrides a score; rankings are recommendations for human review. AI briefings see only
   redacted summaries and score inputs.
+- HTTP hardening: security headers and a Content-Security-Policy on the pages, integrity-pinned Leaflet, per-client
+  rate limits (429 with Retry-After), a 10 MB cap on audio, and citizen text fenced off as data in AI prompts so a
+  complaint cannot instruct the model.
+- Accessibility: WCAG AA colour contrast throughout, labelled controls, live regions for results, a text alternative to
+  the map (the priority list), and reduced-motion support.
 - Complaint locations shown on maps are rounded to about 100 m. Typed places are sent to the geocoder (Google or
   OpenStreetMap Nominatim) without any other complaint data.
 - Free-tier Gemini inputs may be used to improve Google's models: use only synthetic data on it; production would run

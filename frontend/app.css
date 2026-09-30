@@ -1,8 +1,8 @@
 /* Shared tokens and components for the citizen portal (index.html) and the government dashboard (admin.html). */
 :root{
-  --bg:#F6F4FB; --tile:#FFFFFF; --inset:#F1EEF9; --line:#E7E2F2; --text:#262B40; --muted:#626879; --faint:#8C90A0;
+  --bg:#F6F4FB; --tile:#FFFFFF; --inset:#F1EEF9; --line:#E7E2F2; --text:#262B40; --muted:#626879; --faint:#646A7B;
   --sel:#E4DEFA; --selText:#3B2F7A; --peri:#8B7FD6; --periDeep:#5E51BD; --lilac:#CFC6FA;
-  --coral:#C2584A; --peach:#FFB4A2; --peachBg:#FFEDE6; --rust:#8A3B22; --mint:#2E8B63; --mintBg:#E3F3EA;
+  --coral:#B04535; --peach:#FFB4A2; --peachBg:#FFEDE6; --rust:#8A3B22; --mint:#1F7050; --mintBg:#E3F3EA;
   --sea:#E9EEF7; --land:#F7F5FC; --landLine:#CFC8E3;
   --sans: Geist, "Noto Sans", "Noto Sans Devanagari", "Noto Sans SC", system-ui, sans-serif;
   --serif: Fraunces, "Noto Serif", Georgia, serif;
@@ -64,7 +64,7 @@ h1,h2,h3{font-family:var(--serif);font-weight:500;letter-spacing:-.015em;margin:
 
 /* map pieces shared by both pages and both map providers (map.js) */
 .vv-pin{background:none;border:0}
-.pin{position:absolute;transform:translate(-50%,-100%);min-width:26px;height:26px;border-radius:999px 999px 999px 4px;border:2px solid #fff;background:var(--peri);color:#fff;font:600 11.5px/1 var(--sans);display:grid;place-items:center;padding:0 6px;box-shadow:0 3px 8px rgba(38,43,64,.3);cursor:pointer;white-space:nowrap}
+.pin{position:absolute;transform:translate(-50%,-100%);min-width:26px;height:26px;border-radius:999px 999px 999px 4px;border:2px solid #fff;background:#6C5FC7;color:#fff;font:600 11.5px/1 var(--sans);display:grid;place-items:center;padding:0 6px;box-shadow:0 3px 8px rgba(38,43,64,.3);cursor:pointer;white-space:nowrap}
 .pin.top{background:var(--coral)}
 .pin.on{background:var(--selText);transform:translate(-50%,-100%) scale(1.2);z-index:2}
 .dropper{position:absolute;width:26px;height:26px;transform:translate(-50%,-100%) rotate(-45deg);transform-origin:center;border-radius:50% 50% 50% 0;background:var(--coral);border:3px solid #fff;box-shadow:0 3px 10px rgba(38,43,64,.35);margin-top:-6px}

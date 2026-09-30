@@ -10,8 +10,9 @@
      onMapClick(fn(lat, lon)), center(lat, lon, zoom), resize()
 */
 (function(){
-  const LEAFLET_CSS = 'https://unpkg.com/leaflet@1.9.4/dist/leaflet.css';
-  const LEAFLET_JS = 'https://unpkg.com/leaflet@1.9.4/dist/leaflet.js';
+  // Pinned version with subresource integrity: a tampered CDN copy will not run.
+  const LEAFLET_CSS = {href:'https://unpkg.com/leaflet@1.9.4/dist/leaflet.css', integrity:'sha384-sHL9NAb7lN7rfvG5lfHpm643Xkcjzp4jFvuavGOndn6pjVqS6ny56CAt3nsEVT4H'};
+  const LEAFLET_JS = {src:'https://unpkg.com/leaflet@1.9.4/dist/leaflet.js', integrity:'sha384-cxOPjt7s7Iz04uaHJceBmS+qpjv2JkIHNVcuOrM+YHwZOmJGBXI00mdUXEq65HTH'};
   // Standard OpenStreetMap tiles: free with attribution for light use (https://operations.osmfoundation.org/policies/tiles/).
   // For heavy traffic, point this at your own tile server or set a Google Maps key.
   const TILES = 'https://tile.openstreetmap.org/{z}/{x}/{y}.png';
@@ -23,11 +24,15 @@
     document.head.appendChild(el);
   });
   const polys = g => !g ? [] : g.type === 'Polygon' ? [g.coordinates] : g.type === 'MultiPolygon' ? g.coordinates : [];
-  const pinHtml = p => '<div class="pin ' + (p.cls || '') + '" title="' + (p.title || '').replace(/"/g, '&quot;') + '">' + p.label + '</div>';
+  const esc = t => String(t ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;', '<':'&lt;', '>':'&gt;', '"':'&quot;', "'":'&#39;'}[c]));
+  const pinHtml = p => '<div class="pin ' + esc(p.cls) + '" title="' + esc(p.title) + '">' + esc(p.label) + '</div>';
 
   /* ---------------- Leaflet (OpenStreetMap) ---------------- */
   async function leaflet(el){
-    if (!window.L){ await load('link', {rel:'stylesheet', href:LEAFLET_CSS}); await load('script', {src:LEAFLET_JS}); }
+    if (!window.L){
+      await load('link', {rel:'stylesheet', crossOrigin:'anonymous', ...LEAFLET_CSS});
+      await load('script', {crossOrigin:'anonymous', ...LEAFLET_JS});
+    }
     const L = window.L;
     const map = L.map(el, {preferCanvas:true, zoomSnap:.25, worldCopyJump:false, attributionControl:true});
     L.tileLayer(TILES, {attribution:ATTRIB, maxZoom:19}).addTo(map);
@@ -46,7 +51,7 @@
           style: f => styleFn ? toLeaflet(styleFn(f.properties.admin_code)) : {},
           onEachFeature: (f, layer) => {
             const code = f.properties.admin_code; byCode[code] = layer;
-            if (tip) layer.bindTooltip(() => tip(code), {sticky:true, direction:'top', className:'vv-tip'});
+            if (tip) layer.bindTooltip(() => esc(tip(code)), {sticky:true, direction:'top', className:'vv-tip'});  // tooltips render HTML
             if (onClick) layer.on('click', () => onClick(code));
           }
         }).addTo(map);

@@ -19,8 +19,9 @@ import logging
 import threading
 from typing import Any, Literal
 
-from fastapi import BackgroundTasks, FastAPI, HTTPException, Query, Request, Response
+from fastapi import BackgroundTasks, Depends, FastAPI, HTTPException, Query, Request, Response
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.middleware.gzip import GZipMiddleware
 from fastapi.responses import FileResponse, PlainTextResponse
 from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel, Field
@@ -35,6 +36,7 @@ from .ingest import country_for_number
 from .models import public_view
 from .taxonomy import Sector
 from .scoring import COMPONENTS, PRESETS, VOLUME_ONLY, Weights
+from .security import RateLimit, SecurityHeaders, admin_guard
 from .taxonomy import SECTOR_DESCRIPTIONS
 
 log = logging.getLogger(__name__)
@@ -47,7 +49,7 @@ AGGREGATE_FIELDS = ("admin_code", "district", "sector", "h3", "lat", "lon", "n_r
 
 class IngestIn(BaseModel):
     text: str | None = Field(default=None, max_length=4000)
-    audio_base64: str | None = Field(default=None, description="Base64 audio (ogg/opus, mp3, wav, webm)")
+    audio_base64: str | None = Field(default=None, max_length=14_000_000, description="Base64 audio (ogg/opus, mp3, wav, webm), up to about 10 MB")
     audio_mime: str | None = None
     sender_id: str | None = Field(default=None, description="Optional stable ID for the submitter; hashed before storage")
     lat: float | None = Field(default=None, ge=-90, le=90)
@@ -121,6 +123,10 @@ def create_app(settings: Settings | None = None, container: Container | None = N
         description="Multilingual citizen demand → district fusion → transparent, equity-weighted priorities, for BRICS countries.",
     )
     app.add_middleware(CORSMiddleware, allow_origins=list(settings.cors_origins), allow_methods=["*"], allow_headers=["*"])
+    app.add_middleware(GZipMiddleware, minimum_size=1024)  # boundaries and rankings shrink about 5x
+    app.add_middleware(RateLimit, per_minute_scale=settings.rate_limit_scale)
+    app.add_middleware(SecurityHeaders)
+    require_admin = Depends(admin_guard(settings.admin_token))
 
     holder: dict[str, Container | None] = {"c": container}
     build_lock = threading.Lock()
@@ -201,6 +207,7 @@ def create_app(settings: Settings | None = None, container: Container | None = N
             "maps": {"provider": "google" if key else "osm", "browser_key": key},
             "geocoder": c().geocoder.name,
             "ai": {"provider": provider, "enabled": provider == "gemini"},
+            "admin_token_required": bool(settings.admin_token),
         }
 
     def region_for(country_pack: str | None, admin_code: str | None) -> Region:
@@ -252,7 +259,7 @@ def create_app(settings: Settings | None = None, container: Container | None = N
         except Exception as exc:  # the provider could not read it; the citizen can still file
             raise HTTPException(422, f"could not read the text: {exc}") from exc
 
-    @app.post("/assist/brief")
+    @app.post("/assist/brief", dependencies=[require_admin])
     def assist_brief(body: BriefIn) -> dict[str, Any]:
         """A short briefing for officials, on one cluster or on a whole area. It never changes the ranking."""
         region = reg(body.pack)
@@ -374,7 +381,7 @@ def create_app(settings: Settings | None = None, container: Container | None = N
             raise HTTPException(404, "cluster not found")
         return view
 
-    @app.post("/clusters/{cluster_id}/status")
+    @app.post("/clusters/{cluster_id}/status", dependencies=[require_admin])
     def set_cluster_status(cluster_id: str, body: StatusIn, pack: str | None = None) -> dict[str, Any]:
         """Officials move a whole cluster along (forwarded, in progress, resolved). Every request in it, and its
         copies in the country's other packs, get the new status, so citizens see it when they track their ID.
