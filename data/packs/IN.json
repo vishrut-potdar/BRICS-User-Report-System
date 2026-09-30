@@ -1,0 +1,195 @@
+{
+  "pack_id": "IN",
+  "country": "IN",
+  "country_name": "India",
+  "level": "country",
+  "parent": null,
+  "region_iso": "IN",
+  "region_name": "India",
+  "unit_label": "state",
+  "unit_label_plural": "states",
+  "priority_label": null,
+  "languages": [
+    "hi",
+    "en",
+    "hi-Latn",
+    "mr"
+  ],
+  "channels": [
+    "whatsapp",
+    "telegram",
+    "web"
+  ],
+  "h3_resolution": 5,
+  "utc_offset": "+05:30",
+  "files": {
+    "district_reference": "reference/IN/units.csv",
+    "boundaries_geojson": "reference/IN/boundaries.geojson",
+    "settlements": "reference/IN/settlements.csv",
+    "indicators": "processed/IN/indicators.csv",
+    "indicators_long": "processed/IN/indicators_long.csv",
+    "planned_projects": "processed/IN/planned_projects.csv",
+    "synthetic_requests": "synthetic/IN/requests.jsonl"
+  },
+  "equity_metric": "mpi_headcount",
+  "metrics": {
+    "mpi_headcount": {
+      "description": "Share of population multidimensionally poor (headcount ratio, 0-1)",
+      "expected_source": "NITI Aayog National MPI: Progress Review 2023 (NFHS-5, 2019-21), state and district tables",
+      "licence": "Public report; cite NITI Aayog"
+    },
+    "jjm_tap_coverage": {
+      "description": "Share of rural households with a functional household tap connection (0-1)",
+      "expected_source": "Jal Jeevan Mission dashboard, ejalshakti.gov.in",
+      "licence": "Public dashboard; cite Ministry of Jal Shakti"
+    },
+    "nfhs5_improved_sanitation": {
+      "description": "Share of households using an improved sanitation facility (0-1)",
+      "expected_source": "NFHS-5 (2019-21) state and district fact sheets, rchiips.org/nfhs",
+      "licence": "Public; cite IIPS/MoHFW"
+    },
+    "road_unconnected_share": {
+      "description": "Share of habitations/villages without all-weather road access (0-1)",
+      "expected_source": "PMGSY OMMS reports (omms.nic.in) or Census 2011 village amenities",
+      "licence": "Public; cite MoRD / Census of India (GODL)"
+    },
+    "nfhs5_institutional_births": {
+      "description": "Share of births in a health facility (0-1); proxy for health access",
+      "expected_source": "NFHS-5 (2019-21) fact sheets",
+      "licence": "Public; cite IIPS/MoHFW"
+    },
+    "udise_school_infra_gap": {
+      "description": "Share of schools lacking a functional girls' toilet or electricity (0-1)",
+      "expected_source": "UDISE+ report cards, udiseplus.gov.in",
+      "licence": "Public; cite Ministry of Education"
+    },
+    "nfhs5_hh_electricity": {
+      "description": "Share of households with electricity (0-1)",
+      "expected_source": "NFHS-5 (2019-21) fact sheets",
+      "licence": "Public; cite IIPS/MoHFW"
+    }
+  },
+  "need": {
+    "water": {
+      "metric": "jjm_tap_coverage",
+      "invert": true
+    },
+    "sanitation": {
+      "metric": "nfhs5_improved_sanitation",
+      "invert": true
+    },
+    "roads": {
+      "metric": "road_unconnected_share",
+      "invert": false
+    },
+    "health": {
+      "metric": "nfhs5_institutional_births",
+      "invert": true
+    },
+    "education": {
+      "metric": "udise_school_infra_gap",
+      "invert": false
+    },
+    "electricity": {
+      "metric": "nfhs5_hh_electricity",
+      "invert": true
+    },
+    "waste": {
+      "metric": "mpi_headcount",
+      "invert": false
+    },
+    "other": {
+      "metric": "mpi_headcount",
+      "invert": false
+    }
+  },
+  "placeholder": {
+    "_note": "Shapes deterministic PLACEHOLDER values until real files exist in data/raw/<pack>/. These tiers are rough assumptions, not data, and every placeholder value is flagged in the outputs and the API.",
+    "deprivation_tiers": {
+      "high": [
+        "IN-AS",
+        "IN-BR",
+        "IN-CT",
+        "IN-JH",
+        "IN-ML",
+        "IN-MP",
+        "IN-OR",
+        "IN-RJ",
+        "IN-UP"
+      ],
+      "low": [
+        "IN-CH",
+        "IN-DL",
+        "IN-GA",
+        "IN-HP",
+        "IN-KL",
+        "IN-LD",
+        "IN-MZ",
+        "IN-PB",
+        "IN-PY",
+        "IN-SK",
+        "IN-TN"
+      ]
+    },
+    "metrics": {
+      "mpi_headcount": [
+        0.02,
+        0.35
+      ],
+      "jjm_tap_coverage": [
+        0.95,
+        -0.45
+      ],
+      "nfhs5_improved_sanitation": [
+        0.92,
+        -0.45
+      ],
+      "road_unconnected_share": [
+        0.02,
+        0.22
+      ],
+      "nfhs5_institutional_births": [
+        0.98,
+        -0.25
+      ],
+      "udise_school_infra_gap": [
+        0.03,
+        0.3
+      ],
+      "nfhs5_hh_electricity": [
+        0.995,
+        -0.12
+      ]
+    }
+  },
+  "synthetic": {
+    "n": 1500,
+    "lang_mix": {
+      "hi": 0.35,
+      "hi-Latn": 0.3,
+      "en": 0.35
+    },
+    "lang_mix_by_unit": {
+      "IN-MH": {
+        "mr": 0.4,
+        "hi": 0.2,
+        "hi-Latn": 0.2,
+        "en": 0.2
+      }
+    },
+    "connectivity": {
+      "IN-DL": 3.0,
+      "IN-MH": 2.5,
+      "IN-KA": 2.5,
+      "IN-TG": 2.2,
+      "IN-TN": 2.0,
+      "IN-GJ": 2.0,
+      "IN-KL": 1.8,
+      "IN-WB": 1.5
+    },
+    "brigade": {
+      "admin_code": "IN-DL",
+      "lang": "hi-Latn"
+    }
+  }
+}

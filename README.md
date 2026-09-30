@@ -1,11 +1,14 @@
-# Civic Demand Platform
+# Vikas Vaani: Civic Demand Platform
 
 **Build with AI: Code for Communities 2.0 · BRICS Track 1 (Innovation)**
 
-India resolves individual grievances fast. Nobody can tell a district which 10 projects to fund next, or whether
-the loudest requests are the neediest. This is the planning layer above grievance systems such as CPGRAMS:
+Governments resolve individual grievances fast. Nobody can tell a district which 10 projects to fund next, or whether
+the loudest requests are the neediest. This is the planning layer above grievance systems (CPGRAMS in India, Ouvidorias
+in Brazil, Gosuslugi in Russia, 12345 hotlines in China, Presidential Hotline in South Africa), for all five BRICS
+countries:
 
-1. Citizens send a WhatsApp/Telegram voice note or text in Marathi, Hindi, Hinglish or English.
+1. Citizens file on the **web portal** or send a WhatsApp/Telegram voice note or text, in their own language
+   (Portuguese, Russian, Hindi, Marathi, Chinese, English, isiZulu, isiXhosa, Afrikaans…).
 2. Gemini transcribes, translates, classifies and extracts places (it classifies; it never scores).
 3. Requests are geo-resolved to district and H3 cell and clustered.
 4. Clusters are fused with district need indicators (MPI, NFHS-5, Jal Jeevan Mission…) and planned investments.
@@ -13,8 +16,33 @@ the loudest requests are the neediest. This is the planning layer above grievanc
    and a score breakdown for every project.
 6. Citizens get a tracking ID in their own language; anonymised aggregates are exported as open data.
 
-> **Demo data is synthetic.** Every request under `data/synthetic/` has `synthetic: true`, and district indicators are
-> flagged placeholders until real extracts land in `data/raw/` (see [docs/data-sources.md](docs/data-sources.md)).
+> **Demo data is synthetic.** Every request under `data/synthetic/` has `synthetic: true`, and indicators are
+> flagged placeholders until real extracts land in `data/raw/<PACK>/` (see [docs/data-sources.md](docs/data-sources.md)).
+> Boundaries and populations are real (geoBoundaries, Kontur, IBGE and Census of India; see
+> [data/LICENSE-DATA.md](data/LICENSE-DATA.md)).
+
+## Two faces, one app
+
+| Page | Who | What |
+|---|---|---|
+| `/` citizen portal | residents | Choose your country once (the portal stays set to it), your state and city (remembered as your area), a category, then describe the problem by text or voice, optionally with GPS. You get a tracking ID and an acknowledgement in your language, and can track status later |
+| `/admin` government dashboard | officials | Choose the country, then a state, then a district or city: the map zooms to that area and shows only its problems, ranked. Switch weightings (volume, balanced, equity), read the score breakdown, see silent areas and flagged campaigns, and approve or change status. Status changes reach every citizen in the cluster |
+
+## Coverage
+
+Each country has a **country view** (units are states or provinces) and a **district-level pilot** in one of its
+poorest regions:
+
+| Country | Country view | Pilot (district level) |
+|---|---|---|
+| Brazil | 27 states | Alagoas, 102 municipalities |
+| Russia | 83 federal subjects | Tuva, 17 kozhuuns and 2 cities |
+| India | 36 states and UTs | Maharashtra, 36 districts |
+| China | 31 mainland provinces | Ningxia, 19 counties |
+| South Africa | 9 provinces | Eastern Cape, 6 districts and 2 metros |
+
+A complaint is interpreted once and filed into both views: the country view (by state) always, the pilot view
+(by district) when it falls inside the pilot. WhatsApp messages are routed to a country by calling code.
 
 ## Architecture
 
@@ -22,17 +50,17 @@ the loudest requests are the neediest. This is the planning layer above grievanc
 flowchart LR
   WA[WhatsApp Cloud API] --> API
   TG[Telegram bot] --> API
-  WEB[Web / PWA] --> API
+  WEB[Citizen portal /] --> API
   subgraph API[FastAPI on Cloud Run]
     ING[ingest] --> LANG[LanguageProvider<br/>Gemini · offline stub]
     ING --> GEO[GeoResolver<br/>GPS → Maps geocode → gazetteer]
     ING --> REPO[(Repository<br/>Firestore · local JSONL)]
-    REPO --> CL[clustering<br/>district × sector × H3]
+    REPO --> CL[clustering<br/>unit × sector × H3]
     CL --> INT[integrity multiplier]
     CL --> SC[scoring<br/>pure, deterministic]
-    PACK[(country pack<br/>indicators · planned projects)] --> SC
+    PACK[(10 packs: 5 countries + 5 pilots<br/>boundaries · indicators · planned projects)] --> SC
   end
-  SC --> DASH[Dashboard<br/>React + Firebase Hosting]
+  SC --> DASH[Government dashboard /admin]
   SC --> EXP[/export CSV · GeoJSON/]
   ING --> ACK[reply in citizen's language]
 ```
@@ -59,32 +87,51 @@ Details: [docs/schema.md](docs/schema.md).
 
 ## Quickstart (Windows, from the repo root)
 
+**One click:** double-click `start.bat` (or run `.\start.ps1`). It creates `.venv`, installs the backend, prepares
+the demo data on first run, starts the server and opens http://127.0.0.1:8000/. `.\start.ps1 -Reset` reloads the demo
+complaints. The pages only work when served this way, not opened as files.
+
+Manual steps, if you prefer:
+
 ```powershell
 python -m venv .venv
 .venv\Scripts\python -m pip install -r backend\requirements-dev.txt
-copy .env.example .env        # set GEMINI_API_KEY and PHONE_HASH_SALT at minimum
 cd backend
-..\.venv\Scripts\python -m scripts.build_indicators --allow-placeholder
-..\.venv\Scripts\python -m scripts.generate_synthetic
+..\.venv\Scripts\python -m scripts.build_indicators --pack all --allow-placeholder
+..\.venv\Scripts\python -m scripts.generate_synthetic --pack all
 ..\.venv\Scripts\python -m scripts.seed --reset
 ..\.venv\Scripts\python -m uvicorn app.main:app --reload
 ```
 
-Open http://127.0.0.1:8000/ for the dashboard (served by the same app) and http://127.0.0.1:8000/docs for the API. Run the tests with `..\.venv\Scripts\python -m pytest` from `backend/`.
-Without `GEMINI_API_KEY`, the offline keyword stub is used: text only, no translation. Don't demo with it.
+Open http://127.0.0.1:8000/ for the citizen portal, http://127.0.0.1:8000/admin for the government dashboard and
+http://127.0.0.1:8000/docs for the API. Run the tests with `..\.venv\Scripts\python -m pytest` from `backend/`.
+
+Settings come from environment variables or a repo-root `.env`: `GEMINI_API_KEY` and `PHONE_HASH_SALT` at minimum;
+`PACK_ID` (default pack, `IN`), `PACKS` (comma list to serve a subset), `REPOSITORY` (`local` | `memory` | `firestore`),
+`LOCAL_STORE_DIR` (default `data/store`, one `<PACK>/requests.jsonl` per pack). Without `GEMINI_API_KEY`, an offline
+keyword stub is used: text only, no translation, no voice. Don't demo with it.
+
+`data/reference/` is committed. To rebuild it from the open sources (about 300 MB download, cached in `data/cache/`):
+`python -m scripts.build_reference --pack all`.
 
 ## API
 
+Every read endpoint takes `?pack=<PACK_ID>` (default `PACK_ID`).
+
 | Method | Path | Purpose |
 |---|---|---|
-| GET | `/health`, `/meta` | Status; pack, presets, provider, synthetic flags, counts |
-| POST | `/ingest` | Web intake: `{text?, audio_base64?, audio_mime?, sender_id?, lat?, lon?}` |
-| GET/POST | `/webhooks/whatsapp` | Meta verification and inbound messages (text, voice, location) |
-| POST | `/webhooks/telegram` | Telegram bot updates (text, voice) |
+| GET | `/`, `/admin` | Citizen portal; government dashboard |
+| GET | `/health`, `/packs`, `/meta` | Status; the packs served; one pack's units, presets, provider, synthetic flags, counts |
+| GET | `/boundaries` | The pack's unit polygons (GeoJSON) |
+| POST | `/ingest` | Web intake: `{text?, audio_base64?, audio_mime?, sender_id?, lat?, lon?, pack?, admin_code?, category?}` |
+| GET | `/track/{id}` | Citizen lookup by tracking ID across packs |
+| GET/POST | `/webhooks/whatsapp` | Meta verification and inbound messages (text, voice, location), routed by calling code |
+| POST | `/webhooks/telegram` | Telegram bot updates (text, voice), default pack's country |
 | GET | `/rankings` | `preset=` plus optional weight overrides, `sector=`, `admin_code=`, `limit=` |
-| GET | `/rankings/compare` | Where two presets send the top k (poorest quartile vs least-poor districts) |
+| GET | `/rankings/compare` | Where two presets send the top k (poorest quartile vs least-poor units) |
 | GET | `/clusters/{id}` | Score breakdown, integrity flags, redacted request summaries |
-| GET | `/districts`, `/districts/silent` | Indicators + request rates; poor districts with the fewest requests |
+| POST | `/clusters/{id}/status` | Officials set `forwarded`, `in_progress` or `resolved` for every request in a cluster |
+| GET | `/districts`, `/districts/silent` | Indicators + request rates; poor units with the fewest requests |
 | GET | `/requests`, `/requests/{id}` | Redacted request list (review queue: `?status=needs_review`) |
 | GET | `/export/aggregates.csv`, `.geojson` | Anonymised aggregates (`level=district\|h3`), groups under 5 people suppressed |
 
@@ -96,9 +143,9 @@ gcloud run deploy civic-api --source . --region asia-south1 --allow-unauthentica
   --set-secrets GEMINI_API_KEY=gemini-key:latest,PHONE_HASH_SALT=phone-salt:latest
 ```
 
-Seed Firestore once with `REPOSITORY=firestore python -m scripts.seed --reset` (uses your gcloud credentials).
-For a throwaway demo without Firestore, set `LOCAL_STORE_PATH=data/synthetic/requests.jsonl` instead (the container
-disk is ephemeral). Point the WhatsApp webhook at `https://<service>/webhooks/whatsapp`; for Telegram call
+Seed Firestore once with `REPOSITORY=firestore python -m scripts.seed --reset` (uses your gcloud credentials; one
+collection per pack, `requests_<PACK>`). For a throwaway demo without Firestore, set `LOCAL_STORE_DIR=data/synthetic`
+instead, which serves the shipped synthetic sets directly (the container disk is ephemeral). Point the WhatsApp webhook at `https://<service>/webhooks/whatsapp`; for Telegram call
 `setWebhook` with `url=https://<service>/webhooks/telegram&secret_token=<TELEGRAM_WEBHOOK_SECRET>`.
 
 ## Privacy and safety (DPDP Act 2023)
@@ -120,20 +167,22 @@ GeoJSON, H3, ISO 639 / BCP-47, ISO 3166-2. We claim "designed to meet the DPG St
 
 ## BRICS generalisation
 
-A country is a **pack**: `data/packs/<ID>.json` + a district reference CSV + indicator files. The core schema,
-scoring and API do not change. See [docs/schema.md](docs/schema.md#country-packs).
+A region is a **pack**: `data/packs/<ID>.json` + `data/reference/<ID>/` (units, boundaries, populated places) +
+indicator files. All five BRICS countries ship, each at state level plus one district-level pilot. The core schema,
+scoring and API do not change between them. Adding a region (another pilot state, or a new BRICS member) is data
+work only. See [docs/schema.md](docs/schema.md#country-packs).
 
 ## Repository layout
 
 ```
 backend/app/        FastAPI app: ingest, language, geo, clustering, integrity, scoring, service, channels
-backend/scripts/    build_indicators, generate_synthetic, seed
+backend/scripts/    build_reference, build_indicators, generate_synthetic, seed
 backend/tests/      pytest suite (self-contained test pack)
-data/packs/         country/state pack config
-data/reference/     district list, centroids, population, local names
-data/raw/           real source extracts (you add these)
-data/processed/     built indicator tables and planned projects
-data/synthetic/     labelled synthetic requests + manifest
+data/packs/         10 pack configs (5 countries, 5 pilot regions)
+data/reference/     per pack: units (names, aliases, population, centroid), boundaries, populated places
+data/raw/           real source extracts, per pack (you add these)
+data/processed/     per pack: built indicator tables and planned projects
+data/synthetic/     per pack: labelled synthetic requests + manifest
 docs/               schema and data sources
-frontend/           single-page dashboard, served by the API at / (see frontend/README.md)
+frontend/           citizen portal (index.html) and government dashboard (admin.html), served by the API
 ```

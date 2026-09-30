@@ -1,0 +1,101 @@
+project_id,admin_code,sector,name,budget_m,currency,status,source,synthetic
+PP-IN-AN-education,IN-AN,education,"Education works, Andaman and Nicobar Islands (synthetic)",49,INR,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-IN-AN-electricity,IN-AN,electricity,"Electricity works, Andaman and Nicobar Islands (synthetic)",14,INR,delayed,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-IN-AN-waste,IN-AN,waste,"Waste works, Andaman and Nicobar Islands (synthetic)",56,INR,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-IN-AP-sanitation,IN-AP,sanitation,"Sanitation works, Andhra Pradesh (synthetic)",181,INR,delayed,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-IN-AP-roads,IN-AP,roads,"Roads works, Andhra Pradesh (synthetic)",81,INR,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-IN-AP-health,IN-AP,health,"Health works, Andhra Pradesh (synthetic)",188,INR,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-IN-AP-electricity,IN-AP,electricity,"Electricity works, Andhra Pradesh (synthetic)",27,INR,delayed,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-IN-AP-waste,IN-AP,waste,"Waste works, Andhra Pradesh (synthetic)",135,INR,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-IN-AR-sanitation,IN-AR,sanitation,"Sanitation works, Arunachal Pradesh (synthetic)",193,INR,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-IN-AR-roads,IN-AR,roads,"Roads works, Arunachal Pradesh (synthetic)",82,INR,delayed,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-IN-AR-health,IN-AR,health,"Health works, Arunachal Pradesh (synthetic)",66,INR,delayed,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-IN-AR-electricity,IN-AR,electricity,"Electricity works, Arunachal Pradesh (synthetic)",189,INR,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-IN-AR-waste,IN-AR,waste,"Waste works, Arunachal Pradesh (synthetic)",98,INR,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-IN-AS-sanitation,IN-AS,sanitation,"Sanitation works, Assam (synthetic)",188,INR,delayed,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-IN-AS-roads,IN-AS,roads,"Roads works, Assam (synthetic)",52,INR,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-IN-BR-roads,IN-BR,roads,"Roads works, Bihar (synthetic)",101,INR,delayed,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-IN-BR-health,IN-BR,health,"Health works, Bihar (synthetic)",64,INR,delayed,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-IN-BR-education,IN-BR,education,"Education works, Bihar (synthetic)",195,INR,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-IN-BR-waste,IN-BR,waste,"Waste works, Bihar (synthetic)",198,INR,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-IN-CH-water,IN-CH,water,"Water works, Chandigarh (synthetic)",9,INR,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-IN-CH-electricity,IN-CH,electricity,"Electricity works, Chandigarh (synthetic)",58,INR,delayed,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-IN-CT-water,IN-CT,water,"Water works, Chhattisgarh (synthetic)",58,INR,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-IN-CT-electricity,IN-CT,electricity,"Electricity works, Chhattisgarh (synthetic)",48,INR,delayed,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-IN-CT-waste,IN-CT,waste,"Waste works, Chhattisgarh (synthetic)",185,INR,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-IN-DH-water,IN-DH,water,"Water works, Dadra and Nagar Haveli and Daman and Diu (synthetic)",62,INR,delayed,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-IN-DH-sanitation,IN-DH,sanitation,"Sanitation works, Dadra and Nagar Haveli and Daman and Diu (synthetic)",33,INR,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-IN-DL-roads,IN-DL,roads,"Roads works, Delhi (synthetic)",20,INR,delayed,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-IN-DL-health,IN-DL,health,"Health works, Delhi (synthetic)",81,INR,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-IN-GA-water,IN-GA,water,"Water works, Goa (synthetic)",167,INR,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-IN-GA-roads,IN-GA,roads,"Roads works, Goa (synthetic)",128,INR,delayed,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-IN-GA-education,IN-GA,education,"Education works, Goa (synthetic)",53,INR,delayed,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-IN-GA-electricity,IN-GA,electricity,"Electricity works, Goa (synthetic)",23,INR,delayed,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-IN-GJ-electricity,IN-GJ,electricity,"Electricity works, Gujarat (synthetic)",110,INR,delayed,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-IN-GJ-waste,IN-GJ,waste,"Waste works, Gujarat (synthetic)",181,INR,delayed,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-IN-HP-sanitation,IN-HP,sanitation,"Sanitation works, Himachal Pradesh (synthetic)",139,INR,delayed,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-IN-HP-education,IN-HP,education,"Education works, Himachal Pradesh (synthetic)",49,INR,delayed,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-IN-HP-electricity,IN-HP,electricity,"Electricity works, Himachal Pradesh (synthetic)",61,INR,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-IN-HR-sanitation,IN-HR,sanitation,"Sanitation works, Haryana (synthetic)",93,INR,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-IN-HR-waste,IN-HR,waste,"Waste works, Haryana (synthetic)",161,INR,delayed,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-IN-JH-health,IN-JH,health,"Health works, Jharkhand (synthetic)",125,INR,delayed,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-IN-JH-electricity,IN-JH,electricity,"Electricity works, Jharkhand (synthetic)",61,INR,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-IN-JK-water,IN-JK,water,"Water works, Jammu and Kashmir (synthetic)",175,INR,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-IN-JK-sanitation,IN-JK,sanitation,"Sanitation works, Jammu and Kashmir (synthetic)",89,INR,delayed,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-IN-JK-roads,IN-JK,roads,"Roads works, Jammu and Kashmir (synthetic)",79,INR,delayed,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-IN-JK-electricity,IN-JK,electricity,"Electricity works, Jammu and Kashmir (synthetic)",21,INR,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-IN-JK-waste,IN-JK,waste,"Waste works, Jammu and Kashmir (synthetic)",73,INR,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-IN-KA-waste,IN-KA,waste,"Waste works, Karnataka (synthetic)",75,INR,delayed,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-IN-KL-sanitation,IN-KL,sanitation,"Sanitation works, Kerala (synthetic)",198,INR,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-IN-KL-roads,IN-KL,roads,"Roads works, Kerala (synthetic)",165,INR,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-IN-LA-roads,IN-LA,roads,"Roads works, Ladakh (synthetic)",132,INR,delayed,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-IN-LA-health,IN-LA,health,"Health works, Ladakh (synthetic)",35,INR,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-IN-LA-education,IN-LA,education,"Education works, Ladakh (synthetic)",167,INR,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-IN-LA-electricity,IN-LA,electricity,"Electricity works, Ladakh (synthetic)",19,INR,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-IN-LD-sanitation,IN-LD,sanitation,"Sanitation works, Lakshadweep (synthetic)",87,INR,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-IN-LD-health,IN-LD,health,"Health works, Lakshadweep (synthetic)",120,INR,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-IN-LD-education,IN-LD,education,"Education works, Lakshadweep (synthetic)",153,INR,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-IN-MH-education,IN-MH,education,"Education works, Maharashtra (synthetic)",34,INR,delayed,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-IN-MH-electricity,IN-MH,electricity,"Electricity works, Maharashtra (synthetic)",147,INR,delayed,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-IN-MH-waste,IN-MH,waste,"Waste works, Maharashtra (synthetic)",190,INR,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-IN-ML-sanitation,IN-ML,sanitation,"Sanitation works, Meghalaya (synthetic)",184,INR,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-IN-ML-roads,IN-ML,roads,"Roads works, Meghalaya (synthetic)",178,INR,delayed,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-IN-ML-electricity,IN-ML,electricity,"Electricity works, Meghalaya (synthetic)",162,INR,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-IN-MN-water,IN-MN,water,"Water works, Manipur (synthetic)",158,INR,delayed,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-IN-MN-health,IN-MN,health,"Health works, Manipur (synthetic)",64,INR,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-IN-MP-education,IN-MP,education,"Education works, Madhya Pradesh (synthetic)",196,INR,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-IN-MZ-electricity,IN-MZ,electricity,"Electricity works, Mizoram (synthetic)",92,INR,delayed,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-IN-NL-water,IN-NL,water,"Water works, Nagaland (synthetic)",140,INR,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-IN-NL-roads,IN-NL,roads,"Roads works, Nagaland (synthetic)",7,INR,delayed,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-IN-NL-electricity,IN-NL,electricity,"Electricity works, Nagaland (synthetic)",200,INR,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-IN-OR-roads,IN-OR,roads,"Roads works, Odisha (synthetic)",23,INR,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-IN-OR-waste,IN-OR,waste,"Waste works, Odisha (synthetic)",117,INR,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-IN-PB-health,IN-PB,health,"Health works, Punjab (synthetic)",179,INR,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-IN-PB-education,IN-PB,education,"Education works, Punjab (synthetic)",178,INR,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-IN-RJ-water,IN-RJ,water,"Water works, Rajasthan (synthetic)",148,INR,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-IN-RJ-sanitation,IN-RJ,sanitation,"Sanitation works, Rajasthan (synthetic)",86,INR,delayed,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-IN-RJ-roads,IN-RJ,roads,"Roads works, Rajasthan (synthetic)",29,INR,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-IN-RJ-electricity,IN-RJ,electricity,"Electricity works, Rajasthan (synthetic)",72,INR,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-IN-RJ-waste,IN-RJ,waste,"Waste works, Rajasthan (synthetic)",35,INR,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-IN-SK-water,IN-SK,water,"Water works, Sikkim (synthetic)",148,INR,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-IN-SK-sanitation,IN-SK,sanitation,"Sanitation works, Sikkim (synthetic)",178,INR,delayed,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-IN-SK-roads,IN-SK,roads,"Roads works, Sikkim (synthetic)",41,INR,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-IN-SK-health,IN-SK,health,"Health works, Sikkim (synthetic)",190,INR,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-IN-SK-electricity,IN-SK,electricity,"Electricity works, Sikkim (synthetic)",78,INR,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-IN-TG-sanitation,IN-TG,sanitation,"Sanitation works, Telangana (synthetic)",177,INR,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-IN-TG-health,IN-TG,health,"Health works, Telangana (synthetic)",179,INR,delayed,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-IN-TN-roads,IN-TN,roads,"Roads works, Tamil Nadu (synthetic)",113,INR,delayed,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-IN-TN-education,IN-TN,education,"Education works, Tamil Nadu (synthetic)",36,INR,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-IN-TN-waste,IN-TN,waste,"Waste works, Tamil Nadu (synthetic)",32,INR,delayed,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-IN-TR-water,IN-TR,water,"Water works, Tripura (synthetic)",159,INR,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-IN-TR-health,IN-TR,health,"Health works, Tripura (synthetic)",119,INR,delayed,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-IN-TR-waste,IN-TR,waste,"Waste works, Tripura (synthetic)",164,INR,delayed,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-IN-UP-electricity,IN-UP,electricity,"Electricity works, Uttar Pradesh (synthetic)",57,INR,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-IN-UP-waste,IN-UP,waste,"Waste works, Uttar Pradesh (synthetic)",85,INR,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-IN-UT-water,IN-UT,water,"Water works, Uttarakhand (synthetic)",34,INR,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-IN-UT-roads,IN-UT,roads,"Roads works, Uttarakhand (synthetic)",78,INR,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-IN-UT-waste,IN-UT,waste,"Waste works, Uttarakhand (synthetic)",101,INR,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-IN-WB-sanitation,IN-WB,sanitation,"Sanitation works, West Bengal (synthetic)",25,INR,delayed,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-IN-WB-roads,IN-WB,roads,"Roads works, West Bengal (synthetic)",10,INR,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-IN-WB-education,IN-WB,education,"Education works, West Bengal (synthetic)",5,INR,delayed,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-IN-WB-waste,IN-WB,waste,"Waste works, West Bengal (synthetic)",124,INR,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true

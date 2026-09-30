@@ -1,0 +1,86 @@
+{
+  "generator": "scripts/generate_synthetic.py",
+  "licence": "CC-BY-4.0",
+  "pack": "CN",
+  "seed": 42,
+  "as_of": "2026-09-28T18:00:00+08:00",
+  "window_days": 45,
+  "n_records": 1700,
+  "n_organic": 1500,
+  "brigade": {
+    "admin_code": "CN-GD",
+    "district": "Guangdong",
+    "sector": "roads",
+    "lang": "zh",
+    "n_messages": 200,
+    "n_senders": 12,
+    "window_start": "2026-09-25T13:00:00+08:00",
+    "window_minutes": 30,
+    "h3_cells": [
+      "85411d4ffffffff"
+    ],
+    "main_cluster_id": "CN-GD.roads.85411d4ffffffff"
+  },
+  "records_by_district": {
+    "Guangdong": 445,
+    "Jiangsu": 176,
+    "Zhejiang": 110,
+    "Henan": 98,
+    "Shandong": 83,
+    "Shanghai": 79,
+    "Sichuan": 62,
+    "Hunan": 59,
+    "Beijing": 56,
+    "Hebei": 53,
+    "Anhui": 43,
+    "Hubei": 43,
+    "Jiangxi": 40,
+    "Guangxi": 39,
+    "Heilongjiang": 32,
+    "Shanxi": 32,
+    "Yunnan": 31,
+    "Fujian": 29,
+    "Liaoning": 26,
+    "Guizhou": 25,
+    "Shaanxi": 24,
+    "Inner Mongolia": 22,
+    "Xinjiang": 17,
+    "Gansu": 16,
+    "Chongqing": 15,
+    "Jilin": 15,
+    "Tianjin": 13,
+    "Hainan": 6,
+    "Ningxia": 6,
+    "Tibet": 3,
+    "Qinghai": 2
+  },
+  "assumptions": {
+    "synthetic_config": {
+      "n": 1500,
+      "lang_mix": {
+        "zh": 1.0
+      },
+      "connectivity": {
+        "CN-BJ": 3.0,
+        "CN-SH": 3.0,
+        "CN-GD": 2.5,
+        "CN-ZJ": 2.2,
+        "CN-JS": 2.2
+      },
+      "brigade": {
+        "admin_code": "CN-GD",
+        "lang": "zh"
+      }
+    },
+    "location_tiers": {
+      "A": 0.6,
+      "B": 0.25,
+      "C": 0.15
+    },
+    "channels": {
+      "whatsapp": 0.7,
+      "web": 0.2,
+      "telegram": 0.1
+    }
+  }
+}

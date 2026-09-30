@@ -1,23 +1,41 @@
 {
   "pack_id": "IN-MH",
   "country": "IN",
+  "country_name": "India",
+  "level": "region",
+  "parent": "IN",
   "region_iso": "IN-MH",
   "region_name": "Maharashtra",
-  "languages": ["mr", "hi", "en", "hi-Latn"],
-  "channels": ["whatsapp", "telegram", "web"],
+  "unit_label": "district",
+  "unit_label_plural": "districts",
+  "priority_label": "Aspirational District",
+  "languages": [
+    "mr",
+    "hi",
+    "en",
+    "hi-Latn"
+  ],
+  "channels": [
+    "whatsapp",
+    "telegram",
+    "web"
+  ],
   "h3_resolution": 7,
+  "utc_offset": "+05:30",
   "files": {
-    "district_reference": "reference/districts_IN-MH.csv",
-    "boundaries_geojson": "reference/boundaries_IN-MH.geojson",
-    "indicators": "processed/district_indicators.csv",
-    "indicators_long": "processed/indicators_long.csv",
-    "planned_projects": "processed/planned_projects.csv"
+    "district_reference": "reference/IN-MH/units.csv",
+    "boundaries_geojson": "reference/IN-MH/boundaries.geojson",
+    "settlements": "reference/IN-MH/settlements.csv",
+    "indicators": "processed/IN-MH/indicators.csv",
+    "indicators_long": "processed/IN-MH/indicators_long.csv",
+    "planned_projects": "processed/IN-MH/planned_projects.csv",
+    "synthetic_requests": "synthetic/IN-MH/requests.jsonl"
   },
   "equity_metric": "mpi_headcount",
   "metrics": {
     "mpi_headcount": {
       "description": "Share of population multidimensionally poor (headcount ratio, 0-1)",
-      "expected_source": "NITI Aayog National MPI: Progress Review 2023 (NFHS-5, 2019-21), district tables",
+      "expected_source": "NITI Aayog National MPI: Progress Review 2023 (NFHS-5, 2019-21), state and district tables",
       "licence": "Public report; cite NITI Aayog"
     },
     "jjm_tap_coverage": {
@@ -27,17 +45,7 @@
     },
     "nfhs5_improved_sanitation": {
       "description": "Share of households using an improved sanitation facility (0-1)",
-      "expected_source": "NFHS-5 (2019-21) district fact sheets, rchiips.org/nfhs",
-      "licence": "Public; cite IIPS/MoHFW"
-    },
-    "nfhs5_hh_electricity": {
-      "description": "Share of households with electricity (0-1)",
-      "expected_source": "NFHS-5 (2019-21) district fact sheets",
-      "licence": "Public; cite IIPS/MoHFW"
-    },
-    "nfhs5_institutional_births": {
-      "description": "Share of births in a health facility (0-1); proxy for health access",
-      "expected_source": "NFHS-5 (2019-21) district fact sheets",
+      "expected_source": "NFHS-5 (2019-21) state and district fact sheets, rchiips.org/nfhs",
       "licence": "Public; cite IIPS/MoHFW"
     },
     "road_unconnected_share": {
@@ -45,36 +53,146 @@
       "expected_source": "PMGSY OMMS reports (omms.nic.in) or Census 2011 village amenities",
       "licence": "Public; cite MoRD / Census of India (GODL)"
     },
+    "nfhs5_institutional_births": {
+      "description": "Share of births in a health facility (0-1); proxy for health access",
+      "expected_source": "NFHS-5 (2019-21) fact sheets",
+      "licence": "Public; cite IIPS/MoHFW"
+    },
     "udise_school_infra_gap": {
       "description": "Share of schools lacking a functional girls' toilet or electricity (0-1)",
-      "expected_source": "UDISE+ district report cards, udiseplus.gov.in",
+      "expected_source": "UDISE+ report cards, udiseplus.gov.in",
       "licence": "Public; cite Ministry of Education"
+    },
+    "nfhs5_hh_electricity": {
+      "description": "Share of households with electricity (0-1)",
+      "expected_source": "NFHS-5 (2019-21) fact sheets",
+      "licence": "Public; cite IIPS/MoHFW"
     }
   },
   "need": {
-    "water": {"metric": "jjm_tap_coverage", "invert": true},
-    "sanitation": {"metric": "nfhs5_improved_sanitation", "invert": true},
-    "roads": {"metric": "road_unconnected_share", "invert": false},
-    "health": {"metric": "nfhs5_institutional_births", "invert": true},
-    "education": {"metric": "udise_school_infra_gap", "invert": false},
-    "electricity": {"metric": "nfhs5_hh_electricity", "invert": true},
-    "waste": {"metric": "mpi_headcount", "invert": false},
-    "other": {"metric": "mpi_headcount", "invert": false}
+    "water": {
+      "metric": "jjm_tap_coverage",
+      "invert": true
+    },
+    "sanitation": {
+      "metric": "nfhs5_improved_sanitation",
+      "invert": true
+    },
+    "roads": {
+      "metric": "road_unconnected_share",
+      "invert": false
+    },
+    "health": {
+      "metric": "nfhs5_institutional_births",
+      "invert": true
+    },
+    "education": {
+      "metric": "udise_school_infra_gap",
+      "invert": false
+    },
+    "electricity": {
+      "metric": "nfhs5_hh_electricity",
+      "invert": true
+    },
+    "waste": {
+      "metric": "mpi_headcount",
+      "invert": false
+    },
+    "other": {
+      "metric": "mpi_headcount",
+      "invert": false
+    }
   },
   "placeholder": {
-    "_note": "Shapes deterministic PLACEHOLDER values until real files exist in data/raw/. These tiers are rough assumptions, not data, and every placeholder value is flagged in the outputs and the API.",
+    "_note": "Shapes deterministic PLACEHOLDER values until real files exist in data/raw/<pack>/. These tiers are rough assumptions, not data, and every placeholder value is flagged in the outputs and the API.",
     "deprivation_tiers": {
-      "high": ["IN-MH-NANDURBAR", "IN-MH-GADCHIROLI", "IN-MH-DHULE", "IN-MH-JALNA", "IN-MH-HINGOLI", "IN-MH-WASHIM", "IN-MH-NANDED", "IN-MH-PARBHANI", "IN-MH-YAVATMAL", "IN-MH-BEED", "IN-MH-BULDHANA", "IN-MH-OSMANABAD", "IN-MH-PALGHAR"],
-      "low": ["IN-MH-MUMBAI_CITY", "IN-MH-MUMBAI_SUBURBAN", "IN-MH-PUNE", "IN-MH-THANE", "IN-MH-NAGPUR", "IN-MH-KOLHAPUR", "IN-MH-SATARA", "IN-MH-SANGLI", "IN-MH-SINDHUDURG", "IN-MH-RATNAGIRI", "IN-MH-RAIGAD"]
+      "high": [
+        "IN-MH-BEED",
+        "IN-MH-BULDHANA",
+        "IN-MH-DHULE",
+        "IN-MH-GADCHIROLI",
+        "IN-MH-HINGOLI",
+        "IN-MH-JALNA",
+        "IN-MH-NANDED",
+        "IN-MH-NANDURBAR",
+        "IN-MH-OSMANABAD",
+        "IN-MH-PALGHAR",
+        "IN-MH-PARBHANI",
+        "IN-MH-WASHIM",
+        "IN-MH-YAVATMAL"
+      ],
+      "low": [
+        "IN-MH-KOLHAPUR",
+        "IN-MH-MUMBAI_CITY",
+        "IN-MH-MUMBAI_SUBURBAN",
+        "IN-MH-NAGPUR",
+        "IN-MH-PUNE",
+        "IN-MH-RAIGAD",
+        "IN-MH-RATNAGIRI",
+        "IN-MH-SANGLI",
+        "IN-MH-SATARA",
+        "IN-MH-SINDHUDURG",
+        "IN-MH-THANE"
+      ]
     },
     "metrics": {
-      "mpi_headcount": [0.02, 0.35],
-      "jjm_tap_coverage": [0.95, -0.45],
-      "nfhs5_improved_sanitation": [0.92, -0.45],
-      "nfhs5_hh_electricity": [0.995, -0.12],
-      "nfhs5_institutional_births": [0.98, -0.25],
-      "road_unconnected_share": [0.02, 0.22],
-      "udise_school_infra_gap": [0.03, 0.30]
+      "mpi_headcount": [
+        0.02,
+        0.35
+      ],
+      "jjm_tap_coverage": [
+        0.95,
+        -0.45
+      ],
+      "nfhs5_improved_sanitation": [
+        0.92,
+        -0.45
+      ],
+      "road_unconnected_share": [
+        0.02,
+        0.22
+      ],
+      "nfhs5_institutional_births": [
+        0.98,
+        -0.25
+      ],
+      "udise_school_infra_gap": [
+        0.03,
+        0.3
+      ],
+      "nfhs5_hh_electricity": [
+        0.995,
+        -0.12
+      ]
+    }
+  },
+  "synthetic": {
+    "n": 1200,
+    "lang_mix_urban": {
+      "mr": 0.25,
+      "hi": 0.2,
+      "hi-Latn": 0.3,
+      "en": 0.25
+    },
+    "lang_mix": {
+      "mr": 0.45,
+      "hi": 0.25,
+      "hi-Latn": 0.2,
+      "en": 0.1
+    },
+    "connectivity": {
+      "IN-MH-MUMBAI_CITY": 4.0,
+      "IN-MH-MUMBAI_SUBURBAN": 4.0,
+      "IN-MH-PUNE": 3.5,
+      "IN-MH-THANE": 3.0,
+      "IN-MH-NAGPUR": 2.5,
+      "IN-MH-NASHIK": 1.8,
+      "IN-MH-AURANGABAD": 1.8,
+      "IN-MH-KOLHAPUR": 1.5
+    },
+    "brigade": {
+      "admin_code": "IN-MH-PUNE",
+      "lang": "hi-Latn"
     }
   }
 }

@@ -33,13 +33,14 @@ def _path(value: str) -> Path:
 @dataclass(frozen=True)
 class Settings:
     data_dir: Path = REPO_ROOT / "data"
-    pack_id: str = "IN-MH"
+    pack_id: str = "IN"  # default pack: what /rankings etc. return without ?pack=, and the country for Telegram
+    packs: tuple[str, ...] = ()  # packs to serve; empty = every pack in data/packs whose indicators are built
     language_provider: str = "offline"  # gemini | offline
     gemini_api_key: str | None = None
     gemini_model: str = "gemini-2.5-flash"
     repository: str = "local"  # local | memory | firestore
-    local_store_path: Path = REPO_ROOT / "data" / "store" / "requests.jsonl"
-    firestore_collection: str = "requests"
+    local_store_dir: Path = REPO_ROOT / "data" / "store"  # one <dir>/<pack>/requests.jsonl per pack
+    firestore_collection: str = "requests"  # one collection per pack: <name>_<pack>
     phone_hash_salt: str = DEV_SALT
     google_maps_api_key: str | None = None
     whatsapp_verify_token: str | None = None
@@ -59,12 +60,13 @@ class Settings:
         gemini_key = env("GEMINI_API_KEY")
         settings = cls(
             data_dir=_path(env("DATA_DIR", "data")),
-            pack_id=env("PACK_ID", "IN-MH"),
+            pack_id=env("PACK_ID", "IN"),
+            packs=tuple(p.strip() for p in env("PACKS", "").split(",") if p.strip()),
             language_provider=env("LANGUAGE_PROVIDER", "gemini" if gemini_key else "offline"),
             gemini_api_key=gemini_key,
             gemini_model=env("GEMINI_MODEL", cls.gemini_model),
             repository=env("REPOSITORY", "local"),
-            local_store_path=_path(env("LOCAL_STORE_PATH", "data/store/requests.jsonl")),
+            local_store_dir=_path(env("LOCAL_STORE_DIR", "data/store")),
             firestore_collection=env("FIRESTORE_COLLECTION", "requests"),
             phone_hash_salt=env("PHONE_HASH_SALT", DEV_SALT),
             google_maps_api_key=env("GOOGLE_MAPS_API_KEY"),

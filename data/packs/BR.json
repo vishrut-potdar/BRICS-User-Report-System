@@ -1,0 +1,190 @@
+{
+  "pack_id": "BR",
+  "country": "BR",
+  "country_name": "Brazil",
+  "level": "country",
+  "parent": null,
+  "region_iso": "BR",
+  "region_name": "Brazil",
+  "unit_label": "state",
+  "unit_label_plural": "states",
+  "priority_label": null,
+  "languages": [
+    "pt"
+  ],
+  "channels": [
+    "whatsapp",
+    "telegram",
+    "web"
+  ],
+  "h3_resolution": 5,
+  "utc_offset": "-03:00",
+  "files": {
+    "district_reference": "reference/BR/units.csv",
+    "boundaries_geojson": "reference/BR/boundaries.geojson",
+    "settlements": "reference/BR/settlements.csv",
+    "indicators": "processed/BR/indicators.csv",
+    "indicators_long": "processed/BR/indicators_long.csv",
+    "planned_projects": "processed/BR/planned_projects.csv",
+    "synthetic_requests": "synthetic/BR/requests.jsonl"
+  },
+  "equity_metric": "poverty_rate",
+  "metrics": {
+    "poverty_rate": {
+      "description": "Share of population below the poverty line (US$6.85/day PPP, 0-1)",
+      "expected_source": "IBGE Síntese de Indicadores Sociais (PNAD Contínua) by state; municipalities: Censo 2022 / CadÚnico",
+      "licence": "Public; cite IBGE (CC BY 4.0 for the SIDRA API)"
+    },
+    "water_network_coverage": {
+      "description": "Share of population served by the public water network (0-1)",
+      "expected_source": "SINISA/SNIS, Ministério das Cidades (indicator IN055)",
+      "licence": "Public; cite Ministério das Cidades"
+    },
+    "sewage_coverage": {
+      "description": "Share of population served by sewage collection (0-1)",
+      "expected_source": "SINISA/SNIS, Ministério das Cidades (indicator IN056)",
+      "licence": "Public; cite Ministério das Cidades"
+    },
+    "road_unpaved_share": {
+      "description": "Share of the road network that is unpaved (0-1)",
+      "expected_source": "DNIT Sistema Nacional de Viação; CNT Pesquisa de Rodovias; state DER registers",
+      "licence": "Public; cite DNIT / CNT"
+    },
+    "primary_care_coverage": {
+      "description": "Estimated primary-care (Atenção Primária) population coverage (0-1)",
+      "expected_source": "Ministério da Saúde, e-Gestor AB coverage reports",
+      "licence": "Public; cite Ministério da Saúde"
+    },
+    "school_infra_gap": {
+      "description": "Share of public schools lacking basic infrastructure: sewage, drinking water or internet (0-1)",
+      "expected_source": "INEP Censo Escolar microdata",
+      "licence": "Public; cite INEP"
+    },
+    "electricity_access": {
+      "description": "Share of households with electricity (0-1)",
+      "expected_source": "IBGE Censo 2022 / PNAD Contínua",
+      "licence": "Public; cite IBGE"
+    },
+    "waste_collection_coverage": {
+      "description": "Share of households with regular refuse collection (0-1)",
+      "expected_source": "SINISA/SNIS resíduos sólidos; IBGE Censo 2022",
+      "licence": "Public; cite Ministério das Cidades / IBGE"
+    }
+  },
+  "need": {
+    "water": {
+      "metric": "water_network_coverage",
+      "invert": true
+    },
+    "sanitation": {
+      "metric": "sewage_coverage",
+      "invert": true
+    },
+    "roads": {
+      "metric": "road_unpaved_share",
+      "invert": false
+    },
+    "health": {
+      "metric": "primary_care_coverage",
+      "invert": true
+    },
+    "education": {
+      "metric": "school_infra_gap",
+      "invert": false
+    },
+    "electricity": {
+      "metric": "electricity_access",
+      "invert": true
+    },
+    "waste": {
+      "metric": "waste_collection_coverage",
+      "invert": true
+    },
+    "other": {
+      "metric": "poverty_rate",
+      "invert": false
+    }
+  },
+  "placeholder": {
+    "_note": "Shapes deterministic PLACEHOLDER values until real files exist in data/raw/<pack>/. These tiers are rough assumptions, not data, and every placeholder value is flagged in the outputs and the API.",
+    "deprivation_tiers": {
+      "high": [
+        "BR-AC",
+        "BR-AL",
+        "BR-AM",
+        "BR-AP",
+        "BR-BA",
+        "BR-CE",
+        "BR-MA",
+        "BR-PA",
+        "BR-PB",
+        "BR-PE",
+        "BR-PI",
+        "BR-RN",
+        "BR-RR",
+        "BR-SE"
+      ],
+      "low": [
+        "BR-DF",
+        "BR-PR",
+        "BR-RJ",
+        "BR-RS",
+        "BR-SC",
+        "BR-SP"
+      ]
+    },
+    "metrics": {
+      "poverty_rate": [
+        0.1,
+        0.45
+      ],
+      "water_network_coverage": [
+        0.98,
+        -0.35
+      ],
+      "sewage_coverage": [
+        0.9,
+        -0.75
+      ],
+      "road_unpaved_share": [
+        0.4,
+        0.5
+      ],
+      "primary_care_coverage": [
+        0.95,
+        -0.25
+      ],
+      "school_infra_gap": [
+        0.05,
+        0.45
+      ],
+      "electricity_access": [
+        0.999,
+        -0.06
+      ],
+      "waste_collection_coverage": [
+        0.99,
+        -0.3
+      ]
+    }
+  },
+  "synthetic": {
+    "n": 1500,
+    "lang_mix": {
+      "pt": 1.0
+    },
+    "connectivity": {
+      "BR-SP": 3.0,
+      "BR-RJ": 2.5,
+      "BR-DF": 3.0,
+      "BR-MG": 1.8,
+      "BR-PR": 1.8,
+      "BR-SC": 1.8,
+      "BR-RS": 1.8
+    },
+    "brigade": {
+      "admin_code": "BR-SP",
+      "lang": "pt"
+    }
+  }
+}

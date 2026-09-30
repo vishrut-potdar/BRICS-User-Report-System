@@ -1,0 +1,73 @@
+admin_code,district_name,metric,value,year,source,licence,placeholder
+ZA-EC,Eastern Cape,mpi_headcount,0.2077,,PLACEHOLDER - replace with Stats SA South African MPI (Census 2011 / Community Survey 2016; Census 2022 when released),n/a,true
+ZA-FS,Free State,mpi_headcount,0.0948,,PLACEHOLDER - replace with Stats SA South African MPI (Census 2011 / Community Survey 2016; Census 2022 when released),n/a,true
+ZA-GP,Gauteng,mpi_headcount,0.0471,,PLACEHOLDER - replace with Stats SA South African MPI (Census 2011 / Community Survey 2016; Census 2022 when released),n/a,true
+ZA-KZN,KwaZulu-Natal,mpi_headcount,0.1524,,PLACEHOLDER - replace with Stats SA South African MPI (Census 2011 / Community Survey 2016; Census 2022 when released),n/a,true
+ZA-LP,Limpopo,mpi_headcount,0.1400,,PLACEHOLDER - replace with Stats SA South African MPI (Census 2011 / Community Survey 2016; Census 2022 when released),n/a,true
+ZA-MP,Mpumalanga,mpi_headcount,0.0597,,PLACEHOLDER - replace with Stats SA South African MPI (Census 2011 / Community Survey 2016; Census 2022 when released),n/a,true
+ZA-NC,Northern Cape,mpi_headcount,0.1075,,PLACEHOLDER - replace with Stats SA South African MPI (Census 2011 / Community Survey 2016; Census 2022 when released),n/a,true
+ZA-NW,North West,mpi_headcount,0.1592,,PLACEHOLDER - replace with Stats SA South African MPI (Census 2011 / Community Survey 2016; Census 2022 when released),n/a,true
+ZA-WC,Western Cape,mpi_headcount,0.0000,,PLACEHOLDER - replace with Stats SA South African MPI (Census 2011 / Community Survey 2016; Census 2022 when released),n/a,true
+ZA-EC,Eastern Cape,piped_water_access,0.4713,,PLACEHOLDER - replace with Stats SA Census 2022 / General Household Survey,n/a,true
+ZA-FS,Free State,piped_water_access,0.6368,,PLACEHOLDER - replace with Stats SA Census 2022 / General Household Survey,n/a,true
+ZA-GP,Gauteng,piped_water_access,0.8261,,PLACEHOLDER - replace with Stats SA Census 2022 / General Household Survey,n/a,true
+ZA-KZN,KwaZulu-Natal,piped_water_access,0.4774,,PLACEHOLDER - replace with Stats SA Census 2022 / General Household Survey,n/a,true
+ZA-LP,Limpopo,piped_water_access,0.5779,,PLACEHOLDER - replace with Stats SA Census 2022 / General Household Survey,n/a,true
+ZA-MP,Mpumalanga,piped_water_access,0.6547,,PLACEHOLDER - replace with Stats SA Census 2022 / General Household Survey,n/a,true
+ZA-NC,Northern Cape,piped_water_access,0.5978,,PLACEHOLDER - replace with Stats SA Census 2022 / General Household Survey,n/a,true
+ZA-NW,North West,piped_water_access,0.4420,,PLACEHOLDER - replace with Stats SA Census 2022 / General Household Survey,n/a,true
+ZA-WC,Western Cape,piped_water_access,0.8071,,PLACEHOLDER - replace with Stats SA Census 2022 / General Household Survey,n/a,true
+ZA-EC,Eastern Cape,flush_toilet_access,0.3717,,PLACEHOLDER - replace with Stats SA Census 2022,n/a,true
+ZA-FS,Free State,flush_toilet_access,0.6047,,PLACEHOLDER - replace with Stats SA Census 2022,n/a,true
+ZA-GP,Gauteng,flush_toilet_access,0.8329,,PLACEHOLDER - replace with Stats SA Census 2022,n/a,true
+ZA-KZN,KwaZulu-Natal,flush_toilet_access,0.4868,,PLACEHOLDER - replace with Stats SA Census 2022,n/a,true
+ZA-LP,Limpopo,flush_toilet_access,0.4945,,PLACEHOLDER - replace with Stats SA Census 2022,n/a,true
+ZA-MP,Mpumalanga,flush_toilet_access,0.7026,,PLACEHOLDER - replace with Stats SA Census 2022,n/a,true
+ZA-NC,Northern Cape,flush_toilet_access,0.5803,,PLACEHOLDER - replace with Stats SA Census 2022,n/a,true
+ZA-NW,North West,flush_toilet_access,0.3632,,PLACEHOLDER - replace with Stats SA Census 2022,n/a,true
+ZA-WC,Western Cape,flush_toilet_access,0.7067,,PLACEHOLDER - replace with Stats SA Census 2022,n/a,true
+ZA-EC,Eastern Cape,road_unpaved_share,0.8062,,PLACEHOLDER - replace with Rural Road Asset Management Systems (RRAMS); municipal IDPs,n/a,true
+ZA-FS,Free State,road_unpaved_share,0.5534,,PLACEHOLDER - replace with Rural Road Asset Management Systems (RRAMS); municipal IDPs,n/a,true
+ZA-GP,Gauteng,road_unpaved_share,0.3694,,PLACEHOLDER - replace with Rural Road Asset Management Systems (RRAMS); municipal IDPs,n/a,true
+ZA-KZN,KwaZulu-Natal,road_unpaved_share,0.7183,,PLACEHOLDER - replace with Rural Road Asset Management Systems (RRAMS); municipal IDPs,n/a,true
+ZA-LP,Limpopo,road_unpaved_share,0.7134,,PLACEHOLDER - replace with Rural Road Asset Management Systems (RRAMS); municipal IDPs,n/a,true
+ZA-MP,Mpumalanga,road_unpaved_share,0.4749,,PLACEHOLDER - replace with Rural Road Asset Management Systems (RRAMS); municipal IDPs,n/a,true
+ZA-NC,Northern Cape,road_unpaved_share,0.6065,,PLACEHOLDER - replace with Rural Road Asset Management Systems (RRAMS); municipal IDPs,n/a,true
+ZA-NW,North West,road_unpaved_share,0.7302,,PLACEHOLDER - replace with Rural Road Asset Management Systems (RRAMS); municipal IDPs,n/a,true
+ZA-WC,Western Cape,road_unpaved_share,0.4052,,PLACEHOLDER - replace with Rural Road Asset Management Systems (RRAMS); municipal IDPs,n/a,true
+ZA-EC,Eastern Cape,clinic_distance_gap,0.3463,,PLACEHOLDER - replace with Stats SA General Household Survey; DHIS facility list,n/a,true
+ZA-FS,Free State,clinic_distance_gap,0.2541,,PLACEHOLDER - replace with Stats SA General Household Survey; DHIS facility list,n/a,true
+ZA-GP,Gauteng,clinic_distance_gap,0.0785,,PLACEHOLDER - replace with Stats SA General Household Survey; DHIS facility list,n/a,true
+ZA-KZN,KwaZulu-Natal,clinic_distance_gap,0.3341,,PLACEHOLDER - replace with Stats SA General Household Survey; DHIS facility list,n/a,true
+ZA-LP,Limpopo,clinic_distance_gap,0.3407,,PLACEHOLDER - replace with Stats SA General Household Survey; DHIS facility list,n/a,true
+ZA-MP,Mpumalanga,clinic_distance_gap,0.2116,,PLACEHOLDER - replace with Stats SA General Household Survey; DHIS facility list,n/a,true
+ZA-NC,Northern Cape,clinic_distance_gap,0.2517,,PLACEHOLDER - replace with Stats SA General Household Survey; DHIS facility list,n/a,true
+ZA-NW,North West,clinic_distance_gap,0.3734,,PLACEHOLDER - replace with Stats SA General Household Survey; DHIS facility list,n/a,true
+ZA-WC,Western Cape,clinic_distance_gap,0.1548,,PLACEHOLDER - replace with Stats SA General Household Survey; DHIS facility list,n/a,true
+ZA-EC,Eastern Cape,school_infra_gap,0.2986,,"PLACEHOLDER - replace with NEIMS standard reports, Department of Basic Education",n/a,true
+ZA-FS,Free State,school_infra_gap,0.2670,,"PLACEHOLDER - replace with NEIMS standard reports, Department of Basic Education",n/a,true
+ZA-GP,Gauteng,school_infra_gap,0.0700,,"PLACEHOLDER - replace with NEIMS standard reports, Department of Basic Education",n/a,true
+ZA-KZN,KwaZulu-Natal,school_infra_gap,0.3799,,"PLACEHOLDER - replace with NEIMS standard reports, Department of Basic Education",n/a,true
+ZA-LP,Limpopo,school_infra_gap,0.3036,,"PLACEHOLDER - replace with NEIMS standard reports, Department of Basic Education",n/a,true
+ZA-MP,Mpumalanga,school_infra_gap,0.1642,,"PLACEHOLDER - replace with NEIMS standard reports, Department of Basic Education",n/a,true
+ZA-NC,Northern Cape,school_infra_gap,0.2780,,"PLACEHOLDER - replace with NEIMS standard reports, Department of Basic Education",n/a,true
+ZA-NW,North West,school_infra_gap,0.3098,,"PLACEHOLDER - replace with NEIMS standard reports, Department of Basic Education",n/a,true
+ZA-WC,Western Cape,school_infra_gap,0.1263,,"PLACEHOLDER - replace with NEIMS standard reports, Department of Basic Education",n/a,true
+ZA-EC,Eastern Cape,electricity_access,0.7512,,PLACEHOLDER - replace with Stats SA Census 2022,n/a,true
+ZA-FS,Free State,electricity_access,0.8761,,PLACEHOLDER - replace with Stats SA Census 2022,n/a,true
+ZA-GP,Gauteng,electricity_access,0.9552,,PLACEHOLDER - replace with Stats SA Census 2022,n/a,true
+ZA-KZN,KwaZulu-Natal,electricity_access,0.7920,,PLACEHOLDER - replace with Stats SA Census 2022,n/a,true
+ZA-LP,Limpopo,electricity_access,0.8055,,PLACEHOLDER - replace with Stats SA Census 2022,n/a,true
+ZA-MP,Mpumalanga,electricity_access,0.9208,,PLACEHOLDER - replace with Stats SA Census 2022,n/a,true
+ZA-NC,Northern Cape,electricity_access,0.8798,,PLACEHOLDER - replace with Stats SA Census 2022,n/a,true
+ZA-NW,North West,electricity_access,0.8335,,PLACEHOLDER - replace with Stats SA Census 2022,n/a,true
+ZA-WC,Western Cape,electricity_access,0.9080,,PLACEHOLDER - replace with Stats SA Census 2022,n/a,true
+ZA-EC,Eastern Cape,refuse_removal_access,0.3239,,PLACEHOLDER - replace with Stats SA Census 2022,n/a,true
+ZA-FS,Free State,refuse_removal_access,0.5052,,PLACEHOLDER - replace with Stats SA Census 2022,n/a,true
+ZA-GP,Gauteng,refuse_removal_access,0.7711,,PLACEHOLDER - replace with Stats SA Census 2022,n/a,true
+ZA-KZN,KwaZulu-Natal,refuse_removal_access,0.3180,,PLACEHOLDER - replace with Stats SA Census 2022,n/a,true
+ZA-LP,Limpopo,refuse_removal_access,0.3350,,PLACEHOLDER - replace with Stats SA Census 2022,n/a,true
+ZA-MP,Mpumalanga,refuse_removal_access,0.6084,,PLACEHOLDER - replace with Stats SA Census 2022,n/a,true
+ZA-NC,Northern Cape,refuse_removal_access,0.4877,,PLACEHOLDER - replace with Stats SA Census 2022,n/a,true
+ZA-NW,North West,refuse_removal_access,0.3146,,PLACEHOLDER - replace with Stats SA Census 2022,n/a,true
+ZA-WC,Western Cape,refuse_removal_access,0.7164,,PLACEHOLDER - replace with Stats SA Census 2022,n/a,true

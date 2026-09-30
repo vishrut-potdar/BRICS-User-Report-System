@@ -1,0 +1,177 @@
+{
+  "pack_id": "CN-NX",
+  "country": "CN",
+  "country_name": "China",
+  "level": "region",
+  "parent": "CN",
+  "region_iso": "CN-NX",
+  "region_name": "Ningxia",
+  "unit_label": "county",
+  "unit_label_plural": "counties",
+  "priority_label": "Former national poverty county",
+  "languages": [
+    "zh"
+  ],
+  "channels": [
+    "whatsapp",
+    "telegram",
+    "web"
+  ],
+  "h3_resolution": 7,
+  "utc_offset": "+08:00",
+  "files": {
+    "district_reference": "reference/CN-NX/units.csv",
+    "boundaries_geojson": "reference/CN-NX/boundaries.geojson",
+    "settlements": "reference/CN-NX/settlements.csv",
+    "indicators": "processed/CN-NX/indicators.csv",
+    "indicators_long": "processed/CN-NX/indicators_long.csv",
+    "planned_projects": "processed/CN-NX/planned_projects.csv",
+    "synthetic_requests": "synthetic/CN-NX/requests.jsonl"
+  },
+  "equity_metric": "dibao_share",
+  "metrics": {
+    "dibao_share": {
+      "description": "Share of population receiving the minimum living allowance (dibao) (0-1)",
+      "expected_source": "Ministry of Civil Affairs statistical bulletin; provincial civil-affairs yearbooks",
+      "licence": "Public; cite MCA"
+    },
+    "rural_tap_water_coverage": {
+      "description": "Rural tap-water penetration rate (0-1)",
+      "expected_source": "Ministry of Water Resources, rural water-supply statistics",
+      "licence": "Public; cite MWR"
+    },
+    "rural_sanitary_toilet": {
+      "description": "Share of rural households with a sanitary toilet (0-1)",
+      "expected_source": "National Health Commission / MARA rural toilet-revolution reports",
+      "licence": "Public; cite NHC / MARA"
+    },
+    "village_road_gap": {
+      "description": "Share of administrative villages without a hardened road to all natural villages (0-1)",
+      "expected_source": "Ministry of Transport rural-road statistics",
+      "licence": "Public; cite MOT"
+    },
+    "village_clinic_gap": {
+      "description": "Share of administrative villages without a qualified village clinic (0-1)",
+      "expected_source": "China Health Statistics Yearbook (NHC)",
+      "licence": "Public; cite NHC"
+    },
+    "school_facility_gap": {
+      "description": "Share of compulsory-education schools below standard facilities (0-1)",
+      "expected_source": "Ministry of Education statistical bulletin",
+      "licence": "Public; cite MOE"
+    },
+    "power_reliability_gap": {
+      "description": "Share of rural households below the grid reliability target (0-1)",
+      "expected_source": "National Energy Administration rural-grid reports",
+      "licence": "Public; cite NEA"
+    },
+    "rural_waste_treatment": {
+      "description": "Share of administrative villages with domestic-waste collection and treatment (0-1)",
+      "expected_source": "MOHURD urban-rural construction statistical yearbook",
+      "licence": "Public; cite MOHURD"
+    }
+  },
+  "need": {
+    "water": {
+      "metric": "rural_tap_water_coverage",
+      "invert": true
+    },
+    "sanitation": {
+      "metric": "rural_sanitary_toilet",
+      "invert": true
+    },
+    "roads": {
+      "metric": "village_road_gap",
+      "invert": false
+    },
+    "health": {
+      "metric": "village_clinic_gap",
+      "invert": false
+    },
+    "education": {
+      "metric": "school_facility_gap",
+      "invert": false
+    },
+    "electricity": {
+      "metric": "power_reliability_gap",
+      "invert": false
+    },
+    "waste": {
+      "metric": "rural_waste_treatment",
+      "invert": true
+    },
+    "other": {
+      "metric": "dibao_share",
+      "invert": false
+    }
+  },
+  "placeholder": {
+    "_note": "Shapes deterministic PLACEHOLDER values until real files exist in data/raw/<pack>/. These tiers are rough assumptions, not data, and every placeholder value is flagged in the outputs and the API.",
+    "deprivation_tiers": {
+      "high": [
+        "CN-NX-HAIYUAN",
+        "CN-NX-JINGYUAN",
+        "CN-NX-LONGDE",
+        "CN-NX-PENGYANG",
+        "CN-NX-TONGXIN",
+        "CN-NX-XIJI",
+        "CN-NX-YANCHI",
+        "CN-NX-YUANZHOU"
+      ],
+      "low": [
+        "CN-NX-DAWUKOU",
+        "CN-NX-HUINONG",
+        "CN-NX-LINGWU",
+        "CN-NX-QINGTONGXIA",
+        "CN-NX-YINCHUAN"
+      ]
+    },
+    "metrics": {
+      "dibao_share": [
+        0.01,
+        0.12
+      ],
+      "rural_tap_water_coverage": [
+        0.95,
+        -0.25
+      ],
+      "rural_sanitary_toilet": [
+        0.95,
+        -0.35
+      ],
+      "village_road_gap": [
+        0.02,
+        0.25
+      ],
+      "village_clinic_gap": [
+        0.01,
+        0.15
+      ],
+      "school_facility_gap": [
+        0.03,
+        0.3
+      ],
+      "power_reliability_gap": [
+        0.01,
+        0.1
+      ],
+      "rural_waste_treatment": [
+        0.95,
+        -0.4
+      ]
+    }
+  },
+  "synthetic": {
+    "n": 500,
+    "lang_mix": {
+      "zh": 1.0
+    },
+    "connectivity": {
+      "CN-NX-YINCHUAN": 2.5
+    },
+    "brigade": {
+      "admin_code": "CN-NX-YINCHUAN",
+      "lang": "zh"
+    }
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "generator": "scripts/generate_synthetic.py",
+  "licence": "CC-BY-4.0",
+  "pack": "ZA",
+  "seed": 42,
+  "as_of": "2026-09-28T18:00:00+02:00",
+  "window_days": 45,
+  "n_records": 1701,
+  "n_organic": 1501,
+  "brigade": {
+    "admin_code": "ZA-GP",
+    "district": "Gauteng",
+    "sector": "roads",
+    "lang": "en",
+    "n_messages": 200,
+    "n_senders": 12,
+    "window_start": "2026-09-25T13:00:00+02:00",
+    "window_minutes": 30,
+    "h3_cells": [
+      "85bcc35bfffffff"
+    ],
+    "main_cluster_id": "ZA-GP.roads.85bcc35bfffffff"
+  },
+  "records_by_district": {
+    "Gauteng": 929,
+    "Western Cape": 324,
+    "KwaZulu-Natal": 183,
+    "Mpumalanga": 73,
+    "Limpopo": 57,
+    "Eastern Cape": 46,
+    "Free State": 37,
+    "North West": 35,
+    "Northern Cape": 17
+  },
+  "assumptions": {
+    "synthetic_config": {
+      "n": 1500,
+      "lang_mix": {
+        "en": 0.55,
+        "zu": 0.2,
+        "xh": 0.1,
+        "af": 0.15
+      },
+      "lang_mix_by_unit": {
+        "ZA-EC": {
+          "xh": 0.5,
+          "en": 0.35,
+          "af": 0.15
+        },
+        "ZA-KZN": {
+          "zu": 0.55,
+          "en": 0.45
+        },
+        "ZA-WC": {
+          "af": 0.45,
+          "en": 0.4,
+          "xh": 0.15
+        }
+      },
+      "connectivity": {
+        "ZA-GP": 3.0,
+        "ZA-WC": 2.5,
+        "ZA-KZN": 1.8
+      },
+      "brigade": {
+        "admin_code": "ZA-GP",
+        "lang": "en"
+      }
+    },
+    "location_tiers": {
+      "A": 0.6,
+      "B": 0.25,
+      "C": 0.15
+    },
+    "channels": {
+      "whatsapp": 0.7,
+      "web": 0.2,
+      "telegram": 0.1
+    }
+  }
+}

@@ -1,0 +1,37 @@
+admin_code,district_name,name_local,alt_names,weak_names,official_code,population,population_year,population_source,population_verified,centroid_lat,centroid_lon,aspirational,notes
+IN-MH-AHMEDNAGAR,Ahmednagar,अहमदनगर,Ahilyanagar;अहिल्यानगर,,,4543159,2011,Census of India 2011,false,19.09,74.74,false,Renamed Ahilyanagar (2024)
+IN-MH-AKOLA,Akola,अकोला,,,,1813906,2011,Census of India 2011,false,20.70,77.00,false,
+IN-MH-AMRAVATI,Amravati,अमरावती,,,,2888445,2011,Census of India 2011,false,20.93,77.75,false,
+IN-MH-AURANGABAD,Aurangabad,औरंगाबाद,Chhatrapati Sambhajinagar;छत्रपती संभाजीनगर;Sambhajinagar,,,3701282,2011,Census of India 2011,false,19.88,75.34,false,Renamed Chhatrapati Sambhajinagar (2023)
+IN-MH-BEED,Beed,बीड,Bid,,,2585049,2011,Census of India 2011,false,18.99,75.76,false,
+IN-MH-BHANDARA,Bhandara,भंडारा,,,,1200334,2011,Census of India 2011,false,21.17,79.65,false,
+IN-MH-BULDHANA,Buldhana,बुलढाणा,Buldana,,,2586258,2011,Census of India 2011,false,20.53,76.18,false,
+IN-MH-CHANDRAPUR,Chandrapur,चंद्रपूर,चंद्रपुर,,,2204307,2011,Census of India 2011,false,19.96,79.30,false,
+IN-MH-DHULE,Dhule,धुळे,धुले,,,2050862,2011,Census of India 2011,false,20.90,74.77,false,
+IN-MH-GADCHIROLI,Gadchiroli,गडचिरोली,,,,1072942,2011,Census of India 2011,false,20.18,80.00,true,Aspirational district
+IN-MH-GONDIA,Gondia,गोंदिया,Gondiya,,,1322507,2011,Census of India 2011,false,21.46,80.19,false,
+IN-MH-HINGOLI,Hingoli,हिंगोली,,,,1177345,2011,Census of India 2011,false,19.72,77.15,false,
+IN-MH-JALGAON,Jalgaon,जळगाव,जलगांव,,,4229917,2011,Census of India 2011,false,21.00,75.56,false,
+IN-MH-JALNA,Jalna,जालना,,,,1959046,2011,Census of India 2011,false,19.84,75.88,false,
+IN-MH-KOLHAPUR,Kolhapur,कोल्हापूर,कोल्हापुर,,,3876001,2011,Census of India 2011,false,16.70,74.24,false,
+IN-MH-LATUR,Latur,लातूर,लातुर,,,2454196,2011,Census of India 2011,false,18.40,76.56,false,
+IN-MH-MUMBAI_CITY,Mumbai City,मुंबई शहर,,,,3085411,2011,Census of India 2011,false,18.94,72.83,false,
+IN-MH-MUMBAI_SUBURBAN,Mumbai Suburban,मुंबई उपनगर,,,,9356962,2011,Census of India 2011,false,19.12,72.85,false,
+IN-MH-NAGPUR,Nagpur,नागपूर,नागपुर,,,4653570,2011,Census of India 2011,false,21.15,79.09,false,
+IN-MH-NANDED,Nanded,नांदेड,नांदेड़,,,3361292,2011,Census of India 2011,false,19.15,77.31,false,
+IN-MH-NANDURBAR,Nandurbar,नंदुरबार,,,,1648295,2011,Census of India 2011,false,21.37,74.24,true,Aspirational district
+IN-MH-NASHIK,Nashik,नाशिक,Nasik;नासिक,,,6107187,2011,Census of India 2011,false,20.00,73.79,false,
+IN-MH-OSMANABAD,Osmanabad,उस्मानाबाद,Dharashiv;धाराशिव,,,1657576,2011,Census of India 2011,false,18.18,76.04,true,Aspirational district; renamed Dharashiv (2023)
+IN-MH-PALGHAR,Palghar,पालघर,,,,2990116,2011,Census of India 2011,false,19.70,72.77,false,Carved from Thane (2014); 2011 figure is the Palghar share of undivided Thane
+IN-MH-PARBHANI,Parbhani,परभणी,,,,1836086,2011,Census of India 2011,false,19.27,76.77,false,
+IN-MH-PUNE,Pune,पुणे,Poona,,,9429408,2011,Census of India 2011,false,18.52,73.86,false,
+IN-MH-RAIGAD,Raigad,रायगड,Raigarh,,,2634200,2011,Census of India 2011,false,18.64,72.87,false,
+IN-MH-RATNAGIRI,Ratnagiri,रत्नागिरी,,,,1615069,2011,Census of India 2011,false,16.99,73.31,false,
+IN-MH-SANGLI,Sangli,सांगली,,,,2822143,2011,Census of India 2011,false,16.85,74.58,false,
+IN-MH-SATARA,Satara,सातारा,,,,3003741,2011,Census of India 2011,false,17.68,74.02,false,
+IN-MH-SINDHUDURG,Sindhudurg,सिंधुदुर्ग,,,,849651,2011,Census of India 2011,false,16.10,73.67,false,
+IN-MH-SOLAPUR,Solapur,सोलापूर,Sholapur;सोलापुर,,,4317756,2011,Census of India 2011,false,17.66,75.91,false,
+IN-MH-THANE,Thane,ठाणे,,,,8070032,2011,Census of India 2011,false,19.22,72.98,false,2011 figure excludes the Palghar share of undivided Thane
+IN-MH-WARDHA,Wardha,वर्धा,,,,1300774,2011,Census of India 2011,false,20.74,78.60,false,
+IN-MH-WASHIM,Washim,वाशिम,,,,1197160,2011,Census of India 2011,false,20.11,77.13,true,Aspirational district
+IN-MH-YAVATMAL,Yavatmal,यवतमाळ,Yeotmal;यवतमाल,,,2772348,2011,Census of India 2011,false,20.39,78.12,false,

@@ -1,0 +1,9 @@
+admin_code,district_name,name_local,alt_names,weak_names,official_code,population,population_year,population_source,population_verified,centroid_lat,centroid_lon,aspirational,notes
+ZA-EC-NELSON_MANDELA_BAY,Nelson Mandela Bay,Nelson Mandela Bay,Gqeberha;Port Elizabeth;Kariega;Uitenhage,,,1219423,2023,"Kontur Population 2023-11-01 (H3 r6, CC BY 4.0), summed inside geoBoundaries polygons",false,-33.8606,25.5149,false,
+ZA-EC-BUFFALO_CITY,Buffalo City,Buffalo City,East London;Qonce;King William's Town;Mdantsane,,,762721,2023,"Kontur Population 2023-11-01 (H3 r6, CC BY 4.0), summed inside geoBoundaries polygons",false,-32.9521,27.6935,false,
+ZA-EC-SARAH_BAARTMAN,Sarah Baartman,Sarah Baartman,Cacadu;Makhanda;Grahamstown;Graaff-Reinet,,,498433,2023,"Kontur Population 2023-11-01 (H3 r6, CC BY 4.0), summed inside geoBoundaries polygons",false,-33.3913,25.3286,false,
+ZA-EC-AMATHOLE,Amathole,Amathole,Butterworth;Komani,,,784726,2023,"Kontur Population 2023-11-01 (H3 r6, CC BY 4.0), summed inside geoBoundaries polygons",false,-32.4537,27.8571,false,
+ZA-EC-CHRIS_HANI,Chris Hani,Chris Hani,Queenstown,,,778741,2023,"Kontur Population 2023-11-01 (H3 r6, CC BY 4.0), summed inside geoBoundaries polygons",false,-31.8147,27.1842,true,
+ZA-EC-JOE_GQABI,Joe Gqabi,Joe Gqabi,Ukhahlamba;Aliwal North,,,360181,2023,"Kontur Population 2023-11-01 (H3 r6, CC BY 4.0), summed inside geoBoundaries polygons",false,-30.7645,27.6508,true,
+ZA-EC-OR_TAMBO,OR Tambo,OR Tambo,O.R. Tambo;O.R.Tambo;Mthatha;Umtata;Lusikisiki,,,1378201,2023,"Kontur Population 2023-11-01 (H3 r6, CC BY 4.0), summed inside geoBoundaries polygons",false,-31.5008,29.0584,true,
+ZA-EC-ALFRED_NZO,Alfred Nzo,Alfred Nzo,Mount Ayliff;Matatiele,,,2415659,2023,"Kontur Population 2023-11-01 (H3 r6, CC BY 4.0), summed inside geoBoundaries polygons",false,-30.4505,28.9297,true,

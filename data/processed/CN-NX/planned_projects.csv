@@ -1,0 +1,45 @@
+project_id,admin_code,sector,name,budget_m,currency,status,source,synthetic
+PP-CN-NX-DAWUKOU-water,CN-NX-DAWUKOU,water,"Water works, Dawukou District (synthetic)",40,CNY,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-CN-NX-HAIYUAN-education,CN-NX-HAIYUAN,education,"Education works, Haiyuan County (synthetic)",33,CNY,delayed,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-CN-NX-HELAN-roads,CN-NX-HELAN,roads,"Roads works, Helan County (synthetic)",34,CNY,delayed,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-CN-NX-HELAN-electricity,CN-NX-HELAN,electricity,"Electricity works, Helan County (synthetic)",191,CNY,delayed,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-CN-NX-HUINONG-education,CN-NX-HUINONG,education,"Education works, Huinong District (synthetic)",55,CNY,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-CN-NX-JINGYUAN-water,CN-NX-JINGYUAN,water,"Water works, Jingyuan County (synthetic)",180,CNY,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-CN-NX-JINGYUAN-education,CN-NX-JINGYUAN,education,"Education works, Jingyuan County (synthetic)",57,CNY,delayed,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-CN-NX-LINGWU-sanitation,CN-NX-LINGWU,sanitation,"Sanitation works, Lingwu (synthetic)",39,CNY,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-CN-NX-LINGWU-roads,CN-NX-LINGWU,roads,"Roads works, Lingwu (synthetic)",72,CNY,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-CN-NX-LINGWU-electricity,CN-NX-LINGWU,electricity,"Electricity works, Lingwu (synthetic)",191,CNY,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-CN-NX-LITONG-water,CN-NX-LITONG,water,"Water works, Litong District (synthetic)",67,CNY,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-CN-NX-LITONG-sanitation,CN-NX-LITONG,sanitation,"Sanitation works, Litong District (synthetic)",133,CNY,delayed,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-CN-NX-LITONG-roads,CN-NX-LITONG,roads,"Roads works, Litong District (synthetic)",135,CNY,delayed,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-CN-NX-LITONG-waste,CN-NX-LITONG,waste,"Waste works, Litong District (synthetic)",144,CNY,delayed,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-CN-NX-LONGDE-water,CN-NX-LONGDE,water,"Water works, Longde County (synthetic)",16,CNY,delayed,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-CN-NX-LONGDE-health,CN-NX-LONGDE,health,"Health works, Longde County (synthetic)",132,CNY,delayed,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-CN-NX-PENGYANG-sanitation,CN-NX-PENGYANG,sanitation,"Sanitation works, Pengyang County (synthetic)",140,CNY,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-CN-NX-PENGYANG-health,CN-NX-PENGYANG,health,"Health works, Pengyang County (synthetic)",89,CNY,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-CN-NX-PENGYANG-electricity,CN-NX-PENGYANG,electricity,"Electricity works, Pengyang County (synthetic)",69,CNY,delayed,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-CN-NX-PINGLUO-water,CN-NX-PINGLUO,water,"Water works, Pingluo County (synthetic)",57,CNY,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-CN-NX-PINGLUO-roads,CN-NX-PINGLUO,roads,"Roads works, Pingluo County (synthetic)",81,CNY,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-CN-NX-PINGLUO-waste,CN-NX-PINGLUO,waste,"Waste works, Pingluo County (synthetic)",165,CNY,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-CN-NX-QINGTONGXIA-roads,CN-NX-QINGTONGXIA,roads,"Roads works, Qingtongxia (synthetic)",79,CNY,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-CN-NX-TONGXIN-water,CN-NX-TONGXIN,water,"Water works, Tongxin County (synthetic)",90,CNY,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-CN-NX-TONGXIN-roads,CN-NX-TONGXIN,roads,"Roads works, Tongxin County (synthetic)",148,CNY,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-CN-NX-TONGXIN-electricity,CN-NX-TONGXIN,electricity,"Electricity works, Tongxin County (synthetic)",173,CNY,delayed,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-CN-NX-XIJI-water,CN-NX-XIJI,water,"Water works, Xiji County (synthetic)",30,CNY,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-CN-NX-XIJI-roads,CN-NX-XIJI,roads,"Roads works, Xiji County (synthetic)",48,CNY,delayed,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-CN-NX-XIJI-education,CN-NX-XIJI,education,"Education works, Xiji County (synthetic)",52,CNY,delayed,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-CN-NX-XIJI-electricity,CN-NX-XIJI,electricity,"Electricity works, Xiji County (synthetic)",196,CNY,delayed,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-CN-NX-XIJI-waste,CN-NX-XIJI,waste,"Waste works, Xiji County (synthetic)",109,CNY,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-CN-NX-YANCHI-electricity,CN-NX-YANCHI,electricity,"Electricity works, Yanchi County (synthetic)",66,CNY,delayed,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-CN-NX-YANCHI-waste,CN-NX-YANCHI,waste,"Waste works, Yanchi County (synthetic)",171,CNY,delayed,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-CN-NX-YINCHUAN-water,CN-NX-YINCHUAN,water,"Water works, Yinchuan (city districts) (synthetic)",37,CNY,delayed,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-CN-NX-YINCHUAN-roads,CN-NX-YINCHUAN,roads,"Roads works, Yinchuan (city districts) (synthetic)",195,CNY,delayed,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-CN-NX-YINCHUAN-health,CN-NX-YINCHUAN,health,"Health works, Yinchuan (city districts) (synthetic)",150,CNY,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-CN-NX-YONGNING-water,CN-NX-YONGNING,water,"Water works, Yongning County (synthetic)",78,CNY,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-CN-NX-YONGNING-sanitation,CN-NX-YONGNING,sanitation,"Sanitation works, Yongning County (synthetic)",185,CNY,delayed,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-CN-NX-YONGNING-electricity,CN-NX-YONGNING,electricity,"Electricity works, Yongning County (synthetic)",48,CNY,delayed,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-CN-NX-YUANZHOU-roads,CN-NX-YUANZHOU,roads,"Roads works, Yuanzhou District (synthetic)",166,CNY,delayed,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-CN-NX-YUANZHOU-education,CN-NX-YUANZHOU,education,"Education works, Yuanzhou District (synthetic)",137,CNY,delayed,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-CN-NX-YUANZHOU-electricity,CN-NX-YUANZHOU,electricity,"Electricity works, Yuanzhou District (synthetic)",32,CNY,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-CN-NX-YUANZHOU-waste,CN-NX-YUANZHOU,waste,"Waste works, Yuanzhou District (synthetic)",166,CNY,delayed,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-CN-NX-ZHONGNING-health,CN-NX-ZHONGNING,health,"Health works, Zhongning County (synthetic)",144,CNY,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true

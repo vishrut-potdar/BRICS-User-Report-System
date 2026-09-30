@@ -1,0 +1,175 @@
+{
+  "pack_id": "ZA-EC",
+  "country": "ZA",
+  "country_name": "South Africa",
+  "level": "region",
+  "parent": "ZA",
+  "region_iso": "ZA-EC",
+  "region_name": "Eastern Cape",
+  "unit_label": "district",
+  "unit_label_plural": "districts",
+  "priority_label": "ISRDP rural development node",
+  "languages": [
+    "xh",
+    "en",
+    "af"
+  ],
+  "channels": [
+    "whatsapp",
+    "telegram",
+    "web"
+  ],
+  "h3_resolution": 7,
+  "utc_offset": "+02:00",
+  "files": {
+    "district_reference": "reference/ZA-EC/units.csv",
+    "boundaries_geojson": "reference/ZA-EC/boundaries.geojson",
+    "settlements": "reference/ZA-EC/settlements.csv",
+    "indicators": "processed/ZA-EC/indicators.csv",
+    "indicators_long": "processed/ZA-EC/indicators_long.csv",
+    "planned_projects": "processed/ZA-EC/planned_projects.csv",
+    "synthetic_requests": "synthetic/ZA-EC/requests.jsonl"
+  },
+  "equity_metric": "mpi_headcount",
+  "metrics": {
+    "mpi_headcount": {
+      "description": "Share of population multidimensionally poor (SAMPI headcount, 0-1)",
+      "expected_source": "Stats SA South African MPI (Census 2011 / Community Survey 2016; Census 2022 when released)",
+      "licence": "Public; cite Stats SA"
+    },
+    "piped_water_access": {
+      "description": "Share of households with piped water in the dwelling or yard (0-1)",
+      "expected_source": "Stats SA Census 2022 / General Household Survey",
+      "licence": "Public; cite Stats SA"
+    },
+    "flush_toilet_access": {
+      "description": "Share of households with a flush toilet (0-1)",
+      "expected_source": "Stats SA Census 2022",
+      "licence": "Public; cite Stats SA"
+    },
+    "road_unpaved_share": {
+      "description": "Share of the municipal road network that is unpaved (0-1)",
+      "expected_source": "Rural Road Asset Management Systems (RRAMS); municipal IDPs",
+      "licence": "Public; cite DoT / municipalities"
+    },
+    "clinic_distance_gap": {
+      "description": "Share of households more than 5 km from the nearest clinic (0-1)",
+      "expected_source": "Stats SA General Household Survey; DHIS facility list",
+      "licence": "Public; cite Stats SA / NDoH"
+    },
+    "school_infra_gap": {
+      "description": "Share of public schools with pit latrines or without a reliable water supply (0-1)",
+      "expected_source": "NEIMS standard reports, Department of Basic Education",
+      "licence": "Public; cite DBE"
+    },
+    "electricity_access": {
+      "description": "Share of households using mains electricity for lighting (0-1)",
+      "expected_source": "Stats SA Census 2022",
+      "licence": "Public; cite Stats SA"
+    },
+    "refuse_removal_access": {
+      "description": "Share of households with weekly refuse removal by the municipality (0-1)",
+      "expected_source": "Stats SA Census 2022",
+      "licence": "Public; cite Stats SA"
+    }
+  },
+  "need": {
+    "water": {
+      "metric": "piped_water_access",
+      "invert": true
+    },
+    "sanitation": {
+      "metric": "flush_toilet_access",
+      "invert": true
+    },
+    "roads": {
+      "metric": "road_unpaved_share",
+      "invert": false
+    },
+    "health": {
+      "metric": "clinic_distance_gap",
+      "invert": false
+    },
+    "education": {
+      "metric": "school_infra_gap",
+      "invert": false
+    },
+    "electricity": {
+      "metric": "electricity_access",
+      "invert": true
+    },
+    "waste": {
+      "metric": "refuse_removal_access",
+      "invert": true
+    },
+    "other": {
+      "metric": "mpi_headcount",
+      "invert": false
+    }
+  },
+  "placeholder": {
+    "_note": "Shapes deterministic PLACEHOLDER values until real files exist in data/raw/<pack>/. These tiers are rough assumptions, not data, and every placeholder value is flagged in the outputs and the API.",
+    "deprivation_tiers": {
+      "high": [
+        "ZA-EC-ALFRED_NZO",
+        "ZA-EC-CHRIS_HANI",
+        "ZA-EC-JOE_GQABI",
+        "ZA-EC-OR_TAMBO"
+      ],
+      "low": [
+        "ZA-EC-BUFFALO_CITY",
+        "ZA-EC-NELSON_MANDELA_BAY"
+      ]
+    },
+    "metrics": {
+      "mpi_headcount": [
+        0.01,
+        0.2
+      ],
+      "piped_water_access": [
+        0.92,
+        -0.55
+      ],
+      "flush_toilet_access": [
+        0.9,
+        -0.6
+      ],
+      "road_unpaved_share": [
+        0.3,
+        0.55
+      ],
+      "clinic_distance_gap": [
+        0.05,
+        0.4
+      ],
+      "school_infra_gap": [
+        0.02,
+        0.4
+      ],
+      "electricity_access": [
+        0.97,
+        -0.2
+      ],
+      "refuse_removal_access": [
+        0.9,
+        -0.75
+      ]
+    }
+  },
+  "synthetic": {
+    "n": 700,
+    "lang_mix": {
+      "xh": 0.5,
+      "en": 0.35,
+      "af": 0.15
+    },
+    "connectivity": {
+      "ZA-EC-NELSON_MANDELA_BAY": 2.5,
+      "ZA-EC-BUFFALO_CITY": 2.2
+    },
+    "brigade": {
+      "admin_code": "ZA-EC-NELSON_MANDELA_BAY",
+      "lang": "en"
+    }
+  }
+}

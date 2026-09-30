@@ -159,14 +159,23 @@ LANDMARKS: dict[str, list[tuple[str, str]]] = {
     "hi-Latn": [("purane bus stand ke paas", "near the old bus stand"), ("panchayat office ke peeche", "behind the gram panchayat office"),
                 ("primary school ke bagal mein", "next to the primary school"), ("mandi road pe", "on the market road")],
 }
-DISTRICT_ONLY: dict[str, str] = {
-    "en": "({d} district)",
-    "hi": "({d} जिला)",
-    "mr": "({d} जिल्हा)",
-    "hi-Latn": "({d} district)",
-}
+DISTRICT_ONLY: dict[str, str] = {"en": "({d})", "hi": "({d})", "mr": "({d})", "hi-Latn": "({d})"}
 
-# The planted brigading attack: near-identical Hinglish messages from a handful of numbers in 30 minutes.
-BRIGADE_TEXT = "Station Road ka widening kaam turant shuru karo, yeh sabse zaroori kaam hai"
-BRIGADE_TEXT_EN = "Start the Station Road widening work immediately; this is the most important work."
-BRIGADE_SUFFIXES = ["", "!!", "!!!", " please", " sir please", " jaldi", " 🙏"]
+# The planted brigading attack: near-identical messages from a handful of numbers in 30 minutes.
+BRIGADE: dict[str, tuple[str, str]] = {
+    "hi-Latn": ("Station Road ka widening kaam turant shuru karo, yeh sabse zaroori kaam hai",
+                "Start the Station Road widening work immediately; this is the most important work."),
+}
+BRIGADE_SUFFIXES = ["", "!!", "!!!", " please", " sir please", " 🙏"]
+
+# Brazil, Russia, China and South Africa phrases live in their own file; merge them in.
+from scripts import _templates_brics as _brics  # noqa: E402
+
+for _sector, _by_lang in _brics.TEMPLATES.items():
+    TEMPLATES[_sector].update(_by_lang)
+OPENERS.update(_brics.OPENERS)
+CLOSERS.update(_brics.CLOSERS)
+LANDMARKS.update(_brics.LANDMARKS)
+DISTRICT_ONLY.update(_brics.DISTRICT_ONLY)
+BRIGADE.update(_brics.BRIGADE)
+DETAILS = _brics.DETAILS

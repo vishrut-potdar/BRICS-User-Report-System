@@ -29,8 +29,9 @@ class DistrictInfo:
     aliases: tuple[str, ...]
     lat: float
     lon: float
-    lgd_code: str = ""
+    lgd_code: str = ""  # official code: LGD (India), IBGE (Brazil)...
     population_verified: bool = False
+    weak_aliases: tuple[str, ...] = ()  # also ordinary words; matched only in place mentions, never free text
 
 
 @dataclass
@@ -46,6 +47,13 @@ class PackContext:
     boundaries: dict[str, list[Polygon]] = field(default_factory=dict)
     placeholder_metrics: dict[str, tuple[str, ...]] = field(default_factory=dict)
     synthetic_planned: bool = False
+    country_name: str = ""
+    level: str = "region"  # country: units are states/provinces; region: units are districts of one state
+    parent: str | None = None  # the country pack a region pack sits under
+    unit_label: str = "district"
+    unit_label_plural: str = "districts"
+    priority_label: str | None = None  # what the equity bonus flag means here, e.g. "Aspirational District"
+    boundaries_path: Path | None = None
 
     @property
     def synthetic_indicators(self) -> bool:
@@ -68,16 +76,18 @@ def read_pack_config(data_dir: Path, pack_id: str) -> dict[str, Any]:
 def district_infos(data_dir: Path, config: dict[str, Any]) -> dict[str, DistrictInfo]:
     infos = {}
     for row in read_csv(data_dir / config["files"]["district_reference"]):
+        weak = {n.strip() for n in (row.get("weak_names") or "").split(";") if n.strip()}
         names = [row["district_name"], row.get("name_local", ""), *(row.get("alt_names") or "").split(";")]
         infos[row["admin_code"]] = DistrictInfo(
             admin_code=row["admin_code"],
             name=row["district_name"],
             name_local=row.get("name_local", "") or row["district_name"],
-            aliases=tuple(dict.fromkeys(n.strip() for n in names if n.strip())),
+            aliases=tuple(dict.fromkeys(n.strip() for n in names if n.strip() and n.strip() not in weak)),
             lat=float(row["centroid_lat"]),
             lon=float(row["centroid_lon"]),
-            lgd_code=row.get("lgd_code", ""),
+            lgd_code=row.get("official_code") or row.get("lgd_code", ""),
             population_verified=truthy(row.get("population_verified")),
+            weak_aliases=tuple(sorted(weak)),
         )
     return infos
 
@@ -120,6 +130,20 @@ def _load_boundaries(path: Path) -> dict[str, list[Polygon]]:
     return boundaries
 
 
+def unit_population(row: dict[str, str]) -> int:
+    return int(float(row.get("population") or row.get("population_2011") or 0))
+
+
+def available_packs(data_dir: Path) -> list[str]:
+    """Packs whose indicator table has been built, in file-name order."""
+    ids = []
+    for path in sorted((data_dir / "packs").glob("*.json")):
+        config = json.loads(path.read_text(encoding="utf-8"))
+        if (data_dir / config["files"]["indicators"]).is_file():
+            ids.append(config["pack_id"])
+    return ids
+
+
 def load_pack(data_dir: Path, pack_id: str) -> PackContext:
     config = read_pack_config(data_dir, pack_id)
     files = config["files"]
@@ -147,7 +171,8 @@ def load_pack(data_dir: Path, pack_id: str) -> PackContext:
         placeholders[code] = tuple(m for m in (row.get("placeholder_metrics") or "").split(";") if m)
 
     planned, synthetic_planned = _load_planned(data_dir / files["planned_projects"]) if files.get("planned_projects") else ({}, False)
-    boundaries = _load_boundaries(data_dir / files["boundaries_geojson"]) if files.get("boundaries_geojson") else {}
+    boundaries_path = data_dir / files["boundaries_geojson"] if files.get("boundaries_geojson") else None
+    boundaries = _load_boundaries(boundaries_path) if boundaries_path else {}
     return PackContext(
         pack_id=config["pack_id"],
         country=config["country"],
@@ -160,4 +185,11 @@ def load_pack(data_dir: Path, pack_id: str) -> PackContext:
         boundaries=boundaries,
         placeholder_metrics=placeholders,
         synthetic_planned=synthetic_planned,
+        country_name=config.get("country_name", config["country"]),
+        level=config.get("level", "region"),
+        parent=config.get("parent"),
+        unit_label=config.get("unit_label", "district"),
+        unit_label_plural=config.get("unit_label_plural", "districts"),
+        priority_label=config.get("priority_label"),
+        boundaries_path=boundaries_path if boundaries_path and boundaries_path.is_file() else None,
     )

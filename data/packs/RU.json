@@ -1,0 +1,193 @@
+{
+  "pack_id": "RU",
+  "country": "RU",
+  "country_name": "Russia",
+  "level": "country",
+  "parent": null,
+  "region_iso": "RU",
+  "region_name": "Russia",
+  "unit_label": "region",
+  "unit_label_plural": "regions",
+  "priority_label": null,
+  "languages": [
+    "ru"
+  ],
+  "channels": [
+    "whatsapp",
+    "telegram",
+    "web"
+  ],
+  "h3_resolution": 5,
+  "utc_offset": "+03:00",
+  "files": {
+    "district_reference": "reference/RU/units.csv",
+    "boundaries_geojson": "reference/RU/boundaries.geojson",
+    "settlements": "reference/RU/settlements.csv",
+    "indicators": "processed/RU/indicators.csv",
+    "indicators_long": "processed/RU/indicators_long.csv",
+    "planned_projects": "processed/RU/planned_projects.csv",
+    "synthetic_requests": "synthetic/RU/requests.jsonl"
+  },
+  "equity_metric": "poverty_rate",
+  "metrics": {
+    "poverty_rate": {
+      "description": "Share of population with income below the regional subsistence minimum (0-1)",
+      "expected_source": "Rosstat, 'Level of poverty by region' (rosstat.gov.ru)",
+      "licence": "Public; cite Rosstat"
+    },
+    "central_water_supply": {
+      "description": "Share of the housing stock with centralised water supply (0-1)",
+      "expected_source": "Rosstat housing-stock amenities (Жилищное хозяйство)",
+      "licence": "Public; cite Rosstat"
+    },
+    "sewerage_share": {
+      "description": "Share of the housing stock with sewerage (0-1)",
+      "expected_source": "Rosstat housing-stock amenities",
+      "licence": "Public; cite Rosstat"
+    },
+    "road_substandard_share": {
+      "description": "Share of regional and inter-municipal roads not meeting standards (0-1)",
+      "expected_source": "Rosavtodor / 'Safe Quality Roads' national project reports",
+      "licence": "Public; cite Rosavtodor"
+    },
+    "medical_post_gap": {
+      "description": "Share of rural settlements without a medical post (FAP) or clinic in reach (0-1)",
+      "expected_source": "Ministry of Health primary-care modernisation reports; Rosstat municipal database",
+      "licence": "Public; cite MoH / Rosstat"
+    },
+    "school_repair_need": {
+      "description": "Share of schools in need of major repair or in emergency condition (0-1)",
+      "expected_source": "Ministry of Education school-modernisation programme; Rosstat",
+      "licence": "Public; cite Minprosveshcheniya"
+    },
+    "grid_outage_share": {
+      "description": "Share of households affected by prolonged power outages in the year (0-1)",
+      "expected_source": "Minenergo / Rosseti reliability reports",
+      "licence": "Public; cite Minenergo"
+    },
+    "waste_collection_coverage": {
+      "description": "Share of settlements with regular solid-waste collection by a regional operator (0-1)",
+      "expected_source": "Russian Ecological Operator (REO) territorial schemes",
+      "licence": "Public; cite REO"
+    }
+  },
+  "need": {
+    "water": {
+      "metric": "central_water_supply",
+      "invert": true
+    },
+    "sanitation": {
+      "metric": "sewerage_share",
+      "invert": true
+    },
+    "roads": {
+      "metric": "road_substandard_share",
+      "invert": false
+    },
+    "health": {
+      "metric": "medical_post_gap",
+      "invert": false
+    },
+    "education": {
+      "metric": "school_repair_need",
+      "invert": false
+    },
+    "electricity": {
+      "metric": "grid_outage_share",
+      "invert": false
+    },
+    "waste": {
+      "metric": "waste_collection_coverage",
+      "invert": true
+    },
+    "other": {
+      "metric": "poverty_rate",
+      "invert": false
+    }
+  },
+  "placeholder": {
+    "_note": "Shapes deterministic PLACEHOLDER values until real files exist in data/raw/<pack>/. These tiers are rough assumptions, not data, and every placeholder value is flagged in the outputs and the API.",
+    "deprivation_tiers": {
+      "high": [
+        "RU-AL",
+        "RU-BU",
+        "RU-CE",
+        "RU-DA",
+        "RU-IN",
+        "RU-KB",
+        "RU-KC",
+        "RU-KGN",
+        "RU-KL",
+        "RU-ME",
+        "RU-TY",
+        "RU-YEV",
+        "RU-ZAB"
+      ],
+      "low": [
+        "RU-BEL",
+        "RU-KHM",
+        "RU-LEN",
+        "RU-MOS",
+        "RU-MOW",
+        "RU-NEN",
+        "RU-SAK",
+        "RU-SPE",
+        "RU-TA",
+        "RU-TYU",
+        "RU-YAN"
+      ]
+    },
+    "metrics": {
+      "poverty_rate": [
+        0.05,
+        0.28
+      ],
+      "central_water_supply": [
+        0.95,
+        -0.5
+      ],
+      "sewerage_share": [
+        0.92,
+        -0.6
+      ],
+      "road_substandard_share": [
+        0.3,
+        0.4
+      ],
+      "medical_post_gap": [
+        0.05,
+        0.35
+      ],
+      "school_repair_need": [
+        0.05,
+        0.3
+      ],
+      "grid_outage_share": [
+        0.02,
+        0.2
+      ],
+      "waste_collection_coverage": [
+        0.95,
+        -0.35
+      ]
+    }
+  },
+  "synthetic": {
+    "n": 1500,
+    "lang_mix": {
+      "ru": 1.0
+    },
+    "connectivity": {
+      "RU-MOW": 3.0,
+      "RU-SPE": 3.0,
+      "RU-MOS": 2.2,
+      "RU-TA": 1.8,
+      "RU-SVE": 1.8,
+      "RU-NVS": 1.6
+    },
+    "brigade": {
+      "admin_code": "RU-MOW",
+      "lang": "ru"
+    }
+  }
+}

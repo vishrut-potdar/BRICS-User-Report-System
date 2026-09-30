@@ -76,3 +76,37 @@ def test_ack_asks_for_location_when_unresolved(container):
     request = container.ingest.ingest(channel="web", sender_id="u1", text="Paani nahi aa raha hai 5 din se")
     assert request.status == "needs_review"
     assert "district" in ack_message(request)
+
+
+def test_gemini_without_key_falls_back_to_offline():
+    from app.config import Settings
+    from app.language import OfflineProvider, build_provider
+
+    provider = build_provider(Settings(language_provider="gemini", gemini_api_key=None), "India")
+    assert isinstance(provider, OfflineProvider)
+
+
+@pytest.mark.parametrize(
+    ("text", "allowed", "lang"),
+    [
+        ("The water is not clear", ("hi", "en", "hi-Latn", "mr"), "en"),  # was read as Afrikaans
+        ("The water is not clear", (), "en"),
+        ("Ons het geen water nie, die kraan is droog", ("en", "zu", "xh", "af"), "af"),
+        ("Não tem água na nossa rua", ("pt",), "pt"),
+        ("Ons het geen water nie", ("hi", "en", "hi-Latn", "mr"), "en"),  # Afrikaans-looking text in India falls back
+        ("आमच्या गावात पाणी नाही", ("hi", "en"), "hi"),
+    ],
+)
+def test_detect_lang_stays_within_country_languages(text, allowed, lang):
+    assert detect_lang(text, allowed) == lang
+
+
+def test_english_ack_adds_the_country_language():
+    from app.models import CivicRequest, Geo
+
+    request = CivicRequest(id="abc123", channel="web", lang="en", text_original="x", text_en="x", category="water",
+                           geo=Geo(admin_code="IN-MH-NAGPUR"), requester_hash="h")
+    ack = ack_message(request, "hi")
+    assert "Tracking ID: abc123" in ack and "आपका अनुरोध दर्ज हो गया है" in ack
+    hindi = request.model_copy(update={"lang": "hi"})
+    assert ack_message(hindi, "hi").count("abc123") == 1  # no duplicate line

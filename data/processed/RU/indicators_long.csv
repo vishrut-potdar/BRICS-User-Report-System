@@ -1,0 +1,665 @@
+admin_code,district_name,metric,value,year,source,licence,placeholder
+RU-AD,Adygea,poverty_rate,0.1457,,"PLACEHOLDER - replace with Rosstat, 'Level of poverty by region' (rosstat.gov.ru)",n/a,true
+RU-AL,Altai Republic,poverty_rate,0.2729,,"PLACEHOLDER - replace with Rosstat, 'Level of poverty by region' (rosstat.gov.ru)",n/a,true
+RU-ALT,Altai Krai,poverty_rate,0.1799,,"PLACEHOLDER - replace with Rosstat, 'Level of poverty by region' (rosstat.gov.ru)",n/a,true
+RU-AMU,Amur Oblast,poverty_rate,0.1863,,"PLACEHOLDER - replace with Rosstat, 'Level of poverty by region' (rosstat.gov.ru)",n/a,true
+RU-ARK,Arkhangelsk Oblast,poverty_rate,0.2116,,"PLACEHOLDER - replace with Rosstat, 'Level of poverty by region' (rosstat.gov.ru)",n/a,true
+RU-AST,Astrakhan Oblast,poverty_rate,0.2544,,"PLACEHOLDER - replace with Rosstat, 'Level of poverty by region' (rosstat.gov.ru)",n/a,true
+RU-BA,Bashkortostan,poverty_rate,0.1413,,"PLACEHOLDER - replace with Rosstat, 'Level of poverty by region' (rosstat.gov.ru)",n/a,true
+RU-BEL,Belgorod Oblast,poverty_rate,0.1018,,"PLACEHOLDER - replace with Rosstat, 'Level of poverty by region' (rosstat.gov.ru)",n/a,true
+RU-BRY,Bryansk Oblast,poverty_rate,0.1571,,"PLACEHOLDER - replace with Rosstat, 'Level of poverty by region' (rosstat.gov.ru)",n/a,true
+RU-BU,Buryatia,poverty_rate,0.1777,,"PLACEHOLDER - replace with Rosstat, 'Level of poverty by region' (rosstat.gov.ru)",n/a,true
+RU-CE,Chechnya,poverty_rate,0.3164,,"PLACEHOLDER - replace with Rosstat, 'Level of poverty by region' (rosstat.gov.ru)",n/a,true
+RU-CHE,Chelyabinsk Oblast,poverty_rate,0.1401,,"PLACEHOLDER - replace with Rosstat, 'Level of poverty by region' (rosstat.gov.ru)",n/a,true
+RU-CHU,Chukotka Autonomous Okrug,poverty_rate,0.2483,,"PLACEHOLDER - replace with Rosstat, 'Level of poverty by region' (rosstat.gov.ru)",n/a,true
+RU-CU,Chuvashia,poverty_rate,0.2218,,"PLACEHOLDER - replace with Rosstat, 'Level of poverty by region' (rosstat.gov.ru)",n/a,true
+RU-DA,Dagestan,poverty_rate,0.1967,,"PLACEHOLDER - replace with Rosstat, 'Level of poverty by region' (rosstat.gov.ru)",n/a,true
+RU-IN,Ingushetia,poverty_rate,0.2307,,"PLACEHOLDER - replace with Rosstat, 'Level of poverty by region' (rosstat.gov.ru)",n/a,true
+RU-IRK,Irkutsk Oblast,poverty_rate,0.2068,,"PLACEHOLDER - replace with Rosstat, 'Level of poverty by region' (rosstat.gov.ru)",n/a,true
+RU-IVA,Ivanovo Oblast,poverty_rate,0.2056,,"PLACEHOLDER - replace with Rosstat, 'Level of poverty by region' (rosstat.gov.ru)",n/a,true
+RU-KAM,Kamchatka Krai,poverty_rate,0.1891,,"PLACEHOLDER - replace with Rosstat, 'Level of poverty by region' (rosstat.gov.ru)",n/a,true
+RU-KB,Kabardino-Balkaria,poverty_rate,0.3296,,"PLACEHOLDER - replace with Rosstat, 'Level of poverty by region' (rosstat.gov.ru)",n/a,true
+RU-KC,Karachay-Cherkessia,poverty_rate,0.2390,,"PLACEHOLDER - replace with Rosstat, 'Level of poverty by region' (rosstat.gov.ru)",n/a,true
+RU-KDA,Krasnodar Krai,poverty_rate,0.1830,,"PLACEHOLDER - replace with Rosstat, 'Level of poverty by region' (rosstat.gov.ru)",n/a,true
+RU-KEM,Kemerovo Oblast,poverty_rate,0.1649,,"PLACEHOLDER - replace with Rosstat, 'Level of poverty by region' (rosstat.gov.ru)",n/a,true
+RU-KGD,Kaliningrad Oblast,poverty_rate,0.1854,,"PLACEHOLDER - replace with Rosstat, 'Level of poverty by region' (rosstat.gov.ru)",n/a,true
+RU-KGN,Kurgan Oblast,poverty_rate,0.2278,,"PLACEHOLDER - replace with Rosstat, 'Level of poverty by region' (rosstat.gov.ru)",n/a,true
+RU-KHA,Khabarovsk Krai,poverty_rate,0.1039,,"PLACEHOLDER - replace with Rosstat, 'Level of poverty by region' (rosstat.gov.ru)",n/a,true
+RU-KHM,Khanty-Mansi Autonomous Okrug,poverty_rate,0.0834,,"PLACEHOLDER - replace with Rosstat, 'Level of poverty by region' (rosstat.gov.ru)",n/a,true
+RU-KIR,Kirov Oblast,poverty_rate,0.1909,,"PLACEHOLDER - replace with Rosstat, 'Level of poverty by region' (rosstat.gov.ru)",n/a,true
+RU-KK,Khakassia,poverty_rate,0.1347,,"PLACEHOLDER - replace with Rosstat, 'Level of poverty by region' (rosstat.gov.ru)",n/a,true
+RU-KL,Kalmykia,poverty_rate,0.3193,,"PLACEHOLDER - replace with Rosstat, 'Level of poverty by region' (rosstat.gov.ru)",n/a,true
+RU-KLU,Kaluga Oblast,poverty_rate,0.2162,,"PLACEHOLDER - replace with Rosstat, 'Level of poverty by region' (rosstat.gov.ru)",n/a,true
+RU-KO,Komi Republic,poverty_rate,0.1661,,"PLACEHOLDER - replace with Rosstat, 'Level of poverty by region' (rosstat.gov.ru)",n/a,true
+RU-KOS,Kostroma Oblast,poverty_rate,0.2012,,"PLACEHOLDER - replace with Rosstat, 'Level of poverty by region' (rosstat.gov.ru)",n/a,true
+RU-KR,Republic of Karelia,poverty_rate,0.1362,,"PLACEHOLDER - replace with Rosstat, 'Level of poverty by region' (rosstat.gov.ru)",n/a,true
+RU-KRS,Kursk Oblast,poverty_rate,0.2020,,"PLACEHOLDER - replace with Rosstat, 'Level of poverty by region' (rosstat.gov.ru)",n/a,true
+RU-KYA,Krasnoyarsk Krai,poverty_rate,0.1908,,"PLACEHOLDER - replace with Rosstat, 'Level of poverty by region' (rosstat.gov.ru)",n/a,true
+RU-LEN,Leningrad Oblast,poverty_rate,0.0811,,"PLACEHOLDER - replace with Rosstat, 'Level of poverty by region' (rosstat.gov.ru)",n/a,true
+RU-LIP,Lipetsk Oblast,poverty_rate,0.1673,,"PLACEHOLDER - replace with Rosstat, 'Level of poverty by region' (rosstat.gov.ru)",n/a,true
+RU-MAG,Magadan Oblast,poverty_rate,0.2308,,"PLACEHOLDER - replace with Rosstat, 'Level of poverty by region' (rosstat.gov.ru)",n/a,true
+RU-ME,Mari El,poverty_rate,0.2731,,"PLACEHOLDER - replace with Rosstat, 'Level of poverty by region' (rosstat.gov.ru)",n/a,true
+RU-MO,Mordovia,poverty_rate,0.2133,,"PLACEHOLDER - replace with Rosstat, 'Level of poverty by region' (rosstat.gov.ru)",n/a,true
+RU-MOS,Moscow Oblast,poverty_rate,0.0322,,"PLACEHOLDER - replace with Rosstat, 'Level of poverty by region' (rosstat.gov.ru)",n/a,true
+RU-MOW,Moscow,poverty_rate,0.1000,,"PLACEHOLDER - replace with Rosstat, 'Level of poverty by region' (rosstat.gov.ru)",n/a,true
+RU-MUR,Murmansk Oblast,poverty_rate,0.1735,,"PLACEHOLDER - replace with Rosstat, 'Level of poverty by region' (rosstat.gov.ru)",n/a,true
+RU-NEN,Nenets Autonomous Okrug,poverty_rate,0.0878,,"PLACEHOLDER - replace with Rosstat, 'Level of poverty by region' (rosstat.gov.ru)",n/a,true
+RU-NGR,Novgorod Oblast,poverty_rate,0.2152,,"PLACEHOLDER - replace with Rosstat, 'Level of poverty by region' (rosstat.gov.ru)",n/a,true
+RU-NIZ,Nizhny Novgorod Oblast,poverty_rate,0.1790,,"PLACEHOLDER - replace with Rosstat, 'Level of poverty by region' (rosstat.gov.ru)",n/a,true
+RU-NVS,Novosibirsk Oblast,poverty_rate,0.2062,,"PLACEHOLDER - replace with Rosstat, 'Level of poverty by region' (rosstat.gov.ru)",n/a,true
+RU-OMS,Omsk Oblast,poverty_rate,0.2045,,"PLACEHOLDER - replace with Rosstat, 'Level of poverty by region' (rosstat.gov.ru)",n/a,true
+RU-ORE,Orenburg Oblast,poverty_rate,0.1869,,"PLACEHOLDER - replace with Rosstat, 'Level of poverty by region' (rosstat.gov.ru)",n/a,true
+RU-ORL,Oryol Oblast,poverty_rate,0.1773,,"PLACEHOLDER - replace with Rosstat, 'Level of poverty by region' (rosstat.gov.ru)",n/a,true
+RU-PER,Perm Krai,poverty_rate,0.1572,,"PLACEHOLDER - replace with Rosstat, 'Level of poverty by region' (rosstat.gov.ru)",n/a,true
+RU-PNZ,Penza Oblast,poverty_rate,0.1412,,"PLACEHOLDER - replace with Rosstat, 'Level of poverty by region' (rosstat.gov.ru)",n/a,true
+RU-PRI,Primorsky Krai,poverty_rate,0.1948,,"PLACEHOLDER - replace with Rosstat, 'Level of poverty by region' (rosstat.gov.ru)",n/a,true
+RU-PSK,Pskov Oblast,poverty_rate,0.1865,,"PLACEHOLDER - replace with Rosstat, 'Level of poverty by region' (rosstat.gov.ru)",n/a,true
+RU-ROS,Rostov Oblast,poverty_rate,0.1483,,"PLACEHOLDER - replace with Rosstat, 'Level of poverty by region' (rosstat.gov.ru)",n/a,true
+RU-RYA,Ryazan Oblast,poverty_rate,0.1589,,"PLACEHOLDER - replace with Rosstat, 'Level of poverty by region' (rosstat.gov.ru)",n/a,true
+RU-SA,Sakha (Yakutia),poverty_rate,0.1881,,"PLACEHOLDER - replace with Rosstat, 'Level of poverty by region' (rosstat.gov.ru)",n/a,true
+RU-SAK,Sakhalin Oblast,poverty_rate,0.0100,,"PLACEHOLDER - replace with Rosstat, 'Level of poverty by region' (rosstat.gov.ru)",n/a,true
+RU-SAM,Samara Oblast,poverty_rate,0.1462,,"PLACEHOLDER - replace with Rosstat, 'Level of poverty by region' (rosstat.gov.ru)",n/a,true
+RU-SAR,Saratov Oblast,poverty_rate,0.1713,,"PLACEHOLDER - replace with Rosstat, 'Level of poverty by region' (rosstat.gov.ru)",n/a,true
+RU-SE,North Ossetia–Alania,poverty_rate,0.1776,,"PLACEHOLDER - replace with Rosstat, 'Level of poverty by region' (rosstat.gov.ru)",n/a,true
+RU-SMO,Smolensk Oblast,poverty_rate,0.1743,,"PLACEHOLDER - replace with Rosstat, 'Level of poverty by region' (rosstat.gov.ru)",n/a,true
+RU-SPE,Saint Petersburg,poverty_rate,0.1111,,"PLACEHOLDER - replace with Rosstat, 'Level of poverty by region' (rosstat.gov.ru)",n/a,true
+RU-STA,Stavropol Krai,poverty_rate,0.1994,,"PLACEHOLDER - replace with Rosstat, 'Level of poverty by region' (rosstat.gov.ru)",n/a,true
+RU-SVE,Sverdlovsk Oblast,poverty_rate,0.2309,,"PLACEHOLDER - replace with Rosstat, 'Level of poverty by region' (rosstat.gov.ru)",n/a,true
+RU-TA,Tatarstan,poverty_rate,0.1278,,"PLACEHOLDER - replace with Rosstat, 'Level of poverty by region' (rosstat.gov.ru)",n/a,true
+RU-TAM,Tambov Oblast,poverty_rate,0.1789,,"PLACEHOLDER - replace with Rosstat, 'Level of poverty by region' (rosstat.gov.ru)",n/a,true
+RU-TOM,Tomsk Oblast,poverty_rate,0.1926,,"PLACEHOLDER - replace with Rosstat, 'Level of poverty by region' (rosstat.gov.ru)",n/a,true
+RU-TUL,Tula Oblast,poverty_rate,0.1768,,"PLACEHOLDER - replace with Rosstat, 'Level of poverty by region' (rosstat.gov.ru)",n/a,true
+RU-TVE,Tver Oblast,poverty_rate,0.1341,,"PLACEHOLDER - replace with Rosstat, 'Level of poverty by region' (rosstat.gov.ru)",n/a,true
+RU-TY,Tuva,poverty_rate,0.2941,,"PLACEHOLDER - replace with Rosstat, 'Level of poverty by region' (rosstat.gov.ru)",n/a,true
+RU-TYU,Tyumen Oblast,poverty_rate,0.1516,,"PLACEHOLDER - replace with Rosstat, 'Level of poverty by region' (rosstat.gov.ru)",n/a,true
+RU-UD,Udmurtia,poverty_rate,0.1996,,"PLACEHOLDER - replace with Rosstat, 'Level of poverty by region' (rosstat.gov.ru)",n/a,true
+RU-ULY,Ulyanovsk Oblast,poverty_rate,0.1783,,"PLACEHOLDER - replace with Rosstat, 'Level of poverty by region' (rosstat.gov.ru)",n/a,true
+RU-VGG,Volgograd Oblast,poverty_rate,0.1840,,"PLACEHOLDER - replace with Rosstat, 'Level of poverty by region' (rosstat.gov.ru)",n/a,true
+RU-VLA,Vladimir Oblast,poverty_rate,0.1602,,"PLACEHOLDER - replace with Rosstat, 'Level of poverty by region' (rosstat.gov.ru)",n/a,true
+RU-VLG,Vologda Oblast,poverty_rate,0.1772,,"PLACEHOLDER - replace with Rosstat, 'Level of poverty by region' (rosstat.gov.ru)",n/a,true
+RU-VOR,Voronezh Oblast,poverty_rate,0.1445,,"PLACEHOLDER - replace with Rosstat, 'Level of poverty by region' (rosstat.gov.ru)",n/a,true
+RU-YAN,Yamalo-Nenets Autonomous Okrug,poverty_rate,0.0560,,"PLACEHOLDER - replace with Rosstat, 'Level of poverty by region' (rosstat.gov.ru)",n/a,true
+RU-YAR,Yaroslavl Oblast,poverty_rate,0.1889,,"PLACEHOLDER - replace with Rosstat, 'Level of poverty by region' (rosstat.gov.ru)",n/a,true
+RU-YEV,Jewish Autonomous Oblast,poverty_rate,0.3344,,"PLACEHOLDER - replace with Rosstat, 'Level of poverty by region' (rosstat.gov.ru)",n/a,true
+RU-ZAB,Zabaykalsky Krai,poverty_rate,0.2645,,"PLACEHOLDER - replace with Rosstat, 'Level of poverty by region' (rosstat.gov.ru)",n/a,true
+RU-AD,Adygea,central_water_supply,0.7258,,PLACEHOLDER - replace with Rosstat housing-stock amenities (Жилищное хозяйство),n/a,true
+RU-AL,Altai Republic,central_water_supply,0.4843,,PLACEHOLDER - replace with Rosstat housing-stock amenities (Жилищное хозяйство),n/a,true
+RU-ALT,Altai Krai,central_water_supply,0.7085,,PLACEHOLDER - replace with Rosstat housing-stock amenities (Жилищное хозяйство),n/a,true
+RU-AMU,Amur Oblast,central_water_supply,0.6715,,PLACEHOLDER - replace with Rosstat housing-stock amenities (Жилищное хозяйство),n/a,true
+RU-ARK,Arkhangelsk Oblast,central_water_supply,0.7222,,PLACEHOLDER - replace with Rosstat housing-stock amenities (Жилищное хозяйство),n/a,true
+RU-AST,Astrakhan Oblast,central_water_supply,0.6589,,PLACEHOLDER - replace with Rosstat housing-stock amenities (Жилищное хозяйство),n/a,true
+RU-BA,Bashkortostan,central_water_supply,0.6793,,PLACEHOLDER - replace with Rosstat housing-stock amenities (Жилищное хозяйство),n/a,true
+RU-BEL,Belgorod Oblast,central_water_supply,0.8364,,PLACEHOLDER - replace with Rosstat housing-stock amenities (Жилищное хозяйство),n/a,true
+RU-BRY,Bryansk Oblast,central_water_supply,0.6409,,PLACEHOLDER - replace with Rosstat housing-stock amenities (Жилищное хозяйство),n/a,true
+RU-BU,Buryatia,central_water_supply,0.5945,,PLACEHOLDER - replace with Rosstat housing-stock amenities (Жилищное хозяйство),n/a,true
+RU-CE,Chechnya,central_water_supply,0.5171,,PLACEHOLDER - replace with Rosstat housing-stock amenities (Жилищное хозяйство),n/a,true
+RU-CHE,Chelyabinsk Oblast,central_water_supply,0.6713,,PLACEHOLDER - replace with Rosstat housing-stock amenities (Жилищное хозяйство),n/a,true
+RU-CHU,Chukotka Autonomous Okrug,central_water_supply,0.6888,,PLACEHOLDER - replace with Rosstat housing-stock amenities (Жилищное хозяйство),n/a,true
+RU-CU,Chuvashia,central_water_supply,0.6884,,PLACEHOLDER - replace with Rosstat housing-stock amenities (Жилищное хозяйство),n/a,true
+RU-DA,Dagestan,central_water_supply,0.6053,,PLACEHOLDER - replace with Rosstat housing-stock amenities (Жилищное хозяйство),n/a,true
+RU-IN,Ingushetia,central_water_supply,0.6323,,PLACEHOLDER - replace with Rosstat housing-stock amenities (Жилищное хозяйство),n/a,true
+RU-IRK,Irkutsk Oblast,central_water_supply,0.6768,,PLACEHOLDER - replace with Rosstat housing-stock amenities (Жилищное хозяйство),n/a,true
+RU-IVA,Ivanovo Oblast,central_water_supply,0.7355,,PLACEHOLDER - replace with Rosstat housing-stock amenities (Жилищное хозяйство),n/a,true
+RU-KAM,Kamchatka Krai,central_water_supply,0.6418,,PLACEHOLDER - replace with Rosstat housing-stock amenities (Жилищное хозяйство),n/a,true
+RU-KB,Kabardino-Balkaria,central_water_supply,0.5338,,PLACEHOLDER - replace with Rosstat housing-stock amenities (Жилищное хозяйство),n/a,true
+RU-KC,Karachay-Cherkessia,central_water_supply,0.5999,,PLACEHOLDER - replace with Rosstat housing-stock amenities (Жилищное хозяйство),n/a,true
+RU-KDA,Krasnodar Krai,central_water_supply,0.7475,,PLACEHOLDER - replace with Rosstat housing-stock amenities (Жилищное хозяйство),n/a,true
+RU-KEM,Kemerovo Oblast,central_water_supply,0.7430,,PLACEHOLDER - replace with Rosstat housing-stock amenities (Жилищное хозяйство),n/a,true
+RU-KGD,Kaliningrad Oblast,central_water_supply,0.7551,,PLACEHOLDER - replace with Rosstat housing-stock amenities (Жилищное хозяйство),n/a,true
+RU-KGN,Kurgan Oblast,central_water_supply,0.5778,,PLACEHOLDER - replace with Rosstat housing-stock amenities (Жилищное хозяйство),n/a,true
+RU-KHA,Khabarovsk Krai,central_water_supply,0.7443,,PLACEHOLDER - replace with Rosstat housing-stock amenities (Жилищное хозяйство),n/a,true
+RU-KHM,Khanty-Mansi Autonomous Okrug,central_water_supply,0.8559,,PLACEHOLDER - replace with Rosstat housing-stock amenities (Жилищное хозяйство),n/a,true
+RU-KIR,Kirov Oblast,central_water_supply,0.6543,,PLACEHOLDER - replace with Rosstat housing-stock amenities (Жилищное хозяйство),n/a,true
+RU-KK,Khakassia,central_water_supply,0.7731,,PLACEHOLDER - replace with Rosstat housing-stock amenities (Жилищное хозяйство),n/a,true
+RU-KL,Kalmykia,central_water_supply,0.6019,,PLACEHOLDER - replace with Rosstat housing-stock amenities (Жилищное хозяйство),n/a,true
+RU-KLU,Kaluga Oblast,central_water_supply,0.6920,,PLACEHOLDER - replace with Rosstat housing-stock amenities (Жилищное хозяйство),n/a,true
+RU-KO,Komi Republic,central_water_supply,0.7193,,PLACEHOLDER - replace with Rosstat housing-stock amenities (Жилищное хозяйство),n/a,true
+RU-KOS,Kostroma Oblast,central_water_supply,0.6943,,PLACEHOLDER - replace with Rosstat housing-stock amenities (Жилищное хозяйство),n/a,true
+RU-KR,Republic of Karelia,central_water_supply,0.7851,,PLACEHOLDER - replace with Rosstat housing-stock amenities (Жилищное хозяйство),n/a,true
+RU-KRS,Kursk Oblast,central_water_supply,0.7102,,PLACEHOLDER - replace with Rosstat housing-stock amenities (Жилищное хозяйство),n/a,true
+RU-KYA,Krasnoyarsk Krai,central_water_supply,0.7190,,PLACEHOLDER - replace with Rosstat housing-stock amenities (Жилищное хозяйство),n/a,true
+RU-LEN,Leningrad Oblast,central_water_supply,0.8888,,PLACEHOLDER - replace with Rosstat housing-stock amenities (Жилищное хозяйство),n/a,true
+RU-LIP,Lipetsk Oblast,central_water_supply,0.7020,,PLACEHOLDER - replace with Rosstat housing-stock amenities (Жилищное хозяйство),n/a,true
+RU-MAG,Magadan Oblast,central_water_supply,0.6877,,PLACEHOLDER - replace with Rosstat housing-stock amenities (Жилищное хозяйство),n/a,true
+RU-ME,Mari El,central_water_supply,0.5981,,PLACEHOLDER - replace with Rosstat housing-stock amenities (Жилищное хозяйство),n/a,true
+RU-MO,Mordovia,central_water_supply,0.7743,,PLACEHOLDER - replace with Rosstat housing-stock amenities (Жилищное хозяйство),n/a,true
+RU-MOS,Moscow Oblast,central_water_supply,0.8872,,PLACEHOLDER - replace with Rosstat housing-stock amenities (Жилищное хозяйство),n/a,true
+RU-MOW,Moscow,central_water_supply,0.8146,,PLACEHOLDER - replace with Rosstat housing-stock amenities (Жилищное хозяйство),n/a,true
+RU-MUR,Murmansk Oblast,central_water_supply,0.6295,,PLACEHOLDER - replace with Rosstat housing-stock amenities (Жилищное хозяйство),n/a,true
+RU-NEN,Nenets Autonomous Okrug,central_water_supply,0.8867,,PLACEHOLDER - replace with Rosstat housing-stock amenities (Жилищное хозяйство),n/a,true
+RU-NGR,Novgorod Oblast,central_water_supply,0.7247,,PLACEHOLDER - replace with Rosstat housing-stock amenities (Жилищное хозяйство),n/a,true
+RU-NIZ,Nizhny Novgorod Oblast,central_water_supply,0.6925,,PLACEHOLDER - replace with Rosstat housing-stock amenities (Жилищное хозяйство),n/a,true
+RU-NVS,Novosibirsk Oblast,central_water_supply,0.6522,,PLACEHOLDER - replace with Rosstat housing-stock amenities (Жилищное хозяйство),n/a,true
+RU-OMS,Omsk Oblast,central_water_supply,0.6560,,PLACEHOLDER - replace with Rosstat housing-stock amenities (Жилищное хозяйство),n/a,true
+RU-ORE,Orenburg Oblast,central_water_supply,0.7487,,PLACEHOLDER - replace with Rosstat housing-stock amenities (Жилищное хозяйство),n/a,true
+RU-ORL,Oryol Oblast,central_water_supply,0.7607,,PLACEHOLDER - replace with Rosstat housing-stock amenities (Жилищное хозяйство),n/a,true
+RU-PER,Perm Krai,central_water_supply,0.7565,,PLACEHOLDER - replace with Rosstat housing-stock amenities (Жилищное хозяйство),n/a,true
+RU-PNZ,Penza Oblast,central_water_supply,0.7329,,PLACEHOLDER - replace with Rosstat housing-stock amenities (Жилищное хозяйство),n/a,true
+RU-PRI,Primorsky Krai,central_water_supply,0.7115,,PLACEHOLDER - replace with Rosstat housing-stock amenities (Жилищное хозяйство),n/a,true
+RU-PSK,Pskov Oblast,central_water_supply,0.6785,,PLACEHOLDER - replace with Rosstat housing-stock amenities (Жилищное хозяйство),n/a,true
+RU-ROS,Rostov Oblast,central_water_supply,0.7505,,PLACEHOLDER - replace with Rosstat housing-stock amenities (Жилищное хозяйство),n/a,true
+RU-RYA,Ryazan Oblast,central_water_supply,0.6727,,PLACEHOLDER - replace with Rosstat housing-stock amenities (Жилищное хозяйство),n/a,true
+RU-SA,Sakha (Yakutia),central_water_supply,0.8060,,PLACEHOLDER - replace with Rosstat housing-stock amenities (Жилищное хозяйство),n/a,true
+RU-SAK,Sakhalin Oblast,central_water_supply,0.9243,,PLACEHOLDER - replace with Rosstat housing-stock amenities (Жилищное хозяйство),n/a,true
+RU-SAM,Samara Oblast,central_water_supply,0.8063,,PLACEHOLDER - replace with Rosstat housing-stock amenities (Жилищное хозяйство),n/a,true
+RU-SAR,Saratov Oblast,central_water_supply,0.7064,,PLACEHOLDER - replace with Rosstat housing-stock amenities (Жилищное хозяйство),n/a,true
+RU-SE,North Ossetia–Alania,central_water_supply,0.7368,,PLACEHOLDER - replace with Rosstat housing-stock amenities (Жилищное хозяйство),n/a,true
+RU-SMO,Smolensk Oblast,central_water_supply,0.7332,,PLACEHOLDER - replace with Rosstat housing-stock amenities (Жилищное хозяйство),n/a,true
+RU-SPE,Saint Petersburg,central_water_supply,0.9048,,PLACEHOLDER - replace with Rosstat housing-stock amenities (Жилищное хозяйство),n/a,true
+RU-STA,Stavropol Krai,central_water_supply,0.6394,,PLACEHOLDER - replace with Rosstat housing-stock amenities (Жилищное хозяйство),n/a,true
+RU-SVE,Sverdlovsk Oblast,central_water_supply,0.7488,,PLACEHOLDER - replace with Rosstat housing-stock amenities (Жилищное хозяйство),n/a,true
+RU-TA,Tatarstan,central_water_supply,0.9016,,PLACEHOLDER - replace with Rosstat housing-stock amenities (Жилищное хозяйство),n/a,true
+RU-TAM,Tambov Oblast,central_water_supply,0.7592,,PLACEHOLDER - replace with Rosstat housing-stock amenities (Жилищное хозяйство),n/a,true
+RU-TOM,Tomsk Oblast,central_water_supply,0.7381,,PLACEHOLDER - replace with Rosstat housing-stock amenities (Жилищное хозяйство),n/a,true
+RU-TUL,Tula Oblast,central_water_supply,0.7191,,PLACEHOLDER - replace with Rosstat housing-stock amenities (Жилищное хозяйство),n/a,true
+RU-TVE,Tver Oblast,central_water_supply,0.7422,,PLACEHOLDER - replace with Rosstat housing-stock amenities (Жилищное хозяйство),n/a,true
+RU-TY,Tuva,central_water_supply,0.5089,,PLACEHOLDER - replace with Rosstat housing-stock amenities (Жилищное хозяйство),n/a,true
+RU-TYU,Tyumen Oblast,central_water_supply,0.8310,,PLACEHOLDER - replace with Rosstat housing-stock amenities (Жилищное хозяйство),n/a,true
+RU-UD,Udmurtia,central_water_supply,0.6463,,PLACEHOLDER - replace with Rosstat housing-stock amenities (Жилищное хозяйство),n/a,true
+RU-ULY,Ulyanovsk Oblast,central_water_supply,0.7750,,PLACEHOLDER - replace with Rosstat housing-stock amenities (Жилищное хозяйство),n/a,true
+RU-VGG,Volgograd Oblast,central_water_supply,0.6908,,PLACEHOLDER - replace with Rosstat housing-stock amenities (Жилищное хозяйство),n/a,true
+RU-VLA,Vladimir Oblast,central_water_supply,0.6591,,PLACEHOLDER - replace with Rosstat housing-stock amenities (Жилищное хозяйство),n/a,true
+RU-VLG,Vologda Oblast,central_water_supply,0.6803,,PLACEHOLDER - replace with Rosstat housing-stock amenities (Жилищное хозяйство),n/a,true
+RU-VOR,Voronezh Oblast,central_water_supply,0.7616,,PLACEHOLDER - replace with Rosstat housing-stock amenities (Жилищное хозяйство),n/a,true
+RU-YAN,Yamalo-Nenets Autonomous Okrug,central_water_supply,0.8215,,PLACEHOLDER - replace with Rosstat housing-stock amenities (Жилищное хозяйство),n/a,true
+RU-YAR,Yaroslavl Oblast,central_water_supply,0.7452,,PLACEHOLDER - replace with Rosstat housing-stock amenities (Жилищное хозяйство),n/a,true
+RU-YEV,Jewish Autonomous Oblast,central_water_supply,0.5128,,PLACEHOLDER - replace with Rosstat housing-stock amenities (Жилищное хозяйство),n/a,true
+RU-ZAB,Zabaykalsky Krai,central_water_supply,0.5467,,PLACEHOLDER - replace with Rosstat housing-stock amenities (Жилищное хозяйство),n/a,true
+RU-AD,Adygea,sewerage_share,0.6010,,PLACEHOLDER - replace with Rosstat housing-stock amenities,n/a,true
+RU-AL,Altai Republic,sewerage_share,0.4569,,PLACEHOLDER - replace with Rosstat housing-stock amenities,n/a,true
+RU-ALT,Altai Krai,sewerage_share,0.5672,,PLACEHOLDER - replace with Rosstat housing-stock amenities,n/a,true
+RU-AMU,Amur Oblast,sewerage_share,0.6129,,PLACEHOLDER - replace with Rosstat housing-stock amenities,n/a,true
+RU-ARK,Arkhangelsk Oblast,sewerage_share,0.6434,,PLACEHOLDER - replace with Rosstat housing-stock amenities,n/a,true
+RU-AST,Astrakhan Oblast,sewerage_share,0.5418,,PLACEHOLDER - replace with Rosstat housing-stock amenities,n/a,true
+RU-BA,Bashkortostan,sewerage_share,0.6070,,PLACEHOLDER - replace with Rosstat housing-stock amenities,n/a,true
+RU-BEL,Belgorod Oblast,sewerage_share,0.7814,,PLACEHOLDER - replace with Rosstat housing-stock amenities,n/a,true
+RU-BRY,Bryansk Oblast,sewerage_share,0.5974,,PLACEHOLDER - replace with Rosstat housing-stock amenities,n/a,true
+RU-BU,Buryatia,sewerage_share,0.5526,,PLACEHOLDER - replace with Rosstat housing-stock amenities,n/a,true
+RU-CE,Chechnya,sewerage_share,0.4101,,PLACEHOLDER - replace with Rosstat housing-stock amenities,n/a,true
+RU-CHE,Chelyabinsk Oblast,sewerage_share,0.5765,,PLACEHOLDER - replace with Rosstat housing-stock amenities,n/a,true
+RU-CHU,Chukotka Autonomous Okrug,sewerage_share,0.6767,,PLACEHOLDER - replace with Rosstat housing-stock amenities,n/a,true
+RU-CU,Chuvashia,sewerage_share,0.5749,,PLACEHOLDER - replace with Rosstat housing-stock amenities,n/a,true
+RU-DA,Dagestan,sewerage_share,0.4849,,PLACEHOLDER - replace with Rosstat housing-stock amenities,n/a,true
+RU-IN,Ingushetia,sewerage_share,0.4590,,PLACEHOLDER - replace with Rosstat housing-stock amenities,n/a,true
+RU-IRK,Irkutsk Oblast,sewerage_share,0.5733,,PLACEHOLDER - replace with Rosstat housing-stock amenities,n/a,true
+RU-IVA,Ivanovo Oblast,sewerage_share,0.6184,,PLACEHOLDER - replace with Rosstat housing-stock amenities,n/a,true
+RU-KAM,Kamchatka Krai,sewerage_share,0.5877,,PLACEHOLDER - replace with Rosstat housing-stock amenities,n/a,true
+RU-KB,Kabardino-Balkaria,sewerage_share,0.4501,,PLACEHOLDER - replace with Rosstat housing-stock amenities,n/a,true
+RU-KC,Karachay-Cherkessia,sewerage_share,0.4369,,PLACEHOLDER - replace with Rosstat housing-stock amenities,n/a,true
+RU-KDA,Krasnodar Krai,sewerage_share,0.5930,,PLACEHOLDER - replace with Rosstat housing-stock amenities,n/a,true
+RU-KEM,Kemerovo Oblast,sewerage_share,0.6498,,PLACEHOLDER - replace with Rosstat housing-stock amenities,n/a,true
+RU-KGD,Kaliningrad Oblast,sewerage_share,0.6034,,PLACEHOLDER - replace with Rosstat housing-stock amenities,n/a,true
+RU-KGN,Kurgan Oblast,sewerage_share,0.4636,,PLACEHOLDER - replace with Rosstat housing-stock amenities,n/a,true
+RU-KHA,Khabarovsk Krai,sewerage_share,0.5901,,PLACEHOLDER - replace with Rosstat housing-stock amenities,n/a,true
+RU-KHM,Khanty-Mansi Autonomous Okrug,sewerage_share,0.7451,,PLACEHOLDER - replace with Rosstat housing-stock amenities,n/a,true
+RU-KIR,Kirov Oblast,sewerage_share,0.6577,,PLACEHOLDER - replace with Rosstat housing-stock amenities,n/a,true
+RU-KK,Khakassia,sewerage_share,0.7040,,PLACEHOLDER - replace with Rosstat housing-stock amenities,n/a,true
+RU-KL,Kalmykia,sewerage_share,0.4269,,PLACEHOLDER - replace with Rosstat housing-stock amenities,n/a,true
+RU-KLU,Kaluga Oblast,sewerage_share,0.5800,,PLACEHOLDER - replace with Rosstat housing-stock amenities,n/a,true
+RU-KO,Komi Republic,sewerage_share,0.6754,,PLACEHOLDER - replace with Rosstat housing-stock amenities,n/a,true
+RU-KOS,Kostroma Oblast,sewerage_share,0.6239,,PLACEHOLDER - replace with Rosstat housing-stock amenities,n/a,true
+RU-KR,Republic of Karelia,sewerage_share,0.7261,,PLACEHOLDER - replace with Rosstat housing-stock amenities,n/a,true
+RU-KRS,Kursk Oblast,sewerage_share,0.6340,,PLACEHOLDER - replace with Rosstat housing-stock amenities,n/a,true
+RU-KYA,Krasnoyarsk Krai,sewerage_share,0.5991,,PLACEHOLDER - replace with Rosstat housing-stock amenities,n/a,true
+RU-LEN,Leningrad Oblast,sewerage_share,0.8816,,PLACEHOLDER - replace with Rosstat housing-stock amenities,n/a,true
+RU-LIP,Lipetsk Oblast,sewerage_share,0.6142,,PLACEHOLDER - replace with Rosstat housing-stock amenities,n/a,true
+RU-MAG,Magadan Oblast,sewerage_share,0.6407,,PLACEHOLDER - replace with Rosstat housing-stock amenities,n/a,true
+RU-ME,Mari El,sewerage_share,0.5462,,PLACEHOLDER - replace with Rosstat housing-stock amenities,n/a,true
+RU-MO,Mordovia,sewerage_share,0.7577,,PLACEHOLDER - replace with Rosstat housing-stock amenities,n/a,true
+RU-MOS,Moscow Oblast,sewerage_share,0.8809,,PLACEHOLDER - replace with Rosstat housing-stock amenities,n/a,true
+RU-MOW,Moscow,sewerage_share,0.7762,,PLACEHOLDER - replace with Rosstat housing-stock amenities,n/a,true
+RU-MUR,Murmansk Oblast,sewerage_share,0.6376,,PLACEHOLDER - replace with Rosstat housing-stock amenities,n/a,true
+RU-NEN,Nenets Autonomous Okrug,sewerage_share,0.8367,,PLACEHOLDER - replace with Rosstat housing-stock amenities,n/a,true
+RU-NGR,Novgorod Oblast,sewerage_share,0.6341,,PLACEHOLDER - replace with Rosstat housing-stock amenities,n/a,true
+RU-NIZ,Nizhny Novgorod Oblast,sewerage_share,0.5906,,PLACEHOLDER - replace with Rosstat housing-stock amenities,n/a,true
+RU-NVS,Novosibirsk Oblast,sewerage_share,0.5868,,PLACEHOLDER - replace with Rosstat housing-stock amenities,n/a,true
+RU-OMS,Omsk Oblast,sewerage_share,0.6531,,PLACEHOLDER - replace with Rosstat housing-stock amenities,n/a,true
+RU-ORE,Orenburg Oblast,sewerage_share,0.7069,,PLACEHOLDER - replace with Rosstat housing-stock amenities,n/a,true
+RU-ORL,Oryol Oblast,sewerage_share,0.6094,,PLACEHOLDER - replace with Rosstat housing-stock amenities,n/a,true
+RU-PER,Perm Krai,sewerage_share,0.5993,,PLACEHOLDER - replace with Rosstat housing-stock amenities,n/a,true
+RU-PNZ,Penza Oblast,sewerage_share,0.6865,,PLACEHOLDER - replace with Rosstat housing-stock amenities,n/a,true
+RU-PRI,Primorsky Krai,sewerage_share,0.6138,,PLACEHOLDER - replace with Rosstat housing-stock amenities,n/a,true
+RU-PSK,Pskov Oblast,sewerage_share,0.5662,,PLACEHOLDER - replace with Rosstat housing-stock amenities,n/a,true
+RU-ROS,Rostov Oblast,sewerage_share,0.6732,,PLACEHOLDER - replace with Rosstat housing-stock amenities,n/a,true
+RU-RYA,Ryazan Oblast,sewerage_share,0.6840,,PLACEHOLDER - replace with Rosstat housing-stock amenities,n/a,true
+RU-SA,Sakha (Yakutia),sewerage_share,0.7132,,PLACEHOLDER - replace with Rosstat housing-stock amenities,n/a,true
+RU-SAK,Sakhalin Oblast,sewerage_share,0.9334,,PLACEHOLDER - replace with Rosstat housing-stock amenities,n/a,true
+RU-SAM,Samara Oblast,sewerage_share,0.6771,,PLACEHOLDER - replace with Rosstat housing-stock amenities,n/a,true
+RU-SAR,Saratov Oblast,sewerage_share,0.5782,,PLACEHOLDER - replace with Rosstat housing-stock amenities,n/a,true
+RU-SE,North Ossetia–Alania,sewerage_share,0.5636,,PLACEHOLDER - replace with Rosstat housing-stock amenities,n/a,true
+RU-SMO,Smolensk Oblast,sewerage_share,0.7071,,PLACEHOLDER - replace with Rosstat housing-stock amenities,n/a,true
+RU-SPE,Saint Petersburg,sewerage_share,0.8355,,PLACEHOLDER - replace with Rosstat housing-stock amenities,n/a,true
+RU-STA,Stavropol Krai,sewerage_share,0.6030,,PLACEHOLDER - replace with Rosstat housing-stock amenities,n/a,true
+RU-SVE,Sverdlovsk Oblast,sewerage_share,0.6177,,PLACEHOLDER - replace with Rosstat housing-stock amenities,n/a,true
+RU-TA,Tatarstan,sewerage_share,0.8459,,PLACEHOLDER - replace with Rosstat housing-stock amenities,n/a,true
+RU-TAM,Tambov Oblast,sewerage_share,0.5949,,PLACEHOLDER - replace with Rosstat housing-stock amenities,n/a,true
+RU-TOM,Tomsk Oblast,sewerage_share,0.6591,,PLACEHOLDER - replace with Rosstat housing-stock amenities,n/a,true
+RU-TUL,Tula Oblast,sewerage_share,0.6087,,PLACEHOLDER - replace with Rosstat housing-stock amenities,n/a,true
+RU-TVE,Tver Oblast,sewerage_share,0.6172,,PLACEHOLDER - replace with Rosstat housing-stock amenities,n/a,true
+RU-TY,Tuva,sewerage_share,0.4434,,PLACEHOLDER - replace with Rosstat housing-stock amenities,n/a,true
+RU-TYU,Tyumen Oblast,sewerage_share,0.7649,,PLACEHOLDER - replace with Rosstat housing-stock amenities,n/a,true
+RU-UD,Udmurtia,sewerage_share,0.6552,,PLACEHOLDER - replace with Rosstat housing-stock amenities,n/a,true
+RU-ULY,Ulyanovsk Oblast,sewerage_share,0.6612,,PLACEHOLDER - replace with Rosstat housing-stock amenities,n/a,true
+RU-VGG,Volgograd Oblast,sewerage_share,0.6776,,PLACEHOLDER - replace with Rosstat housing-stock amenities,n/a,true
+RU-VLA,Vladimir Oblast,sewerage_share,0.6337,,PLACEHOLDER - replace with Rosstat housing-stock amenities,n/a,true
+RU-VLG,Vologda Oblast,sewerage_share,0.6002,,PLACEHOLDER - replace with Rosstat housing-stock amenities,n/a,true
+RU-VOR,Voronezh Oblast,sewerage_share,0.7029,,PLACEHOLDER - replace with Rosstat housing-stock amenities,n/a,true
+RU-YAN,Yamalo-Nenets Autonomous Okrug,sewerage_share,0.7771,,PLACEHOLDER - replace with Rosstat housing-stock amenities,n/a,true
+RU-YAR,Yaroslavl Oblast,sewerage_share,0.6462,,PLACEHOLDER - replace with Rosstat housing-stock amenities,n/a,true
+RU-YEV,Jewish Autonomous Oblast,sewerage_share,0.3645,,PLACEHOLDER - replace with Rosstat housing-stock amenities,n/a,true
+RU-ZAB,Zabaykalsky Krai,sewerage_share,0.4597,,PLACEHOLDER - replace with Rosstat housing-stock amenities,n/a,true
+RU-AD,Adygea,road_substandard_share,0.4907,,PLACEHOLDER - replace with Rosavtodor / 'Safe Quality Roads' national project reports,n/a,true
+RU-AL,Altai Republic,road_substandard_share,0.6487,,PLACEHOLDER - replace with Rosavtodor / 'Safe Quality Roads' national project reports,n/a,true
+RU-ALT,Altai Krai,road_substandard_share,0.4543,,PLACEHOLDER - replace with Rosavtodor / 'Safe Quality Roads' national project reports,n/a,true
+RU-AMU,Amur Oblast,road_substandard_share,0.4917,,PLACEHOLDER - replace with Rosavtodor / 'Safe Quality Roads' national project reports,n/a,true
+RU-ARK,Arkhangelsk Oblast,road_substandard_share,0.4341,,PLACEHOLDER - replace with Rosavtodor / 'Safe Quality Roads' national project reports,n/a,true
+RU-AST,Astrakhan Oblast,road_substandard_share,0.5198,,PLACEHOLDER - replace with Rosavtodor / 'Safe Quality Roads' national project reports,n/a,true
+RU-BA,Bashkortostan,road_substandard_share,0.5095,,PLACEHOLDER - replace with Rosavtodor / 'Safe Quality Roads' national project reports,n/a,true
+RU-BEL,Belgorod Oblast,road_substandard_share,0.4046,,PLACEHOLDER - replace with Rosavtodor / 'Safe Quality Roads' national project reports,n/a,true
+RU-BRY,Bryansk Oblast,road_substandard_share,0.5148,,PLACEHOLDER - replace with Rosavtodor / 'Safe Quality Roads' national project reports,n/a,true
+RU-BU,Buryatia,road_substandard_share,0.5315,,PLACEHOLDER - replace with Rosavtodor / 'Safe Quality Roads' national project reports,n/a,true
+RU-CE,Chechnya,road_substandard_share,0.6083,,PLACEHOLDER - replace with Rosavtodor / 'Safe Quality Roads' national project reports,n/a,true
+RU-CHE,Chelyabinsk Oblast,road_substandard_share,0.5039,,PLACEHOLDER - replace with Rosavtodor / 'Safe Quality Roads' national project reports,n/a,true
+RU-CHU,Chukotka Autonomous Okrug,road_substandard_share,0.4442,,PLACEHOLDER - replace with Rosavtodor / 'Safe Quality Roads' national project reports,n/a,true
+RU-CU,Chuvashia,road_substandard_share,0.4655,,PLACEHOLDER - replace with Rosavtodor / 'Safe Quality Roads' national project reports,n/a,true
+RU-DA,Dagestan,road_substandard_share,0.5454,,PLACEHOLDER - replace with Rosavtodor / 'Safe Quality Roads' national project reports,n/a,true
+RU-IN,Ingushetia,road_substandard_share,0.5721,,PLACEHOLDER - replace with Rosavtodor / 'Safe Quality Roads' national project reports,n/a,true
+RU-IRK,Irkutsk Oblast,road_substandard_share,0.4896,,PLACEHOLDER - replace with Rosavtodor / 'Safe Quality Roads' national project reports,n/a,true
+RU-IVA,Ivanovo Oblast,road_substandard_share,0.4881,,PLACEHOLDER - replace with Rosavtodor / 'Safe Quality Roads' national project reports,n/a,true
+RU-KAM,Kamchatka Krai,road_substandard_share,0.5597,,PLACEHOLDER - replace with Rosavtodor / 'Safe Quality Roads' national project reports,n/a,true
+RU-KB,Kabardino-Balkaria,road_substandard_share,0.6593,,PLACEHOLDER - replace with Rosavtodor / 'Safe Quality Roads' national project reports,n/a,true
+RU-KC,Karachay-Cherkessia,road_substandard_share,0.5795,,PLACEHOLDER - replace with Rosavtodor / 'Safe Quality Roads' national project reports,n/a,true
+RU-KDA,Krasnodar Krai,road_substandard_share,0.4861,,PLACEHOLDER - replace with Rosavtodor / 'Safe Quality Roads' national project reports,n/a,true
+RU-KEM,Kemerovo Oblast,road_substandard_share,0.4644,,PLACEHOLDER - replace with Rosavtodor / 'Safe Quality Roads' national project reports,n/a,true
+RU-KGD,Kaliningrad Oblast,road_substandard_share,0.4973,,PLACEHOLDER - replace with Rosavtodor / 'Safe Quality Roads' national project reports,n/a,true
+RU-KGN,Kurgan Oblast,road_substandard_share,0.6039,,PLACEHOLDER - replace with Rosavtodor / 'Safe Quality Roads' national project reports,n/a,true
+RU-KHA,Khabarovsk Krai,road_substandard_share,0.5113,,PLACEHOLDER - replace with Rosavtodor / 'Safe Quality Roads' national project reports,n/a,true
+RU-KHM,Khanty-Mansi Autonomous Okrug,road_substandard_share,0.3640,,PLACEHOLDER - replace with Rosavtodor / 'Safe Quality Roads' national project reports,n/a,true
+RU-KIR,Kirov Oblast,road_substandard_share,0.4920,,PLACEHOLDER - replace with Rosavtodor / 'Safe Quality Roads' national project reports,n/a,true
+RU-KK,Khakassia,road_substandard_share,0.4800,,PLACEHOLDER - replace with Rosavtodor / 'Safe Quality Roads' national project reports,n/a,true
+RU-KL,Kalmykia,road_substandard_share,0.5861,,PLACEHOLDER - replace with Rosavtodor / 'Safe Quality Roads' national project reports,n/a,true
+RU-KLU,Kaluga Oblast,road_substandard_share,0.5242,,PLACEHOLDER - replace with Rosavtodor / 'Safe Quality Roads' national project reports,n/a,true
+RU-KO,Komi Republic,road_substandard_share,0.4679,,PLACEHOLDER - replace with Rosavtodor / 'Safe Quality Roads' national project reports,n/a,true
+RU-KOS,Kostroma Oblast,road_substandard_share,0.4841,,PLACEHOLDER - replace with Rosavtodor / 'Safe Quality Roads' national project reports,n/a,true
+RU-KR,Republic of Karelia,road_substandard_share,0.3507,,PLACEHOLDER - replace with Rosavtodor / 'Safe Quality Roads' national project reports,n/a,true
+RU-KRS,Kursk Oblast,road_substandard_share,0.5304,,PLACEHOLDER - replace with Rosavtodor / 'Safe Quality Roads' national project reports,n/a,true
+RU-KYA,Krasnoyarsk Krai,road_substandard_share,0.5594,,PLACEHOLDER - replace with Rosavtodor / 'Safe Quality Roads' national project reports,n/a,true
+RU-LEN,Leningrad Oblast,road_substandard_share,0.3365,,PLACEHOLDER - replace with Rosavtodor / 'Safe Quality Roads' national project reports,n/a,true
+RU-LIP,Lipetsk Oblast,road_substandard_share,0.4601,,PLACEHOLDER - replace with Rosavtodor / 'Safe Quality Roads' national project reports,n/a,true
+RU-MAG,Magadan Oblast,road_substandard_share,0.5154,,PLACEHOLDER - replace with Rosavtodor / 'Safe Quality Roads' national project reports,n/a,true
+RU-ME,Mari El,road_substandard_share,0.5747,,PLACEHOLDER - replace with Rosavtodor / 'Safe Quality Roads' national project reports,n/a,true
+RU-MO,Mordovia,road_substandard_share,0.4639,,PLACEHOLDER - replace with Rosavtodor / 'Safe Quality Roads' national project reports,n/a,true
+RU-MOS,Moscow Oblast,road_substandard_share,0.3475,,PLACEHOLDER - replace with Rosavtodor / 'Safe Quality Roads' national project reports,n/a,true
+RU-MOW,Moscow,road_substandard_share,0.3243,,PLACEHOLDER - replace with Rosavtodor / 'Safe Quality Roads' national project reports,n/a,true
+RU-MUR,Murmansk Oblast,road_substandard_share,0.5040,,PLACEHOLDER - replace with Rosavtodor / 'Safe Quality Roads' national project reports,n/a,true
+RU-NEN,Nenets Autonomous Okrug,road_substandard_share,0.4417,,PLACEHOLDER - replace with Rosavtodor / 'Safe Quality Roads' national project reports,n/a,true
+RU-NGR,Novgorod Oblast,road_substandard_share,0.5010,,PLACEHOLDER - replace with Rosavtodor / 'Safe Quality Roads' national project reports,n/a,true
+RU-NIZ,Nizhny Novgorod Oblast,road_substandard_share,0.5140,,PLACEHOLDER - replace with Rosavtodor / 'Safe Quality Roads' national project reports,n/a,true
+RU-NVS,Novosibirsk Oblast,road_substandard_share,0.5552,,PLACEHOLDER - replace with Rosavtodor / 'Safe Quality Roads' national project reports,n/a,true
+RU-OMS,Omsk Oblast,road_substandard_share,0.4662,,PLACEHOLDER - replace with Rosavtodor / 'Safe Quality Roads' national project reports,n/a,true
+RU-ORE,Orenburg Oblast,road_substandard_share,0.4987,,PLACEHOLDER - replace with Rosavtodor / 'Safe Quality Roads' national project reports,n/a,true
+RU-ORL,Oryol Oblast,road_substandard_share,0.5089,,PLACEHOLDER - replace with Rosavtodor / 'Safe Quality Roads' national project reports,n/a,true
+RU-PER,Perm Krai,road_substandard_share,0.4875,,PLACEHOLDER - replace with Rosavtodor / 'Safe Quality Roads' national project reports,n/a,true
+RU-PNZ,Penza Oblast,road_substandard_share,0.4288,,PLACEHOLDER - replace with Rosavtodor / 'Safe Quality Roads' national project reports,n/a,true
+RU-PRI,Primorsky Krai,road_substandard_share,0.4872,,PLACEHOLDER - replace with Rosavtodor / 'Safe Quality Roads' national project reports,n/a,true
+RU-PSK,Pskov Oblast,road_substandard_share,0.5156,,PLACEHOLDER - replace with Rosavtodor / 'Safe Quality Roads' national project reports,n/a,true
+RU-ROS,Rostov Oblast,road_substandard_share,0.4507,,PLACEHOLDER - replace with Rosavtodor / 'Safe Quality Roads' national project reports,n/a,true
+RU-RYA,Ryazan Oblast,road_substandard_share,0.4790,,PLACEHOLDER - replace with Rosavtodor / 'Safe Quality Roads' national project reports,n/a,true
+RU-SA,Sakha (Yakutia),road_substandard_share,0.4761,,PLACEHOLDER - replace with Rosavtodor / 'Safe Quality Roads' national project reports,n/a,true
+RU-SAK,Sakhalin Oblast,road_substandard_share,0.3571,,PLACEHOLDER - replace with Rosavtodor / 'Safe Quality Roads' national project reports,n/a,true
+RU-SAM,Samara Oblast,road_substandard_share,0.4764,,PLACEHOLDER - replace with Rosavtodor / 'Safe Quality Roads' national project reports,n/a,true
+RU-SAR,Saratov Oblast,road_substandard_share,0.4846,,PLACEHOLDER - replace with Rosavtodor / 'Safe Quality Roads' national project reports,n/a,true
+RU-SE,North Ossetia–Alania,road_substandard_share,0.4695,,PLACEHOLDER - replace with Rosavtodor / 'Safe Quality Roads' national project reports,n/a,true
+RU-SMO,Smolensk Oblast,road_substandard_share,0.4326,,PLACEHOLDER - replace with Rosavtodor / 'Safe Quality Roads' national project reports,n/a,true
+RU-SPE,Saint Petersburg,road_substandard_share,0.3907,,PLACEHOLDER - replace with Rosavtodor / 'Safe Quality Roads' national project reports,n/a,true
+RU-STA,Stavropol Krai,road_substandard_share,0.5292,,PLACEHOLDER - replace with Rosavtodor / 'Safe Quality Roads' national project reports,n/a,true
+RU-SVE,Sverdlovsk Oblast,road_substandard_share,0.5095,,PLACEHOLDER - replace with Rosavtodor / 'Safe Quality Roads' national project reports,n/a,true
+RU-TA,Tatarstan,road_substandard_share,0.3942,,PLACEHOLDER - replace with Rosavtodor / 'Safe Quality Roads' national project reports,n/a,true
+RU-TAM,Tambov Oblast,road_substandard_share,0.4599,,PLACEHOLDER - replace with Rosavtodor / 'Safe Quality Roads' national project reports,n/a,true
+RU-TOM,Tomsk Oblast,road_substandard_share,0.5007,,PLACEHOLDER - replace with Rosavtodor / 'Safe Quality Roads' national project reports,n/a,true
+RU-TUL,Tula Oblast,road_substandard_share,0.4998,,PLACEHOLDER - replace with Rosavtodor / 'Safe Quality Roads' national project reports,n/a,true
+RU-TVE,Tver Oblast,road_substandard_share,0.3985,,PLACEHOLDER - replace with Rosavtodor / 'Safe Quality Roads' national project reports,n/a,true
+RU-TY,Tuva,road_substandard_share,0.6558,,PLACEHOLDER - replace with Rosavtodor / 'Safe Quality Roads' national project reports,n/a,true
+RU-TYU,Tyumen Oblast,road_substandard_share,0.4031,,PLACEHOLDER - replace with Rosavtodor / 'Safe Quality Roads' national project reports,n/a,true
+RU-UD,Udmurtia,road_substandard_share,0.4929,,PLACEHOLDER - replace with Rosavtodor / 'Safe Quality Roads' national project reports,n/a,true
+RU-ULY,Ulyanovsk Oblast,road_substandard_share,0.4445,,PLACEHOLDER - replace with Rosavtodor / 'Safe Quality Roads' national project reports,n/a,true
+RU-VGG,Volgograd Oblast,road_substandard_share,0.4531,,PLACEHOLDER - replace with Rosavtodor / 'Safe Quality Roads' national project reports,n/a,true
+RU-VLA,Vladimir Oblast,road_substandard_share,0.5167,,PLACEHOLDER - replace with Rosavtodor / 'Safe Quality Roads' national project reports,n/a,true
+RU-VLG,Vologda Oblast,road_substandard_share,0.5526,,PLACEHOLDER - replace with Rosavtodor / 'Safe Quality Roads' national project reports,n/a,true
+RU-VOR,Voronezh Oblast,road_substandard_share,0.3861,,PLACEHOLDER - replace with Rosavtodor / 'Safe Quality Roads' national project reports,n/a,true
+RU-YAN,Yamalo-Nenets Autonomous Okrug,road_substandard_share,0.3484,,PLACEHOLDER - replace with Rosavtodor / 'Safe Quality Roads' national project reports,n/a,true
+RU-YAR,Yaroslavl Oblast,road_substandard_share,0.4976,,PLACEHOLDER - replace with Rosavtodor / 'Safe Quality Roads' national project reports,n/a,true
+RU-YEV,Jewish Autonomous Oblast,road_substandard_share,0.6896,,PLACEHOLDER - replace with Rosavtodor / 'Safe Quality Roads' national project reports,n/a,true
+RU-ZAB,Zabaykalsky Krai,road_substandard_share,0.6225,,PLACEHOLDER - replace with Rosavtodor / 'Safe Quality Roads' national project reports,n/a,true
+RU-AD,Adygea,medical_post_gap,0.2465,,PLACEHOLDER - replace with Ministry of Health primary-care modernisation reports; Rosstat municipal database,n/a,true
+RU-AL,Altai Republic,medical_post_gap,0.2728,,PLACEHOLDER - replace with Ministry of Health primary-care modernisation reports; Rosstat municipal database,n/a,true
+RU-ALT,Altai Krai,medical_post_gap,0.2669,,PLACEHOLDER - replace with Ministry of Health primary-care modernisation reports; Rosstat municipal database,n/a,true
+RU-AMU,Amur Oblast,medical_post_gap,0.2777,,PLACEHOLDER - replace with Ministry of Health primary-care modernisation reports; Rosstat municipal database,n/a,true
+RU-ARK,Arkhangelsk Oblast,medical_post_gap,0.1945,,PLACEHOLDER - replace with Ministry of Health primary-care modernisation reports; Rosstat municipal database,n/a,true
+RU-AST,Astrakhan Oblast,medical_post_gap,0.2289,,PLACEHOLDER - replace with Ministry of Health primary-care modernisation reports; Rosstat municipal database,n/a,true
+RU-BA,Bashkortostan,medical_post_gap,0.2529,,PLACEHOLDER - replace with Ministry of Health primary-care modernisation reports; Rosstat municipal database,n/a,true
+RU-BEL,Belgorod Oblast,medical_post_gap,0.0915,,PLACEHOLDER - replace with Ministry of Health primary-care modernisation reports; Rosstat municipal database,n/a,true
+RU-BRY,Bryansk Oblast,medical_post_gap,0.1873,,PLACEHOLDER - replace with Ministry of Health primary-care modernisation reports; Rosstat municipal database,n/a,true
+RU-BU,Buryatia,medical_post_gap,0.2312,,PLACEHOLDER - replace with Ministry of Health primary-care modernisation reports; Rosstat municipal database,n/a,true
+RU-CE,Chechnya,medical_post_gap,0.3420,,PLACEHOLDER - replace with Ministry of Health primary-care modernisation reports; Rosstat municipal database,n/a,true
+RU-CHE,Chelyabinsk Oblast,medical_post_gap,0.2260,,PLACEHOLDER - replace with Ministry of Health primary-care modernisation reports; Rosstat municipal database,n/a,true
+RU-CHU,Chukotka Autonomous Okrug,medical_post_gap,0.1969,,PLACEHOLDER - replace with Ministry of Health primary-care modernisation reports; Rosstat municipal database,n/a,true
+RU-CU,Chuvashia,medical_post_gap,0.2550,,PLACEHOLDER - replace with Ministry of Health primary-care modernisation reports; Rosstat municipal database,n/a,true
+RU-DA,Dagestan,medical_post_gap,0.2586,,PLACEHOLDER - replace with Ministry of Health primary-care modernisation reports; Rosstat municipal database,n/a,true
+RU-IN,Ingushetia,medical_post_gap,0.2920,,PLACEHOLDER - replace with Ministry of Health primary-care modernisation reports; Rosstat municipal database,n/a,true
+RU-IRK,Irkutsk Oblast,medical_post_gap,0.3110,,PLACEHOLDER - replace with Ministry of Health primary-care modernisation reports; Rosstat municipal database,n/a,true
+RU-IVA,Ivanovo Oblast,medical_post_gap,0.2306,,PLACEHOLDER - replace with Ministry of Health primary-care modernisation reports; Rosstat municipal database,n/a,true
+RU-KAM,Kamchatka Krai,medical_post_gap,0.2512,,PLACEHOLDER - replace with Ministry of Health primary-care modernisation reports; Rosstat municipal database,n/a,true
+RU-KB,Kabardino-Balkaria,medical_post_gap,0.3474,,PLACEHOLDER - replace with Ministry of Health primary-care modernisation reports; Rosstat municipal database,n/a,true
+RU-KC,Karachay-Cherkessia,medical_post_gap,0.3227,,PLACEHOLDER - replace with Ministry of Health primary-care modernisation reports; Rosstat municipal database,n/a,true
+RU-KDA,Krasnodar Krai,medical_post_gap,0.2586,,PLACEHOLDER - replace with Ministry of Health primary-care modernisation reports; Rosstat municipal database,n/a,true
+RU-KEM,Kemerovo Oblast,medical_post_gap,0.2148,,PLACEHOLDER - replace with Ministry of Health primary-care modernisation reports; Rosstat municipal database,n/a,true
+RU-KGD,Kaliningrad Oblast,medical_post_gap,0.2015,,PLACEHOLDER - replace with Ministry of Health primary-care modernisation reports; Rosstat municipal database,n/a,true
+RU-KGN,Kurgan Oblast,medical_post_gap,0.3194,,PLACEHOLDER - replace with Ministry of Health primary-care modernisation reports; Rosstat municipal database,n/a,true
+RU-KHA,Khabarovsk Krai,medical_post_gap,0.1774,,PLACEHOLDER - replace with Ministry of Health primary-care modernisation reports; Rosstat municipal database,n/a,true
+RU-KHM,Khanty-Mansi Autonomous Okrug,medical_post_gap,0.1230,,PLACEHOLDER - replace with Ministry of Health primary-care modernisation reports; Rosstat municipal database,n/a,true
+RU-KIR,Kirov Oblast,medical_post_gap,0.2140,,PLACEHOLDER - replace with Ministry of Health primary-care modernisation reports; Rosstat municipal database,n/a,true
+RU-KK,Khakassia,medical_post_gap,0.2092,,PLACEHOLDER - replace with Ministry of Health primary-care modernisation reports; Rosstat municipal database,n/a,true
+RU-KL,Kalmykia,medical_post_gap,0.3309,,PLACEHOLDER - replace with Ministry of Health primary-care modernisation reports; Rosstat municipal database,n/a,true
+RU-KLU,Kaluga Oblast,medical_post_gap,0.2461,,PLACEHOLDER - replace with Ministry of Health primary-care modernisation reports; Rosstat municipal database,n/a,true
+RU-KO,Komi Republic,medical_post_gap,0.1729,,PLACEHOLDER - replace with Ministry of Health primary-care modernisation reports; Rosstat municipal database,n/a,true
+RU-KOS,Kostroma Oblast,medical_post_gap,0.2205,,PLACEHOLDER - replace with Ministry of Health primary-care modernisation reports; Rosstat municipal database,n/a,true
+RU-KR,Republic of Karelia,medical_post_gap,0.1555,,PLACEHOLDER - replace with Ministry of Health primary-care modernisation reports; Rosstat municipal database,n/a,true
+RU-KRS,Kursk Oblast,medical_post_gap,0.2254,,PLACEHOLDER - replace with Ministry of Health primary-care modernisation reports; Rosstat municipal database,n/a,true
+RU-KYA,Krasnoyarsk Krai,medical_post_gap,0.1761,,PLACEHOLDER - replace with Ministry of Health primary-care modernisation reports; Rosstat municipal database,n/a,true
+RU-LEN,Leningrad Oblast,medical_post_gap,0.1187,,PLACEHOLDER - replace with Ministry of Health primary-care modernisation reports; Rosstat municipal database,n/a,true
+RU-LIP,Lipetsk Oblast,medical_post_gap,0.2086,,PLACEHOLDER - replace with Ministry of Health primary-care modernisation reports; Rosstat municipal database,n/a,true
+RU-MAG,Magadan Oblast,medical_post_gap,0.2535,,PLACEHOLDER - replace with Ministry of Health primary-care modernisation reports; Rosstat municipal database,n/a,true
+RU-ME,Mari El,medical_post_gap,0.2433,,PLACEHOLDER - replace with Ministry of Health primary-care modernisation reports; Rosstat municipal database,n/a,true
+RU-MO,Mordovia,medical_post_gap,0.1983,,PLACEHOLDER - replace with Ministry of Health primary-care modernisation reports; Rosstat municipal database,n/a,true
+RU-MOS,Moscow Oblast,medical_post_gap,0.0220,,PLACEHOLDER - replace with Ministry of Health primary-care modernisation reports; Rosstat municipal database,n/a,true
+RU-MOW,Moscow,medical_post_gap,0.1746,,PLACEHOLDER - replace with Ministry of Health primary-care modernisation reports; Rosstat municipal database,n/a,true
+RU-MUR,Murmansk Oblast,medical_post_gap,0.1859,,PLACEHOLDER - replace with Ministry of Health primary-care modernisation reports; Rosstat municipal database,n/a,true
+RU-NEN,Nenets Autonomous Okrug,medical_post_gap,0.1162,,PLACEHOLDER - replace with Ministry of Health primary-care modernisation reports; Rosstat municipal database,n/a,true
+RU-NGR,Novgorod Oblast,medical_post_gap,0.2232,,PLACEHOLDER - replace with Ministry of Health primary-care modernisation reports; Rosstat municipal database,n/a,true
+RU-NIZ,Nizhny Novgorod Oblast,medical_post_gap,0.2276,,PLACEHOLDER - replace with Ministry of Health primary-care modernisation reports; Rosstat municipal database,n/a,true
+RU-NVS,Novosibirsk Oblast,medical_post_gap,0.2627,,PLACEHOLDER - replace with Ministry of Health primary-care modernisation reports; Rosstat municipal database,n/a,true
+RU-OMS,Omsk Oblast,medical_post_gap,0.2206,,PLACEHOLDER - replace with Ministry of Health primary-care modernisation reports; Rosstat municipal database,n/a,true
+RU-ORE,Orenburg Oblast,medical_post_gap,0.2068,,PLACEHOLDER - replace with Ministry of Health primary-care modernisation reports; Rosstat municipal database,n/a,true
+RU-ORL,Oryol Oblast,medical_post_gap,0.1893,,PLACEHOLDER - replace with Ministry of Health primary-care modernisation reports; Rosstat municipal database,n/a,true
+RU-PER,Perm Krai,medical_post_gap,0.2007,,PLACEHOLDER - replace with Ministry of Health primary-care modernisation reports; Rosstat municipal database,n/a,true
+RU-PNZ,Penza Oblast,medical_post_gap,0.2157,,PLACEHOLDER - replace with Ministry of Health primary-care modernisation reports; Rosstat municipal database,n/a,true
+RU-PRI,Primorsky Krai,medical_post_gap,0.2517,,PLACEHOLDER - replace with Ministry of Health primary-care modernisation reports; Rosstat municipal database,n/a,true
+RU-PSK,Pskov Oblast,medical_post_gap,0.2566,,PLACEHOLDER - replace with Ministry of Health primary-care modernisation reports; Rosstat municipal database,n/a,true
+RU-ROS,Rostov Oblast,medical_post_gap,0.2131,,PLACEHOLDER - replace with Ministry of Health primary-care modernisation reports; Rosstat municipal database,n/a,true
+RU-RYA,Ryazan Oblast,medical_post_gap,0.1438,,PLACEHOLDER - replace with Ministry of Health primary-care modernisation reports; Rosstat municipal database,n/a,true
+RU-SA,Sakha (Yakutia),medical_post_gap,0.1830,,PLACEHOLDER - replace with Ministry of Health primary-care modernisation reports; Rosstat municipal database,n/a,true
+RU-SAK,Sakhalin Oblast,medical_post_gap,0.0782,,PLACEHOLDER - replace with Ministry of Health primary-care modernisation reports; Rosstat municipal database,n/a,true
+RU-SAM,Samara Oblast,medical_post_gap,0.1372,,PLACEHOLDER - replace with Ministry of Health primary-care modernisation reports; Rosstat municipal database,n/a,true
+RU-SAR,Saratov Oblast,medical_post_gap,0.2544,,PLACEHOLDER - replace with Ministry of Health primary-care modernisation reports; Rosstat municipal database,n/a,true
+RU-SE,North Ossetia–Alania,medical_post_gap,0.2368,,PLACEHOLDER - replace with Ministry of Health primary-care modernisation reports; Rosstat municipal database,n/a,true
+RU-SMO,Smolensk Oblast,medical_post_gap,0.1827,,PLACEHOLDER - replace with Ministry of Health primary-care modernisation reports; Rosstat municipal database,n/a,true
+RU-SPE,Saint Petersburg,medical_post_gap,0.0671,,PLACEHOLDER - replace with Ministry of Health primary-care modernisation reports; Rosstat municipal database,n/a,true
+RU-STA,Stavropol Krai,medical_post_gap,0.2019,,PLACEHOLDER - replace with Ministry of Health primary-care modernisation reports; Rosstat municipal database,n/a,true
+RU-SVE,Sverdlovsk Oblast,medical_post_gap,0.2013,,PLACEHOLDER - replace with Ministry of Health primary-care modernisation reports; Rosstat municipal database,n/a,true
+RU-TA,Tatarstan,medical_post_gap,0.0849,,PLACEHOLDER - replace with Ministry of Health primary-care modernisation reports; Rosstat municipal database,n/a,true
+RU-TAM,Tambov Oblast,medical_post_gap,0.2107,,PLACEHOLDER - replace with Ministry of Health primary-care modernisation reports; Rosstat municipal database,n/a,true
+RU-TOM,Tomsk Oblast,medical_post_gap,0.1880,,PLACEHOLDER - replace with Ministry of Health primary-care modernisation reports; Rosstat municipal database,n/a,true
+RU-TUL,Tula Oblast,medical_post_gap,0.2303,,PLACEHOLDER - replace with Ministry of Health primary-care modernisation reports; Rosstat municipal database,n/a,true
+RU-TVE,Tver Oblast,medical_post_gap,0.1603,,PLACEHOLDER - replace with Ministry of Health primary-care modernisation reports; Rosstat municipal database,n/a,true
+RU-TY,Tuva,medical_post_gap,0.3218,,PLACEHOLDER - replace with Ministry of Health primary-care modernisation reports; Rosstat municipal database,n/a,true
+RU-TYU,Tyumen Oblast,medical_post_gap,0.0862,,PLACEHOLDER - replace with Ministry of Health primary-care modernisation reports; Rosstat municipal database,n/a,true
+RU-UD,Udmurtia,medical_post_gap,0.1913,,PLACEHOLDER - replace with Ministry of Health primary-care modernisation reports; Rosstat municipal database,n/a,true
+RU-ULY,Ulyanovsk Oblast,medical_post_gap,0.1993,,PLACEHOLDER - replace with Ministry of Health primary-care modernisation reports; Rosstat municipal database,n/a,true
+RU-VGG,Volgograd Oblast,medical_post_gap,0.2417,,PLACEHOLDER - replace with Ministry of Health primary-care modernisation reports; Rosstat municipal database,n/a,true
+RU-VLA,Vladimir Oblast,medical_post_gap,0.2304,,PLACEHOLDER - replace with Ministry of Health primary-care modernisation reports; Rosstat municipal database,n/a,true
+RU-VLG,Vologda Oblast,medical_post_gap,0.2116,,PLACEHOLDER - replace with Ministry of Health primary-care modernisation reports; Rosstat municipal database,n/a,true
+RU-VOR,Voronezh Oblast,medical_post_gap,0.1843,,PLACEHOLDER - replace with Ministry of Health primary-care modernisation reports; Rosstat municipal database,n/a,true
+RU-YAN,Yamalo-Nenets Autonomous Okrug,medical_post_gap,0.1091,,PLACEHOLDER - replace with Ministry of Health primary-care modernisation reports; Rosstat municipal database,n/a,true
+RU-YAR,Yaroslavl Oblast,medical_post_gap,0.2089,,PLACEHOLDER - replace with Ministry of Health primary-care modernisation reports; Rosstat municipal database,n/a,true
+RU-YEV,Jewish Autonomous Oblast,medical_post_gap,0.3345,,PLACEHOLDER - replace with Ministry of Health primary-care modernisation reports; Rosstat municipal database,n/a,true
+RU-ZAB,Zabaykalsky Krai,medical_post_gap,0.3372,,PLACEHOLDER - replace with Ministry of Health primary-care modernisation reports; Rosstat municipal database,n/a,true
+RU-AD,Adygea,school_repair_need,0.2015,,PLACEHOLDER - replace with Ministry of Education school-modernisation programme; Rosstat,n/a,true
+RU-AL,Altai Republic,school_repair_need,0.2918,,PLACEHOLDER - replace with Ministry of Education school-modernisation programme; Rosstat,n/a,true
+RU-ALT,Altai Krai,school_repair_need,0.2029,,PLACEHOLDER - replace with Ministry of Education school-modernisation programme; Rosstat,n/a,true
+RU-AMU,Amur Oblast,school_repair_need,0.2104,,PLACEHOLDER - replace with Ministry of Education school-modernisation programme; Rosstat,n/a,true
+RU-ARK,Arkhangelsk Oblast,school_repair_need,0.1626,,PLACEHOLDER - replace with Ministry of Education school-modernisation programme; Rosstat,n/a,true
+RU-AST,Astrakhan Oblast,school_repair_need,0.2240,,PLACEHOLDER - replace with Ministry of Education school-modernisation programme; Rosstat,n/a,true
+RU-BA,Bashkortostan,school_repair_need,0.2074,,PLACEHOLDER - replace with Ministry of Education school-modernisation programme; Rosstat,n/a,true
+RU-BEL,Belgorod Oblast,school_repair_need,0.1228,,PLACEHOLDER - replace with Ministry of Education school-modernisation programme; Rosstat,n/a,true
+RU-BRY,Bryansk Oblast,school_repair_need,0.1513,,PLACEHOLDER - replace with Ministry of Education school-modernisation programme; Rosstat,n/a,true
+RU-BU,Buryatia,school_repair_need,0.2652,,PLACEHOLDER - replace with Ministry of Education school-modernisation programme; Rosstat,n/a,true
+RU-CE,Chechnya,school_repair_need,0.2139,,PLACEHOLDER - replace with Ministry of Education school-modernisation programme; Rosstat,n/a,true
+RU-CHE,Chelyabinsk Oblast,school_repair_need,0.1873,,PLACEHOLDER - replace with Ministry of Education school-modernisation programme; Rosstat,n/a,true
+RU-CHU,Chukotka Autonomous Okrug,school_repair_need,0.1357,,PLACEHOLDER - replace with Ministry of Education school-modernisation programme; Rosstat,n/a,true
+RU-CU,Chuvashia,school_repair_need,0.1378,,PLACEHOLDER - replace with Ministry of Education school-modernisation programme; Rosstat,n/a,true
+RU-DA,Dagestan,school_repair_need,0.2771,,PLACEHOLDER - replace with Ministry of Education school-modernisation programme; Rosstat,n/a,true
+RU-IN,Ingushetia,school_repair_need,0.2923,,PLACEHOLDER - replace with Ministry of Education school-modernisation programme; Rosstat,n/a,true
+RU-IRK,Irkutsk Oblast,school_repair_need,0.2319,,PLACEHOLDER - replace with Ministry of Education school-modernisation programme; Rosstat,n/a,true
+RU-IVA,Ivanovo Oblast,school_repair_need,0.2043,,PLACEHOLDER - replace with Ministry of Education school-modernisation programme; Rosstat,n/a,true
+RU-KAM,Kamchatka Krai,school_repair_need,0.2243,,PLACEHOLDER - replace with Ministry of Education school-modernisation programme; Rosstat,n/a,true
+RU-KB,Kabardino-Balkaria,school_repair_need,0.3077,,PLACEHOLDER - replace with Ministry of Education school-modernisation programme; Rosstat,n/a,true
+RU-KC,Karachay-Cherkessia,school_repair_need,0.2486,,PLACEHOLDER - replace with Ministry of Education school-modernisation programme; Rosstat,n/a,true
+RU-KDA,Krasnodar Krai,school_repair_need,0.1888,,PLACEHOLDER - replace with Ministry of Education school-modernisation programme; Rosstat,n/a,true
+RU-KEM,Kemerovo Oblast,school_repair_need,0.1680,,PLACEHOLDER - replace with Ministry of Education school-modernisation programme; Rosstat,n/a,true
+RU-KGD,Kaliningrad Oblast,school_repair_need,0.2071,,PLACEHOLDER - replace with Ministry of Education school-modernisation programme; Rosstat,n/a,true
+RU-KGN,Kurgan Oblast,school_repair_need,0.2345,,PLACEHOLDER - replace with Ministry of Education school-modernisation programme; Rosstat,n/a,true
+RU-KHA,Khabarovsk Krai,school_repair_need,0.1831,,PLACEHOLDER - replace with Ministry of Education school-modernisation programme; Rosstat,n/a,true
+RU-KHM,Khanty-Mansi Autonomous Okrug,school_repair_need,0.1176,,PLACEHOLDER - replace with Ministry of Education school-modernisation programme; Rosstat,n/a,true
+RU-KIR,Kirov Oblast,school_repair_need,0.2051,,PLACEHOLDER - replace with Ministry of Education school-modernisation programme; Rosstat,n/a,true
+RU-KK,Khakassia,school_repair_need,0.2254,,PLACEHOLDER - replace with Ministry of Education school-modernisation programme; Rosstat,n/a,true
+RU-KL,Kalmykia,school_repair_need,0.2740,,PLACEHOLDER - replace with Ministry of Education school-modernisation programme; Rosstat,n/a,true
+RU-KLU,Kaluga Oblast,school_repair_need,0.2344,,PLACEHOLDER - replace with Ministry of Education school-modernisation programme; Rosstat,n/a,true
+RU-KO,Komi Republic,school_repair_need,0.2310,,PLACEHOLDER - replace with Ministry of Education school-modernisation programme; Rosstat,n/a,true
+RU-KOS,Kostroma Oblast,school_repair_need,0.1540,,PLACEHOLDER - replace with Ministry of Education school-modernisation programme; Rosstat,n/a,true
+RU-KR,Republic of Karelia,school_repair_need,0.1267,,PLACEHOLDER - replace with Ministry of Education school-modernisation programme; Rosstat,n/a,true
+RU-KRS,Kursk Oblast,school_repair_need,0.2177,,PLACEHOLDER - replace with Ministry of Education school-modernisation programme; Rosstat,n/a,true
+RU-KYA,Krasnoyarsk Krai,school_repair_need,0.2033,,PLACEHOLDER - replace with Ministry of Education school-modernisation programme; Rosstat,n/a,true
+RU-LEN,Leningrad Oblast,school_repair_need,0.0771,,PLACEHOLDER - replace with Ministry of Education school-modernisation programme; Rosstat,n/a,true
+RU-LIP,Lipetsk Oblast,school_repair_need,0.1268,,PLACEHOLDER - replace with Ministry of Education school-modernisation programme; Rosstat,n/a,true
+RU-MAG,Magadan Oblast,school_repair_need,0.1765,,PLACEHOLDER - replace with Ministry of Education school-modernisation programme; Rosstat,n/a,true
+RU-ME,Mari El,school_repair_need,0.2628,,PLACEHOLDER - replace with Ministry of Education school-modernisation programme; Rosstat,n/a,true
+RU-MO,Mordovia,school_repair_need,0.1612,,PLACEHOLDER - replace with Ministry of Education school-modernisation programme; Rosstat,n/a,true
+RU-MOS,Moscow Oblast,school_repair_need,0.1318,,PLACEHOLDER - replace with Ministry of Education school-modernisation programme; Rosstat,n/a,true
+RU-MOW,Moscow,school_repair_need,0.0991,,PLACEHOLDER - replace with Ministry of Education school-modernisation programme; Rosstat,n/a,true
+RU-MUR,Murmansk Oblast,school_repair_need,0.1787,,PLACEHOLDER - replace with Ministry of Education school-modernisation programme; Rosstat,n/a,true
+RU-NEN,Nenets Autonomous Okrug,school_repair_need,0.0704,,PLACEHOLDER - replace with Ministry of Education school-modernisation programme; Rosstat,n/a,true
+RU-NGR,Novgorod Oblast,school_repair_need,0.2402,,PLACEHOLDER - replace with Ministry of Education school-modernisation programme; Rosstat,n/a,true
+RU-NIZ,Nizhny Novgorod Oblast,school_repair_need,0.2092,,PLACEHOLDER - replace with Ministry of Education school-modernisation programme; Rosstat,n/a,true
+RU-NVS,Novosibirsk Oblast,school_repair_need,0.2137,,PLACEHOLDER - replace with Ministry of Education school-modernisation programme; Rosstat,n/a,true
+RU-OMS,Omsk Oblast,school_repair_need,0.2029,,PLACEHOLDER - replace with Ministry of Education school-modernisation programme; Rosstat,n/a,true
+RU-ORE,Orenburg Oblast,school_repair_need,0.1614,,PLACEHOLDER - replace with Ministry of Education school-modernisation programme; Rosstat,n/a,true
+RU-ORL,Oryol Oblast,school_repair_need,0.2327,,PLACEHOLDER - replace with Ministry of Education school-modernisation programme; Rosstat,n/a,true
+RU-PER,Perm Krai,school_repair_need,0.1843,,PLACEHOLDER - replace with Ministry of Education school-modernisation programme; Rosstat,n/a,true
+RU-PNZ,Penza Oblast,school_repair_need,0.1870,,PLACEHOLDER - replace with Ministry of Education school-modernisation programme; Rosstat,n/a,true
+RU-PRI,Primorsky Krai,school_repair_need,0.1878,,PLACEHOLDER - replace with Ministry of Education school-modernisation programme; Rosstat,n/a,true
+RU-PSK,Pskov Oblast,school_repair_need,0.2390,,PLACEHOLDER - replace with Ministry of Education school-modernisation programme; Rosstat,n/a,true
+RU-ROS,Rostov Oblast,school_repair_need,0.1655,,PLACEHOLDER - replace with Ministry of Education school-modernisation programme; Rosstat,n/a,true
+RU-RYA,Ryazan Oblast,school_repair_need,0.1677,,PLACEHOLDER - replace with Ministry of Education school-modernisation programme; Rosstat,n/a,true
+RU-SA,Sakha (Yakutia),school_repair_need,0.2015,,PLACEHOLDER - replace with Ministry of Education school-modernisation programme; Rosstat,n/a,true
+RU-SAK,Sakhalin Oblast,school_repair_need,0.1017,,PLACEHOLDER - replace with Ministry of Education school-modernisation programme; Rosstat,n/a,true
+RU-SAM,Samara Oblast,school_repair_need,0.0674,,PLACEHOLDER - replace with Ministry of Education school-modernisation programme; Rosstat,n/a,true
+RU-SAR,Saratov Oblast,school_repair_need,0.2038,,PLACEHOLDER - replace with Ministry of Education school-modernisation programme; Rosstat,n/a,true
+RU-SE,North Ossetia–Alania,school_repair_need,0.1659,,PLACEHOLDER - replace with Ministry of Education school-modernisation programme; Rosstat,n/a,true
+RU-SMO,Smolensk Oblast,school_repair_need,0.1712,,PLACEHOLDER - replace with Ministry of Education school-modernisation programme; Rosstat,n/a,true
+RU-SPE,Saint Petersburg,school_repair_need,0.0295,,PLACEHOLDER - replace with Ministry of Education school-modernisation programme; Rosstat,n/a,true
+RU-STA,Stavropol Krai,school_repair_need,0.1440,,PLACEHOLDER - replace with Ministry of Education school-modernisation programme; Rosstat,n/a,true
+RU-SVE,Sverdlovsk Oblast,school_repair_need,0.2152,,PLACEHOLDER - replace with Ministry of Education school-modernisation programme; Rosstat,n/a,true
+RU-TA,Tatarstan,school_repair_need,0.0946,,PLACEHOLDER - replace with Ministry of Education school-modernisation programme; Rosstat,n/a,true
+RU-TAM,Tambov Oblast,school_repair_need,0.1888,,PLACEHOLDER - replace with Ministry of Education school-modernisation programme; Rosstat,n/a,true
+RU-TOM,Tomsk Oblast,school_repair_need,0.1765,,PLACEHOLDER - replace with Ministry of Education school-modernisation programme; Rosstat,n/a,true
+RU-TUL,Tula Oblast,school_repair_need,0.2280,,PLACEHOLDER - replace with Ministry of Education school-modernisation programme; Rosstat,n/a,true
+RU-TVE,Tver Oblast,school_repair_need,0.1372,,PLACEHOLDER - replace with Ministry of Education school-modernisation programme; Rosstat,n/a,true
+RU-TY,Tuva,school_repair_need,0.3232,,PLACEHOLDER - replace with Ministry of Education school-modernisation programme; Rosstat,n/a,true
+RU-TYU,Tyumen Oblast,school_repair_need,0.1129,,PLACEHOLDER - replace with Ministry of Education school-modernisation programme; Rosstat,n/a,true
+RU-UD,Udmurtia,school_repair_need,0.2183,,PLACEHOLDER - replace with Ministry of Education school-modernisation programme; Rosstat,n/a,true
+RU-ULY,Ulyanovsk Oblast,school_repair_need,0.1675,,PLACEHOLDER - replace with Ministry of Education school-modernisation programme; Rosstat,n/a,true
+RU-VGG,Volgograd Oblast,school_repair_need,0.1901,,PLACEHOLDER - replace with Ministry of Education school-modernisation programme; Rosstat,n/a,true
+RU-VLA,Vladimir Oblast,school_repair_need,0.1980,,PLACEHOLDER - replace with Ministry of Education school-modernisation programme; Rosstat,n/a,true
+RU-VLG,Vologda Oblast,school_repair_need,0.2122,,PLACEHOLDER - replace with Ministry of Education school-modernisation programme; Rosstat,n/a,true
+RU-VOR,Voronezh Oblast,school_repair_need,0.1794,,PLACEHOLDER - replace with Ministry of Education school-modernisation programme; Rosstat,n/a,true
+RU-YAN,Yamalo-Nenets Autonomous Okrug,school_repair_need,0.0725,,PLACEHOLDER - replace with Ministry of Education school-modernisation programme; Rosstat,n/a,true
+RU-YAR,Yaroslavl Oblast,school_repair_need,0.1770,,PLACEHOLDER - replace with Ministry of Education school-modernisation programme; Rosstat,n/a,true
+RU-YEV,Jewish Autonomous Oblast,school_repair_need,0.2757,,PLACEHOLDER - replace with Ministry of Education school-modernisation programme; Rosstat,n/a,true
+RU-ZAB,Zabaykalsky Krai,school_repair_need,0.2490,,PLACEHOLDER - replace with Ministry of Education school-modernisation programme; Rosstat,n/a,true
+RU-AD,Adygea,grid_outage_share,0.1412,,PLACEHOLDER - replace with Minenergo / Rosseti reliability reports,n/a,true
+RU-AL,Altai Republic,grid_outage_share,0.2094,,PLACEHOLDER - replace with Minenergo / Rosseti reliability reports,n/a,true
+RU-ALT,Altai Krai,grid_outage_share,0.1838,,PLACEHOLDER - replace with Minenergo / Rosseti reliability reports,n/a,true
+RU-AMU,Amur Oblast,grid_outage_share,0.1251,,PLACEHOLDER - replace with Minenergo / Rosseti reliability reports,n/a,true
+RU-ARK,Arkhangelsk Oblast,grid_outage_share,0.1445,,PLACEHOLDER - replace with Minenergo / Rosseti reliability reports,n/a,true
+RU-AST,Astrakhan Oblast,grid_outage_share,0.1250,,PLACEHOLDER - replace with Minenergo / Rosseti reliability reports,n/a,true
+RU-BA,Bashkortostan,grid_outage_share,0.1383,,PLACEHOLDER - replace with Minenergo / Rosseti reliability reports,n/a,true
+RU-BEL,Belgorod Oblast,grid_outage_share,0.0225,,PLACEHOLDER - replace with Minenergo / Rosseti reliability reports,n/a,true
+RU-BRY,Bryansk Oblast,grid_outage_share,0.1013,,PLACEHOLDER - replace with Minenergo / Rosseti reliability reports,n/a,true
+RU-BU,Buryatia,grid_outage_share,0.1410,,PLACEHOLDER - replace with Minenergo / Rosseti reliability reports,n/a,true
+RU-CE,Chechnya,grid_outage_share,0.2285,,PLACEHOLDER - replace with Minenergo / Rosseti reliability reports,n/a,true
+RU-CHE,Chelyabinsk Oblast,grid_outage_share,0.0896,,PLACEHOLDER - replace with Minenergo / Rosseti reliability reports,n/a,true
+RU-CHU,Chukotka Autonomous Okrug,grid_outage_share,0.0591,,PLACEHOLDER - replace with Minenergo / Rosseti reliability reports,n/a,true
+RU-CU,Chuvashia,grid_outage_share,0.1124,,PLACEHOLDER - replace with Minenergo / Rosseti reliability reports,n/a,true
+RU-DA,Dagestan,grid_outage_share,0.1604,,PLACEHOLDER - replace with Minenergo / Rosseti reliability reports,n/a,true
+RU-IN,Ingushetia,grid_outage_share,0.1521,,PLACEHOLDER - replace with Minenergo / Rosseti reliability reports,n/a,true
+RU-IRK,Irkutsk Oblast,grid_outage_share,0.1923,,PLACEHOLDER - replace with Minenergo / Rosseti reliability reports,n/a,true
+RU-IVA,Ivanovo Oblast,grid_outage_share,0.1413,,PLACEHOLDER - replace with Minenergo / Rosseti reliability reports,n/a,true
+RU-KAM,Kamchatka Krai,grid_outage_share,0.1265,,PLACEHOLDER - replace with Minenergo / Rosseti reliability reports,n/a,true
+RU-KB,Kabardino-Balkaria,grid_outage_share,0.2023,,PLACEHOLDER - replace with Minenergo / Rosseti reliability reports,n/a,true
+RU-KC,Karachay-Cherkessia,grid_outage_share,0.1839,,PLACEHOLDER - replace with Minenergo / Rosseti reliability reports,n/a,true
+RU-KDA,Krasnodar Krai,grid_outage_share,0.0961,,PLACEHOLDER - replace with Minenergo / Rosseti reliability reports,n/a,true
+RU-KEM,Kemerovo Oblast,grid_outage_share,0.0958,,PLACEHOLDER - replace with Minenergo / Rosseti reliability reports,n/a,true
+RU-KGD,Kaliningrad Oblast,grid_outage_share,0.1179,,PLACEHOLDER - replace with Minenergo / Rosseti reliability reports,n/a,true
+RU-KGN,Kurgan Oblast,grid_outage_share,0.2083,,PLACEHOLDER - replace with Minenergo / Rosseti reliability reports,n/a,true
+RU-KHA,Khabarovsk Krai,grid_outage_share,0.1166,,PLACEHOLDER - replace with Minenergo / Rosseti reliability reports,n/a,true
+RU-KHM,Khanty-Mansi Autonomous Okrug,grid_outage_share,0.0912,,PLACEHOLDER - replace with Minenergo / Rosseti reliability reports,n/a,true
+RU-KIR,Kirov Oblast,grid_outage_share,0.1179,,PLACEHOLDER - replace with Minenergo / Rosseti reliability reports,n/a,true
+RU-KK,Khakassia,grid_outage_share,0.1298,,PLACEHOLDER - replace with Minenergo / Rosseti reliability reports,n/a,true
+RU-KL,Kalmykia,grid_outage_share,0.2404,,PLACEHOLDER - replace with Minenergo / Rosseti reliability reports,n/a,true
+RU-KLU,Kaluga Oblast,grid_outage_share,0.1321,,PLACEHOLDER - replace with Minenergo / Rosseti reliability reports,n/a,true
+RU-KO,Komi Republic,grid_outage_share,0.0605,,PLACEHOLDER - replace with Minenergo / Rosseti reliability reports,n/a,true
+RU-KOS,Kostroma Oblast,grid_outage_share,0.1432,,PLACEHOLDER - replace with Minenergo / Rosseti reliability reports,n/a,true
+RU-KR,Republic of Karelia,grid_outage_share,0.0924,,PLACEHOLDER - replace with Minenergo / Rosseti reliability reports,n/a,true
+RU-KRS,Kursk Oblast,grid_outage_share,0.0821,,PLACEHOLDER - replace with Minenergo / Rosseti reliability reports,n/a,true
+RU-KYA,Krasnoyarsk Krai,grid_outage_share,0.1817,,PLACEHOLDER - replace with Minenergo / Rosseti reliability reports,n/a,true
+RU-LEN,Leningrad Oblast,grid_outage_share,0.0546,,PLACEHOLDER - replace with Minenergo / Rosseti reliability reports,n/a,true
+RU-LIP,Lipetsk Oblast,grid_outage_share,0.0887,,PLACEHOLDER - replace with Minenergo / Rosseti reliability reports,n/a,true
+RU-MAG,Magadan Oblast,grid_outage_share,0.1098,,PLACEHOLDER - replace with Minenergo / Rosseti reliability reports,n/a,true
+RU-ME,Mari El,grid_outage_share,0.1389,,PLACEHOLDER - replace with Minenergo / Rosseti reliability reports,n/a,true
+RU-MO,Mordovia,grid_outage_share,0.1021,,PLACEHOLDER - replace with Minenergo / Rosseti reliability reports,n/a,true
+RU-MOS,Moscow Oblast,grid_outage_share,0.0659,,PLACEHOLDER - replace with Minenergo / Rosseti reliability reports,n/a,true
+RU-MOW,Moscow,grid_outage_share,0.0803,,PLACEHOLDER - replace with Minenergo / Rosseti reliability reports,n/a,true
+RU-MUR,Murmansk Oblast,grid_outage_share,0.1050,,PLACEHOLDER - replace with Minenergo / Rosseti reliability reports,n/a,true
+RU-NEN,Nenets Autonomous Okrug,grid_outage_share,0.0289,,PLACEHOLDER - replace with Minenergo / Rosseti reliability reports,n/a,true
+RU-NGR,Novgorod Oblast,grid_outage_share,0.1526,,PLACEHOLDER - replace with Minenergo / Rosseti reliability reports,n/a,true
+RU-NIZ,Nizhny Novgorod Oblast,grid_outage_share,0.1649,,PLACEHOLDER - replace with Minenergo / Rosseti reliability reports,n/a,true
+RU-NVS,Novosibirsk Oblast,grid_outage_share,0.1279,,PLACEHOLDER - replace with Minenergo / Rosseti reliability reports,n/a,true
+RU-OMS,Omsk Oblast,grid_outage_share,0.1435,,PLACEHOLDER - replace with Minenergo / Rosseti reliability reports,n/a,true
+RU-ORE,Orenburg Oblast,grid_outage_share,0.0562,,PLACEHOLDER - replace with Minenergo / Rosseti reliability reports,n/a,true
+RU-ORL,Oryol Oblast,grid_outage_share,0.1009,,PLACEHOLDER - replace with Minenergo / Rosseti reliability reports,n/a,true
+RU-PER,Perm Krai,grid_outage_share,0.1287,,PLACEHOLDER - replace with Minenergo / Rosseti reliability reports,n/a,true
+RU-PNZ,Penza Oblast,grid_outage_share,0.1090,,PLACEHOLDER - replace with Minenergo / Rosseti reliability reports,n/a,true
+RU-PRI,Primorsky Krai,grid_outage_share,0.0486,,PLACEHOLDER - replace with Minenergo / Rosseti reliability reports,n/a,true
+RU-PSK,Pskov Oblast,grid_outage_share,0.1555,,PLACEHOLDER - replace with Minenergo / Rosseti reliability reports,n/a,true
+RU-ROS,Rostov Oblast,grid_outage_share,0.0734,,PLACEHOLDER - replace with Minenergo / Rosseti reliability reports,n/a,true
+RU-RYA,Ryazan Oblast,grid_outage_share,0.1611,,PLACEHOLDER - replace with Minenergo / Rosseti reliability reports,n/a,true
+RU-SA,Sakha (Yakutia),grid_outage_share,0.0992,,PLACEHOLDER - replace with Minenergo / Rosseti reliability reports,n/a,true
+RU-SAK,Sakhalin Oblast,grid_outage_share,0.0443,,PLACEHOLDER - replace with Minenergo / Rosseti reliability reports,n/a,true
+RU-SAM,Samara Oblast,grid_outage_share,0.1238,,PLACEHOLDER - replace with Minenergo / Rosseti reliability reports,n/a,true
+RU-SAR,Saratov Oblast,grid_outage_share,0.1244,,PLACEHOLDER - replace with Minenergo / Rosseti reliability reports,n/a,true
+RU-SE,North Ossetia–Alania,grid_outage_share,0.1235,,PLACEHOLDER - replace with Minenergo / Rosseti reliability reports,n/a,true
+RU-SMO,Smolensk Oblast,grid_outage_share,0.1110,,PLACEHOLDER - replace with Minenergo / Rosseti reliability reports,n/a,true
+RU-SPE,Saint Petersburg,grid_outage_share,0.0359,,PLACEHOLDER - replace with Minenergo / Rosseti reliability reports,n/a,true
+RU-STA,Stavropol Krai,grid_outage_share,0.1232,,PLACEHOLDER - replace with Minenergo / Rosseti reliability reports,n/a,true
+RU-SVE,Sverdlovsk Oblast,grid_outage_share,0.0825,,PLACEHOLDER - replace with Minenergo / Rosseti reliability reports,n/a,true
+RU-TA,Tatarstan,grid_outage_share,0.0279,,PLACEHOLDER - replace with Minenergo / Rosseti reliability reports,n/a,true
+RU-TAM,Tambov Oblast,grid_outage_share,0.1234,,PLACEHOLDER - replace with Minenergo / Rosseti reliability reports,n/a,true
+RU-TOM,Tomsk Oblast,grid_outage_share,0.1194,,PLACEHOLDER - replace with Minenergo / Rosseti reliability reports,n/a,true
+RU-TUL,Tula Oblast,grid_outage_share,0.0765,,PLACEHOLDER - replace with Minenergo / Rosseti reliability reports,n/a,true
+RU-TVE,Tver Oblast,grid_outage_share,0.0790,,PLACEHOLDER - replace with Minenergo / Rosseti reliability reports,n/a,true
+RU-TY,Tuva,grid_outage_share,0.1527,,PLACEHOLDER - replace with Minenergo / Rosseti reliability reports,n/a,true
+RU-TYU,Tyumen Oblast,grid_outage_share,0.0967,,PLACEHOLDER - replace with Minenergo / Rosseti reliability reports,n/a,true
+RU-UD,Udmurtia,grid_outage_share,0.0435,,PLACEHOLDER - replace with Minenergo / Rosseti reliability reports,n/a,true
+RU-ULY,Ulyanovsk Oblast,grid_outage_share,0.1010,,PLACEHOLDER - replace with Minenergo / Rosseti reliability reports,n/a,true
+RU-VGG,Volgograd Oblast,grid_outage_share,0.0734,,PLACEHOLDER - replace with Minenergo / Rosseti reliability reports,n/a,true
+RU-VLA,Vladimir Oblast,grid_outage_share,0.1831,,PLACEHOLDER - replace with Minenergo / Rosseti reliability reports,n/a,true
+RU-VLG,Vologda Oblast,grid_outage_share,0.0900,,PLACEHOLDER - replace with Minenergo / Rosseti reliability reports,n/a,true
+RU-VOR,Voronezh Oblast,grid_outage_share,0.1290,,PLACEHOLDER - replace with Minenergo / Rosseti reliability reports,n/a,true
+RU-YAN,Yamalo-Nenets Autonomous Okrug,grid_outage_share,0.0542,,PLACEHOLDER - replace with Minenergo / Rosseti reliability reports,n/a,true
+RU-YAR,Yaroslavl Oblast,grid_outage_share,0.0978,,PLACEHOLDER - replace with Minenergo / Rosseti reliability reports,n/a,true
+RU-YEV,Jewish Autonomous Oblast,grid_outage_share,0.1869,,PLACEHOLDER - replace with Minenergo / Rosseti reliability reports,n/a,true
+RU-ZAB,Zabaykalsky Krai,grid_outage_share,0.2044,,PLACEHOLDER - replace with Minenergo / Rosseti reliability reports,n/a,true
+RU-AD,Adygea,waste_collection_coverage,0.8253,,PLACEHOLDER - replace with Russian Ecological Operator (REO) territorial schemes,n/a,true
+RU-AL,Altai Republic,waste_collection_coverage,0.6582,,PLACEHOLDER - replace with Russian Ecological Operator (REO) territorial schemes,n/a,true
+RU-ALT,Altai Krai,waste_collection_coverage,0.8088,,PLACEHOLDER - replace with Russian Ecological Operator (REO) territorial schemes,n/a,true
+RU-AMU,Amur Oblast,waste_collection_coverage,0.7547,,PLACEHOLDER - replace with Russian Ecological Operator (REO) territorial schemes,n/a,true
+RU-ARK,Arkhangelsk Oblast,waste_collection_coverage,0.7810,,PLACEHOLDER - replace with Russian Ecological Operator (REO) territorial schemes,n/a,true
+RU-AST,Astrakhan Oblast,waste_collection_coverage,0.7814,,PLACEHOLDER - replace with Russian Ecological Operator (REO) territorial schemes,n/a,true
+RU-BA,Bashkortostan,waste_collection_coverage,0.8054,,PLACEHOLDER - replace with Russian Ecological Operator (REO) territorial schemes,n/a,true
+RU-BEL,Belgorod Oblast,waste_collection_coverage,0.8234,,PLACEHOLDER - replace with Russian Ecological Operator (REO) territorial schemes,n/a,true
+RU-BRY,Bryansk Oblast,waste_collection_coverage,0.7508,,PLACEHOLDER - replace with Russian Ecological Operator (REO) territorial schemes,n/a,true
+RU-BU,Buryatia,waste_collection_coverage,0.7743,,PLACEHOLDER - replace with Russian Ecological Operator (REO) territorial schemes,n/a,true
+RU-CE,Chechnya,waste_collection_coverage,0.7021,,PLACEHOLDER - replace with Russian Ecological Operator (REO) territorial schemes,n/a,true
+RU-CHE,Chelyabinsk Oblast,waste_collection_coverage,0.7917,,PLACEHOLDER - replace with Russian Ecological Operator (REO) territorial schemes,n/a,true
+RU-CHU,Chukotka Autonomous Okrug,waste_collection_coverage,0.7959,,PLACEHOLDER - replace with Russian Ecological Operator (REO) territorial schemes,n/a,true
+RU-CU,Chuvashia,waste_collection_coverage,0.7602,,PLACEHOLDER - replace with Russian Ecological Operator (REO) territorial schemes,n/a,true
+RU-DA,Dagestan,waste_collection_coverage,0.6863,,PLACEHOLDER - replace with Russian Ecological Operator (REO) territorial schemes,n/a,true
+RU-IN,Ingushetia,waste_collection_coverage,0.6918,,PLACEHOLDER - replace with Russian Ecological Operator (REO) territorial schemes,n/a,true
+RU-IRK,Irkutsk Oblast,waste_collection_coverage,0.7234,,PLACEHOLDER - replace with Russian Ecological Operator (REO) territorial schemes,n/a,true
+RU-IVA,Ivanovo Oblast,waste_collection_coverage,0.8278,,PLACEHOLDER - replace with Russian Ecological Operator (REO) territorial schemes,n/a,true
+RU-KAM,Kamchatka Krai,waste_collection_coverage,0.7546,,PLACEHOLDER - replace with Russian Ecological Operator (REO) territorial schemes,n/a,true
+RU-KB,Kabardino-Balkaria,waste_collection_coverage,0.6838,,PLACEHOLDER - replace with Russian Ecological Operator (REO) territorial schemes,n/a,true
+RU-KC,Karachay-Cherkessia,waste_collection_coverage,0.6624,,PLACEHOLDER - replace with Russian Ecological Operator (REO) territorial schemes,n/a,true
+RU-KDA,Krasnodar Krai,waste_collection_coverage,0.7998,,PLACEHOLDER - replace with Russian Ecological Operator (REO) territorial schemes,n/a,true
+RU-KEM,Kemerovo Oblast,waste_collection_coverage,0.7860,,PLACEHOLDER - replace with Russian Ecological Operator (REO) territorial schemes,n/a,true
+RU-KGD,Kaliningrad Oblast,waste_collection_coverage,0.8193,,PLACEHOLDER - replace with Russian Ecological Operator (REO) territorial schemes,n/a,true
+RU-KGN,Kurgan Oblast,waste_collection_coverage,0.6529,,PLACEHOLDER - replace with Russian Ecological Operator (REO) territorial schemes,n/a,true
+RU-KHA,Khabarovsk Krai,waste_collection_coverage,0.7546,,PLACEHOLDER - replace with Russian Ecological Operator (REO) territorial schemes,n/a,true
+RU-KHM,Khanty-Mansi Autonomous Okrug,waste_collection_coverage,0.8496,,PLACEHOLDER - replace with Russian Ecological Operator (REO) territorial schemes,n/a,true
+RU-KIR,Kirov Oblast,waste_collection_coverage,0.8019,,PLACEHOLDER - replace with Russian Ecological Operator (REO) territorial schemes,n/a,true
+RU-KK,Khakassia,waste_collection_coverage,0.8037,,PLACEHOLDER - replace with Russian Ecological Operator (REO) territorial schemes,n/a,true
+RU-KL,Kalmykia,waste_collection_coverage,0.6559,,PLACEHOLDER - replace with Russian Ecological Operator (REO) territorial schemes,n/a,true
+RU-KLU,Kaluga Oblast,waste_collection_coverage,0.8009,,PLACEHOLDER - replace with Russian Ecological Operator (REO) territorial schemes,n/a,true
+RU-KO,Komi Republic,waste_collection_coverage,0.8024,,PLACEHOLDER - replace with Russian Ecological Operator (REO) territorial schemes,n/a,true
+RU-KOS,Kostroma Oblast,waste_collection_coverage,0.7916,,PLACEHOLDER - replace with Russian Ecological Operator (REO) territorial schemes,n/a,true
+RU-KR,Republic of Karelia,waste_collection_coverage,0.7964,,PLACEHOLDER - replace with Russian Ecological Operator (REO) territorial schemes,n/a,true
+RU-KRS,Kursk Oblast,waste_collection_coverage,0.8067,,PLACEHOLDER - replace with Russian Ecological Operator (REO) territorial schemes,n/a,true
+RU-KYA,Krasnoyarsk Krai,waste_collection_coverage,0.7557,,PLACEHOLDER - replace with Russian Ecological Operator (REO) territorial schemes,n/a,true
+RU-LEN,Leningrad Oblast,waste_collection_coverage,0.9292,,PLACEHOLDER - replace with Russian Ecological Operator (REO) territorial schemes,n/a,true
+RU-LIP,Lipetsk Oblast,waste_collection_coverage,0.8315,,PLACEHOLDER - replace with Russian Ecological Operator (REO) territorial schemes,n/a,true
+RU-MAG,Magadan Oblast,waste_collection_coverage,0.7403,,PLACEHOLDER - replace with Russian Ecological Operator (REO) territorial schemes,n/a,true
+RU-ME,Mari El,waste_collection_coverage,0.6683,,PLACEHOLDER - replace with Russian Ecological Operator (REO) territorial schemes,n/a,true
+RU-MO,Mordovia,waste_collection_coverage,0.8498,,PLACEHOLDER - replace with Russian Ecological Operator (REO) territorial schemes,n/a,true
+RU-MOS,Moscow Oblast,waste_collection_coverage,0.9156,,PLACEHOLDER - replace with Russian Ecological Operator (REO) territorial schemes,n/a,true
+RU-MOW,Moscow,waste_collection_coverage,0.7864,,PLACEHOLDER - replace with Russian Ecological Operator (REO) territorial schemes,n/a,true
+RU-MUR,Murmansk Oblast,waste_collection_coverage,0.7889,,PLACEHOLDER - replace with Russian Ecological Operator (REO) territorial schemes,n/a,true
+RU-NEN,Nenets Autonomous Okrug,waste_collection_coverage,0.9201,,PLACEHOLDER - replace with Russian Ecological Operator (REO) territorial schemes,n/a,true
+RU-NGR,Novgorod Oblast,waste_collection_coverage,0.7668,,PLACEHOLDER - replace with Russian Ecological Operator (REO) territorial schemes,n/a,true
+RU-NIZ,Nizhny Novgorod Oblast,waste_collection_coverage,0.7723,,PLACEHOLDER - replace with Russian Ecological Operator (REO) territorial schemes,n/a,true
+RU-NVS,Novosibirsk Oblast,waste_collection_coverage,0.7611,,PLACEHOLDER - replace with Russian Ecological Operator (REO) territorial schemes,n/a,true
+RU-OMS,Omsk Oblast,waste_collection_coverage,0.7709,,PLACEHOLDER - replace with Russian Ecological Operator (REO) territorial schemes,n/a,true
+RU-ORE,Orenburg Oblast,waste_collection_coverage,0.7982,,PLACEHOLDER - replace with Russian Ecological Operator (REO) territorial schemes,n/a,true
+RU-ORL,Oryol Oblast,waste_collection_coverage,0.7956,,PLACEHOLDER - replace with Russian Ecological Operator (REO) territorial schemes,n/a,true
+RU-PER,Perm Krai,waste_collection_coverage,0.7865,,PLACEHOLDER - replace with Russian Ecological Operator (REO) territorial schemes,n/a,true
+RU-PNZ,Penza Oblast,waste_collection_coverage,0.8223,,PLACEHOLDER - replace with Russian Ecological Operator (REO) territorial schemes,n/a,true
+RU-PRI,Primorsky Krai,waste_collection_coverage,0.7406,,PLACEHOLDER - replace with Russian Ecological Operator (REO) territorial schemes,n/a,true
+RU-PSK,Pskov Oblast,waste_collection_coverage,0.7041,,PLACEHOLDER - replace with Russian Ecological Operator (REO) territorial schemes,n/a,true
+RU-ROS,Rostov Oblast,waste_collection_coverage,0.7738,,PLACEHOLDER - replace with Russian Ecological Operator (REO) territorial schemes,n/a,true
+RU-RYA,Ryazan Oblast,waste_collection_coverage,0.8097,,PLACEHOLDER - replace with Russian Ecological Operator (REO) territorial schemes,n/a,true
+RU-SA,Sakha (Yakutia),waste_collection_coverage,0.8099,,PLACEHOLDER - replace with Russian Ecological Operator (REO) territorial schemes,n/a,true
+RU-SAK,Sakhalin Oblast,waste_collection_coverage,0.9456,,PLACEHOLDER - replace with Russian Ecological Operator (REO) territorial schemes,n/a,true
+RU-SAM,Samara Oblast,waste_collection_coverage,0.8698,,PLACEHOLDER - replace with Russian Ecological Operator (REO) territorial schemes,n/a,true
+RU-SAR,Saratov Oblast,waste_collection_coverage,0.8335,,PLACEHOLDER - replace with Russian Ecological Operator (REO) territorial schemes,n/a,true
+RU-SE,North Ossetia–Alania,waste_collection_coverage,0.7820,,PLACEHOLDER - replace with Russian Ecological Operator (REO) territorial schemes,n/a,true
+RU-SMO,Smolensk Oblast,waste_collection_coverage,0.8227,,PLACEHOLDER - replace with Russian Ecological Operator (REO) territorial schemes,n/a,true
+RU-SPE,Saint Petersburg,waste_collection_coverage,0.8910,,PLACEHOLDER - replace with Russian Ecological Operator (REO) territorial schemes,n/a,true
+RU-STA,Stavropol Krai,waste_collection_coverage,0.7874,,PLACEHOLDER - replace with Russian Ecological Operator (REO) territorial schemes,n/a,true
+RU-SVE,Sverdlovsk Oblast,waste_collection_coverage,0.7892,,PLACEHOLDER - replace with Russian Ecological Operator (REO) territorial schemes,n/a,true
+RU-TA,Tatarstan,waste_collection_coverage,0.9107,,PLACEHOLDER - replace with Russian Ecological Operator (REO) territorial schemes,n/a,true
+RU-TAM,Tambov Oblast,waste_collection_coverage,0.7461,,PLACEHOLDER - replace with Russian Ecological Operator (REO) territorial schemes,n/a,true
+RU-TOM,Tomsk Oblast,waste_collection_coverage,0.8047,,PLACEHOLDER - replace with Russian Ecological Operator (REO) territorial schemes,n/a,true
+RU-TUL,Tula Oblast,waste_collection_coverage,0.7700,,PLACEHOLDER - replace with Russian Ecological Operator (REO) territorial schemes,n/a,true
+RU-TVE,Tver Oblast,waste_collection_coverage,0.7661,,PLACEHOLDER - replace with Russian Ecological Operator (REO) territorial schemes,n/a,true
+RU-TY,Tuva,waste_collection_coverage,0.6688,,PLACEHOLDER - replace with Russian Ecological Operator (REO) territorial schemes,n/a,true
+RU-TYU,Tyumen Oblast,waste_collection_coverage,0.8570,,PLACEHOLDER - replace with Russian Ecological Operator (REO) territorial schemes,n/a,true
+RU-UD,Udmurtia,waste_collection_coverage,0.7806,,PLACEHOLDER - replace with Russian Ecological Operator (REO) territorial schemes,n/a,true
+RU-ULY,Ulyanovsk Oblast,waste_collection_coverage,0.8355,,PLACEHOLDER - replace with Russian Ecological Operator (REO) territorial schemes,n/a,true
+RU-VGG,Volgograd Oblast,waste_collection_coverage,0.7835,,PLACEHOLDER - replace with Russian Ecological Operator (REO) territorial schemes,n/a,true
+RU-VLA,Vladimir Oblast,waste_collection_coverage,0.8068,,PLACEHOLDER - replace with Russian Ecological Operator (REO) territorial schemes,n/a,true
+RU-VLG,Vologda Oblast,waste_collection_coverage,0.7537,,PLACEHOLDER - replace with Russian Ecological Operator (REO) territorial schemes,n/a,true
+RU-VOR,Voronezh Oblast,waste_collection_coverage,0.8267,,PLACEHOLDER - replace with Russian Ecological Operator (REO) territorial schemes,n/a,true
+RU-YAN,Yamalo-Nenets Autonomous Okrug,waste_collection_coverage,0.8832,,PLACEHOLDER - replace with Russian Ecological Operator (REO) territorial schemes,n/a,true
+RU-YAR,Yaroslavl Oblast,waste_collection_coverage,0.8101,,PLACEHOLDER - replace with Russian Ecological Operator (REO) territorial schemes,n/a,true
+RU-YEV,Jewish Autonomous Oblast,waste_collection_coverage,0.6432,,PLACEHOLDER - replace with Russian Ecological Operator (REO) territorial schemes,n/a,true
+RU-ZAB,Zabaykalsky Krai,waste_collection_coverage,0.6832,,PLACEHOLDER - replace with Russian Ecological Operator (REO) territorial schemes,n/a,true

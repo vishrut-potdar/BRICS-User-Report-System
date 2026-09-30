@@ -1,0 +1,21 @@
+project_id,admin_code,sector,name,budget_m,currency,status,source,synthetic
+PP-ZA-EC-ALFRED_NZO-sanitation,ZA-EC-ALFRED_NZO,sanitation,"Sanitation works, Alfred Nzo (synthetic)",108,ZAR,delayed,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-ZA-EC-ALFRED_NZO-roads,ZA-EC-ALFRED_NZO,roads,"Roads works, Alfred Nzo (synthetic)",161,ZAR,delayed,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-ZA-EC-ALFRED_NZO-health,ZA-EC-ALFRED_NZO,health,"Health works, Alfred Nzo (synthetic)",53,ZAR,delayed,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-ZA-EC-AMATHOLE-sanitation,ZA-EC-AMATHOLE,sanitation,"Sanitation works, Amathole (synthetic)",79,ZAR,delayed,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-ZA-EC-BUFFALO_CITY-roads,ZA-EC-BUFFALO_CITY,roads,"Roads works, Buffalo City (synthetic)",25,ZAR,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-ZA-EC-BUFFALO_CITY-health,ZA-EC-BUFFALO_CITY,health,"Health works, Buffalo City (synthetic)",131,ZAR,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-ZA-EC-BUFFALO_CITY-waste,ZA-EC-BUFFALO_CITY,waste,"Waste works, Buffalo City (synthetic)",148,ZAR,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-ZA-EC-CHRIS_HANI-education,ZA-EC-CHRIS_HANI,education,"Education works, Chris Hani (synthetic)",26,ZAR,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-ZA-EC-CHRIS_HANI-waste,ZA-EC-CHRIS_HANI,waste,"Waste works, Chris Hani (synthetic)",141,ZAR,delayed,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-ZA-EC-JOE_GQABI-water,ZA-EC-JOE_GQABI,water,"Water works, Joe Gqabi (synthetic)",61,ZAR,delayed,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-ZA-EC-JOE_GQABI-health,ZA-EC-JOE_GQABI,health,"Health works, Joe Gqabi (synthetic)",163,ZAR,delayed,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-ZA-EC-JOE_GQABI-education,ZA-EC-JOE_GQABI,education,"Education works, Joe Gqabi (synthetic)",136,ZAR,delayed,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-ZA-EC-JOE_GQABI-electricity,ZA-EC-JOE_GQABI,electricity,"Electricity works, Joe Gqabi (synthetic)",46,ZAR,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-ZA-EC-NELSON_MANDELA_BAY-roads,ZA-EC-NELSON_MANDELA_BAY,roads,"Roads works, Nelson Mandela Bay (synthetic)",163,ZAR,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-ZA-EC-NELSON_MANDELA_BAY-education,ZA-EC-NELSON_MANDELA_BAY,education,"Education works, Nelson Mandela Bay (synthetic)",186,ZAR,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-ZA-EC-NELSON_MANDELA_BAY-waste,ZA-EC-NELSON_MANDELA_BAY,waste,"Waste works, Nelson Mandela Bay (synthetic)",189,ZAR,delayed,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-ZA-EC-OR_TAMBO-education,ZA-EC-OR_TAMBO,education,"Education works, OR Tambo (synthetic)",109,ZAR,delayed,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-ZA-EC-OR_TAMBO-electricity,ZA-EC-OR_TAMBO,electricity,"Electricity works, OR Tambo (synthetic)",24,ZAR,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-ZA-EC-OR_TAMBO-waste,ZA-EC-OR_TAMBO,waste,"Waste works, OR Tambo (synthetic)",141,ZAR,delayed,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-ZA-EC-SARAH_BAARTMAN-health,ZA-EC-SARAH_BAARTMAN,health,"Health works, Sarah Baartman (synthetic)",89,ZAR,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true

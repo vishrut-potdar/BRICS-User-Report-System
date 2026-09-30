@@ -73,6 +73,8 @@ class DemandService:
                 "flags": list(cluster.integrity.flags),
             },
             "sample_summaries": [r.summary_redacted for r in cluster.requests[:3]],
+            "work_status": Counter(r.status for r in cluster.requests).most_common(1)[0][0],
+            "langs": sorted({r.lang for r in cluster.requests if r.lang != "und"}),
         }
         if scored is not None:
             view.update(
@@ -165,6 +167,11 @@ class DemandService:
     def districts(self) -> list[dict[str, Any]]:
         state = self._current()
         counts = Counter(r.geo.admin_code for r in state.requests if is_active(r))
+        resolved = Counter(r.geo.admin_code for r in state.requests if r.status == "resolved")
+        people = defaultdict(set)
+        for r in state.requests:
+            if is_active(r):
+                people[r.geo.admin_code].add(r.requester_hash)
         rows = []
         for code, d in sorted(self._ctx.districts.items()):
             info = self._ctx.info[code]
@@ -181,6 +188,8 @@ class DemandService:
                     "aspirational": d.aspirational,
                     "need": dict(d.need),
                     "n_requests": n,
+                    "n_requesters": len(people.get(code, ())),
+                    "n_resolved": resolved.get(code, 0),
                     "requests_per_100k": round(n / d.population * 100_000, 3) if d.population else None,
                     "placeholder_metrics": list(self._ctx.placeholder_metrics.get(code, ())),
                 }
@@ -232,11 +241,16 @@ class DemandService:
             )
         return rows, suppressed
 
+    def cluster_requests(self, cluster_id: str) -> list[CivicRequest]:
+        cluster = self._current().by_id.get(cluster_id)
+        return list(cluster.requests) if cluster else []
+
     def summary(self) -> dict[str, Any]:
         state = self._current()
         statuses = Counter(r.status for r in state.requests)
         return {
             "n_requests": len(state.requests),
+            "n_requesters": len({r.requester_hash for r in state.requests}),
             "n_synthetic": sum(r.synthetic for r in state.requests),
             "by_status": dict(statuses),
             "n_clusters": len(state.clusters),

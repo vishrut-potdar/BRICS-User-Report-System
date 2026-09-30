@@ -1,0 +1,84 @@
+{
+  "generator": "scripts/generate_synthetic.py",
+  "licence": "CC-BY-4.0",
+  "pack": "BR",
+  "seed": 42,
+  "as_of": "2026-09-28T18:00:00-03:00",
+  "window_days": 45,
+  "n_records": 1701,
+  "n_organic": 1501,
+  "brigade": {
+    "admin_code": "BR-SP",
+    "district": "São Paulo",
+    "sector": "roads",
+    "lang": "pt",
+    "n_messages": 200,
+    "n_senders": 12,
+    "window_start": "2026-09-25T13:00:00-03:00",
+    "window_minutes": 30,
+    "h3_cells": [
+      "85a8100bfffffff"
+    ],
+    "main_cluster_id": "BR-SP.roads.85a8100bfffffff"
+  },
+  "records_by_district": {
+    "São Paulo": 822,
+    "Rio de Janeiro": 229,
+    "Minas Gerais": 147,
+    "Rio Grande do Sul": 100,
+    "Paraná": 94,
+    "Santa Catarina": 57,
+    "Distrito Federal": 43,
+    "Pernambuco": 26,
+    "Bahia": 23,
+    "Goiás": 20,
+    "Pará": 20,
+    "Ceará": 16,
+    "Espírito Santo": 13,
+    "Maranhão": 13,
+    "Mato Grosso": 11,
+    "Paraíba": 10,
+    "Mato Grosso do Sul": 8,
+    "Amazonas": 7,
+    "Piauí": 7,
+    "Alagoas": 6,
+    "Rio Grande do Norte": 6,
+    "Rondônia": 6,
+    "Tocantins": 6,
+    "Sergipe": 5,
+    "Acre": 2,
+    "Amapá": 2,
+    "Roraima": 2
+  },
+  "assumptions": {
+    "synthetic_config": {
+      "n": 1500,
+      "lang_mix": {
+        "pt": 1.0
+      },
+      "connectivity": {
+        "BR-SP": 3.0,
+        "BR-RJ": 2.5,
+        "BR-DF": 3.0,
+        "BR-MG": 1.8,
+        "BR-PR": 1.8,
+        "BR-SC": 1.8,
+        "BR-RS": 1.8
+      },
+      "brigade": {
+        "admin_code": "BR-SP",
+        "lang": "pt"
+      }
+    },
+    "location_tiers": {
+      "A": 0.6,
+      "B": 0.25,
+      "C": 0.15
+    },
+    "channels": {
+      "whatsapp": 0.7,
+      "web": 0.2,
+      "telegram": 0.1
+    }
+  }
+}

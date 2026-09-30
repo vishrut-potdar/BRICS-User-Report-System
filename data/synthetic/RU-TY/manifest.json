@@ -1,0 +1,71 @@
+{
+  "generator": "scripts/generate_synthetic.py",
+  "licence": "CC-BY-4.0",
+  "pack": "RU-TY",
+  "seed": 42,
+  "as_of": "2026-09-28T18:00:00+07:00",
+  "window_days": 45,
+  "n_records": 651,
+  "n_organic": 451,
+  "brigade": {
+    "admin_code": "RU-TY-KYZYL_CITY",
+    "district": "Kyzyl",
+    "sector": "roads",
+    "lang": "ru",
+    "n_messages": 200,
+    "n_senders": 12,
+    "window_start": "2026-09-25T13:00:00+07:00",
+    "window_minutes": 30,
+    "h3_cells": [
+      "872500908ffffff",
+      "87250090cffffff"
+    ],
+    "main_cluster_id": "RU-TY-KYZYL_CITY.roads.872500908ffffff"
+  },
+  "records_by_district": {
+    "Kyzyl": 500,
+    "Kyzyl kozhuun": 36,
+    "Dzun-Khemchik kozhuun": 16,
+    "Piy-Khem kozhuun": 14,
+    "Ulug-Khem kozhuun": 14,
+    "Tandy kozhuun": 12,
+    "Ak-Dovurak": 10,
+    "Barun-Khemchik kozhuun": 9,
+    "Kaa-Khem kozhuun": 7,
+    "Chedi-Khol kozhuun": 5,
+    "Bai-Taiga kozhuun": 4,
+    "Ovyur kozhuun": 4,
+    "Todzha kozhuun": 4,
+    "Chaa-Khol kozhuun": 3,
+    "Erzin kozhuun": 3,
+    "Sut-Khol kozhuun": 3,
+    "Tes-Khem kozhuun": 3,
+    "Mongun-Taiga kozhuun": 2,
+    "Tere-Khol kozhuun": 2
+  },
+  "assumptions": {
+    "synthetic_config": {
+      "n": 450,
+      "lang_mix": {
+        "ru": 1.0
+      },
+      "connectivity": {
+        "RU-TY-KYZYL_CITY": 2.5
+      },
+      "brigade": {
+        "admin_code": "RU-TY-KYZYL_CITY",
+        "lang": "ru"
+      }
+    },
+    "location_tiers": {
+      "A": 0.6,
+      "B": 0.25,
+      "C": 0.15
+    },
+    "channels": {
+      "whatsapp": 0.7,
+      "web": 0.2,
+      "telegram": 0.1
+    }
+  }
+}

@@ -110,3 +110,9 @@ def test_dashboard_served_at_root(client):
     assert response.status_code == 200
     assert response.headers["content-type"].startswith("text/html")
     assert "Vikas Vaani" in response.text
+
+
+def test_admin_dashboard_served(client):
+    response = client.get("/admin")
+    assert response.status_code == 200 and "Admin" in response.text
+    assert client.get("/static/app.css").status_code == 200

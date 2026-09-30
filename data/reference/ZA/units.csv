@@ -1,0 +1,10 @@
+admin_code,district_name,name_local,alt_names,weak_names,official_code,population,population_year,population_source,population_verified,centroid_lat,centroid_lon,aspirational,notes
+ZA-EC,Eastern Cape,Oos-Kaap,Bhisho;Gqeberha;Port Elizabeth;East London,,,8275285,2023,"Kontur Population 2023-11-01 (H3 r6, CC BY 4.0), summed inside geoBoundaries polygons",false,-31.8955,27.7713,false,
+ZA-FS,Free State,Vrystaat,Bloemfontein,Free State,,2834764,2023,"Kontur Population 2023-11-01 (H3 r6, CC BY 4.0), summed inside geoBoundaries polygons",false,-28.4024,27.1850,false,
+ZA-GP,Gauteng,Gauteng,Johannesburg;Joburg;Pretoria;Tshwane;Soweto,,,15059333,2023,"Kontur Population 2023-11-01 (H3 r6, CC BY 4.0), summed inside geoBoundaries polygons",false,-26.1004,28.0781,false,
+ZA-KZN,KwaZulu-Natal,KwaZulu-Natal,KZN;Durban;eThekwini;Pietermaritzburg,,,11068575,2023,"Kontur Population 2023-11-01 (H3 r6, CC BY 4.0), summed inside geoBoundaries polygons",false,-29.1946,30.8909,false,
+ZA-LP,Limpopo,Limpopo,Polokwane,,,5732625,2023,"Kontur Population 2023-11-01 (H3 r6, CC BY 4.0), summed inside geoBoundaries polygons",false,-23.8325,29.7918,false,
+ZA-MP,Mpumalanga,Mpumalanga,Mbombela;Nelspruit,,,4747321,2023,"Kontur Population 2023-11-01 (H3 r6, CC BY 4.0), summed inside geoBoundaries polygons",false,-25.7405,30.1356,false,
+ZA-NC,Northern Cape,Noord-Kaap,Kimberley,,,1367468,2023,"Kontur Population 2023-11-01 (H3 r6, CC BY 4.0), summed inside geoBoundaries polygons",false,-28.6798,23.0454,false,
+ZA-NW,North West,Noordwes,Mahikeng;Mafikeng;Rustenburg,North West,,4061329,2023,"Kontur Population 2023-11-01 (H3 r6, CC BY 4.0), summed inside geoBoundaries polygons",false,-26.0571,26.6389,false,
+ZA-WC,Western Cape,Wes-Kaap,Cape Town;Kaapstad,,,6741963,2023,"Kontur Population 2023-11-01 (H3 r6, CC BY 4.0), summed inside geoBoundaries polygons",false,-33.8227,19.1472,false,

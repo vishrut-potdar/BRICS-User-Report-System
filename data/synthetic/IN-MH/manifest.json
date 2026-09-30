@@ -11,14 +11,15 @@
     "admin_code": "IN-MH-PUNE",
     "district": "Pune",
     "sector": "roads",
+    "lang": "hi-Latn",
     "n_messages": 200,
     "n_senders": 12,
     "window_start": "2026-09-25T13:00:00+05:30",
     "window_minutes": 30,
     "h3_cells": [
-      "876088424ffffff"
+      "876088503ffffff"
     ],
-    "main_cluster_id": "IN-MH-PUNE.roads.876088424ffffff"
+    "main_cluster_id": "IN-MH-PUNE.roads.876088503ffffff"
   },
   "records_by_district": {
     "Pune": 434,
@@ -59,27 +60,34 @@
     "Washim": 3
   },
   "assumptions": {
-    "connectivity": {
-      "IN-MH-MUMBAI_CITY": 4.0,
-      "IN-MH-MUMBAI_SUBURBAN": 4.0,
-      "IN-MH-PUNE": 3.5,
-      "IN-MH-THANE": 3.0,
-      "IN-MH-NAGPUR": 2.5,
-      "IN-MH-NASHIK": 1.8,
-      "IN-MH-AURANGABAD": 1.8,
-      "IN-MH-KOLHAPUR": 1.5
-    },
-    "lang_mix_urban": {
-      "mr": 0.25,
-      "hi": 0.2,
-      "hi-Latn": 0.3,
-      "en": 0.25
-    },
-    "lang_mix_rural": {
-      "mr": 0.45,
-      "hi": 0.25,
-      "hi-Latn": 0.2,
-      "en": 0.1
+    "synthetic_config": {
+      "n": 1200,
+      "lang_mix_urban": {
+        "mr": 0.25,
+        "hi": 0.2,
+        "hi-Latn": 0.3,
+        "en": 0.25
+      },
+      "lang_mix": {
+        "mr": 0.45,
+        "hi": 0.25,
+        "hi-Latn": 0.2,
+        "en": 0.1
+      },
+      "connectivity": {
+        "IN-MH-MUMBAI_CITY": 4.0,
+        "IN-MH-MUMBAI_SUBURBAN": 4.0,
+        "IN-MH-PUNE": 3.5,
+        "IN-MH-THANE": 3.0,
+        "IN-MH-NAGPUR": 2.5,
+        "IN-MH-NASHIK": 1.8,
+        "IN-MH-AURANGABAD": 1.8,
+        "IN-MH-KOLHAPUR": 1.5
+      },
+      "brigade": {
+        "admin_code": "IN-MH-PUNE",
+        "lang": "hi-Latn"
+      }
     },
     "location_tiers": {
       "A": 0.6,

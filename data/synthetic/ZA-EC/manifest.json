@@ -1,0 +1,63 @@
+{
+  "generator": "scripts/generate_synthetic.py",
+  "licence": "CC-BY-4.0",
+  "pack": "ZA-EC",
+  "seed": 42,
+  "as_of": "2026-09-28T18:00:00+02:00",
+  "window_days": 45,
+  "n_records": 901,
+  "n_organic": 701,
+  "brigade": {
+    "admin_code": "ZA-EC-NELSON_MANDELA_BAY",
+    "district": "Nelson Mandela Bay",
+    "sector": "roads",
+    "lang": "en",
+    "n_messages": 200,
+    "n_senders": 12,
+    "window_start": "2026-09-25T13:00:00+02:00",
+    "window_minutes": 30,
+    "h3_cells": [
+      "87bc73b80ffffff",
+      "87bc73b83ffffff"
+    ],
+    "main_cluster_id": "ZA-EC-NELSON_MANDELA_BAY.roads.87bc73b83ffffff"
+  },
+  "records_by_district": {
+    "Nelson Mandela Bay": 465,
+    "Buffalo City": 160,
+    "Alfred Nzo": 66,
+    "OR Tambo": 65,
+    "Amathole": 44,
+    "Sarah Baartman": 40,
+    "Chris Hani": 31,
+    "Joe Gqabi": 30
+  },
+  "assumptions": {
+    "synthetic_config": {
+      "n": 700,
+      "lang_mix": {
+        "xh": 0.5,
+        "en": 0.35,
+        "af": 0.15
+      },
+      "connectivity": {
+        "ZA-EC-NELSON_MANDELA_BAY": 2.5,
+        "ZA-EC-BUFFALO_CITY": 2.2
+      },
+      "brigade": {
+        "admin_code": "ZA-EC-NELSON_MANDELA_BAY",
+        "lang": "en"
+      }
+    },
+    "location_tiers": {
+      "A": 0.6,
+      "B": 0.25,
+      "C": 0.15
+    },
+    "channels": {
+      "whatsapp": 0.7,
+      "web": 0.2,
+      "telegram": 0.1
+    }
+  }
+}

@@ -1,0 +1,817 @@
+admin_code,district_name,metric,value,year,source,licence,placeholder
+BR-AL-ANADIA,Anadia,poverty_rate,0.3111,,PLACEHOLDER - replace with IBGE Síntese de Indicadores Sociais (PNAD Contínua) by state; municipalities: Censo 2022 / CadÚnico,n/a,true
+BR-AL-ARAPIRACA,Arapiraca,poverty_rate,0.1521,,PLACEHOLDER - replace with IBGE Síntese de Indicadores Sociais (PNAD Contínua) by state; municipalities: Censo 2022 / CadÚnico,n/a,true
+BR-AL-ATALAIA,Atalaia,poverty_rate,0.3290,,PLACEHOLDER - replace with IBGE Síntese de Indicadores Sociais (PNAD Contínua) by state; municipalities: Censo 2022 / CadÚnico,n/a,true
+BR-AL-BARRA_DE_SANTO_ANTONIO,Barra de Santo Antônio,poverty_rate,0.2792,,PLACEHOLDER - replace with IBGE Síntese de Indicadores Sociais (PNAD Contínua) by state; municipalities: Censo 2022 / CadÚnico,n/a,true
+BR-AL-BARRA_DE_SAO_MIGUEL,Barra de São Miguel,poverty_rate,0.1951,,PLACEHOLDER - replace with IBGE Síntese de Indicadores Sociais (PNAD Contínua) by state; municipalities: Censo 2022 / CadÚnico,n/a,true
+BR-AL-BATALHA,Batalha,poverty_rate,0.2659,,PLACEHOLDER - replace with IBGE Síntese de Indicadores Sociais (PNAD Contínua) by state; municipalities: Censo 2022 / CadÚnico,n/a,true
+BR-AL-BELO_MONTE,Belo Monte,poverty_rate,0.4216,,PLACEHOLDER - replace with IBGE Síntese de Indicadores Sociais (PNAD Contínua) by state; municipalities: Censo 2022 / CadÚnico,n/a,true
+BR-AL-BELEM,Belém,poverty_rate,0.3332,,PLACEHOLDER - replace with IBGE Síntese de Indicadores Sociais (PNAD Contínua) by state; municipalities: Censo 2022 / CadÚnico,n/a,true
+BR-AL-BOCA_DA_MATA,Boca da Mata,poverty_rate,0.2366,,PLACEHOLDER - replace with IBGE Síntese de Indicadores Sociais (PNAD Contínua) by state; municipalities: Censo 2022 / CadÚnico,n/a,true
+BR-AL-BRANQUINHA,Branquinha,poverty_rate,0.3181,,PLACEHOLDER - replace with IBGE Síntese de Indicadores Sociais (PNAD Contínua) by state; municipalities: Censo 2022 / CadÚnico,n/a,true
+BR-AL-CACIMBINHAS,Cacimbinhas,poverty_rate,0.2515,,PLACEHOLDER - replace with IBGE Síntese de Indicadores Sociais (PNAD Contínua) by state; municipalities: Censo 2022 / CadÚnico,n/a,true
+BR-AL-CAJUEIRO,Cajueiro,poverty_rate,0.2877,,PLACEHOLDER - replace with IBGE Síntese de Indicadores Sociais (PNAD Contínua) by state; municipalities: Censo 2022 / CadÚnico,n/a,true
+BR-AL-CAMPESTRE,Campestre,poverty_rate,0.2559,,PLACEHOLDER - replace with IBGE Síntese de Indicadores Sociais (PNAD Contínua) by state; municipalities: Censo 2022 / CadÚnico,n/a,true
+BR-AL-CAMPO_ALEGRE,Campo Alegre,poverty_rate,0.2608,,PLACEHOLDER - replace with IBGE Síntese de Indicadores Sociais (PNAD Contínua) by state; municipalities: Censo 2022 / CadÚnico,n/a,true
+BR-AL-CAMPO_GRANDE,Campo Grande,poverty_rate,0.2683,,PLACEHOLDER - replace with IBGE Síntese de Indicadores Sociais (PNAD Contínua) by state; municipalities: Censo 2022 / CadÚnico,n/a,true
+BR-AL-CANAPI,Canapi,poverty_rate,0.4077,,PLACEHOLDER - replace with IBGE Síntese de Indicadores Sociais (PNAD Contínua) by state; municipalities: Censo 2022 / CadÚnico,n/a,true
+BR-AL-CAPELA,Capela,poverty_rate,0.2881,,PLACEHOLDER - replace with IBGE Síntese de Indicadores Sociais (PNAD Contínua) by state; municipalities: Censo 2022 / CadÚnico,n/a,true
+BR-AL-CARNEIROS,Carneiros,poverty_rate,0.4696,,PLACEHOLDER - replace with IBGE Síntese de Indicadores Sociais (PNAD Contínua) by state; municipalities: Censo 2022 / CadÚnico,n/a,true
+BR-AL-CHA_PRETA,Chã Preta,poverty_rate,0.2585,,PLACEHOLDER - replace with IBGE Síntese de Indicadores Sociais (PNAD Contínua) by state; municipalities: Censo 2022 / CadÚnico,n/a,true
+BR-AL-COITE_DO_NOIA,Coité do Nóia,poverty_rate,0.3156,,PLACEHOLDER - replace with IBGE Síntese de Indicadores Sociais (PNAD Contínua) by state; municipalities: Censo 2022 / CadÚnico,n/a,true
+BR-AL-COLONIA_LEOPOLDINA,Colônia Leopoldina,poverty_rate,0.3805,,PLACEHOLDER - replace with IBGE Síntese de Indicadores Sociais (PNAD Contínua) by state; municipalities: Censo 2022 / CadÚnico,n/a,true
+BR-AL-COQUEIRO_SECO,Coqueiro Seco,poverty_rate,0.3835,,PLACEHOLDER - replace with IBGE Síntese de Indicadores Sociais (PNAD Contínua) by state; municipalities: Censo 2022 / CadÚnico,n/a,true
+BR-AL-CORURIPE,Coruripe,poverty_rate,0.2950,,PLACEHOLDER - replace with IBGE Síntese de Indicadores Sociais (PNAD Contínua) by state; municipalities: Censo 2022 / CadÚnico,n/a,true
+BR-AL-CRAIBAS,Craíbas,poverty_rate,0.2840,,PLACEHOLDER - replace with IBGE Síntese de Indicadores Sociais (PNAD Contínua) by state; municipalities: Censo 2022 / CadÚnico,n/a,true
+BR-AL-DELMIRO_GOUVEIA,Delmiro Gouveia,poverty_rate,0.3206,,PLACEHOLDER - replace with IBGE Síntese de Indicadores Sociais (PNAD Contínua) by state; municipalities: Censo 2022 / CadÚnico,n/a,true
+BR-AL-DOIS_RIACHOS,Dois Riachos,poverty_rate,0.4572,,PLACEHOLDER - replace with IBGE Síntese de Indicadores Sociais (PNAD Contínua) by state; municipalities: Censo 2022 / CadÚnico,n/a,true
+BR-AL-ESTRELA_DE_ALAGOAS,Estrela de Alagoas,poverty_rate,0.3654,,PLACEHOLDER - replace with IBGE Síntese de Indicadores Sociais (PNAD Contínua) by state; municipalities: Censo 2022 / CadÚnico,n/a,true
+BR-AL-FEIRA_GRANDE,Feira Grande,poverty_rate,0.3049,,PLACEHOLDER - replace with IBGE Síntese de Indicadores Sociais (PNAD Contínua) by state; municipalities: Censo 2022 / CadÚnico,n/a,true
+BR-AL-FELIZ_DESERTO,Feliz Deserto,poverty_rate,0.2490,,PLACEHOLDER - replace with IBGE Síntese de Indicadores Sociais (PNAD Contínua) by state; municipalities: Censo 2022 / CadÚnico,n/a,true
+BR-AL-FLEXEIRAS,Flexeiras,poverty_rate,0.3322,,PLACEHOLDER - replace with IBGE Síntese de Indicadores Sociais (PNAD Contínua) by state; municipalities: Censo 2022 / CadÚnico,n/a,true
+BR-AL-GIRAU_DO_PONCIANO,Girau do Ponciano,poverty_rate,0.4358,,PLACEHOLDER - replace with IBGE Síntese de Indicadores Sociais (PNAD Contínua) by state; municipalities: Censo 2022 / CadÚnico,n/a,true
+BR-AL-IBATEGUARA,Ibateguara,poverty_rate,0.2909,,PLACEHOLDER - replace with IBGE Síntese de Indicadores Sociais (PNAD Contínua) by state; municipalities: Censo 2022 / CadÚnico,n/a,true
+BR-AL-IGACI,Igaci,poverty_rate,0.2675,,PLACEHOLDER - replace with IBGE Síntese de Indicadores Sociais (PNAD Contínua) by state; municipalities: Censo 2022 / CadÚnico,n/a,true
+BR-AL-IGREJA_NOVA,Igreja Nova,poverty_rate,0.3193,,PLACEHOLDER - replace with IBGE Síntese de Indicadores Sociais (PNAD Contínua) by state; municipalities: Censo 2022 / CadÚnico,n/a,true
+BR-AL-INHAPI,Inhapi,poverty_rate,0.4582,,PLACEHOLDER - replace with IBGE Síntese de Indicadores Sociais (PNAD Contínua) by state; municipalities: Censo 2022 / CadÚnico,n/a,true
+BR-AL-JACARE_DOS_HOMENS,Jacaré dos Homens,poverty_rate,0.2977,,PLACEHOLDER - replace with IBGE Síntese de Indicadores Sociais (PNAD Contínua) by state; municipalities: Censo 2022 / CadÚnico,n/a,true
+BR-AL-JACUIPE,Jacuípe,poverty_rate,0.2905,,PLACEHOLDER - replace with IBGE Síntese de Indicadores Sociais (PNAD Contínua) by state; municipalities: Censo 2022 / CadÚnico,n/a,true
+BR-AL-JAPARATINGA,Japaratinga,poverty_rate,0.3853,,PLACEHOLDER - replace with IBGE Síntese de Indicadores Sociais (PNAD Contínua) by state; municipalities: Censo 2022 / CadÚnico,n/a,true
+BR-AL-JARAMATAIA,Jaramataia,poverty_rate,0.4745,,PLACEHOLDER - replace with IBGE Síntese de Indicadores Sociais (PNAD Contínua) by state; municipalities: Censo 2022 / CadÚnico,n/a,true
+BR-AL-JEQUIA_DA_PRAIA,Jequiá da Praia,poverty_rate,0.3421,,PLACEHOLDER - replace with IBGE Síntese de Indicadores Sociais (PNAD Contínua) by state; municipalities: Censo 2022 / CadÚnico,n/a,true
+BR-AL-JOAQUIM_GOMES,Joaquim Gomes,poverty_rate,0.3397,,PLACEHOLDER - replace with IBGE Síntese de Indicadores Sociais (PNAD Contínua) by state; municipalities: Censo 2022 / CadÚnico,n/a,true
+BR-AL-JUNDIA,Jundiá,poverty_rate,0.3204,,PLACEHOLDER - replace with IBGE Síntese de Indicadores Sociais (PNAD Contínua) by state; municipalities: Censo 2022 / CadÚnico,n/a,true
+BR-AL-JUNQUEIRO,Junqueiro,poverty_rate,0.3089,,PLACEHOLDER - replace with IBGE Síntese de Indicadores Sociais (PNAD Contínua) by state; municipalities: Censo 2022 / CadÚnico,n/a,true
+BR-AL-LAGOA_DA_CANOA,Lagoa da Canoa,poverty_rate,0.3440,,PLACEHOLDER - replace with IBGE Síntese de Indicadores Sociais (PNAD Contínua) by state; municipalities: Censo 2022 / CadÚnico,n/a,true
+BR-AL-LIMOEIRO_DE_ANADIA,Limoeiro de Anadia,poverty_rate,0.2934,,PLACEHOLDER - replace with IBGE Síntese de Indicadores Sociais (PNAD Contínua) by state; municipalities: Censo 2022 / CadÚnico,n/a,true
+BR-AL-MACEIO,Maceió,poverty_rate,0.1867,,PLACEHOLDER - replace with IBGE Síntese de Indicadores Sociais (PNAD Contínua) by state; municipalities: Censo 2022 / CadÚnico,n/a,true
+BR-AL-MAJOR_ISIDORO,Major Isidoro,poverty_rate,0.3022,,PLACEHOLDER - replace with IBGE Síntese de Indicadores Sociais (PNAD Contínua) by state; municipalities: Censo 2022 / CadÚnico,n/a,true
+BR-AL-MAR_VERMELHO,Mar Vermelho,poverty_rate,0.2783,,PLACEHOLDER - replace with IBGE Síntese de Indicadores Sociais (PNAD Contínua) by state; municipalities: Censo 2022 / CadÚnico,n/a,true
+BR-AL-MARAGOGI,Maragogi,poverty_rate,0.3184,,PLACEHOLDER - replace with IBGE Síntese de Indicadores Sociais (PNAD Contínua) by state; municipalities: Censo 2022 / CadÚnico,n/a,true
+BR-AL-MARAVILHA,Maravilha,poverty_rate,0.3925,,PLACEHOLDER - replace with IBGE Síntese de Indicadores Sociais (PNAD Contínua) by state; municipalities: Censo 2022 / CadÚnico,n/a,true
+BR-AL-MARECHAL_DEODORO,Marechal Deodoro,poverty_rate,0.1762,,PLACEHOLDER - replace with IBGE Síntese de Indicadores Sociais (PNAD Contínua) by state; municipalities: Censo 2022 / CadÚnico,n/a,true
+BR-AL-MARIBONDO,Maribondo,poverty_rate,0.2842,,PLACEHOLDER - replace with IBGE Síntese de Indicadores Sociais (PNAD Contínua) by state; municipalities: Censo 2022 / CadÚnico,n/a,true
+BR-AL-MATA_GRANDE,Mata Grande,poverty_rate,0.4600,,PLACEHOLDER - replace with IBGE Síntese de Indicadores Sociais (PNAD Contínua) by state; municipalities: Censo 2022 / CadÚnico,n/a,true
+BR-AL-MATRIZ_DE_CAMARAGIBE,Matriz de Camaragibe,poverty_rate,0.3671,,PLACEHOLDER - replace with IBGE Síntese de Indicadores Sociais (PNAD Contínua) by state; municipalities: Censo 2022 / CadÚnico,n/a,true
+BR-AL-MESSIAS,Messias,poverty_rate,0.2382,,PLACEHOLDER - replace with IBGE Síntese de Indicadores Sociais (PNAD Contínua) by state; municipalities: Censo 2022 / CadÚnico,n/a,true
+BR-AL-MINADOR_DO_NEGRAO,Minador do Negrão,poverty_rate,0.2784,,PLACEHOLDER - replace with IBGE Síntese de Indicadores Sociais (PNAD Contínua) by state; municipalities: Censo 2022 / CadÚnico,n/a,true
+BR-AL-MONTEIROPOLIS,Monteirópolis,poverty_rate,0.2750,,PLACEHOLDER - replace with IBGE Síntese de Indicadores Sociais (PNAD Contínua) by state; municipalities: Censo 2022 / CadÚnico,n/a,true
+BR-AL-MURICI,Murici,poverty_rate,0.3211,,PLACEHOLDER - replace with IBGE Síntese de Indicadores Sociais (PNAD Contínua) by state; municipalities: Censo 2022 / CadÚnico,n/a,true
+BR-AL-NOVO_LINO,Novo Lino,poverty_rate,0.2209,,PLACEHOLDER - replace with IBGE Síntese de Indicadores Sociais (PNAD Contínua) by state; municipalities: Censo 2022 / CadÚnico,n/a,true
+BR-AL-OLHO_DAGUA_GRANDE,Olho d'Água Grande,poverty_rate,0.3091,,PLACEHOLDER - replace with IBGE Síntese de Indicadores Sociais (PNAD Contínua) by state; municipalities: Censo 2022 / CadÚnico,n/a,true
+BR-AL-OLHO_DAGUA_DAS_FLORES,Olho d'Água das Flores,poverty_rate,0.3164,,PLACEHOLDER - replace with IBGE Síntese de Indicadores Sociais (PNAD Contínua) by state; municipalities: Censo 2022 / CadÚnico,n/a,true
+BR-AL-OLHO_DAGUA_DO_CASADO,Olho d'Água do Casado,poverty_rate,0.4810,,PLACEHOLDER - replace with IBGE Síntese de Indicadores Sociais (PNAD Contínua) by state; municipalities: Censo 2022 / CadÚnico,n/a,true
+BR-AL-OLIVENCA,Olivença,poverty_rate,0.4309,,PLACEHOLDER - replace with IBGE Síntese de Indicadores Sociais (PNAD Contínua) by state; municipalities: Censo 2022 / CadÚnico,n/a,true
+BR-AL-OURO_BRANCO,Ouro Branco,poverty_rate,0.4563,,PLACEHOLDER - replace with IBGE Síntese de Indicadores Sociais (PNAD Contínua) by state; municipalities: Censo 2022 / CadÚnico,n/a,true
+BR-AL-PALESTINA,Palestina,poverty_rate,0.3358,,PLACEHOLDER - replace with IBGE Síntese de Indicadores Sociais (PNAD Contínua) by state; municipalities: Censo 2022 / CadÚnico,n/a,true
+BR-AL-PALMEIRA_DOS_INDIOS,Palmeira dos Índios,poverty_rate,0.2508,,PLACEHOLDER - replace with IBGE Síntese de Indicadores Sociais (PNAD Contínua) by state; municipalities: Censo 2022 / CadÚnico,n/a,true
+BR-AL-PARICONHA,Pariconha,poverty_rate,0.3745,,PLACEHOLDER - replace with IBGE Síntese de Indicadores Sociais (PNAD Contínua) by state; municipalities: Censo 2022 / CadÚnico,n/a,true
+BR-AL-PARIPUEIRA,Paripueira,poverty_rate,0.3317,,PLACEHOLDER - replace with IBGE Síntese de Indicadores Sociais (PNAD Contínua) by state; municipalities: Censo 2022 / CadÚnico,n/a,true
+BR-AL-PASSO_DE_CAMARAGIBE,Passo de Camaragibe,poverty_rate,0.3133,,PLACEHOLDER - replace with IBGE Síntese de Indicadores Sociais (PNAD Contínua) by state; municipalities: Censo 2022 / CadÚnico,n/a,true
+BR-AL-PAULO_JACINTO,Paulo Jacinto,poverty_rate,0.3592,,PLACEHOLDER - replace with IBGE Síntese de Indicadores Sociais (PNAD Contínua) by state; municipalities: Censo 2022 / CadÚnico,n/a,true
+BR-AL-PENEDO,Penedo,poverty_rate,0.2704,,PLACEHOLDER - replace with IBGE Síntese de Indicadores Sociais (PNAD Contínua) by state; municipalities: Censo 2022 / CadÚnico,n/a,true
+BR-AL-PIACABUCU,Piaçabuçu,poverty_rate,0.4116,,PLACEHOLDER - replace with IBGE Síntese de Indicadores Sociais (PNAD Contínua) by state; municipalities: Censo 2022 / CadÚnico,n/a,true
+BR-AL-PILAR,Pilar,poverty_rate,0.3398,,PLACEHOLDER - replace with IBGE Síntese de Indicadores Sociais (PNAD Contínua) by state; municipalities: Censo 2022 / CadÚnico,n/a,true
+BR-AL-PINDOBA,Pindoba,poverty_rate,0.3263,,PLACEHOLDER - replace with IBGE Síntese de Indicadores Sociais (PNAD Contínua) by state; municipalities: Censo 2022 / CadÚnico,n/a,true
+BR-AL-PIRANHAS,Piranhas,poverty_rate,0.3753,,PLACEHOLDER - replace with IBGE Síntese de Indicadores Sociais (PNAD Contínua) by state; municipalities: Censo 2022 / CadÚnico,n/a,true
+BR-AL-PORTO_CALVO,Porto Calvo,poverty_rate,0.2305,,PLACEHOLDER - replace with IBGE Síntese de Indicadores Sociais (PNAD Contínua) by state; municipalities: Censo 2022 / CadÚnico,n/a,true
+BR-AL-PORTO_REAL_DO_COLEGIO,Porto Real do Colégio,poverty_rate,0.2216,,PLACEHOLDER - replace with IBGE Síntese de Indicadores Sociais (PNAD Contínua) by state; municipalities: Censo 2022 / CadÚnico,n/a,true
+BR-AL-PORTO_DE_PEDRAS,Porto de Pedras,poverty_rate,0.3338,,PLACEHOLDER - replace with IBGE Síntese de Indicadores Sociais (PNAD Contínua) by state; municipalities: Censo 2022 / CadÚnico,n/a,true
+BR-AL-POCO_DAS_TRINCHEIRAS,Poço das Trincheiras,poverty_rate,0.4647,,PLACEHOLDER - replace with IBGE Síntese de Indicadores Sociais (PNAD Contínua) by state; municipalities: Censo 2022 / CadÚnico,n/a,true
+BR-AL-PAO_DE_ACUCAR,Pão de Açúcar,poverty_rate,0.3773,,PLACEHOLDER - replace with IBGE Síntese de Indicadores Sociais (PNAD Contínua) by state; municipalities: Censo 2022 / CadÚnico,n/a,true
+BR-AL-QUEBRANGULO,Quebrangulo,poverty_rate,0.2838,,PLACEHOLDER - replace with IBGE Síntese de Indicadores Sociais (PNAD Contínua) by state; municipalities: Censo 2022 / CadÚnico,n/a,true
+BR-AL-RIO_LARGO,Rio Largo,poverty_rate,0.1935,,PLACEHOLDER - replace with IBGE Síntese de Indicadores Sociais (PNAD Contínua) by state; municipalities: Censo 2022 / CadÚnico,n/a,true
+BR-AL-ROTEIRO,Roteiro,poverty_rate,0.3654,,PLACEHOLDER - replace with IBGE Síntese de Indicadores Sociais (PNAD Contínua) by state; municipalities: Censo 2022 / CadÚnico,n/a,true
+BR-AL-SANTA_LUZIA_DO_NORTE,Santa Luzia do Norte,poverty_rate,0.2808,,PLACEHOLDER - replace with IBGE Síntese de Indicadores Sociais (PNAD Contínua) by state; municipalities: Censo 2022 / CadÚnico,n/a,true
+BR-AL-SANTANA_DO_IPANEMA,Santana do Ipanema,poverty_rate,0.3309,,PLACEHOLDER - replace with IBGE Síntese de Indicadores Sociais (PNAD Contínua) by state; municipalities: Censo 2022 / CadÚnico,n/a,true
+BR-AL-SANTANA_DO_MUNDAU,Santana do Mundaú,poverty_rate,0.2799,,PLACEHOLDER - replace with IBGE Síntese de Indicadores Sociais (PNAD Contínua) by state; municipalities: Censo 2022 / CadÚnico,n/a,true
+BR-AL-SATUBA,Satuba,poverty_rate,0.1346,,PLACEHOLDER - replace with IBGE Síntese de Indicadores Sociais (PNAD Contínua) by state; municipalities: Censo 2022 / CadÚnico,n/a,true
+BR-AL-SENADOR_RUI_PALMEIRA,Senador Rui Palmeira,poverty_rate,0.4505,,PLACEHOLDER - replace with IBGE Síntese de Indicadores Sociais (PNAD Contínua) by state; municipalities: Censo 2022 / CadÚnico,n/a,true
+BR-AL-SAO_BRAS,São Brás,poverty_rate,0.2738,,PLACEHOLDER - replace with IBGE Síntese de Indicadores Sociais (PNAD Contínua) by state; municipalities: Censo 2022 / CadÚnico,n/a,true
+BR-AL-SAO_JOSE_DA_LAJE,São José da Laje,poverty_rate,0.3125,,PLACEHOLDER - replace with IBGE Síntese de Indicadores Sociais (PNAD Contínua) by state; municipalities: Censo 2022 / CadÚnico,n/a,true
+BR-AL-SAO_JOSE_DA_TAPERA,São José da Tapera,poverty_rate,0.4669,,PLACEHOLDER - replace with IBGE Síntese de Indicadores Sociais (PNAD Contínua) by state; municipalities: Censo 2022 / CadÚnico,n/a,true
+BR-AL-SAO_LUIS_DO_QUITUNDE,São Luís do Quitunde,poverty_rate,0.2376,,PLACEHOLDER - replace with IBGE Síntese de Indicadores Sociais (PNAD Contínua) by state; municipalities: Censo 2022 / CadÚnico,n/a,true
+BR-AL-SAO_MIGUEL_DOS_CAMPOS,São Miguel dos Campos,poverty_rate,0.3261,,PLACEHOLDER - replace with IBGE Síntese de Indicadores Sociais (PNAD Contínua) by state; municipalities: Censo 2022 / CadÚnico,n/a,true
+BR-AL-SAO_MIGUEL_DOS_MILAGRES,São Miguel dos Milagres,poverty_rate,0.3608,,PLACEHOLDER - replace with IBGE Síntese de Indicadores Sociais (PNAD Contínua) by state; municipalities: Censo 2022 / CadÚnico,n/a,true
+BR-AL-SAO_SEBASTIAO,São Sebastião,poverty_rate,0.2741,,PLACEHOLDER - replace with IBGE Síntese de Indicadores Sociais (PNAD Contínua) by state; municipalities: Censo 2022 / CadÚnico,n/a,true
+BR-AL-TANQUE_DARCA,Tanque d'Arca,poverty_rate,0.3469,,PLACEHOLDER - replace with IBGE Síntese de Indicadores Sociais (PNAD Contínua) by state; municipalities: Censo 2022 / CadÚnico,n/a,true
+BR-AL-TAQUARANA,Taquarana,poverty_rate,0.3702,,PLACEHOLDER - replace with IBGE Síntese de Indicadores Sociais (PNAD Contínua) by state; municipalities: Censo 2022 / CadÚnico,n/a,true
+BR-AL-TEOTONIO_VILELA,Teotônio Vilela,poverty_rate,0.3116,,PLACEHOLDER - replace with IBGE Síntese de Indicadores Sociais (PNAD Contínua) by state; municipalities: Censo 2022 / CadÚnico,n/a,true
+BR-AL-TRAIPU,Traipu,poverty_rate,0.5137,,PLACEHOLDER - replace with IBGE Síntese de Indicadores Sociais (PNAD Contínua) by state; municipalities: Censo 2022 / CadÚnico,n/a,true
+BR-AL-UNIAO_DOS_PALMARES,União dos Palmares,poverty_rate,0.2786,,PLACEHOLDER - replace with IBGE Síntese de Indicadores Sociais (PNAD Contínua) by state; municipalities: Censo 2022 / CadÚnico,n/a,true
+BR-AL-VICOSA,Viçosa,poverty_rate,0.2650,,PLACEHOLDER - replace with IBGE Síntese de Indicadores Sociais (PNAD Contínua) by state; municipalities: Censo 2022 / CadÚnico,n/a,true
+BR-AL-AGUA_BRANCA,Água Branca,poverty_rate,0.4077,,PLACEHOLDER - replace with IBGE Síntese de Indicadores Sociais (PNAD Contínua) by state; municipalities: Censo 2022 / CadÚnico,n/a,true
+BR-AL-ANADIA,Anadia,water_network_coverage,0.7987,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN055)",n/a,true
+BR-AL-ARAPIRACA,Arapiraca,water_network_coverage,0.9321,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN055)",n/a,true
+BR-AL-ATALAIA,Atalaia,water_network_coverage,0.8746,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN055)",n/a,true
+BR-AL-BARRA_DE_SANTO_ANTONIO,Barra de Santo Antônio,water_network_coverage,0.8622,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN055)",n/a,true
+BR-AL-BARRA_DE_SAO_MIGUEL,Barra de São Miguel,water_network_coverage,0.9286,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN055)",n/a,true
+BR-AL-BATALHA,Batalha,water_network_coverage,0.8449,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN055)",n/a,true
+BR-AL-BELO_MONTE,Belo Monte,water_network_coverage,0.6733,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN055)",n/a,true
+BR-AL-BELEM,Belém,water_network_coverage,0.8060,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN055)",n/a,true
+BR-AL-BOCA_DA_MATA,Boca da Mata,water_network_coverage,0.8180,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN055)",n/a,true
+BR-AL-BRANQUINHA,Branquinha,water_network_coverage,0.7784,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN055)",n/a,true
+BR-AL-CACIMBINHAS,Cacimbinhas,water_network_coverage,0.8660,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN055)",n/a,true
+BR-AL-CAJUEIRO,Cajueiro,water_network_coverage,0.8286,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN055)",n/a,true
+BR-AL-CAMPESTRE,Campestre,water_network_coverage,0.8541,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN055)",n/a,true
+BR-AL-CAMPO_ALEGRE,Campo Alegre,water_network_coverage,0.8291,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN055)",n/a,true
+BR-AL-CAMPO_GRANDE,Campo Grande,water_network_coverage,0.8211,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN055)",n/a,true
+BR-AL-CANAPI,Canapi,water_network_coverage,0.7924,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN055)",n/a,true
+BR-AL-CAPELA,Capela,water_network_coverage,0.8013,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN055)",n/a,true
+BR-AL-CARNEIROS,Carneiros,water_network_coverage,0.7455,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN055)",n/a,true
+BR-AL-CHA_PRETA,Chã Preta,water_network_coverage,0.8150,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN055)",n/a,true
+BR-AL-COITE_DO_NOIA,Coité do Nóia,water_network_coverage,0.7973,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN055)",n/a,true
+BR-AL-COLONIA_LEOPOLDINA,Colônia Leopoldina,water_network_coverage,0.8275,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN055)",n/a,true
+BR-AL-COQUEIRO_SECO,Coqueiro Seco,water_network_coverage,0.8567,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN055)",n/a,true
+BR-AL-CORURIPE,Coruripe,water_network_coverage,0.8453,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN055)",n/a,true
+BR-AL-CRAIBAS,Craíbas,water_network_coverage,0.8482,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN055)",n/a,true
+BR-AL-DELMIRO_GOUVEIA,Delmiro Gouveia,water_network_coverage,0.8164,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN055)",n/a,true
+BR-AL-DOIS_RIACHOS,Dois Riachos,water_network_coverage,0.6995,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN055)",n/a,true
+BR-AL-ESTRELA_DE_ALAGOAS,Estrela de Alagoas,water_network_coverage,0.8591,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN055)",n/a,true
+BR-AL-FEIRA_GRANDE,Feira Grande,water_network_coverage,0.8280,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN055)",n/a,true
+BR-AL-FELIZ_DESERTO,Feliz Deserto,water_network_coverage,0.8138,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN055)",n/a,true
+BR-AL-FLEXEIRAS,Flexeiras,water_network_coverage,0.8120,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN055)",n/a,true
+BR-AL-GIRAU_DO_PONCIANO,Girau do Ponciano,water_network_coverage,0.6747,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN055)",n/a,true
+BR-AL-IBATEGUARA,Ibateguara,water_network_coverage,0.8501,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN055)",n/a,true
+BR-AL-IGACI,Igaci,water_network_coverage,0.8729,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN055)",n/a,true
+BR-AL-IGREJA_NOVA,Igreja Nova,water_network_coverage,0.7856,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN055)",n/a,true
+BR-AL-INHAPI,Inhapi,water_network_coverage,0.7194,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN055)",n/a,true
+BR-AL-JACARE_DOS_HOMENS,Jacaré dos Homens,water_network_coverage,0.8091,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN055)",n/a,true
+BR-AL-JACUIPE,Jacuípe,water_network_coverage,0.7712,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN055)",n/a,true
+BR-AL-JAPARATINGA,Japaratinga,water_network_coverage,0.8051,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN055)",n/a,true
+BR-AL-JARAMATAIA,Jaramataia,water_network_coverage,0.6714,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN055)",n/a,true
+BR-AL-JEQUIA_DA_PRAIA,Jequiá da Praia,water_network_coverage,0.8377,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN055)",n/a,true
+BR-AL-JOAQUIM_GOMES,Joaquim Gomes,water_network_coverage,0.8285,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN055)",n/a,true
+BR-AL-JUNDIA,Jundiá,water_network_coverage,0.8106,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN055)",n/a,true
+BR-AL-JUNQUEIRO,Junqueiro,water_network_coverage,0.7626,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN055)",n/a,true
+BR-AL-LAGOA_DA_CANOA,Lagoa da Canoa,water_network_coverage,0.8436,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN055)",n/a,true
+BR-AL-LIMOEIRO_DE_ANADIA,Limoeiro de Anadia,water_network_coverage,0.8091,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN055)",n/a,true
+BR-AL-MACEIO,Maceió,water_network_coverage,0.8760,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN055)",n/a,true
+BR-AL-MAJOR_ISIDORO,Major Isidoro,water_network_coverage,0.8374,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN055)",n/a,true
+BR-AL-MAR_VERMELHO,Mar Vermelho,water_network_coverage,0.8297,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN055)",n/a,true
+BR-AL-MARAGOGI,Maragogi,water_network_coverage,0.7961,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN055)",n/a,true
+BR-AL-MARAVILHA,Maravilha,water_network_coverage,0.7422,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN055)",n/a,true
+BR-AL-MARECHAL_DEODORO,Marechal Deodoro,water_network_coverage,0.9012,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN055)",n/a,true
+BR-AL-MARIBONDO,Maribondo,water_network_coverage,0.7790,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN055)",n/a,true
+BR-AL-MATA_GRANDE,Mata Grande,water_network_coverage,0.6749,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN055)",n/a,true
+BR-AL-MATRIZ_DE_CAMARAGIBE,Matriz de Camaragibe,water_network_coverage,0.7945,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN055)",n/a,true
+BR-AL-MESSIAS,Messias,water_network_coverage,0.8518,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN055)",n/a,true
+BR-AL-MINADOR_DO_NEGRAO,Minador do Negrão,water_network_coverage,0.8139,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN055)",n/a,true
+BR-AL-MONTEIROPOLIS,Monteirópolis,water_network_coverage,0.8368,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN055)",n/a,true
+BR-AL-MURICI,Murici,water_network_coverage,0.8116,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN055)",n/a,true
+BR-AL-NOVO_LINO,Novo Lino,water_network_coverage,0.8958,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN055)",n/a,true
+BR-AL-OLHO_DAGUA_GRANDE,Olho d'Água Grande,water_network_coverage,0.8254,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN055)",n/a,true
+BR-AL-OLHO_DAGUA_DAS_FLORES,Olho d'Água das Flores,water_network_coverage,0.7803,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN055)",n/a,true
+BR-AL-OLHO_DAGUA_DO_CASADO,Olho d'Água do Casado,water_network_coverage,0.6867,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN055)",n/a,true
+BR-AL-OLIVENCA,Olivença,water_network_coverage,0.7321,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN055)",n/a,true
+BR-AL-OURO_BRANCO,Ouro Branco,water_network_coverage,0.7051,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN055)",n/a,true
+BR-AL-PALESTINA,Palestina,water_network_coverage,0.7973,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN055)",n/a,true
+BR-AL-PALMEIRA_DOS_INDIOS,Palmeira dos Índios,water_network_coverage,0.8110,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN055)",n/a,true
+BR-AL-PARICONHA,Pariconha,water_network_coverage,0.7517,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN055)",n/a,true
+BR-AL-PARIPUEIRA,Paripueira,water_network_coverage,0.8444,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN055)",n/a,true
+BR-AL-PASSO_DE_CAMARAGIBE,Passo de Camaragibe,water_network_coverage,0.8255,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN055)",n/a,true
+BR-AL-PAULO_JACINTO,Paulo Jacinto,water_network_coverage,0.8301,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN055)",n/a,true
+BR-AL-PENEDO,Penedo,water_network_coverage,0.8736,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN055)",n/a,true
+BR-AL-PIACABUCU,Piaçabuçu,water_network_coverage,0.7871,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN055)",n/a,true
+BR-AL-PILAR,Pilar,water_network_coverage,0.8257,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN055)",n/a,true
+BR-AL-PINDOBA,Pindoba,water_network_coverage,0.7447,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN055)",n/a,true
+BR-AL-PIRANHAS,Piranhas,water_network_coverage,0.8210,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN055)",n/a,true
+BR-AL-PORTO_CALVO,Porto Calvo,water_network_coverage,0.7942,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN055)",n/a,true
+BR-AL-PORTO_REAL_DO_COLEGIO,Porto Real do Colégio,water_network_coverage,0.8545,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN055)",n/a,true
+BR-AL-PORTO_DE_PEDRAS,Porto de Pedras,water_network_coverage,0.7769,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN055)",n/a,true
+BR-AL-POCO_DAS_TRINCHEIRAS,Poço das Trincheiras,water_network_coverage,0.7302,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN055)",n/a,true
+BR-AL-PAO_DE_ACUCAR,Pão de Açúcar,water_network_coverage,0.8001,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN055)",n/a,true
+BR-AL-QUEBRANGULO,Quebrangulo,water_network_coverage,0.7989,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN055)",n/a,true
+BR-AL-RIO_LARGO,Rio Largo,water_network_coverage,0.8987,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN055)",n/a,true
+BR-AL-ROTEIRO,Roteiro,water_network_coverage,0.7945,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN055)",n/a,true
+BR-AL-SANTA_LUZIA_DO_NORTE,Santa Luzia do Norte,water_network_coverage,0.8338,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN055)",n/a,true
+BR-AL-SANTANA_DO_IPANEMA,Santana do Ipanema,water_network_coverage,0.7499,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN055)",n/a,true
+BR-AL-SANTANA_DO_MUNDAU,Santana do Mundaú,water_network_coverage,0.7798,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN055)",n/a,true
+BR-AL-SATUBA,Satuba,water_network_coverage,0.9543,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN055)",n/a,true
+BR-AL-SENADOR_RUI_PALMEIRA,Senador Rui Palmeira,water_network_coverage,0.6486,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN055)",n/a,true
+BR-AL-SAO_BRAS,São Brás,water_network_coverage,0.8188,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN055)",n/a,true
+BR-AL-SAO_JOSE_DA_LAJE,São José da Laje,water_network_coverage,0.8396,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN055)",n/a,true
+BR-AL-SAO_JOSE_DA_TAPERA,São José da Tapera,water_network_coverage,0.6801,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN055)",n/a,true
+BR-AL-SAO_LUIS_DO_QUITUNDE,São Luís do Quitunde,water_network_coverage,0.8061,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN055)",n/a,true
+BR-AL-SAO_MIGUEL_DOS_CAMPOS,São Miguel dos Campos,water_network_coverage,0.8324,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN055)",n/a,true
+BR-AL-SAO_MIGUEL_DOS_MILAGRES,São Miguel dos Milagres,water_network_coverage,0.8214,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN055)",n/a,true
+BR-AL-SAO_SEBASTIAO,São Sebastião,water_network_coverage,0.8360,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN055)",n/a,true
+BR-AL-TANQUE_DARCA,Tanque d'Arca,water_network_coverage,0.7640,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN055)",n/a,true
+BR-AL-TAQUARANA,Taquarana,water_network_coverage,0.7667,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN055)",n/a,true
+BR-AL-TEOTONIO_VILELA,Teotônio Vilela,water_network_coverage,0.7780,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN055)",n/a,true
+BR-AL-TRAIPU,Traipu,water_network_coverage,0.7214,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN055)",n/a,true
+BR-AL-UNIAO_DOS_PALMARES,União dos Palmares,water_network_coverage,0.8264,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN055)",n/a,true
+BR-AL-VICOSA,Viçosa,water_network_coverage,0.8630,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN055)",n/a,true
+BR-AL-AGUA_BRANCA,Água Branca,water_network_coverage,0.7640,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN055)",n/a,true
+BR-AL-ANADIA,Anadia,sewage_coverage,0.4925,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN056)",n/a,true
+BR-AL-ARAPIRACA,Arapiraca,sewage_coverage,0.7196,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN056)",n/a,true
+BR-AL-ATALAIA,Atalaia,sewage_coverage,0.6112,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN056)",n/a,true
+BR-AL-BARRA_DE_SANTO_ANTONIO,Barra de Santo Antônio,sewage_coverage,0.6545,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN056)",n/a,true
+BR-AL-BARRA_DE_SAO_MIGUEL,Barra de São Miguel,sewage_coverage,0.7498,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN056)",n/a,true
+BR-AL-BATALHA,Batalha,sewage_coverage,0.6115,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN056)",n/a,true
+BR-AL-BELO_MONTE,Belo Monte,sewage_coverage,0.3059,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN056)",n/a,true
+BR-AL-BELEM,Belém,sewage_coverage,0.5359,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN056)",n/a,true
+BR-AL-BOCA_DA_MATA,Boca da Mata,sewage_coverage,0.5671,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN056)",n/a,true
+BR-AL-BRANQUINHA,Branquinha,sewage_coverage,0.5400,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN056)",n/a,true
+BR-AL-CACIMBINHAS,Cacimbinhas,sewage_coverage,0.6194,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN056)",n/a,true
+BR-AL-CAJUEIRO,Cajueiro,sewage_coverage,0.6270,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN056)",n/a,true
+BR-AL-CAMPESTRE,Campestre,sewage_coverage,0.6185,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN056)",n/a,true
+BR-AL-CAMPO_ALEGRE,Campo Alegre,sewage_coverage,0.5354,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN056)",n/a,true
+BR-AL-CAMPO_GRANDE,Campo Grande,sewage_coverage,0.5937,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN056)",n/a,true
+BR-AL-CANAPI,Canapi,sewage_coverage,0.4228,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN056)",n/a,true
+BR-AL-CAPELA,Capela,sewage_coverage,0.5448,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN056)",n/a,true
+BR-AL-CARNEIROS,Carneiros,sewage_coverage,0.3265,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN056)",n/a,true
+BR-AL-CHA_PRETA,Chã Preta,sewage_coverage,0.6162,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN056)",n/a,true
+BR-AL-COITE_DO_NOIA,Coité do Nóia,sewage_coverage,0.4733,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN056)",n/a,true
+BR-AL-COLONIA_LEOPOLDINA,Colônia Leopoldina,sewage_coverage,0.5052,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN056)",n/a,true
+BR-AL-COQUEIRO_SECO,Coqueiro Seco,sewage_coverage,0.5611,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN056)",n/a,true
+BR-AL-CORURIPE,Coruripe,sewage_coverage,0.5507,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN056)",n/a,true
+BR-AL-CRAIBAS,Craíbas,sewage_coverage,0.5348,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN056)",n/a,true
+BR-AL-DELMIRO_GOUVEIA,Delmiro Gouveia,sewage_coverage,0.5104,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN056)",n/a,true
+BR-AL-DOIS_RIACHOS,Dois Riachos,sewage_coverage,0.2671,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN056)",n/a,true
+BR-AL-ESTRELA_DE_ALAGOAS,Estrela de Alagoas,sewage_coverage,0.5918,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN056)",n/a,true
+BR-AL-FEIRA_GRANDE,Feira Grande,sewage_coverage,0.5034,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN056)",n/a,true
+BR-AL-FELIZ_DESERTO,Feliz Deserto,sewage_coverage,0.5615,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN056)",n/a,true
+BR-AL-FLEXEIRAS,Flexeiras,sewage_coverage,0.5771,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN056)",n/a,true
+BR-AL-GIRAU_DO_PONCIANO,Girau do Ponciano,sewage_coverage,0.4112,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN056)",n/a,true
+BR-AL-IBATEGUARA,Ibateguara,sewage_coverage,0.6373,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN056)",n/a,true
+BR-AL-IGACI,Igaci,sewage_coverage,0.6224,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN056)",n/a,true
+BR-AL-IGREJA_NOVA,Igreja Nova,sewage_coverage,0.4647,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN056)",n/a,true
+BR-AL-INHAPI,Inhapi,sewage_coverage,0.3448,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN056)",n/a,true
+BR-AL-JACARE_DOS_HOMENS,Jacaré dos Homens,sewage_coverage,0.4907,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN056)",n/a,true
+BR-AL-JACUIPE,Jacuípe,sewage_coverage,0.4346,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN056)",n/a,true
+BR-AL-JAPARATINGA,Japaratinga,sewage_coverage,0.4926,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN056)",n/a,true
+BR-AL-JARAMATAIA,Jaramataia,sewage_coverage,0.2634,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN056)",n/a,true
+BR-AL-JEQUIA_DA_PRAIA,Jequiá da Praia,sewage_coverage,0.5370,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN056)",n/a,true
+BR-AL-JOAQUIM_GOMES,Joaquim Gomes,sewage_coverage,0.5452,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN056)",n/a,true
+BR-AL-JUNDIA,Jundiá,sewage_coverage,0.5791,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN056)",n/a,true
+BR-AL-JUNQUEIRO,Junqueiro,sewage_coverage,0.4807,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN056)",n/a,true
+BR-AL-LAGOA_DA_CANOA,Lagoa da Canoa,sewage_coverage,0.5017,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN056)",n/a,true
+BR-AL-LIMOEIRO_DE_ANADIA,Limoeiro de Anadia,sewage_coverage,0.5700,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN056)",n/a,true
+BR-AL-MACEIO,Maceió,sewage_coverage,0.7233,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN056)",n/a,true
+BR-AL-MAJOR_ISIDORO,Major Isidoro,sewage_coverage,0.5982,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN056)",n/a,true
+BR-AL-MAR_VERMELHO,Mar Vermelho,sewage_coverage,0.5437,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN056)",n/a,true
+BR-AL-MARAGOGI,Maragogi,sewage_coverage,0.4647,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN056)",n/a,true
+BR-AL-MARAVILHA,Maravilha,sewage_coverage,0.3461,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN056)",n/a,true
+BR-AL-MARECHAL_DEODORO,Marechal Deodoro,sewage_coverage,0.7422,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN056)",n/a,true
+BR-AL-MARIBONDO,Maribondo,sewage_coverage,0.5727,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN056)",n/a,true
+BR-AL-MATA_GRANDE,Mata Grande,sewage_coverage,0.3162,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN056)",n/a,true
+BR-AL-MATRIZ_DE_CAMARAGIBE,Matriz de Camaragibe,sewage_coverage,0.5029,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN056)",n/a,true
+BR-AL-MESSIAS,Messias,sewage_coverage,0.6348,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN056)",n/a,true
+BR-AL-MINADOR_DO_NEGRAO,Minador do Negrão,sewage_coverage,0.6383,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN056)",n/a,true
+BR-AL-MONTEIROPOLIS,Monteirópolis,sewage_coverage,0.5607,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN056)",n/a,true
+BR-AL-MURICI,Murici,sewage_coverage,0.6008,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN056)",n/a,true
+BR-AL-NOVO_LINO,Novo Lino,sewage_coverage,0.6301,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN056)",n/a,true
+BR-AL-OLHO_DAGUA_GRANDE,Olho d'Água Grande,sewage_coverage,0.5722,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN056)",n/a,true
+BR-AL-OLHO_DAGUA_DAS_FLORES,Olho d'Água das Flores,sewage_coverage,0.5563,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN056)",n/a,true
+BR-AL-OLHO_DAGUA_DO_CASADO,Olho d'Água do Casado,sewage_coverage,0.2771,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN056)",n/a,true
+BR-AL-OLIVENCA,Olivença,sewage_coverage,0.3112,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN056)",n/a,true
+BR-AL-OURO_BRANCO,Ouro Branco,sewage_coverage,0.3196,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN056)",n/a,true
+BR-AL-PALESTINA,Palestina,sewage_coverage,0.4642,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN056)",n/a,true
+BR-AL-PALMEIRA_DOS_INDIOS,Palmeira dos Índios,sewage_coverage,0.5684,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN056)",n/a,true
+BR-AL-PARICONHA,Pariconha,sewage_coverage,0.4194,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN056)",n/a,true
+BR-AL-PARIPUEIRA,Paripueira,sewage_coverage,0.5601,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN056)",n/a,true
+BR-AL-PASSO_DE_CAMARAGIBE,Passo de Camaragibe,sewage_coverage,0.5820,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN056)",n/a,true
+BR-AL-PAULO_JACINTO,Paulo Jacinto,sewage_coverage,0.5444,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN056)",n/a,true
+BR-AL-PENEDO,Penedo,sewage_coverage,0.6158,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN056)",n/a,true
+BR-AL-PIACABUCU,Piaçabuçu,sewage_coverage,0.4565,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN056)",n/a,true
+BR-AL-PILAR,Pilar,sewage_coverage,0.4831,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN056)",n/a,true
+BR-AL-PINDOBA,Pindoba,sewage_coverage,0.5049,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN056)",n/a,true
+BR-AL-PIRANHAS,Piranhas,sewage_coverage,0.5298,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN056)",n/a,true
+BR-AL-PORTO_CALVO,Porto Calvo,sewage_coverage,0.6564,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN056)",n/a,true
+BR-AL-PORTO_REAL_DO_COLEGIO,Porto Real do Colégio,sewage_coverage,0.6502,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN056)",n/a,true
+BR-AL-PORTO_DE_PEDRAS,Porto de Pedras,sewage_coverage,0.4765,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN056)",n/a,true
+BR-AL-POCO_DAS_TRINCHEIRAS,Poço das Trincheiras,sewage_coverage,0.3353,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN056)",n/a,true
+BR-AL-PAO_DE_ACUCAR,Pão de Açúcar,sewage_coverage,0.4959,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN056)",n/a,true
+BR-AL-QUEBRANGULO,Quebrangulo,sewage_coverage,0.5751,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN056)",n/a,true
+BR-AL-RIO_LARGO,Rio Largo,sewage_coverage,0.7915,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN056)",n/a,true
+BR-AL-ROTEIRO,Roteiro,sewage_coverage,0.5137,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN056)",n/a,true
+BR-AL-SANTA_LUZIA_DO_NORTE,Santa Luzia do Norte,sewage_coverage,0.6228,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN056)",n/a,true
+BR-AL-SANTANA_DO_IPANEMA,Santana do Ipanema,sewage_coverage,0.5639,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN056)",n/a,true
+BR-AL-SANTANA_DO_MUNDAU,Santana do Mundaú,sewage_coverage,0.5291,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN056)",n/a,true
+BR-AL-SATUBA,Satuba,sewage_coverage,0.7951,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN056)",n/a,true
+BR-AL-SENADOR_RUI_PALMEIRA,Senador Rui Palmeira,sewage_coverage,0.2875,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN056)",n/a,true
+BR-AL-SAO_BRAS,São Brás,sewage_coverage,0.5527,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN056)",n/a,true
+BR-AL-SAO_JOSE_DA_LAJE,São José da Laje,sewage_coverage,0.6319,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN056)",n/a,true
+BR-AL-SAO_JOSE_DA_TAPERA,São José da Tapera,sewage_coverage,0.2752,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN056)",n/a,true
+BR-AL-SAO_LUIS_DO_QUITUNDE,São Luís do Quitunde,sewage_coverage,0.5416,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN056)",n/a,true
+BR-AL-SAO_MIGUEL_DOS_CAMPOS,São Miguel dos Campos,sewage_coverage,0.5091,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN056)",n/a,true
+BR-AL-SAO_MIGUEL_DOS_MILAGRES,São Miguel dos Milagres,sewage_coverage,0.5378,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN056)",n/a,true
+BR-AL-SAO_SEBASTIAO,São Sebastião,sewage_coverage,0.5748,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN056)",n/a,true
+BR-AL-TANQUE_DARCA,Tanque d'Arca,sewage_coverage,0.4332,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN056)",n/a,true
+BR-AL-TAQUARANA,Taquarana,sewage_coverage,0.4904,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN056)",n/a,true
+BR-AL-TEOTONIO_VILELA,Teotônio Vilela,sewage_coverage,0.5195,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN056)",n/a,true
+BR-AL-TRAIPU,Traipu,sewage_coverage,0.2882,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN056)",n/a,true
+BR-AL-UNIAO_DOS_PALMARES,União dos Palmares,sewage_coverage,0.6012,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN056)",n/a,true
+BR-AL-VICOSA,Viçosa,sewage_coverage,0.5852,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN056)",n/a,true
+BR-AL-AGUA_BRANCA,Água Branca,sewage_coverage,0.3641,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN056)",n/a,true
+BR-AL-ANADIA,Anadia,road_unpaved_share,0.6682,,PLACEHOLDER - replace with DNIT Sistema Nacional de Viação; CNT Pesquisa de Rodovias; state DER registers,n/a,true
+BR-AL-ARAPIRACA,Arapiraca,road_unpaved_share,0.4439,,PLACEHOLDER - replace with DNIT Sistema Nacional de Viação; CNT Pesquisa de Rodovias; state DER registers,n/a,true
+BR-AL-ATALAIA,Atalaia,road_unpaved_share,0.6150,,PLACEHOLDER - replace with DNIT Sistema Nacional de Viação; CNT Pesquisa de Rodovias; state DER registers,n/a,true
+BR-AL-BARRA_DE_SANTO_ANTONIO,Barra de Santo Antônio,road_unpaved_share,0.5609,,PLACEHOLDER - replace with DNIT Sistema Nacional de Viação; CNT Pesquisa de Rodovias; state DER registers,n/a,true
+BR-AL-BARRA_DE_SAO_MIGUEL,Barra de São Miguel,road_unpaved_share,0.4873,,PLACEHOLDER - replace with DNIT Sistema Nacional de Viação; CNT Pesquisa de Rodovias; state DER registers,n/a,true
+BR-AL-BATALHA,Batalha,road_unpaved_share,0.5789,,PLACEHOLDER - replace with DNIT Sistema Nacional de Viação; CNT Pesquisa de Rodovias; state DER registers,n/a,true
+BR-AL-BELO_MONTE,Belo Monte,road_unpaved_share,0.8258,,PLACEHOLDER - replace with DNIT Sistema Nacional de Viação; CNT Pesquisa de Rodovias; state DER registers,n/a,true
+BR-AL-BELEM,Belém,road_unpaved_share,0.6194,,PLACEHOLDER - replace with DNIT Sistema Nacional de Viação; CNT Pesquisa de Rodovias; state DER registers,n/a,true
+BR-AL-BOCA_DA_MATA,Boca da Mata,road_unpaved_share,0.6302,,PLACEHOLDER - replace with DNIT Sistema Nacional de Viação; CNT Pesquisa de Rodovias; state DER registers,n/a,true
+BR-AL-BRANQUINHA,Branquinha,road_unpaved_share,0.7007,,PLACEHOLDER - replace with DNIT Sistema Nacional de Viação; CNT Pesquisa de Rodovias; state DER registers,n/a,true
+BR-AL-CACIMBINHAS,Cacimbinhas,road_unpaved_share,0.6001,,PLACEHOLDER - replace with DNIT Sistema Nacional de Viação; CNT Pesquisa de Rodovias; state DER registers,n/a,true
+BR-AL-CAJUEIRO,Cajueiro,road_unpaved_share,0.5972,,PLACEHOLDER - replace with DNIT Sistema Nacional de Viação; CNT Pesquisa de Rodovias; state DER registers,n/a,true
+BR-AL-CAMPESTRE,Campestre,road_unpaved_share,0.5836,,PLACEHOLDER - replace with DNIT Sistema Nacional de Viação; CNT Pesquisa de Rodovias; state DER registers,n/a,true
+BR-AL-CAMPO_ALEGRE,Campo Alegre,road_unpaved_share,0.6521,,PLACEHOLDER - replace with DNIT Sistema Nacional de Viação; CNT Pesquisa de Rodovias; state DER registers,n/a,true
+BR-AL-CAMPO_GRANDE,Campo Grande,road_unpaved_share,0.5778,,PLACEHOLDER - replace with DNIT Sistema Nacional de Viação; CNT Pesquisa de Rodovias; state DER registers,n/a,true
+BR-AL-CANAPI,Canapi,road_unpaved_share,0.7531,,PLACEHOLDER - replace with DNIT Sistema Nacional de Viação; CNT Pesquisa de Rodovias; state DER registers,n/a,true
+BR-AL-CAPELA,Capela,road_unpaved_share,0.6338,,PLACEHOLDER - replace with DNIT Sistema Nacional de Viação; CNT Pesquisa de Rodovias; state DER registers,n/a,true
+BR-AL-CARNEIROS,Carneiros,road_unpaved_share,0.7551,,PLACEHOLDER - replace with DNIT Sistema Nacional de Viação; CNT Pesquisa de Rodovias; state DER registers,n/a,true
+BR-AL-CHA_PRETA,Chã Preta,road_unpaved_share,0.6092,,PLACEHOLDER - replace with DNIT Sistema Nacional de Viação; CNT Pesquisa de Rodovias; state DER registers,n/a,true
+BR-AL-COITE_DO_NOIA,Coité do Nóia,road_unpaved_share,0.7052,,PLACEHOLDER - replace with DNIT Sistema Nacional de Viação; CNT Pesquisa de Rodovias; state DER registers,n/a,true
+BR-AL-COLONIA_LEOPOLDINA,Colônia Leopoldina,road_unpaved_share,0.6710,,PLACEHOLDER - replace with DNIT Sistema Nacional de Viação; CNT Pesquisa de Rodovias; state DER registers,n/a,true
+BR-AL-COQUEIRO_SECO,Coqueiro Seco,road_unpaved_share,0.5871,,PLACEHOLDER - replace with DNIT Sistema Nacional de Viação; CNT Pesquisa de Rodovias; state DER registers,n/a,true
+BR-AL-CORURIPE,Coruripe,road_unpaved_share,0.6336,,PLACEHOLDER - replace with DNIT Sistema Nacional de Viação; CNT Pesquisa de Rodovias; state DER registers,n/a,true
+BR-AL-CRAIBAS,Craíbas,road_unpaved_share,0.6190,,PLACEHOLDER - replace with DNIT Sistema Nacional de Viação; CNT Pesquisa de Rodovias; state DER registers,n/a,true
+BR-AL-DELMIRO_GOUVEIA,Delmiro Gouveia,road_unpaved_share,0.6346,,PLACEHOLDER - replace with DNIT Sistema Nacional de Viação; CNT Pesquisa de Rodovias; state DER registers,n/a,true
+BR-AL-DOIS_RIACHOS,Dois Riachos,road_unpaved_share,0.7924,,PLACEHOLDER - replace with DNIT Sistema Nacional de Viação; CNT Pesquisa de Rodovias; state DER registers,n/a,true
+BR-AL-ESTRELA_DE_ALAGOAS,Estrela de Alagoas,road_unpaved_share,0.5676,,PLACEHOLDER - replace with DNIT Sistema Nacional de Viação; CNT Pesquisa de Rodovias; state DER registers,n/a,true
+BR-AL-FEIRA_GRANDE,Feira Grande,road_unpaved_share,0.6662,,PLACEHOLDER - replace with DNIT Sistema Nacional de Viação; CNT Pesquisa de Rodovias; state DER registers,n/a,true
+BR-AL-FELIZ_DESERTO,Feliz Deserto,road_unpaved_share,0.5984,,PLACEHOLDER - replace with DNIT Sistema Nacional de Viação; CNT Pesquisa de Rodovias; state DER registers,n/a,true
+BR-AL-FLEXEIRAS,Flexeiras,road_unpaved_share,0.6030,,PLACEHOLDER - replace with DNIT Sistema Nacional de Viação; CNT Pesquisa de Rodovias; state DER registers,n/a,true
+BR-AL-GIRAU_DO_PONCIANO,Girau do Ponciano,road_unpaved_share,0.7975,,PLACEHOLDER - replace with DNIT Sistema Nacional de Viação; CNT Pesquisa de Rodovias; state DER registers,n/a,true
+BR-AL-IBATEGUARA,Ibateguara,road_unpaved_share,0.5843,,PLACEHOLDER - replace with DNIT Sistema Nacional de Viação; CNT Pesquisa de Rodovias; state DER registers,n/a,true
+BR-AL-IGACI,Igaci,road_unpaved_share,0.5918,,PLACEHOLDER - replace with DNIT Sistema Nacional de Viação; CNT Pesquisa de Rodovias; state DER registers,n/a,true
+BR-AL-IGREJA_NOVA,Igreja Nova,road_unpaved_share,0.7290,,PLACEHOLDER - replace with DNIT Sistema Nacional de Viação; CNT Pesquisa de Rodovias; state DER registers,n/a,true
+BR-AL-INHAPI,Inhapi,road_unpaved_share,0.8022,,PLACEHOLDER - replace with DNIT Sistema Nacional de Viação; CNT Pesquisa de Rodovias; state DER registers,n/a,true
+BR-AL-JACARE_DOS_HOMENS,Jacaré dos Homens,road_unpaved_share,0.6659,,PLACEHOLDER - replace with DNIT Sistema Nacional de Viação; CNT Pesquisa de Rodovias; state DER registers,n/a,true
+BR-AL-JACUIPE,Jacuípe,road_unpaved_share,0.6487,,PLACEHOLDER - replace with DNIT Sistema Nacional de Viação; CNT Pesquisa de Rodovias; state DER registers,n/a,true
+BR-AL-JAPARATINGA,Japaratinga,road_unpaved_share,0.6984,,PLACEHOLDER - replace with DNIT Sistema Nacional de Viação; CNT Pesquisa de Rodovias; state DER registers,n/a,true
+BR-AL-JARAMATAIA,Jaramataia,road_unpaved_share,0.7940,,PLACEHOLDER - replace with DNIT Sistema Nacional de Viação; CNT Pesquisa de Rodovias; state DER registers,n/a,true
+BR-AL-JEQUIA_DA_PRAIA,Jequiá da Praia,road_unpaved_share,0.6888,,PLACEHOLDER - replace with DNIT Sistema Nacional de Viação; CNT Pesquisa de Rodovias; state DER registers,n/a,true
+BR-AL-JOAQUIM_GOMES,Joaquim Gomes,road_unpaved_share,0.6652,,PLACEHOLDER - replace with DNIT Sistema Nacional de Viação; CNT Pesquisa de Rodovias; state DER registers,n/a,true
+BR-AL-JUNDIA,Jundiá,road_unpaved_share,0.6706,,PLACEHOLDER - replace with DNIT Sistema Nacional de Viação; CNT Pesquisa de Rodovias; state DER registers,n/a,true
+BR-AL-JUNQUEIRO,Junqueiro,road_unpaved_share,0.6661,,PLACEHOLDER - replace with DNIT Sistema Nacional de Viação; CNT Pesquisa de Rodovias; state DER registers,n/a,true
+BR-AL-LAGOA_DA_CANOA,Lagoa da Canoa,road_unpaved_share,0.6233,,PLACEHOLDER - replace with DNIT Sistema Nacional de Viação; CNT Pesquisa de Rodovias; state DER registers,n/a,true
+BR-AL-LIMOEIRO_DE_ANADIA,Limoeiro de Anadia,road_unpaved_share,0.6505,,PLACEHOLDER - replace with DNIT Sistema Nacional de Viação; CNT Pesquisa de Rodovias; state DER registers,n/a,true
+BR-AL-MACEIO,Maceió,road_unpaved_share,0.4874,,PLACEHOLDER - replace with DNIT Sistema Nacional de Viação; CNT Pesquisa de Rodovias; state DER registers,n/a,true
+BR-AL-MAJOR_ISIDORO,Major Isidoro,road_unpaved_share,0.6200,,PLACEHOLDER - replace with DNIT Sistema Nacional de Viação; CNT Pesquisa de Rodovias; state DER registers,n/a,true
+BR-AL-MAR_VERMELHO,Mar Vermelho,road_unpaved_share,0.6814,,PLACEHOLDER - replace with DNIT Sistema Nacional de Viação; CNT Pesquisa de Rodovias; state DER registers,n/a,true
+BR-AL-MARAGOGI,Maragogi,road_unpaved_share,0.6796,,PLACEHOLDER - replace with DNIT Sistema Nacional de Viação; CNT Pesquisa de Rodovias; state DER registers,n/a,true
+BR-AL-MARAVILHA,Maravilha,road_unpaved_share,0.7454,,PLACEHOLDER - replace with DNIT Sistema Nacional de Viação; CNT Pesquisa de Rodovias; state DER registers,n/a,true
+BR-AL-MARECHAL_DEODORO,Marechal Deodoro,road_unpaved_share,0.4934,,PLACEHOLDER - replace with DNIT Sistema Nacional de Viação; CNT Pesquisa de Rodovias; state DER registers,n/a,true
+BR-AL-MARIBONDO,Maribondo,road_unpaved_share,0.6992,,PLACEHOLDER - replace with DNIT Sistema Nacional de Viação; CNT Pesquisa de Rodovias; state DER registers,n/a,true
+BR-AL-MATA_GRANDE,Mata Grande,road_unpaved_share,0.8035,,PLACEHOLDER - replace with DNIT Sistema Nacional de Viação; CNT Pesquisa de Rodovias; state DER registers,n/a,true
+BR-AL-MATRIZ_DE_CAMARAGIBE,Matriz de Camaragibe,road_unpaved_share,0.6928,,PLACEHOLDER - replace with DNIT Sistema Nacional de Viação; CNT Pesquisa de Rodovias; state DER registers,n/a,true
+BR-AL-MESSIAS,Messias,road_unpaved_share,0.6376,,PLACEHOLDER - replace with DNIT Sistema Nacional de Viação; CNT Pesquisa de Rodovias; state DER registers,n/a,true
+BR-AL-MINADOR_DO_NEGRAO,Minador do Negrão,road_unpaved_share,0.5976,,PLACEHOLDER - replace with DNIT Sistema Nacional de Viação; CNT Pesquisa de Rodovias; state DER registers,n/a,true
+BR-AL-MONTEIROPOLIS,Monteirópolis,road_unpaved_share,0.5925,,PLACEHOLDER - replace with DNIT Sistema Nacional de Viação; CNT Pesquisa de Rodovias; state DER registers,n/a,true
+BR-AL-MURICI,Murici,road_unpaved_share,0.6229,,PLACEHOLDER - replace with DNIT Sistema Nacional de Viação; CNT Pesquisa de Rodovias; state DER registers,n/a,true
+BR-AL-NOVO_LINO,Novo Lino,road_unpaved_share,0.5915,,PLACEHOLDER - replace with DNIT Sistema Nacional de Viação; CNT Pesquisa de Rodovias; state DER registers,n/a,true
+BR-AL-OLHO_DAGUA_GRANDE,Olho d'Água Grande,road_unpaved_share,0.6040,,PLACEHOLDER - replace with DNIT Sistema Nacional de Viação; CNT Pesquisa de Rodovias; state DER registers,n/a,true
+BR-AL-OLHO_DAGUA_DAS_FLORES,Olho d'Água das Flores,road_unpaved_share,0.6517,,PLACEHOLDER - replace with DNIT Sistema Nacional de Viação; CNT Pesquisa de Rodovias; state DER registers,n/a,true
+BR-AL-OLHO_DAGUA_DO_CASADO,Olho d'Água do Casado,road_unpaved_share,0.7629,,PLACEHOLDER - replace with DNIT Sistema Nacional de Viação; CNT Pesquisa de Rodovias; state DER registers,n/a,true
+BR-AL-OLIVENCA,Olivença,road_unpaved_share,0.7840,,PLACEHOLDER - replace with DNIT Sistema Nacional de Viação; CNT Pesquisa de Rodovias; state DER registers,n/a,true
+BR-AL-OURO_BRANCO,Ouro Branco,road_unpaved_share,0.8277,,PLACEHOLDER - replace with DNIT Sistema Nacional de Viação; CNT Pesquisa de Rodovias; state DER registers,n/a,true
+BR-AL-PALESTINA,Palestina,road_unpaved_share,0.6548,,PLACEHOLDER - replace with DNIT Sistema Nacional de Viação; CNT Pesquisa de Rodovias; state DER registers,n/a,true
+BR-AL-PALMEIRA_DOS_INDIOS,Palmeira dos Índios,road_unpaved_share,0.6213,,PLACEHOLDER - replace with DNIT Sistema Nacional de Viação; CNT Pesquisa de Rodovias; state DER registers,n/a,true
+BR-AL-PARICONHA,Pariconha,road_unpaved_share,0.7266,,PLACEHOLDER - replace with DNIT Sistema Nacional de Viação; CNT Pesquisa de Rodovias; state DER registers,n/a,true
+BR-AL-PARIPUEIRA,Paripueira,road_unpaved_share,0.6096,,PLACEHOLDER - replace with DNIT Sistema Nacional de Viação; CNT Pesquisa de Rodovias; state DER registers,n/a,true
+BR-AL-PASSO_DE_CAMARAGIBE,Passo de Camaragibe,road_unpaved_share,0.6386,,PLACEHOLDER - replace with DNIT Sistema Nacional de Viação; CNT Pesquisa de Rodovias; state DER registers,n/a,true
+BR-AL-PAULO_JACINTO,Paulo Jacinto,road_unpaved_share,0.6226,,PLACEHOLDER - replace with DNIT Sistema Nacional de Viação; CNT Pesquisa de Rodovias; state DER registers,n/a,true
+BR-AL-PENEDO,Penedo,road_unpaved_share,0.6258,,PLACEHOLDER - replace with DNIT Sistema Nacional de Viação; CNT Pesquisa de Rodovias; state DER registers,n/a,true
+BR-AL-PIACABUCU,Piaçabuçu,road_unpaved_share,0.6332,,PLACEHOLDER - replace with DNIT Sistema Nacional de Viação; CNT Pesquisa de Rodovias; state DER registers,n/a,true
+BR-AL-PILAR,Pilar,road_unpaved_share,0.7104,,PLACEHOLDER - replace with DNIT Sistema Nacional de Viação; CNT Pesquisa de Rodovias; state DER registers,n/a,true
+BR-AL-PINDOBA,Pindoba,road_unpaved_share,0.6540,,PLACEHOLDER - replace with DNIT Sistema Nacional de Viação; CNT Pesquisa de Rodovias; state DER registers,n/a,true
+BR-AL-PIRANHAS,Piranhas,road_unpaved_share,0.6926,,PLACEHOLDER - replace with DNIT Sistema Nacional de Viação; CNT Pesquisa de Rodovias; state DER registers,n/a,true
+BR-AL-PORTO_CALVO,Porto Calvo,road_unpaved_share,0.6091,,PLACEHOLDER - replace with DNIT Sistema Nacional de Viação; CNT Pesquisa de Rodovias; state DER registers,n/a,true
+BR-AL-PORTO_REAL_DO_COLEGIO,Porto Real do Colégio,road_unpaved_share,0.5679,,PLACEHOLDER - replace with DNIT Sistema Nacional de Viação; CNT Pesquisa de Rodovias; state DER registers,n/a,true
+BR-AL-PORTO_DE_PEDRAS,Porto de Pedras,road_unpaved_share,0.6824,,PLACEHOLDER - replace with DNIT Sistema Nacional de Viação; CNT Pesquisa de Rodovias; state DER registers,n/a,true
+BR-AL-POCO_DAS_TRINCHEIRAS,Poço das Trincheiras,road_unpaved_share,0.7525,,PLACEHOLDER - replace with DNIT Sistema Nacional de Viação; CNT Pesquisa de Rodovias; state DER registers,n/a,true
+BR-AL-PAO_DE_ACUCAR,Pão de Açúcar,road_unpaved_share,0.6187,,PLACEHOLDER - replace with DNIT Sistema Nacional de Viação; CNT Pesquisa de Rodovias; state DER registers,n/a,true
+BR-AL-QUEBRANGULO,Quebrangulo,road_unpaved_share,0.6412,,PLACEHOLDER - replace with DNIT Sistema Nacional de Viação; CNT Pesquisa de Rodovias; state DER registers,n/a,true
+BR-AL-RIO_LARGO,Rio Largo,road_unpaved_share,0.4324,,PLACEHOLDER - replace with DNIT Sistema Nacional de Viação; CNT Pesquisa de Rodovias; state DER registers,n/a,true
+BR-AL-ROTEIRO,Roteiro,road_unpaved_share,0.6940,,PLACEHOLDER - replace with DNIT Sistema Nacional de Viação; CNT Pesquisa de Rodovias; state DER registers,n/a,true
+BR-AL-SANTA_LUZIA_DO_NORTE,Santa Luzia do Norte,road_unpaved_share,0.5827,,PLACEHOLDER - replace with DNIT Sistema Nacional de Viação; CNT Pesquisa de Rodovias; state DER registers,n/a,true
+BR-AL-SANTANA_DO_IPANEMA,Santana do Ipanema,road_unpaved_share,0.7079,,PLACEHOLDER - replace with DNIT Sistema Nacional de Viação; CNT Pesquisa de Rodovias; state DER registers,n/a,true
+BR-AL-SANTANA_DO_MUNDAU,Santana do Mundaú,road_unpaved_share,0.5972,,PLACEHOLDER - replace with DNIT Sistema Nacional de Viação; CNT Pesquisa de Rodovias; state DER registers,n/a,true
+BR-AL-SATUBA,Satuba,road_unpaved_share,0.4530,,PLACEHOLDER - replace with DNIT Sistema Nacional de Viação; CNT Pesquisa de Rodovias; state DER registers,n/a,true
+BR-AL-SENADOR_RUI_PALMEIRA,Senador Rui Palmeira,road_unpaved_share,0.8752,,PLACEHOLDER - replace with DNIT Sistema Nacional de Viação; CNT Pesquisa de Rodovias; state DER registers,n/a,true
+BR-AL-SAO_BRAS,São Brás,road_unpaved_share,0.6213,,PLACEHOLDER - replace with DNIT Sistema Nacional de Viação; CNT Pesquisa de Rodovias; state DER registers,n/a,true
+BR-AL-SAO_JOSE_DA_LAJE,São José da Laje,road_unpaved_share,0.5448,,PLACEHOLDER - replace with DNIT Sistema Nacional de Viação; CNT Pesquisa de Rodovias; state DER registers,n/a,true
+BR-AL-SAO_JOSE_DA_TAPERA,São José da Tapera,road_unpaved_share,0.8293,,PLACEHOLDER - replace with DNIT Sistema Nacional de Viação; CNT Pesquisa de Rodovias; state DER registers,n/a,true
+BR-AL-SAO_LUIS_DO_QUITUNDE,São Luís do Quitunde,road_unpaved_share,0.5692,,PLACEHOLDER - replace with DNIT Sistema Nacional de Viação; CNT Pesquisa de Rodovias; state DER registers,n/a,true
+BR-AL-SAO_MIGUEL_DOS_CAMPOS,São Miguel dos Campos,road_unpaved_share,0.6950,,PLACEHOLDER - replace with DNIT Sistema Nacional de Viação; CNT Pesquisa de Rodovias; state DER registers,n/a,true
+BR-AL-SAO_MIGUEL_DOS_MILAGRES,São Miguel dos Milagres,road_unpaved_share,0.6244,,PLACEHOLDER - replace with DNIT Sistema Nacional de Viação; CNT Pesquisa de Rodovias; state DER registers,n/a,true
+BR-AL-SAO_SEBASTIAO,São Sebastião,road_unpaved_share,0.6170,,PLACEHOLDER - replace with DNIT Sistema Nacional de Viação; CNT Pesquisa de Rodovias; state DER registers,n/a,true
+BR-AL-TANQUE_DARCA,Tanque d'Arca,road_unpaved_share,0.6512,,PLACEHOLDER - replace with DNIT Sistema Nacional de Viação; CNT Pesquisa de Rodovias; state DER registers,n/a,true
+BR-AL-TAQUARANA,Taquarana,road_unpaved_share,0.6415,,PLACEHOLDER - replace with DNIT Sistema Nacional de Viação; CNT Pesquisa de Rodovias; state DER registers,n/a,true
+BR-AL-TEOTONIO_VILELA,Teotônio Vilela,road_unpaved_share,0.7077,,PLACEHOLDER - replace with DNIT Sistema Nacional de Viação; CNT Pesquisa de Rodovias; state DER registers,n/a,true
+BR-AL-TRAIPU,Traipu,road_unpaved_share,0.8167,,PLACEHOLDER - replace with DNIT Sistema Nacional de Viação; CNT Pesquisa de Rodovias; state DER registers,n/a,true
+BR-AL-UNIAO_DOS_PALMARES,União dos Palmares,road_unpaved_share,0.6037,,PLACEHOLDER - replace with DNIT Sistema Nacional de Viação; CNT Pesquisa de Rodovias; state DER registers,n/a,true
+BR-AL-VICOSA,Viçosa,road_unpaved_share,0.5781,,PLACEHOLDER - replace with DNIT Sistema Nacional de Viação; CNT Pesquisa de Rodovias; state DER registers,n/a,true
+BR-AL-AGUA_BRANCA,Água Branca,road_unpaved_share,0.6872,,PLACEHOLDER - replace with DNIT Sistema Nacional de Viação; CNT Pesquisa de Rodovias; state DER registers,n/a,true
+BR-AL-ANADIA,Anadia,primary_care_coverage,0.8418,,"PLACEHOLDER - replace with Ministério da Saúde, e-Gestor AB coverage reports",n/a,true
+BR-AL-ARAPIRACA,Arapiraca,primary_care_coverage,0.8786,,"PLACEHOLDER - replace with Ministério da Saúde, e-Gestor AB coverage reports",n/a,true
+BR-AL-ATALAIA,Atalaia,primary_care_coverage,0.9204,,"PLACEHOLDER - replace with Ministério da Saúde, e-Gestor AB coverage reports",n/a,true
+BR-AL-BARRA_DE_SANTO_ANTONIO,Barra de Santo Antônio,primary_care_coverage,0.8928,,"PLACEHOLDER - replace with Ministério da Saúde, e-Gestor AB coverage reports",n/a,true
+BR-AL-BARRA_DE_SAO_MIGUEL,Barra de São Miguel,primary_care_coverage,0.8798,,"PLACEHOLDER - replace with Ministério da Saúde, e-Gestor AB coverage reports",n/a,true
+BR-AL-BATALHA,Batalha,primary_care_coverage,0.8411,,"PLACEHOLDER - replace with Ministério da Saúde, e-Gestor AB coverage reports",n/a,true
+BR-AL-BELO_MONTE,Belo Monte,primary_care_coverage,0.7582,,"PLACEHOLDER - replace with Ministério da Saúde, e-Gestor AB coverage reports",n/a,true
+BR-AL-BELEM,Belém,primary_care_coverage,0.7746,,"PLACEHOLDER - replace with Ministério da Saúde, e-Gestor AB coverage reports",n/a,true
+BR-AL-BOCA_DA_MATA,Boca da Mata,primary_care_coverage,0.9205,,"PLACEHOLDER - replace with Ministério da Saúde, e-Gestor AB coverage reports",n/a,true
+BR-AL-BRANQUINHA,Branquinha,primary_care_coverage,0.8316,,"PLACEHOLDER - replace with Ministério da Saúde, e-Gestor AB coverage reports",n/a,true
+BR-AL-CACIMBINHAS,Cacimbinhas,primary_care_coverage,0.8531,,"PLACEHOLDER - replace with Ministério da Saúde, e-Gestor AB coverage reports",n/a,true
+BR-AL-CAJUEIRO,Cajueiro,primary_care_coverage,0.8669,,"PLACEHOLDER - replace with Ministério da Saúde, e-Gestor AB coverage reports",n/a,true
+BR-AL-CAMPESTRE,Campestre,primary_care_coverage,0.8401,,"PLACEHOLDER - replace with Ministério da Saúde, e-Gestor AB coverage reports",n/a,true
+BR-AL-CAMPO_ALEGRE,Campo Alegre,primary_care_coverage,0.8402,,"PLACEHOLDER - replace with Ministério da Saúde, e-Gestor AB coverage reports",n/a,true
+BR-AL-CAMPO_GRANDE,Campo Grande,primary_care_coverage,0.8499,,"PLACEHOLDER - replace with Ministério da Saúde, e-Gestor AB coverage reports",n/a,true
+BR-AL-CANAPI,Canapi,primary_care_coverage,0.7929,,"PLACEHOLDER - replace with Ministério da Saúde, e-Gestor AB coverage reports",n/a,true
+BR-AL-CAPELA,Capela,primary_care_coverage,0.8174,,"PLACEHOLDER - replace with Ministério da Saúde, e-Gestor AB coverage reports",n/a,true
+BR-AL-CARNEIROS,Carneiros,primary_care_coverage,0.7805,,"PLACEHOLDER - replace with Ministério da Saúde, e-Gestor AB coverage reports",n/a,true
+BR-AL-CHA_PRETA,Chã Preta,primary_care_coverage,0.8311,,"PLACEHOLDER - replace with Ministério da Saúde, e-Gestor AB coverage reports",n/a,true
+BR-AL-COITE_DO_NOIA,Coité do Nóia,primary_care_coverage,0.8101,,"PLACEHOLDER - replace with Ministério da Saúde, e-Gestor AB coverage reports",n/a,true
+BR-AL-COLONIA_LEOPOLDINA,Colônia Leopoldina,primary_care_coverage,0.8242,,"PLACEHOLDER - replace with Ministério da Saúde, e-Gestor AB coverage reports",n/a,true
+BR-AL-COQUEIRO_SECO,Coqueiro Seco,primary_care_coverage,0.8013,,"PLACEHOLDER - replace with Ministério da Saúde, e-Gestor AB coverage reports",n/a,true
+BR-AL-CORURIPE,Coruripe,primary_care_coverage,0.8260,,"PLACEHOLDER - replace with Ministério da Saúde, e-Gestor AB coverage reports",n/a,true
+BR-AL-CRAIBAS,Craíbas,primary_care_coverage,0.8768,,"PLACEHOLDER - replace with Ministério da Saúde, e-Gestor AB coverage reports",n/a,true
+BR-AL-DELMIRO_GOUVEIA,Delmiro Gouveia,primary_care_coverage,0.8828,,"PLACEHOLDER - replace with Ministério da Saúde, e-Gestor AB coverage reports",n/a,true
+BR-AL-DOIS_RIACHOS,Dois Riachos,primary_care_coverage,0.7522,,"PLACEHOLDER - replace with Ministério da Saúde, e-Gestor AB coverage reports",n/a,true
+BR-AL-ESTRELA_DE_ALAGOAS,Estrela de Alagoas,primary_care_coverage,0.8063,,"PLACEHOLDER - replace with Ministério da Saúde, e-Gestor AB coverage reports",n/a,true
+BR-AL-FEIRA_GRANDE,Feira Grande,primary_care_coverage,0.7794,,"PLACEHOLDER - replace with Ministério da Saúde, e-Gestor AB coverage reports",n/a,true
+BR-AL-FELIZ_DESERTO,Feliz Deserto,primary_care_coverage,0.8499,,"PLACEHOLDER - replace with Ministério da Saúde, e-Gestor AB coverage reports",n/a,true
+BR-AL-FLEXEIRAS,Flexeiras,primary_care_coverage,0.8621,,"PLACEHOLDER - replace with Ministério da Saúde, e-Gestor AB coverage reports",n/a,true
+BR-AL-GIRAU_DO_PONCIANO,Girau do Ponciano,primary_care_coverage,0.7742,,"PLACEHOLDER - replace with Ministério da Saúde, e-Gestor AB coverage reports",n/a,true
+BR-AL-IBATEGUARA,Ibateguara,primary_care_coverage,0.8526,,"PLACEHOLDER - replace with Ministério da Saúde, e-Gestor AB coverage reports",n/a,true
+BR-AL-IGACI,Igaci,primary_care_coverage,0.8852,,"PLACEHOLDER - replace with Ministério da Saúde, e-Gestor AB coverage reports",n/a,true
+BR-AL-IGREJA_NOVA,Igreja Nova,primary_care_coverage,0.8257,,"PLACEHOLDER - replace with Ministério da Saúde, e-Gestor AB coverage reports",n/a,true
+BR-AL-INHAPI,Inhapi,primary_care_coverage,0.7669,,"PLACEHOLDER - replace with Ministério da Saúde, e-Gestor AB coverage reports",n/a,true
+BR-AL-JACARE_DOS_HOMENS,Jacaré dos Homens,primary_care_coverage,0.8275,,"PLACEHOLDER - replace with Ministério da Saúde, e-Gestor AB coverage reports",n/a,true
+BR-AL-JACUIPE,Jacuípe,primary_care_coverage,0.8814,,"PLACEHOLDER - replace with Ministério da Saúde, e-Gestor AB coverage reports",n/a,true
+BR-AL-JAPARATINGA,Japaratinga,primary_care_coverage,0.8323,,"PLACEHOLDER - replace with Ministério da Saúde, e-Gestor AB coverage reports",n/a,true
+BR-AL-JARAMATAIA,Jaramataia,primary_care_coverage,0.7613,,"PLACEHOLDER - replace with Ministério da Saúde, e-Gestor AB coverage reports",n/a,true
+BR-AL-JEQUIA_DA_PRAIA,Jequiá da Praia,primary_care_coverage,0.7988,,"PLACEHOLDER - replace with Ministério da Saúde, e-Gestor AB coverage reports",n/a,true
+BR-AL-JOAQUIM_GOMES,Joaquim Gomes,primary_care_coverage,0.8083,,"PLACEHOLDER - replace with Ministério da Saúde, e-Gestor AB coverage reports",n/a,true
+BR-AL-JUNDIA,Jundiá,primary_care_coverage,0.8571,,"PLACEHOLDER - replace with Ministério da Saúde, e-Gestor AB coverage reports",n/a,true
+BR-AL-JUNQUEIRO,Junqueiro,primary_care_coverage,0.8135,,"PLACEHOLDER - replace with Ministério da Saúde, e-Gestor AB coverage reports",n/a,true
+BR-AL-LAGOA_DA_CANOA,Lagoa da Canoa,primary_care_coverage,0.8519,,"PLACEHOLDER - replace with Ministério da Saúde, e-Gestor AB coverage reports",n/a,true
+BR-AL-LIMOEIRO_DE_ANADIA,Limoeiro de Anadia,primary_care_coverage,0.9092,,"PLACEHOLDER - replace with Ministério da Saúde, e-Gestor AB coverage reports",n/a,true
+BR-AL-MACEIO,Maceió,primary_care_coverage,0.8933,,"PLACEHOLDER - replace with Ministério da Saúde, e-Gestor AB coverage reports",n/a,true
+BR-AL-MAJOR_ISIDORO,Major Isidoro,primary_care_coverage,0.8665,,"PLACEHOLDER - replace with Ministério da Saúde, e-Gestor AB coverage reports",n/a,true
+BR-AL-MAR_VERMELHO,Mar Vermelho,primary_care_coverage,0.8395,,"PLACEHOLDER - replace with Ministério da Saúde, e-Gestor AB coverage reports",n/a,true
+BR-AL-MARAGOGI,Maragogi,primary_care_coverage,0.7885,,"PLACEHOLDER - replace with Ministério da Saúde, e-Gestor AB coverage reports",n/a,true
+BR-AL-MARAVILHA,Maravilha,primary_care_coverage,0.8154,,"PLACEHOLDER - replace with Ministério da Saúde, e-Gestor AB coverage reports",n/a,true
+BR-AL-MARECHAL_DEODORO,Marechal Deodoro,primary_care_coverage,0.9690,,"PLACEHOLDER - replace with Ministério da Saúde, e-Gestor AB coverage reports",n/a,true
+BR-AL-MARIBONDO,Maribondo,primary_care_coverage,0.8776,,"PLACEHOLDER - replace with Ministério da Saúde, e-Gestor AB coverage reports",n/a,true
+BR-AL-MATA_GRANDE,Mata Grande,primary_care_coverage,0.7431,,"PLACEHOLDER - replace with Ministério da Saúde, e-Gestor AB coverage reports",n/a,true
+BR-AL-MATRIZ_DE_CAMARAGIBE,Matriz de Camaragibe,primary_care_coverage,0.7891,,"PLACEHOLDER - replace with Ministério da Saúde, e-Gestor AB coverage reports",n/a,true
+BR-AL-MESSIAS,Messias,primary_care_coverage,0.8047,,"PLACEHOLDER - replace with Ministério da Saúde, e-Gestor AB coverage reports",n/a,true
+BR-AL-MINADOR_DO_NEGRAO,Minador do Negrão,primary_care_coverage,0.8374,,"PLACEHOLDER - replace with Ministério da Saúde, e-Gestor AB coverage reports",n/a,true
+BR-AL-MONTEIROPOLIS,Monteirópolis,primary_care_coverage,0.8074,,"PLACEHOLDER - replace with Ministério da Saúde, e-Gestor AB coverage reports",n/a,true
+BR-AL-MURICI,Murici,primary_care_coverage,0.8435,,"PLACEHOLDER - replace with Ministério da Saúde, e-Gestor AB coverage reports",n/a,true
+BR-AL-NOVO_LINO,Novo Lino,primary_care_coverage,0.7893,,"PLACEHOLDER - replace with Ministério da Saúde, e-Gestor AB coverage reports",n/a,true
+BR-AL-OLHO_DAGUA_GRANDE,Olho d'Água Grande,primary_care_coverage,0.8802,,"PLACEHOLDER - replace with Ministério da Saúde, e-Gestor AB coverage reports",n/a,true
+BR-AL-OLHO_DAGUA_DAS_FLORES,Olho d'Água das Flores,primary_care_coverage,0.8115,,"PLACEHOLDER - replace with Ministério da Saúde, e-Gestor AB coverage reports",n/a,true
+BR-AL-OLHO_DAGUA_DO_CASADO,Olho d'Água do Casado,primary_care_coverage,0.7174,,"PLACEHOLDER - replace with Ministério da Saúde, e-Gestor AB coverage reports",n/a,true
+BR-AL-OLIVENCA,Olivença,primary_care_coverage,0.7535,,"PLACEHOLDER - replace with Ministério da Saúde, e-Gestor AB coverage reports",n/a,true
+BR-AL-OURO_BRANCO,Ouro Branco,primary_care_coverage,0.7605,,"PLACEHOLDER - replace with Ministério da Saúde, e-Gestor AB coverage reports",n/a,true
+BR-AL-PALESTINA,Palestina,primary_care_coverage,0.8656,,"PLACEHOLDER - replace with Ministério da Saúde, e-Gestor AB coverage reports",n/a,true
+BR-AL-PALMEIRA_DOS_INDIOS,Palmeira dos Índios,primary_care_coverage,0.8060,,"PLACEHOLDER - replace with Ministério da Saúde, e-Gestor AB coverage reports",n/a,true
+BR-AL-PARICONHA,Pariconha,primary_care_coverage,0.7907,,"PLACEHOLDER - replace with Ministério da Saúde, e-Gestor AB coverage reports",n/a,true
+BR-AL-PARIPUEIRA,Paripueira,primary_care_coverage,0.8540,,"PLACEHOLDER - replace with Ministério da Saúde, e-Gestor AB coverage reports",n/a,true
+BR-AL-PASSO_DE_CAMARAGIBE,Passo de Camaragibe,primary_care_coverage,0.7743,,"PLACEHOLDER - replace with Ministério da Saúde, e-Gestor AB coverage reports",n/a,true
+BR-AL-PAULO_JACINTO,Paulo Jacinto,primary_care_coverage,0.8556,,"PLACEHOLDER - replace with Ministério da Saúde, e-Gestor AB coverage reports",n/a,true
+BR-AL-PENEDO,Penedo,primary_care_coverage,0.8602,,"PLACEHOLDER - replace with Ministério da Saúde, e-Gestor AB coverage reports",n/a,true
+BR-AL-PIACABUCU,Piaçabuçu,primary_care_coverage,0.8117,,"PLACEHOLDER - replace with Ministério da Saúde, e-Gestor AB coverage reports",n/a,true
+BR-AL-PILAR,Pilar,primary_care_coverage,0.7962,,"PLACEHOLDER - replace with Ministério da Saúde, e-Gestor AB coverage reports",n/a,true
+BR-AL-PINDOBA,Pindoba,primary_care_coverage,0.8343,,"PLACEHOLDER - replace with Ministério da Saúde, e-Gestor AB coverage reports",n/a,true
+BR-AL-PIRANHAS,Piranhas,primary_care_coverage,0.8297,,"PLACEHOLDER - replace with Ministério da Saúde, e-Gestor AB coverage reports",n/a,true
+BR-AL-PORTO_CALVO,Porto Calvo,primary_care_coverage,0.8198,,"PLACEHOLDER - replace with Ministério da Saúde, e-Gestor AB coverage reports",n/a,true
+BR-AL-PORTO_REAL_DO_COLEGIO,Porto Real do Colégio,primary_care_coverage,0.8837,,"PLACEHOLDER - replace with Ministério da Saúde, e-Gestor AB coverage reports",n/a,true
+BR-AL-PORTO_DE_PEDRAS,Porto de Pedras,primary_care_coverage,0.8046,,"PLACEHOLDER - replace with Ministério da Saúde, e-Gestor AB coverage reports",n/a,true
+BR-AL-POCO_DAS_TRINCHEIRAS,Poço das Trincheiras,primary_care_coverage,0.7309,,"PLACEHOLDER - replace with Ministério da Saúde, e-Gestor AB coverage reports",n/a,true
+BR-AL-PAO_DE_ACUCAR,Pão de Açúcar,primary_care_coverage,0.8174,,"PLACEHOLDER - replace with Ministério da Saúde, e-Gestor AB coverage reports",n/a,true
+BR-AL-QUEBRANGULO,Quebrangulo,primary_care_coverage,0.8225,,"PLACEHOLDER - replace with Ministério da Saúde, e-Gestor AB coverage reports",n/a,true
+BR-AL-RIO_LARGO,Rio Largo,primary_care_coverage,0.9289,,"PLACEHOLDER - replace with Ministério da Saúde, e-Gestor AB coverage reports",n/a,true
+BR-AL-ROTEIRO,Roteiro,primary_care_coverage,0.8448,,"PLACEHOLDER - replace with Ministério da Saúde, e-Gestor AB coverage reports",n/a,true
+BR-AL-SANTA_LUZIA_DO_NORTE,Santa Luzia do Norte,primary_care_coverage,0.7858,,"PLACEHOLDER - replace with Ministério da Saúde, e-Gestor AB coverage reports",n/a,true
+BR-AL-SANTANA_DO_IPANEMA,Santana do Ipanema,primary_care_coverage,0.8287,,"PLACEHOLDER - replace with Ministério da Saúde, e-Gestor AB coverage reports",n/a,true
+BR-AL-SANTANA_DO_MUNDAU,Santana do Mundaú,primary_care_coverage,0.8438,,"PLACEHOLDER - replace with Ministério da Saúde, e-Gestor AB coverage reports",n/a,true
+BR-AL-SATUBA,Satuba,primary_care_coverage,0.9351,,"PLACEHOLDER - replace with Ministério da Saúde, e-Gestor AB coverage reports",n/a,true
+BR-AL-SENADOR_RUI_PALMEIRA,Senador Rui Palmeira,primary_care_coverage,0.7570,,"PLACEHOLDER - replace with Ministério da Saúde, e-Gestor AB coverage reports",n/a,true
+BR-AL-SAO_BRAS,São Brás,primary_care_coverage,0.8614,,"PLACEHOLDER - replace with Ministério da Saúde, e-Gestor AB coverage reports",n/a,true
+BR-AL-SAO_JOSE_DA_LAJE,São José da Laje,primary_care_coverage,0.8139,,"PLACEHOLDER - replace with Ministério da Saúde, e-Gestor AB coverage reports",n/a,true
+BR-AL-SAO_JOSE_DA_TAPERA,São José da Tapera,primary_care_coverage,0.7003,,"PLACEHOLDER - replace with Ministério da Saúde, e-Gestor AB coverage reports",n/a,true
+BR-AL-SAO_LUIS_DO_QUITUNDE,São Luís do Quitunde,primary_care_coverage,0.8188,,"PLACEHOLDER - replace with Ministério da Saúde, e-Gestor AB coverage reports",n/a,true
+BR-AL-SAO_MIGUEL_DOS_CAMPOS,São Miguel dos Campos,primary_care_coverage,0.8165,,"PLACEHOLDER - replace with Ministério da Saúde, e-Gestor AB coverage reports",n/a,true
+BR-AL-SAO_MIGUEL_DOS_MILAGRES,São Miguel dos Milagres,primary_care_coverage,0.8301,,"PLACEHOLDER - replace with Ministério da Saúde, e-Gestor AB coverage reports",n/a,true
+BR-AL-SAO_SEBASTIAO,São Sebastião,primary_care_coverage,0.7860,,"PLACEHOLDER - replace with Ministério da Saúde, e-Gestor AB coverage reports",n/a,true
+BR-AL-TANQUE_DARCA,Tanque d'Arca,primary_care_coverage,0.8793,,"PLACEHOLDER - replace with Ministério da Saúde, e-Gestor AB coverage reports",n/a,true
+BR-AL-TAQUARANA,Taquarana,primary_care_coverage,0.8492,,"PLACEHOLDER - replace with Ministério da Saúde, e-Gestor AB coverage reports",n/a,true
+BR-AL-TEOTONIO_VILELA,Teotônio Vilela,primary_care_coverage,0.8302,,"PLACEHOLDER - replace with Ministério da Saúde, e-Gestor AB coverage reports",n/a,true
+BR-AL-TRAIPU,Traipu,primary_care_coverage,0.8389,,"PLACEHOLDER - replace with Ministério da Saúde, e-Gestor AB coverage reports",n/a,true
+BR-AL-UNIAO_DOS_PALMARES,União dos Palmares,primary_care_coverage,0.8561,,"PLACEHOLDER - replace with Ministério da Saúde, e-Gestor AB coverage reports",n/a,true
+BR-AL-VICOSA,Viçosa,primary_care_coverage,0.8175,,"PLACEHOLDER - replace with Ministério da Saúde, e-Gestor AB coverage reports",n/a,true
+BR-AL-AGUA_BRANCA,Água Branca,primary_care_coverage,0.7644,,"PLACEHOLDER - replace with Ministério da Saúde, e-Gestor AB coverage reports",n/a,true
+BR-AL-ANADIA,Anadia,school_infra_gap,0.2422,,PLACEHOLDER - replace with INEP Censo Escolar microdata,n/a,true
+BR-AL-ARAPIRACA,Arapiraca,school_infra_gap,0.1375,,PLACEHOLDER - replace with INEP Censo Escolar microdata,n/a,true
+BR-AL-ATALAIA,Atalaia,school_infra_gap,0.2066,,PLACEHOLDER - replace with INEP Censo Escolar microdata,n/a,true
+BR-AL-BARRA_DE_SANTO_ANTONIO,Barra de Santo Antônio,school_infra_gap,0.3049,,PLACEHOLDER - replace with INEP Censo Escolar microdata,n/a,true
+BR-AL-BARRA_DE_SAO_MIGUEL,Barra de São Miguel,school_infra_gap,0.1438,,PLACEHOLDER - replace with INEP Censo Escolar microdata,n/a,true
+BR-AL-BATALHA,Batalha,school_infra_gap,0.2513,,PLACEHOLDER - replace with INEP Censo Escolar microdata,n/a,true
+BR-AL-BELO_MONTE,Belo Monte,school_infra_gap,0.4151,,PLACEHOLDER - replace with INEP Censo Escolar microdata,n/a,true
+BR-AL-BELEM,Belém,school_infra_gap,0.2615,,PLACEHOLDER - replace with INEP Censo Escolar microdata,n/a,true
+BR-AL-BOCA_DA_MATA,Boca da Mata,school_infra_gap,0.1803,,PLACEHOLDER - replace with INEP Censo Escolar microdata,n/a,true
+BR-AL-BRANQUINHA,Branquinha,school_infra_gap,0.2706,,PLACEHOLDER - replace with INEP Censo Escolar microdata,n/a,true
+BR-AL-CACIMBINHAS,Cacimbinhas,school_infra_gap,0.1961,,PLACEHOLDER - replace with INEP Censo Escolar microdata,n/a,true
+BR-AL-CAJUEIRO,Cajueiro,school_infra_gap,0.1864,,PLACEHOLDER - replace with INEP Censo Escolar microdata,n/a,true
+BR-AL-CAMPESTRE,Campestre,school_infra_gap,0.2206,,PLACEHOLDER - replace with INEP Censo Escolar microdata,n/a,true
+BR-AL-CAMPO_ALEGRE,Campo Alegre,school_infra_gap,0.2375,,PLACEHOLDER - replace with INEP Censo Escolar microdata,n/a,true
+BR-AL-CAMPO_GRANDE,Campo Grande,school_infra_gap,0.2704,,PLACEHOLDER - replace with INEP Censo Escolar microdata,n/a,true
+BR-AL-CANAPI,Canapi,school_infra_gap,0.3360,,PLACEHOLDER - replace with INEP Censo Escolar microdata,n/a,true
+BR-AL-CAPELA,Capela,school_infra_gap,0.2446,,PLACEHOLDER - replace with INEP Censo Escolar microdata,n/a,true
+BR-AL-CARNEIROS,Carneiros,school_infra_gap,0.4000,,PLACEHOLDER - replace with INEP Censo Escolar microdata,n/a,true
+BR-AL-CHA_PRETA,Chã Preta,school_infra_gap,0.2736,,PLACEHOLDER - replace with INEP Censo Escolar microdata,n/a,true
+BR-AL-COITE_DO_NOIA,Coité do Nóia,school_infra_gap,0.3112,,PLACEHOLDER - replace with INEP Censo Escolar microdata,n/a,true
+BR-AL-COLONIA_LEOPOLDINA,Colônia Leopoldina,school_infra_gap,0.3207,,PLACEHOLDER - replace with INEP Censo Escolar microdata,n/a,true
+BR-AL-COQUEIRO_SECO,Coqueiro Seco,school_infra_gap,0.2844,,PLACEHOLDER - replace with INEP Censo Escolar microdata,n/a,true
+BR-AL-CORURIPE,Coruripe,school_infra_gap,0.2557,,PLACEHOLDER - replace with INEP Censo Escolar microdata,n/a,true
+BR-AL-CRAIBAS,Craíbas,school_infra_gap,0.2180,,PLACEHOLDER - replace with INEP Censo Escolar microdata,n/a,true
+BR-AL-DELMIRO_GOUVEIA,Delmiro Gouveia,school_infra_gap,0.2979,,PLACEHOLDER - replace with INEP Censo Escolar microdata,n/a,true
+BR-AL-DOIS_RIACHOS,Dois Riachos,school_infra_gap,0.3635,,PLACEHOLDER - replace with INEP Censo Escolar microdata,n/a,true
+BR-AL-ESTRELA_DE_ALAGOAS,Estrela de Alagoas,school_infra_gap,0.2609,,PLACEHOLDER - replace with INEP Censo Escolar microdata,n/a,true
+BR-AL-FEIRA_GRANDE,Feira Grande,school_infra_gap,0.2995,,PLACEHOLDER - replace with INEP Censo Escolar microdata,n/a,true
+BR-AL-FELIZ_DESERTO,Feliz Deserto,school_infra_gap,0.2749,,PLACEHOLDER - replace with INEP Censo Escolar microdata,n/a,true
+BR-AL-FLEXEIRAS,Flexeiras,school_infra_gap,0.2666,,PLACEHOLDER - replace with INEP Censo Escolar microdata,n/a,true
+BR-AL-GIRAU_DO_PONCIANO,Girau do Ponciano,school_infra_gap,0.4176,,PLACEHOLDER - replace with INEP Censo Escolar microdata,n/a,true
+BR-AL-IBATEGUARA,Ibateguara,school_infra_gap,0.2409,,PLACEHOLDER - replace with INEP Censo Escolar microdata,n/a,true
+BR-AL-IGACI,Igaci,school_infra_gap,0.2197,,PLACEHOLDER - replace with INEP Censo Escolar microdata,n/a,true
+BR-AL-IGREJA_NOVA,Igreja Nova,school_infra_gap,0.2425,,PLACEHOLDER - replace with INEP Censo Escolar microdata,n/a,true
+BR-AL-INHAPI,Inhapi,school_infra_gap,0.4167,,PLACEHOLDER - replace with INEP Censo Escolar microdata,n/a,true
+BR-AL-JACARE_DOS_HOMENS,Jacaré dos Homens,school_infra_gap,0.3010,,PLACEHOLDER - replace with INEP Censo Escolar microdata,n/a,true
+BR-AL-JACUIPE,Jacuípe,school_infra_gap,0.2525,,PLACEHOLDER - replace with INEP Censo Escolar microdata,n/a,true
+BR-AL-JAPARATINGA,Japaratinga,school_infra_gap,0.2878,,PLACEHOLDER - replace with INEP Censo Escolar microdata,n/a,true
+BR-AL-JARAMATAIA,Jaramataia,school_infra_gap,0.4652,,PLACEHOLDER - replace with INEP Censo Escolar microdata,n/a,true
+BR-AL-JEQUIA_DA_PRAIA,Jequiá da Praia,school_infra_gap,0.2972,,PLACEHOLDER - replace with INEP Censo Escolar microdata,n/a,true
+BR-AL-JOAQUIM_GOMES,Joaquim Gomes,school_infra_gap,0.2747,,PLACEHOLDER - replace with INEP Censo Escolar microdata,n/a,true
+BR-AL-JUNDIA,Jundiá,school_infra_gap,0.2694,,PLACEHOLDER - replace with INEP Censo Escolar microdata,n/a,true
+BR-AL-JUNQUEIRO,Junqueiro,school_infra_gap,0.2562,,PLACEHOLDER - replace with INEP Censo Escolar microdata,n/a,true
+BR-AL-LAGOA_DA_CANOA,Lagoa da Canoa,school_infra_gap,0.2499,,PLACEHOLDER - replace with INEP Censo Escolar microdata,n/a,true
+BR-AL-LIMOEIRO_DE_ANADIA,Limoeiro de Anadia,school_infra_gap,0.2247,,PLACEHOLDER - replace with INEP Censo Escolar microdata,n/a,true
+BR-AL-MACEIO,Maceió,school_infra_gap,0.1108,,PLACEHOLDER - replace with INEP Censo Escolar microdata,n/a,true
+BR-AL-MAJOR_ISIDORO,Major Isidoro,school_infra_gap,0.2447,,PLACEHOLDER - replace with INEP Censo Escolar microdata,n/a,true
+BR-AL-MAR_VERMELHO,Mar Vermelho,school_infra_gap,0.2489,,PLACEHOLDER - replace with INEP Censo Escolar microdata,n/a,true
+BR-AL-MARAGOGI,Maragogi,school_infra_gap,0.2628,,PLACEHOLDER - replace with INEP Censo Escolar microdata,n/a,true
+BR-AL-MARAVILHA,Maravilha,school_infra_gap,0.3716,,PLACEHOLDER - replace with INEP Censo Escolar microdata,n/a,true
+BR-AL-MARECHAL_DEODORO,Marechal Deodoro,school_infra_gap,0.1427,,PLACEHOLDER - replace with INEP Censo Escolar microdata,n/a,true
+BR-AL-MARIBONDO,Maribondo,school_infra_gap,0.2345,,PLACEHOLDER - replace with INEP Censo Escolar microdata,n/a,true
+BR-AL-MATA_GRANDE,Mata Grande,school_infra_gap,0.4012,,PLACEHOLDER - replace with INEP Censo Escolar microdata,n/a,true
+BR-AL-MATRIZ_DE_CAMARAGIBE,Matriz de Camaragibe,school_infra_gap,0.2958,,PLACEHOLDER - replace with INEP Censo Escolar microdata,n/a,true
+BR-AL-MESSIAS,Messias,school_infra_gap,0.2251,,PLACEHOLDER - replace with INEP Censo Escolar microdata,n/a,true
+BR-AL-MINADOR_DO_NEGRAO,Minador do Negrão,school_infra_gap,0.2457,,PLACEHOLDER - replace with INEP Censo Escolar microdata,n/a,true
+BR-AL-MONTEIROPOLIS,Monteirópolis,school_infra_gap,0.2551,,PLACEHOLDER - replace with INEP Censo Escolar microdata,n/a,true
+BR-AL-MURICI,Murici,school_infra_gap,0.2772,,PLACEHOLDER - replace with INEP Censo Escolar microdata,n/a,true
+BR-AL-NOVO_LINO,Novo Lino,school_infra_gap,0.2212,,PLACEHOLDER - replace with INEP Censo Escolar microdata,n/a,true
+BR-AL-OLHO_DAGUA_GRANDE,Olho d'Água Grande,school_infra_gap,0.2534,,PLACEHOLDER - replace with INEP Censo Escolar microdata,n/a,true
+BR-AL-OLHO_DAGUA_DAS_FLORES,Olho d'Água das Flores,school_infra_gap,0.3093,,PLACEHOLDER - replace with INEP Censo Escolar microdata,n/a,true
+BR-AL-OLHO_DAGUA_DO_CASADO,Olho d'Água do Casado,school_infra_gap,0.4356,,PLACEHOLDER - replace with INEP Censo Escolar microdata,n/a,true
+BR-AL-OLIVENCA,Olivença,school_infra_gap,0.3808,,PLACEHOLDER - replace with INEP Censo Escolar microdata,n/a,true
+BR-AL-OURO_BRANCO,Ouro Branco,school_infra_gap,0.3702,,PLACEHOLDER - replace with INEP Censo Escolar microdata,n/a,true
+BR-AL-PALESTINA,Palestina,school_infra_gap,0.2727,,PLACEHOLDER - replace with INEP Censo Escolar microdata,n/a,true
+BR-AL-PALMEIRA_DOS_INDIOS,Palmeira dos Índios,school_infra_gap,0.2204,,PLACEHOLDER - replace with INEP Censo Escolar microdata,n/a,true
+BR-AL-PARICONHA,Pariconha,school_infra_gap,0.3058,,PLACEHOLDER - replace with INEP Censo Escolar microdata,n/a,true
+BR-AL-PARIPUEIRA,Paripueira,school_infra_gap,0.2449,,PLACEHOLDER - replace with INEP Censo Escolar microdata,n/a,true
+BR-AL-PASSO_DE_CAMARAGIBE,Passo de Camaragibe,school_infra_gap,0.3307,,PLACEHOLDER - replace with INEP Censo Escolar microdata,n/a,true
+BR-AL-PAULO_JACINTO,Paulo Jacinto,school_infra_gap,0.2402,,PLACEHOLDER - replace with INEP Censo Escolar microdata,n/a,true
+BR-AL-PENEDO,Penedo,school_infra_gap,0.2155,,PLACEHOLDER - replace with INEP Censo Escolar microdata,n/a,true
+BR-AL-PIACABUCU,Piaçabuçu,school_infra_gap,0.3131,,PLACEHOLDER - replace with INEP Censo Escolar microdata,n/a,true
+BR-AL-PILAR,Pilar,school_infra_gap,0.2894,,PLACEHOLDER - replace with INEP Censo Escolar microdata,n/a,true
+BR-AL-PINDOBA,Pindoba,school_infra_gap,0.2421,,PLACEHOLDER - replace with INEP Censo Escolar microdata,n/a,true
+BR-AL-PIRANHAS,Piranhas,school_infra_gap,0.2442,,PLACEHOLDER - replace with INEP Censo Escolar microdata,n/a,true
+BR-AL-PORTO_CALVO,Porto Calvo,school_infra_gap,0.2151,,PLACEHOLDER - replace with INEP Censo Escolar microdata,n/a,true
+BR-AL-PORTO_REAL_DO_COLEGIO,Porto Real do Colégio,school_infra_gap,0.1998,,PLACEHOLDER - replace with INEP Censo Escolar microdata,n/a,true
+BR-AL-PORTO_DE_PEDRAS,Porto de Pedras,school_infra_gap,0.3151,,PLACEHOLDER - replace with INEP Censo Escolar microdata,n/a,true
+BR-AL-POCO_DAS_TRINCHEIRAS,Poço das Trincheiras,school_infra_gap,0.4090,,PLACEHOLDER - replace with INEP Censo Escolar microdata,n/a,true
+BR-AL-PAO_DE_ACUCAR,Pão de Açúcar,school_infra_gap,0.2955,,PLACEHOLDER - replace with INEP Censo Escolar microdata,n/a,true
+BR-AL-QUEBRANGULO,Quebrangulo,school_infra_gap,0.2365,,PLACEHOLDER - replace with INEP Censo Escolar microdata,n/a,true
+BR-AL-RIO_LARGO,Rio Largo,school_infra_gap,0.1475,,PLACEHOLDER - replace with INEP Censo Escolar microdata,n/a,true
+BR-AL-ROTEIRO,Roteiro,school_infra_gap,0.3114,,PLACEHOLDER - replace with INEP Censo Escolar microdata,n/a,true
+BR-AL-SANTA_LUZIA_DO_NORTE,Santa Luzia do Norte,school_infra_gap,0.2119,,PLACEHOLDER - replace with INEP Censo Escolar microdata,n/a,true
+BR-AL-SANTANA_DO_IPANEMA,Santana do Ipanema,school_infra_gap,0.2820,,PLACEHOLDER - replace with INEP Censo Escolar microdata,n/a,true
+BR-AL-SANTANA_DO_MUNDAU,Santana do Mundaú,school_infra_gap,0.2084,,PLACEHOLDER - replace with INEP Censo Escolar microdata,n/a,true
+BR-AL-SATUBA,Satuba,school_infra_gap,0.0814,,PLACEHOLDER - replace with INEP Censo Escolar microdata,n/a,true
+BR-AL-SENADOR_RUI_PALMEIRA,Senador Rui Palmeira,school_infra_gap,0.4486,,PLACEHOLDER - replace with INEP Censo Escolar microdata,n/a,true
+BR-AL-SAO_BRAS,São Brás,school_infra_gap,0.2828,,PLACEHOLDER - replace with INEP Censo Escolar microdata,n/a,true
+BR-AL-SAO_JOSE_DA_LAJE,São José da Laje,school_infra_gap,0.2279,,PLACEHOLDER - replace with INEP Censo Escolar microdata,n/a,true
+BR-AL-SAO_JOSE_DA_TAPERA,São José da Tapera,school_infra_gap,0.4521,,PLACEHOLDER - replace with INEP Censo Escolar microdata,n/a,true
+BR-AL-SAO_LUIS_DO_QUITUNDE,São Luís do Quitunde,school_infra_gap,0.2062,,PLACEHOLDER - replace with INEP Censo Escolar microdata,n/a,true
+BR-AL-SAO_MIGUEL_DOS_CAMPOS,São Miguel dos Campos,school_infra_gap,0.2682,,PLACEHOLDER - replace with INEP Censo Escolar microdata,n/a,true
+BR-AL-SAO_MIGUEL_DOS_MILAGRES,São Miguel dos Milagres,school_infra_gap,0.2576,,PLACEHOLDER - replace with INEP Censo Escolar microdata,n/a,true
+BR-AL-SAO_SEBASTIAO,São Sebastião,school_infra_gap,0.2726,,PLACEHOLDER - replace with INEP Censo Escolar microdata,n/a,true
+BR-AL-TANQUE_DARCA,Tanque d'Arca,school_infra_gap,0.2414,,PLACEHOLDER - replace with INEP Censo Escolar microdata,n/a,true
+BR-AL-TAQUARANA,Taquarana,school_infra_gap,0.2518,,PLACEHOLDER - replace with INEP Censo Escolar microdata,n/a,true
+BR-AL-TEOTONIO_VILELA,Teotônio Vilela,school_infra_gap,0.3024,,PLACEHOLDER - replace with INEP Censo Escolar microdata,n/a,true
+BR-AL-TRAIPU,Traipu,school_infra_gap,0.4354,,PLACEHOLDER - replace with INEP Censo Escolar microdata,n/a,true
+BR-AL-UNIAO_DOS_PALMARES,União dos Palmares,school_infra_gap,0.2760,,PLACEHOLDER - replace with INEP Censo Escolar microdata,n/a,true
+BR-AL-VICOSA,Viçosa,school_infra_gap,0.1869,,PLACEHOLDER - replace with INEP Censo Escolar microdata,n/a,true
+BR-AL-AGUA_BRANCA,Água Branca,school_infra_gap,0.3645,,PLACEHOLDER - replace with INEP Censo Escolar microdata,n/a,true
+BR-AL-ANADIA,Anadia,electricity_access,0.9827,,PLACEHOLDER - replace with IBGE Censo 2022 / PNAD Contínua,n/a,true
+BR-AL-ARAPIRACA,Arapiraca,electricity_access,0.9568,,PLACEHOLDER - replace with IBGE Censo 2022 / PNAD Contínua,n/a,true
+BR-AL-ATALAIA,Atalaia,electricity_access,1.0000,,PLACEHOLDER - replace with IBGE Censo 2022 / PNAD Contínua,n/a,true
+BR-AL-BARRA_DE_SANTO_ANTONIO,Barra de Santo Antônio,electricity_access,0.9754,,PLACEHOLDER - replace with IBGE Censo 2022 / PNAD Contínua,n/a,true
+BR-AL-BARRA_DE_SAO_MIGUEL,Barra de São Miguel,electricity_access,1.0000,,PLACEHOLDER - replace with IBGE Censo 2022 / PNAD Contínua,n/a,true
+BR-AL-BATALHA,Batalha,electricity_access,1.0000,,PLACEHOLDER - replace with IBGE Censo 2022 / PNAD Contínua,n/a,true
+BR-AL-BELO_MONTE,Belo Monte,electricity_access,0.9352,,PLACEHOLDER - replace with IBGE Censo 2022 / PNAD Contínua,n/a,true
+BR-AL-BELEM,Belém,electricity_access,1.0000,,PLACEHOLDER - replace with IBGE Censo 2022 / PNAD Contínua,n/a,true
+BR-AL-BOCA_DA_MATA,Boca da Mata,electricity_access,1.0000,,PLACEHOLDER - replace with IBGE Censo 2022 / PNAD Contínua,n/a,true
+BR-AL-BRANQUINHA,Branquinha,electricity_access,0.9135,,PLACEHOLDER - replace with IBGE Censo 2022 / PNAD Contínua,n/a,true
+BR-AL-CACIMBINHAS,Cacimbinhas,electricity_access,1.0000,,PLACEHOLDER - replace with IBGE Censo 2022 / PNAD Contínua,n/a,true
+BR-AL-CAJUEIRO,Cajueiro,electricity_access,0.9928,,PLACEHOLDER - replace with IBGE Censo 2022 / PNAD Contínua,n/a,true
+BR-AL-CAMPESTRE,Campestre,electricity_access,0.9783,,PLACEHOLDER - replace with IBGE Censo 2022 / PNAD Contínua,n/a,true
+BR-AL-CAMPO_ALEGRE,Campo Alegre,electricity_access,0.9688,,PLACEHOLDER - replace with IBGE Censo 2022 / PNAD Contínua,n/a,true
+BR-AL-CAMPO_GRANDE,Campo Grande,electricity_access,0.9840,,PLACEHOLDER - replace with IBGE Censo 2022 / PNAD Contínua,n/a,true
+BR-AL-CANAPI,Canapi,electricity_access,0.9788,,PLACEHOLDER - replace with IBGE Censo 2022 / PNAD Contínua,n/a,true
+BR-AL-CAPELA,Capela,electricity_access,0.9586,,PLACEHOLDER - replace with IBGE Censo 2022 / PNAD Contínua,n/a,true
+BR-AL-CARNEIROS,Carneiros,electricity_access,0.9507,,PLACEHOLDER - replace with IBGE Censo 2022 / PNAD Contínua,n/a,true
+BR-AL-CHA_PRETA,Chã Preta,electricity_access,0.9862,,PLACEHOLDER - replace with IBGE Censo 2022 / PNAD Contínua,n/a,true
+BR-AL-COITE_DO_NOIA,Coité do Nóia,electricity_access,0.9784,,PLACEHOLDER - replace with IBGE Censo 2022 / PNAD Contínua,n/a,true
+BR-AL-COLONIA_LEOPOLDINA,Colônia Leopoldina,electricity_access,0.9828,,PLACEHOLDER - replace with IBGE Censo 2022 / PNAD Contínua,n/a,true
+BR-AL-COQUEIRO_SECO,Coqueiro Seco,electricity_access,1.0000,,PLACEHOLDER - replace with IBGE Censo 2022 / PNAD Contínua,n/a,true
+BR-AL-CORURIPE,Coruripe,electricity_access,0.9410,,PLACEHOLDER - replace with IBGE Censo 2022 / PNAD Contínua,n/a,true
+BR-AL-CRAIBAS,Craíbas,electricity_access,0.9143,,PLACEHOLDER - replace with IBGE Censo 2022 / PNAD Contínua,n/a,true
+BR-AL-DELMIRO_GOUVEIA,Delmiro Gouveia,electricity_access,0.9834,,PLACEHOLDER - replace with IBGE Censo 2022 / PNAD Contínua,n/a,true
+BR-AL-DOIS_RIACHOS,Dois Riachos,electricity_access,1.0000,,PLACEHOLDER - replace with IBGE Censo 2022 / PNAD Contínua,n/a,true
+BR-AL-ESTRELA_DE_ALAGOAS,Estrela de Alagoas,electricity_access,1.0000,,PLACEHOLDER - replace with IBGE Censo 2022 / PNAD Contínua,n/a,true
+BR-AL-FEIRA_GRANDE,Feira Grande,electricity_access,0.9909,,PLACEHOLDER - replace with IBGE Censo 2022 / PNAD Contínua,n/a,true
+BR-AL-FELIZ_DESERTO,Feliz Deserto,electricity_access,1.0000,,PLACEHOLDER - replace with IBGE Censo 2022 / PNAD Contínua,n/a,true
+BR-AL-FLEXEIRAS,Flexeiras,electricity_access,0.9754,,PLACEHOLDER - replace with IBGE Censo 2022 / PNAD Contínua,n/a,true
+BR-AL-GIRAU_DO_PONCIANO,Girau do Ponciano,electricity_access,0.9615,,PLACEHOLDER - replace with IBGE Censo 2022 / PNAD Contínua,n/a,true
+BR-AL-IBATEGUARA,Ibateguara,electricity_access,0.9866,,PLACEHOLDER - replace with IBGE Censo 2022 / PNAD Contínua,n/a,true
+BR-AL-IGACI,Igaci,electricity_access,0.9680,,PLACEHOLDER - replace with IBGE Censo 2022 / PNAD Contínua,n/a,true
+BR-AL-IGREJA_NOVA,Igreja Nova,electricity_access,0.9172,,PLACEHOLDER - replace with IBGE Censo 2022 / PNAD Contínua,n/a,true
+BR-AL-INHAPI,Inhapi,electricity_access,0.9549,,PLACEHOLDER - replace with IBGE Censo 2022 / PNAD Contínua,n/a,true
+BR-AL-JACARE_DOS_HOMENS,Jacaré dos Homens,electricity_access,0.9077,,PLACEHOLDER - replace with IBGE Censo 2022 / PNAD Contínua,n/a,true
+BR-AL-JACUIPE,Jacuípe,electricity_access,0.9664,,PLACEHOLDER - replace with IBGE Censo 2022 / PNAD Contínua,n/a,true
+BR-AL-JAPARATINGA,Japaratinga,electricity_access,0.9425,,PLACEHOLDER - replace with IBGE Censo 2022 / PNAD Contínua,n/a,true
+BR-AL-JARAMATAIA,Jaramataia,electricity_access,0.9495,,PLACEHOLDER - replace with IBGE Censo 2022 / PNAD Contínua,n/a,true
+BR-AL-JEQUIA_DA_PRAIA,Jequiá da Praia,electricity_access,0.9307,,PLACEHOLDER - replace with IBGE Censo 2022 / PNAD Contínua,n/a,true
+BR-AL-JOAQUIM_GOMES,Joaquim Gomes,electricity_access,0.9483,,PLACEHOLDER - replace with IBGE Censo 2022 / PNAD Contínua,n/a,true
+BR-AL-JUNDIA,Jundiá,electricity_access,0.9706,,PLACEHOLDER - replace with IBGE Censo 2022 / PNAD Contínua,n/a,true
+BR-AL-JUNQUEIRO,Junqueiro,electricity_access,0.9504,,PLACEHOLDER - replace with IBGE Censo 2022 / PNAD Contínua,n/a,true
+BR-AL-LAGOA_DA_CANOA,Lagoa da Canoa,electricity_access,0.9480,,PLACEHOLDER - replace with IBGE Censo 2022 / PNAD Contínua,n/a,true
+BR-AL-LIMOEIRO_DE_ANADIA,Limoeiro de Anadia,electricity_access,0.9563,,PLACEHOLDER - replace with IBGE Censo 2022 / PNAD Contínua,n/a,true
+BR-AL-MACEIO,Maceió,electricity_access,1.0000,,PLACEHOLDER - replace with IBGE Censo 2022 / PNAD Contínua,n/a,true
+BR-AL-MAJOR_ISIDORO,Major Isidoro,electricity_access,0.9236,,PLACEHOLDER - replace with IBGE Censo 2022 / PNAD Contínua,n/a,true
+BR-AL-MAR_VERMELHO,Mar Vermelho,electricity_access,0.9224,,PLACEHOLDER - replace with IBGE Censo 2022 / PNAD Contínua,n/a,true
+BR-AL-MARAGOGI,Maragogi,electricity_access,0.9658,,PLACEHOLDER - replace with IBGE Censo 2022 / PNAD Contínua,n/a,true
+BR-AL-MARAVILHA,Maravilha,electricity_access,0.9334,,PLACEHOLDER - replace with IBGE Censo 2022 / PNAD Contínua,n/a,true
+BR-AL-MARECHAL_DEODORO,Marechal Deodoro,electricity_access,0.9779,,PLACEHOLDER - replace with IBGE Censo 2022 / PNAD Contínua,n/a,true
+BR-AL-MARIBONDO,Maribondo,electricity_access,1.0000,,PLACEHOLDER - replace with IBGE Censo 2022 / PNAD Contínua,n/a,true
+BR-AL-MATA_GRANDE,Mata Grande,electricity_access,0.9869,,PLACEHOLDER - replace with IBGE Censo 2022 / PNAD Contínua,n/a,true
+BR-AL-MATRIZ_DE_CAMARAGIBE,Matriz de Camaragibe,electricity_access,1.0000,,PLACEHOLDER - replace with IBGE Censo 2022 / PNAD Contínua,n/a,true
+BR-AL-MESSIAS,Messias,electricity_access,0.9656,,PLACEHOLDER - replace with IBGE Censo 2022 / PNAD Contínua,n/a,true
+BR-AL-MINADOR_DO_NEGRAO,Minador do Negrão,electricity_access,0.9813,,PLACEHOLDER - replace with IBGE Censo 2022 / PNAD Contínua,n/a,true
+BR-AL-MONTEIROPOLIS,Monteirópolis,electricity_access,0.9405,,PLACEHOLDER - replace with IBGE Censo 2022 / PNAD Contínua,n/a,true
+BR-AL-MURICI,Murici,electricity_access,0.9669,,PLACEHOLDER - replace with IBGE Censo 2022 / PNAD Contínua,n/a,true
+BR-AL-NOVO_LINO,Novo Lino,electricity_access,1.0000,,PLACEHOLDER - replace with IBGE Censo 2022 / PNAD Contínua,n/a,true
+BR-AL-OLHO_DAGUA_GRANDE,Olho d'Água Grande,electricity_access,0.9604,,PLACEHOLDER - replace with IBGE Censo 2022 / PNAD Contínua,n/a,true
+BR-AL-OLHO_DAGUA_DAS_FLORES,Olho d'Água das Flores,electricity_access,0.9721,,PLACEHOLDER - replace with IBGE Censo 2022 / PNAD Contínua,n/a,true
+BR-AL-OLHO_DAGUA_DO_CASADO,Olho d'Água do Casado,electricity_access,0.9060,,PLACEHOLDER - replace with IBGE Censo 2022 / PNAD Contínua,n/a,true
+BR-AL-OLIVENCA,Olivença,electricity_access,0.9426,,PLACEHOLDER - replace with IBGE Censo 2022 / PNAD Contínua,n/a,true
+BR-AL-OURO_BRANCO,Ouro Branco,electricity_access,0.9483,,PLACEHOLDER - replace with IBGE Censo 2022 / PNAD Contínua,n/a,true
+BR-AL-PALESTINA,Palestina,electricity_access,0.9541,,PLACEHOLDER - replace with IBGE Censo 2022 / PNAD Contínua,n/a,true
+BR-AL-PALMEIRA_DOS_INDIOS,Palmeira dos Índios,electricity_access,0.9885,,PLACEHOLDER - replace with IBGE Censo 2022 / PNAD Contínua,n/a,true
+BR-AL-PARICONHA,Pariconha,electricity_access,1.0000,,PLACEHOLDER - replace with IBGE Censo 2022 / PNAD Contínua,n/a,true
+BR-AL-PARIPUEIRA,Paripueira,electricity_access,0.9272,,PLACEHOLDER - replace with IBGE Censo 2022 / PNAD Contínua,n/a,true
+BR-AL-PASSO_DE_CAMARAGIBE,Passo de Camaragibe,electricity_access,0.9907,,PLACEHOLDER - replace with IBGE Censo 2022 / PNAD Contínua,n/a,true
+BR-AL-PAULO_JACINTO,Paulo Jacinto,electricity_access,0.9718,,PLACEHOLDER - replace with IBGE Censo 2022 / PNAD Contínua,n/a,true
+BR-AL-PENEDO,Penedo,electricity_access,0.9448,,PLACEHOLDER - replace with IBGE Censo 2022 / PNAD Contínua,n/a,true
+BR-AL-PIACABUCU,Piaçabuçu,electricity_access,0.9788,,PLACEHOLDER - replace with IBGE Censo 2022 / PNAD Contínua,n/a,true
+BR-AL-PILAR,Pilar,electricity_access,0.9485,,PLACEHOLDER - replace with IBGE Censo 2022 / PNAD Contínua,n/a,true
+BR-AL-PINDOBA,Pindoba,electricity_access,0.9703,,PLACEHOLDER - replace with IBGE Censo 2022 / PNAD Contínua,n/a,true
+BR-AL-PIRANHAS,Piranhas,electricity_access,0.9537,,PLACEHOLDER - replace with IBGE Censo 2022 / PNAD Contínua,n/a,true
+BR-AL-PORTO_CALVO,Porto Calvo,electricity_access,1.0000,,PLACEHOLDER - replace with IBGE Censo 2022 / PNAD Contínua,n/a,true
+BR-AL-PORTO_REAL_DO_COLEGIO,Porto Real do Colégio,electricity_access,1.0000,,PLACEHOLDER - replace with IBGE Censo 2022 / PNAD Contínua,n/a,true
+BR-AL-PORTO_DE_PEDRAS,Porto de Pedras,electricity_access,0.9740,,PLACEHOLDER - replace with IBGE Censo 2022 / PNAD Contínua,n/a,true
+BR-AL-POCO_DAS_TRINCHEIRAS,Poço das Trincheiras,electricity_access,0.9731,,PLACEHOLDER - replace with IBGE Censo 2022 / PNAD Contínua,n/a,true
+BR-AL-PAO_DE_ACUCAR,Pão de Açúcar,electricity_access,1.0000,,PLACEHOLDER - replace with IBGE Censo 2022 / PNAD Contínua,n/a,true
+BR-AL-QUEBRANGULO,Quebrangulo,electricity_access,0.9606,,PLACEHOLDER - replace with IBGE Censo 2022 / PNAD Contínua,n/a,true
+BR-AL-RIO_LARGO,Rio Largo,electricity_access,1.0000,,PLACEHOLDER - replace with IBGE Censo 2022 / PNAD Contínua,n/a,true
+BR-AL-ROTEIRO,Roteiro,electricity_access,0.9694,,PLACEHOLDER - replace with IBGE Censo 2022 / PNAD Contínua,n/a,true
+BR-AL-SANTA_LUZIA_DO_NORTE,Santa Luzia do Norte,electricity_access,0.9858,,PLACEHOLDER - replace with IBGE Censo 2022 / PNAD Contínua,n/a,true
+BR-AL-SANTANA_DO_IPANEMA,Santana do Ipanema,electricity_access,0.9696,,PLACEHOLDER - replace with IBGE Censo 2022 / PNAD Contínua,n/a,true
+BR-AL-SANTANA_DO_MUNDAU,Santana do Mundaú,electricity_access,0.9401,,PLACEHOLDER - replace with IBGE Censo 2022 / PNAD Contínua,n/a,true
+BR-AL-SATUBA,Satuba,electricity_access,1.0000,,PLACEHOLDER - replace with IBGE Censo 2022 / PNAD Contínua,n/a,true
+BR-AL-SENADOR_RUI_PALMEIRA,Senador Rui Palmeira,electricity_access,0.9717,,PLACEHOLDER - replace with IBGE Censo 2022 / PNAD Contínua,n/a,true
+BR-AL-SAO_BRAS,São Brás,electricity_access,0.9620,,PLACEHOLDER - replace with IBGE Censo 2022 / PNAD Contínua,n/a,true
+BR-AL-SAO_JOSE_DA_LAJE,São José da Laje,electricity_access,0.9092,,PLACEHOLDER - replace with IBGE Censo 2022 / PNAD Contínua,n/a,true
+BR-AL-SAO_JOSE_DA_TAPERA,São José da Tapera,electricity_access,0.9154,,PLACEHOLDER - replace with IBGE Censo 2022 / PNAD Contínua,n/a,true
+BR-AL-SAO_LUIS_DO_QUITUNDE,São Luís do Quitunde,electricity_access,1.0000,,PLACEHOLDER - replace with IBGE Censo 2022 / PNAD Contínua,n/a,true
+BR-AL-SAO_MIGUEL_DOS_CAMPOS,São Miguel dos Campos,electricity_access,1.0000,,PLACEHOLDER - replace with IBGE Censo 2022 / PNAD Contínua,n/a,true
+BR-AL-SAO_MIGUEL_DOS_MILAGRES,São Miguel dos Milagres,electricity_access,0.9793,,PLACEHOLDER - replace with IBGE Censo 2022 / PNAD Contínua,n/a,true
+BR-AL-SAO_SEBASTIAO,São Sebastião,electricity_access,0.9889,,PLACEHOLDER - replace with IBGE Censo 2022 / PNAD Contínua,n/a,true
+BR-AL-TANQUE_DARCA,Tanque d'Arca,electricity_access,0.9723,,PLACEHOLDER - replace with IBGE Censo 2022 / PNAD Contínua,n/a,true
+BR-AL-TAQUARANA,Taquarana,electricity_access,0.9435,,PLACEHOLDER - replace with IBGE Censo 2022 / PNAD Contínua,n/a,true
+BR-AL-TEOTONIO_VILELA,Teotônio Vilela,electricity_access,0.9220,,PLACEHOLDER - replace with IBGE Censo 2022 / PNAD Contínua,n/a,true
+BR-AL-TRAIPU,Traipu,electricity_access,0.9817,,PLACEHOLDER - replace with IBGE Censo 2022 / PNAD Contínua,n/a,true
+BR-AL-UNIAO_DOS_PALMARES,União dos Palmares,electricity_access,1.0000,,PLACEHOLDER - replace with IBGE Censo 2022 / PNAD Contínua,n/a,true
+BR-AL-VICOSA,Viçosa,electricity_access,1.0000,,PLACEHOLDER - replace with IBGE Censo 2022 / PNAD Contínua,n/a,true
+BR-AL-AGUA_BRANCA,Água Branca,electricity_access,0.9384,,PLACEHOLDER - replace with IBGE Censo 2022 / PNAD Contínua,n/a,true
+BR-AL-ANADIA,Anadia,waste_collection_coverage,0.8849,,PLACEHOLDER - replace with SINISA/SNIS resíduos sólidos; IBGE Censo 2022,n/a,true
+BR-AL-ARAPIRACA,Arapiraca,waste_collection_coverage,0.9141,,PLACEHOLDER - replace with SINISA/SNIS resíduos sólidos; IBGE Censo 2022,n/a,true
+BR-AL-ATALAIA,Atalaia,waste_collection_coverage,0.8586,,PLACEHOLDER - replace with SINISA/SNIS resíduos sólidos; IBGE Censo 2022,n/a,true
+BR-AL-BARRA_DE_SANTO_ANTONIO,Barra de Santo Antônio,waste_collection_coverage,0.8776,,PLACEHOLDER - replace with SINISA/SNIS resíduos sólidos; IBGE Censo 2022,n/a,true
+BR-AL-BARRA_DE_SAO_MIGUEL,Barra de São Miguel,waste_collection_coverage,0.8943,,PLACEHOLDER - replace with SINISA/SNIS resíduos sólidos; IBGE Censo 2022,n/a,true
+BR-AL-BATALHA,Batalha,waste_collection_coverage,0.9048,,PLACEHOLDER - replace with SINISA/SNIS resíduos sólidos; IBGE Censo 2022,n/a,true
+BR-AL-BELO_MONTE,Belo Monte,waste_collection_coverage,0.7654,,PLACEHOLDER - replace with SINISA/SNIS resíduos sólidos; IBGE Censo 2022,n/a,true
+BR-AL-BELEM,Belém,waste_collection_coverage,0.8622,,PLACEHOLDER - replace with SINISA/SNIS resíduos sólidos; IBGE Censo 2022,n/a,true
+BR-AL-BOCA_DA_MATA,Boca da Mata,waste_collection_coverage,0.9145,,PLACEHOLDER - replace with SINISA/SNIS resíduos sólidos; IBGE Censo 2022,n/a,true
+BR-AL-BRANQUINHA,Branquinha,waste_collection_coverage,0.8008,,PLACEHOLDER - replace with SINISA/SNIS resíduos sólidos; IBGE Censo 2022,n/a,true
+BR-AL-CACIMBINHAS,Cacimbinhas,waste_collection_coverage,0.8990,,PLACEHOLDER - replace with SINISA/SNIS resíduos sólidos; IBGE Censo 2022,n/a,true
+BR-AL-CAJUEIRO,Cajueiro,waste_collection_coverage,0.8301,,PLACEHOLDER - replace with SINISA/SNIS resíduos sólidos; IBGE Censo 2022,n/a,true
+BR-AL-CAMPESTRE,Campestre,waste_collection_coverage,0.8623,,PLACEHOLDER - replace with SINISA/SNIS resíduos sólidos; IBGE Censo 2022,n/a,true
+BR-AL-CAMPO_ALEGRE,Campo Alegre,waste_collection_coverage,0.8102,,PLACEHOLDER - replace with SINISA/SNIS resíduos sólidos; IBGE Censo 2022,n/a,true
+BR-AL-CAMPO_GRANDE,Campo Grande,waste_collection_coverage,0.8916,,PLACEHOLDER - replace with SINISA/SNIS resíduos sólidos; IBGE Censo 2022,n/a,true
+BR-AL-CANAPI,Canapi,waste_collection_coverage,0.8272,,PLACEHOLDER - replace with SINISA/SNIS resíduos sólidos; IBGE Censo 2022,n/a,true
+BR-AL-CAPELA,Capela,waste_collection_coverage,0.8037,,PLACEHOLDER - replace with SINISA/SNIS resíduos sólidos; IBGE Censo 2022,n/a,true
+BR-AL-CARNEIROS,Carneiros,waste_collection_coverage,0.8354,,PLACEHOLDER - replace with SINISA/SNIS resíduos sólidos; IBGE Censo 2022,n/a,true
+BR-AL-CHA_PRETA,Chã Preta,waste_collection_coverage,0.9027,,PLACEHOLDER - replace with SINISA/SNIS resíduos sólidos; IBGE Censo 2022,n/a,true
+BR-AL-COITE_DO_NOIA,Coité do Nóia,waste_collection_coverage,0.8218,,PLACEHOLDER - replace with SINISA/SNIS resíduos sólidos; IBGE Censo 2022,n/a,true
+BR-AL-COLONIA_LEOPOLDINA,Colônia Leopoldina,waste_collection_coverage,0.8262,,PLACEHOLDER - replace with SINISA/SNIS resíduos sólidos; IBGE Censo 2022,n/a,true
+BR-AL-COQUEIRO_SECO,Coqueiro Seco,waste_collection_coverage,0.7980,,PLACEHOLDER - replace with SINISA/SNIS resíduos sólidos; IBGE Censo 2022,n/a,true
+BR-AL-CORURIPE,Coruripe,waste_collection_coverage,0.8933,,PLACEHOLDER - replace with SINISA/SNIS resíduos sólidos; IBGE Censo 2022,n/a,true
+BR-AL-CRAIBAS,Craíbas,waste_collection_coverage,0.8476,,PLACEHOLDER - replace with SINISA/SNIS resíduos sólidos; IBGE Censo 2022,n/a,true
+BR-AL-DELMIRO_GOUVEIA,Delmiro Gouveia,waste_collection_coverage,0.8415,,PLACEHOLDER - replace with SINISA/SNIS resíduos sólidos; IBGE Censo 2022,n/a,true
+BR-AL-DOIS_RIACHOS,Dois Riachos,waste_collection_coverage,0.7655,,PLACEHOLDER - replace with SINISA/SNIS resíduos sólidos; IBGE Censo 2022,n/a,true
+BR-AL-ESTRELA_DE_ALAGOAS,Estrela de Alagoas,waste_collection_coverage,0.9118,,PLACEHOLDER - replace with SINISA/SNIS resíduos sólidos; IBGE Censo 2022,n/a,true
+BR-AL-FEIRA_GRANDE,Feira Grande,waste_collection_coverage,0.8240,,PLACEHOLDER - replace with SINISA/SNIS resíduos sólidos; IBGE Censo 2022,n/a,true
+BR-AL-FELIZ_DESERTO,Feliz Deserto,waste_collection_coverage,0.8586,,PLACEHOLDER - replace with SINISA/SNIS resíduos sólidos; IBGE Censo 2022,n/a,true
+BR-AL-FLEXEIRAS,Flexeiras,waste_collection_coverage,0.8457,,PLACEHOLDER - replace with SINISA/SNIS resíduos sólidos; IBGE Censo 2022,n/a,true
+BR-AL-GIRAU_DO_PONCIANO,Girau do Ponciano,waste_collection_coverage,0.7899,,PLACEHOLDER - replace with SINISA/SNIS resíduos sólidos; IBGE Censo 2022,n/a,true
+BR-AL-IBATEGUARA,Ibateguara,waste_collection_coverage,0.8448,,PLACEHOLDER - replace with SINISA/SNIS resíduos sólidos; IBGE Censo 2022,n/a,true
+BR-AL-IGACI,Igaci,waste_collection_coverage,0.8365,,PLACEHOLDER - replace with SINISA/SNIS resíduos sólidos; IBGE Censo 2022,n/a,true
+BR-AL-IGREJA_NOVA,Igreja Nova,waste_collection_coverage,0.8362,,PLACEHOLDER - replace with SINISA/SNIS resíduos sólidos; IBGE Censo 2022,n/a,true
+BR-AL-INHAPI,Inhapi,waste_collection_coverage,0.7064,,PLACEHOLDER - replace with SINISA/SNIS resíduos sólidos; IBGE Censo 2022,n/a,true
+BR-AL-JACARE_DOS_HOMENS,Jacaré dos Homens,waste_collection_coverage,0.8031,,PLACEHOLDER - replace with SINISA/SNIS resíduos sólidos; IBGE Censo 2022,n/a,true
+BR-AL-JACUIPE,Jacuípe,waste_collection_coverage,0.8562,,PLACEHOLDER - replace with SINISA/SNIS resíduos sólidos; IBGE Censo 2022,n/a,true
+BR-AL-JAPARATINGA,Japaratinga,waste_collection_coverage,0.8782,,PLACEHOLDER - replace with SINISA/SNIS resíduos sólidos; IBGE Censo 2022,n/a,true
+BR-AL-JARAMATAIA,Jaramataia,waste_collection_coverage,0.7882,,PLACEHOLDER - replace with SINISA/SNIS resíduos sólidos; IBGE Censo 2022,n/a,true
+BR-AL-JEQUIA_DA_PRAIA,Jequiá da Praia,waste_collection_coverage,0.8371,,PLACEHOLDER - replace with SINISA/SNIS resíduos sólidos; IBGE Censo 2022,n/a,true
+BR-AL-JOAQUIM_GOMES,Joaquim Gomes,waste_collection_coverage,0.8553,,PLACEHOLDER - replace with SINISA/SNIS resíduos sólidos; IBGE Censo 2022,n/a,true
+BR-AL-JUNDIA,Jundiá,waste_collection_coverage,0.8579,,PLACEHOLDER - replace with SINISA/SNIS resíduos sólidos; IBGE Censo 2022,n/a,true
+BR-AL-JUNQUEIRO,Junqueiro,waste_collection_coverage,0.8816,,PLACEHOLDER - replace with SINISA/SNIS resíduos sólidos; IBGE Censo 2022,n/a,true
+BR-AL-LAGOA_DA_CANOA,Lagoa da Canoa,waste_collection_coverage,0.7871,,PLACEHOLDER - replace with SINISA/SNIS resíduos sólidos; IBGE Censo 2022,n/a,true
+BR-AL-LIMOEIRO_DE_ANADIA,Limoeiro de Anadia,waste_collection_coverage,0.8232,,PLACEHOLDER - replace with SINISA/SNIS resíduos sólidos; IBGE Censo 2022,n/a,true
+BR-AL-MACEIO,Maceió,waste_collection_coverage,0.9010,,PLACEHOLDER - replace with SINISA/SNIS resíduos sólidos; IBGE Censo 2022,n/a,true
+BR-AL-MAJOR_ISIDORO,Major Isidoro,waste_collection_coverage,0.8504,,PLACEHOLDER - replace with SINISA/SNIS resíduos sólidos; IBGE Censo 2022,n/a,true
+BR-AL-MAR_VERMELHO,Mar Vermelho,waste_collection_coverage,0.8708,,PLACEHOLDER - replace with SINISA/SNIS resíduos sólidos; IBGE Censo 2022,n/a,true
+BR-AL-MARAGOGI,Maragogi,waste_collection_coverage,0.8610,,PLACEHOLDER - replace with SINISA/SNIS resíduos sólidos; IBGE Censo 2022,n/a,true
+BR-AL-MARAVILHA,Maravilha,waste_collection_coverage,0.7972,,PLACEHOLDER - replace with SINISA/SNIS resíduos sólidos; IBGE Censo 2022,n/a,true
+BR-AL-MARECHAL_DEODORO,Marechal Deodoro,waste_collection_coverage,0.9305,,PLACEHOLDER - replace with SINISA/SNIS resíduos sólidos; IBGE Censo 2022,n/a,true
+BR-AL-MARIBONDO,Maribondo,waste_collection_coverage,0.8138,,PLACEHOLDER - replace with SINISA/SNIS resíduos sólidos; IBGE Censo 2022,n/a,true
+BR-AL-MATA_GRANDE,Mata Grande,waste_collection_coverage,0.7622,,PLACEHOLDER - replace with SINISA/SNIS resíduos sólidos; IBGE Censo 2022,n/a,true
+BR-AL-MATRIZ_DE_CAMARAGIBE,Matriz de Camaragibe,waste_collection_coverage,0.8632,,PLACEHOLDER - replace with SINISA/SNIS resíduos sólidos; IBGE Censo 2022,n/a,true
+BR-AL-MESSIAS,Messias,waste_collection_coverage,0.9037,,PLACEHOLDER - replace with SINISA/SNIS resíduos sólidos; IBGE Censo 2022,n/a,true
+BR-AL-MINADOR_DO_NEGRAO,Minador do Negrão,waste_collection_coverage,0.8821,,PLACEHOLDER - replace with SINISA/SNIS resíduos sólidos; IBGE Censo 2022,n/a,true
+BR-AL-MONTEIROPOLIS,Monteirópolis,waste_collection_coverage,0.8446,,PLACEHOLDER - replace with SINISA/SNIS resíduos sólidos; IBGE Censo 2022,n/a,true
+BR-AL-MURICI,Murici,waste_collection_coverage,0.8482,,PLACEHOLDER - replace with SINISA/SNIS resíduos sólidos; IBGE Censo 2022,n/a,true
+BR-AL-NOVO_LINO,Novo Lino,waste_collection_coverage,0.8741,,PLACEHOLDER - replace with SINISA/SNIS resíduos sólidos; IBGE Censo 2022,n/a,true
+BR-AL-OLHO_DAGUA_GRANDE,Olho d'Água Grande,waste_collection_coverage,0.8666,,PLACEHOLDER - replace with SINISA/SNIS resíduos sólidos; IBGE Censo 2022,n/a,true
+BR-AL-OLHO_DAGUA_DAS_FLORES,Olho d'Água das Flores,waste_collection_coverage,0.8431,,PLACEHOLDER - replace with SINISA/SNIS resíduos sólidos; IBGE Censo 2022,n/a,true
+BR-AL-OLHO_DAGUA_DO_CASADO,Olho d'Água do Casado,waste_collection_coverage,0.7447,,PLACEHOLDER - replace with SINISA/SNIS resíduos sólidos; IBGE Censo 2022,n/a,true
+BR-AL-OLIVENCA,Olivença,waste_collection_coverage,0.7404,,PLACEHOLDER - replace with SINISA/SNIS resíduos sólidos; IBGE Censo 2022,n/a,true
+BR-AL-OURO_BRANCO,Ouro Branco,waste_collection_coverage,0.7422,,PLACEHOLDER - replace with SINISA/SNIS resíduos sólidos; IBGE Censo 2022,n/a,true
+BR-AL-PALESTINA,Palestina,waste_collection_coverage,0.7925,,PLACEHOLDER - replace with SINISA/SNIS resíduos sólidos; IBGE Censo 2022,n/a,true
+BR-AL-PALMEIRA_DOS_INDIOS,Palmeira dos Índios,waste_collection_coverage,0.8632,,PLACEHOLDER - replace with SINISA/SNIS resíduos sólidos; IBGE Censo 2022,n/a,true
+BR-AL-PARICONHA,Pariconha,waste_collection_coverage,0.7301,,PLACEHOLDER - replace with SINISA/SNIS resíduos sólidos; IBGE Censo 2022,n/a,true
+BR-AL-PARIPUEIRA,Paripueira,waste_collection_coverage,0.8476,,PLACEHOLDER - replace with SINISA/SNIS resíduos sólidos; IBGE Censo 2022,n/a,true
+BR-AL-PASSO_DE_CAMARAGIBE,Passo de Camaragibe,waste_collection_coverage,0.8348,,PLACEHOLDER - replace with SINISA/SNIS resíduos sólidos; IBGE Censo 2022,n/a,true
+BR-AL-PAULO_JACINTO,Paulo Jacinto,waste_collection_coverage,0.8191,,PLACEHOLDER - replace with SINISA/SNIS resíduos sólidos; IBGE Censo 2022,n/a,true
+BR-AL-PENEDO,Penedo,waste_collection_coverage,0.8268,,PLACEHOLDER - replace with SINISA/SNIS resíduos sólidos; IBGE Censo 2022,n/a,true
+BR-AL-PIACABUCU,Piaçabuçu,waste_collection_coverage,0.8412,,PLACEHOLDER - replace with SINISA/SNIS resíduos sólidos; IBGE Censo 2022,n/a,true
+BR-AL-PILAR,Pilar,waste_collection_coverage,0.8109,,PLACEHOLDER - replace with SINISA/SNIS resíduos sólidos; IBGE Censo 2022,n/a,true
+BR-AL-PINDOBA,Pindoba,waste_collection_coverage,0.8386,,PLACEHOLDER - replace with SINISA/SNIS resíduos sólidos; IBGE Censo 2022,n/a,true
+BR-AL-PIRANHAS,Piranhas,waste_collection_coverage,0.8594,,PLACEHOLDER - replace with SINISA/SNIS resíduos sólidos; IBGE Censo 2022,n/a,true
+BR-AL-PORTO_CALVO,Porto Calvo,waste_collection_coverage,0.8591,,PLACEHOLDER - replace with SINISA/SNIS resíduos sólidos; IBGE Censo 2022,n/a,true
+BR-AL-PORTO_REAL_DO_COLEGIO,Porto Real do Colégio,waste_collection_coverage,0.8924,,PLACEHOLDER - replace with SINISA/SNIS resíduos sólidos; IBGE Censo 2022,n/a,true
+BR-AL-PORTO_DE_PEDRAS,Porto de Pedras,waste_collection_coverage,0.8667,,PLACEHOLDER - replace with SINISA/SNIS resíduos sólidos; IBGE Censo 2022,n/a,true
+BR-AL-POCO_DAS_TRINCHEIRAS,Poço das Trincheiras,waste_collection_coverage,0.7729,,PLACEHOLDER - replace with SINISA/SNIS resíduos sólidos; IBGE Censo 2022,n/a,true
+BR-AL-PAO_DE_ACUCAR,Pão de Açúcar,waste_collection_coverage,0.8350,,PLACEHOLDER - replace with SINISA/SNIS resíduos sólidos; IBGE Censo 2022,n/a,true
+BR-AL-QUEBRANGULO,Quebrangulo,waste_collection_coverage,0.8596,,PLACEHOLDER - replace with SINISA/SNIS resíduos sólidos; IBGE Censo 2022,n/a,true
+BR-AL-RIO_LARGO,Rio Largo,waste_collection_coverage,0.9523,,PLACEHOLDER - replace with SINISA/SNIS resíduos sólidos; IBGE Censo 2022,n/a,true
+BR-AL-ROTEIRO,Roteiro,waste_collection_coverage,0.7752,,PLACEHOLDER - replace with SINISA/SNIS resíduos sólidos; IBGE Censo 2022,n/a,true
+BR-AL-SANTA_LUZIA_DO_NORTE,Santa Luzia do Norte,waste_collection_coverage,0.8658,,PLACEHOLDER - replace with SINISA/SNIS resíduos sólidos; IBGE Censo 2022,n/a,true
+BR-AL-SANTANA_DO_IPANEMA,Santana do Ipanema,waste_collection_coverage,0.8269,,PLACEHOLDER - replace with SINISA/SNIS resíduos sólidos; IBGE Censo 2022,n/a,true
+BR-AL-SANTANA_DO_MUNDAU,Santana do Mundaú,waste_collection_coverage,0.8501,,PLACEHOLDER - replace with SINISA/SNIS resíduos sólidos; IBGE Censo 2022,n/a,true
+BR-AL-SATUBA,Satuba,waste_collection_coverage,0.9629,,PLACEHOLDER - replace with SINISA/SNIS resíduos sólidos; IBGE Censo 2022,n/a,true
+BR-AL-SENADOR_RUI_PALMEIRA,Senador Rui Palmeira,waste_collection_coverage,0.7951,,PLACEHOLDER - replace with SINISA/SNIS resíduos sólidos; IBGE Censo 2022,n/a,true
+BR-AL-SAO_BRAS,São Brás,waste_collection_coverage,0.8574,,PLACEHOLDER - replace with SINISA/SNIS resíduos sólidos; IBGE Censo 2022,n/a,true
+BR-AL-SAO_JOSE_DA_LAJE,São José da Laje,waste_collection_coverage,0.8679,,PLACEHOLDER - replace with SINISA/SNIS resíduos sólidos; IBGE Censo 2022,n/a,true
+BR-AL-SAO_JOSE_DA_TAPERA,São José da Tapera,waste_collection_coverage,0.7193,,PLACEHOLDER - replace with SINISA/SNIS resíduos sólidos; IBGE Censo 2022,n/a,true
+BR-AL-SAO_LUIS_DO_QUITUNDE,São Luís do Quitunde,waste_collection_coverage,0.8744,,PLACEHOLDER - replace with SINISA/SNIS resíduos sólidos; IBGE Censo 2022,n/a,true
+BR-AL-SAO_MIGUEL_DOS_CAMPOS,São Miguel dos Campos,waste_collection_coverage,0.7845,,PLACEHOLDER - replace with SINISA/SNIS resíduos sólidos; IBGE Censo 2022,n/a,true
+BR-AL-SAO_MIGUEL_DOS_MILAGRES,São Miguel dos Milagres,waste_collection_coverage,0.8652,,PLACEHOLDER - replace with SINISA/SNIS resíduos sólidos; IBGE Censo 2022,n/a,true
+BR-AL-SAO_SEBASTIAO,São Sebastião,waste_collection_coverage,0.8542,,PLACEHOLDER - replace with SINISA/SNIS resíduos sólidos; IBGE Censo 2022,n/a,true
+BR-AL-TANQUE_DARCA,Tanque d'Arca,waste_collection_coverage,0.8317,,PLACEHOLDER - replace with SINISA/SNIS resíduos sólidos; IBGE Censo 2022,n/a,true
+BR-AL-TAQUARANA,Taquarana,waste_collection_coverage,0.8556,,PLACEHOLDER - replace with SINISA/SNIS resíduos sólidos; IBGE Censo 2022,n/a,true
+BR-AL-TEOTONIO_VILELA,Teotônio Vilela,waste_collection_coverage,0.8502,,PLACEHOLDER - replace with SINISA/SNIS resíduos sólidos; IBGE Censo 2022,n/a,true
+BR-AL-TRAIPU,Traipu,waste_collection_coverage,0.7100,,PLACEHOLDER - replace with SINISA/SNIS resíduos sólidos; IBGE Censo 2022,n/a,true
+BR-AL-UNIAO_DOS_PALMARES,União dos Palmares,waste_collection_coverage,0.8693,,PLACEHOLDER - replace with SINISA/SNIS resíduos sólidos; IBGE Censo 2022,n/a,true
+BR-AL-VICOSA,Viçosa,waste_collection_coverage,0.8695,,PLACEHOLDER - replace with SINISA/SNIS resíduos sólidos; IBGE Censo 2022,n/a,true
+BR-AL-AGUA_BRANCA,Água Branca,waste_collection_coverage,0.7995,,PLACEHOLDER - replace with SINISA/SNIS resíduos sólidos; IBGE Censo 2022,n/a,true

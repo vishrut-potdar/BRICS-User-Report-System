@@ -1,0 +1,85 @@
+/* Shared tokens and components for the citizen portal (index.html) and the government dashboard (admin.html). */
+:root{
+  --bg:#F6F4FB; --tile:#FFFFFF; --inset:#F1EEF9; --line:#E7E2F2; --text:#262B40; --muted:#626879; --faint:#8C90A0;
+  --sel:#E4DEFA; --selText:#3B2F7A; --peri:#8B7FD6; --periDeep:#5E51BD; --lilac:#CFC6FA;
+  --coral:#C2584A; --peach:#FFB4A2; --peachBg:#FFEDE6; --rust:#8A3B22; --mint:#2E8B63; --mintBg:#E3F3EA;
+  --sea:#E9EEF7; --land:#F7F5FC; --landLine:#CFC8E3;
+  --sans: Geist, "Noto Sans", "Noto Sans Devanagari", "Noto Sans SC", system-ui, sans-serif;
+  --serif: Fraunces, "Noto Serif", Georgia, serif;
+  --mono: "Geist Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+  --ease: cubic-bezier(.2,.8,.2,1);
+  --r: 22px;
+  color-scheme: light;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--text);font-family:var(--sans);font-size:14px;line-height:1.45;-webkit-font-smoothing:antialiased}
+button,select,input,textarea{font:inherit;color:inherit}
+button{cursor:pointer}
+a{color:var(--periDeep)}
+:focus-visible{outline:2px solid var(--periDeep);outline-offset:2px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+[hidden]{display:none!important}
+
+/* top bar */
+.topbar{display:flex;align-items:center;justify-content:space-between;gap:12px 16px;padding:16px 24px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:inherit}
+.logo{width:36px;height:36px;border-radius:11px;background:linear-gradient(135deg,var(--periDeep),var(--peri));display:grid;place-items:center;color:#fff;font-family:var(--serif);font-size:17px;font-weight:600;flex:none}
+.brand b{display:block;font-family:var(--serif);font-weight:500;font-size:21px;letter-spacing:-.01em;line-height:1.1}
+.brand small{display:block;color:var(--muted);font-size:12.5px}
+
+/* controls */
+.pill{height:40px;border:0;border-radius:999px;background:var(--tile);padding:0 16px;font-size:13.5px;display:inline-flex;align-items:center;gap:8px;box-shadow:0 0 0 1px var(--line);transition:background .2s,transform .15s;text-decoration:none;color:inherit;white-space:nowrap}
+.pill:hover{background:var(--inset)}
+.pill:active{transform:scale(.97)}
+.pill.primary{background:var(--periDeep);color:#fff;box-shadow:none;font-weight:500}
+.pill.primary:hover{background:#4E42A8}
+.pill.soft{background:var(--sel);color:var(--selText);box-shadow:none;font-weight:500}
+.pill.soft:hover{background:var(--lilac)}
+select.pill{appearance:none;padding-right:34px;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23626879' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center;max-width:240px;text-overflow:ellipsis}
+select.pill:disabled{opacity:.5;cursor:default}
+.badge{height:30px;display:inline-flex;align-items:center;gap:7px;padding:0 12px;border-radius:999px;border:1px dashed #D5CFE6;color:var(--muted);font-size:12px;white-space:nowrap}
+.dot{width:6px;height:6px;border-radius:999px;background:var(--peri);flex:none}
+
+.tile{background:var(--tile);border-radius:var(--r);box-shadow:0 1px 0 rgba(38,43,64,.03),0 0 0 1px var(--line)}
+h1,h2,h3{font-family:var(--serif);font-weight:500;letter-spacing:-.015em;margin:0}
+.sub{color:var(--muted);font-size:12.5px}
+
+.seg{position:relative;display:inline-flex;background:var(--inset);border-radius:999px;padding:3px}
+.seg .thumb{position:absolute;top:3px;bottom:3px;left:3px;border-radius:999px;background:var(--tile);box-shadow:0 1px 3px rgba(38,43,64,.12);transition:left .35s var(--ease),width .35s var(--ease)}
+.seg button{position:relative;border:0;background:none;height:32px;padding:0 14px;border-radius:999px;font-size:13px;color:var(--muted);white-space:nowrap}
+.seg button[aria-pressed="true"]{color:var(--text);font-weight:500}
+
+.chip{border:0;height:32px;padding:0 12px;border-radius:999px;background:var(--inset);font-size:12.5px;display:inline-flex;align-items:center;gap:7px;transition:background .2s}
+.chip:hover{background:var(--sel)}
+.chip[aria-pressed="true"]{background:var(--selText);color:#fff}
+.chip i{width:8px;height:8px;border-radius:999px;flex:none}
+
+/* toasts */
+.toasts{position:fixed;left:24px;bottom:24px;display:flex;flex-direction:column;gap:8px;z-index:60;max-width:380px}
+.toast{background:#262B40;color:#fff;border-radius:14px;padding:12px 14px;font-size:13px;box-shadow:0 10px 30px rgba(38,43,64,.25);display:flex;gap:10px;align-items:flex-start;animation:tin .35s var(--ease)}
+.toast i{width:8px;height:8px;border-radius:999px;background:var(--peach);flex:none;margin-top:6px}
+.toast.out{opacity:0;transform:translateY(8px);transition:.3s}
+@keyframes tin{from{opacity:0;transform:translateY(10px)}}
+
+/* country picker (both pages) */
+.picker{max-width:1040px;margin:0 auto;padding:24px 24px 48px}
+.picker h1{font-size:clamp(28px,4vw,40px);line-height:1.1}
+.picker > p{color:var(--muted);max-width:620px;margin:10px 0 24px;font-size:15px}
+.countries{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:12px}
+.country{all:unset;box-sizing:border-box;cursor:pointer;background:var(--tile);border-radius:18px;padding:18px;box-shadow:0 0 0 1px var(--line);display:flex;flex-direction:column;gap:6px;transition:transform .2s var(--ease),box-shadow .2s}
+.country:hover{transform:translateY(-2px);box-shadow:0 0 0 1px var(--lilac),0 10px 24px rgba(94,81,189,.12)}
+.country:focus-visible{outline:2px solid var(--periDeep);outline-offset:2px}
+.country b{font-family:var(--serif);font-weight:500;font-size:20px}
+.country span{color:var(--muted);font-size:12.5px}
+.country em{font-style:normal;font-size:12px;color:var(--selText);background:var(--sel);align-self:flex-start;padding:3px 9px;border-radius:999px;margin-top:6px}
+
+.errorbox{max-width:560px;margin:60px auto;padding:24px;text-align:center}
+.errorbox code{background:var(--inset);padding:2px 6px;border-radius:6px;font-family:var(--mono);font-size:12.5px}
+
+@media (max-width:720px){
+  .topbar{padding:14px 16px}
+  .picker{padding:16px 16px 40px}
+  .toasts{left:16px;right:16px;bottom:16px}
+}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}}

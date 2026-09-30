@@ -1,0 +1,104 @@
+{
+  "generator": "scripts/generate_synthetic.py",
+  "licence": "CC-BY-4.0",
+  "pack": "IN",
+  "seed": 42,
+  "as_of": "2026-09-28T18:00:00+05:30",
+  "window_days": 45,
+  "n_records": 1710,
+  "n_organic": 1510,
+  "brigade": {
+    "admin_code": "IN-DL",
+    "district": "Delhi",
+    "sector": "roads",
+    "lang": "hi-Latn",
+    "n_messages": 200,
+    "n_senders": 12,
+    "window_start": "2026-09-25T13:00:00+05:30",
+    "window_minutes": 30,
+    "h3_cells": [
+      "853da1abfffffff"
+    ],
+    "main_cluster_id": "IN-DL.roads.853da1abfffffff"
+  },
+  "records_by_district": {
+    "Maharashtra": 310,
+    "Delhi": 262,
+    "Tamil Nadu": 163,
+    "West Bengal": 124,
+    "Karnataka": 122,
+    "Gujarat": 101,
+    "Uttar Pradesh": 81,
+    "Bihar": 73,
+    "Telangana": 70,
+    "Kerala": 61,
+    "Rajasthan": 52,
+    "Madhya Pradesh": 46,
+    "Andhra Pradesh": 38,
+    "Punjab": 34,
+    "Odisha": 28,
+    "Jharkhand": 25,
+    "Assam": 22,
+    "Haryana": 22,
+    "Chhattisgarh": 13,
+    "Jammu and Kashmir": 13,
+    "Uttarakhand": 10,
+    "Himachal Pradesh": 8,
+    "Manipur": 4,
+    "Tripura": 4,
+    "Andaman and Nicobar Islands": 2,
+    "Arunachal Pradesh": 2,
+    "Chandigarh": 2,
+    "Dadra and Nagar Haveli and Daman and Diu": 2,
+    "Goa": 2,
+    "Ladakh": 2,
+    "Lakshadweep": 2,
+    "Meghalaya": 2,
+    "Mizoram": 2,
+    "Nagaland": 2,
+    "Puducherry": 2,
+    "Sikkim": 2
+  },
+  "assumptions": {
+    "synthetic_config": {
+      "n": 1500,
+      "lang_mix": {
+        "hi": 0.35,
+        "hi-Latn": 0.3,
+        "en": 0.35
+      },
+      "lang_mix_by_unit": {
+        "IN-MH": {
+          "mr": 0.4,
+          "hi": 0.2,
+          "hi-Latn": 0.2,
+          "en": 0.2
+        }
+      },
+      "connectivity": {
+        "IN-DL": 3.0,
+        "IN-MH": 2.5,
+        "IN-KA": 2.5,
+        "IN-TG": 2.2,
+        "IN-TN": 2.0,
+        "IN-GJ": 2.0,
+        "IN-KL": 1.8,
+        "IN-WB": 1.5
+      },
+      "brigade": {
+        "admin_code": "IN-DL",
+        "lang": "hi-Latn"
+      }
+    },
+    "location_tiers": {
+      "A": 0.6,
+      "B": 0.25,
+      "C": 0.15
+    },
+    "channels": {
+      "whatsapp": 0.7,
+      "web": 0.2,
+      "telegram": 0.1
+    }
+  }
+}

@@ -1,0 +1,67 @@
+project_id,admin_code,sector,name,budget_m,currency,status,source,synthetic
+PP-BR-AC-water,BR-AC,water,"Water works, Acre (synthetic)",197,BRL,delayed,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-BR-AC-education,BR-AC,education,"Education works, Acre (synthetic)",189,BRL,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-BR-AC-waste,BR-AC,waste,"Waste works, Acre (synthetic)",127,BRL,delayed,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-BR-AL-water,BR-AL,water,"Water works, Alagoas (synthetic)",18,BRL,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-BR-AL-health,BR-AL,health,"Health works, Alagoas (synthetic)",120,BRL,delayed,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-BR-AL-education,BR-AL,education,"Education works, Alagoas (synthetic)",186,BRL,delayed,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-BR-AM-health,BR-AM,health,"Health works, Amazonas (synthetic)",193,BRL,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-BR-AM-education,BR-AM,education,"Education works, Amazonas (synthetic)",84,BRL,delayed,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-BR-AM-electricity,BR-AM,electricity,"Electricity works, Amazonas (synthetic)",192,BRL,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-BR-AP-health,BR-AP,health,"Health works, Amapá (synthetic)",180,BRL,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-BR-AP-electricity,BR-AP,electricity,"Electricity works, Amapá (synthetic)",34,BRL,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-BR-BA-waste,BR-BA,waste,"Waste works, Bahia (synthetic)",191,BRL,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-BR-CE-water,BR-CE,water,"Water works, Ceará (synthetic)",180,BRL,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-BR-CE-sanitation,BR-CE,sanitation,"Sanitation works, Ceará (synthetic)",75,BRL,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-BR-DF-water,BR-DF,water,"Water works, Distrito Federal (synthetic)",31,BRL,delayed,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-BR-DF-roads,BR-DF,roads,"Roads works, Distrito Federal (synthetic)",181,BRL,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-BR-DF-health,BR-DF,health,"Health works, Distrito Federal (synthetic)",172,BRL,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-BR-DF-education,BR-DF,education,"Education works, Distrito Federal (synthetic)",51,BRL,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-BR-DF-electricity,BR-DF,electricity,"Electricity works, Distrito Federal (synthetic)",152,BRL,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-BR-DF-waste,BR-DF,waste,"Waste works, Distrito Federal (synthetic)",9,BRL,delayed,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-BR-ES-electricity,BR-ES,electricity,"Electricity works, Espírito Santo (synthetic)",183,BRL,delayed,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-BR-ES-waste,BR-ES,waste,"Waste works, Espírito Santo (synthetic)",193,BRL,delayed,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-BR-GO-education,BR-GO,education,"Education works, Goiás (synthetic)",37,BRL,delayed,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-BR-MA-water,BR-MA,water,"Water works, Maranhão (synthetic)",92,BRL,delayed,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-BR-MA-education,BR-MA,education,"Education works, Maranhão (synthetic)",150,BRL,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-BR-MA-electricity,BR-MA,electricity,"Electricity works, Maranhão (synthetic)",181,BRL,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-BR-MG-roads,BR-MG,roads,"Roads works, Minas Gerais (synthetic)",30,BRL,delayed,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-BR-MG-education,BR-MG,education,"Education works, Minas Gerais (synthetic)",59,BRL,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-BR-MG-waste,BR-MG,waste,"Waste works, Minas Gerais (synthetic)",174,BRL,delayed,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-BR-MS-water,BR-MS,water,"Water works, Mato Grosso do Sul (synthetic)",138,BRL,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-BR-MS-education,BR-MS,education,"Education works, Mato Grosso do Sul (synthetic)",66,BRL,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-BR-MS-waste,BR-MS,waste,"Waste works, Mato Grosso do Sul (synthetic)",137,BRL,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-BR-MT-health,BR-MT,health,"Health works, Mato Grosso (synthetic)",38,BRL,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-BR-MT-education,BR-MT,education,"Education works, Mato Grosso (synthetic)",173,BRL,delayed,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-BR-MT-electricity,BR-MT,electricity,"Electricity works, Mato Grosso (synthetic)",88,BRL,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-BR-PA-water,BR-PA,water,"Water works, Pará (synthetic)",189,BRL,delayed,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-BR-PB-water,BR-PB,water,"Water works, Paraíba (synthetic)",98,BRL,delayed,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-BR-PB-sanitation,BR-PB,sanitation,"Sanitation works, Paraíba (synthetic)",69,BRL,delayed,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-BR-PB-electricity,BR-PB,electricity,"Electricity works, Paraíba (synthetic)",55,BRL,delayed,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-BR-PB-waste,BR-PB,waste,"Waste works, Paraíba (synthetic)",143,BRL,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-BR-PE-waste,BR-PE,waste,"Waste works, Pernambuco (synthetic)",15,BRL,delayed,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-BR-PI-roads,BR-PI,roads,"Roads works, Piauí (synthetic)",136,BRL,delayed,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-BR-PI-health,BR-PI,health,"Health works, Piauí (synthetic)",27,BRL,delayed,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-BR-PI-electricity,BR-PI,electricity,"Electricity works, Piauí (synthetic)",195,BRL,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-BR-PR-health,BR-PR,health,"Health works, Paraná (synthetic)",103,BRL,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-BR-PR-education,BR-PR,education,"Education works, Paraná (synthetic)",55,BRL,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-BR-RJ-water,BR-RJ,water,"Water works, Rio de Janeiro (synthetic)",66,BRL,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-BR-RJ-health,BR-RJ,health,"Health works, Rio de Janeiro (synthetic)",42,BRL,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-BR-RJ-waste,BR-RJ,waste,"Waste works, Rio de Janeiro (synthetic)",129,BRL,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-BR-RN-water,BR-RN,water,"Water works, Rio Grande do Norte (synthetic)",198,BRL,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-BR-RN-waste,BR-RN,waste,"Waste works, Rio Grande do Norte (synthetic)",171,BRL,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-BR-RO-water,BR-RO,water,"Water works, Rondônia (synthetic)",16,BRL,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-BR-RO-roads,BR-RO,roads,"Roads works, Rondônia (synthetic)",21,BRL,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-BR-RO-education,BR-RO,education,"Education works, Rondônia (synthetic)",13,BRL,delayed,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-BR-RR-roads,BR-RR,roads,"Roads works, Roraima (synthetic)",158,BRL,delayed,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-BR-RR-electricity,BR-RR,electricity,"Electricity works, Roraima (synthetic)",37,BRL,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-BR-RR-waste,BR-RR,waste,"Waste works, Roraima (synthetic)",106,BRL,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-BR-RS-health,BR-RS,health,"Health works, Rio Grande do Sul (synthetic)",149,BRL,delayed,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-BR-SC-sanitation,BR-SC,sanitation,"Sanitation works, Santa Catarina (synthetic)",88,BRL,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-BR-SC-roads,BR-SC,roads,"Roads works, Santa Catarina (synthetic)",153,BRL,delayed,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-BR-SE-water,BR-SE,water,"Water works, Sergipe (synthetic)",193,BRL,delayed,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-BR-SE-education,BR-SE,education,"Education works, Sergipe (synthetic)",108,BRL,delayed,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-BR-SE-electricity,BR-SE,electricity,"Electricity works, Sergipe (synthetic)",94,BRL,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-BR-SP-sanitation,BR-SP,sanitation,"Sanitation works, São Paulo (synthetic)",71,BRL,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-BR-TO-sanitation,BR-TO,sanitation,"Sanitation works, Tocantins (synthetic)",193,BRL,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-BR-TO-waste,BR-TO,waste,"Waste works, Tocantins (synthetic)",86,BRL,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true

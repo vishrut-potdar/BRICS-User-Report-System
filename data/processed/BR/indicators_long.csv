@@ -1,0 +1,217 @@
+admin_code,district_name,metric,value,year,source,licence,placeholder
+BR-AC,Acre,poverty_rate,0.4486,,PLACEHOLDER - replace with IBGE Síntese de Indicadores Sociais (PNAD Contínua) by state; municipalities: Censo 2022 / CadÚnico,n/a,true
+BR-AL,Alagoas,poverty_rate,0.4415,,PLACEHOLDER - replace with IBGE Síntese de Indicadores Sociais (PNAD Contínua) by state; municipalities: Censo 2022 / CadÚnico,n/a,true
+BR-AP,Amapá,poverty_rate,0.4756,,PLACEHOLDER - replace with IBGE Síntese de Indicadores Sociais (PNAD Contínua) by state; municipalities: Censo 2022 / CadÚnico,n/a,true
+BR-AM,Amazonas,poverty_rate,0.4555,,PLACEHOLDER - replace with IBGE Síntese de Indicadores Sociais (PNAD Contínua) by state; municipalities: Censo 2022 / CadÚnico,n/a,true
+BR-BA,Bahia,poverty_rate,0.4822,,PLACEHOLDER - replace with IBGE Síntese de Indicadores Sociais (PNAD Contínua) by state; municipalities: Censo 2022 / CadÚnico,n/a,true
+BR-CE,Ceará,poverty_rate,0.4141,,PLACEHOLDER - replace with IBGE Síntese de Indicadores Sociais (PNAD Contínua) by state; municipalities: Censo 2022 / CadÚnico,n/a,true
+BR-DF,Distrito Federal,poverty_rate,0.1975,,PLACEHOLDER - replace with IBGE Síntese de Indicadores Sociais (PNAD Contínua) by state; municipalities: Censo 2022 / CadÚnico,n/a,true
+BR-ES,Espírito Santo,poverty_rate,0.3034,,PLACEHOLDER - replace with IBGE Síntese de Indicadores Sociais (PNAD Contínua) by state; municipalities: Censo 2022 / CadÚnico,n/a,true
+BR-GO,Goiás,poverty_rate,0.3610,,PLACEHOLDER - replace with IBGE Síntese de Indicadores Sociais (PNAD Contínua) by state; municipalities: Censo 2022 / CadÚnico,n/a,true
+BR-MA,Maranhão,poverty_rate,0.4528,,PLACEHOLDER - replace with IBGE Síntese de Indicadores Sociais (PNAD Contínua) by state; municipalities: Censo 2022 / CadÚnico,n/a,true
+BR-MT,Mato Grosso,poverty_rate,0.3466,,PLACEHOLDER - replace with IBGE Síntese de Indicadores Sociais (PNAD Contínua) by state; municipalities: Censo 2022 / CadÚnico,n/a,true
+BR-MS,Mato Grosso do Sul,poverty_rate,0.3707,,PLACEHOLDER - replace with IBGE Síntese de Indicadores Sociais (PNAD Contínua) by state; municipalities: Censo 2022 / CadÚnico,n/a,true
+BR-MG,Minas Gerais,poverty_rate,0.2684,,PLACEHOLDER - replace with IBGE Síntese de Indicadores Sociais (PNAD Contínua) by state; municipalities: Censo 2022 / CadÚnico,n/a,true
+BR-PA,Pará,poverty_rate,0.4307,,PLACEHOLDER - replace with IBGE Síntese de Indicadores Sociais (PNAD Contínua) by state; municipalities: Censo 2022 / CadÚnico,n/a,true
+BR-PB,Paraíba,poverty_rate,0.4108,,PLACEHOLDER - replace with IBGE Síntese de Indicadores Sociais (PNAD Contínua) by state; municipalities: Censo 2022 / CadÚnico,n/a,true
+BR-PR,Paraná,poverty_rate,0.1966,,PLACEHOLDER - replace with IBGE Síntese de Indicadores Sociais (PNAD Contínua) by state; municipalities: Censo 2022 / CadÚnico,n/a,true
+BR-PE,Pernambuco,poverty_rate,0.3697,,PLACEHOLDER - replace with IBGE Síntese de Indicadores Sociais (PNAD Contínua) by state; municipalities: Censo 2022 / CadÚnico,n/a,true
+BR-PI,Piauí,poverty_rate,0.4403,,PLACEHOLDER - replace with IBGE Síntese de Indicadores Sociais (PNAD Contínua) by state; municipalities: Censo 2022 / CadÚnico,n/a,true
+BR-RJ,Rio de Janeiro,poverty_rate,0.0995,,PLACEHOLDER - replace with IBGE Síntese de Indicadores Sociais (PNAD Contínua) by state; municipalities: Censo 2022 / CadÚnico,n/a,true
+BR-RN,Rio Grande do Norte,poverty_rate,0.4777,,PLACEHOLDER - replace with IBGE Síntese de Indicadores Sociais (PNAD Contínua) by state; municipalities: Censo 2022 / CadÚnico,n/a,true
+BR-RS,Rio Grande do Sul,poverty_rate,0.1388,,PLACEHOLDER - replace with IBGE Síntese de Indicadores Sociais (PNAD Contínua) by state; municipalities: Censo 2022 / CadÚnico,n/a,true
+BR-RO,Rondônia,poverty_rate,0.2996,,PLACEHOLDER - replace with IBGE Síntese de Indicadores Sociais (PNAD Contínua) by state; municipalities: Censo 2022 / CadÚnico,n/a,true
+BR-RR,Roraima,poverty_rate,0.4688,,PLACEHOLDER - replace with IBGE Síntese de Indicadores Sociais (PNAD Contínua) by state; municipalities: Censo 2022 / CadÚnico,n/a,true
+BR-SC,Santa Catarina,poverty_rate,0.1493,,PLACEHOLDER - replace with IBGE Síntese de Indicadores Sociais (PNAD Contínua) by state; municipalities: Censo 2022 / CadÚnico,n/a,true
+BR-SP,São Paulo,poverty_rate,0.1863,,PLACEHOLDER - replace with IBGE Síntese de Indicadores Sociais (PNAD Contínua) by state; municipalities: Censo 2022 / CadÚnico,n/a,true
+BR-SE,Sergipe,poverty_rate,0.3967,,PLACEHOLDER - replace with IBGE Síntese de Indicadores Sociais (PNAD Contínua) by state; municipalities: Censo 2022 / CadÚnico,n/a,true
+BR-TO,Tocantins,poverty_rate,0.2574,,PLACEHOLDER - replace with IBGE Síntese de Indicadores Sociais (PNAD Contínua) by state; municipalities: Censo 2022 / CadÚnico,n/a,true
+BR-AC,Acre,water_network_coverage,0.7101,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN055)",n/a,true
+BR-AL,Alagoas,water_network_coverage,0.7315,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN055)",n/a,true
+BR-AP,Amapá,water_network_coverage,0.7391,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN055)",n/a,true
+BR-AM,Amazonas,water_network_coverage,0.7321,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN055)",n/a,true
+BR-BA,Bahia,water_network_coverage,0.7468,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN055)",n/a,true
+BR-CE,Ceará,water_network_coverage,0.7731,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN055)",n/a,true
+BR-DF,Distrito Federal,water_network_coverage,0.9190,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN055)",n/a,true
+BR-ES,Espírito Santo,water_network_coverage,0.8581,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN055)",n/a,true
+BR-GO,Goiás,water_network_coverage,0.8108,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN055)",n/a,true
+BR-MA,Maranhão,water_network_coverage,0.6580,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN055)",n/a,true
+BR-MT,Mato Grosso,water_network_coverage,0.7515,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN055)",n/a,true
+BR-MS,Mato Grosso do Sul,water_network_coverage,0.8332,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN055)",n/a,true
+BR-MG,Minas Gerais,water_network_coverage,0.8179,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN055)",n/a,true
+BR-PA,Pará,water_network_coverage,0.6919,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN055)",n/a,true
+BR-PB,Paraíba,water_network_coverage,0.7464,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN055)",n/a,true
+BR-PR,Paraná,water_network_coverage,0.9221,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN055)",n/a,true
+BR-PE,Pernambuco,water_network_coverage,0.7622,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN055)",n/a,true
+BR-PI,Piauí,water_network_coverage,0.7248,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN055)",n/a,true
+BR-RJ,Rio de Janeiro,water_network_coverage,0.9432,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN055)",n/a,true
+BR-RN,Rio Grande do Norte,water_network_coverage,0.6981,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN055)",n/a,true
+BR-RS,Rio Grande do Sul,water_network_coverage,0.9090,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN055)",n/a,true
+BR-RO,Rondônia,water_network_coverage,0.8709,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN055)",n/a,true
+BR-RR,Roraima,water_network_coverage,0.7333,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN055)",n/a,true
+BR-SC,Santa Catarina,water_network_coverage,0.9485,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN055)",n/a,true
+BR-SP,São Paulo,water_network_coverage,0.9326,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN055)",n/a,true
+BR-SE,Sergipe,water_network_coverage,0.7446,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN055)",n/a,true
+BR-TO,Tocantins,water_network_coverage,0.8470,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN055)",n/a,true
+BR-AC,Acre,sewage_coverage,0.3058,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN056)",n/a,true
+BR-AL,Alagoas,sewage_coverage,0.3193,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN056)",n/a,true
+BR-AP,Amapá,sewage_coverage,0.2704,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN056)",n/a,true
+BR-AM,Amazonas,sewage_coverage,0.3014,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN056)",n/a,true
+BR-BA,Bahia,sewage_coverage,0.4428,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN056)",n/a,true
+BR-CE,Ceará,sewage_coverage,0.3950,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN056)",n/a,true
+BR-DF,Distrito Federal,sewage_coverage,0.7965,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN056)",n/a,true
+BR-ES,Espírito Santo,sewage_coverage,0.6184,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN056)",n/a,true
+BR-GO,Goiás,sewage_coverage,0.5610,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN056)",n/a,true
+BR-MA,Maranhão,sewage_coverage,0.2606,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN056)",n/a,true
+BR-MT,Mato Grosso,sewage_coverage,0.4773,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN056)",n/a,true
+BR-MS,Mato Grosso do Sul,sewage_coverage,0.5133,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN056)",n/a,true
+BR-MG,Minas Gerais,sewage_coverage,0.5079,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN056)",n/a,true
+BR-PA,Pará,sewage_coverage,0.4279,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN056)",n/a,true
+BR-PB,Paraíba,sewage_coverage,0.3841,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN056)",n/a,true
+BR-PR,Paraná,sewage_coverage,0.7540,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN056)",n/a,true
+BR-PE,Pernambuco,sewage_coverage,0.4145,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN056)",n/a,true
+BR-PI,Piauí,sewage_coverage,0.2515,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN056)",n/a,true
+BR-RJ,Rio de Janeiro,sewage_coverage,0.8601,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN056)",n/a,true
+BR-RN,Rio Grande do Norte,sewage_coverage,0.2823,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN056)",n/a,true
+BR-RS,Rio Grande do Sul,sewage_coverage,0.7392,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN056)",n/a,true
+BR-RO,Rondônia,sewage_coverage,0.6621,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN056)",n/a,true
+BR-RR,Roraima,sewage_coverage,0.3156,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN056)",n/a,true
+BR-SC,Santa Catarina,sewage_coverage,0.8492,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN056)",n/a,true
+BR-SP,São Paulo,sewage_coverage,0.7675,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN056)",n/a,true
+BR-SE,Sergipe,sewage_coverage,0.3919,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN056)",n/a,true
+BR-TO,Tocantins,sewage_coverage,0.6050,,"PLACEHOLDER - replace with SINISA/SNIS, Ministério das Cidades (indicator IN056)",n/a,true
+BR-AC,Acre,road_unpaved_share,0.8063,,PLACEHOLDER - replace with DNIT Sistema Nacional de Viação; CNT Pesquisa de Rodovias; state DER registers,n/a,true
+BR-AL,Alagoas,road_unpaved_share,0.7010,,PLACEHOLDER - replace with DNIT Sistema Nacional de Viação; CNT Pesquisa de Rodovias; state DER registers,n/a,true
+BR-AP,Amapá,road_unpaved_share,0.7868,,PLACEHOLDER - replace with DNIT Sistema Nacional de Viação; CNT Pesquisa de Rodovias; state DER registers,n/a,true
+BR-AM,Amazonas,road_unpaved_share,0.8056,,PLACEHOLDER - replace with DNIT Sistema Nacional de Viação; CNT Pesquisa de Rodovias; state DER registers,n/a,true
+BR-BA,Bahia,road_unpaved_share,0.7992,,PLACEHOLDER - replace with DNIT Sistema Nacional de Viação; CNT Pesquisa de Rodovias; state DER registers,n/a,true
+BR-CE,Ceará,road_unpaved_share,0.7124,,PLACEHOLDER - replace with DNIT Sistema Nacional de Viação; CNT Pesquisa de Rodovias; state DER registers,n/a,true
+BR-DF,Distrito Federal,road_unpaved_share,0.4803,,PLACEHOLDER - replace with DNIT Sistema Nacional de Viação; CNT Pesquisa de Rodovias; state DER registers,n/a,true
+BR-ES,Espírito Santo,road_unpaved_share,0.5821,,PLACEHOLDER - replace with DNIT Sistema Nacional de Viação; CNT Pesquisa de Rodovias; state DER registers,n/a,true
+BR-GO,Goiás,road_unpaved_share,0.6327,,PLACEHOLDER - replace with DNIT Sistema Nacional de Viação; CNT Pesquisa de Rodovias; state DER registers,n/a,true
+BR-MA,Maranhão,road_unpaved_share,0.8156,,PLACEHOLDER - replace with DNIT Sistema Nacional de Viação; CNT Pesquisa de Rodovias; state DER registers,n/a,true
+BR-MT,Mato Grosso,road_unpaved_share,0.6511,,PLACEHOLDER - replace with DNIT Sistema Nacional de Viação; CNT Pesquisa de Rodovias; state DER registers,n/a,true
+BR-MS,Mato Grosso do Sul,road_unpaved_share,0.6200,,PLACEHOLDER - replace with DNIT Sistema Nacional de Viação; CNT Pesquisa de Rodovias; state DER registers,n/a,true
+BR-MG,Minas Gerais,road_unpaved_share,0.6376,,PLACEHOLDER - replace with DNIT Sistema Nacional de Viação; CNT Pesquisa de Rodovias; state DER registers,n/a,true
+BR-PA,Pará,road_unpaved_share,0.7785,,PLACEHOLDER - replace with DNIT Sistema Nacional de Viação; CNT Pesquisa de Rodovias; state DER registers,n/a,true
+BR-PB,Paraíba,road_unpaved_share,0.7229,,PLACEHOLDER - replace with DNIT Sistema Nacional de Viação; CNT Pesquisa de Rodovias; state DER registers,n/a,true
+BR-PR,Paraná,road_unpaved_share,0.5561,,PLACEHOLDER - replace with DNIT Sistema Nacional de Viação; CNT Pesquisa de Rodovias; state DER registers,n/a,true
+BR-PE,Pernambuco,road_unpaved_share,0.7342,,PLACEHOLDER - replace with DNIT Sistema Nacional de Viação; CNT Pesquisa de Rodovias; state DER registers,n/a,true
+BR-PI,Piauí,road_unpaved_share,0.8366,,PLACEHOLDER - replace with DNIT Sistema Nacional de Viação; CNT Pesquisa de Rodovias; state DER registers,n/a,true
+BR-RJ,Rio de Janeiro,road_unpaved_share,0.4441,,PLACEHOLDER - replace with DNIT Sistema Nacional de Viação; CNT Pesquisa de Rodovias; state DER registers,n/a,true
+BR-RN,Rio Grande do Norte,road_unpaved_share,0.8148,,PLACEHOLDER - replace with DNIT Sistema Nacional de Viação; CNT Pesquisa de Rodovias; state DER registers,n/a,true
+BR-RS,Rio Grande do Sul,road_unpaved_share,0.4682,,PLACEHOLDER - replace with DNIT Sistema Nacional de Viação; CNT Pesquisa de Rodovias; state DER registers,n/a,true
+BR-RO,Rondônia,road_unpaved_share,0.6064,,PLACEHOLDER - replace with DNIT Sistema Nacional de Viação; CNT Pesquisa de Rodovias; state DER registers,n/a,true
+BR-RR,Roraima,road_unpaved_share,0.7849,,PLACEHOLDER - replace with DNIT Sistema Nacional de Viação; CNT Pesquisa de Rodovias; state DER registers,n/a,true
+BR-SC,Santa Catarina,road_unpaved_share,0.4605,,PLACEHOLDER - replace with DNIT Sistema Nacional de Viação; CNT Pesquisa de Rodovias; state DER registers,n/a,true
+BR-SP,São Paulo,road_unpaved_share,0.4675,,PLACEHOLDER - replace with DNIT Sistema Nacional de Viação; CNT Pesquisa de Rodovias; state DER registers,n/a,true
+BR-SE,Sergipe,road_unpaved_share,0.7467,,PLACEHOLDER - replace with DNIT Sistema Nacional de Viação; CNT Pesquisa de Rodovias; state DER registers,n/a,true
+BR-TO,Tocantins,road_unpaved_share,0.6308,,PLACEHOLDER - replace with DNIT Sistema Nacional de Viação; CNT Pesquisa de Rodovias; state DER registers,n/a,true
+BR-AC,Acre,primary_care_coverage,0.7300,,"PLACEHOLDER - replace with Ministério da Saúde, e-Gestor AB coverage reports",n/a,true
+BR-AL,Alagoas,primary_care_coverage,0.7726,,"PLACEHOLDER - replace with Ministério da Saúde, e-Gestor AB coverage reports",n/a,true
+BR-AP,Amapá,primary_care_coverage,0.7842,,"PLACEHOLDER - replace with Ministério da Saúde, e-Gestor AB coverage reports",n/a,true
+BR-AM,Amazonas,primary_care_coverage,0.7940,,"PLACEHOLDER - replace with Ministério da Saúde, e-Gestor AB coverage reports",n/a,true
+BR-BA,Bahia,primary_care_coverage,0.7345,,"PLACEHOLDER - replace with Ministério da Saúde, e-Gestor AB coverage reports",n/a,true
+BR-CE,Ceará,primary_care_coverage,0.7904,,"PLACEHOLDER - replace with Ministério da Saúde, e-Gestor AB coverage reports",n/a,true
+BR-DF,Distrito Federal,primary_care_coverage,0.9607,,"PLACEHOLDER - replace with Ministério da Saúde, e-Gestor AB coverage reports",n/a,true
+BR-ES,Espírito Santo,primary_care_coverage,0.8551,,"PLACEHOLDER - replace with Ministério da Saúde, e-Gestor AB coverage reports",n/a,true
+BR-GO,Goiás,primary_care_coverage,0.8519,,"PLACEHOLDER - replace with Ministério da Saúde, e-Gestor AB coverage reports",n/a,true
+BR-MA,Maranhão,primary_care_coverage,0.7329,,"PLACEHOLDER - replace with Ministério da Saúde, e-Gestor AB coverage reports",n/a,true
+BR-MT,Mato Grosso,primary_care_coverage,0.8067,,"PLACEHOLDER - replace with Ministério da Saúde, e-Gestor AB coverage reports",n/a,true
+BR-MS,Mato Grosso do Sul,primary_care_coverage,0.8546,,"PLACEHOLDER - replace with Ministério da Saúde, e-Gestor AB coverage reports",n/a,true
+BR-MG,Minas Gerais,primary_care_coverage,0.8194,,"PLACEHOLDER - replace with Ministério da Saúde, e-Gestor AB coverage reports",n/a,true
+BR-PA,Pará,primary_care_coverage,0.8103,,"PLACEHOLDER - replace with Ministério da Saúde, e-Gestor AB coverage reports",n/a,true
+BR-PB,Paraíba,primary_care_coverage,0.7469,,"PLACEHOLDER - replace with Ministério da Saúde, e-Gestor AB coverage reports",n/a,true
+BR-PR,Paraná,primary_care_coverage,0.9118,,"PLACEHOLDER - replace with Ministério da Saúde, e-Gestor AB coverage reports",n/a,true
+BR-PE,Pernambuco,primary_care_coverage,0.7968,,"PLACEHOLDER - replace with Ministério da Saúde, e-Gestor AB coverage reports",n/a,true
+BR-PI,Piauí,primary_care_coverage,0.7070,,"PLACEHOLDER - replace with Ministério da Saúde, e-Gestor AB coverage reports",n/a,true
+BR-RJ,Rio de Janeiro,primary_care_coverage,0.9238,,"PLACEHOLDER - replace with Ministério da Saúde, e-Gestor AB coverage reports",n/a,true
+BR-RN,Rio Grande do Norte,primary_care_coverage,0.7527,,"PLACEHOLDER - replace with Ministério da Saúde, e-Gestor AB coverage reports",n/a,true
+BR-RS,Rio Grande do Sul,primary_care_coverage,0.8878,,"PLACEHOLDER - replace with Ministério da Saúde, e-Gestor AB coverage reports",n/a,true
+BR-RO,Rondônia,primary_care_coverage,0.8553,,"PLACEHOLDER - replace with Ministério da Saúde, e-Gestor AB coverage reports",n/a,true
+BR-RR,Roraima,primary_care_coverage,0.7745,,"PLACEHOLDER - replace with Ministério da Saúde, e-Gestor AB coverage reports",n/a,true
+BR-SC,Santa Catarina,primary_care_coverage,0.9247,,"PLACEHOLDER - replace with Ministério da Saúde, e-Gestor AB coverage reports",n/a,true
+BR-SP,São Paulo,primary_care_coverage,0.9346,,"PLACEHOLDER - replace with Ministério da Saúde, e-Gestor AB coverage reports",n/a,true
+BR-SE,Sergipe,primary_care_coverage,0.7700,,"PLACEHOLDER - replace with Ministério da Saúde, e-Gestor AB coverage reports",n/a,true
+BR-TO,Tocantins,primary_care_coverage,0.8357,,"PLACEHOLDER - replace with Ministério da Saúde, e-Gestor AB coverage reports",n/a,true
+BR-AC,Acre,school_infra_gap,0.3965,,PLACEHOLDER - replace with INEP Censo Escolar microdata,n/a,true
+BR-AL,Alagoas,school_infra_gap,0.3598,,PLACEHOLDER - replace with INEP Censo Escolar microdata,n/a,true
+BR-AP,Amapá,school_infra_gap,0.4530,,PLACEHOLDER - replace with INEP Censo Escolar microdata,n/a,true
+BR-AM,Amazonas,school_infra_gap,0.4323,,PLACEHOLDER - replace with INEP Censo Escolar microdata,n/a,true
+BR-BA,Bahia,school_infra_gap,0.3552,,PLACEHOLDER - replace with INEP Censo Escolar microdata,n/a,true
+BR-CE,Ceará,school_infra_gap,0.3576,,PLACEHOLDER - replace with INEP Censo Escolar microdata,n/a,true
+BR-DF,Distrito Federal,school_infra_gap,0.0779,,PLACEHOLDER - replace with INEP Censo Escolar microdata,n/a,true
+BR-ES,Espírito Santo,school_infra_gap,0.2152,,PLACEHOLDER - replace with INEP Censo Escolar microdata,n/a,true
+BR-GO,Goiás,school_infra_gap,0.2777,,PLACEHOLDER - replace with INEP Censo Escolar microdata,n/a,true
+BR-MA,Maranhão,school_infra_gap,0.4090,,PLACEHOLDER - replace with INEP Censo Escolar microdata,n/a,true
+BR-MT,Mato Grosso,school_infra_gap,0.3735,,PLACEHOLDER - replace with INEP Censo Escolar microdata,n/a,true
+BR-MS,Mato Grosso do Sul,school_infra_gap,0.3266,,PLACEHOLDER - replace with INEP Censo Escolar microdata,n/a,true
+BR-MG,Minas Gerais,school_infra_gap,0.2791,,PLACEHOLDER - replace with INEP Censo Escolar microdata,n/a,true
+BR-PA,Pará,school_infra_gap,0.3806,,PLACEHOLDER - replace with INEP Censo Escolar microdata,n/a,true
+BR-PB,Paraíba,school_infra_gap,0.3669,,PLACEHOLDER - replace with INEP Censo Escolar microdata,n/a,true
+BR-PR,Paraná,school_infra_gap,0.1370,,PLACEHOLDER - replace with INEP Censo Escolar microdata,n/a,true
+BR-PE,Pernambuco,school_infra_gap,0.3291,,PLACEHOLDER - replace with INEP Censo Escolar microdata,n/a,true
+BR-PI,Piauí,school_infra_gap,0.4173,,PLACEHOLDER - replace with INEP Censo Escolar microdata,n/a,true
+BR-RJ,Rio de Janeiro,school_infra_gap,0.1061,,PLACEHOLDER - replace with INEP Censo Escolar microdata,n/a,true
+BR-RN,Rio Grande do Norte,school_infra_gap,0.4065,,PLACEHOLDER - replace with INEP Censo Escolar microdata,n/a,true
+BR-RS,Rio Grande do Sul,school_infra_gap,0.1705,,PLACEHOLDER - replace with INEP Censo Escolar microdata,n/a,true
+BR-RO,Rondônia,school_infra_gap,0.1895,,PLACEHOLDER - replace with INEP Censo Escolar microdata,n/a,true
+BR-RR,Roraima,school_infra_gap,0.3873,,PLACEHOLDER - replace with INEP Censo Escolar microdata,n/a,true
+BR-SC,Santa Catarina,school_infra_gap,0.1086,,PLACEHOLDER - replace with INEP Censo Escolar microdata,n/a,true
+BR-SP,São Paulo,school_infra_gap,0.1124,,PLACEHOLDER - replace with INEP Censo Escolar microdata,n/a,true
+BR-SE,Sergipe,school_infra_gap,0.3932,,PLACEHOLDER - replace with INEP Censo Escolar microdata,n/a,true
+BR-TO,Tocantins,school_infra_gap,0.1783,,PLACEHOLDER - replace with INEP Censo Escolar microdata,n/a,true
+BR-AC,Acre,electricity_access,0.9818,,PLACEHOLDER - replace with IBGE Censo 2022 / PNAD Contínua,n/a,true
+BR-AL,Alagoas,electricity_access,0.9340,,PLACEHOLDER - replace with IBGE Censo 2022 / PNAD Contínua,n/a,true
+BR-AP,Amapá,electricity_access,0.9511,,PLACEHOLDER - replace with IBGE Censo 2022 / PNAD Contínua,n/a,true
+BR-AM,Amazonas,electricity_access,0.9633,,PLACEHOLDER - replace with IBGE Censo 2022 / PNAD Contínua,n/a,true
+BR-BA,Bahia,electricity_access,0.9623,,PLACEHOLDER - replace with IBGE Censo 2022 / PNAD Contínua,n/a,true
+BR-CE,Ceará,electricity_access,0.9528,,PLACEHOLDER - replace with IBGE Censo 2022 / PNAD Contínua,n/a,true
+BR-DF,Distrito Federal,electricity_access,0.9670,,PLACEHOLDER - replace with IBGE Censo 2022 / PNAD Contínua,n/a,true
+BR-ES,Espírito Santo,electricity_access,0.9859,,PLACEHOLDER - replace with IBGE Censo 2022 / PNAD Contínua,n/a,true
+BR-GO,Goiás,electricity_access,1.0000,,PLACEHOLDER - replace with IBGE Censo 2022 / PNAD Contínua,n/a,true
+BR-MA,Maranhão,electricity_access,0.8801,,PLACEHOLDER - replace with IBGE Censo 2022 / PNAD Contínua,n/a,true
+BR-MT,Mato Grosso,electricity_access,0.9810,,PLACEHOLDER - replace with IBGE Censo 2022 / PNAD Contínua,n/a,true
+BR-MS,Mato Grosso do Sul,electricity_access,0.9510,,PLACEHOLDER - replace with IBGE Censo 2022 / PNAD Contínua,n/a,true
+BR-MG,Minas Gerais,electricity_access,0.9714,,PLACEHOLDER - replace with IBGE Censo 2022 / PNAD Contínua,n/a,true
+BR-PA,Pará,electricity_access,1.0000,,PLACEHOLDER - replace with IBGE Censo 2022 / PNAD Contínua,n/a,true
+BR-PB,Paraíba,electricity_access,0.9576,,PLACEHOLDER - replace with IBGE Censo 2022 / PNAD Contínua,n/a,true
+BR-PR,Paraná,electricity_access,0.9931,,PLACEHOLDER - replace with IBGE Censo 2022 / PNAD Contínua,n/a,true
+BR-PE,Pernambuco,electricity_access,0.9872,,PLACEHOLDER - replace with IBGE Censo 2022 / PNAD Contínua,n/a,true
+BR-PI,Piauí,electricity_access,0.9500,,PLACEHOLDER - replace with IBGE Censo 2022 / PNAD Contínua,n/a,true
+BR-RJ,Rio de Janeiro,electricity_access,0.9679,,PLACEHOLDER - replace with IBGE Censo 2022 / PNAD Contínua,n/a,true
+BR-RN,Rio Grande do Norte,electricity_access,0.9441,,PLACEHOLDER - replace with IBGE Censo 2022 / PNAD Contínua,n/a,true
+BR-RS,Rio Grande do Sul,electricity_access,0.9878,,PLACEHOLDER - replace with IBGE Censo 2022 / PNAD Contínua,n/a,true
+BR-RO,Rondônia,electricity_access,0.9152,,PLACEHOLDER - replace with IBGE Censo 2022 / PNAD Contínua,n/a,true
+BR-RR,Roraima,electricity_access,0.9145,,PLACEHOLDER - replace with IBGE Censo 2022 / PNAD Contínua,n/a,true
+BR-SC,Santa Catarina,electricity_access,0.9963,,PLACEHOLDER - replace with IBGE Censo 2022 / PNAD Contínua,n/a,true
+BR-SP,São Paulo,electricity_access,0.9922,,PLACEHOLDER - replace with IBGE Censo 2022 / PNAD Contínua,n/a,true
+BR-SE,Sergipe,electricity_access,0.9991,,PLACEHOLDER - replace with IBGE Censo 2022 / PNAD Contínua,n/a,true
+BR-TO,Tocantins,electricity_access,0.9787,,PLACEHOLDER - replace with IBGE Censo 2022 / PNAD Contínua,n/a,true
+BR-AC,Acre,waste_collection_coverage,0.7109,,PLACEHOLDER - replace with SINISA/SNIS resíduos sólidos; IBGE Censo 2022,n/a,true
+BR-AL,Alagoas,waste_collection_coverage,0.7730,,PLACEHOLDER - replace with SINISA/SNIS resíduos sólidos; IBGE Censo 2022,n/a,true
+BR-AP,Amapá,waste_collection_coverage,0.7599,,PLACEHOLDER - replace with SINISA/SNIS resíduos sólidos; IBGE Censo 2022,n/a,true
+BR-AM,Amazonas,waste_collection_coverage,0.7432,,PLACEHOLDER - replace with SINISA/SNIS resíduos sólidos; IBGE Censo 2022,n/a,true
+BR-BA,Bahia,waste_collection_coverage,0.7704,,PLACEHOLDER - replace with SINISA/SNIS resíduos sólidos; IBGE Censo 2022,n/a,true
+BR-CE,Ceará,waste_collection_coverage,0.7806,,PLACEHOLDER - replace with SINISA/SNIS resíduos sólidos; IBGE Censo 2022,n/a,true
+BR-DF,Distrito Federal,waste_collection_coverage,0.9149,,PLACEHOLDER - replace with SINISA/SNIS resíduos sólidos; IBGE Censo 2022,n/a,true
+BR-ES,Espírito Santo,waste_collection_coverage,0.8703,,PLACEHOLDER - replace with SINISA/SNIS resíduos sólidos; IBGE Censo 2022,n/a,true
+BR-GO,Goiás,waste_collection_coverage,0.8854,,PLACEHOLDER - replace with SINISA/SNIS resíduos sólidos; IBGE Censo 2022,n/a,true
+BR-MA,Maranhão,waste_collection_coverage,0.7233,,PLACEHOLDER - replace with SINISA/SNIS resíduos sólidos; IBGE Censo 2022,n/a,true
+BR-MT,Mato Grosso,waste_collection_coverage,0.7569,,PLACEHOLDER - replace with SINISA/SNIS resíduos sólidos; IBGE Censo 2022,n/a,true
+BR-MS,Mato Grosso do Sul,waste_collection_coverage,0.8482,,PLACEHOLDER - replace with SINISA/SNIS resíduos sólidos; IBGE Censo 2022,n/a,true
+BR-MG,Minas Gerais,waste_collection_coverage,0.8710,,PLACEHOLDER - replace with SINISA/SNIS resíduos sólidos; IBGE Censo 2022,n/a,true
+BR-PA,Pará,waste_collection_coverage,0.8010,,PLACEHOLDER - replace with SINISA/SNIS resíduos sólidos; IBGE Censo 2022,n/a,true
+BR-PB,Paraíba,waste_collection_coverage,0.7600,,PLACEHOLDER - replace with SINISA/SNIS resíduos sólidos; IBGE Censo 2022,n/a,true
+BR-PR,Paraná,waste_collection_coverage,0.9582,,PLACEHOLDER - replace with SINISA/SNIS resíduos sólidos; IBGE Censo 2022,n/a,true
+BR-PE,Pernambuco,waste_collection_coverage,0.7869,,PLACEHOLDER - replace with SINISA/SNIS resíduos sólidos; IBGE Censo 2022,n/a,true
+BR-PI,Piauí,waste_collection_coverage,0.7169,,PLACEHOLDER - replace with SINISA/SNIS resíduos sólidos; IBGE Censo 2022,n/a,true
+BR-RJ,Rio de Janeiro,waste_collection_coverage,1.0000,,PLACEHOLDER - replace with SINISA/SNIS resíduos sólidos; IBGE Censo 2022,n/a,true
+BR-RN,Rio Grande do Norte,waste_collection_coverage,0.8017,,PLACEHOLDER - replace with SINISA/SNIS resíduos sólidos; IBGE Censo 2022,n/a,true
+BR-RS,Rio Grande do Sul,waste_collection_coverage,0.9397,,PLACEHOLDER - replace with SINISA/SNIS resíduos sólidos; IBGE Censo 2022,n/a,true
+BR-RO,Rondônia,waste_collection_coverage,0.8776,,PLACEHOLDER - replace with SINISA/SNIS resíduos sólidos; IBGE Censo 2022,n/a,true
+BR-RR,Roraima,waste_collection_coverage,0.7991,,PLACEHOLDER - replace with SINISA/SNIS resíduos sólidos; IBGE Censo 2022,n/a,true
+BR-SC,Santa Catarina,waste_collection_coverage,0.9777,,PLACEHOLDER - replace with SINISA/SNIS resíduos sólidos; IBGE Censo 2022,n/a,true
+BR-SP,São Paulo,waste_collection_coverage,0.8955,,PLACEHOLDER - replace with SINISA/SNIS resíduos sólidos; IBGE Censo 2022,n/a,true
+BR-SE,Sergipe,waste_collection_coverage,0.7422,,PLACEHOLDER - replace with SINISA/SNIS resíduos sólidos; IBGE Censo 2022,n/a,true
+BR-TO,Tocantins,waste_collection_coverage,0.8486,,PLACEHOLDER - replace with SINISA/SNIS resíduos sólidos; IBGE Censo 2022,n/a,true

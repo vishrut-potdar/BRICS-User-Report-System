@@ -1,19 +1,19 @@
 """Build the district indicator tables the scorer reads.
 
-Inputs
-  data/reference/districts_<pack>.csv       district list, population, centroids
-  data/raw/<metric>.csv                     one file per metric in the pack (see data/raw/README.md)
-  data/raw/planned_projects.csv (optional)  real planned/funded projects
+Inputs (per pack)
+  data/reference/<pack>/units.csv                  unit list, population, centroids (scripts/build_reference.py)
+  data/raw/<pack>/<metric>.csv                     one file per metric in the pack (see data/raw/README.md)
+  data/raw/<pack>/planned_projects.csv (optional)  real planned/funded projects
 
 Outputs
-  data/processed/indicators_long.csv        one row per (district, metric) with year, source, licence, placeholder flag
-  data/processed/district_indicators.csv    wide table: population, poverty, aspirational, need_<sector>
-  data/processed/planned_projects.csv       copied from raw if present (else generate_synthetic writes a placeholder)
+  data/processed/<pack>/indicators_long.csv   one row per (unit, metric) with year, source, licence, placeholder flag
+  data/processed/<pack>/indicators.csv        wide table: population, poverty, aspirational, need_<sector>
+  data/processed/<pack>/planned_projects.csv  copied from raw if present (else generate_synthetic writes a placeholder)
 
-Districts with no real value for a metric fail the build, unless --allow-placeholder is passed. Placeholders
+Units with no real value for a metric fail the build, unless --allow-placeholder is passed. Placeholders
 are deterministic, shaped by rough tiers in the pack config, and flagged everywhere downstream.
 
-    python -m scripts.build_indicators --allow-placeholder
+    python -m scripts.build_indicators --pack all --allow-placeholder
 """
 
 from __future__ import annotations
@@ -26,12 +26,12 @@ import sys
 from pathlib import Path
 
 from app.config import REPO_ROOT
-from app.pack import district_infos, read_csv, read_pack_config, truthy
+from app.pack import district_infos, read_csv, read_pack_config, truthy, unit_population
 from app.taxonomy import SECTORS
 
 TIER_LATENT = {"high": 0.75, "mid": 0.45, "low": 0.15}
 LONG_FIELDS = ["admin_code", "district_name", "metric", "value", "year", "source", "licence", "placeholder"]
-PLANNED_FIELDS = ["project_id", "admin_code", "sector", "name", "budget_inr_lakh", "status", "source", "synthetic"]
+PLANNED_FIELDS = ["project_id", "admin_code", "sector", "name", "status", "source", "synthetic"]
 
 
 def clamp01(value: float) -> float:
@@ -64,13 +64,19 @@ def load_raw_metric(path: Path, name_index: dict[str, str]) -> tuple[dict[str, d
 
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    parser.add_argument("--pack", default="IN-MH")
+    parser.add_argument("--pack", nargs="+", default=["all"])
     parser.add_argument("--data-dir", type=Path, default=REPO_ROOT / "data")
     parser.add_argument("--allow-placeholder", action="store_true", help="fill missing values with flagged placeholders")
     args = parser.parse_args(argv)
+    packs = sorted(p.stem for p in (args.data_dir / "packs").glob("*.json")) if args.pack == ["all"] else args.pack
+    status = 0
+    for pack_id in packs:
+        status |= build(args.data_dir, pack_id, args.allow_placeholder)
+    return status
 
-    data_dir: Path = args.data_dir
-    config = read_pack_config(data_dir, args.pack)
+
+def build(data_dir: Path, pack_id: str, allow_placeholder: bool) -> int:
+    config = read_pack_config(data_dir, pack_id)
     infos = district_infos(data_dir, config)
     reference = {row["admin_code"]: row for row in read_csv(data_dir / config["files"]["district_reference"])}
 
@@ -85,7 +91,7 @@ def main(argv: list[str] | None = None) -> int:
     tier_of = {code: tier for tier, codes in tiers.items() for code in codes}
     latent = {}
     for code in infos:
-        rng = random.Random(f"{args.pack}:{code}:latent")
+        rng = random.Random(f"{pack_id}:{code}:latent")
         latent[code] = clamp01(TIER_LATENT[tier_of.get(code, "mid")] + rng.uniform(-0.1, 0.1))
 
     long_rows: list[dict[str, str]] = []
@@ -95,7 +101,7 @@ def main(argv: list[str] | None = None) -> int:
     report: list[str] = []
 
     for metric, spec in config["metrics"].items():
-        raw_path = data_dir / "raw" / f"{metric}.csv"
+        raw_path = data_dir / "raw" / pack_id / f"{metric}.csv"
         raw, unmatched = load_raw_metric(raw_path, name_index) if raw_path.is_file() else ({}, [])
         if unmatched:
             print(f"warning: {raw_path.name}: unmatched districts {unmatched}", file=sys.stderr)
@@ -106,8 +112,8 @@ def main(argv: list[str] | None = None) -> int:
                 row = raw[code]
                 value, is_placeholder = float(row["value"]), False
                 year, source, licence = row["year"], row["source"], row["licence"]
-            elif args.allow_placeholder:
-                rng = random.Random(f"{args.pack}:{code}:{metric}")
+            elif allow_placeholder:
+                rng = random.Random(f"{pack_id}:{code}:{metric}")
                 value = round(clamp01(intercept + slope * latent[code] + rng.gauss(0, 0.03)), 4)
                 is_placeholder = True
                 year, source, licence = "", f"PLACEHOLDER - replace with {spec.get('expected_source', 'a real source')}", "n/a"
@@ -134,7 +140,7 @@ def main(argv: list[str] | None = None) -> int:
         row = {
             "admin_code": code,
             "district_name": info.name,
-            "population": ref["population_2011"],
+            "population": str(unit_population(ref)),
             "poverty": f"{values[(code, equity_metric)]:.4f}",
             "aspirational": str(truthy(ref.get("aspirational"))).lower(),
         }
@@ -146,8 +152,7 @@ def main(argv: list[str] | None = None) -> int:
         row["synthetic"] = str(bool(placeholders[code])).lower()
         wide_rows.append(row)
 
-    out_dir = data_dir / "processed"
-    out_dir.mkdir(parents=True, exist_ok=True)
+    (data_dir / config["files"]["indicators"]).parent.mkdir(parents=True, exist_ok=True)
     with (data_dir / config["files"]["indicators_long"]).open("w", encoding="utf-8", newline="") as fh:
         writer = csv.DictWriter(fh, fieldnames=LONG_FIELDS)
         writer.writeheader()
@@ -157,7 +162,7 @@ def main(argv: list[str] | None = None) -> int:
         writer.writeheader()
         writer.writerows(wide_rows)
 
-    raw_planned = data_dir / "raw" / "planned_projects.csv"
+    raw_planned = data_dir / "raw" / pack_id / "planned_projects.csv"
     if raw_planned.is_file():
         planned_rows = read_csv(raw_planned)
         header = set(planned_rows[0]) if planned_rows else set()
@@ -167,7 +172,7 @@ def main(argv: list[str] | None = None) -> int:
         shutil.copyfile(raw_planned, data_dir / config["files"]["planned_projects"])
         report.append("  planned_projects: copied from data/raw")
 
-    print(f"Built indicators for {len(infos)} districts ({args.pack}):")
+    print(f"Built indicators for {len(infos)} units ({pack_id}):")
     print("\n".join(report))
     if any(placeholders.values()):
         print("NOTE: placeholder values are in use; they are flagged in the outputs and in the API (/meta, /districts).")

@@ -3,1128 +3,461 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Vikas Vaani — prototype</title>
+<title>Vikas Vaani</title>
+<meta name="description" content="Report a problem in your area. Requests are grouped with others nearby and ranked fairly for public works.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Geist:wght@400;500;600&family=Noto+Sans+Devanagari:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Geist:wght@400;500;600&family=Geist+Mono:wght@500&family=Noto+Sans+Devanagari:wght@400;500&display=swap">
+<link rel="stylesheet" href="app.css">
 <style>
-:root{
-  --bg:#F6F4FB; --tile:#FFFFFF; --inset:#F1EEF9; --line:#ECE8F5; --text:#2A2F45; --muted:#666C80;
-  --sel:#E4DEFA; --selText:#3B2F7A; --peri:#8B7FD6; --periDeep:#6C5FC7; --lilac:#CFC6FA;
-  --coral:#C2584A; --peach:#FFB4A2; --peachBg:#FFE8DF; --rust:#8A3B22; --mint:#2E8B63;
-  --sea:#DDEBF6; --land:#EEF2EA; --sans: Geist, "Noto Sans Devanagari", system-ui, sans-serif; --serif: Fraunces, "Noto Sans Devanagari", Georgia, serif;
-  --ease: cubic-bezier(.2,.8,.2,1);
-  box-sizing:border-box; padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+.wrap{max-width:760px;margin:0 auto;padding:8px 24px 56px}
+.hero{padding:18px 0 22px}
+.hero h1{font-size:clamp(30px,5vw,44px);line-height:1.08}
+.hero p{color:var(--muted);font-size:15.5px;margin:12px 0 0;max-width:600px}
+.langs{display:flex;flex-wrap:wrap;gap:6px;margin-top:14px}
+.langs span{font-size:12px;background:var(--tile);box-shadow:0 0 0 1px var(--line);border-radius:999px;padding:4px 10px;color:var(--muted)}
+.card{padding:26px;margin-bottom:16px}
+.card h2{font-size:22px}
+.card > .sub{margin-top:4px}
+.field{margin-top:22px}
+.field > label, .field > .lbl{display:flex;align-items:baseline;gap:8px;font-weight:500;font-size:13.5px;margin-bottom:9px}
+.field > label small, .field > .lbl small{color:var(--faint);font-weight:400;font-size:12px}
+.num{width:22px;height:22px;border-radius:999px;background:var(--sel);color:var(--selText);font-size:12px;font-weight:600;display:inline-grid;place-items:center;flex:none}
+.cseg{display:flex;flex-wrap:wrap;gap:8px}
+.cseg button{border:0;height:40px;padding:0 16px;border-radius:12px;background:var(--inset);font-size:13.5px;transition:background .2s}
+.cseg button:hover{background:var(--sel)}
+.cseg button[aria-pressed="true"]{background:var(--periDeep);color:#fff}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.select{width:100%;height:46px;border:0;border-radius:12px;background:var(--inset);padding:0 38px 0 14px;appearance:none;font-size:14px;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23626879' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center}
+.select:disabled{opacity:.5}
+.cats{display:flex;flex-wrap:wrap;gap:8px}
+.cats .chip{height:36px;padding:0 14px;font-size:13px}
+textarea{width:100%;min-height:120px;border:0;border-radius:14px;background:var(--inset);padding:14px 16px 56px;resize:vertical;font-size:15px;line-height:1.5}
+textarea::placeholder{color:var(--faint)}
+.textwrap{position:relative}
+.mic{position:absolute;right:10px;bottom:12px;height:38px;border:0;border-radius:999px;background:var(--tile);box-shadow:0 0 0 1px var(--line);padding:0 14px 0 12px;display:inline-flex;align-items:center;gap:7px;font-size:13px}
+.mic.rec{background:var(--coral);color:#fff;box-shadow:none}
+.mic.rec i{width:8px;height:8px;border-radius:999px;background:#fff;animation:blink 1s infinite}
+@keyframes blink{50%{opacity:.3}}
+.voicechip{display:inline-flex;align-items:center;gap:8px;margin-top:10px;background:var(--sel);color:var(--selText);border-radius:999px;padding:6px 8px 6px 12px;font-size:12.5px}
+.voicechip button{border:0;background:none;width:22px;height:22px;border-radius:999px;color:var(--selText)}
+.locrow{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.locstate{font-size:13px;color:var(--muted)}
+.locstate.ok{color:var(--mint)}
+.submit{margin-top:26px;display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.submit .pill.primary{height:48px;padding:0 24px;font-size:15px}
+.submit .pill.primary:disabled{opacity:.55;cursor:default}
+.privacy{font-size:12px;color:var(--faint);max-width:380px}
+.err{margin-top:12px;color:var(--coral);font-size:13px}
+.spinner{width:16px;height:16px;border-radius:999px;border:2px solid rgba(255,255,255,.4);border-top-color:#fff;animation:spin .8s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+.done{text-align:center;padding:36px 26px}
+.tick{width:64px;height:64px;border-radius:999px;background:var(--mintBg);display:grid;place-items:center;margin:0 auto 14px;animation:pop .5s var(--ease)}
+@keyframes pop{from{transform:scale(.6);opacity:0}}
+.done h2{font-size:26px}
+.ticket{display:inline-flex;align-items:center;gap:10px;margin:16px 0 6px;background:var(--inset);border-radius:14px;padding:10px 12px 10px 16px}
+.ticket code{font-family:var(--mono);font-size:20px;letter-spacing:.04em}
+.ticket button{border:0;background:var(--tile);box-shadow:0 0 0 1px var(--line);border-radius:10px;height:32px;padding:0 10px;font-size:12.5px}
+.ack{white-space:pre-line;margin:14px auto 0;max-width:460px;background:var(--mintBg);color:#1F5E43;border-radius:14px;padding:12px 16px;font-size:14px}
+.facts{display:flex;justify-content:center;gap:8px;flex-wrap:wrap;margin-top:16px}
+.facts span{font-size:12.5px;background:var(--inset);border-radius:999px;padding:5px 12px}
+.facts span:empty{display:none}
+.done .actions{display:flex;justify-content:center;gap:10px;margin-top:22px;flex-wrap:wrap}
+
+.trackrow{display:flex;gap:10px;margin-top:16px}
+.trackrow input{flex:1;min-width:0;height:46px;border:0;border-radius:12px;background:var(--inset);padding:0 14px;font-family:var(--mono);font-size:15px}
+.recent{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+.recent button{border:0;background:none;color:var(--periDeep);font-family:var(--mono);font-size:12.5px;padding:2px 4px;text-decoration:underline;text-underline-offset:3px}
+.status{margin-top:20px;border-top:1px solid var(--line);padding-top:18px}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin:14px 0 12px}
+.steps div{font-size:12px;color:var(--faint)}
+.steps div i{display:block;height:6px;border-radius:999px;background:var(--inset);margin-bottom:8px}
+.steps div.on{color:var(--text)}
+.steps div.on i{background:var(--periDeep)}
+.steps div.now{font-weight:600}
+.meta{display:flex;flex-wrap:wrap;gap:6px 18px;font-size:13px;color:var(--muted)}
+.meta b{color:var(--text);font-weight:500}
+.summary{margin-top:10px;font-size:14px}
+
+.countrychip{display:inline-flex;align-items:center;gap:8px}
+.countrychip .pill{height:36px;font-size:13px}
+.area{display:flex;align-items:center;justify-content:space-between;gap:12px;background:var(--inset);border-radius:14px;padding:12px 12px 12px 16px}
+.area b{font-weight:500;font-size:15px}
+.area .sub{display:block}
+.area .pill{height:34px;font-size:13px}
+.areaedit{margin-top:10px}
+.remember{font-size:12px;color:var(--faint);margin-top:8px}
+.picker .country{min-height:132px}
+footer{max-width:760px;margin:0 auto;padding:0 24px 40px;color:var(--faint);font-size:12px;display:flex;gap:6px 16px;flex-wrap:wrap}
+
+@media (max-width:640px){
+  .wrap{padding:4px 16px 40px}
+  .card{padding:20px}
+  .row2{grid-template-columns:1fr}
+  footer{padding:0 16px 32px}
+  .admin-link span, .countrychip .lbltxt{display:none}
 }
-:root:not([data-theme="light"]){color-scheme:light}
-*,*::before,*::after{box-sizing:inherit}
-html{scroll-padding-top:env(safe-area-inset-top,0px)}
-body{margin:0;background:var(--bg);color:var(--text);font-family:var(--sans);font-size:14px;-webkit-font-smoothing:antialiased}
-button,select,input{font:inherit;color:inherit}
-button{cursor:pointer}
-:focus-visible{outline:2px solid var(--periDeep);outline-offset:2px}
-.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
-
-/* header */
-header.top{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:18px 24px 12px;flex-wrap:wrap}
-.brand{display:flex;align-items:baseline;gap:14px}
-.brand h1{margin:0;font-family:var(--serif);font-weight:500;font-size:26px;letter-spacing:-.02em}
-.brand p{margin:0;color:var(--muted);font-size:13px}
-.hactions{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
-.pill{height:40px;border:0;border-radius:999px;background:var(--tile);padding:0 16px;font-size:13.5px;display:inline-flex;align-items:center;gap:8px;box-shadow:0 0 0 1px var(--line);transition:background .2s,transform .15s}
-.pill:hover{background:var(--inset)}
-.pill:active{transform:scale(.97)}
-.pill.primary{background:var(--sel);color:var(--selText);box-shadow:none;font-weight:500}
-.pill.primary:hover{background:var(--lilac)}
-.badge{height:40px;display:inline-flex;align-items:center;gap:8px;padding:0 14px;border-radius:999px;border:1px dashed #D9D4E8;color:var(--muted);font-size:12.5px}
-.dot{width:6px;height:6px;border-radius:999px;background:var(--peri)}
-.count{min-width:18px;height:18px;border-radius:999px;background:var(--coral);color:#fff;font-size:11px;font-weight:600;display:none;align-items:center;justify-content:center;padding:0 5px}
-.count.show{display:inline-flex;animation:pop .4s var(--ease)}
-select.pill{appearance:none;padding-right:34px;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23666C80' stroke-width='2.5' stroke-linecap='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center}
-
-/* grid */
-main.grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));grid-template-rows:repeat(6,minmax(118px,1fr));gap:12px;padding:0 24px 24px;height:calc(100vh - 72px);min-height:860px}
-.tile{background:var(--tile);border-radius:22px;border:1px solid var(--line);padding:18px 20px;display:flex;flex-direction:column;min-width:0;min-height:0;position:relative}
-.tile h2{margin:0;font-size:15px;font-weight:600}
-.sub{font-size:12.5px;color:var(--muted)}
-.t-map{grid-column:1/span 6;grid-row:1/span 4;padding:14px 16px;gap:10px}
-.t-rank{grid-column:7/span 3;grid-row:1/span 6;gap:12px;padding:18px 14px}
-.t-score{grid-column:10/span 3;grid-row:1/span 4;background:linear-gradient(160deg,#EDE7FF 0%,#FFEDE4 100%);border-color:#E7E0F8;gap:14px;padding:22px}
-.t-k1{grid-column:1/span 2;grid-row:5}.t-k2{grid-column:3/span 2;grid-row:5}.t-k3{grid-column:5/span 2;grid-row:5}
-.t-silent{grid-column:1/span 3;grid-row:6;justify-content:space-between}
-.t-spam{grid-column:4/span 3;grid-row:6;justify-content:space-between;transition:background .5s,border-color .5s}
-.t-act{grid-column:10/span 3;grid-row:5/span 2;gap:10px}
-.kpi{justify-content:space-between}
-.num{font-family:var(--serif);font-size:42px;font-weight:400;letter-spacing:-.02em;line-height:1;font-variant-numeric:tabular-nums}
-.bump{animation:bump .6s var(--ease)}
-@keyframes bump{0%{transform:none}30%{transform:translateY(-3px);color:var(--periDeep)}100%{transform:none}}
-
-/* segmented */
-.seg{display:flex;padding:3px;background:var(--inset);border-radius:999px;gap:2px;position:relative}
-.seg button{position:relative;z-index:1;height:32px;padding:0 14px;border:0;border-radius:999px;background:transparent;font-size:12.5px;font-weight:500;color:var(--text);transition:color .25s;flex:1;white-space:nowrap}
-.seg button[aria-pressed="true"]{color:var(--selText)}
-.seg .thumb{position:absolute;top:3px;bottom:3px;border-radius:999px;background:var(--sel);transition:left .35s var(--ease),width .35s var(--ease);z-index:0}
-
-/* map */
-.mhead{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap}
-.crumbs{display:flex;align-items:center;gap:2px}
-.crumbs button{height:32px;border:0;border-radius:999px;background:transparent;padding:0 10px;font-size:14px}
-.crumbs button[aria-current="page"]{background:var(--inset);font-weight:600}
-.crumbs span{color:#9A9FB0}
-.map{position:relative;flex:1;min-height:0;border-radius:14px;overflow:hidden;background:var(--sea);touch-action:none;cursor:grab}
-.map.dragging{cursor:grabbing}
-#svg{position:absolute;inset:0;width:100%;height:100%}
-.map canvas{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;transition:opacity .25s}
-.base{transition:opacity .45s var(--ease)}
-.st{fill:var(--land);stroke:#D6DAE3;stroke-width:.7}
-.st.mh{fill:#fff;stroke:var(--periDeep);stroke-width:1.6;cursor:pointer}
-.st.mh:hover{fill:#F4F1FE}
-.nb{fill:var(--land);stroke:#D6DAE3;stroke-width:.8}
-.dt{fill:#fff;stroke:#C9CDD8;stroke-width:.8;stroke-dasharray:3 3;cursor:pointer;transition:fill .2s}
-.dt:hover{fill:#F4F1FE}
-.dt.on{stroke:var(--periDeep);stroke-width:2.2;stroke-dasharray:none;fill:#FBFAFF}
-.lbl{position:absolute;transform:translate(-50%,-50%);pointer-events:none;white-space:nowrap;font-size:12px;font-weight:500;color:var(--text);text-shadow:0 0 3px #fff,0 0 3px #fff,0 0 2px #fff;display:flex;align-items:center;gap:4px;transition:opacity .25s}
-.lbl.city::before{content:"";width:6px;height:6px;border-radius:999px;background:#fff;border:1.5px solid var(--text)}
-.lbl.state{color:#8A91A3;letter-spacing:.06em;font-size:11.5px}
-.lbl.sea{color:#6E93B8;font-style:italic}
-.lbl.big{font-weight:600;font-size:14px}
-.lbl.dist{color:#7A8094;font-size:11px}
-.pin{position:absolute;width:22px;height:22px;margin:-11px 0 0 -11px;border-radius:999px;border:2px solid #fff;background:var(--periDeep);color:#fff;font-size:11px;font-weight:600;padding:0;box-shadow:0 1px 3px rgba(60,50,110,.35);transition:transform .25s var(--ease),box-shadow .25s,background .3s}
-.pin.top{background:var(--peach);color:#5A1F10}
-.pin.on{transform:scale(1.25);box-shadow:0 0 0 3px var(--text),0 2px 6px rgba(60,50,110,.35)}
-.pin:hover{transform:scale(1.15)}
-.ctrls{position:absolute;right:10px;top:10px;display:flex;flex-direction:column;gap:8px;z-index:3}
-.ctrls .grp{display:flex;flex-direction:column;background:#fff;border-radius:10px;box-shadow:0 1px 6px rgba(60,50,110,.14);overflow:hidden}
-.ctrls button{width:40px;height:40px;border:0;background:#fff;display:flex;align-items:center;justify-content:center;font-size:20px;color:var(--text);transition:background .15s}
-.ctrls button:hover{background:var(--inset)}
-.ctrls .grp button+button{border-top:1px solid var(--line)}
-.ctrls .solo{border-radius:10px;box-shadow:0 1px 6px rgba(60,50,110,.14)}
-.scale{position:absolute;right:10px;bottom:8px;display:flex;flex-direction:column;align-items:flex-end;gap:2px;font-size:10.5px;color:#4A4F63;pointer-events:none}
-.scale i{display:block;height:5px;border:1.5px solid #4A4F63;border-top:0;transition:width .2s}
-.legend{position:absolute;left:10px;bottom:8px;display:flex;align-items:center;gap:6px;background:rgba(255,255,255,.88);padding:4px 8px;border-radius:999px;font-size:11px;color:#4A4F63;pointer-events:none}
-.legend b{display:block;width:70px;height:6px;border-radius:999px;background:linear-gradient(90deg,#96DCBE,#CEE8A0,#FFE096,#FFB496,#EE808C)}
-.tip{position:absolute;pointer-events:none;background:#fff;border-radius:10px;padding:8px 10px;font-size:12px;box-shadow:0 4px 16px rgba(60,50,110,.16);opacity:0;transform:translateY(4px);transition:opacity .15s,transform .15s;z-index:4;max-width:220px}
-.tip.show{opacity:1;transform:none}
-.tip strong{display:block;font-size:13px}
-.ripple{position:absolute;width:16px;height:16px;margin:-8px 0 0 -8px;border-radius:999px;border:2px solid var(--periDeep);pointer-events:none;animation:ripple 1.6s var(--ease) forwards;z-index:2}
-@keyframes ripple{0%{transform:scale(.4);opacity:1}100%{transform:scale(5);opacity:0}}
-.chips{display:flex;flex-wrap:wrap;gap:4px}
-.chip{height:28px;padding:0 10px 0 8px;border:0;border-radius:999px;background:var(--inset);font-size:11.5px;font-weight:500;display:inline-flex;align-items:center;gap:6px;transition:background .2s,color .2s}
-.chip i{width:10px;height:10px;border-radius:999px}
-.chip[aria-pressed="true"]{background:var(--sel);color:var(--selText)}
-
-/* ranking */
-.weights{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:6px;padding:0 4px}
-.weights div{display:flex;flex-direction:column;gap:4px;font-size:10.5px;color:var(--muted)}
-.weights span{height:4px;border-radius:999px;background:var(--inset);overflow:hidden}
-.weights span b{display:block;height:100%;background:#B7ACF0;border-radius:999px;transition:width .5s var(--ease)}
-.rlist{display:flex;flex-direction:column;gap:2px;overflow:auto;margin:0 -2px;padding:0 2px;flex:1;min-height:0}
-.row{width:100%;min-height:56px;display:flex;align-items:center;gap:12px;padding:8px 10px;border:0;border-radius:14px;background:transparent;text-align:left;transition:background .2s;will-change:transform}
-.row:hover{background:#FAF9FE}
-.row[aria-pressed="true"]{background:var(--inset)}
-.row .rk{width:20px;flex-shrink:0;text-align:center;font-family:var(--serif);font-size:17px;color:#737891;transition:color .3s}
-.row .rk.top{color:var(--coral)}
-.row .mid{flex:1;min-width:0;display:flex;flex-direction:column;gap:2px}
-.row .t{font-size:13.5px;font-weight:500;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.row .d{font-size:11.5px;color:var(--muted)}
-.row .d em{font-style:normal;color:var(--coral);font-weight:600}
-.row .sc{display:flex;flex-direction:column;align-items:flex-end;flex-shrink:0}
-.row .sc b{font-size:16px;font-weight:600;font-variant-numeric:tabular-nums}
-.row .sc small{font-size:10.5px;font-weight:500;color:var(--muted)}
-.row .sc small.up{color:var(--mint)} .row .sc small.down{color:var(--coral)}
-.row.flash{animation:flash 1.2s var(--ease)}
-@keyframes flash{0%,100%{background:transparent}25%{background:var(--peachBg)}}
-
-/* score */
-.stag{font-size:11.5px;font-weight:600;padding:4px 10px;border-radius:999px;transition:background .3s,color .3s}
-.stitle{margin:0;font-family:var(--serif);font-size:23px;font-weight:500;line-height:1.2;letter-spacing:-.01em}
-.big{font-family:var(--serif);font-size:64px;font-weight:400;line-height:.9;letter-spacing:-.03em;font-variant-numeric:tabular-nums}
-.bars{display:flex;flex-direction:column;gap:9px}
-.bar{display:grid;grid-template-columns:76px minmax(0,1fr) 36px;gap:10px;align-items:center;font-size:12px}
-.bar span{color:#4A4F63}
-.bar i{height:6px;border-radius:999px;background:rgba(255,255,255,.85);overflow:hidden;display:block}
-.bar i b{display:block;height:100%;background:var(--peri);border-radius:999px;width:0;transition:width .6s var(--ease)}
-.bar[hidden]{display:none}
-.bar.pen span,.bar.pen em{color:#B5503E}
-.bar em{font-style:normal;text-align:right;font-variant-numeric:tabular-nums}
-.why{margin-top:auto;border-top:1px solid #DDD5F2;padding-top:14px;display:flex;flex-direction:column;gap:6px;font-size:13px;line-height:1.5;color:#3A3F55}
-.why small{font-size:10.5px;color:#5F5878}
-.fade{animation:fade .35s var(--ease)}
-@keyframes fade{from{opacity:.2;transform:translateY(4px)}to{opacity:1;transform:none}}
-
-/* actions */
-.quote{font-family:var(--serif);font-size:17px;line-height:1.4}
-.btn{height:44px;border:0;border-radius:999px;font-size:13px;font-weight:500;padding:0 14px;flex:1;display:inline-flex;align-items:center;justify-content:center;gap:6px;transition:background .2s,transform .12s}
-.btn:active{transform:scale(.97)}
-.btn.main{background:var(--lilac);color:#2E2466}
-.btn.main:hover{background:#C2B7F7}
-.btn.main[disabled]{background:#E7F3EC;color:var(--mint);cursor:default}
-.btn.ghost{background:#fff;box-shadow:inset 0 0 0 1px #D9D4E8}
-.btn.ghost:hover{background:var(--inset)}
-.row2{display:flex;gap:8px}
-.statusrow{display:flex;align-items:center;justify-content:space-between;font-size:12px;color:var(--muted);gap:8px}
-.statusrow select{height:36px;border:0;border-radius:999px;background:var(--inset);padding:0 32px 0 12px;font-size:12.5px;appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23666C80' stroke-width='2.5' stroke-linecap='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 12px center}
-.steps{display:flex;gap:4px}
-.steps i{flex:1;height:4px;border-radius:999px;background:var(--inset);transition:background .4s}
-.steps i.on{background:var(--peri)}
-
-/* silent + spam */
-.schips{display:flex;flex-wrap:wrap;gap:6px}
-.schips button{border:0;font-size:13px;font-weight:500;padding:6px 12px;border-radius:999px;background:var(--inset);transition:background .2s}
-.schips button:hover{background:var(--sel)}
-.t-spam.alert{background:var(--peachBg);border-color:#F7D3C6}
-.t-spam.alert .sub,.t-spam.alert .spamtxt{color:var(--rust)}
-.t-spam .snum{font-family:var(--serif);font-size:34px;line-height:1;font-variant-numeric:tabular-nums}
-.t-spam .srow{display:flex;align-items:baseline;gap:8px}
-.t-spam.shake{animation:shake .5s}
-@keyframes shake{20%{transform:translateX(-4px)}40%{transform:translateX(4px)}60%{transform:translateX(-3px)}80%{transform:translateX(2px)}}
-.linkbtn{border:0;background:transparent;padding:6px 0;font-size:12.5px;font-weight:500;color:var(--periDeep);text-decoration:underline;text-underline-offset:3px;align-self:flex-start}
-.t-spam.alert .linkbtn{color:var(--rust)}
-.meter{height:4px;border-radius:999px;background:var(--inset);overflow:hidden}
-.meter b{display:block;height:100%;width:0;background:var(--peach);transition:width .1s linear}
-
-/* toasts */
-.toasts{position:fixed;left:24px;bottom:calc(24px + env(safe-area-inset-bottom,0px));display:flex;flex-direction:column;gap:8px;z-index:60;pointer-events:none}
-.toast{background:var(--text);color:#fff;border-radius:14px;padding:12px 16px;font-size:13px;max-width:360px;box-shadow:0 8px 24px rgba(42,47,69,.25);display:flex;gap:10px;align-items:flex-start;animation:tin .4s var(--ease)}
-.toast.out{animation:tout .3s var(--ease) forwards}
-.toast i{width:8px;height:8px;border-radius:999px;margin-top:5px;flex-shrink:0;background:var(--peach)}
-@keyframes tin{from{opacity:0;transform:translateY(12px) scale(.98)}to{opacity:1;transform:none}}
-@keyframes tout{to{opacity:0;transform:translateY(8px)}}
-@keyframes pop{0%{transform:scale(.4)}70%{transform:scale(1.15)}100%{transform:scale(1)}}
-
-/* phone drawer */
-.scrim{display:none}
-.drawer{position:fixed;top:0;right:0;height:100%;width:430px;max-width:100%;background:var(--bg);box-shadow:-10px 0 40px rgba(42,47,69,.15);transform:translateX(105%);transition:transform .45s var(--ease);z-index:50;display:flex;flex-direction:column;padding:calc(14px + env(safe-area-inset-top,0px)) 20px calc(14px + env(safe-area-inset-bottom,0px))}
-.drawer.open{transform:none}
-.dhead{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px}
-.dhead span{font-size:12.5px;color:var(--muted)}
-.close{width:40px;height:40px;border:0;border-radius:999px;background:#fff;box-shadow:0 0 0 1px var(--line);font-size:18px}
-.phone{flex:1;min-height:0;border-radius:36px;background:#EFEDE8;border:8px solid #2A2F45;display:flex;flex-direction:column;overflow:hidden;background:var(--bg)}
-.phead{height:64px;flex-shrink:0;display:flex;align-items:center;gap:10px;padding:0 14px;background:#fff;border-bottom:1px solid var(--line)}
-.avatar{width:38px;height:38px;border-radius:999px;background:var(--sel);color:var(--selText);font-family:var(--serif);font-weight:500;display:flex;align-items:center;justify-content:center}
-.phead strong{display:block;font-family:var(--serif);font-weight:500;font-size:17px}
-.phead small{font-size:11.5px;color:var(--muted)}
-.msgs{flex:1;overflow-y:auto;padding:14px 12px;display:flex;flex-direction:column;gap:10px;scroll-behavior:smooth}
-.m{max-width:82%;padding:10px 13px;font-size:14px;line-height:1.5;border-radius:18px;animation:min .35s var(--ease)}
-.m.bot{align-self:flex-start;background:#fff;border-bottom-left-radius:6px}
-.m.me{align-self:flex-end;background:var(--periDeep);color:#fff;border-bottom-right-radius:6px}
-.m.sys{align-self:center;background:transparent;color:var(--muted);font-size:11.5px;text-align:center;max-width:92%;padding:2px 8px}
-.m small{display:block;font-size:12px;color:var(--muted);margin-top:4px}
-.m.me small{color:#E4DEFA}
-.m .kv{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:6px;font-size:12.5px;font-weight:600}
-.m .kv span{font-size:11.5px;padding:2px 8px;border-radius:999px;background:var(--inset);font-weight:600}
-.m .hl{font-family:var(--serif);font-size:17px;line-height:1.35}
-@keyframes min{from{opacity:0;transform:translateY(8px) scale(.98)}to{opacity:1;transform:none}}
-.voice{display:flex;align-items:center;gap:10px;min-width:210px}
-.voice .play{width:30px;height:30px;border-radius:999px;background:#fff;display:flex;align-items:center;justify-content:center;flex-shrink:0}
-.wave{display:flex;align-items:center;gap:3px;height:24px;flex:1}
-.wave i{width:3px;border-radius:2px;background:#fff;transform-origin:center;animation:grow .5s var(--ease) backwards}
-@keyframes grow{from{transform:scaleY(.1)}}
-.loc{padding:6px;width:230px}
-.loc .mapmini{height:76px;border-radius:13px;background:var(--sea);position:relative;overflow:hidden}
-.loc .mapmini::before{content:"";position:absolute;left:0;right:0;top:34px;height:5px;background:#fff}
-.loc .mapmini::after{content:"";position:absolute;top:0;bottom:0;left:96px;width:5px;background:#fff}
-.loc svg{position:absolute;left:104px;top:12px;z-index:1;animation:drop .5s var(--ease)}
-@keyframes drop{from{transform:translateY(-14px);opacity:0}}
-.loc p{margin:6px 6px 2px;font-size:12.5px;font-weight:500}
-.typing{align-self:flex-start;background:#fff;border-radius:18px;border-bottom-left-radius:6px;padding:12px 14px;display:flex;gap:4px}
-.typing i{width:6px;height:6px;border-radius:999px;background:#B7ACF0;animation:tdot 1s infinite}
-.typing i:nth-child(2){animation-delay:.15s}.typing i:nth-child(3){animation-delay:.3s}
-@keyframes tdot{0%,60%,100%{transform:none;opacity:.5}30%{transform:translateY(-4px);opacity:1}}
-.qr{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
-.qr button{height:36px;border:0;border-radius:999px;background:var(--sel);color:var(--selText);font-size:13px;font-weight:500;padding:0 14px}
-.qr button:hover{background:var(--lilac)}
-.qr button[disabled]{opacity:.45;cursor:default}
-.pfoot{flex-shrink:0;display:flex;align-items:center;gap:8px;padding:10px 10px 12px;background:var(--bg)}
-.pfoot input{flex:1;min-width:0;height:48px;border:0;border-radius:999px;padding:0 18px;background:#fff;box-shadow:0 0 0 1px var(--line);font-size:14px}
-.round{width:48px;height:48px;border-radius:999px;border:0;flex-shrink:0;display:flex;align-items:center;justify-content:center;transition:background .2s,transform .15s}
-.round:active{transform:scale(.94)}
-.mic{background:var(--periDeep);position:relative}
-.mic.rec{background:var(--coral)}
-.mic.rec::after{content:"";position:absolute;inset:-6px;border-radius:999px;border:2px solid var(--coral);animation:pulse 1.2s infinite}
-@keyframes pulse{0%{transform:scale(.9);opacity:1}100%{transform:scale(1.35);opacity:0}}
-.recbar{flex:1;height:48px;border-radius:999px;background:#fff;box-shadow:0 0 0 1px var(--line);display:none;align-items:center;gap:10px;padding:0 16px;font-size:13.5px;color:var(--coral);font-variant-numeric:tabular-nums}
-.recbar i{width:8px;height:8px;border-radius:999px;background:var(--coral);animation:blink 1s infinite}
-@keyframes blink{50%{opacity:.2}}
-.recording .recbar{display:flex}.recording #ptext{display:none}
-
-/* responsive */
-@media (max-width:1180px){
-  main.grid{grid-template-columns:repeat(6,minmax(0,1fr));grid-template-rows:none;grid-auto-rows:minmax(130px,auto);height:auto;min-height:0}
-  .t-map{grid-column:1/-1;grid-row:auto;height:560px}
-  .t-rank{grid-column:1/span 3;grid-row:auto;height:720px}
-  .t-score{grid-column:4/span 3;grid-row:auto}
-  .t-act{grid-column:4/span 3;grid-row:auto}
-  .t-k1,.t-k2,.t-k3{grid-column:auto/span 2;grid-row:auto}
-  .t-silent,.t-spam{grid-column:auto/span 3;grid-row:auto}
-}
-@media (max-width:720px){
-  header.top{padding:14px 14px 10px}
-  main.grid{grid-template-columns:minmax(0,1fr);padding:0 14px 20px}
-  .t-map,.t-rank,.t-score,.t-act,.t-k1,.t-k2,.t-k3,.t-silent,.t-spam{grid-column:1/-1}
-  .t-map{height:480px}.t-rank{height:auto}
-  .rlist{overflow:visible}
-  .toasts{left:14px;right:14px}
-}
-@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}
 </style>
 </head>
 <body>
-<header class="top">
-  <div class="brand"><h1>Vikas Vaani</h1><p>Citizen demand → ranked projects</p></div>
-  <div class="hactions">
-    <label class="sr" for="stateSel">State</label>
-    <select id="stateSel" class="pill"><option>Maharashtra</option></select>
-    <button class="pill" id="simReq" type="button"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>Simulate request</button>
-    <button class="pill primary" id="openPhone" type="button" aria-controls="drawer" aria-expanded="false"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="2" width="12" height="20" rx="3"/><path d="M11 18h2"/></svg>Citizen app<span class="count" id="unread">1</span></button>
-    <span class="badge" id="dataBadge"><span class="dot"></span>Synthetic demo data</span>
+<header class="topbar">
+  <a class="brand" href="/"><span class="logo" aria-hidden="true">V</span><span><b>Vikas Vaani</b><small>Citizen complaint portal</small></span></a>
+  <div class="countrychip">
+    <span class="badge" id="countryBadge" hidden><span class="dot"></span><span id="countryName"></span></span>
+    <button type="button" class="pill" id="changeCountry" hidden><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg><span class="lbltxt">Change country</span></button>
+  <a class="pill soft admin-link" id="adminLink" href="/admin"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18M5 21V9l7-5 7 5v12M9 21v-6h6v6"/></svg><span>Administrative side</span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
   </div>
 </header>
 
-<main class="grid">
-  <section class="tile t-map" aria-label="Hotspot map">
-    <div class="mhead">
-      <nav class="crumbs" id="crumbs" aria-label="Map level"></nav>
-      <div class="seg" id="layerSeg" role="group" aria-label="Map layer">
-        <span class="thumb"></span>
-        <button type="button" data-v="demand">Reported demand</button>
-        <button type="button" data-v="need">Unmet need</button>
-      </div>
-    </div>
-    <div class="map" id="map">
-      <svg id="svg" aria-label="Map of India and Maharashtra districts" role="img"><g id="gv"><g id="gIndia" class="base"></g><g id="gMH" class="base"></g></g></svg>
-      <canvas id="heat" aria-hidden="true"></canvas>
-      <div id="labels" aria-hidden="true"></div>
-      <div id="pins"></div>
-      <div class="ctrls">
-        <div class="grp"><button type="button" id="zin" aria-label="Zoom in">+</button><button type="button" id="zout" aria-label="Zoom out">−</button></div>
-        <button type="button" class="solo" id="zfit" aria-label="Reset view"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></svg></button>
-      </div>
-      <div class="legend"><span>Fewer</span><b></b><span>More requests</span></div>
-      <div class="scale"><span id="scaleT">100 km</span><i id="scaleB"></i></div>
-      <div class="tip" id="tip" role="status"></div>
-    </div>
-    <div class="chips" id="chips" role="group" aria-label="Filter by issue"></div>
+<section class="picker" id="picker" hidden aria-labelledby="pickTitle">
+  <h1 id="pickTitle">Where do you live?</h1>
+  <p>Choose your country. The portal will stay set to it, and you can change it any time from the top of the page.</p>
+  <div class="countries" id="countryCards"></div>
+</section>
+
+<main class="wrap" id="app" hidden>
+  <section class="hero">
+    <h1>Tell your government what your area needs.</h1>
+    <p>Report a problem with water, sanitation, roads, health, schools, electricity or waste. Your complaint is grouped with others from your area and ranked fairly, so the neediest places are not drowned out by the loudest.</p>
+    <div class="langs" id="langs"></div>
   </section>
 
-  <section class="tile t-rank" aria-label="Ranked projects">
-    <div style="padding:0 4px"><h2>Priority</h2><div class="sub">Fixed formula, public weights</div></div>
-    <div class="seg" id="presetSeg" role="group" aria-label="Weighting">
-      <span class="thumb"></span>
-      <button type="button" data-v="volume">Volume</button>
-      <button type="button" data-v="balanced">Balanced</button>
-      <button type="button" data-v="equity">Equity</button>
-    </div>
-    <div class="weights" id="weights"></div>
-    <div class="rlist" id="rlist"></div>
-  </section>
-
-  <section class="tile t-score" aria-label="Project score" aria-live="polite">
-    <div style="display:flex;align-items:center;justify-content:space-between"><span class="sub" id="sMeta" style="color:#5F5878"></span><span class="stag" id="sTag"></span></div>
-    <div><h2 class="stitle" id="sTitle"></h2><div class="sub" id="sPlace" style="color:#5F5878;margin-top:6px"></div></div>
-    <div style="display:flex;align-items:flex-end;gap:10px"><span class="big" id="sScore">0</span><span class="sub" id="sRank" style="color:#5F5878;padding-bottom:6px"></span></div>
-    <div class="bars" id="sBars"></div>
-    <div class="why"><div id="sWhy"></div><small>Written by Gemini from the score inputs. It never sets the rank.</small></div>
-  </section>
-
-  <div class="tile kpi t-k1"><span class="sub">Requests</span><span class="num" id="kReq">0</span></div>
-  <div class="tile kpi t-k2"><span class="sub">Unique citizens</span><span class="num" id="kCit">0</span></div>
-  <div class="tile kpi t-k3"><span class="sub">Resolved and confirmed</span><span class="num" id="kRes">0</span></div>
-
-  <div class="tile t-silent">
-    <div style="display:flex;justify-content:space-between;gap:8px"><span class="sub">Silent districts</span><span class="sub" style="font-size:11px">high need, few reports</span></div>
-    <div class="schips" id="silent"></div>
-    <span class="sub" style="font-size:11.5px">Plan assisted filing through CSCs and ASHA workers</span>
-  </div>
-
-  <div class="tile t-spam" id="spam" aria-live="polite">
-    <div style="display:flex;justify-content:space-between;align-items:center;gap:8px"><span class="sub" id="spamHead">Integrity monitor</span><span class="sub" id="spamState" style="font-size:11px">All clear</span></div>
-    <div class="srow"><span class="snum" id="spamNum">0</span><span class="spamtxt sub" id="spamUnit">suspicious messages</span></div>
-    <div class="meter" id="spamMeter" hidden><b id="spamBar"></b></div>
-    <button type="button" class="linkbtn" id="spamBtn">Simulate a spam burst</button>
-  </div>
-
-  <section class="tile t-act" aria-label="Sample request and actions">
-    <span class="sub" id="aLang"></span>
-    <div class="quote" id="aQuote"></div>
-    <div class="sub" id="aEn" style="line-height:1.4"></div>
-    <div style="margin-top:auto;display:flex;flex-direction:column;gap:10px">
-      <div class="steps" id="aSteps" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
-      <div class="statusrow"><label for="aStatus">Status</label>
-        <select id="aStatus"><option>New</option><option>Forwarded to district</option><option>In progress</option><option>Completed</option></select></div>
-      <div class="row2">
-        <button type="button" class="btn main" id="aApprove">Approve and forward</button>
-        <button type="button" class="btn ghost" id="aNotify">Notify citizens</button>
+  <section class="tile card" id="formCard" aria-labelledby="formTitle">
+    <h2 id="formTitle">File a complaint</h2>
+    <div class="sub">Takes about a minute. Write in your own language.</div>
+    <form id="form" novalidate>
+      <div class="field">
+        <div class="lbl"><span class="num">1</span>Where is the problem?</div>
+        <div class="area" id="areaView" hidden>
+          <div><span class="sub">Your area</span><b id="areaName"></b></div>
+          <button type="button" class="pill" id="areaChange">Change</button>
+        </div>
+        <div class="areaedit" id="areaEdit">
+          <div class="row2">
+            <div><label class="sr" for="stateSel">State</label><select class="select" id="stateSel" disabled><option value="">Loading…</option></select></div>
+            <div><label class="sr" for="unitSel">District or city</label><select class="select" id="unitSel" disabled><option value="">District or city</option></select></div>
+          </div>
+          <div class="remember">We remember this as your area for next time.</div>
+        </div>
       </div>
+      <div class="field">
+        <div class="lbl" id="catLbl"><span class="num">2</span>What kind of problem? <small>optional, we can tell from your description</small></div>
+        <div class="cats" id="cats" role="group" aria-labelledby="catLbl"></div>
+      </div>
+      <div class="field">
+        <label for="desc"><span class="num">3</span>Describe the problem</label>
+        <div class="textwrap">
+          <textarea id="desc" maxlength="4000" placeholder="What is wrong, since when, and where exactly (village, ward, landmark)?"></textarea>
+          <button type="button" class="mic" id="mic" hidden aria-label="Record a voice note"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg><span>Voice</span></button>
+        </div>
+        <div class="voicechip" id="voiceChip" hidden><span id="voiceLabel">Voice note attached</span><button type="button" id="voiceDrop" aria-label="Remove voice note">✕</button></div>
+      </div>
+      <div class="field">
+        <div class="lbl"><span class="num">4</span>Location <small>optional, helps pinpoint the exact spot</small></div>
+        <div class="locrow">
+          <button type="button" class="pill" id="locBtn"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s7-6.5 7-12a7 7 0 0 0-14 0c0 5.5 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg>Use my current location</button>
+          <span class="locstate" id="locState" aria-live="polite"></span>
+        </div>
+      </div>
+      <div class="submit">
+        <button type="submit" class="pill primary" id="submitBtn">Submit complaint</button>
+        <span class="privacy">Your phone number is never stored, and personal details are removed before anyone sees the text.</span>
+      </div>
+      <div class="err" id="formErr" role="alert" hidden></div>
+    </form>
+  </section>
+
+  <section class="tile card done" id="doneCard" hidden aria-live="polite">
+    <div class="tick"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#2E8B63" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg></div>
+    <h2>Complaint registered</h2>
+    <div class="sub">Keep this tracking ID to follow what happens next.</div>
+    <div class="ticket"><code id="ticketId"></code><button type="button" id="copyId">Copy</button></div>
+    <div class="ack" id="ackText"></div>
+    <div class="facts" id="facts"></div>
+    <div class="actions">
+      <button type="button" class="pill primary" id="trackThis">Track this complaint</button>
+      <button type="button" class="pill" id="another">File another</button>
     </div>
+  </section>
+
+  <section class="tile card" id="trackCard" aria-labelledby="trackTitle">
+    <h2 id="trackTitle">Track a complaint</h2>
+    <div class="sub">Enter the tracking ID you received.</div>
+    <form class="trackrow" id="trackForm">
+      <label class="sr" for="trackId">Tracking ID</label>
+      <input id="trackId" placeholder="e.g. 3f9a1c2b7d10" autocomplete="off" spellcheck="false">
+      <button class="pill primary" type="submit">Check status</button>
+    </form>
+    <div class="recent" id="recent"></div>
+    <div class="status" id="statusBox" hidden aria-live="polite"></div>
   </section>
 </main>
 
+<footer>
+  <span>Prototype for Build with AI: Code for Communities 2.0 (BRICS track).</span>
+  <span>Demo data is synthetic.</span>
+  <a href="/docs">Open API</a>
+</footer>
+
 <div class="toasts" id="toasts" aria-live="polite"></div>
 
-<div class="scrim" id="scrim"></div>
-<aside class="drawer" id="drawer" aria-label="Citizen app preview" aria-hidden="true">
-  <div class="dhead"><span>What the citizen sees on WhatsApp</span><button class="close" id="closePhone" type="button" aria-label="Close citizen app">✕</button></div>
-  <div class="phone">
-    <div class="phead"><div class="avatar">VV</div><div><strong>Vikas Vaani</strong><small>Civic requests, official service</small></div></div>
-    <div class="msgs" id="msgs" aria-live="polite"></div>
-    <div class="pfoot" id="pfoot">
-      <label class="sr" for="ptext">Type a message</label>
-      <input id="ptext" type="text" placeholder="Type, or tap the mic" autocomplete="off">
-      <div class="recbar"><i></i><span id="recT">0:00</span><span style="color:var(--muted)">Recording… tap to send</span></div>
-      <button class="round" id="psend" type="button" aria-label="Send message" style="background:#fff;box-shadow:0 0 0 1px var(--line);display:none"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#6C5FC7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
-      <button class="round mic" id="pmic" type="button" aria-label="Record voice note"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg></button>
-    </div>
-  </div>
-</aside>
-
 <script>
-const MAP = {"W":646,"H":440,"prI":[68.10056835390152,37.076943727665736,0.927695147159459,13.724591448468255,136.55563920199918,12.0],"prM":[72.65447351104824,22.03027117353042,0.9465316033882966,64.18716969889792,72.66454937209201,14.0],"india":[{"n":"Mizoram","d":"M444.1 194.0L445.0 192.6L444.6 188.1L447.6 189.0L450.5 184.4L451.1 185.7L453.7 185.8L453.4 189.9L458.6 192.5L458.1 204.2L457.4 205.1L455.2 205.1L454.8 208.1L456.1 215.1L452.8 218.7L449.9 216.9L448.5 218.8L447.3 208.8L445.6 206.1L445.9 201.5L444.1 194.0Z"},{"n":"Tamil Nadu","d":"M240.1 362.7L243.6 360.2L244.3 361.4L247.8 361.7L248.7 359.0L255.3 359.3L256.2 356.9L258.5 356.8L259.4 354.1L255.9 352.8L257.7 351.1L257.5 347.0L259.3 346.9L260.4 344.3L263.3 344.5L267.8 347.5L270.1 345.4L270.5 342.6L274.0 341.1L277.4 342.1L278.2 340.3L280.9 339.9L280.5 337.8L285.4 339.2L288.5 335.1L290.7 335.7L291.5 334.7L292.5 338.7L289.8 350.5L286.0 356.8L284.2 357.7L285.6 358.3L285.0 361.4L286.2 370.1L284.6 370.8L286.1 372.3L286.3 379.7L280.3 379.3L278.7 380.5L278.5 382.9L274.1 390.9L276.2 393.2L279.6 393.1L279.2 394.0L273.7 393.8L267.5 396.1L264.8 398.9L264.4 404.2L260.0 408.8L255.5 409.8L251.1 407.1L253.3 403.2L252.0 400.9L253.1 399.0L251.8 397.2L255.0 390.2L252.0 388.9L253.5 380.4L252.1 378.7L249.6 380.6L248.5 380.1L247.5 377.8L248.7 372.9L245.5 370.7L246.7 368.8L246.1 366.8L242.8 367.1L244.1 365.0L240.1 362.7Z"},{"n":"Madhya Pradesh","d":"M213.5 219.6L212.5 214.0L214.1 214.5L214.4 213.1L213.2 213.2L212.4 211.4L213.6 211.7L215.0 210.1L216.5 210.2L217.6 207.7L215.7 204.4L220.8 202.3L218.4 200.8L219.0 199.4L223.4 196.0L224.0 190.9L223.1 188.5L221.3 188.2L222.5 185.6L220.5 184.8L221.9 181.4L223.0 182.7L224.3 181.9L222.2 179.1L224.9 179.9L226.8 177.2L228.9 177.5L226.9 181.2L232.2 182.1L234.4 181.0L236.1 184.0L235.9 185.4L233.7 186.0L234.8 188.1L234.0 189.5L235.1 190.7L233.3 191.9L231.1 191.2L230.3 192.5L233.1 194.9L236.4 192.9L238.7 190.2L238.6 188.8L245.3 187.8L247.3 189.8L248.3 189.7L248.8 188.6L247.5 184.2L249.6 185.1L250.7 183.8L250.3 181.7L247.4 180.4L249.1 179.5L248.3 177.2L253.9 176.6L255.1 174.7L253.9 171.8L252.7 173.4L245.7 173.0L243.7 170.5L244.1 166.2L255.4 158.5L260.3 156.5L261.4 155.0L263.7 154.7L264.0 153.1L267.2 152.1L275.4 154.8L277.1 159.4L272.4 167.8L272.9 169.2L268.4 169.9L266.9 171.8L268.3 176.1L264.8 179.5L267.5 187.8L269.0 186.1L272.9 189.0L275.0 186.7L273.9 182.7L272.2 183.2L272.4 179.7L270.6 178.3L269.1 174.0L271.0 172.5L272.3 172.8L271.9 171.5L273.9 170.7L274.6 171.0L273.9 172.5L274.8 173.0L273.8 175.5L276.1 174.7L277.0 176.2L278.5 176.2L279.4 175.7L278.9 173.3L279.8 173.2L280.9 174.3L280.6 176.3L281.6 176.6L282.6 175.4L285.9 176.3L288.5 173.1L292.1 172.4L292.0 173.8L293.5 175.4L291.6 177.4L293.2 176.8L294.1 177.9L298.8 175.2L299.0 178.6L302.4 179.1L304.3 175.5L307.7 175.2L312.2 177.9L312.8 179.9L316.3 180.6L317.3 183.1L322.1 181.9L323.7 183.6L322.6 186.1L323.3 186.4L323.0 189.2L322.1 189.8L323.9 192.0L321.6 193.7L319.9 194.4L312.6 193.2L311.1 194.1L309.3 192.6L308.5 193.0L309.7 195.3L308.6 196.1L308.6 198.1L312.5 197.9L313.3 199.5L314.8 199.7L316.1 200.9L315.1 203.8L312.8 204.1L312.9 205.4L310.7 207.0L310.9 208.4L308.7 211.5L302.2 212.9L302.3 214.9L300.8 218.1L299.6 217.6L298.5 222.2L297.2 223.5L297.5 226.2L296.0 228.2L291.5 224.2L287.0 225.5L284.7 224.4L282.2 225.2L281.6 223.4L278.4 222.8L278.2 223.8L274.3 224.5L274.1 225.8L268.1 225.8L267.0 224.6L261.1 227.4L256.1 227.5L255.7 225.1L257.2 225.2L255.9 222.1L248.0 224.3L245.1 228.0L245.1 230.1L243.4 230.0L242.0 231.6L239.3 231.6L238.3 227.6L227.1 227.0L225.0 224.8L219.1 223.5L217.2 218.6L213.5 219.6Z"},{"n":"Maharashtra","d":"M194.5 248.6L195.2 245.4L197.3 243.3L200.7 245.2L204.2 243.5L204.9 238.4L204.1 237.8L205.0 236.5L207.3 238.6L209.6 237.8L210.9 234.8L207.4 230.5L209.3 230.3L209.4 228.9L212.3 226.5L215.7 225.7L213.8 224.9L209.6 225.5L210.1 222.9L209.3 221.1L217.2 218.5L219.1 223.5L225.1 224.9L227.1 227.0L238.3 227.5L239.4 231.6L242.0 231.6L243.4 230.0L245.0 230.1L245.0 228.1L247.1 226.3L247.1 225.0L253.4 222.2L256.0 222.1L256.8 223.0L257.2 225.4L255.7 225.2L256.2 227.5L261.2 227.4L267.0 224.6L268.2 225.8L274.0 225.8L274.3 224.5L278.1 223.8L278.3 222.8L281.6 223.4L282.2 225.2L284.7 224.4L287.0 225.4L291.5 224.2L293.5 226.6L296.5 228.1L293.7 231.3L294.0 233.5L295.0 233.5L294.8 238.3L295.9 238.3L296.0 241.8L293.1 243.1L295.0 245.0L294.1 248.7L299.5 253.0L297.6 256.2L295.9 255.8L295.4 254.7L294.2 255.5L291.5 260.8L292.5 262.2L291.6 263.9L289.6 264.5L287.0 262.5L287.3 259.7L286.3 258.7L287.8 254.6L285.6 252.1L281.3 253.2L278.6 252.0L277.8 253.8L274.5 252.5L274.7 251.1L273.3 249.6L268.1 248.9L266.7 247.7L266.5 253.5L265.3 254.3L264.8 256.8L261.9 255.4L260.9 255.9L260.0 259.1L260.6 261.3L261.9 262.2L259.2 264.7L259.3 266.2L257.5 266.3L256.9 269.8L255.8 270.2L253.9 267.8L250.7 271.8L249.2 271.3L248.8 275.0L246.9 275.5L245.9 278.2L243.8 277.2L243.4 278.5L241.4 279.4L242.0 283.2L236.3 283.1L235.8 282.1L232.5 281.1L231.7 282.3L232.7 283.8L232.9 287.8L228.0 288.2L226.7 289.7L225.5 288.2L223.2 289.4L223.4 290.7L220.5 291.5L219.7 293.3L218.9 293.7L218.5 292.6L215.7 293.6L215.7 296.8L217.8 297.8L217.8 299.2L216.5 300.1L217.6 300.7L216.1 304.5L214.3 304.3L211.6 306.6L210.9 304.8L207.7 305.0L205.4 302.1L203.6 296.3L202.6 286.0L198.6 272.1L199.2 270.1L197.8 269.0L198.1 266.4L196.4 261.4L196.9 259.4L194.5 248.6Z"},{"n":"Chhattisgarh","d":"M291.5 260.9L294.2 255.5L295.4 254.6L295.9 255.8L297.7 256.1L299.4 253.0L294.0 248.8L295.0 245.0L293.6 244.5L293.1 243.0L296.0 241.7L295.9 238.4L294.7 238.4L295.4 237.1L295.0 233.6L294.0 233.6L294.0 230.2L295.9 229.5L297.4 226.1L297.2 223.6L298.5 222.1L299.6 217.4L300.9 218.0L302.2 212.9L308.7 211.5L310.9 208.4L310.7 206.9L312.9 205.5L312.8 204.1L315.1 203.7L316.0 201.0L312.4 197.9L308.6 198.2L308.6 196.1L309.6 195.3L308.5 193.1L309.3 192.5L311.1 194.1L312.5 193.2L319.9 194.4L323.9 192.0L327.4 193.2L330.5 190.1L331.8 190.3L333.5 193.3L335.2 193.9L336.1 196.8L338.2 197.4L339.2 196.5L338.6 199.8L339.9 200.6L339.8 203.6L341.3 205.5L344.0 206.2L342.0 209.4L339.1 211.0L339.1 213.8L334.2 216.2L333.1 218.3L333.8 221.3L332.5 223.8L331.1 224.2L331.3 227.9L329.7 227.5L328.7 230.7L321.8 230.5L319.4 235.0L317.9 234.5L317.8 238.7L319.1 240.4L318.6 245.5L322.7 246.5L322.4 248.7L321.1 249.5L319.2 247.6L317.9 248.6L316.9 246.7L312.9 245.0L311.9 245.7L311.9 247.7L314.4 249.2L313.9 253.0L315.9 254.2L315.6 257.3L316.7 261.2L314.7 263.7L312.3 264.8L310.3 269.0L307.6 270.5L305.8 276.3L302.9 275.8L301.0 276.6L300.5 271.6L297.7 271.5L296.2 266.7L291.6 263.9L292.5 262.2L291.5 260.9Z"},{"n":"Gujarat","d":"M136.6 195.9L139.6 191.9L144.8 191.8L145.0 187.4L146.1 188.2L147.3 187.3L148.1 188.4L155.6 187.5L157.3 189.1L161.0 189.1L162.1 187.4L168.0 185.7L168.1 188.0L171.0 188.5L174.1 186.5L174.7 185.6L173.5 185.4L173.3 183.3L174.9 182.2L177.1 183.0L186.9 181.7L188.3 182.9L190.6 182.8L192.3 185.5L193.1 184.3L194.9 185.1L195.5 186.4L198.4 186.5L200.0 184.6L200.9 186.6L199.8 188.9L202.0 191.4L204.1 190.9L203.6 194.0L205.6 196.8L207.3 196.7L207.0 199.0L213.4 201.5L213.3 202.7L214.8 202.7L216.6 206.6L217.5 206.5L216.5 210.2L212.5 211.6L213.2 213.1L214.4 212.9L214.1 214.5L212.4 214.8L213.5 219.6L209.3 221.2L210.2 222.8L209.6 225.5L213.8 224.8L215.8 225.8L212.2 226.5L209.4 229.0L209.3 230.3L207.6 230.5L210.9 234.8L210.6 236.4L208.4 238.6L204.9 236.6L204.2 243.6L201.6 244.7L200.7 243.6L201.0 242.4L199.5 241.9L196.1 244.6L195.6 243.0L197.7 238.5L195.5 231.8L194.1 231.3L193.8 228.3L195.5 226.0L194.0 224.7L195.0 223.8L193.1 222.6L194.1 221.5L192.7 219.7L193.4 216.4L195.8 216.5L198.1 215.0L191.0 214.7L188.8 220.4L188.7 222.4L190.1 224.1L187.6 229.9L179.0 234.5L171.3 236.9L166.4 234.7L161.9 231.1L147.2 214.7L148.1 212.9L150.1 214.2L150.4 215.9L162.3 211.3L169.8 202.7L164.7 202.3L161.8 206.3L156.3 208.0L153.3 207.8L149.7 206.9L143.3 202.9L142.2 200.3L136.6 195.9Z"},{"n":"Odisha","d":"M305.8 276.3L307.5 270.5L310.3 268.9L312.3 264.8L315.5 263.0L316.6 261.1L315.6 257.3L315.9 254.3L313.9 253.1L314.3 249.3L311.9 247.7L311.9 245.7L312.8 244.9L316.9 246.7L317.9 248.6L319.2 247.6L321.1 249.4L322.4 248.7L322.6 246.5L318.6 245.6L319.1 240.4L317.8 238.7L317.8 234.4L319.4 235.0L321.7 230.5L328.7 230.7L329.7 227.5L331.3 227.8L330.6 225.8L331.1 224.1L332.4 223.8L333.8 221.3L333.1 218.3L334.3 216.1L339.1 213.8L339.1 211.7L342.7 214.2L352.6 212.2L352.2 217.3L354.7 218.7L356.8 216.7L363.1 219.2L364.8 216.4L364.0 212.3L365.3 211.3L376.7 217.8L377.6 218.4L377.3 220.2L378.4 220.7L380.3 219.4L380.8 221.6L382.8 222.1L383.4 224.2L379.1 225.7L375.4 229.7L376.7 235.7L377.9 236.6L374.5 239.0L374.3 241.8L369.2 246.6L356.2 252.0L348.7 259.0L345.5 259.5L343.1 263.0L337.6 262.6L336.4 260.0L335.9 261.3L334.7 258.7L332.4 259.6L332.1 260.7L330.7 259.9L331.5 261.8L328.0 263.1L326.3 265.4L327.2 268.3L325.9 268.9L323.8 267.7L323.4 269.1L321.0 270.0L321.2 268.8L319.6 266.6L318.2 268.0L317.6 273.2L316.7 273.9L314.0 272.9L308.7 276.2L305.8 276.3Z"},{"n":"Andhra Pradesh","d":"M246.8 315.2L247.3 313.7L249.7 314.8L251.3 314.5L251.8 313.1L251.8 311.0L250.3 309.0L250.8 302.5L253.0 301.8L263.7 303.4L267.8 300.2L272.1 301.1L274.3 299.6L274.1 298.8L278.0 298.2L278.6 293.5L285.4 291.3L287.5 292.5L288.8 291.0L288.8 287.9L290.4 287.3L295.2 290.6L295.7 288.6L292.7 287.9L295.4 285.5L298.8 287.0L300.0 284.5L303.0 284.4L304.7 281.9L301.1 280.4L299.3 277.5L301.5 277.4L302.9 275.8L308.7 276.2L313.9 272.9L316.8 273.9L317.6 273.2L318.1 268.0L319.7 266.6L321.1 269.9L323.4 269.1L323.8 267.6L325.8 268.9L327.1 268.4L326.3 265.5L328.0 263.0L328.9 263.5L331.4 261.9L330.7 259.8L332.1 260.6L334.7 258.7L337.6 262.6L340.2 263.4L343.1 263.0L345.5 259.4L348.7 259.1L340.6 269.5L334.7 272.7L328.3 279.9L317.6 286.8L316.7 288.5L318.1 289.5L317.5 293.6L309.9 297.0L305.8 296.6L304.2 297.4L302.7 301.6L300.0 305.2L298.6 305.3L297.9 303.1L296.7 302.9L292.1 305.1L289.6 310.0L288.6 314.9L290.6 320.7L289.7 325.6L291.5 334.7L290.8 335.7L288.5 335.2L285.4 339.2L280.6 337.9L280.9 339.9L278.3 340.4L277.4 342.2L274.0 341.1L272.2 341.7L270.5 342.6L270.1 345.4L267.8 347.6L266.4 347.0L265.8 344.4L268.6 342.8L270.0 338.8L267.2 337.5L267.6 334.4L265.1 334.6L264.1 330.7L262.6 330.5L262.2 329.3L255.7 333.1L255.3 330.9L252.2 330.5L250.7 332.2L248.5 326.4L249.9 326.0L250.3 327.9L254.0 328.3L255.0 329.9L254.9 326.3L256.2 326.5L256.0 324.8L251.7 324.1L251.4 325.6L249.9 325.5L248.4 323.9L248.6 322.0L246.9 320.5L248.2 315.5L246.8 315.2Z"},{"n":"Karnataka","d":"M212.8 316.4L215.4 314.5L215.0 311.7L215.8 311.0L214.7 305.9L213.2 306.1L213.2 305.1L216.1 304.5L217.5 300.8L216.4 300.2L217.8 299.2L217.7 297.9L215.7 296.8L215.7 293.7L218.6 292.5L219.7 293.3L220.5 291.5L223.3 290.6L223.2 289.4L225.5 288.2L226.8 289.7L228.0 288.2L232.8 287.8L232.7 283.8L231.7 282.3L232.5 281.0L235.8 282.0L236.3 283.1L241.9 283.1L241.4 279.4L243.4 278.5L243.8 277.1L245.9 278.0L247.1 276.2L246.6 275.2L248.8 274.9L249.2 271.2L250.7 271.7L253.2 268.0L255.1 268.4L255.8 270.2L257.5 270.0L256.9 273.1L258.2 274.2L255.5 279.4L258.6 280.5L256.4 281.6L254.7 284.5L256.2 287.0L255.6 292.8L255.2 294.2L253.0 294.8L257.4 296.6L256.2 298.2L256.4 302.3L253.0 301.8L250.2 303.5L250.9 305.9L250.3 309.0L251.8 311.0L251.9 313.1L251.3 314.5L249.7 314.8L247.3 313.8L246.9 315.1L248.2 315.4L246.9 320.5L248.6 322.0L248.4 323.9L249.9 325.5L251.3 325.6L251.6 324.1L256.0 324.7L256.3 326.6L254.9 326.5L254.9 330.0L253.9 328.3L252.1 328.5L250.2 327.9L249.9 326.1L248.6 326.4L250.6 332.2L252.2 330.5L255.4 330.9L255.9 333.0L262.2 329.3L262.6 330.5L264.1 330.6L265.2 334.6L267.7 334.4L267.3 337.5L270.1 338.7L268.5 342.8L265.8 344.4L265.5 345.7L261.6 344.0L260.4 344.3L259.3 346.9L257.5 347.1L257.7 351.1L255.9 352.9L259.4 354.0L258.5 356.8L256.2 357.0L255.3 359.4L248.7 359.0L247.9 361.7L244.3 361.4L238.6 358.1L238.5 356.5L235.5 356.8L231.7 354.0L229.7 352.2L229.6 349.3L222.7 345.8L219.1 329.8L215.0 318.9L213.2 317.9L212.8 316.4Z"},{"n":"Goa","d":"M207.7 305.0L210.9 304.8L211.6 306.6L214.7 305.8L215.8 311.1L215.1 311.7L215.4 314.4L214.2 316.0L212.8 316.4L211.4 314.2L210.2 310.1L210.8 309.1L208.7 308.2L207.7 305.0Z"},{"n":"Kerala","d":"M222.7 345.8L229.7 349.3L229.7 352.1L235.5 356.8L238.6 356.5L238.6 358.1L242.4 359.5L241.9 361.6L240.3 362.7L244.1 365.0L243.0 367.1L246.1 366.6L246.7 368.8L245.6 370.7L248.7 372.9L247.8 379.0L249.6 380.6L252.2 378.7L253.5 380.4L252.0 388.9L255.0 390.1L251.8 397.2L253.1 399.0L252.1 400.9L253.3 403.1L251.1 407.1L244.1 398.7L233.3 364.1L231.5 360.3L227.0 356.1L222.7 345.8Z"},{"n":"Telangana","d":"M252.9 294.8L255.1 294.2L255.6 292.8L256.2 286.9L254.7 284.5L256.4 281.6L258.4 280.6L255.5 279.5L258.2 274.3L256.8 273.1L257.5 270.1L256.5 268.7L257.5 266.3L259.2 266.2L259.2 264.7L261.8 262.3L260.0 259.1L260.9 255.9L261.9 255.4L264.8 256.8L265.3 254.2L266.5 253.5L266.1 250.6L267.2 249.4L266.5 247.6L268.1 248.9L273.3 249.6L274.8 251.1L274.6 252.5L277.7 253.7L278.6 252.0L281.4 253.2L284.8 251.7L287.4 253.6L287.2 257.9L286.3 258.7L287.3 259.6L287.1 262.5L289.6 264.5L291.6 263.9L296.2 266.6L297.7 271.4L300.5 271.5L301.0 276.5L301.9 276.6L301.5 277.5L299.4 277.4L299.7 278.8L304.7 281.9L303.0 284.4L300.0 284.6L298.8 287.0L295.5 285.5L293.0 287.7L295.7 288.7L295.3 290.7L292.2 289.2L291.9 287.9L288.8 287.9L288.8 291.1L287.4 292.5L285.4 291.3L278.6 293.5L278.1 298.2L275.7 298.0L272.0 301.2L267.8 300.3L265.9 301.2L264.8 303.2L256.4 302.3L256.2 298.2L257.3 296.6L252.9 294.8Z"},{"n":"West Bengal","d":"M362.2 201.5L363.0 198.6L365.5 197.4L368.4 199.5L370.6 196.5L374.6 195.6L374.7 193.8L380.2 193.4L380.9 192.8L380.2 191.1L382.8 191.7L387.4 186.3L387.3 183.5L388.5 183.6L388.7 181.7L387.9 181.2L389.4 178.8L386.2 174.2L387.6 174.3L387.0 172.0L388.2 170.9L390.7 170.8L390.5 168.2L387.7 164.9L388.0 163.5L393.5 159.4L391.3 156.5L392.3 153.4L389.8 148.8L390.4 147.3L391.9 148.8L395.3 149.3L397.5 147.7L400.9 148.8L401.0 150.6L404.3 153.0L407.4 152.3L413.5 154.5L413.4 158.8L411.9 161.7L410.7 161.0L410.9 163.2L409.5 163.9L407.1 163.9L404.6 162.1L403.8 158.6L402.4 157.9L401.7 160.1L399.6 159.5L394.9 155.5L394.2 157.2L396.1 157.7L396.5 159.0L392.2 162.0L391.1 165.0L391.7 166.8L393.3 167.0L398.1 171.2L400.3 170.6L400.6 172.8L402.5 174.0L401.5 175.3L395.6 175.0L394.9 178.2L393.5 179.3L392.8 178.3L391.8 178.9L390.3 182.0L391.6 184.5L399.4 188.0L399.2 192.7L397.7 193.4L397.1 195.4L399.6 199.1L399.0 201.9L401.9 202.4L400.9 205.6L402.3 207.3L401.6 208.5L403.5 219.6L401.3 219.9L402.0 222.1L399.5 218.8L396.7 220.9L395.5 220.1L393.4 222.6L393.2 225.0L391.8 219.5L392.7 217.5L390.9 215.3L390.1 216.1L392.3 217.5L389.4 221.2L387.2 223.1L383.4 224.2L382.8 222.1L380.8 221.6L380.2 219.5L378.5 220.8L377.2 220.1L377.5 218.4L373.7 216.0L375.2 213.5L374.2 213.1L374.2 211.1L372.8 211.0L369.8 208.1L370.6 205.3L367.5 205.2L362.2 201.5Z"},{"n":"Dadra and Nagar Haveli and Daman and Diu","d":"M198.1 242.3L201.1 242.4L200.7 243.6L201.6 244.7L198.5 244.6L198.1 242.3Z"},{"n":"Puducherry","d":""},{"n":"Lakshadweep","d":""},{"n":"Arunachal Pradesh","d":"M435.2 141.6L436.1 139.3L438.6 139.2L439.4 140.4L444.1 138.5L444.8 139.6L448.0 139.0L450.2 137.0L449.6 134.8L456.3 131.9L455.9 130.6L457.9 127.8L465.8 126.8L470.0 120.8L475.0 118.4L477.4 120.3L484.8 122.4L485.9 119.9L492.9 116.5L494.9 119.6L496.8 119.4L493.8 122.2L494.9 123.6L497.3 122.4L499.5 125.7L496.1 129.5L495.9 131.2L500.2 130.3L501.7 131.6L504.4 132.3L505.6 131.6L509.2 133.6L509.3 137.8L507.7 138.0L502.9 141.9L503.3 144.1L506.6 148.4L505.3 149.0L502.7 147.7L501.9 145.5L495.7 146.3L492.1 147.8L488.5 151.7L485.4 152.8L482.9 155.1L482.0 154.7L481.5 149.8L484.7 148.5L485.8 146.7L490.0 146.6L491.9 145.3L489.0 141.8L488.9 140.2L491.2 137.1L486.8 137.2L472.2 142.7L469.3 141.7L469.7 143.2L463.9 148.2L464.1 149.4L459.6 151.2L453.9 151.5L449.5 149.9L442.3 151.8L441.3 149.4L441.1 143.7L436.5 143.7L435.2 141.6Z"},{"n":"Assam","d":"M411.6 161.0L413.4 158.7L413.6 153.9L417.8 153.4L418.3 152.2L420.7 151.6L424.5 153.5L432.4 153.3L433.3 152.5L437.1 152.9L439.5 151.4L441.6 152.4L449.4 149.9L453.9 151.5L462.0 150.7L469.6 143.2L469.3 141.6L472.2 142.7L486.8 137.2L491.4 137.1L488.9 140.2L489.0 141.7L492.0 145.2L490.0 146.6L485.3 147.0L484.8 148.5L478.8 151.5L478.0 151.0L475.7 153.7L471.5 155.6L470.3 157.7L469.8 156.5L466.3 161.7L466.0 165.2L463.5 166.1L463.3 164.6L457.9 170.2L459.4 171.8L459.6 173.5L455.8 180.5L455.0 180.4L453.7 185.8L451.0 185.7L450.5 184.7L447.6 189.0L446.4 189.4L446.2 188.1L443.6 187.5L444.6 181.3L443.8 179.1L447.3 179.4L446.3 177.3L450.9 173.9L448.1 171.4L449.0 170.1L446.5 167.9L442.8 168.5L442.9 164.4L444.1 163.1L439.2 163.5L438.6 162.5L437.3 164.5L435.5 163.6L433.8 166.2L432.4 166.2L430.9 167.8L430.0 166.1L428.2 166.4L427.4 164.7L416.9 164.6L414.2 167.7L415.6 169.4L413.5 171.4L413.9 164.7L411.6 161.0Z"},{"n":"Nagaland","d":"M457.8 170.3L463.5 164.5L463.6 166.1L466.0 165.2L466.3 161.7L469.9 156.3L470.4 157.6L471.4 155.6L475.7 153.7L478.1 151.0L478.9 151.5L481.5 149.8L482.0 154.7L479.9 157.9L480.5 162.5L481.4 163.0L479.2 165.5L479.6 167.6L476.6 171.0L474.9 171.6L472.6 169.5L470.4 170.8L463.5 170.3L463.8 171.4L461.3 175.0L460.0 174.4L459.4 171.8L457.8 170.3Z"},{"n":"Meghalaya","d":"M413.3 173.7L413.8 170.2L415.5 169.4L414.1 167.8L416.9 164.6L427.5 164.7L428.3 166.4L430.0 166.1L431.0 167.7L433.8 166.2L435.5 163.6L437.3 164.4L438.6 162.4L439.2 163.5L444.3 163.1L443.0 164.4L442.8 168.4L446.5 167.9L448.2 170.2L449.3 169.9L448.2 171.4L450.9 173.9L446.3 177.3L441.9 175.2L434.4 175.9L432.6 174.6L421.1 175.8L413.3 173.7Z"},{"n":"Manipur","d":"M453.3 189.9L455.0 180.3L455.9 180.4L458.4 174.5L459.6 173.5L461.3 175.0L463.8 171.4L463.3 170.4L470.4 170.9L472.5 169.5L474.9 171.6L473.7 174.8L475.8 177.2L474.3 181.1L471.1 184.7L468.3 193.6L463.0 191.4L460.0 192.3L458.4 190.3L456.8 191.2L453.3 189.9Z"},{"n":"Tripura","d":"M430.1 195.0L431.0 195.1L431.9 191.5L436.1 190.1L436.5 188.9L437.6 189.4L437.6 188.1L439.9 189.8L439.9 186.8L443.6 184.5L443.7 187.5L445.1 189.0L444.2 195.2L442.4 195.2L441.6 196.4L440.1 195.9L440.5 198.6L440.1 199.3L438.5 198.6L438.4 204.3L437.3 205.4L435.5 205.7L433.9 201.7L432.2 201.4L430.1 195.0Z"},{"n":"Andaman and Nicobar Islands","d":"M463.8 428.0L462.2 422.2L464.6 422.0L464.8 427.6L463.8 428.0ZM447.7 357.4L448.5 358.0L449.3 353.2L450.5 353.7L450.8 355.5L449.9 356.5L450.9 357.7L449.3 363.0L447.7 357.4ZM450.6 353.7L451.0 351.9L449.7 351.7L450.1 344.7L451.0 344.3L451.6 337.1L453.4 334.6L454.1 335.2L454.0 341.3L452.4 341.8L451.8 343.7L452.6 344.0L453.3 348.7L451.7 354.0L450.6 353.7ZM445.7 372.9L447.5 371.3L448.4 374.3L447.6 376.5L446.4 376.1L445.7 372.9Z"},{"n":"Uttar Pradesh","d":"M251.2 114.2L252.8 110.0L257.3 104.9L257.2 103.6L258.2 103.6L262.1 105.8L259.0 110.7L260.3 113.5L261.7 113.1L262.9 114.8L266.9 111.9L269.1 112.9L270.5 115.2L274.4 116.8L272.4 119.2L274.4 121.2L275.8 120.5L282.8 125.0L285.8 124.4L287.5 126.6L288.9 125.1L292.1 127.9L295.1 127.1L296.6 127.8L303.5 131.7L304.9 133.9L312.0 138.5L314.4 137.6L319.2 141.0L322.5 140.6L323.0 143.6L328.7 144.1L330.0 145.7L331.3 143.7L336.8 145.2L338.9 147.9L339.8 151.8L344.3 155.4L340.5 155.4L337.9 157.2L341.0 158.9L341.2 160.4L339.7 162.7L346.9 166.9L346.6 167.7L346.1 168.4L343.3 167.6L343.1 168.6L340.7 167.8L337.0 171.8L330.7 175.2L331.3 180.7L332.5 181.4L332.9 183.9L331.4 184.7L330.5 190.1L327.4 193.2L325.6 193.2L322.0 189.7L323.0 189.1L323.4 182.7L322.0 181.9L317.3 183.2L316.3 180.6L312.8 179.9L312.1 177.9L309.3 176.9L308.7 175.5L304.4 175.5L302.3 179.1L299.0 178.7L298.8 175.3L294.1 178.1L293.2 176.9L291.4 177.4L293.5 175.3L292.0 173.8L292.0 172.4L290.9 172.3L288.5 173.1L286.0 176.4L282.6 175.4L281.6 176.7L280.5 176.3L280.8 174.3L279.8 173.2L278.7 174.0L279.4 175.7L277.0 176.2L276.1 174.7L273.8 175.6L274.8 173.1L273.8 172.5L274.5 171.1L273.9 170.7L272.0 171.5L272.5 172.9L271.0 172.5L269.2 174.0L270.7 178.4L272.4 179.7L272.2 183.1L273.8 182.7L275.0 186.7L272.9 189.0L269.1 186.1L267.5 187.9L266.0 185.3L266.1 182.4L264.8 179.5L268.2 176.0L266.9 171.8L268.3 169.9L272.8 169.2L272.3 167.9L275.5 162.9L275.3 161.3L277.1 159.4L277.0 158.0L275.2 156.1L275.3 154.8L267.1 152.1L265.4 152.6L266.0 151.4L264.6 151.0L262.4 151.8L259.6 151.2L255.7 153.8L254.9 152.6L258.2 150.7L256.9 148.8L258.2 147.9L254.2 143.1L253.5 139.3L256.6 137.5L256.3 131.5L253.6 128.8L254.2 128.1L252.5 125.7L251.2 114.2Z"},{"n":"Rajasthan","d":"M154.2 153.0L155.5 147.8L161.1 142.6L162.4 139.2L165.5 136.4L168.2 136.4L170.4 140.4L172.3 140.6L184.8 137.2L185.3 134.9L188.8 131.2L191.3 125.8L198.2 122.4L202.5 115.0L204.0 109.9L209.2 108.2L211.3 106.5L210.4 109.5L218.4 109.9L218.8 110.9L217.8 112.5L219.5 112.5L219.4 117.8L222.5 117.3L225.5 119.7L229.6 119.3L229.4 121.9L231.1 123.2L230.5 123.9L231.6 128.1L237.8 133.5L236.8 138.6L239.9 138.9L239.2 136.6L240.4 135.7L241.2 136.2L241.1 134.1L244.1 136.9L248.0 133.5L249.5 134.7L248.5 140.3L249.6 141.2L250.4 139.0L253.5 139.3L254.2 143.1L258.1 147.0L256.9 148.8L258.3 150.7L255.0 152.6L255.6 153.7L259.5 151.2L266.1 151.4L264.0 153.1L263.7 154.8L261.4 155.0L260.3 156.5L255.4 158.5L244.1 166.3L243.7 170.5L245.6 172.9L249.2 173.8L252.7 173.4L253.9 171.8L255.1 174.7L253.8 176.6L248.3 177.2L249.2 179.5L247.5 180.5L250.3 181.8L250.7 183.8L249.6 185.2L247.6 184.2L248.9 188.6L248.4 189.7L247.3 189.9L245.3 187.9L238.7 188.8L238.8 190.3L233.2 194.9L230.3 192.6L231.0 191.1L233.3 191.9L235.0 190.7L234.0 189.5L234.7 188.1L233.7 186.0L235.9 185.4L236.1 184.0L234.4 181.1L232.2 182.1L226.7 181.2L228.7 177.5L226.8 177.3L224.9 179.9L222.3 179.1L224.3 182.0L223.0 182.8L221.9 181.5L220.7 184.8L222.6 185.7L221.3 188.1L223.2 188.6L224.1 190.9L223.4 196.1L218.5 200.7L221.0 202.2L215.7 204.4L211.2 200.1L210.3 200.6L209.5 199.3L206.9 199.0L207.3 196.7L205.6 196.9L203.6 194.0L204.1 190.9L202.0 191.5L199.8 188.8L200.8 186.7L200.0 184.7L198.4 186.5L195.5 186.4L194.9 185.1L192.9 184.6L192.6 185.8L190.4 182.8L188.3 182.9L186.9 181.7L177.1 183.0L174.9 182.2L172.0 175.7L169.2 172.3L169.3 168.5L164.2 168.0L162.0 164.9L162.9 156.5L158.1 155.8L154.2 153.0Z"},{"n":"Delhi","d":"M247.9 129.0L249.5 127.0L249.1 125.6L252.6 124.9L254.3 129.4L252.1 131.0L251.1 129.6L247.9 129.0Z"},{"n":"Haryana","d":"M217.8 112.6L218.4 109.9L222.0 109.2L226.8 111.3L227.5 112.5L226.6 113.7L228.2 115.1L230.3 111.8L231.8 112.7L234.3 111.6L237.7 112.6L239.8 111.3L239.3 110.1L240.4 107.9L244.5 107.7L245.2 107.0L244.3 105.8L246.7 103.2L248.6 103.2L248.9 100.8L247.7 99.8L247.9 97.7L247.0 96.7L248.8 96.8L252.0 99.7L251.5 101.4L252.5 102.4L257.2 103.9L251.4 112.5L252.6 124.9L249.2 125.6L249.5 127.0L247.9 129.0L251.1 129.6L252.1 130.9L254.3 129.4L256.3 131.5L256.6 137.6L253.5 139.3L250.5 139.1L249.6 141.3L248.5 140.2L249.5 134.7L248.0 133.6L244.0 136.9L241.7 134.6L241.2 136.4L240.4 135.7L239.2 136.6L240.0 138.9L239.4 139.3L236.8 138.6L236.3 137.6L237.8 133.5L231.5 128.2L230.4 123.9L231.1 123.2L229.4 122.0L229.5 119.3L225.4 119.7L222.5 117.3L219.3 117.8L219.5 112.6L217.8 112.6Z"},{"n":"Sikkim","d":"M390.4 147.3L390.5 143.7L392.5 137.4L397.8 135.2L399.6 135.5L401.2 138.5L399.7 142.6L401.4 146.6L399.1 148.4L396.7 147.9L395.3 149.3L391.9 148.8L390.4 147.3Z"},{"n":"Bihar","d":"M330.7 175.2L337.0 171.8L340.8 167.7L341.7 168.6L343.0 168.6L343.3 167.5L346.1 168.4L346.9 167.0L339.7 162.7L341.2 160.4L341.0 158.9L337.8 157.9L340.4 155.4L344.1 155.3L342.3 153.0L339.8 151.8L338.9 147.9L337.2 145.7L336.8 144.4L340.2 143.2L342.6 144.9L346.9 145.6L347.8 147.3L347.3 149.7L354.2 152.1L355.0 153.7L359.9 152.3L362.6 156.2L364.8 154.9L373.7 158.2L377.7 156.3L379.3 158.5L383.1 158.0L385.6 158.8L390.4 158.6L391.3 156.5L393.5 159.5L388.1 163.4L387.7 164.9L390.6 168.1L390.8 171.1L389.4 170.4L387.0 172.0L387.6 174.4L384.3 173.2L383.3 175.1L381.4 174.7L380.9 176.5L379.1 177.5L377.8 182.9L376.6 182.8L376.1 184.0L372.2 183.2L370.2 186.4L368.0 185.1L368.2 183.8L366.1 183.2L365.2 180.8L363.6 181.3L361.2 180.3L360.3 183.4L358.6 184.2L356.5 183.9L352.8 186.4L350.5 186.4L349.2 184.2L345.3 187.5L343.1 184.7L340.2 184.2L339.1 182.8L337.4 184.2L332.7 184.3L333.0 182.6L331.3 180.8L330.7 175.2Z"},{"n":"Jharkhand","d":"M330.5 190.1L331.4 184.6L337.4 184.2L339.1 182.7L340.2 184.1L343.2 184.8L345.3 187.4L349.2 184.2L350.5 186.3L352.9 186.4L355.4 184.3L360.3 183.4L361.1 180.2L363.6 181.3L365.2 180.8L366.2 183.2L368.3 183.8L368.0 185.1L370.2 186.3L372.2 183.1L376.0 183.9L377.8 182.8L379.0 177.5L380.9 176.5L381.4 174.7L383.3 175.0L384.2 173.2L387.1 174.3L387.3 176.5L389.3 178.1L387.9 181.1L388.7 181.6L388.5 183.7L387.3 183.6L387.4 186.2L382.8 191.7L380.3 191.1L380.9 192.8L378.3 194.1L376.1 193.1L374.8 193.7L374.7 195.6L370.6 196.5L368.4 199.5L366.4 197.5L363.0 198.6L362.2 201.5L363.0 202.9L367.5 205.2L370.8 205.3L369.8 208.1L372.9 211.0L374.2 211.0L374.3 213.1L375.2 213.4L373.7 216.0L365.2 211.3L364.1 212.3L364.9 216.3L363.1 219.2L356.8 216.7L354.8 218.8L352.1 217.2L352.5 212.3L342.7 214.2L339.1 211.7L342.0 209.4L344.0 206.1L341.3 205.5L339.8 203.6L339.9 200.7L338.5 199.9L339.2 196.7L336.1 196.8L335.2 194.0L330.5 190.1Z"},{"n":"Ladakh","d":"M193.0 25.8L193.8 23.2L198.8 20.5L200.5 17.4L204.5 16.6L207.9 17.4L209.8 16.0L207.7 14.3L212.4 15.7L220.7 12.0L223.4 14.3L228.8 12.3L230.4 15.6L232.2 16.3L233.9 18.7L245.3 24.3L247.3 26.1L246.4 27.4L247.5 28.9L255.3 31.5L255.5 33.4L257.6 34.1L261.3 34.0L263.1 32.5L264.3 33.1L266.1 30.6L271.1 28.7L277.0 29.0L278.1 27.1L280.1 26.8L280.7 28.2L286.4 29.8L288.0 29.0L289.4 31.2L291.8 32.2L292.2 34.1L288.9 44.4L285.2 45.6L285.4 47.6L281.9 47.7L282.9 50.4L279.8 53.7L275.6 53.5L274.2 54.6L276.7 59.5L274.3 60.1L275.2 63.3L281.1 64.4L280.1 66.8L283.3 71.5L281.0 74.4L279.4 73.6L275.1 77.0L272.2 72.7L267.7 74.5L266.6 73.8L267.7 73.1L267.4 71.4L262.8 73.2L259.3 68.4L254.2 70.5L251.8 68.3L249.0 67.6L243.5 60.9L241.1 60.1L240.5 57.8L237.4 54.3L235.4 54.5L233.1 52.0L229.7 50.3L228.5 48.3L228.9 46.9L227.5 45.6L215.7 43.4L218.9 42.2L219.1 40.4L217.9 39.1L214.9 40.0L208.2 37.5L207.9 35.6L208.9 33.3L204.1 32.8L200.7 30.6L200.1 28.4L195.0 29.1L193.0 27.9L193.7 26.5L193.0 25.8Z"},{"n":"Jammu and Kashmir","d":"M203.9 49.1L204.6 46.4L206.8 46.2L208.5 43.4L211.2 42.7L212.6 41.3L212.5 39.8L217.9 39.0L219.1 40.4L218.9 42.2L216.9 43.5L221.0 45.0L227.4 45.6L228.9 47.0L228.5 48.2L229.7 50.3L233.1 52.0L235.4 54.5L237.4 54.3L240.5 57.8L241.1 60.1L243.5 60.9L247.0 64.5L246.7 65.5L242.4 65.4L236.6 69.7L235.2 69.0L236.1 73.0L230.9 77.5L223.0 74.6L220.3 74.9L220.0 70.9L216.5 71.3L206.9 66.7L207.3 65.1L206.1 63.3L206.4 55.8L203.9 49.1Z"},{"n":"Himachal Pradesh","d":"M232.0 80.5L232.5 78.2L236.1 76.1L235.1 74.7L236.2 71.4L234.6 69.5L236.6 69.7L242.4 65.4L246.6 65.5L247.0 64.5L249.0 67.6L251.8 68.3L254.1 70.4L259.3 68.4L262.8 73.2L267.5 71.3L267.8 73.2L266.7 73.9L269.4 76.0L268.8 77.8L272.6 81.8L271.6 84.8L273.4 87.1L272.0 88.0L272.7 89.3L272.2 90.4L275.4 93.9L273.9 94.1L272.9 92.7L268.8 92.7L267.3 91.5L262.2 93.0L260.9 93.9L260.1 97.4L258.9 98.6L260.2 102.2L257.2 103.9L255.0 103.3L251.4 101.4L252.0 99.8L248.8 96.8L245.1 95.4L244.6 91.7L243.5 91.7L242.1 89.8L239.7 91.2L236.0 82.4L232.0 80.5Z"},{"n":"Punjab","d":"M210.1 104.2L216.3 96.9L220.6 94.4L218.2 93.6L218.7 90.4L219.9 89.1L218.1 85.2L219.0 83.9L223.3 81.1L226.6 80.7L229.2 79.2L228.7 76.9L230.9 77.4L235.1 74.7L236.3 76.3L232.6 78.2L232.1 80.5L236.0 82.4L239.7 91.2L242.1 89.7L245.4 92.5L245.1 95.4L247.9 97.7L247.8 98.8L246.3 98.7L246.5 99.5L248.9 100.8L248.7 103.3L246.7 103.3L244.4 105.8L245.3 107.1L240.4 107.9L239.3 110.1L239.9 111.3L236.5 112.8L234.3 111.6L231.8 112.7L230.3 111.8L228.3 115.2L226.5 113.7L227.5 112.5L226.9 111.3L222.0 109.2L219.9 110.3L210.3 109.5L211.4 107.4L210.1 104.2Z"},{"n":"Uttarakhand","d":"M257.2 103.6L260.2 102.1L258.8 98.6L260.1 97.4L260.9 93.9L267.3 91.5L268.8 92.7L272.9 92.7L273.9 94.0L275.3 93.9L273.8 91.5L276.3 89.2L278.3 90.8L279.4 93.6L283.0 96.3L286.3 95.8L291.2 98.9L290.9 101.1L295.8 102.7L301.4 106.2L292.8 112.7L293.3 114.7L291.2 116.8L292.1 118.7L287.5 126.7L285.8 124.4L282.8 125.0L275.8 120.6L274.4 121.2L272.3 119.2L274.3 116.8L270.5 115.2L269.0 112.9L266.8 111.9L262.9 114.9L261.7 113.1L260.3 113.6L259.0 110.7L262.0 105.8L257.2 103.6Z"},{"n":"Chandigarh","d":""}],"nb":[{"n":"Madhya Pradesh","d":"M157.7 -3.2L158.6 -6.9L165.9 -4.9L167.3 -11.5L166.7 -12.2L161.7 -11.0L158.0 -19.3L163.3 -17.6L165.1 -19.3L617.7 -19.3L608.5 -15.5L599.7 -17.7L594.8 -13.5L591.4 -15.4L586.6 -12.1L586.9 -2.8L582.4 0.6L579.9 12.1L573.9 9.5L569.6 22.4L570.4 26.5L568.6 31.2L564.9 31.4L562.4 37.6L563.8 49.7L559.1 58.7L556.7 59.5L551.1 54.8L544.6 51.9L541.7 46.5L535.2 40.5L526.5 40.9L523.0 44.5L514.0 46.5L503.1 41.5L490.9 45.4L488.1 36.9L482.0 36.9L472.9 34.2L471.8 38.5L462.9 41.3L456.7 40.5L453.3 42.1L452.1 48.0L433.0 48.9L428.5 46.3L423.8 48.2L422.8 43.6L418.2 42.4L411.1 44.7L408.1 48.1L399.2 53.1L390.4 55.5L385.3 53.9L370.9 54.7L366.3 56.1L364.3 44.6L370.8 46.1L371.5 45.4L369.7 35.0L365.5 30.7L353.8 31.5L349.4 35.9L340.4 34.4L337.1 36.6L336.1 36.2L330.8 41.8L327.7 40.9L323.5 44.3L323.5 50.4L314.0 58.6L316.2 62.1L313.8 68.3L305.9 67.9L304.9 70.7L299.2 75.2L286.1 75.1L285.6 63.8L281.5 56.3L252.2 55.1L238.4 55.7L228.0 53.7L221.7 50.4L218.1 43.7L206.9 39.5L201.5 40.6L189.8 37.5L185.1 33.5L186.2 21.7L181.9 18.4L180.7 14.5L171.5 20.2L163.3 19.1L160.2 14.9L161.9 9.7L161.8 2.4L157.7 -3.2Z"},{"n":"Chhattisgarh","d":"M535.4 212.2L538.9 204.0L539.1 199.2L542.9 196.4L548.3 186.9L554.0 183.0L556.3 188.6L564.7 189.9L570.7 185.1L573.2 175.6L562.4 169.0L559.7 163.4L553.2 159.8L552.0 156.0L547.4 155.5L551.1 148.2L552.0 138.0L549.6 135.1L545.2 135.6L543.0 128.6L556.7 122.8L554.8 119.1L556.3 107.2L550.6 107.1L554.2 101.0L552.2 84.9L547.1 84.7L545.7 73.9L547.1 68.9L556.3 65.5L563.7 49.9L562.4 37.6L564.9 31.2L568.7 30.8L570.3 26.5L569.5 22.6L574.1 8.9L580.0 11.6L582.4 0.5L586.9 -2.9L586.4 -12.0L591.5 -15.6L594.9 -13.7L599.6 -17.8L608.6 -15.5L617.7 -19.3L664.2 -19.3L664.2 89.6L661.1 89.1L661.9 99.3L663.4 103.7L660.8 108.2L664.2 112.8L664.2 152.6L661.4 154.8L656.7 146.0L651.7 145.3L644.7 140.7L641.5 141.2L637.3 137.7L632.9 141.0L631.1 147.4L632.6 150.6L638.6 153.3L639.7 157.0L644.4 157.7L644.0 168.2L642.4 175.3L646.5 175.3L648.1 180.8L651.9 181.0L650.3 195.4L653.0 200.7L655.4 213.7L651.3 214.8L650.1 222.1L646.0 225.3L634.6 230.3L635.0 236.1L626.5 245.7L625.3 250.0L619.7 250.5L612.0 257.2L611.6 262.8L608.9 269.4L609.0 274.1L604.1 279.5L603.8 284.4L595.8 284.8L589.8 281.9L584.9 285.7L580.7 285.9L577.9 269.6L578.3 262.5L571.6 263.7L570.3 259.7L564.9 261.8L564.4 252.9L561.9 244.6L557.7 239.2L546.7 232.3L541.6 233.5L535.7 226.5L535.6 223.6L540.0 218.2L535.4 212.2Z"},{"n":"Gujarat","d":"M163.5 -17.5L159.2 -18.9L158.5 -18.4L161.7 -11.2L167.5 -12.4L165.9 -4.6L159.0 -6.7L157.7 -3.4L161.9 2.4L161.9 9.7L160.3 14.8L163.3 19.1L143.5 26.2L143.8 31.3L147.2 34.3L143.1 39.1L144.7 46.7L153.1 46.6L164.4 43.7L171.1 44.1L173.9 48.1L167.1 50.4L157.1 51.6L152.0 54.8L150.9 60.9L143.8 62.9L143.2 69.0L134.9 70.3L142.8 79.5L145.2 80.2L150.9 90.4L149.4 97.8L146.8 97.7L144.6 104.4L138.9 108.1L133.3 108.1L131.0 104.1L122.2 98.5L118.6 104.0L122.4 106.8L122.1 112.5L118.2 119.6L118.9 131.2L112.0 130.9L108.8 136.5L106.5 136.6L101.8 131.5L103.5 125.8L96.2 123.4L89.9 125.4L91.3 130.9L85.9 129.9L80.0 135.9L77.9 128.7L80.2 122.7L83.3 120.7L86.7 114.7L87.8 107.3L84.8 96.1L76.8 77.0L77.3 76.0L70.6 73.7L71.6 66.6L69.2 59.8L72.6 57.9L75.0 50.5L77.3 49.2L75.8 46.3L70.0 42.9L74.9 38.6L65.9 33.1L70.5 28.0L63.8 19.6L67.4 4.3L72.3 2.1L78.8 4.7L85.6 2.2L89.4 -1.8L89.0 -2.8L72.9 -2.0L64.4 -4.6L60.9 -0.6L55.7 -3.7L53.4 4.6L45.4 22.8L47.6 27.2L44.9 32.1L51.7 40.0L47.2 50.9L39.6 60.7L39.8 67.4L22.2 75.0L13.3 80.4L3.2 83.7L-1.3 88.6L-8.3 90.0L-18.2 94.5L-18.2 -19.3L165.1 -19.3L163.5 -17.5ZM50.7 18.0L55.7 14.1L59.5 20.6L54.5 28.9L51.8 26.2L50.7 18.0Z"},{"n":"Odisha","d":"M603.8 284.4L604.0 279.5L609.0 274.1L608.9 269.4L611.6 262.8L611.9 257.3L619.7 250.4L625.2 249.8L626.5 245.8L634.9 236.2L634.4 230.3L646.0 225.3L649.9 222.2L651.2 214.8L655.3 213.3L653.0 200.8L650.3 195.5L651.8 181.4L648.1 181.0L646.4 175.4L642.2 175.9L644.0 168.2L644.4 158.1L639.6 157.0L638.5 153.4L632.5 150.6L631.0 147.4L632.9 141.0L637.2 137.5L641.5 141.1L644.7 140.6L651.6 145.3L656.8 145.9L661.3 154.5L664.2 152.6L664.2 243.8L662.6 245.6L663.7 249.1L659.7 260.4L661.8 261.6L659.8 269.8L655.7 273.2L650.6 269.3L642.5 268.3L639.2 271.8L628.9 275.5L623.2 280.7L617.2 284.0L603.8 284.4ZM660.7 108.3L663.3 103.7L661.9 99.3L661.0 88.2L664.2 89.6L664.2 112.8L660.7 108.3Z"},{"n":"Andhra Pradesh","d":"M346.1 456.5L344.3 450.7L345.7 446.6L340.5 444.2L338.7 437.3L338.6 424.5L341.6 422.6L338.3 411.5L341.1 406.9L351.8 403.3L367.9 405.7L376.8 408.4L385.5 409.1L390.6 407.1L402.6 411.2L408.0 410.2L412.5 402.9L413.0 400.5L422.4 396.3L430.8 398.2L434.0 395.6L442.6 400.4L453.2 393.3L452.4 389.3L460.0 385.6L467.8 387.6L471.0 386.5L471.5 368.2L473.8 364.8L483.4 363.8L485.4 361.3L491.1 360.4L506.4 354.5L511.5 356.3L516.1 359.9L522.4 353.2L523.3 348.6L521.3 342.2L522.3 338.7L530.3 335.6L537.6 338.6L538.7 344.7L553.1 351.3L553.2 347.6L555.2 341.9L551.3 339.3L541.0 338.4L549.6 332.5L554.2 327.1L561.4 331.5L570.4 334.2L572.2 332.2L572.4 326.6L576.1 322.8L579.5 324.6L590.0 322.1L591.3 316.1L596.3 316.3L598.3 311.2L581.0 303.5L574.3 295.9L572.8 289.7L578.1 286.8L583.2 289.5L584.9 285.7L589.8 281.8L595.9 284.8L617.2 284.0L623.2 280.7L628.9 275.5L639.2 271.8L642.4 268.2L650.6 269.3L655.9 272.9L659.9 269.6L661.7 262.0L659.6 260.8L663.7 249.2L662.4 245.6L664.2 243.8L664.2 329.2L659.8 333.2L655.6 341.2L655.8 344.8L662.4 346.1L659.7 358.6L659.6 365.2L654.6 366.3L637.8 375.6L631.3 377.1L623.1 381.1L613.3 378.8L603.6 379.1L595.9 383.2L592.6 387.8L588.7 402.7L580.7 410.6L580.2 416.8L575.9 419.3L569.4 419.9L566.0 409.7L560.4 408.5L551.5 410.6L544.4 414.0L538.2 418.8L534.2 424.6L531.4 434.8L526.4 441.7L522.6 459.3L345.0 459.3L346.1 456.5Z"},{"n":"Karnataka","d":"M171.0 459.0L173.5 453.3L170.2 449.7L174.1 447.0L174.0 441.9L171.1 440.1L169.7 433.7L171.3 431.5L168.9 422.8L161.6 423.4L161.9 419.0L167.1 415.1L169.1 417.4L175.4 416.1L177.9 407.2L182.3 398.9L177.0 396.0L183.6 391.2L183.4 385.2L177.1 384.3L173.7 380.1L174.6 371.9L173.6 365.5L187.5 360.3L189.1 365.1L192.5 363.7L196.7 355.1L206.1 351.4L209.9 351.3L209.2 345.7L220.6 340.0L226.5 346.9L231.2 345.6L232.2 339.7L235.9 339.7L243.4 337.6L247.4 338.8L255.4 338.1L256.0 329.5L253.2 325.8L254.8 319.5L251.9 317.3L250.0 312.3L253.6 306.3L264.5 312.9L269.5 311.1L272.0 316.1L289.9 313.4L298.8 316.3L298.5 309.0L296.0 306.7L296.1 298.6L305.6 294.5L307.7 288.1L317.7 292.2L319.3 286.8L323.7 283.8L320.9 279.2L323.2 280.5L331.6 278.0L330.9 272.1L333.7 270.0L331.9 265.1L333.7 260.6L340.8 262.8L351.6 248.9L352.8 245.5L355.9 244.3L361.8 247.5L361.6 253.2L364.8 255.7L370.1 253.9L373.2 255.0L370.9 260.1L373.0 266.7L370.4 269.3L376.6 274.7L372.3 278.6L369.3 286.8L364.3 292.3L363.7 299.0L378.3 304.1L367.9 309.2L366.1 314.1L359.8 322.6L359.0 326.7L364.9 329.8L366.9 334.1L364.6 344.2L365.6 350.5L362.6 354.8L364.2 361.5L362.0 367.8L351.8 371.1L354.4 374.9L361.8 377.4L366.4 376.3L372.8 379.1L367.1 386.9L367.9 405.7L351.7 403.3L341.2 406.8L338.4 411.4L341.7 422.9L338.6 424.8L338.7 437.3L340.5 444.1L345.9 446.5L344.4 450.7L346.2 456.3L345.0 459.3L171.0 459.0Z"},{"n":"Goa","d":"M135.3 418.5L146.8 417.1L150.7 417.6L154.2 425.8L168.8 422.4L171.3 431.7L169.7 433.8L171.1 439.8L174.0 441.6L174.2 447.1L170.6 449.7L173.7 453.3L171.1 459.3L152.5 459.3L147.4 442.5L150.1 437.5L140.2 433.5L135.3 418.5Z"},{"n":"Telangana","d":"M351.4 370.7L361.9 367.8L364.2 361.6L362.5 354.8L365.5 350.5L364.6 344.3L366.8 334.1L364.8 329.8L358.8 326.7L359.7 322.6L366.0 314.1L367.8 309.3L377.2 304.3L363.6 299.4L364.2 292.3L369.3 286.9L372.3 278.6L376.2 274.7L370.0 269.1L372.9 266.6L370.9 260.1L373.0 255.3L370.2 253.9L368.6 248.8L372.2 244.0L372.9 237.4L381.3 236.8L381.0 229.9L384.6 228.7L387.7 221.0L393.5 218.6L387.9 214.4L385.1 203.8L388.9 196.9L389.1 189.0L394.0 186.5L400.0 191.1L407.8 193.0L410.3 181.0L416.2 177.5L416.0 169.6L414.2 164.1L418.2 162.6L419.5 158.4L416.0 150.0L420.6 152.0L423.8 156.2L432.4 156.0L448.6 159.6L449.8 164.3L455.5 166.4L454.7 173.1L464.1 174.3L469.4 178.6L473.6 170.5L480.4 171.5L487.0 176.3L503.4 169.4L507.2 171.3L510.8 175.8L515.5 178.3L517.6 182.9L514.6 198.3L510.7 202.0L515.3 206.3L516.6 217.1L514.3 219.9L520.1 223.2L526.0 228.9L535.7 226.5L541.5 233.3L546.6 232.2L557.6 239.1L561.8 244.5L564.4 252.9L565.0 261.3L570.7 259.5L571.9 263.6L578.4 262.0L577.9 269.7L580.6 285.4L584.9 285.7L583.3 289.8L578.1 286.9L573.1 289.5L574.3 295.9L581.0 303.5L598.5 310.6L596.4 316.5L591.3 316.3L590.2 322.1L579.4 324.6L575.9 323.1L572.5 326.5L572.2 332.4L570.3 334.3L561.4 331.5L554.3 327.3L549.6 332.5L542.4 337.4L542.7 338.5L551.4 339.3L555.5 342.1L553.2 347.6L553.5 351.8L538.5 344.6L537.2 338.4L530.3 335.6L522.6 338.6L521.3 342.2L523.4 348.6L522.3 353.3L515.8 360.3L511.5 356.3L506.3 354.6L491.1 360.4L485.5 361.3L483.6 363.8L473.9 364.8L471.5 368.3L471.2 386.6L467.8 387.6L459.8 385.7L452.7 389.2L453.5 393.2L442.4 400.5L434.2 395.8L430.9 398.3L422.2 396.3L413.1 400.5L408.0 410.2L402.5 411.3L390.6 407.2L385.5 409.1L376.8 408.4L367.9 405.7L367.1 386.8L372.3 379.0L366.5 376.4L361.9 377.5L354.2 374.8L351.4 370.7Z"},{"n":"Dadra and Nagar Haveli and Daman and Diu","d":"M89.6 125.4L96.3 123.4L103.8 125.8L102.0 131.5L106.5 136.6L102.0 138.8L91.5 136.1L91.3 130.9L89.6 125.4ZM83.3 120.7L83.7 115.2L86.8 114.7L83.3 120.7Z"},{"n":"Puducherry","d":"M651.8 353.7L656.9 354.7L656.7 356.5L655.0 355.1L652.6 354.8L651.8 353.7Z"}],"mh":[{"n":"Gondia","d":"M559.1 58.7L556.2 65.6L547.1 68.9L545.6 73.9L547.1 84.7L552.2 84.3L553.1 91.5L542.7 92.5L539.1 91.7L537.7 97.6L533.7 102.2L522.4 98.6L517.9 100.8L518.6 96.2L510.6 94.1L515.3 82.9L523.3 82.9L522.8 67.2L515.1 63.8L508.3 62.6L506.5 56.0L511.6 52.7L514.0 46.5L523.0 44.5L526.3 40.9L535.2 40.5L541.7 46.5L544.6 51.9L551.0 54.8L556.7 59.5L559.1 58.7Z","lon":80.259,"lat":21.136},{"n":"Bhandara","d":"M514.0 46.5L511.6 52.7L506.5 56.0L508.3 62.6L515.1 63.8L522.8 67.2L523.3 82.9L515.3 82.9L510.6 94.1L518.6 96.2L517.9 100.8L514.9 101.1L503.7 100.0L498.4 101.5L489.7 98.4L490.4 94.6L498.0 82.4L494.6 75.5L488.2 71.3L491.7 69.2L493.2 62.4L487.1 52.6L487.1 48.6L490.9 45.4L503.1 41.4L514.0 46.5Z","lon":79.806,"lat":21.105},{"n":"Jalgaon","d":"M275.1 56.4L281.7 56.3L285.6 63.8L286.1 75.1L299.2 75.2L300.1 78.1L296.9 83.3L285.9 77.8L280.7 86.0L282.8 87.1L275.0 95.4L276.3 102.8L271.8 107.4L265.3 108.7L261.0 105.0L247.7 105.4L247.2 108.7L239.2 110.9L238.8 107.3L230.8 107.4L228.9 112.6L224.8 113.7L221.6 117.9L222.8 121.8L214.8 122.7L211.2 126.9L206.9 122.8L203.1 115.7L203.8 103.7L211.1 102.2L214.3 96.9L212.9 86.4L209.9 84.8L209.7 78.2L206.5 76.3L208.8 70.6L213.0 67.7L217.4 67.8L223.2 62.3L222.5 58.1L228.0 53.7L238.4 55.7L252.2 55.1L275.1 56.4Z","lon":75.511,"lat":20.827},{"n":"Wardha","d":"M412.7 58.9L417.5 64.1L424.5 64.9L433.9 73.1L437.0 78.0L441.6 79.8L442.0 83.5L447.7 87.0L454.7 95.0L461.3 96.9L466.9 100.7L471.6 106.9L466.2 114.9L461.4 114.4L447.1 118.8L446.0 125.1L442.3 125.4L436.7 117.4L431.6 116.1L428.3 110.6L422.4 111.4L413.4 107.2L414.1 99.9L416.4 97.0L413.1 87.4L406.1 83.1L406.2 71.2L400.6 63.8L402.2 57.3L412.7 58.9Z","lon":78.584,"lat":20.827},{"n":"Buldhana","d":"M299.2 75.2L304.9 70.7L305.7 67.8L313.8 68.3L316.2 62.1L319.9 61.6L323.5 67.7L323.0 74.7L324.3 79.9L322.4 89.4L323.0 94.6L320.4 102.2L323.5 105.6L322.7 111.1L319.0 112.2L321.1 122.6L325.7 126.3L321.3 131.1L321.9 136.1L316.5 136.2L315.9 144.2L312.8 149.2L314.8 152.9L308.6 154.0L306.0 149.5L300.7 149.5L294.0 152.7L281.9 153.5L280.8 149.9L273.7 144.4L281.7 138.2L284.5 125.0L281.1 120.8L277.8 124.7L273.9 120.6L272.3 112.1L274.5 110.2L278.1 108.7L276.3 102.8L275.0 95.4L282.8 87.1L280.7 86.0L285.9 77.8L296.9 83.3L300.1 78.1L299.2 75.2Z","lon":76.404,"lat":20.579},{"n":"Akola","d":"M325.7 126.3L321.1 122.6L319.0 112.2L322.7 111.1L323.5 105.6L320.4 102.2L323.0 94.6L322.4 89.4L324.3 79.9L323.0 74.7L323.5 67.7L336.6 67.6L346.8 64.6L347.4 75.5L344.5 88.9L354.1 90.0L368.8 89.8L373.8 93.0L373.8 98.2L365.8 101.8L364.6 104.7L357.3 107.4L357.3 113.3L350.6 113.9L347.8 118.7L337.5 117.9L325.7 126.3Z","lon":77.187,"lat":20.747},{"n":"Nashik","d":"M203.8 103.7L203.1 115.7L206.9 122.8L211.2 126.9L208.9 132.8L204.1 128.3L197.8 135.7L199.1 139.1L195.1 147.8L173.7 145.3L171.1 150.3L176.4 152.5L177.1 157.0L164.5 161.6L161.7 167.4L155.7 165.2L149.9 165.3L144.7 160.9L140.9 167.4L136.4 170.2L131.1 170.9L121.1 159.4L118.4 143.1L112.4 140.7L108.8 136.5L111.9 130.8L118.9 131.2L118.2 119.5L122.1 112.5L122.4 106.8L118.4 104.3L122.5 98.1L131.0 104.2L133.3 108.1L138.9 108.1L144.6 104.4L146.8 97.5L149.4 97.8L150.9 90.4L155.6 90.8L164.0 89.0L177.6 90.4L180.9 92.8L187.1 90.6L194.8 94.6L193.9 99.8L203.8 103.7Z","lon":74.107,"lat":20.23},{"n":"Gadchiroli","d":"M517.9 100.8L522.4 98.6L533.7 102.2L537.7 97.6L539.1 91.7L542.7 92.5L553.1 91.5L554.2 101.1L550.6 107.1L556.4 106.7L554.8 119.1L557.0 123.0L543.0 128.6L545.2 135.6L549.6 135.1L552.1 137.9L551.1 148.2L547.4 155.5L552.2 156.0L553.2 159.8L559.8 163.4L562.4 169.0L573.3 175.1L570.7 185.1L564.6 190.0L556.1 188.6L554.0 183.0L548.3 186.9L542.9 196.5L539.1 199.2L539.0 204.0L535.4 212.2L540.2 218.3L535.6 223.6L535.7 226.5L526.1 229.0L520.1 223.2L513.7 219.7L516.6 217.1L515.3 206.3L510.3 202.0L514.6 198.3L517.6 182.9L515.5 178.3L510.7 175.7L507.2 171.3L505.7 161.8L503.0 156.2L507.0 151.2L505.8 143.7L510.0 142.4L513.8 146.3L518.3 141.4L516.9 136.7L518.1 130.6L515.5 125.7L517.2 121.7L514.3 108.7L514.9 101.1L517.9 100.8Z","lon":80.184,"lat":19.743},{"n":"Washim","d":"M314.8 152.9L312.8 149.2L315.9 144.2L316.5 136.2L321.9 136.1L321.3 131.1L325.7 126.3L337.5 117.9L347.8 118.7L350.6 113.9L357.3 113.3L357.3 107.4L364.6 104.7L365.8 101.8L373.8 98.2L376.6 103.3L376.2 108.1L377.6 109.7L371.5 118.7L373.8 127.4L377.1 128.4L377.4 137.8L371.9 142.5L368.6 138.1L359.3 141.3L354.0 150.2L349.7 146.0L342.9 148.7L338.8 143.8L322.9 148.5L320.9 152.5L314.8 152.9Z","lon":77.249,"lat":20.339},{"n":"Chandrapur","d":"M489.7 98.4L498.4 101.5L503.7 100.0L514.9 101.1L514.3 108.7L517.2 121.7L515.5 125.7L518.1 130.6L516.9 136.7L518.3 141.4L513.8 146.3L510.0 142.4L505.8 143.7L507.0 151.2L503.0 156.2L505.7 161.8L507.2 171.3L503.4 169.4L486.8 176.4L480.4 171.5L473.6 170.5L469.7 179.0L464.1 174.3L454.3 173.2L455.5 166.4L449.7 164.3L448.6 159.6L452.4 161.2L456.5 156.7L462.6 156.0L464.7 143.7L455.3 133.3L453.4 128.0L447.0 128.2L446.0 125.1L447.1 118.8L461.4 114.4L466.2 114.9L471.6 106.9L477.6 106.7L479.7 102.4L484.7 101.9L489.7 98.4Z","lon":79.509,"lat":20.082},{"n":"Yavatmal","d":"M414.1 99.9L413.4 107.2L422.4 111.4L428.3 110.6L431.6 116.1L436.7 117.4L442.3 125.4L446.0 125.1L447.0 128.2L453.4 128.0L455.3 133.3L464.7 143.7L462.6 156.0L456.5 156.7L452.4 161.2L448.6 159.6L432.4 156.0L423.7 156.2L420.6 152.0L416.0 150.0L409.9 150.9L394.6 150.2L388.3 157.4L389.1 160.7L399.3 164.1L402.9 167.6L408.3 166.7L408.9 172.7L401.6 179.1L391.8 174.2L385.2 179.6L382.2 175.8L376.1 172.7L373.5 166.9L364.5 164.7L358.6 153.3L354.0 150.2L359.3 141.3L368.6 138.1L371.9 142.5L377.4 137.8L377.1 128.4L373.8 127.4L371.5 118.7L377.6 109.7L376.2 108.1L384.0 109.7L395.8 106.6L399.7 101.6L405.3 102.8L414.1 99.9Z","lon":78.341,"lat":20.072},{"n":"Jalna","d":"M274.5 110.2L272.3 112.1L273.9 120.6L277.8 124.7L281.1 120.8L284.5 125.0L281.7 138.2L273.7 144.4L280.8 149.9L281.9 153.5L294.0 152.7L300.7 149.5L306.0 149.5L308.6 154.0L305.4 157.3L305.6 165.1L303.3 166.0L302.8 173.8L298.7 174.0L298.1 178.3L293.4 180.7L291.9 187.1L288.6 190.9L282.3 188.7L272.5 189.8L270.6 183.3L260.8 185.5L252.0 183.8L254.9 172.0L251.5 170.0L253.6 165.6L253.1 159.1L254.9 150.2L254.3 143.9L251.1 143.9L254.3 132.4L261.6 115.3L266.1 114.9L268.7 108.3L274.5 110.2Z","lon":75.864,"lat":19.917},{"n":"Ahmednagar","d":"M131.1 170.9L136.4 170.2L140.9 167.4L144.7 160.9L149.9 165.3L155.7 165.2L161.7 167.4L164.5 161.6L177.1 157.0L176.4 152.5L171.1 150.3L173.7 145.3L195.1 147.8L190.4 158.4L198.0 158.5L206.0 167.0L208.1 166.4L224.5 170.7L230.7 175.0L235.2 176.1L237.4 183.0L244.1 181.1L247.4 184.4L246.8 190.7L239.7 195.8L242.5 203.2L233.9 202.2L232.5 206.3L226.5 202.5L225.2 206.1L219.5 205.0L211.7 199.9L210.0 206.1L204.5 212.8L217.6 223.7L224.7 231.5L227.8 225.3L232.0 225.9L235.2 221.0L238.3 223.3L250.7 228.0L243.2 233.8L240.4 238.6L234.1 239.3L229.9 238.0L221.6 241.2L220.7 245.0L210.0 248.4L205.0 251.2L203.6 248.2L187.6 240.1L189.5 237.4L183.0 231.5L183.3 228.6L177.7 221.1L165.0 206.5L168.6 200.6L167.7 195.5L156.3 192.4L154.3 185.5L150.5 186.8L141.0 183.7L135.7 180.6L137.0 177.4L131.5 173.7L131.1 170.9Z","lon":74.821,"lat":19.166},{"n":"Hingoli","d":"M308.6 154.0L320.9 152.5L322.9 148.5L338.8 143.8L342.9 148.7L349.7 146.0L354.0 150.2L358.6 153.3L364.5 164.7L365.2 176.9L359.7 186.8L355.7 185.7L347.6 193.8L346.3 203.1L341.8 201.5L335.2 188.1L329.9 185.7L327.5 175.8L331.3 167.3L324.0 165.4L317.6 159.9L307.1 155.5L308.6 154.0Z","lon":77.172,"lat":19.576},{"n":"Nanded","d":"M364.5 164.7L373.5 166.9L376.1 172.7L382.2 175.8L385.2 179.6L391.8 174.2L401.6 179.1L408.9 172.7L408.3 166.7L402.9 167.6L399.3 164.1L389.1 160.7L388.3 157.4L394.6 150.2L409.9 150.9L416.0 150.0L419.6 158.4L418.3 162.7L414.2 164.1L416.0 169.6L416.2 177.6L410.3 181.0L408.1 193.2L400.0 191.1L394.0 186.5L389.1 189.0L388.9 196.9L385.1 203.8L387.9 214.4L394.3 218.5L387.7 221.0L384.6 228.9L381.0 229.9L381.6 237.0L372.9 237.4L372.2 244.0L368.6 248.8L370.1 253.9L364.9 255.9L361.5 253.3L361.8 247.5L355.9 244.3L352.8 245.5L354.7 237.6L353.0 233.4L346.0 231.2L345.9 227.7L339.5 228.9L340.0 223.3L336.1 219.5L334.0 212.8L338.1 212.9L341.8 201.5L346.3 203.1L347.6 193.8L355.7 185.7L359.7 186.8L365.2 176.9L364.5 164.7Z","lon":77.485,"lat":19.097},{"n":"Parbhani","d":"M288.6 190.9L291.9 187.1L293.4 180.7L298.1 178.3L298.7 174.0L302.8 173.8L303.3 166.0L305.6 165.1L305.4 157.3L307.1 155.5L317.6 159.9L324.0 165.4L331.3 167.3L327.5 175.8L329.9 185.7L335.2 188.1L341.8 201.5L338.1 212.9L334.0 212.8L336.1 219.5L328.8 219.3L319.8 224.5L311.5 216.7L311.5 212.2L304.9 211.5L297.9 198.4L298.1 193.6L288.6 190.9Z","lon":76.608,"lat":19.296},{"n":"Pune","d":"M141.0 183.7L150.5 186.8L154.3 185.5L156.3 192.4L167.7 195.5L168.6 200.6L165.0 206.5L177.7 221.1L183.3 228.6L183.0 231.5L189.5 237.4L187.6 240.1L203.6 248.2L205.0 251.2L205.6 256.9L212.0 255.7L216.5 260.5L222.0 260.0L220.8 268.3L218.2 271.3L222.0 276.6L218.3 278.8L206.9 275.7L197.5 270.8L194.2 268.3L182.4 269.7L175.9 266.5L172.6 268.4L161.7 264.2L148.7 262.5L145.8 270.7L133.6 270.8L129.7 265.8L133.3 261.6L126.6 259.4L126.3 257.1L119.2 253.2L117.9 247.0L118.5 240.6L113.3 236.9L117.3 230.7L115.2 226.4L116.1 221.6L119.8 216.6L121.6 210.8L126.0 206.5L125.6 200.2L126.1 197.1L131.9 195.4L141.0 183.7Z","lon":73.928,"lat":18.648},{"n":"Beed","d":"M252.0 183.8L260.8 185.5L270.6 183.3L272.5 189.8L282.3 188.7L298.1 193.6L297.9 198.4L304.9 211.5L311.5 212.2L311.5 216.7L319.8 224.5L320.5 227.8L312.0 229.5L306.0 233.4L292.6 236.8L282.1 235.0L279.4 236.0L272.2 231.5L250.7 228.0L238.3 223.3L235.2 221.0L232.0 225.9L227.8 225.3L224.7 231.5L217.6 223.7L204.5 212.8L210.0 206.1L211.7 199.9L219.5 205.0L225.2 206.1L226.5 202.5L232.5 206.3L233.9 202.2L242.5 203.2L239.7 195.8L246.8 190.7L247.4 184.4L244.1 181.1L252.0 183.8Z","lon":75.666,"lat":18.994},{"n":"Mumbai","d":"M87.3 209.7L88.3 211.8L83.7 217.2L81.7 214.6L83.9 205.4L80.7 200.2L80.6 191.5L87.9 192.6L92.5 198.6L91.0 209.3L87.3 209.7Z","lon":72.892,"lat":19.089},{"n":"Latur","d":"M336.1 219.5L340.0 223.3L339.5 228.9L345.9 227.7L346.0 231.2L353.0 233.4L354.7 237.6L351.7 248.9L340.6 263.0L333.7 260.6L331.9 265.1L333.8 270.1L330.9 272.1L331.8 278.1L323.0 280.6L320.9 279.2L316.9 277.9L317.2 273.0L312.3 270.7L301.8 270.5L299.0 267.1L292.9 265.7L295.2 251.5L292.2 245.6L292.6 236.8L306.0 233.4L312.0 229.5L320.5 227.8L319.8 224.5L328.8 219.3L336.1 219.5Z","lon":76.768,"lat":18.35},{"n":"Osmanabad","d":"M234.1 239.3L240.4 238.6L243.2 233.8L250.7 228.0L272.2 231.5L279.4 236.0L282.1 235.0L292.6 236.8L292.2 245.6L295.2 251.5L292.9 265.7L299.0 267.1L301.8 270.5L312.3 270.7L317.2 273.0L316.9 277.9L320.9 279.2L324.0 283.8L319.3 286.8L317.6 293.1L315.8 290.8L307.7 288.1L305.7 294.5L302.0 295.6L292.3 290.2L286.0 292.0L283.7 287.6L276.1 288.7L277.1 283.8L268.3 282.6L266.2 274.0L270.4 272.5L274.7 274.5L277.1 270.0L272.1 264.6L272.7 257.9L269.6 249.7L258.0 247.3L249.7 257.5L247.3 264.1L241.8 259.6L238.8 251.7L233.6 244.8L234.1 239.3Z","lon":76.115,"lat":18.169},{"n":"Solapur","d":"M205.0 251.2L210.0 248.4L220.7 245.0L221.6 241.2L229.9 238.0L234.1 239.3L233.6 244.8L238.8 251.7L241.8 259.6L247.3 264.1L249.7 257.5L258.0 247.3L269.6 249.7L272.7 257.9L272.1 264.6L277.1 270.0L274.7 274.5L270.4 272.5L266.2 274.0L268.3 282.6L277.1 283.8L276.1 288.7L283.7 287.6L286.0 292.0L292.3 290.2L302.0 295.6L296.1 298.6L296.0 306.7L298.5 308.9L299.2 316.7L289.9 313.4L280.5 315.3L271.8 316.1L269.5 311.1L264.6 313.0L253.6 306.3L250.0 312.3L251.9 317.3L246.6 321.4L240.7 319.8L229.7 323.0L220.0 321.1L210.4 326.2L208.2 322.7L212.7 318.1L217.3 310.0L211.4 304.1L214.3 301.9L209.5 296.6L207.2 290.3L196.2 285.3L193.1 280.8L197.5 270.8L206.9 275.7L218.3 278.8L222.0 276.6L218.2 271.3L220.8 268.3L222.0 260.0L216.5 260.5L212.0 255.7L205.6 256.9L205.0 251.2Z","lon":75.259,"lat":17.859},{"n":"Satara","d":"M133.6 270.8L145.8 270.7L148.7 262.5L161.7 264.2L172.6 268.4L175.9 266.5L182.4 269.7L194.2 268.3L197.5 270.8L193.1 280.8L196.2 285.3L207.2 290.3L209.5 296.6L206.6 304.1L203.4 307.8L196.6 306.1L196.0 311.6L186.5 310.0L184.6 312.3L171.7 309.9L169.9 318.1L171.7 323.7L169.4 327.8L156.3 331.1L150.8 328.3L144.3 322.3L135.8 320.1L134.2 311.7L135.8 305.6L138.9 301.2L135.4 292.8L128.2 290.4L130.3 285.9L128.4 280.7L133.6 270.8Z","lon":74.311,"lat":17.591},{"n":"Ratnagiri","d":"M128.4 280.7L130.3 285.9L128.2 290.4L135.4 292.8L138.9 301.2L135.8 305.6L134.2 311.7L136.6 325.9L142.6 331.5L144.2 335.3L142.0 341.5L136.8 347.8L143.0 351.7L145.4 359.5L140.3 362.4L131.4 363.7L130.1 366.2L122.1 369.3L114.8 367.1L115.0 361.6L112.2 354.2L113.0 349.4L110.5 343.8L111.7 337.8L111.2 329.5L107.2 319.8L108.5 316.2L104.8 312.2L104.4 299.5L96.4 273.9L100.6 274.0L104.2 268.9L111.1 268.1L116.3 277.5L124.4 282.3L128.4 280.7Z","lon":73.461,"lat":17.294},{"n":"Sangli","d":"M209.5 296.6L214.3 301.9L211.4 304.1L217.3 310.0L212.7 318.1L208.2 322.7L210.4 326.2L220.0 321.1L229.7 323.0L240.7 319.8L246.6 321.4L251.9 317.3L254.9 319.3L253.2 325.8L256.1 329.5L255.6 338.2L247.3 338.8L243.4 337.6L235.9 339.7L232.2 339.7L231.3 345.7L226.2 346.9L220.6 340.0L209.2 345.7L210.3 351.4L206.1 351.4L196.7 355.1L192.5 350.5L183.2 345.3L179.1 346.8L172.2 343.5L158.4 343.1L155.8 337.8L145.2 327.2L136.6 325.9L135.8 320.1L144.3 322.3L150.8 328.3L156.3 331.1L169.4 327.8L171.7 323.7L169.9 318.1L171.7 309.9L184.6 312.3L186.5 310.0L196.0 311.6L196.6 306.1L203.4 307.8L206.6 304.1L209.5 296.6Z","lon":75.279,"lat":17.172},{"n":"Kolhapur","d":"M145.4 359.5L143.0 351.7L136.8 347.8L142.0 341.5L144.2 335.3L142.6 331.5L136.6 325.9L145.2 327.2L155.8 337.8L158.4 343.1L172.2 343.5L179.1 346.8L183.2 345.3L192.5 350.5L196.7 355.1L192.7 363.6L189.1 365.5L187.5 360.3L173.6 365.5L174.6 371.9L173.7 380.1L177.1 384.3L183.6 385.1L183.6 391.6L177.0 396.0L182.6 398.6L177.9 407.2L175.4 416.2L168.9 417.4L167.2 415.1L161.0 412.5L158.9 404.4L160.2 400.6L154.3 398.6L154.0 395.1L148.8 392.3L150.8 385.4L147.7 384.6L144.2 379.0L147.5 372.3L144.1 365.8L145.4 359.5Z","lon":74.091,"lat":16.502},{"n":"Sindhudurg","d":"M114.8 367.1L122.1 369.3L130.1 366.2L131.4 363.7L140.3 362.4L145.4 359.5L144.1 365.8L147.5 372.3L144.2 379.0L147.7 384.6L150.8 385.4L148.8 392.3L154.0 395.1L154.3 398.6L160.2 400.6L158.9 404.4L161.0 412.5L167.2 415.1L161.9 419.0L161.6 423.4L153.9 426.0L150.7 417.6L146.8 417.1L135.3 418.5L129.4 406.9L124.7 405.1L118.7 383.6L116.1 377.7L114.8 367.1Z","lon":73.704,"lat":16.115},{"n":"Thane","d":"M123.1 162.0L131.1 170.9L131.5 173.7L137.0 177.4L135.7 180.6L141.0 183.7L131.9 195.4L126.1 197.1L125.6 200.2L115.1 200.1L108.9 204.6L104.3 201.5L96.5 202.2L96.4 207.3L91.0 209.3L92.5 198.6L87.9 192.6L80.6 191.5L81.4 189.0L87.5 190.0L91.1 182.8L97.1 177.8L106.5 172.5L111.0 164.0L123.1 162.0Z","lon":73.338,"lat":19.345},{"n":"Palghar","d":"M106.5 136.6L108.8 136.5L112.4 140.7L118.4 143.1L121.1 159.4L123.1 162.0L111.0 164.0L106.5 172.5L97.1 177.8L91.1 182.8L87.5 190.0L81.4 189.0L76.6 173.9L76.4 167.0L72.7 154.8L73.2 148.6L77.4 146.1L75.9 139.6L86.0 129.8L91.3 130.9L91.5 136.1L102.0 138.8L106.5 136.6Z","lon":73.076,"lat":19.745},{"n":"Nandurbar","d":"M145.2 80.2L142.7 79.6L142.3 78.2L138.4 75.1L134.2 70.2L143.2 69.0L143.6 62.8L150.9 60.9L151.9 54.8L157.2 51.5L167.2 50.4L173.9 48.1L171.1 44.1L164.4 43.6L153.3 46.6L144.4 46.7L143.1 38.8L147.2 34.3L143.7 31.3L143.3 26.2L150.7 24.1L163.3 19.1L171.5 20.2L180.7 14.0L181.9 18.4L186.3 21.6L185.1 33.5L189.8 37.5L201.5 40.6L200.1 49.4L196.2 53.8L184.9 53.4L183.7 60.3L175.0 65.4L169.4 64.2L161.7 66.4L151.3 74.8L151.3 78.1L145.2 80.2Z","lon":74.535,"lat":21.509},{"n":"Amravati","d":"M316.2 62.1L313.7 58.8L323.5 50.4L323.4 44.3L327.9 40.7L330.8 41.8L336.6 35.7L337.1 36.6L340.4 34.4L349.4 35.9L353.7 31.5L365.8 30.7L369.7 34.9L371.6 46.3L364.3 44.6L366.3 56.1L370.8 54.7L385.4 53.9L390.4 55.5L399.2 53.1L408.1 48.1L411.0 44.7L418.3 42.3L422.9 43.5L424.6 54.2L419.6 54.9L412.7 58.9L402.2 57.3L400.6 63.8L406.2 71.2L406.1 83.1L413.1 87.4L416.4 97.0L414.1 99.9L405.3 102.8L399.7 101.6L395.8 106.6L384.0 109.7L376.2 108.1L376.6 103.3L373.8 98.2L373.8 93.0L368.8 89.8L354.1 90.0L344.5 88.9L347.4 75.5L346.8 64.6L336.6 67.6L323.5 67.7L319.9 61.6L316.2 62.1Z","lon":77.647,"lat":21.166},{"n":"Dhule","d":"M228.0 53.7L222.5 58.1L223.2 62.3L217.4 67.8L213.0 67.7L208.8 70.6L206.5 76.3L209.7 78.2L209.9 84.8L212.9 86.4L214.3 96.9L211.1 102.2L203.8 103.7L193.9 99.8L194.8 94.6L187.1 90.6L180.9 92.8L177.6 90.4L164.0 89.0L155.6 90.8L150.9 90.4L145.2 80.3L151.3 78.1L151.3 74.8L161.7 66.4L169.4 64.2L175.0 65.4L183.7 60.3L184.9 53.4L196.2 53.8L200.1 49.4L201.5 40.6L206.8 39.4L218.3 43.7L221.7 50.4L228.0 53.7Z","lon":74.436,"lat":21.116},{"n":"Nagpur","d":"M490.9 45.4L487.1 48.6L487.1 52.6L493.2 62.4L491.7 69.2L488.2 71.3L494.6 75.5L498.0 82.4L490.4 94.6L489.7 98.4L484.7 101.9L479.7 102.4L477.6 106.7L471.6 106.9L466.9 100.7L461.3 96.9L454.7 95.0L447.7 87.0L442.0 83.5L441.6 79.8L437.0 78.0L433.9 73.1L424.5 64.9L417.5 64.1L412.7 58.9L419.6 54.9L424.6 54.2L423.8 48.2L428.5 46.2L433.0 48.9L452.1 48.0L453.1 42.2L456.6 40.5L462.9 41.3L471.8 38.5L472.4 34.0L482.0 36.9L488.3 36.9L489.2 41.9L490.9 45.4Z","lon":79.034,"lat":21.155},{"n":"Aurangabad","d":"M211.2 126.9L214.8 122.7L222.8 121.8L221.6 117.9L224.8 113.7L228.9 112.6L230.8 107.4L238.8 107.3L239.2 110.9L247.2 108.7L247.7 105.4L261.0 105.0L265.3 108.7L271.8 107.4L276.3 102.8L278.1 108.7L274.5 110.2L268.7 108.3L266.1 114.9L261.6 115.3L254.3 132.4L251.1 143.9L254.3 143.9L254.9 150.2L253.1 159.1L253.6 165.6L251.5 170.0L254.9 172.0L252.0 183.8L244.1 181.1L237.4 183.0L235.2 176.1L230.7 175.0L224.5 170.7L208.1 166.4L206.0 167.0L198.0 158.5L190.4 158.4L199.1 139.1L197.8 135.7L204.1 128.3L208.9 132.8L211.2 126.9Z","lon":75.16,"lat":20.044},{"n":"Raigad","d":"M125.6 200.2L126.0 206.5L121.6 210.8L119.8 216.6L116.1 221.6L115.2 226.4L117.3 230.7L113.3 236.9L118.5 240.6L117.9 247.0L119.2 253.2L126.3 257.1L126.6 259.4L133.3 261.6L129.7 265.8L133.6 270.8L128.4 280.7L124.4 282.3L116.3 277.5L111.1 268.1L104.2 268.9L100.6 274.0L96.4 273.9L92.0 264.7L91.8 257.1L95.4 255.7L88.5 250.0L87.3 243.0L89.7 238.0L84.9 227.8L85.7 221.4L83.7 217.2L88.3 211.8L87.3 209.7L91.0 209.3L96.4 207.3L96.5 202.2L104.3 201.5L108.9 204.6L115.1 200.1L125.6 200.2Z","lon":73.155,"lat":18.481},{"n":"Mumbai Suburban","d":"M507.2 171.3L503.4 169.4L486.8 176.4L480.4 171.5L473.6 170.5L469.7 179.0L464.1 174.3L454.3 173.2L455.5 166.4L449.7 164.3L448.6 159.6L432.4 156.0L423.7 156.2L420.6 152.0L416.0 150.0L419.6 158.4L418.3 162.7L414.2 164.1L416.0 169.6L416.2 177.6L410.3 181.0L408.1 193.2L400.0 191.1L394.0 186.5L389.1 189.0L388.9 196.9L385.1 203.8L387.9 214.4L394.3 218.5L387.7 221.0L384.6 228.9L381.0 229.9L381.6 237.0L372.9 237.4L372.2 244.0L368.6 248.8L370.1 253.9L364.9 255.9L361.5 253.3L361.8 247.5L355.9 244.3L352.8 245.5L351.7 248.9L340.6 263.0L333.7 260.6L331.9 265.1L333.8 270.1L330.9 272.1L331.8 278.1L323.0 280.6L320.9 279.2L324.0 283.8L319.3 286.8L317.6 293.1L315.8 290.8L307.7 288.1L305.7 294.5L302.0 295.6L296.1 298.6L296.0 306.7L298.5 308.9L299.2 316.7L289.9 313.4L280.5 315.3L271.8 316.1L269.5 311.1L264.6 313.0L253.6 306.3L250.0 312.3L251.9 317.3L254.9 319.3L253.2 325.8L256.1 329.5L255.6 338.2L247.3 338.8L243.4 337.6L235.9 339.7L232.2 339.7L231.3 345.7L226.2 346.9L220.6 340.0L209.2 345.7L210.3 351.4L206.1 351.4L196.7 355.1L192.7 363.6L189.1 365.5L187.5 360.3L173.6 365.5L174.6 371.9L173.7 380.1L177.1 384.3L183.6 385.1L183.6 391.6L177.0 396.0L182.6 398.6L177.9 407.2L175.4 416.2L168.9 417.4L167.2 415.1L161.9 419.0L161.6 423.4L153.9 426.0L150.7 417.6L146.8 417.1L135.3 418.5L129.4 406.9L124.7 405.1L118.7 383.6L116.1 377.7L114.8 367.1L115.0 361.6L112.2 354.2L113.0 349.4L110.5 343.8L111.7 337.8L111.2 329.5L107.2 319.8L108.5 316.2L104.8 312.2L104.4 299.5L96.4 273.9L92.0 264.7L91.8 257.1L95.4 255.7L88.5 250.0L87.3 243.0L89.7 238.0L84.9 227.8L85.7 221.4L83.7 217.2L81.7 214.6L83.9 205.4L80.7 200.2L80.6 191.5L81.4 189.0L76.6 173.9L76.4 167.0L72.7 154.8L73.2 148.6L77.4 146.1L75.9 139.6L86.0 129.8L91.3 130.9L91.5 136.1L102.0 138.8L106.5 136.6L108.8 136.5L111.9 130.8L118.9 131.2L118.2 119.5L122.1 112.5L122.4 106.8L118.4 104.3L122.5 98.1L131.0 104.2L133.3 108.1L138.9 108.1L144.6 104.4L146.8 97.5L149.4 97.8L150.9 90.4L147.6 84.4L145.2 80.2L142.7 79.6L142.3 78.2L138.4 75.1L134.2 70.2L143.2 69.0L143.6 62.8L150.9 60.9L151.9 54.8L157.2 51.5L167.2 50.4L173.9 48.1L171.1 44.1L164.4 43.6L153.3 46.6L144.4 46.7L143.1 38.8L147.2 34.3L143.7 31.3L143.3 26.2L150.7 24.1L163.3 19.1L171.5 20.2L180.7 14.0L181.9 18.4L186.3 21.6L185.1 33.5L189.8 37.5L201.5 40.6L206.8 39.4L218.3 43.7L221.7 50.4L228.0 53.7L238.4 55.7L252.2 55.1L275.1 56.4L281.7 56.3L285.6 63.8L286.1 75.1L299.2 75.2L304.9 70.7L305.7 67.8L313.8 68.3L316.2 62.1L313.7 58.8L323.5 50.4L323.4 44.3L327.9 40.7L330.8 41.8L336.6 35.7L337.1 36.6L340.4 34.4L349.4 35.9L353.7 31.5L365.8 30.7L369.7 34.9L371.6 46.3L364.3 44.6L366.3 56.1L370.8 54.7L385.4 53.9L390.4 55.5L399.2 53.1L408.1 48.1L411.0 44.7L418.3 42.3L422.9 43.5L423.8 48.2L428.5 46.2L433.0 48.9L452.1 48.0L453.1 42.2L456.6 40.5L462.9 41.3L471.8 38.5L472.4 34.0L482.0 36.9L488.3 36.9L489.2 41.9L490.9 45.4L503.1 41.4L514.0 46.5L523.0 44.5L526.3 40.9L535.2 40.5L541.7 46.5L544.6 51.9L551.0 54.8L556.7 59.5L559.1 58.7L556.2 65.6L547.1 68.9L545.6 73.9L547.1 84.7L552.2 84.3L554.2 101.1L550.6 107.1L556.4 106.7L554.8 119.1L557.0 123.0L543.0 128.6L545.2 135.6L549.6 135.1L552.1 137.9L551.1 148.2L547.4 155.5L552.2 156.0L553.2 159.8L559.8 163.4L562.4 169.0L573.3 175.1L570.7 185.1L564.6 190.0L556.1 188.6L554.0 183.0L548.3 186.9L542.9 196.5L539.1 199.2L539.0 204.0L535.4 212.2L540.2 218.3L535.6 223.6L535.7 226.5L526.1 229.0L520.1 223.2L513.7 219.7L516.6 217.1L515.3 206.3L510.3 202.0L514.6 198.3L517.6 182.9L515.5 178.3L510.7 175.7L507.2 171.3Z","lon":75.365,"lat":18.815}],"pts":[[75.505,20.889,1,0.38],[75.538,20.718,1,0.38],[75.57,20.931,1,0.38],[75.505,20.834,1,0.38],[75.376,20.901,1,0.38],[75.533,20.871,1,0.38],[75.404,20.88,1,0.38],[75.599,20.831,1,0.38],[75.383,20.777,1,0.38],[75.443,20.845,1,0.38],[75.625,20.772,1,0.38],[75.481,20.857,1,0.38],[75.398,20.807,1,0.38],[75.39,20.844,2,0.38],[75.342,20.953,2,0.38],[75.336,20.998,2,0.38],[75.452,20.747,2,0.38],[75.273,20.753,2,0.38],[74.944,21.154,6,0.38],[74.988,21.193,6,0.38],[75.072,21.102,6,0.38],[77.282,20.81,3,0.26],[77.265,20.828,3,0.26],[77.167,20.664,3,0.26],[77.152,20.75,3,0.26],[77.277,20.797,3,0.26],[77.331,20.831,3,0.26],[77.224,20.681,3,0.26],[77.185,20.735,3,0.26],[77.135,20.807,3,0.26],[76.811,20.723,6,0.26],[76.869,20.701,6,0.26],[76.867,20.717,6,0.26],[77.029,20.437,6,0.26],[76.895,20.461,6,0.26],[74.199,20.274,6,0.2],[74.174,20.187,6,0.2],[74.078,20.233,6,0.2],[74.199,20.239,6,0.2],[74.188,20.216,6,0.2],[74.085,20.165,6,0.2],[74.131,20.205,6,0.2],[74.008,20.282,6,0.2],[74.151,20.427,6,0.2],[74.199,20.288,6,0.2],[73.93,20.311,6,0.2],[73.999,20.293,6,0.2],[74.009,20.202,6,0.2],[74.076,20.228,6,0.2],[74.072,20.279,6,0.2],[74.351,20.163,6,0.2],[74.234,20.306,6,0.2],[74.06,20.219,6,0.2],[74.09,20.216,6,0.2],[74.039,20.191,6,0.2],[74.033,20.236,6,0.2],[74.131,20.33,6,0.2],[74.146,20.277,6,0.2],[74.08,20.251,6,0.2],[74.185,20.226,6,0.2],[74.12,20.187,6,0.2],[74.18,20.389,6,0.2],[74.072,20.334,6,0.2],[74.186,20.108,6,0.2],[74.117,20.169,6,0.2],[74.113,20.099,6,0.2],[74.322,20.329,6,0.2],[74.11,20.148,6,0.2],[74.058,20.308,6,0.2],[74.322,20.202,6,0.2],[74.032,20.246,6,0.2],[74.064,20.296,6,0.2],[73.695,20.145,3,0.2],[73.765,20.223,3,0.2],[73.649,20.125,3,0.2],[73.678,20.113,3,0.2],[73.638,20.064,3,0.2],[73.891,20.241,3,0.2],[73.612,20.149,3,0.2],[73.743,20.173,3,0.2],[73.485,20.283,3,0.2],[73.69,20.143,3,0.2],[73.713,20.161,3,0.2],[73.649,19.98,3,0.2],[73.664,20.157,3,0.2],[73.6,19.775,3,0.2],[73.637,19.61,3,0.2],[73.624,19.674,3,0.2],[73.727,19.664,3,0.2],[73.658,19.918,3,0.2],[73.631,19.817,3,0.2],[73.518,19.7,3,0.2],[73.761,19.773,3,0.2],[73.685,19.718,3,0.2],[80.09,19.697,2,0.9],[80.194,19.783,2,0.9],[80.161,19.917,2,0.9],[80.149,19.716,2,0.9],[80.162,19.833,2,0.9],[80.243,19.727,2,0.9],[80.189,19.699,2,0.9],[80.312,19.74,2,0.9],[80.265,19.661,2,0.9],[80.104,19.744,2,0.9],[80.236,19.676,2,0.9],[80.471,20.015,4,0.9],[80.328,19.989,4,0.9],[80.305,20.021,4,0.9],[80.416,19.924,4,0.9],[80.187,19.825,3,0.9],[80.078,19.958,3,0.9],[77.278,20.367,1,0.78],[77.128,20.297,1,0.78],[77.276,20.316,1,0.78],[77.132,20.233,1,0.78],[77.232,20.377,1,0.78],[77.316,20.414,1,0.78],[77.162,20.141,1,0.78],[77.298,20.421,1,0.78],[77.288,20.345,1,0.78],[77.119,20.359,1,0.78],[77.202,20.417,1,0.78],[76.948,20.069,4,0.78],[77.097,20.081,4,0.78],[77.024,20.063,4,0.78],[77.003,20.079,4,0.78],[77.39,20.424,2,0.78],[77.064,20.393,2,0.78],[79.503,20.112,2,0.48],[79.356,20.134,2,0.48],[79.767,20.067,2,0.48],[79.62,20.102,2,0.48],[79.373,20.048,2,0.48],[79.442,19.986,2,0.48],[79.566,19.954,2,0.48],[79.608,20.126,2,0.48],[79.421,20.157,2,0.48],[79.441,20.026,2,0.48],[79.519,19.997,2,0.48],[79.669,20.127,2,0.48],[79.412,20.098,2,0.48],[79.523,20.062,2,0.48],[79.429,19.975,2,0.48],[79.526,20.15,2,0.48],[79.366,20.038,2,0.48],[79.362,20.211,0,0.48],[79.234,19.895,0,0.48],[79.203,19.904,0,0.48],[79.193,20.111,0,0.48],[79.231,20.042,0,0.48],[79.15,20.055,0,0.48],[79.233,20.187,5,0.48],[79.039,20.166,5,0.48],[79.109,20.147,5,0.48],[79.247,20.37,5,0.48],[78.234,20.061,0,0.65],[78.402,19.875,0,0.65],[78.228,20.132,0,0.65],[78.439,20.144,0,0.65],[78.359,20.09,0,0.65],[78.389,19.93,0,0.65],[78.419,20.072,0,0.65],[78.382,19.967,0,0.65],[78.327,19.961,0,0.65],[78.426,20.034,0,0.65],[78.275,20.124,0,0.65],[78.185,20.216,0,0.65],[78.308,20.121,0,0.65],[78.304,20.072,0,0.65],[78.249,19.966,0,0.65],[78.428,20.128,0,0.65],[78.881,19.876,5,0.65],[78.822,19.884,5,0.65],[78.895,19.853,5,0.65],[78.672,20.078,5,0.65],[78.795,19.817,5,0.65],[77.642,19.91,2,0.65],[77.62,19.849,2,0.65],[77.767,19.909,2,0.65],[74.86,19.107,0,0.36],[74.841,19.181,0,0.36],[74.733,19.352,0,0.36],[74.854,19.286,0,0.36],[74.919,19.149,0,0.36],[74.726,19.078,0,0.36],[74.857,19.286,0,0.36],[74.827,19.178,0,0.36],[74.82,19.049,0,0.36],[74.914,19.099,0,0.36],[74.869,19.076,0,0.36],[74.783,19.212,0,0.36],[74.92,19.287,0,0.36],[74.651,19.777,4,0.36],[74.557,19.688,4,0.36],[74.503,19.761,4,0.36],[74.493,19.867,4,0.36],[74.592,18.904,1,0.36],[74.684,18.935,1,0.36],[74.763,19.107,1,0.36],[77.59,18.916,3,0.36],[77.324,19.094,3,0.36],[77.463,19.221,3,0.36],[77.48,19.189,3,0.36],[77.675,19.187,3,0.36],[77.712,19.174,3,0.36],[77.587,19.051,3,0.36],[77.623,19.083,3,0.36],[77.457,19.134,3,0.36],[77.39,19.301,3,0.36],[77.524,19.099,3,0.36],[77.369,19.134,3,0.36],[77.475,19.025,3,0.36],[78.208,19.452,0,0.36],[78.211,19.439,0,0.36],[78.128,19.504,0,0.36],[78.078,19.383,0,0.36],[77.56,18.873,1,0.36],[77.507,19.068,1,0.36],[77.449,18.815,1,0.36],[73.867,18.749,1,0.3],[73.924,18.644,1,0.3],[73.996,18.618,1,0.3],[73.868,18.562,1,0.3],[74.03,18.798,1,0.3],[74.012,18.671,1,0.3],[73.841,18.611,1,0.3],[73.884,18.522,1,0.3],[74.068,18.717,1,0.3],[73.948,18.61,1,0.3],[73.836,18.58,1,0.3],[73.931,18.827,1,0.3],[73.845,18.758,1,0.3],[73.984,18.631,1,0.3],[74.007,18.571,1,0.3],[73.949,18.803,1,0.3],[73.9,18.628,1,0.3],[74.042,18.691,1,0.3],[73.936,18.642,1,0.3],[73.987,18.693,1,0.3],[73.942,18.736,1,0.3],[74.064,18.796,1,0.3],[73.842,18.688,1,0.3],[74.013,18.514,1,0.3],[73.846,18.802,1,0.3],[73.983,18.754,1,0.3],[73.843,18.71,1,0.3],[73.91,18.553,1,0.3],[73.961,18.721,1,0.3],[73.967,18.672,1,0.3],[73.827,18.653,1,0.3],[73.888,18.609,1,0.3],[73.913,18.674,1,0.3],[73.887,18.613,1,0.3],[73.882,18.89,1,0.3],[73.95,18.637,1,0.3],[73.848,18.635,1,0.3],[73.871,18.7,1,0.3],[73.618,18.675,1,0.3],[73.926,18.508,1,0.3],[73.912,18.606,1,0.3],[73.875,18.562,1,0.3],[73.994,18.707,1,0.3],[73.864,18.682,1,0.3],[74.005,18.607,1,0.3],[73.825,18.626,1,0.3],[73.777,18.573,1,0.3],[73.991,18.556,1,0.3],[74.048,18.695,1,0.3],[74.106,18.666,1,0.3],[74.081,18.683,1,0.3],[73.945,18.705,1,0.3],[73.934,18.551,1,0.3],[73.98,18.611,1,0.3],[73.974,18.548,1,0.3],[73.891,18.593,1,0.3],[74.112,18.621,1,0.3],[74.004,18.833,1,0.3],[74.074,18.486,1,0.3],[73.931,18.619,1,0.3],[74.035,18.509,1,0.3],[73.903,18.74,1,0.3],[73.84,18.762,1,0.3],[73.853,18.825,1,0.3],[73.925,18.653,1,0.3],[73.929,18.536,1,0.3],[73.901,18.591,1,0.3],[73.93,18.587,1,0.3],[73.854,18.48,1,0.3],[73.952,18.75,1,0.3],[73.95,18.87,1,0.3],[74.078,18.679,1,0.3],[73.828,18.568,1,0.3],[73.813,18.814,1,0.3],[73.877,18.723,1,0.3],[74.278,18.389,5,0.3],[74.118,18.247,5,0.3],[74.089,18.236,5,0.3],[74.167,18.172,5,0.3],[74.056,18.293,5,0.3],[74.031,18.3,5,0.3],[74.122,18.175,5,0.3],[74.138,18.349,5,0.3],[74.128,18.135,5,0.3],[74.18,18.333,5,0.3],[74.148,18.257,5,0.3],[74.164,18.38,5,0.3],[74.03,18.237,5,0.3],[74.179,18.353,5,0.3],[74.099,18.366,5,0.3],[74.053,18.353,5,0.3],[74.294,18.382,5,0.3],[74.143,18.303,5,0.3],[74.149,18.222,5,0.3],[74.113,18.274,5,0.3],[74.26,18.297,5,0.3],[74.301,18.106,5,0.3],[74.129,18.206,5,0.3],[74.246,18.287,5,0.3],[74.318,18.217,5,0.3],[74.037,18.193,5,0.3],[74.108,18.255,5,0.3],[74.11,18.204,5,0.3],[73.535,18.33,0,0.3],[73.703,18.327,0,0.3],[73.627,18.412,0,0.3],[73.584,18.362,0,0.3],[73.649,18.325,0,0.3],[73.678,18.357,0,0.3],[73.671,18.395,0,0.3],[73.644,18.288,0,0.3],[73.759,18.274,0,0.3],[73.634,18.295,0,0.3],[73.646,18.372,0,0.3],[73.481,18.327,0,0.3],[73.529,18.304,0,0.3],[73.569,18.246,0,0.3],[73.584,18.317,0,0.3],[73.626,18.32,0,0.3],[73.55,18.503,0,0.3],[73.648,18.182,0,0.3],[75.795,19.009,0,0.62],[75.631,18.975,0,0.62],[75.646,18.854,0,0.62],[75.486,18.906,0,0.62],[75.758,19.044,0,0.62],[75.832,19.045,0,0.62],[75.598,18.929,0,0.62],[75.824,18.797,0,0.62],[75.72,18.879,0,0.62],[75.771,19.014,0,0.62],[75.682,18.716,0,0.62],[75.787,18.97,0,0.62],[75.677,19.073,0,0.62],[75.685,18.971,0,0.62],[75.725,18.842,0,0.62],[75.713,19.122,0,0.62],[75.717,19.092,0,0.62],[75.126,18.94,4,0.62],[75.013,19.0,4,0.62],[74.978,18.971,4,0.62],[75.084,18.926,4,0.62],[75.058,19.026,4,0.62],[74.974,19.087,4,0.62],[76.465,18.827,2,0.62],[76.503,18.824,2,0.62],[76.594,18.861,2,0.62],[76.643,18.767,2,0.62],[76.858,18.355,0,0.43],[76.706,18.471,0,0.43],[76.921,18.257,0,0.43],[76.73,18.586,0,0.43],[76.814,18.478,0,0.43],[76.878,18.338,0,0.43],[76.587,18.442,0,0.43],[76.728,18.234,0,0.43],[76.777,18.454,0,0.43],[76.805,18.326,0,0.43],[76.833,18.176,0,0.43],[76.838,18.303,0,0.43],[76.731,18.29,0,0.43],[76.906,18.332,0,0.43],[76.836,18.353,0,0.43],[76.657,18.256,6,0.43],[76.603,18.451,6,0.43],[76.829,18.321,6,0.43],[76.549,18.505,6,0.43],[76.656,18.484,6,0.43],[76.699,18.499,6,0.43],[76.822,18.329,6,0.43],[76.678,18.384,6,0.43],[75.371,17.891,0,0.34],[75.203,17.945,0,0.34],[75.273,17.971,0,0.34],[75.229,17.806,0,0.34],[75.284,17.91,0,0.34],[75.288,17.887,0,0.34],[75.198,17.903,0,0.34],[75.42,17.77,0,0.34],[75.209,17.851,0,0.34],[75.368,17.992,0,0.34],[75.356,17.728,0,0.34],[75.963,18.085,5,0.34],[75.919,18.0,5,0.34],[75.902,18.172,5,0.34],[75.834,18.001,5,0.34],[75.281,17.962,2,0.34],[75.387,18.023,2,0.34],[74.259,16.583,4,0.26],[74.128,16.546,4,0.26],[74.122,16.487,4,0.26],[74.077,16.553,4,0.26],[74.111,16.323,4,0.26],[74.006,16.642,4,0.26],[74.254,16.564,4,0.26],[74.077,16.433,4,0.26],[74.067,16.583,4,0.26],[74.386,16.663,1,0.26],[74.457,16.808,1,0.26],[74.469,16.816,1,0.26],[74.089,16.493,1,0.26],[74.1,16.538,1,0.26],[73.207,19.318,5,0.18],[73.462,19.354,5,0.18],[73.144,19.251,5,0.18],[73.415,19.261,5,0.18],[73.189,19.289,5,0.18],[73.313,19.397,5,0.18],[73.42,19.304,5,0.18],[73.258,19.407,5,0.18],[73.508,19.321,5,0.18],[73.381,19.38,5,0.18],[73.482,19.298,5,0.18],[73.325,19.283,5,0.18],[73.252,19.437,5,0.18],[73.309,19.445,5,0.18],[73.302,19.255,5,0.18],[73.415,19.417,5,0.18],[73.521,19.318,5,0.18],[73.204,19.296,5,0.18],[73.418,19.345,5,0.18],[73.594,19.437,5,0.18],[73.289,19.244,5,0.18],[73.198,19.34,5,0.18],[73.357,19.317,5,0.18],[73.237,19.272,5,0.18],[73.283,19.268,5,0.18],[73.244,19.35,5,0.18],[73.389,19.449,5,0.18],[73.42,19.438,5,0.18],[73.214,19.306,5,0.18],[73.3,19.499,5,0.18],[73.241,19.29,5,0.18],[73.36,19.318,5,0.18],[73.359,19.419,5,0.18],[73.486,19.411,5,0.18],[73.294,19.407,5,0.18],[73.291,19.341,5,0.18],[73.276,19.277,5,0.18],[73.397,19.194,5,0.18],[73.298,19.14,5,0.18],[73.34,19.379,5,0.18],[73.315,19.401,5,0.18],[73.32,19.236,5,0.18],[73.202,19.346,5,0.18],[73.442,19.43,5,0.18],[73.303,19.238,5,0.18],[73.453,19.382,5,0.18],[73.49,19.456,5,0.18],[73.272,19.233,5,0.18],[73.233,19.307,5,0.18],[73.241,19.379,5,0.18],[73.357,19.369,5,0.18],[73.309,19.409,5,0.18],[73.234,19.201,0,0.18],[73.393,19.356,0,0.18],[73.266,19.303,0,0.18],[73.513,19.221,0,0.18],[73.275,19.286,0,0.18],[73.379,19.341,0,0.18],[73.287,19.279,0,0.18],[73.161,19.367,0,0.18],[73.375,19.262,0,0.18],[73.184,19.129,0,0.18],[73.3,19.163,0,0.18],[73.299,19.33,0,0.18],[73.418,19.319,0,0.18],[73.224,19.275,0,0.18],[73.397,19.299,0,0.18],[73.378,19.264,0,0.18],[73.378,19.279,0,0.18],[73.167,19.343,0,0.18],[73.238,19.124,0,0.18],[73.684,19.368,1,0.18],[73.695,19.308,1,0.18],[73.733,19.37,1,0.18],[73.634,19.263,1,0.18],[73.701,19.339,1,0.18],[73.669,19.366,1,0.18],[73.611,19.403,1,0.18],[73.56,19.383,1,0.18],[73.548,19.442,1,0.18],[73.742,19.369,1,0.18],[73.579,19.375,1,0.18],[73.602,19.406,1,0.18],[72.958,19.832,2,0.54],[73.043,19.878,2,0.54],[73.075,19.711,2,0.54],[73.037,19.675,2,0.54],[73.01,19.713,2,0.54],[73.048,19.746,2,0.54],[73.141,19.753,2,0.54],[73.112,19.65,2,0.54],[73.157,19.712,2,0.54],[73.086,19.698,2,0.54],[73.025,19.821,2,0.54],[73.07,19.528,2,0.54],[72.905,19.718,2,0.54],[73.017,19.743,2,0.54],[72.98,19.796,2,0.54],[73.146,19.696,2,0.54],[73.144,19.857,2,0.54],[73.059,19.581,2,0.54],[73.102,19.809,2,0.54],[72.985,19.561,0,0.54],[72.833,19.602,0,0.54],[72.839,19.693,0,0.54],[73.031,19.698,0,0.54],[72.901,19.723,0,0.54],[72.891,19.641,0,0.54],[72.803,19.809,0,0.54],[73.041,19.736,5,0.54],[73.067,19.655,5,0.54],[73.07,19.68,5,0.54],[73.06,19.492,5,0.54],[74.492,21.399,0,0.96],[74.406,21.539,0,0.96],[74.639,21.473,0,0.96],[74.51,21.571,0,0.96],[74.364,21.479,0,0.96],[74.472,21.402,0,0.96],[74.511,21.621,0,0.96],[74.607,21.533,0,0.96],[74.567,21.457,0,0.96],[74.621,21.508,0,0.96],[74.488,21.427,0,0.96],[74.109,21.251,6,0.96],[73.934,21.125,6,0.96],[74.167,21.297,6,0.96],[73.991,21.14,6,0.96],[74.237,21.795,1,0.96],[74.252,21.889,1,0.96],[77.667,20.968,2,0.41],[77.65,21.074,2,0.41],[77.726,21.166,2,0.41],[77.61,21.145,2,0.41],[77.677,21.087,2,0.41],[77.659,21.111,2,0.41],[77.374,21.134,2,0.41],[77.691,21.142,2,0.41],[77.65,21.37,2,0.41],[77.64,21.186,2,0.41],[77.627,21.179,2,0.41],[77.588,21.094,2,0.41],[77.576,21.069,2,0.41],[77.866,21.269,2,0.41],[77.112,21.383,3,0.41],[77.299,21.563,3,0.41],[77.143,21.48,3,0.41],[77.052,21.402,3,0.41],[77.257,21.452,3,0.41],[77.962,21.174,0,0.41],[78.085,21.12,0,0.41],[78.047,21.282,0,0.41],[74.439,20.951,0,0.48],[74.552,21.101,0,0.48],[74.48,20.966,0,0.48],[74.42,21.054,0,0.48],[74.405,21.02,0,0.48],[74.465,21.208,0,0.48],[74.493,21.165,0,0.48],[74.438,21.14,0,0.48],[74.53,21.283,0,0.48],[74.323,21.054,0,0.48],[74.496,21.117,0,0.48],[74.309,21.118,0,0.48],[74.318,21.089,0,0.48],[74.487,21.075,0,0.48],[74.478,21.282,0,0.48],[74.417,21.162,0,0.48],[74.593,21.011,0,0.48],[74.206,20.886,1,0.48],[74.261,21.098,1,0.48],[74.23,21.061,1,0.48],[74.154,21.063,1,0.48],[74.13,21.073,1,0.48],[74.209,20.995,1,0.48],[74.166,21.115,5,0.48],[74.241,20.982,5,0.48],[74.103,20.963,5,0.48],[73.989,21.027,5,0.48],[79.103,21.186,3,0.43],[78.965,21.116,3,0.43],[79.043,21.185,3,0.43],[79.03,21.129,3,0.43],[78.928,21.028,3,0.43],[79.091,21.318,3,0.43],[78.962,21.344,3,0.43],[79.18,21.117,3,0.43],[79.015,21.165,3,0.43],[79.024,21.101,3,0.43],[79.083,21.098,3,0.43],[79.013,21.177,3,0.43],[78.905,20.99,3,0.43],[79.181,21.294,3,0.43],[78.999,21.275,3,0.43],[79.064,21.201,3,0.43],[79.023,21.068,3,0.43],[79.003,21.241,3,0.43],[78.909,21.202,3,0.43],[78.94,21.175,3,0.43],[79.029,21.052,3,0.43],[79.007,21.36,3,0.43],[78.994,21.223,3,0.43],[79.064,21.263,3,0.43],[79.023,21.162,3,0.43],[78.958,21.158,3,0.43],[79.051,21.384,4,0.43],[78.945,21.312,4,0.43],[78.801,21.31,4,0.43],[78.867,21.302,4,0.43],[78.957,21.515,4,0.43],[78.795,21.312,4,0.43],[78.881,21.37,4,0.43],[78.918,21.381,4,0.43],[79.002,21.258,4,0.43],[79.385,20.72,0,0.43],[79.315,20.776,0,0.43],[79.298,20.819,0,0.43],[79.372,20.782,0,0.43],[79.396,20.732,0,0.43],[79.197,20.657,0,0.43],[75.186,20.042,1,0.46],[75.124,20.108,1,0.46],[75.233,19.943,1,0.46],[75.402,20.146,1,0.46],[75.201,20.272,1,0.46],[75.175,20.04,1,0.46],[75.222,20.084,1,0.46],[75.202,20.137,1,0.46],[75.058,20.005,1,0.46],[75.193,20.028,1,0.46],[75.173,20.159,1,0.46],[75.235,19.969,1,0.46],[75.218,20.229,1,0.46],[75.201,20.087,1,0.46],[75.09,20.082,1,0.46],[75.081,20.042,1,0.46],[74.978,19.803,4,0.46],[74.82,19.766,4,0.46],[74.982,19.818,4,0.46],[74.9,19.783,4,0.46],[74.978,19.902,4,0.46],[74.8,19.7,4,0.46],[74.87,19.692,4,0.46],[74.823,19.82,4,0.46],[73.082,18.569,1,0.24],[72.981,18.387,1,0.24],[73.179,18.55,1,0.24],[73.23,18.546,1,0.24],[73.122,18.447,1,0.24],[73.319,18.467,1,0.24],[73.179,18.452,1,0.24],[73.188,18.353,1,0.24],[73.331,18.351,6,0.24],[73.325,18.377,6,0.24],[73.236,18.422,6,0.24],[73.156,18.871,5,0.24],[73.145,18.86,5,0.24],[75.353,18.843,4,0.2],[75.325,18.823,4,0.2],[75.378,18.882,4,0.2],[75.334,18.835,4,0.2],[75.348,18.729,4,0.2],[75.269,18.849,4,0.2],[75.366,18.783,4,0.2],[75.381,18.776,4,0.2],[75.328,18.819,4,0.2],[75.443,18.898,4,0.2],[75.4,18.887,4,0.2],[75.364,18.694,4,0.2],[75.317,18.767,4,0.2],[75.336,18.745,4,0.2],[75.237,18.787,4,0.2],[75.438,18.802,4,0.2],[75.375,18.82,4,0.2],[75.424,18.766,4,0.2],[75.39,18.88,4,0.2],[75.383,18.879,4,0.2],[75.36,18.813,4,0.2],[75.435,18.721,4,0.2],[75.452,18.781,4,0.2],[75.369,18.818,4,0.2],[75.395,18.768,4,0.2],[75.365,18.839,4,0.2],[75.395,18.771,4,0.2],[75.349,18.825,4,0.2],[75.334,18.865,4,0.2],[75.32,18.82,4,0.2],[75.357,18.75,4,0.2],[75.342,18.882,4,0.2],[75.349,18.829,4,0.2],[75.321,18.75,4,0.2],[75.456,18.82,4,0.2],[75.39,18.856,4,0.2],[75.378,18.803,4,0.2],[75.306,18.794,4,0.2],[75.447,18.838,4,0.2],[75.349,18.744,4,0.2],[75.436,18.851,4,0.2],[75.429,18.784,4,0.2],[75.352,18.84,4,0.2],[75.288,18.709,4,0.2],[75.369,18.85,4,0.2],[75.313,18.823,4,0.2],[75.369,18.828,4,0.2],[75.423,18.751,4,0.2],[75.441,18.798,4,0.2],[75.43,18.813,4,0.2],[75.342,18.854,4,0.2],[75.311,18.764,4,0.2],[75.319,18.763,4,0.2],[75.416,18.724,4,0.2],[75.339,18.797,4,0.2],[75.383,18.73,4,0.2],[75.409,18.825,4,0.2],[75.309,18.883,4,0.2],[75.369,18.776,4,0.2],[75.365,18.802,4,0.2],[75.348,18.817,4,0.2],[75.37,18.767,4,0.2],[75.387,18.852,4,0.2],[75.353,18.743,4,0.2],[75.362,18.742,4,0.2],[75.379,18.797,4,0.2],[75.346,18.841,4,0.2],[75.356,18.786,4,0.2],[75.333,18.867,4,0.2],[75.287,18.769,4,0.2],[75.337,18.822,4,0.2],[75.39,18.818,4,0.2],[75.424,18.783,4,0.2],[75.339,18.861,4,0.2],[75.303,18.812,4,0.2],[75.328,18.765,4,0.2],[75.32,18.822,4,0.2],[75.401,18.82,4,0.2],[75.35,18.844,4,0.2],[75.36,18.837,4,0.2],[75.459,18.802,4,0.2],[75.452,18.821,4,0.2],[75.32,18.792,4,0.2],[75.366,18.876,4,0.2],[75.348,18.789,4,0.2],[75.401,18.88,4,0.2],[75.325,18.796,4,0.2],[75.28,18.722,4,0.2],[75.385,18.86,4,0.2],[75.376,18.808,4,0.2],[75.303,18.785,4,0.2],[74.273,19.601,5,0.2],[74.182,19.647,5,0.2],[74.352,19.645,5,0.2],[74.341,19.56,5,0.2],[74.417,19.571,5,0.2],[74.307,19.705,5,0.2],[74.362,19.578,5,0.2],[74.35,19.6,5,0.2],[74.398,19.603,5,0.2],[74.29,19.56,5,0.2],[74.287,19.655,5,0.2],[74.298,19.675,5,0.2],[74.344,19.547,5,0.2],[74.363,19.672,5,0.2],[74.26,19.636,5,0.2],[74.3,19.717,5,0.2],[74.278,19.555,5,0.2],[74.284,19.607,5,0.2],[74.34,19.68,5,0.2],[74.391,19.616,5,0.2],[74.282,19.617,5,0.2],[74.256,19.625,5,0.2],[74.406,19.58,5,0.2],[74.378,19.573,5,0.2],[74.223,19.598,5,0.2],[74.356,19.561,5,0.2],[74.415,19.636,5,0.2],[74.323,19.636,5,0.2],[74.319,19.563,5,0.2],[74.296,19.619,5,0.2],[74.361,19.614,5,0.2],[74.407,19.555,5,0.2],[74.32,19.619,5,0.2],[74.348,19.622,5,0.2],[73.321,16.756,5,0.2],[73.407,16.746,5,0.2],[73.322,16.74,5,0.2],[73.328,16.711,5,0.2],[73.399,16.697,5,0.2],[73.334,16.668,5,0.2],[73.318,16.783,5,0.2],[73.388,16.578,5,0.2],[73.408,16.587,5,0.2],[73.334,16.744,5,0.2],[73.333,16.738,5,0.2],[73.338,16.706,5,0.2],[73.328,16.733,5,0.2],[73.351,16.709,5,0.2],[73.358,16.736,5,0.2],[73.359,16.654,5,0.2],[73.421,16.716,5,0.2],[73.318,16.75,5,0.2],[73.339,16.762,5,0.2],[73.331,16.674,5,0.2],[73.335,16.695,5,0.2],[73.342,16.786,5,0.2]],"labels":{"india":[["Maharashtra",75.7,19.4,1],["Gujarat",71.6,22.7,0],["Rajasthan",73.8,26.6,0],["Madhya Pradesh",78.2,23.5,0],["Uttar Pradesh",80.6,27.0,0],["Karnataka",75.9,14.8,0],["Tamil Nadu",78.4,11.0,0],["Telangana",79.0,17.8,0],["Odisha",84.3,20.4,0],["Bihar",85.6,25.7,0],["Arabian Sea",66.5,16.5,2],["Bay of Bengal",88.5,15.5,2]],"mh":[["Mumbai",72.88,19.08,3],["Pune",73.86,18.52,3],["Nagpur",79.09,21.15,3],["Nashik",73.79,20.0,3],["Aurangabad",75.34,19.88,3],["Solapur",75.91,17.66,3],["Kolhapur",74.24,16.7,3],["Amravati",77.75,20.93,3],["Nanded",77.32,19.14,3],["Gujarat",72.6,21.9,0],["Madhya Pradesh",77.2,22.3,0],["Chhattisgarh",81.0,20.5,0],["Telangana",78.7,18.3,0],["Karnataka",75.6,15.8,0],["Arabian Sea",71.9,17.3,2]]},"cats":["Water","Roads","Health","Schools","Drainage","Lighting","Transport"]};
-const RM = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 const $ = s => document.querySelector(s);
-const esc = t => String(t).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
-
-/* ---------- data ---------- */
-const PRESETS = {
-  volume: { label:'Volume', w:{D:.70,N:.10,E:0,A:.10,U:.10} },
-  balanced:{ label:'Balanced', w:{D:.25,N:.30,E:.20,A:.15,U:.10} },
-  equity: { label:'Equity', w:{D:.10,N:.30,E:.40,A:.15,U:.05} }
-};
-const P = [
-  {id:'pune',cluster:12,short:'Road resurfacing',title:'Road resurfacing, Hadapsar ward',district:'Pune',place:'Hadapsar',sector:'Roads',people:612,langs:'Marathi, English',D:.95,N:.30,E:.10,A:.5,U:.4,I:.98,need:'road-condition gap',lang:'mr',orig:'हडपसर रस्त्यावर मोठे खड्डे आहेत, रोज अपघात होतात.',en:'Big potholes on the Hadapsar road; accidents every day.'},
-  {id:'mum',cluster:7,short:'Storm-water drainage',title:'Storm-water drainage near Kurla',district:'Mumbai Suburban',place:'Kurla',sector:'Drainage',people:740,langs:'Hinglish, Marathi',D:1,N:.35,E:.05,A:0,U:.6,I:.95,need:'drainage gap',lang:'en',orig:'Kurla station ke paas har baarish mein paani bhar jaata hai.',en:'Near Kurla station it floods every time it rains.'},
-  {id:'ndb',cluster:42,short:'Drinking-water supply',title:'Drinking-water supply, Akrani hamlets',district:'Nandurbar',place:'Akrani',sector:'Water',people:96,langs:'Marathi, Bhili',D:.35,N:.92,E:1,A:1,U:.8,I:1,need:'tap-water coverage gap',lang:'mr',orig:'आमच्या पाड्यावर तीन महिन्यांपासून पिण्याचे पाणी नाही.',en:'Our hamlet has had no drinking water for three months.'},
-  {id:'gad',cluster:51,short:'Health-centre access',title:'Primary health centre access, Bhamragad',district:'Gadchiroli',place:'Bhamragad',sector:'Health',people:58,langs:'Marathi, Gondi',D:.25,N:.88,E:.92,A:1,U:.9,I:1,need:'distance-to-PHC gap',lang:'mr',orig:'दवाखाना ३० किलोमीटर दूर आहे, पावसाळ्यात रस्ता बंद होतो.',en:'The clinic is 30 km away and the road closes in the monsoon.'},
-  {id:'thn',cluster:19,short:'Street lighting',title:'Street lighting, Ghodbunder Road',district:'Thane',place:'Ghodbunder',sector:'Lighting',people:420,langs:'Marathi, English',D:.85,N:.25,E:.10,A:.5,U:.3,I:1,need:'lighting gap',lang:'en',orig:'Please install street lights on Ghodbunder Road immediately.',en:'Street lights are missing along Ghodbunder Road.'},
-  {id:'ngp',cluster:33,short:'School toilets',title:'School toilets, Kamptee block',district:'Nagpur',place:'Kamptee',sector:'Schools',people:210,langs:'Hindi, Marathi',D:.60,N:.55,E:.30,A:.5,U:.4,I:1,need:'school sanitation gap',lang:'hi',orig:'हमारे स्कूल में लड़कियों के लिए अलग शौचालय नहीं है।',en:'Our school has no separate toilet for girls.'},
-  {id:'wsm',cluster:58,short:'All-weather rural road',title:'All-weather rural road, Malegaon',district:'Washim',place:'Malegaon',sector:'Roads',people:71,langs:'Marathi',D:.30,N:.80,E:.75,A:1,U:.5,I:1,need:'unconnected-habitation gap',lang:'mr',orig:'पावसाळ्यात गावाचा संपर्क पूर्ण तुटतो.',en:'In the monsoon our village is completely cut off.'},
-  {id:'ytl',cluster:44,short:'Water-tank repair',title:'Water-tank repair, Ralegaon',district:'Yavatmal',place:'Ralegaon',sector:'Water',people:130,langs:'Marathi, Hindi',D:.40,N:.70,E:.60,A:.5,U:.6,I:.97,need:'water-supply gap',lang:'mr',orig:'टाकी फुटली आहे, दोन दिवसांतून एकदा पाणी येते.',en:'The tank is cracked; water comes once in two days.'},
-  {id:'bed',cluster:47,short:'Handpump restoration',title:'Handpump restoration, Ashti',district:'Beed',place:'Ashti',sector:'Water',people:144,langs:'Marathi',D:.45,N:.68,E:.55,A:1,U:.7,I:1,need:'drinking-water gap',lang:'mr',orig:'गावातील तीनही हातपंप बंद आहेत.',en:'All three handpumps in the village are broken.'},
-  {id:'nsk',cluster:24,short:'Bus shelters',title:'Bus shelters, Nashik Road',district:'Nashik',place:'Nashik Road',sector:'Transport',people:300,langs:'Marathi, Hinglish',D:.70,N:.20,E:.20,A:.5,U:.1,I:1,need:'transit-amenity gap',lang:'en',orig:'Bus stop pe shade nahi hai, dhoop mein khade rehna padta hai.',en:'No shade at the bus stop; we have to stand in the sun.'}
-];
-const byId = {}, byDist = {};
-function indexP(){
-  [byId, byDist].forEach(o => Object.keys(o).forEach(k => delete o[k]));
-  P.forEach(p => { byId[p.id] = p; if (!byDist[p.district]) byDist[p.district] = p; });
-}
-indexP();
-const EXTRA = {Ahmednagar:'Water',Aurangabad:'Roads',Solapur:'Water',Kolhapur:'Drainage',Jalgaon:'Roads',Amravati:'Health',Chandrapur:'Health',Latur:'Water',Nanded:'Schools',Raigad:'Roads',Palghar:'Health',Akola:'Schools',Dhule:'Water'};
-const CATDOT = {Water:'#4F8FCB',Roads:'#857B6D',Health:'#4E9E73',Schools:'#8A6BC4',Drainage:'#3E9A94',Lighting:'#C9A335',Transport:'#C4745A',
-  Sanitation:'#3E9A94',Electricity:'#C9A335',Waste:'#C4745A',Other:'#9A95A8'};
-const STATUSES = ['New','Forwarded to district','In progress','Completed'];
-const TOP = 10;
-
-const S = { preset:'balanced', layer:'demand', selected:'ndb', level:'state', dist:null, cat:'all',
-  status:{}, approved:{},
-  k:{req:1284, cit:1037, res:0}, spam:false, filed:0, unread:0, lastId:null, lastCluster:null };
-
-/* ---------- API (live mode when the page is served by, or can reach, the FastAPI backend) ---------- */
-const API = location.protocol.startsWith('http') ? '' : 'http://127.0.0.1:8000';
-let LIVE = false;
-const SECTOR = {
-  water:['Water','Drinking-water supply','tap-water coverage gap'],
-  sanitation:['Sanitation','Sanitation and drainage','sanitation gap'],
-  roads:['Roads','Road repair and connectivity','road-connectivity gap'],
-  health:['Health','Health-centre services','health-services gap'],
-  education:['Schools','School facilities','school-infrastructure gap'],
-  electricity:['Electricity','Electricity and street lights','household-electricity gap'],
-  waste:['Waste','Waste collection','waste-management gap'],
-  other:['Other','Other civic need','general need']
-};
-const LANGNAME = {mr:'Marathi', hi:'Hindi', en:'English', 'hi-Latn':'Hinglish'};
-const mapName = n => n === 'Mumbai City' ? 'Mumbai' : n;
-const W = w => ({D:w.demand, N:w.need, E:w.equity, A:w.alignment, U:w.urgency});
+const esc = t => String(t ?? '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 async function api(path, opts){
-  const r = await fetch(API + path, opts);
-  if (!r.ok) throw new Error(path + ' → ' + r.status);
+  const r = await fetch(path, opts);
+  if (!r.ok){ let msg = r.status + ''; try { msg = (await r.json()).detail || msg; } catch (e) {} const err = new Error(msg); err.status = r.status; throw err; }
   return r.json();
 }
-function senderId(){
-  let id = null;
-  try { id = localStorage.getItem('vv-sender'); } catch (e) {}
-  if (!id){ id = 'web-' + Math.random().toString(36).slice(2, 12); try { localStorage.setItem('vv-sender', id); } catch (e) {} }
-  return id;
-}
-function fromCluster(c, i){
-  const [label, short, need] = SECTOR[c.sector] || SECTOR.other, k = c.components, district = mapName(c.district);
-  return {id:c.cluster_id, cluster:i + 1, short, title:short + ', ' + district, district,
-    place:c.level === 'h3' ? 'Neighbourhood cluster' : 'District-wide', sector:label, people:c.n_requesters,
-    D:k.demand, N:k.need, E:k.equity, A:k.alignment, U:k.urgency, I:c.integrity.multiplier, I0:c.integrity.multiplier,
-    flags:c.integrity.flags, need, lang:'en', langs:null, orig:c.sample_summaries[0] || '',
-    en:'Redacted summary. Original text is never returned by the API.',
-    lon:c.centroid && c.centroid.lon, lat:c.centroid && c.centroid.lat,
-    xy:c.centroid ? prj(MAP.prM, c.centroid.lon, c.centroid.lat) : null};
-}
-/* Pull rankings, districts and counts from the backend and swap them in for the demo data. */
-async function loadLive(){
-  const [meta, ranked, all, dists, silent] = await Promise.all([
-    api('/meta'), api('/rankings?preset=balanced&limit=500&sensitivity=false'),
-    api('/rankings?preset=volume_only&limit=500&sensitivity=false'), api('/districts'), api('/districts/silent?k=3')]);
-  LIVE = true;
-  PRESETS.balanced.w = W(meta.presets.balanced); PRESETS.equity.w = W(meta.presets.equity_first);
-  P.length = 0; ranked.items.forEach((c, i) => P.push(fromCluster(c, i)));
-  const keepSel = byId[S.selected] && P.some(p => p.id === S.selected);
-  indexP(); dirty();
-  if (!keepSel && P.length) S.selected = P[0].id;
-
-  // heat points and per-district top issue come from every cluster, including emerging ones
-  const needOf = Object.fromEntries(dists.map(d => [d.admin_code, d.need]));
-  MAP.cats = Object.values(SECTOR).map(s => s[0]); MAP.pts = [];
-  const top = {}; Object.keys(EXTRA).forEach(k => delete EXTRA[k]);
-  all.items.forEach(c => {
-    if (!c.centroid) return;
-    const cat = MAP.cats.indexOf((SECTOR[c.sector] || SECTOR.other)[0]), n = Math.min(12, c.n_messages);
-    const spread = c.level === 'h3' ? .05 : .25, need = (needOf[c.admin_code] || {})[c.sector] ?? .5;
-    for (let i = 0; i < n; i++) MAP.pts.push([c.centroid.lon + (Math.random() - .5) * spread, c.centroid.lat + (Math.random() - .5) * spread, cat, need, 1]);
-    const d = mapName(c.district); top[d] = top[d] || {}; top[d][MAP.cats[cat]] = (top[d][MAP.cats[cat]] || 0) + c.n_requesters;
-  });
-  Object.entries(top).forEach(([d, t]) => EXTRA[d] = Object.entries(t).sort((a, b) => b[1] - a[1])[0][0]);
-  if (S.cat !== 'all' && !MAP.cats.includes(S.cat)) S.cat = 'all';
-
-  S.k.req = meta.summary.n_requests; S.k.res = meta.summary.by_status.resolved || 0;
-  S.k.cit = all.items.reduce((s, c) => s + c.n_requesters, 0);
-  const b = $('#dataBadge'), syn = meta.summary.n_synthetic, n = meta.summary.n_requests;
-  b.lastChild.textContent = syn === n ? 'Live API · synthetic data' : 'Live API · ' + syn.toLocaleString('en-IN') + ' of ' + n.toLocaleString('en-IN') + ' synthetic';
-  SILENT = silent.map(d => mapName(d.district));
-}
-let SILENT = ['Nandurbar', 'Gadchiroli', 'Washim'];
-async function clusterLangs(p){
-  if (!LIVE || p.langs) return;
-  p.langs = '…';
-  try {
-    const v = await api('/clusters/' + encodeURIComponent(p.id));
-    const ls = [...new Set(v.requests.map(r => LANGNAME[r.lang] || r.lang))].filter(l => l !== 'und');
-    p.langs = ls.join(', ') || 'unknown';
-  } catch (e) { p.langs = 'unknown'; }
-  if (S.selected === p.id) $('#aLang').textContent = 'Sample request, ' + p.langs;
-}
-
-/* ---------- helpers ---------- */
-function tween(el, to, dec = 0, dur = 700){
-  const from = el._v ?? 0; el._v = to;
-  if (RM || from === to){ el.textContent = fmtN(to, dec); return; }
-  const t0 = performance.now();
-  (function step(t){ const f = Math.min(1, (t - t0) / dur), e = 1 - Math.pow(1 - f, 3);
-    el.textContent = fmtN(from + (to - from) * e, dec); if (f < 1) requestAnimationFrame(step); })(t0);
-}
-function fmtN(v, dec){ return dec ? v.toFixed(dec) : Math.round(v).toLocaleString('en-IN'); }
 function toast(msg){
-  const t = document.createElement('div'); t.className = 'toast'; t.innerHTML = '<i></i><div>' + msg + '</div>';
-  $('#toasts').appendChild(t);
-  setTimeout(() => { t.classList.add('out'); setTimeout(() => t.remove(), 320); }, 3800);
+  const t = document.createElement('div'); t.className = 'toast'; t.innerHTML = '<i></i><div>' + esc(msg) + '</div>';
+  $('#toasts').appendChild(t); setTimeout(() => { t.classList.add('out'); setTimeout(() => t.remove(), 320); }, 3600);
 }
-function bump(el){ el.classList.remove('bump'); void el.offsetWidth; el.classList.add('bump'); }
-function segSet(seg, v){
-  const btns = [...seg.querySelectorAll('button')], th = seg.querySelector('.thumb');
-  btns.forEach(b => b.setAttribute('aria-pressed', b.dataset.v === v ? 'true' : 'false'));
-  const b = btns.find(x => x.dataset.v === v);
-  if (b){ th.style.left = b.offsetLeft + 'px'; th.style.width = b.offsetWidth + 'px'; }
-}
+const store = {
+  get(k, d){ try { return JSON.parse(localStorage.getItem(k)) ?? d; } catch (e) { return d; } },
+  set(k, v){ try { localStorage.setItem(k, JSON.stringify(v)); } catch (e) {} }
+};
 
-/* ---------- scoring ---------- */
-const raw = (p, w) => w.D*p.D + w.N*p.N + w.E*p.E + w.A*p.A + w.U*p.U;
-const score = (p, w) => Math.round(100 * raw(p, w) * p.I);
-let RV = 0; const rankCache = {};
-const dirty = () => { RV++; };
-function rankOf(key){
-  const hit = rankCache[key]; if (hit && hit.v === RV) return hit.r;
-  const w = PRESETS[key].w;
-  const l = P.map(p => ({p, s:score(p, w)})).sort((a, b) => b.s - a.s);
-  const m = {}; l.forEach((x, i) => m[x.p.id] = i + 1);
-  rankCache[key] = {v:RV, r:{list:l, map:m}}; return rankCache[key].r;
-}
+const SECTORS = [['water','Water'],['sanitation','Sanitation'],['roads','Roads'],['health','Health'],['education','Schools'],['electricity','Electricity'],['waste','Waste'],['other','Other']];
+const SECTOR_LABEL = Object.fromEntries(SECTORS);
+const CATDOT = {water:'#4F8FCB',sanitation:'#3E9A94',roads:'#857B6D',health:'#4E9E73',education:'#8A6BC4',electricity:'#C9A335',waste:'#C4745A',other:'#9A95A8'};
+const LANGNAME = {hi:'हिन्दी', mr:'मराठी', en:'English', 'hi-Latn':'Hinglish', pt:'Português', ru:'Русский', zh:'中文', af:'Afrikaans', zu:'isiZulu', xh:'isiXhosa'};
+const EXAMPLE = {
+  IN:'e.g. हमारे गाँव में 10 दिन से नल में पानी नहीं आ रहा है। / The road to our school is full of potholes.',
+  BR:'Ex.: Estamos sem água na torneira há 5 dias, na rua da escola municipal.',
+  RU:'Например: в нашем посёлке уже неделю нет воды, колонка сломана.',
+  CN:'例如：我们村已经停水五天了，村委会旁边的水管坏了。',
+  ZA:'e.g. The clinic near the taxi rank has had no medicine for two weeks.'
+};
+const STATUS_STEPS = [['received','Received'],['forwarded','Forwarded to district'],['in_progress','Work in progress'],['resolved','Resolved']];
 
-/* ---------- ranking with FLIP ---------- */
-const rows = {};
-function renderRanking(){
-  const w = PRESETS[S.preset].w, cur = rankOf(S.preset), vol = rankOf('volume');
-  const list = $('#rlist'), first = {};
-  Object.values(rows).forEach(el => first[el.dataset.id] = el.getBoundingClientRect().top);
-  const shown = cur.list.slice(0, TOP), keep = new Set(shown.map(x => x.p.id));
-  Object.keys(rows).forEach(id => { if (!keep.has(id)){ rows[id].remove(); delete rows[id]; } });
-  shown.forEach((x, i) => {
-    const p = x.p; let el = rows[p.id];
-    if (!el){
-      el = document.createElement('button'); el.type = 'button'; el.className = 'row'; el.dataset.id = p.id;
-      el.innerHTML = '<span class="rk"></span><span class="mid"><span class="t"></span><span class="d"></span></span><span class="sc"><b>0</b><small></small></span>';
-      el.addEventListener('click', () => select(p.id, true)); rows[p.id] = el;
-    }
-    const rk = el.querySelector('.rk'); rk.textContent = i + 1; rk.classList.toggle('top', i < 3);
-    el.querySelector('.t').textContent = p.short;
-    el.querySelector('.d').innerHTML = esc(p.district) + (p.I < .9 ? ' <em>· flagged</em>' : '');
-    tween(el.querySelector('.sc b'), x.s);
-    const d = vol.map[p.id] - (i + 1), sm = el.querySelector('.sc small');
-    sm.className = S.preset === 'volume' || !d ? '' : d > 0 ? 'up' : 'down';
-    sm.textContent = S.preset === 'volume' ? '' : d > 0 ? '↑ ' + d : d < 0 ? '↓ ' + (-d) : '·';
-    el.setAttribute('aria-pressed', p.id === S.selected ? 'true' : 'false');
-    el.setAttribute('aria-label', 'Rank ' + (i + 1) + ', ' + p.title + ', ' + p.district + ', score ' + x.s);
-    list.appendChild(el);
+const S = {packs:[], country:null, meta:{}, category:null, lat:null, lon:null, audio:null, mime:null, provider:'offline'};
+
+/* ---------- country (locked once chosen) and area (remembered as the default) ---------- */
+const ORDER = ['BR', 'RU', 'IN', 'CN', 'ZA'];  // B-R-I-C-S
+const LOCAL = {BR:'Brasil', RU:'Россия', IN:'भारत', CN:'中国', ZA:'iNingizimu Afrika · Suid-Afrika'};
+const countries = () => S.packs.filter(p => p.level === 'country').sort((a, b) => ORDER.indexOf(a.country) - ORDER.indexOf(b.country));
+const country = () => countries().find(c => c.country === S.country);
+const pilotFor = code => S.packs.find(p => p.parent && p.pack_id === code);
+async function meta(pack){ return S.meta[pack] ||= await api('/meta?pack=' + encodeURIComponent(pack)); }
+const unitOption = u => '<option value="' + esc(u.admin_code) + '">' + esc(u.name) + (u.name_local && u.name_local !== u.name ? ' · ' + esc(u.name_local) : '') + '</option>';
+const plainName = opt => opt ? opt.textContent.split(' · ')[0] : '';
+
+function showPicker(){
+  const box = $('#countryCards'); box.innerHTML = '';
+  countries().forEach(c => {
+    const pilot = S.packs.find(p => p.parent === c.pack_id);
+    const b = document.createElement('button'); b.type = 'button'; b.className = 'country';
+    b.innerHTML = '<b>' + esc(c.country_name) + '</b><span>' + esc(LOCAL[c.country] || '') + '</span><span>' +
+      c.languages.map(l => esc(LANGNAME[l] || l)).join(' · ') + '</span>' + (pilot ? '<em>District detail: ' + esc(pilot.region_name) + '</em>' : '');
+    b.addEventListener('click', () => lockCountry(c.country));
+    box.appendChild(b);
   });
-  if (!RM) Object.values(rows).forEach(el => {
-    const f = first[el.dataset.id]; if (f == null) return;
-    const dy = f - el.getBoundingClientRect().top; if (!dy) return;
-    el.style.transition = 'none'; el.style.transform = 'translateY(' + dy + 'px)';
-    requestAnimationFrame(() => requestAnimationFrame(() => { el.style.transition = 'transform .6s cubic-bezier(.2,.8,.2,1), background .2s'; el.style.transform = ''; }));
-  });
-  $('#weights').innerHTML = [['Need',w.N],['Demand',w.D],['Equity',w.E],['Align',w.A],['Urgent',w.U]]
-    .map(x => '<div><span><b style="width:' + (x[1] / .7 * 100) + '%"></b></span>' + x[0] + ' ' + x[1].toFixed(2).replace(/^0/, '') + '</div>').join('');
+  $('#picker').hidden = false; $('#app').hidden = true; $('#countryBadge').hidden = $('#changeCountry').hidden = true;
 }
-
-/* ---------- detail ---------- */
-function renderDetail(anim){
-  const s = byId[S.selected], w = PRESETS[S.preset].w, cur = rankOf(S.preset);
-  const fund = s.A === 1 ? ['Unfunded','#FFD9CF','#8A3B22'] : s.A === 0 ? ['Funded','#F1EEF9','#2A2F45'] : ['Delayed','#FFE8DF','#8A3B22'];
-  const tag = $('#sTag'); tag.textContent = fund[0]; tag.style.background = fund[1]; tag.style.color = fund[2];
-  $('#sMeta').textContent = s.sector + ', cluster ' + s.cluster;
-  $('#sTitle').textContent = s.title;
-  $('#sPlace').textContent = s.place + ', ' + s.district + ', ' + s.people.toLocaleString('en-IN') + ' citizens';
-  tween($('#sScore'), score(s, w));
-  $('#sRank').textContent = '/ 100, rank ' + cur.map[s.id];
-  const parts = [['Need', w.N*s.N], ['Demand', w.D*s.D], ['Equity', w.E*s.E], ['Alignment', w.A*s.A], ['Urgency', w.U*s.U]];
-  const bars = $('#sBars');
-  if (!bars.children.length){
-    bars.innerHTML = parts.map(x => '<div class="bar"><span>' + x[0] + '</span><i><b></b></i><em>0</em></div>').join('') +
-      '<div class="bar pen" hidden><span>Integrity</span><i style="background:transparent;height:auto;font-size:11px;font-style:normal;color:#B5503E">bursty, low sender diversity</i><em>0</em></div>';
-  }
-  [...bars.querySelectorAll('.bar:not(.pen)')].forEach((b, i) => {
-    const pts = parts[i][1] * 100;
-    b.querySelector('b').style.width = Math.min(100, pts / 40 * 100) + '%';
-    tween(b.querySelector('em'), pts, 1);
-  });
-  const pen = bars.querySelector('.pen'); pen.hidden = s.I >= 1;
-  pen.querySelector('i').textContent = s.flags && s.flags.length ? s.flags.join(', ').replace(/_/g, ' ') : 'bursty, low sender diversity';
-  pen.querySelector('em').textContent = '−' + (raw(s, w) * 100 * (1 - s.I)).toFixed(1);
-  const why = [];
-  if (s.N >= .7) why.push('high need (' + s.N.toFixed(2) + ' on the ' + s.need + ')');
-  if (s.E >= .7) why.push('a high-poverty district (equity ' + s.E.toFixed(2) + ')');
-  if (s.D >= .8) why.push('very high request volume');
-  if (s.A === 1) why.push('no funded project covers it');
-  if (s.A === 0) why.push('it is already funded, lowering alignment');
-  if (s.A === .5) why.push('a planned project is delayed');
-  if (s.I < .9) why.push('a ×' + s.I.toFixed(2) + ' integrity penalty for suspicious sending');
-  const wy = $('#sWhy');
-  wy.textContent = 'Rank ' + cur.map[s.id] + ' under ' + PRESETS[S.preset].label.toLowerCase() + ' weights because of ' + (why.length > 1 ? why.slice(0, -1).join(', ') + ' and ' + why[why.length - 1] : why[0] || 'moderate scores across factors') + '.';
-  $('#aLang').textContent = 'Sample request, ' + (s.langs || '…'); clusterLangs(s);
-  const q = $('#aQuote'); q.lang = s.lang; q.textContent = '“' + s.orig + '”';
-  $('#aEn').textContent = s.en;
-  if (anim) ['#sTitle', '#sWhy', '#aQuote'].forEach(x => { const e = $(x); e.classList.remove('fade'); void e.offsetWidth; e.classList.add('fade'); });
-  renderStatus();
+async function lockCountry(code){
+  S.country = code; store.set('vv-country', code); showErr('');
+  const c = country();
+  $('#countryName').textContent = c.country_name; $('#countryBadge').hidden = $('#changeCountry').hidden = false;
+  $('#picker').hidden = true; $('#app').hidden = false;
+  $('#adminLink').href = '/admin#country=' + code;
+  $('#desc').placeholder = EXAMPLE[code] || $('#desc').placeholder;
+  renderLangs(c.languages);
+  $('label[for="stateSel"]').textContent = c.unit_label;
+  const st = $('#stateSel'), un = $('#unitSel');
+  st.disabled = true; st.innerHTML = '<option>Loading…</option>';
+  un.disabled = true; un.innerHTML = '<option value="">District or city</option>';
+  try {
+    const m = await meta(code);
+    S.provider = m.language_provider;
+    $('#mic').hidden = !(S.provider === 'gemini' && window.MediaRecorder && navigator.mediaDevices);
+    st.innerHTML = '<option value="">Choose ' + esc(c.unit_label) + '</option>' + m.units.map(unitOption).join('');
+    st.disabled = false;
+  } catch (e) { st.innerHTML = '<option>Could not load</option>'; showErr('Could not load the list of places: ' + e.message); return; }
+  const saved = store.get('vv-area-' + code, null);
+  if (saved && [...st.options].some(o => o.value === saved.state)){
+    st.value = saved.state; await loadUnits(saved.state);
+    if (saved.unit && [...un.options].some(o => o.value === saved.unit)) un.value = saved.unit;
+    showArea(true);
+  } else showArea(false);
 }
-function renderStatus(){
-  const st = S.status[S.selected] || 'New', idx = STATUSES.indexOf(st);
-  $('#aStatus').value = st;
-  [...$('#aSteps').children].forEach((el, i) => el.classList.toggle('on', i <= idx));
-  const a = $('#aApprove');
-  if (S.approved[S.selected]){ a.disabled = true; a.innerHTML = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Approved'; }
-  else { a.disabled = false; a.textContent = 'Approve and forward'; }
-  $('#aNotify').textContent = 'Notify ' + byId[S.selected].people.toLocaleString('en-IN');
+async function loadUnits(code){
+  const un = $('#unitSel'), pilot = code && pilotFor(code);
+  un.innerHTML = '<option value="">District or city</option>'; un.disabled = true;
+  if (!pilot){ if (code) un.innerHTML = '<option value="">Whole ' + esc(country().unit_label) + '</option>'; return; }
+  un.innerHTML = '<option>Loading…</option>';
+  const m = await meta(pilot.pack_id);
+  un.innerHTML = '<option value="">Choose ' + esc(pilot.unit_label) + ' (optional)</option>' + m.units.map(unitOption).join('');
+  un.disabled = false;
 }
-
-function select(id, fromList){
-  S.selected = id; renderRanking(); renderDetail(true);
-  const p = byId[id];
-  if (S.level === 'district' && fromList) zoomTo(p.district);
-  else highlightDistrict();
-  drawPins();
+function areaLabel(){
+  const st = $('#stateSel'), un = $('#unitSel');
+  return [un.value ? plainName(un.selectedOptions[0]) : null, st.value ? plainName(st.selectedOptions[0]) : null].filter(Boolean).join(', ');
 }
-
-/* ---------- map ---------- */
-const mapEl = $('#map'), svg = $('#svg'), gv = $('#gv'), gI = $('#gIndia'), gM = $('#gMH');
-const heat = $('#heat'), hctx = heat.getContext('2d');
-const alpha = document.createElement('canvas'), actx = alpha.getContext('2d', {willReadFrequently:true});
-const NS = 'http://www.w3.org/2000/svg', WW = MAP.W, WH = MAP.H;
-let VW = 0, VH = 0, FIT = 1;
-const V = {z:1, cx:WW/2, cy:WH/2};
-const prj = (pr, lon, lat) => [pr[4] + (lon - pr[0]) * pr[2] * pr[3], pr[5] + (pr[1] - lat) * pr[3]];
-const base = () => S.level === 'india' ? 'india' : 'mh';
-const PR = () => base() === 'india' ? MAP.prI : MAP.prM;
-const scr = (x, y) => [(x - V.cx) * V.z * FIT + VW / 2, (y - V.cy) * V.z * FIT + VH / 2];
-const DXY = {}; MAP.mh.forEach(g => DXY[g.n] = prj(MAP.prM, g.lon, g.lat));
-const distEls = {};
-let dragMoved = false;
-
-function mkPath(d, cls){ const p = document.createElementNS(NS, 'path'); p.setAttribute('d', d); p.setAttribute('class', cls); p.setAttribute('vector-effect', 'non-scaling-stroke'); return p; }
-MAP.india.forEach(g => {
-  const el = mkPath(g.d, 'st' + (g.n === 'Maharashtra' ? ' mh' : ''));
-  el.addEventListener('mousemove', e => showTip(e, g.n, g.n === 'Maharashtra' ? 'Top issue: water. Click to zoom in.' : 'No requests registered in the demo.'));
-  el.addEventListener('mouseleave', hideTip);
-  if (g.n === 'Maharashtra') el.addEventListener('click', () => { if (!dragMoved) setLevel('state'); });
-  gI.appendChild(el);
+function saveArea(){
+  const st = $('#stateSel').value;
+  if (st) store.set('vv-area-' + S.country, {state:st, unit:$('#unitSel').value || null});
+}
+function showArea(collapsed){
+  const has = !!$('#stateSel').value;
+  $('#areaName').textContent = areaLabel();
+  $('#areaView').hidden = !(collapsed && has); $('#areaEdit').hidden = collapsed && has;
+}
+$('#stateSel').addEventListener('change', async e => {
+  try { await loadUnits(e.target.value); } catch (err) { showErr(err.message); }
+  saveArea();
 });
-MAP.nb.forEach(g => gM.appendChild(mkPath(g.d, 'nb')));
-MAP.mh.forEach(g => {
-  const el = mkPath(g.d, 'dt'); distEls[g.n] = el;
-  el.addEventListener('mousemove', e => {
-    const p = byDist[g.n], cat = p ? p.sector : EXTRA[g.n];
-    showTip(e, g.n, cat ? 'Top issue: ' + cat.toLowerCase() + (p ? '. Ranked #' + rankOf(S.preset).map[p.id] + ', ' + p.people.toLocaleString('en-IN') + ' citizens.' : '.') : 'No requests registered.');
-  });
-  el.addEventListener('mouseleave', hideTip);
-  el.addEventListener('click', () => { if (!dragMoved) zoomTo(g.n); });
-  gM.appendChild(el);
-});
-
-function showTip(e, t, s){
-  const r = mapEl.getBoundingClientRect(), tip = $('#tip');
-  tip.innerHTML = '<strong>' + esc(t) + '</strong>' + esc(s);
-  let x = e.clientX - r.left + 14, y = e.clientY - r.top + 14;
-  if (x > VW - 230) x -= 250; if (y > VH - 70) y -= 80;
-  tip.style.left = x + 'px'; tip.style.top = y + 'px'; tip.classList.add('show');
-}
-function hideTip(){ $('#tip').classList.remove('show'); }
-
-/* labels */
-let labelEls = [];
-function buildLabels(){
-  const box = $('#labels'); box.innerHTML = ''; labelEls = [];
-  MAP.labels[base()].forEach(l => {
-    const el = document.createElement('div');
-    el.className = 'lbl ' + (l[3] === 3 ? 'city' : l[3] === 2 ? 'sea' : l[3] === 1 ? 'big' : 'state');
-    el.textContent = l[0]; box.appendChild(el);
-    labelEls.push({el, xy:prj(PR(), l[1], l[2])});
-  });
-  if (base() === 'mh') MAP.mh.forEach(g => {
-    const el = document.createElement('div'); el.className = 'lbl dist'; el.textContent = g.n; box.appendChild(el);
-    labelEls.push({el, xy:DXY[g.n], dist:true});
-  });
-}
-/* pins */
-const pinEls = {};
-const pxy = p => p.xy || DXY[p.district];
-function pinFor(id){
-  if (pinEls[id]) return pinEls[id];
-  const b = document.createElement('button'); b.type = 'button'; b.className = 'pin';
-  b.addEventListener('click', e => { e.stopPropagation(); select(id); });
-  b.addEventListener('pointerdown', e => e.stopPropagation());
-  $('#pins').appendChild(b); return pinEls[id] = b;
-}
-function drawPins(){
-  const show = base() === 'mh', r = rankOf(S.preset), cur = r.map;
-  const want = new Set(r.list.slice(0, TOP).map(x => x.p.id)); if (byId[S.selected]) want.add(S.selected);
-  Object.keys(pinEls).forEach(id => { if (!want.has(id)){ pinEls[id].remove(); delete pinEls[id]; } });
-  want.forEach(id => {
-    const p = byId[id], b = pinFor(id); b.hidden = !show; if (!show) return;
-    const [x, y] = scr(...pxy(p));
-    b.style.left = x + 'px'; b.style.top = (y - 14) + 'px';
-    b.textContent = cur[p.id];
-    b.classList.toggle('top', cur[p.id] <= 3); b.classList.toggle('on', p.id === S.selected);
-    b.setAttribute('aria-label', 'Rank ' + cur[p.id] + ': ' + p.title);
-    b.style.visibility = x < -20 || y < -20 || x > VW + 20 || y > VH + 20 ? 'hidden' : 'visible';
-  });
+$('#unitSel').addEventListener('change', saveArea);
+$('#areaChange').addEventListener('click', () => { showArea(false); $('#stateSel').focus(); });
+$('#changeCountry').addEventListener('click', showPicker);
+function renderLangs(langs){
+  $('#langs').innerHTML = langs && langs.length ? (langs.map(l => '<span>' + esc(LANGNAME[l] || l) + '</span>').join('') + '<span>and more</span>') : '';
 }
 
-/* heat */
-const STOPS = [[0,[150,220,190]],[.4,[206,232,160]],[.6,[255,224,150]],[.8,[255,180,150]],[1,[238,128,140]]];
-const PAL = new Uint8ClampedArray(256 * 4);
-for (let i = 0; i < 256; i++){
-  const t = i / 255; let k = 1; while (k < STOPS.length - 1 && t > STOPS[k][0]) k++;
-  const a = STOPS[k - 1], b = STOPS[k], f = Math.max(0, Math.min(1, (t - a[0]) / (b[0] - a[0])));
-  for (let c = 0; c < 3; c++) PAL[i*4 + c] = a[1][c] + (b[1][c] - a[1][c]) * f;
-  PAL[i*4 + 3] = Math.min(225, i * 2.4);
-}
-let sprite = null, spriteR = 0;
-function getSprite(r){
-  if (sprite && spriteR === r) return sprite;
-  sprite = document.createElement('canvas'); sprite.width = sprite.height = r * 2; spriteR = r;
-  const c = sprite.getContext('2d'), g = c.createRadialGradient(r, r, 0, r, r, r);
-  g.addColorStop(0, 'rgba(0,0,0,1)'); g.addColorStop(1, 'rgba(0,0,0,0)');
-  c.fillStyle = g; c.fillRect(0, 0, r * 2, r * 2); return sprite;
-}
-function drawHeat(){
-  const w = heat.width, h = heat.height; if (!w || !h) return;
-  actx.clearRect(0, 0, w, h);
-  const pr = PR(), R = Math.round((base() === 'india' ? 9 : 20) * Math.max(.8, Math.min(1.4, FIT)) * Math.min(2.2, Math.sqrt(V.z))), spr = getSprite(R);
-  const boost = Math.min(3, 1 + (V.z - 1) * .55);
-  MAP.pts.forEach(q => {
-    if (S.cat !== 'all' && MAP.cats[q[2]] !== S.cat) return;
-    const [x, y] = scr(...prj(pr, q[0], q[1]));
-    if (x < -R || y < -R || x > w + R || y > h + R) return;
-    actx.globalAlpha = Math.min(1, (S.layer === 'need' ? q[3] * .16 : .1) * boost * (q[4] || 1));
-    actx.drawImage(spr, x - R, y - R);
-  });
-  const img = actx.getImageData(0, 0, w, h), d = img.data;
-  for (let i = 3; i < d.length; i += 4){
-    const a = d[i]; if (a < 6){ d[i] = 0; continue; }
-    const j = a * 4; d[i-3] = PAL[j]; d[i-2] = PAL[j+1]; d[i-1] = PAL[j+2]; d[i] = PAL[j+3];
-  }
-  hctx.putImageData(img, 0, 0);
-}
-
-let READY = false;
-function draw(){
-  if (!READY) return;
-  gv.setAttribute('transform', 'translate(' + (VW/2 - V.cx*V.z*FIT) + ',' + (VH/2 - V.cy*V.z*FIT) + ') scale(' + (V.z*FIT) + ')');
-  labelEls.forEach(o => {
-    const [x, y] = scr(...o.xy);
-    const vis = x > 24 && x < VW - 24 && y > 10 && y < VH - 10 && (!o.dist || V.z >= 2.2);
-    o.el.style.left = x + 'px'; o.el.style.top = (o.dist ? y + 12 : y) + 'px'; o.el.style.opacity = vis ? 1 : 0;
-  });
-  drawPins(); drawHeat();
-  const pxKm = PR()[3] * V.z * FIT / 111; let km = 5;
-  [5, 10, 20, 50, 100, 200, 500].forEach(n => { if (n * pxKm <= 90) km = n; });
-  $('#scaleT').textContent = km + ' km'; $('#scaleB').style.width = Math.round(km * pxKm) + 'px';
-}
-
-function resize(){
-  const r = mapEl.getBoundingClientRect(); VW = r.width; VH = r.height;
-  FIT = Math.min(VW / WW, VH / WH);
-  heat.width = alpha.width = Math.round(VW); heat.height = alpha.height = Math.round(VH);
-  draw();
-}
-new ResizeObserver(resize).observe(mapEl);
-
-let anim = null;
-function animateView(t, dur = 650){
-  if (anim) cancelAnimationFrame(anim);
-  if (RM){ Object.assign(V, t); draw(); return; }
-  const f = {...V}, t0 = performance.now();
-  const step = now => {
-    const k = Math.min(1, (now - t0) / dur), e = k < .5 ? 4*k*k*k : 1 - Math.pow(-2*k + 2, 3) / 2;
-    V.z = Math.exp(Math.log(f.z) + (Math.log(t.z) - Math.log(f.z)) * e);
-    V.cx = f.cx + (t.cx - f.cx) * e; V.cy = f.cy + (t.cy - f.cy) * e;
-    draw(); if (k < 1) anim = requestAnimationFrame(step); else anim = null;
-  };
-  anim = requestAnimationFrame(step);
-}
-function clampView(){ V.cx = Math.max(0, Math.min(WW, V.cx)); V.cy = Math.max(0, Math.min(WH, V.cy)); }
-
-function setLevel(lv){
-  const prevBase = base();
-  S.level = lv; if (lv !== 'district') S.dist = null;
-  renderCrumbs();
-  if (base() !== prevBase){
-    gI.style.opacity = base() === 'india' ? 1 : 0; gM.style.opacity = base() === 'mh' ? 1 : 0;
-    gI.style.pointerEvents = base() === 'india' ? 'auto' : 'none'; gM.style.pointerEvents = base() === 'mh' ? 'auto' : 'none';
-    buildLabels();
-    if (!RM){ heat.style.opacity = 0; setTimeout(() => heat.style.opacity = 1, 250); }
-    if (base() === 'mh') Object.assign(V, {z:.35, cx:WW/2, cy:WH/2});
-    else { const c = prj(MAP.prI, 76.8, 19.2); Object.assign(V, {z:2.6, cx:c[0], cy:c[1]}); }
-  }
-  highlightDistrict();
-  animateView({z:1, cx:WW/2, cy:WH/2});
-}
-function zoomTo(name){
-  if (base() === 'india'){ S.level = 'state'; setLevel('state'); }
-  S.level = 'district'; S.dist = name;
-  const p = byDist[name]; if (p && byId[S.selected].district !== name){ S.selected = p.id; renderRanking(); renderDetail(true); }
-  renderCrumbs(); highlightDistrict();
-  const c = DXY[name] || [WW/2, WH/2]; animateView({z:3.2, cx:c[0], cy:c[1]});
-}
-function highlightDistrict(){
-  const name = S.level === 'district' ? S.dist : byId[S.selected].district;
-  Object.entries(distEls).forEach(([n, el]) => { const on = n === name; el.classList.toggle('on', on); if (on) gM.appendChild(el); });
-}
-function renderCrumbs(){
-  const c = [['india', 'India']];
-  if (S.level !== 'india') c.push(['state', 'Maharashtra']);
-  if (S.level === 'district') c.push(['district', S.dist]);
-  const nav = $('#crumbs'); nav.innerHTML = '';
-  c.forEach((x, i) => {
-    if (i){ const s = document.createElement('span'); s.textContent = '/'; s.setAttribute('aria-hidden', 'true'); nav.appendChild(s); }
-    const b = document.createElement('button'); b.type = 'button'; b.textContent = x[1];
-    if (x[0] === S.level) b.setAttribute('aria-current', 'page');
-    b.addEventListener('click', () => x[0] === 'district' ? zoomTo(S.dist) : setLevel(x[0]));
-    nav.appendChild(b);
-  });
-}
-
-/* pan + zoom */
-let drag = null;
-mapEl.addEventListener('pointerdown', e => {
-  if (e.target.closest('.ctrls')) return;
-  drag = {x:e.clientX, y:e.clientY, cx:V.cx, cy:V.cy}; dragMoved = false;
-});
-window.addEventListener('pointermove', e => {
-  if (!drag) return;
-  const dx = e.clientX - drag.x, dy = e.clientY - drag.y;
-  if (!dragMoved && Math.hypot(dx, dy) < 5) return;
-  if (!dragMoved){ dragMoved = true; mapEl.classList.add('dragging'); hideTip(); }
-  V.cx = drag.cx - dx / (V.z * FIT); V.cy = drag.cy - dy / (V.z * FIT); clampView(); draw();
-});
-window.addEventListener('pointerup', () => { if (drag){ drag = null; mapEl.classList.remove('dragging'); setTimeout(() => dragMoved = false, 0); } });
-mapEl.addEventListener('wheel', e => {
-  e.preventDefault();
-  const r = mapEl.getBoundingClientRect(), mx = e.clientX - r.left, my = e.clientY - r.top;
-  const wx = (mx - VW/2) / (V.z*FIT) + V.cx, wy = (my - VH/2) / (V.z*FIT) + V.cy;
-  const nz = Math.max(1, Math.min(10, V.z * Math.exp(-e.deltaY * .0016)));
-  V.z = nz; V.cx = wx - (mx - VW/2) / (nz*FIT); V.cy = wy - (my - VH/2) / (nz*FIT); clampView();
-  if (nz === 1 && S.level === 'district') { S.level = 'state'; S.dist = null; renderCrumbs(); highlightDistrict(); }
-  draw();
-}, {passive:false});
-$('#zin').addEventListener('click', () => animateView({z:Math.min(10, V.z * 1.7), cx:V.cx, cy:V.cy}, 400));
-$('#zout').addEventListener('click', () => {
-  const nz = Math.max(1, V.z / 1.7);
-  if (nz === 1 && S.level === 'district') setLevel('state'); else animateView({z:nz, cx:nz === 1 ? WW/2 : V.cx, cy:nz === 1 ? WH/2 : V.cy}, 400);
-});
-$('#zfit').addEventListener('click', () => setLevel(S.level === 'india' ? 'india' : 'state'));
-
-/* chips */
-function renderChips(){
-  const box = $('#chips'); box.innerHTML = '';
-  [['all', 'All issues', '#fff']].concat(MAP.cats.map(c => [c, c, CATDOT[c]])).forEach(([k, l, dot]) => {
+/* ---------- category ---------- */
+function renderCats(){
+  const box = $('#cats'); box.innerHTML = '';
+  [[null, 'Not sure']].concat(SECTORS).forEach(([k, label]) => {
     const b = document.createElement('button'); b.type = 'button'; b.className = 'chip';
-    b.setAttribute('aria-pressed', S.cat === k ? 'true' : 'false');
-    b.innerHTML = '<i style="background:' + dot + ';box-shadow:inset 0 0 0 1px ' + (k === 'all' ? '#C9C4DA' : dot) + '"></i>' + l;
-    b.addEventListener('click', () => { S.cat = k; renderChips(); fadeHeat(); });
+    b.setAttribute('aria-pressed', S.category === k ? 'true' : 'false');
+    b.innerHTML = (k ? '<i style="background:' + CATDOT[k] + '"></i>' : '') + esc(label);
+    b.addEventListener('click', () => { S.category = k; renderCats(); });
     box.appendChild(b);
   });
 }
-function fadeHeat(){ if (RM){ drawHeat(); return; } heat.style.opacity = .15; setTimeout(() => { drawHeat(); heat.style.opacity = 1; }, 200); }
 
-/* ---------- requests ---------- */
-function ripple(lon, lat){
-  const [x, y] = scr(...prj(PR(), lon, lat));
-  if (x < 0 || y < 0 || x > VW || y > VH) return;
-  for (let i = 0; i < 2; i++){
-    const r = document.createElement('div'); r.className = 'ripple'; r.style.left = x + 'px'; r.style.top = y + 'px';
-    r.style.animationDelay = (i * .35) + 's'; mapEl.appendChild(r); setTimeout(() => r.remove(), 2200);
-  }
-}
-function lonlat(p){
-  if (p.lon != null) return [p.lon, p.lat];
-  const g = MAP.mh.find(x => x.n === p.district); return [g.lon, g.lat];
-}
-function addRequest(pid, lon, lat, newCitizen = true, cat){
-  const p = byId[pid];
-  const catIdx = MAP.cats.indexOf(cat || p.sector);
-  for (let i = 0; i < 3; i++) MAP.pts.push([lon + (Math.random() - .5) * .03, lat + (Math.random() - .5) * .03, catIdx, Math.min(1, (p.N + p.E) / 2), 1.6]);
-  p.people += 1; p.D = Math.min(1, p.D + .004); dirty();
-  S.k.req += 1; if (newCitizen) S.k.cit += 1;
-  tween($('#kReq'), S.k.req); bump($('#kReq'));
-  if (newCitizen){ tween($('#kCit'), S.k.cit); bump($('#kCit')); }
-  renderRanking(); if (S.selected === pid) renderDetail(); draw(); ripple(lon, lat);
-  flash(pid);
-}
-function flash(id){ const row = rows[id]; if (!row) return; row.classList.remove('flash'); void row.offsetWidth; row.classList.add('flash'); }
-const AKRANI = [74.21, 21.83];
-$('#simReq').addEventListener('click', () => {
-  const pool = LIVE ? rankOf(S.preset).list.slice(0, 20).map(x => x.p.id) : ['pune', 'bed', 'ytl', 'gad', 'wsm', 'ngp', 'nsk'];
-  const p = byId[pool[Math.floor(Math.random() * pool.length)]], [lon, lat] = lonlat(p);
-  addRequest(p.id, lon + (Math.random() - .5) * .12, lat + (Math.random() - .5) * .12);
-  toast('New ' + p.sector.toLowerCase() + ' request from ' + p.place + ', ' + p.district + '. Added to cluster ' + p.cluster + '.' + (LIVE ? ' (Simulated on screen, not saved.)' : ''));
-});
-
-/* ---------- spam ---------- */
-$('#spamBtn').addEventListener('click', () => {
-  const tile = $('#spam'), num = $('#spamNum'), btn = $('#spamBtn'), meter = $('#spamMeter'), bar = $('#spamBar');
-  const thn = S.spam ? byId[S.spamId] : byDist.Thane || rankOf('volume').list[0].p; S.spamId = thn.id;
-  if (S.spam){
-    S.spam = false; thn.I = thn.I0 ?? 1; dirty(); tile.classList.remove('alert');
-    $('#spamHead').textContent = 'Integrity monitor'; $('#spamState').textContent = 'All clear';
-    num._v = 0; num.textContent = '0'; $('#spamUnit').textContent = 'suspicious messages'; btn.textContent = 'Simulate a spam burst';
-    renderRanking(); renderDetail(); draw(); toast('Spam test reset. ' + thn.district + ' is back to full weight.'); return;
-  }
-  btn.disabled = true; meter.hidden = false; $('#spamState').textContent = 'Analysing…';
-  $('#spamUnit').textContent = 'messages from ' + thn.district; const T = RM ? 10 : 2200, t0 = performance.now();
-  const [glon, glat] = lonlat(thn), g = {lon:glon, lat:glat};
-  (function step(now){
-    const k = Math.min(1, (now - t0) / T); num.textContent = Math.round(380 * k); bar.style.width = (k * 100) + '%';
-    if (Math.random() < .25) ripple(g.lon + (Math.random() - .5) * .15, g.lat + (Math.random() - .5) * .15);
-    if (k < 1) return requestAnimationFrame(step);
-    num._v = 380; S.spam = true; thn.I = .6; dirty(); meter.hidden = true; bar.style.width = 0; btn.disabled = false;
-    tile.classList.add('alert'); if (!RM){ tile.classList.remove('shake'); void tile.offsetWidth; tile.classList.add('shake'); }
-    $('#spamHead').textContent = 'Suspicious burst, ' + thn.district; $('#spamState').textContent = '14 numbers, 40 min';
-    $('#spamUnit').textContent = 'near-identical messages, weight ×0.60'; btn.textContent = 'Reset test';
-    renderRanking(); renderDetail(); draw();
-    flash(thn.id);
-    toast('Spam detected in ' + thn.district + ': 380 near-identical messages from 14 numbers. Cluster down-weighted.');
-  })(t0);
-});
-
-/* ---------- actions ---------- */
-$('#aStatus').addEventListener('change', e => { S.status[S.selected] = e.target.value; renderStatus(); toast('Status for cluster ' + byId[S.selected].cluster + ' set to “' + e.target.value.toLowerCase() + '”.'); });
-$('#aApprove').addEventListener('click', () => {
-  const p = byId[S.selected]; S.approved[p.id] = true;
-  if ((S.status[p.id] || 'New') === 'New') S.status[p.id] = 'Forwarded to district';
-  renderStatus(); toast('Approved and forwarded to the ' + p.district + ' district office.');
-});
-$('#aNotify').addEventListener('click', () => {
-  const p = byId[S.selected], st = S.status[p.id] || 'New', rk = rankOf(S.preset).map[p.id];
-  toast('Update sent to ' + p.people.toLocaleString('en-IN') + ' citizens in their own language.');
-  if (!S.filed || p.id !== (S.lastCluster || 'ndb')) return;
-  const MR = {'New':'नवीन','Forwarded to district':'जिल्हा कार्यालयाकडे पाठवली','In progress':'काम सुरू आहे','Completed':'काम पूर्ण'};
-  if (st === 'Completed'){
-    botSay('<div class="kv">अपडेट · #' + S.lastId + '</div>काम पूर्ण झाले आहे. खरंच दुरुस्त झाले का?<small>The work is marked complete. Was it really fixed?</small><div class="qr"><button type="button" data-a="yes">१ · हो</button><button type="button" data-a="no">२ · नाही</button></div>', 700, pollHook);
-  } else {
-    botSay('<div class="kv">अपडेट · #' + S.lastId + '<span>#' + rk + ' जिल्ह्यात</span></div>तुमच्या भागातील ' + (p.people - 1) + ' जणांनी हीच गरज नोंदवली. स्थिती: ' + MR[st] + '.<small>' + (p.people - 1) + ' others reported the same need. Rank #' + rk + ' in the district. Status: ' + st.toLowerCase() + '.</small>', 700);
-  }
-  markUnread();
-});
-
-/* ---------- citizen phone ---------- */
-const msgs = $('#msgs'), drawer = $('#drawer'), scrim = $('#scrim');
-function openPhone(){ drawer.classList.add('open'); scrim.classList.add('show'); drawer.setAttribute('aria-hidden', 'false'); $('#openPhone').setAttribute('aria-expanded', 'true'); S.unread = 0; $('#unread').classList.remove('show'); setTimeout(() => $('#ptext').focus(), 350); }
-function closePhone(){ drawer.classList.remove('open'); scrim.classList.remove('show'); drawer.setAttribute('aria-hidden', 'true'); $('#openPhone').setAttribute('aria-expanded', 'false'); $('#openPhone').focus(); }
-$('#openPhone').addEventListener('click', openPhone); $('#closePhone').addEventListener('click', closePhone); scrim.addEventListener('click', closePhone);
-document.addEventListener('keydown', e => { if (e.key === 'Escape' && drawer.classList.contains('open')) closePhone(); });
-function markUnread(){ if (drawer.classList.contains('open')) return; S.unread++; const u = $('#unread'); u.textContent = S.unread; u.classList.remove('show'); void u.offsetWidth; u.classList.add('show'); }
-function add(cls, html){ const m = document.createElement('div'); m.className = 'm ' + cls; m.innerHTML = html; msgs.appendChild(m); msgs.scrollTop = msgs.scrollHeight; return m; }
-function botSay(html, delay = 900, after){
-  const t = document.createElement('div'); t.className = 'typing'; t.innerHTML = '<i></i><i></i><i></i>'; t.setAttribute('aria-label', 'Vikas Vaani is typing');
-  msgs.appendChild(t); msgs.scrollTop = msgs.scrollHeight;
-  setTimeout(() => { t.remove(); const m = add('bot', html); if (after) after(m); }, RM ? 50 : delay);
-}
-add('sys', 'Your number is stored hashed. Messages are used only to plan local development works.');
-add('bot', 'Namaste! Tell us what your area needs. Type, or send a voice note.<small>हिंदी · मराठी · English</small>');
-
-const CATWORDS = [['Water', /paani|pani|water|पाणी|पानी|nal|tap|handpump|हातपंप/i], ['Roads', /road|rasta|रस्ता|सड़क|khadd|pothole|खड्ड/i], ['Health', /hospital|clinic|दवाखाना|doctor|अस्पताल|phc/i], ['Schools', /school|शाळा|स्कूल|toilet|शौचालय/i], ['Drainage', /drain|gutter|नाला|flood/i], ['Lighting', /light|बत्ती|dark|andhera/i], ['Transport', /bus|stop|transport/i]];
-function classify(t){ for (const [c, r] of CATWORDS) if (r.test(t)) return c; return 'Water'; }
-let pending = null;
-function askLocation(cat, summary, payload){
-  pending = {cat, summary, ...payload};
-  const tag = cat ? 'Tagged as <strong>' + cat.toLowerCase() + '</strong>.' : '';
-  botSay('Got it. ' + tag + '<small>Please share where this is.</small><div class="qr"><button type="button" data-l="gps">Share current location</button>' + (LIVE ? '<button type="button" data-l="skip">Skip</button>' : '') + '</div>', 1000, m => {
-    m.querySelectorAll('[data-l]').forEach(b => b.addEventListener('click', () => {
-      m.querySelectorAll('[data-l]').forEach(x => x.disabled = true);
-      if (LIVE) fileLive(b.dataset.l === 'gps'); else shareLocation();
-    }));
-  });
-}
-const PINMINI = '<div class="mapmini"><svg width="24" height="24" viewBox="0 0 24 24" fill="#FFB4A2" stroke="#fff" stroke-width="1.5" aria-hidden="true"><path d="M12 22s7-6.5 7-12a7 7 0 0 0-14 0c0 5.5 7 12 7 12z"/><circle cx="12" cy="10" r="2.5" fill="#fff"/></svg></div>';
-function shareLocation(){
-  add('me loc', PINMINI + '<p>Akrani, Nandurbar</p>');
-  const id = 'VV-' + (1042 + S.filed); S.filed++; S.lastId = id; const cat = pending.cat;
-  botSay('<div class="kv"><span style="background:#E7F3EC;color:#2E8B63">✓ विनंती नोंदवली</span><span>#' + id + '</span></div><div class="hl">' + esc(pending.summary) + '</div><small>Request logged. We will message you when it moves.</small>', 1100, () => {
-    const go = S.level === 'india' || (S.level === 'district' && S.dist !== 'Nandurbar');
-    if (go) setLevel('state');
-    setTimeout(() => addRequest('ndb', AKRANI[0], AKRANI[1], S.filed === 1, cat), go && !RM ? 700 : 0);
-    toast('New ' + cat.toLowerCase() + ' request from Akrani, Nandurbar via WhatsApp. Cluster 42 now has ' + byId.ndb.people + ' citizens.');
-  });
-}
-function typing(){
-  const t = document.createElement('div'); t.className = 'typing'; t.innerHTML = '<i></i><i></i><i></i>'; t.setAttribute('aria-label', 'Vikas Vaani is typing');
-  msgs.appendChild(t); msgs.scrollTop = msgs.scrollHeight; return t;
-}
-/* Live mode: the request goes through the same /ingest pipeline as WhatsApp and Telegram. */
-async function fileLive(useGps){
-  const req = pending; pending = null;
-  let pos = null;
-  if (useGps && navigator.geolocation)
-    pos = await new Promise(res => navigator.geolocation.getCurrentPosition(p => res(p.coords), () => res(null), {timeout:8000, maximumAge:600000}));
-  if (useGps) add('me loc', PINMINI + '<p>' + (pos ? pos.latitude.toFixed(3) + ', ' + pos.longitude.toFixed(3) : 'Location unavailable') + '</p>');
-  else add('me', 'Skip');
-  const t = typing();
-  let r;
-  try {
-    r = await api('/ingest', {method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify({
-      sender_id:senderId(), text:req.text || null, audio_base64:req.audio || null, audio_mime:req.mime || null,
-      lat:pos ? pos.latitude : null, lon:pos ? pos.longitude : null})});
-  } catch (e) {
-    t.remove(); add('bot', 'Sorry, we could not record that. Please try again.<small>' + esc(e.message) + '</small>'); return;
-  }
-  t.remove();
-  S.filed++; S.lastId = r.id;
-  const label = (SECTOR[r.category] || SECTOR.other)[0], review = r.status === 'needs_review';
-  S.lastCluster = r.admin_code ? r.admin_code + '.' + r.category + '.' + (r.h3 && ['A', 'B'].includes(r.location_confidence) ? r.h3 : 'district') : null;
-  add('bot', '<div class="kv"><span style="background:#E7F3EC;color:#2E8B63">✓ ' + (review ? 'Sent for review' : esc(label)) + '</span><span>#' + esc(r.id) + '</span></div>' +
-    (r.summary ? '<div class="hl">' + esc(r.summary) + '</div>' : '') + esc(r.ack).replace(/\n/g, '<br>') +
-    '<small>' + (r.district ? esc(r.district) + '. ' : '') + 'We will message you when it moves.</small>');
-  markUnread();
-  await refresh();
-  const p = byId[S.lastCluster];
-  if (p){
-    if (S.level === 'india') setLevel('state');
-    select(p.id); flash(p.id); ripple(...lonlat(p));
-    toast('New ' + label.toLowerCase() + ' request from ' + p.district + ' via the web. Cluster ' + p.cluster + ' now has ' + p.people + ' citizens.');
-  } else toast(review ? 'Request #' + r.id + ' went to the review queue.'
-    : r.admin_code ? 'Request #' + r.id + ' logged in ' + r.district + '. Its cluster is still emerging (fewer than 3 people), so it is not ranked yet.'
-    : 'Request #' + r.id + ' logged without a location. It is not ranked until a district is known.');
-}
-function pollHook(m){
-  m.querySelectorAll('[data-a]').forEach(b => b.addEventListener('click', () => {
-    m.querySelectorAll('[data-a]').forEach(x => x.disabled = true);
-    const yes = b.dataset.a === 'yes';
-    add('me', yes ? '१ · हो' : '२ · नाही');
-    if (yes){
-      botSay('धन्यवाद! ही विनंती बंद केली आहे.<small>Thank you. This request is now closed.</small>', 800);
-      S.k.res += 1; tween($('#kRes'), S.k.res); bump($('#kRes'));
-      toast('Citizen confirmed request #' + S.lastId + ' is fixed. Resolved count updated.');
-    } else {
-      botSay('माफ करा. आम्ही ही विनंती पुन्हा उघडली आहे.<small>Sorry about that. We have reopened this request.</small>', 800);
-      const lc = S.lastCluster || 'ndb'; S.status[lc] = 'In progress'; if (S.selected === lc) renderStatus();
-      toast('Citizen says the work is not fixed. Cluster ' + byId[lc].cluster + ' reopened as “in progress”.');
-    }
-  }));
-}
-/* text send */
-const ptext = $('#ptext'), psend = $('#psend'), pmic = $('#pmic');
-ptext.addEventListener('input', () => { const has = ptext.value.trim().length > 0; psend.style.display = has ? 'flex' : 'none'; pmic.style.display = has ? 'none' : 'flex'; });
-function sendText(){
-  const t = ptext.value.trim(); if (!t) return;
-  add('me', esc(t)); ptext.value = ''; ptext.dispatchEvent(new Event('input'));
-  askLocation(LIVE ? null : classify(t), t, {text:t});
-}
-psend.addEventListener('click', sendText);
-ptext.addEventListener('keydown', e => { if (e.key === 'Enter') sendText(); });
-/* voice: records for real in live mode when the browser allows it, otherwise plays the scripted demo */
-const toB64 = blob => new Promise(res => { const f = new FileReader(); f.onload = () => res(String(f.result).split(',')[1]); f.readAsDataURL(blob); });
+/* ---------- voice (the server needs Gemini to transcribe it) ---------- */
 let rec = null;
-pmic.addEventListener('click', () => {
-  const foot = $('#pfoot');
-  if (!rec){
-    foot.classList.add('recording'); pmic.classList.add('rec'); pmic.setAttribute('aria-label', 'Stop and send voice note');
-    const t0 = Date.now(), max = LIVE ? 30 : 8;
-    const r = rec = {t0, iv:setInterval(() => { const s = Math.floor((Date.now() - t0) / 1000); $('#recT').textContent = '0:' + String(s).padStart(2, '0'); if (s >= max) pmic.click(); }, 200)};
-    if (LIVE && window.MediaRecorder && navigator.mediaDevices) navigator.mediaDevices.getUserMedia({audio:true}).then(stream => {
-      if (rec !== r){ stream.getTracks().forEach(x => x.stop()); return; }
-      r.stream = stream; r.chunks = []; r.mr = new MediaRecorder(stream);
-      r.mr.ondataavailable = e => r.chunks.push(e.data); r.mr.start();
-    }).catch(() => {});
-    return;
-  }
-  const r = rec; rec = null;
-  clearInterval(r.iv); const dur = Math.max(3, Math.round((Date.now() - r.t0) / 1000));
-  foot.classList.remove('recording'); pmic.classList.remove('rec'); pmic.setAttribute('aria-label', 'Record voice note'); $('#recT').textContent = '0:00';
-  const hs = [8,16,22,12,18,24,10,16,20,9,14,18,8,12];
-  add('me', '<div class="voice"><span class="play"><svg width="11" height="11" viewBox="0 0 24 24" fill="#6C5FC7" aria-hidden="true"><path d="M7 4v16l13-8z"/></svg></span><span class="wave">' + hs.map((h, i) => '<i style="height:' + h + 'px;animation-delay:' + (i * 30) + 'ms"></i>').join('') + '</span><span style="font-size:11.5px;color:#E4DEFA">0:' + String(dur).padStart(2, '0') + '</span></div>');
-  if (r.mr){
-    r.mr.onstop = async () => {
-      r.stream.getTracks().forEach(x => x.stop());
-      const mime = (r.mr.mimeType || 'audio/webm').split(';')[0];
-      askLocation(null, 'Voice note', {audio:await toB64(new Blob(r.chunks, {type:mime})), mime});
+$('#mic').addEventListener('click', async () => {
+  const mic = $('#mic');
+  if (rec){ rec.mr.stop(); return; }
+  try {
+    const stream = await navigator.mediaDevices.getUserMedia({audio:true});
+    const mr = new MediaRecorder(stream), chunks = [], t0 = Date.now(), idle = mic.innerHTML;
+    rec = {mr};
+    mr.ondataavailable = e => chunks.push(e.data);
+    mr.onstop = () => {
+      stream.getTracks().forEach(t => t.stop()); clearInterval(rec.iv); rec = null;
+      mic.classList.remove('rec'); mic.innerHTML = idle;
+      const mime = (mr.mimeType || 'audio/webm').split(';')[0], f = new FileReader();
+      f.onload = () => {
+        S.audio = String(f.result).split(',')[1]; S.mime = mime;
+        $('#voiceLabel').textContent = 'Voice note attached (' + Math.max(1, Math.round((Date.now() - t0) / 1000)) + ' s)';
+        $('#voiceChip').hidden = false;
+      };
+      f.readAsDataURL(new Blob(chunks, {type:mime}));
     };
-    r.mr.stop(); return;
-  }
-  const said = 'आमच्या पाड्यावर तीन महिन्यांपासून पिण्याचे पाणी नाही.';
-  botSay('<span lang="mr">“' + said + '”</span><small>Heard in Marathi: no drinking water in our hamlet for three months.</small>', 1500,
-    () => askLocation('Water', 'पिण्याचे पाणी, अक्राणी', {text:said + ' अक्राणी, नंदुरबार'}));
+    mic.classList.add('rec'); mic.innerHTML = '<i></i><span>0:00 · Stop</span>';
+    rec.iv = setInterval(() => { const s = Math.floor((Date.now() - t0) / 1000); mic.querySelector('span').textContent = '0:' + String(s).padStart(2, '0') + ' · Stop'; if (s >= 59) mr.stop(); }, 250);
+    mr.start();
+  } catch (e) { rec = null; toast('Microphone not available. You can type instead.'); }
+});
+$('#voiceDrop').addEventListener('click', () => { S.audio = S.mime = null; $('#voiceChip').hidden = true; });
+
+/* ---------- location ---------- */
+$('#locBtn').addEventListener('click', () => {
+  const st = $('#locState');
+  if (!navigator.geolocation){ st.textContent = 'Location is not available in this browser.'; return; }
+  st.className = 'locstate'; st.textContent = 'Finding you…';
+  navigator.geolocation.getCurrentPosition(p => {
+    S.lat = +p.coords.latitude.toFixed(5); S.lon = +p.coords.longitude.toFixed(5);
+    st.className = 'locstate ok'; st.textContent = '✓ Location added (' + S.lat.toFixed(3) + ', ' + S.lon.toFixed(3) + ')';
+  }, () => { st.textContent = 'Could not get your location. The place you chose is enough.'; }, {timeout:10000, maximumAge:600000});
 });
 
-/* ---------- segmented controls ---------- */
-$('#presetSeg').addEventListener('click', e => { const b = e.target.closest('button'); if (!b) return; S.preset = b.dataset.v; segSet($('#presetSeg'), S.preset); renderRanking(); renderDetail(); drawPins(); });
-$('#layerSeg').addEventListener('click', e => { const b = e.target.closest('button'); if (!b) return; S.layer = b.dataset.v; segSet($('#layerSeg'), S.layer); fadeHeat(); });
+/* ---------- submit ---------- */
+function senderId(){
+  let id = store.get('vv-sender', null);
+  if (!id){ id = 'web-' + Math.random().toString(36).slice(2, 12); store.set('vv-sender', id); }
+  return id;
+}
+function showErr(msg){ const e = $('#formErr'); e.textContent = msg || ''; e.hidden = !msg; }
+$('#form').addEventListener('submit', async e => {
+  e.preventDefault(); showErr('');
+  const text = $('#desc').value.trim(), state = $('#stateSel').value, unit = $('#unitSel').value;
+  if (!state){ showArea(false); return showErr('Please choose the ' + country().unit_label + ' where the problem is.'); }
+  if (!text && !S.audio) return showErr('Please describe the problem, or record a voice note.');
+  const btn = $('#submitBtn'); btn.disabled = true; btn.innerHTML = '<span class="spinner"></span>Submitting…';
+  try {
+    const r = await api('/ingest', {method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify({
+      text:text || null, audio_base64:S.audio, audio_mime:S.mime, sender_id:senderId(), lat:S.lat, lon:S.lon,
+      pack:S.country, admin_code:unit || state, category:S.category})});
+    showDone(r);
+  } catch (err) {
+    showErr('Sorry, we could not submit your complaint (' + err.message + '). Please try again.');
+  } finally { btn.disabled = false; btn.textContent = 'Submit complaint'; }
+});
+function showDone(r){
+  const mine = store.get('vv-mine', []).filter(x => x !== r.id); mine.unshift(r.id); store.set('vv-mine', mine.slice(0, 6));
+  $('#ticketId').textContent = r.id;
+  $('#ackText').textContent = r.ack;
+  const place = areaLabel(); saveArea();
+  $('#facts').innerHTML = '<span>' + esc(SECTOR_LABEL[r.category] || r.category) + '</span><span>' + esc(place) + '</span>' +
+    (r.urgency === 'high' ? '<span style="background:var(--peachBg);color:var(--rust)">Marked urgent</span>' : '') +
+    (r.status === 'needs_review' ? '<span>An official will review it</span>' : '');
+  $('#formCard').hidden = true; $('#doneCard').hidden = false; renderRecent();
+  $('#doneCard').scrollIntoView({behavior:'smooth', block:'start'});
+}
+$('#copyId').addEventListener('click', async () => {
+  try { await navigator.clipboard.writeText($('#ticketId').textContent); toast('Tracking ID copied.'); } catch (e) { toast('Select the ID to copy it.'); }
+});
+$('#another').addEventListener('click', () => {
+  $('#desc').value = ''; S.audio = S.mime = null; S.lat = S.lon = null; $('#voiceChip').hidden = true; $('#locState').textContent = '';
+  S.category = null; renderCats(); showArea(true); $('#doneCard').hidden = true; $('#formCard').hidden = false; $('#desc').focus();
+});
+$('#trackThis').addEventListener('click', () => { $('#trackId').value = $('#ticketId').textContent; track(); $('#trackCard').scrollIntoView({behavior:'smooth'}); });
 
-/* ---------- silent districts ---------- */
-function renderSilent(){
-  const box = $('#silent'); box.innerHTML = '';
-  SILENT.forEach(n => {
-    const b = document.createElement('button'); b.type = 'button'; b.textContent = n;
-    b.addEventListener('click', () => zoomTo(n)); box.appendChild(b);
+/* ---------- tracking ---------- */
+function renderRecent(){
+  const mine = store.get('vv-mine', []), box = $('#recent');
+  box.innerHTML = mine.length ? '<span class="sub" style="align-self:center">Your recent:</span>' : '';
+  mine.forEach(id => {
+    const b = document.createElement('button'); b.type = 'button'; b.textContent = id;
+    b.addEventListener('click', () => { $('#trackId').value = id; track(); }); box.appendChild(b);
   });
 }
+async function track(){
+  const id = $('#trackId').value.trim(), box = $('#statusBox');
+  if (!id) return;
+  box.hidden = false; box.innerHTML = '<div class="sub">Looking up ' + esc(id) + '…</div>';
+  try {
+    const r = await api('/track/' + encodeURIComponent(id));
+    const idx = Math.max(0, STATUS_STEPS.findIndex(s => s[0] === r.status));
+    box.innerHTML = '<div class="meta"><span>ID <b style="font-family:var(--mono)">' + esc(r.id) + '</b></span><span>Filed <b>' + new Date(r.created_at).toLocaleDateString() + '</b></span>' +
+      '<span>Category <b>' + esc(SECTOR_LABEL[r.category] || r.category) + '</b></span><span>Place <b>' + esc((r.where || []).join(', ') || r.district || 'not yet known') + '</b></span>' +
+      '<span>Country <b>' + esc(r.country_name) + '</b></span></div>' +
+      '<div class="steps">' + STATUS_STEPS.map((s, i) => '<div class="' + (i <= idx ? 'on' : '') + (i === idx ? ' now' : '') + '"><i></i>' + s[1] + '</div>').join('') + '</div>' +
+      (r.status === 'needs_review' ? '<div class="sub">An official will check where this is before it is ranked.</div>' : '') +
+      (r.summary ? '<div class="summary">“' + esc(r.summary) + '”</div>' : '');
+  } catch (e) {
+    box.innerHTML = '<div class="err">' + (e.status === 404 ? 'No complaint found with that ID. Check it and try again.' : 'Could not check right now (' + esc(e.message) + ').') + '</div>';
+  }
+}
+$('#trackForm').addEventListener('submit', e => { e.preventDefault(); track(); });
 
 /* ---------- init ---------- */
-async function refresh(){
-  try { await loadLive(); } catch (e) { toast('Could not refresh from the API.'); return false; }
-  renderChips(); renderSilent(); renderRanking(); renderDetail(); highlightDistrict(); draw();
-  tween($('#kReq'), S.k.req); tween($('#kCit'), S.k.cit); tween($('#kRes'), S.k.res);
-  return true;
+/* Opened from disk or a file preview: hand over to the local server if it is running. */
+const SERVER = 'http://127.0.0.1:8000';
+async function viaServer(page){
+  if (location.protocol.startsWith('http')) return false;  // file:, or a data: preview
+  try { const r = await fetch(SERVER + '/health'); if (r.ok){ location.replace(SERVER + page + location.hash); return true; } } catch (e) {}
+  return false;
 }
-async function init(){
-  try { await loadLive(); }
+(async function init(){
+  if (await viaServer('/')) return;
+  renderCats(); renderRecent();
+  try { S.packs = await api('/packs'); }
   catch (e) {
-    console.warn('API unavailable, showing the built-in demo data.', e);
-    $('#dataBadge').lastChild.textContent = 'Offline demo · synthetic data';
+    $('#app').hidden = false;
+    $('#app').innerHTML = '<div class="tile errorbox"><h2>Open the app from its server</h2><p class="sub">This page cannot work as a file or a file preview: it needs the Vikas Vaani server. Double-click <code>start.bat</code> in the project folder (it sets everything up the first time), then open <a href="http://127.0.0.1:8000/" target="_blank">http://127.0.0.1:8000</a> in your browser.</p></div>';
+    return;
   }
-  READY = true;
-  gI.style.opacity = 0; gI.style.pointerEvents = 'none';
-  buildLabels(); renderCrumbs(); renderChips(); renderSilent(); highlightDistrict();
-  renderRanking(); renderDetail();
-  tween($('#kReq'), S.k.req, 0, 1200); tween($('#kCit'), S.k.cit, 0, 1200); tween($('#kRes'), S.k.res);
-  requestAnimationFrame(() => { segSet($('#presetSeg'), S.preset); segSet($('#layerSeg'), S.layer); resize(); });
-}
-init();
-window.addEventListener('resize', () => { segSet($('#presetSeg'), S.preset); segSet($('#layerSeg'), S.layer); });
-if (document.fonts) document.fonts.ready.then(() => { segSet($('#presetSeg'), S.preset); segSet($('#layerSeg'), S.layer); });
+  const hash = new URLSearchParams(location.hash.slice(1)), pref = hash.get('country') || store.get('vv-country', null);
+  if (pref && countries().some(c => c.country === pref)) await lockCountry(pref); else showPicker();
+  if (hash.get('track')){ $('#trackId').value = hash.get('track'); track(); }
+})();
 </script>
 </body>
 </html>

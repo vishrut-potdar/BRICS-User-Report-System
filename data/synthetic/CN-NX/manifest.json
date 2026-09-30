@@ -1,0 +1,70 @@
+{
+  "generator": "scripts/generate_synthetic.py",
+  "licence": "CC-BY-4.0",
+  "pack": "CN-NX",
+  "seed": 42,
+  "as_of": "2026-09-28T18:00:00+08:00",
+  "window_days": 45,
+  "n_records": 701,
+  "n_organic": 501,
+  "brigade": {
+    "admin_code": "CN-NX-YINCHUAN",
+    "district": "Yinchuan (city districts)",
+    "sector": "roads",
+    "lang": "zh",
+    "n_messages": 200,
+    "n_senders": 12,
+    "window_start": "2026-09-25T13:00:00+08:00",
+    "window_minutes": 30,
+    "h3_cells": [
+      "8724c04dcffffff"
+    ],
+    "main_cluster_id": "CN-NX-YINCHUAN.roads.8724c04dcffffff"
+  },
+  "records_by_district": {
+    "Yinchuan (city districts)": 457,
+    "Qingtongxia": 25,
+    "Litong District": 24,
+    "Helan County": 22,
+    "Xiji County": 19,
+    "Yuanzhou District": 19,
+    "Shapotou District": 17,
+    "Lingwu": 16,
+    "Pingluo County": 16,
+    "Zhongning County": 14,
+    "Dawukou District": 13,
+    "Haiyuan County": 13,
+    "Yongning County": 11,
+    "Tongxin County": 9,
+    "Huinong District": 8,
+    "Longde County": 6,
+    "Pengyang County": 6,
+    "Yanchi County": 4,
+    "Jingyuan County": 2
+  },
+  "assumptions": {
+    "synthetic_config": {
+      "n": 500,
+      "lang_mix": {
+        "zh": 1.0
+      },
+      "connectivity": {
+        "CN-NX-YINCHUAN": 2.5
+      },
+      "brigade": {
+        "admin_code": "CN-NX-YINCHUAN",
+        "lang": "zh"
+      }
+    },
+    "location_tiers": {
+      "A": 0.6,
+      "B": 0.25,
+      "C": 0.15
+    },
+    "channels": {
+      "whatsapp": 0.7,
+      "web": 0.2,
+      "telegram": 0.1
+    }
+  }
+}

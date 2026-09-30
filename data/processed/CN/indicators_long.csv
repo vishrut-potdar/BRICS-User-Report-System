@@ -1,0 +1,249 @@
+admin_code,district_name,metric,value,year,source,licence,placeholder
+CN-BJ,Beijing,dibao_share,0.0390,,PLACEHOLDER - replace with Ministry of Civil Affairs statistical bulletin; provincial civil-affairs yearbooks,n/a,true
+CN-TJ,Tianjin,dibao_share,0.0325,,PLACEHOLDER - replace with Ministry of Civil Affairs statistical bulletin; provincial civil-affairs yearbooks,n/a,true
+CN-HE,Hebei,dibao_share,0.0698,,PLACEHOLDER - replace with Ministry of Civil Affairs statistical bulletin; provincial civil-affairs yearbooks,n/a,true
+CN-SX,Shanxi,dibao_share,0.0427,,PLACEHOLDER - replace with Ministry of Civil Affairs statistical bulletin; provincial civil-affairs yearbooks,n/a,true
+CN-NM,Inner Mongolia,dibao_share,0.0276,,PLACEHOLDER - replace with Ministry of Civil Affairs statistical bulletin; provincial civil-affairs yearbooks,n/a,true
+CN-LN,Liaoning,dibao_share,0.1068,,PLACEHOLDER - replace with Ministry of Civil Affairs statistical bulletin; provincial civil-affairs yearbooks,n/a,true
+CN-JL,Jilin,dibao_share,0.1154,,PLACEHOLDER - replace with Ministry of Civil Affairs statistical bulletin; provincial civil-affairs yearbooks,n/a,true
+CN-HL,Heilongjiang,dibao_share,0.0397,,PLACEHOLDER - replace with Ministry of Civil Affairs statistical bulletin; provincial civil-affairs yearbooks,n/a,true
+CN-SH,Shanghai,dibao_share,0.0142,,PLACEHOLDER - replace with Ministry of Civil Affairs statistical bulletin; provincial civil-affairs yearbooks,n/a,true
+CN-JS,Jiangsu,dibao_share,0.0181,,PLACEHOLDER - replace with Ministry of Civil Affairs statistical bulletin; provincial civil-affairs yearbooks,n/a,true
+CN-ZJ,Zhejiang,dibao_share,0.0334,,PLACEHOLDER - replace with Ministry of Civil Affairs statistical bulletin; provincial civil-affairs yearbooks,n/a,true
+CN-AH,Anhui,dibao_share,0.0725,,PLACEHOLDER - replace with Ministry of Civil Affairs statistical bulletin; provincial civil-affairs yearbooks,n/a,true
+CN-FJ,Fujian,dibao_share,0.0428,,PLACEHOLDER - replace with Ministry of Civil Affairs statistical bulletin; provincial civil-affairs yearbooks,n/a,true
+CN-JX,Jiangxi,dibao_share,0.0463,,PLACEHOLDER - replace with Ministry of Civil Affairs statistical bulletin; provincial civil-affairs yearbooks,n/a,true
+CN-SD,Shandong,dibao_share,0.0195,,PLACEHOLDER - replace with Ministry of Civil Affairs statistical bulletin; provincial civil-affairs yearbooks,n/a,true
+CN-HA,Henan,dibao_share,0.0028,,PLACEHOLDER - replace with Ministry of Civil Affairs statistical bulletin; provincial civil-affairs yearbooks,n/a,true
+CN-HB,Hubei,dibao_share,0.0576,,PLACEHOLDER - replace with Ministry of Civil Affairs statistical bulletin; provincial civil-affairs yearbooks,n/a,true
+CN-HN,Hunan,dibao_share,0.0332,,PLACEHOLDER - replace with Ministry of Civil Affairs statistical bulletin; provincial civil-affairs yearbooks,n/a,true
+CN-GD,Guangdong,dibao_share,0.0210,,PLACEHOLDER - replace with Ministry of Civil Affairs statistical bulletin; provincial civil-affairs yearbooks,n/a,true
+CN-GX,Guangxi,dibao_share,0.0369,,PLACEHOLDER - replace with Ministry of Civil Affairs statistical bulletin; provincial civil-affairs yearbooks,n/a,true
+CN-HI,Hainan,dibao_share,0.0785,,PLACEHOLDER - replace with Ministry of Civil Affairs statistical bulletin; provincial civil-affairs yearbooks,n/a,true
+CN-CQ,Chongqing,dibao_share,0.1286,,PLACEHOLDER - replace with Ministry of Civil Affairs statistical bulletin; provincial civil-affairs yearbooks,n/a,true
+CN-SC,Sichuan,dibao_share,0.0506,,PLACEHOLDER - replace with Ministry of Civil Affairs statistical bulletin; provincial civil-affairs yearbooks,n/a,true
+CN-GZ,Guizhou,dibao_share,0.0740,,PLACEHOLDER - replace with Ministry of Civil Affairs statistical bulletin; provincial civil-affairs yearbooks,n/a,true
+CN-YN,Yunnan,dibao_share,0.0909,,PLACEHOLDER - replace with Ministry of Civil Affairs statistical bulletin; provincial civil-affairs yearbooks,n/a,true
+CN-XZ,Tibet,dibao_share,0.0915,,PLACEHOLDER - replace with Ministry of Civil Affairs statistical bulletin; provincial civil-affairs yearbooks,n/a,true
+CN-SN,Shaanxi,dibao_share,0.0928,,PLACEHOLDER - replace with Ministry of Civil Affairs statistical bulletin; provincial civil-affairs yearbooks,n/a,true
+CN-GS,Gansu,dibao_share,0.0880,,PLACEHOLDER - replace with Ministry of Civil Affairs statistical bulletin; provincial civil-affairs yearbooks,n/a,true
+CN-QH,Qinghai,dibao_share,0.1855,,PLACEHOLDER - replace with Ministry of Civil Affairs statistical bulletin; provincial civil-affairs yearbooks,n/a,true
+CN-NX,Ningxia,dibao_share,0.0430,,PLACEHOLDER - replace with Ministry of Civil Affairs statistical bulletin; provincial civil-affairs yearbooks,n/a,true
+CN-XJ,Xinjiang,dibao_share,0.0811,,PLACEHOLDER - replace with Ministry of Civil Affairs statistical bulletin; provincial civil-affairs yearbooks,n/a,true
+CN-BJ,Beijing,rural_tap_water_coverage,0.9851,,"PLACEHOLDER - replace with Ministry of Water Resources, rural water-supply statistics",n/a,true
+CN-TJ,Tianjin,rural_tap_water_coverage,0.8693,,"PLACEHOLDER - replace with Ministry of Water Resources, rural water-supply statistics",n/a,true
+CN-HE,Hebei,rural_tap_water_coverage,0.8012,,"PLACEHOLDER - replace with Ministry of Water Resources, rural water-supply statistics",n/a,true
+CN-SX,Shanxi,rural_tap_water_coverage,0.8387,,"PLACEHOLDER - replace with Ministry of Water Resources, rural water-supply statistics",n/a,true
+CN-NM,Inner Mongolia,rural_tap_water_coverage,0.8690,,"PLACEHOLDER - replace with Ministry of Water Resources, rural water-supply statistics",n/a,true
+CN-LN,Liaoning,rural_tap_water_coverage,0.8666,,"PLACEHOLDER - replace with Ministry of Water Resources, rural water-supply statistics",n/a,true
+CN-JL,Jilin,rural_tap_water_coverage,0.8293,,"PLACEHOLDER - replace with Ministry of Water Resources, rural water-supply statistics",n/a,true
+CN-HL,Heilongjiang,rural_tap_water_coverage,0.7503,,"PLACEHOLDER - replace with Ministry of Water Resources, rural water-supply statistics",n/a,true
+CN-SH,Shanghai,rural_tap_water_coverage,0.9216,,"PLACEHOLDER - replace with Ministry of Water Resources, rural water-supply statistics",n/a,true
+CN-JS,Jiangsu,rural_tap_water_coverage,0.8789,,"PLACEHOLDER - replace with Ministry of Water Resources, rural water-supply statistics",n/a,true
+CN-ZJ,Zhejiang,rural_tap_water_coverage,0.9517,,"PLACEHOLDER - replace with Ministry of Water Resources, rural water-supply statistics",n/a,true
+CN-AH,Anhui,rural_tap_water_coverage,0.8044,,"PLACEHOLDER - replace with Ministry of Water Resources, rural water-supply statistics",n/a,true
+CN-FJ,Fujian,rural_tap_water_coverage,0.8651,,"PLACEHOLDER - replace with Ministry of Water Resources, rural water-supply statistics",n/a,true
+CN-JX,Jiangxi,rural_tap_water_coverage,0.7894,,"PLACEHOLDER - replace with Ministry of Water Resources, rural water-supply statistics",n/a,true
+CN-SD,Shandong,rural_tap_water_coverage,0.8589,,"PLACEHOLDER - replace with Ministry of Water Resources, rural water-supply statistics",n/a,true
+CN-HA,Henan,rural_tap_water_coverage,0.8595,,"PLACEHOLDER - replace with Ministry of Water Resources, rural water-supply statistics",n/a,true
+CN-HB,Hubei,rural_tap_water_coverage,0.8486,,"PLACEHOLDER - replace with Ministry of Water Resources, rural water-supply statistics",n/a,true
+CN-HN,Hunan,rural_tap_water_coverage,0.7841,,"PLACEHOLDER - replace with Ministry of Water Resources, rural water-supply statistics",n/a,true
+CN-GD,Guangdong,rural_tap_water_coverage,0.9573,,"PLACEHOLDER - replace with Ministry of Water Resources, rural water-supply statistics",n/a,true
+CN-GX,Guangxi,rural_tap_water_coverage,0.7431,,"PLACEHOLDER - replace with Ministry of Water Resources, rural water-supply statistics",n/a,true
+CN-HI,Hainan,rural_tap_water_coverage,0.8624,,"PLACEHOLDER - replace with Ministry of Water Resources, rural water-supply statistics",n/a,true
+CN-CQ,Chongqing,rural_tap_water_coverage,0.8367,,"PLACEHOLDER - replace with Ministry of Water Resources, rural water-supply statistics",n/a,true
+CN-SC,Sichuan,rural_tap_water_coverage,0.8756,,"PLACEHOLDER - replace with Ministry of Water Resources, rural water-supply statistics",n/a,true
+CN-GZ,Guizhou,rural_tap_water_coverage,0.7944,,"PLACEHOLDER - replace with Ministry of Water Resources, rural water-supply statistics",n/a,true
+CN-YN,Yunnan,rural_tap_water_coverage,0.7365,,"PLACEHOLDER - replace with Ministry of Water Resources, rural water-supply statistics",n/a,true
+CN-XZ,Tibet,rural_tap_water_coverage,0.7982,,"PLACEHOLDER - replace with Ministry of Water Resources, rural water-supply statistics",n/a,true
+CN-SN,Shaanxi,rural_tap_water_coverage,0.8176,,"PLACEHOLDER - replace with Ministry of Water Resources, rural water-supply statistics",n/a,true
+CN-GS,Gansu,rural_tap_water_coverage,0.6720,,"PLACEHOLDER - replace with Ministry of Water Resources, rural water-supply statistics",n/a,true
+CN-QH,Qinghai,rural_tap_water_coverage,0.7555,,"PLACEHOLDER - replace with Ministry of Water Resources, rural water-supply statistics",n/a,true
+CN-NX,Ningxia,rural_tap_water_coverage,0.7776,,"PLACEHOLDER - replace with Ministry of Water Resources, rural water-supply statistics",n/a,true
+CN-XJ,Xinjiang,rural_tap_water_coverage,0.7771,,"PLACEHOLDER - replace with Ministry of Water Resources, rural water-supply statistics",n/a,true
+CN-BJ,Beijing,rural_sanitary_toilet,0.8657,,PLACEHOLDER - replace with National Health Commission / MARA rural toilet-revolution reports,n/a,true
+CN-TJ,Tianjin,rural_sanitary_toilet,0.8975,,PLACEHOLDER - replace with National Health Commission / MARA rural toilet-revolution reports,n/a,true
+CN-HE,Hebei,rural_sanitary_toilet,0.7766,,PLACEHOLDER - replace with National Health Commission / MARA rural toilet-revolution reports,n/a,true
+CN-SX,Shanxi,rural_sanitary_toilet,0.7721,,PLACEHOLDER - replace with National Health Commission / MARA rural toilet-revolution reports,n/a,true
+CN-NM,Inner Mongolia,rural_sanitary_toilet,0.8711,,PLACEHOLDER - replace with National Health Commission / MARA rural toilet-revolution reports,n/a,true
+CN-LN,Liaoning,rural_sanitary_toilet,0.8157,,PLACEHOLDER - replace with National Health Commission / MARA rural toilet-revolution reports,n/a,true
+CN-JL,Jilin,rural_sanitary_toilet,0.7707,,PLACEHOLDER - replace with National Health Commission / MARA rural toilet-revolution reports,n/a,true
+CN-HL,Heilongjiang,rural_sanitary_toilet,0.7319,,PLACEHOLDER - replace with National Health Commission / MARA rural toilet-revolution reports,n/a,true
+CN-SH,Shanghai,rural_sanitary_toilet,0.8920,,PLACEHOLDER - replace with National Health Commission / MARA rural toilet-revolution reports,n/a,true
+CN-JS,Jiangsu,rural_sanitary_toilet,0.9142,,PLACEHOLDER - replace with National Health Commission / MARA rural toilet-revolution reports,n/a,true
+CN-ZJ,Zhejiang,rural_sanitary_toilet,0.9567,,PLACEHOLDER - replace with National Health Commission / MARA rural toilet-revolution reports,n/a,true
+CN-AH,Anhui,rural_sanitary_toilet,0.7980,,PLACEHOLDER - replace with National Health Commission / MARA rural toilet-revolution reports,n/a,true
+CN-FJ,Fujian,rural_sanitary_toilet,0.8748,,PLACEHOLDER - replace with National Health Commission / MARA rural toilet-revolution reports,n/a,true
+CN-JX,Jiangxi,rural_sanitary_toilet,0.7077,,PLACEHOLDER - replace with National Health Commission / MARA rural toilet-revolution reports,n/a,true
+CN-SD,Shandong,rural_sanitary_toilet,0.7597,,PLACEHOLDER - replace with National Health Commission / MARA rural toilet-revolution reports,n/a,true
+CN-HA,Henan,rural_sanitary_toilet,0.8124,,PLACEHOLDER - replace with National Health Commission / MARA rural toilet-revolution reports,n/a,true
+CN-HB,Hubei,rural_sanitary_toilet,0.8421,,PLACEHOLDER - replace with National Health Commission / MARA rural toilet-revolution reports,n/a,true
+CN-HN,Hunan,rural_sanitary_toilet,0.7904,,PLACEHOLDER - replace with National Health Commission / MARA rural toilet-revolution reports,n/a,true
+CN-GD,Guangdong,rural_sanitary_toilet,0.9022,,PLACEHOLDER - replace with National Health Commission / MARA rural toilet-revolution reports,n/a,true
+CN-GX,Guangxi,rural_sanitary_toilet,0.6921,,PLACEHOLDER - replace with National Health Commission / MARA rural toilet-revolution reports,n/a,true
+CN-HI,Hainan,rural_sanitary_toilet,0.8778,,PLACEHOLDER - replace with National Health Commission / MARA rural toilet-revolution reports,n/a,true
+CN-CQ,Chongqing,rural_sanitary_toilet,0.8096,,PLACEHOLDER - replace with National Health Commission / MARA rural toilet-revolution reports,n/a,true
+CN-SC,Sichuan,rural_sanitary_toilet,0.8169,,PLACEHOLDER - replace with National Health Commission / MARA rural toilet-revolution reports,n/a,true
+CN-GZ,Guizhou,rural_sanitary_toilet,0.7008,,PLACEHOLDER - replace with National Health Commission / MARA rural toilet-revolution reports,n/a,true
+CN-YN,Yunnan,rural_sanitary_toilet,0.6826,,PLACEHOLDER - replace with National Health Commission / MARA rural toilet-revolution reports,n/a,true
+CN-XZ,Tibet,rural_sanitary_toilet,0.6278,,PLACEHOLDER - replace with National Health Commission / MARA rural toilet-revolution reports,n/a,true
+CN-SN,Shaanxi,rural_sanitary_toilet,0.7633,,PLACEHOLDER - replace with National Health Commission / MARA rural toilet-revolution reports,n/a,true
+CN-GS,Gansu,rural_sanitary_toilet,0.6685,,PLACEHOLDER - replace with National Health Commission / MARA rural toilet-revolution reports,n/a,true
+CN-QH,Qinghai,rural_sanitary_toilet,0.6618,,PLACEHOLDER - replace with National Health Commission / MARA rural toilet-revolution reports,n/a,true
+CN-NX,Ningxia,rural_sanitary_toilet,0.7171,,PLACEHOLDER - replace with National Health Commission / MARA rural toilet-revolution reports,n/a,true
+CN-XJ,Xinjiang,rural_sanitary_toilet,0.7299,,PLACEHOLDER - replace with National Health Commission / MARA rural toilet-revolution reports,n/a,true
+CN-BJ,Beijing,village_road_gap,0.0700,,PLACEHOLDER - replace with Ministry of Transport rural-road statistics,n/a,true
+CN-TJ,Tianjin,village_road_gap,0.0579,,PLACEHOLDER - replace with Ministry of Transport rural-road statistics,n/a,true
+CN-HE,Hebei,village_road_gap,0.1875,,PLACEHOLDER - replace with Ministry of Transport rural-road statistics,n/a,true
+CN-SX,Shanxi,village_road_gap,0.1034,,PLACEHOLDER - replace with Ministry of Transport rural-road statistics,n/a,true
+CN-NM,Inner Mongolia,village_road_gap,0.1463,,PLACEHOLDER - replace with Ministry of Transport rural-road statistics,n/a,true
+CN-LN,Liaoning,village_road_gap,0.1085,,PLACEHOLDER - replace with Ministry of Transport rural-road statistics,n/a,true
+CN-JL,Jilin,village_road_gap,0.0947,,PLACEHOLDER - replace with Ministry of Transport rural-road statistics,n/a,true
+CN-HL,Heilongjiang,village_road_gap,0.1469,,PLACEHOLDER - replace with Ministry of Transport rural-road statistics,n/a,true
+CN-SH,Shanghai,village_road_gap,0.0457,,PLACEHOLDER - replace with Ministry of Transport rural-road statistics,n/a,true
+CN-JS,Jiangsu,village_road_gap,0.0776,,PLACEHOLDER - replace with Ministry of Transport rural-road statistics,n/a,true
+CN-ZJ,Zhejiang,village_road_gap,0.0579,,PLACEHOLDER - replace with Ministry of Transport rural-road statistics,n/a,true
+CN-AH,Anhui,village_road_gap,0.1292,,PLACEHOLDER - replace with Ministry of Transport rural-road statistics,n/a,true
+CN-FJ,Fujian,village_road_gap,0.0960,,PLACEHOLDER - replace with Ministry of Transport rural-road statistics,n/a,true
+CN-JX,Jiangxi,village_road_gap,0.1515,,PLACEHOLDER - replace with Ministry of Transport rural-road statistics,n/a,true
+CN-SD,Shandong,village_road_gap,0.1416,,PLACEHOLDER - replace with Ministry of Transport rural-road statistics,n/a,true
+CN-HA,Henan,village_road_gap,0.1582,,PLACEHOLDER - replace with Ministry of Transport rural-road statistics,n/a,true
+CN-HB,Hubei,village_road_gap,0.1460,,PLACEHOLDER - replace with Ministry of Transport rural-road statistics,n/a,true
+CN-HN,Hunan,village_road_gap,0.1115,,PLACEHOLDER - replace with Ministry of Transport rural-road statistics,n/a,true
+CN-GD,Guangdong,village_road_gap,0.0216,,PLACEHOLDER - replace with Ministry of Transport rural-road statistics,n/a,true
+CN-GX,Guangxi,village_road_gap,0.2047,,PLACEHOLDER - replace with Ministry of Transport rural-road statistics,n/a,true
+CN-HI,Hainan,village_road_gap,0.1532,,PLACEHOLDER - replace with Ministry of Transport rural-road statistics,n/a,true
+CN-CQ,Chongqing,village_road_gap,0.1992,,PLACEHOLDER - replace with Ministry of Transport rural-road statistics,n/a,true
+CN-SC,Sichuan,village_road_gap,0.1283,,PLACEHOLDER - replace with Ministry of Transport rural-road statistics,n/a,true
+CN-GZ,Guizhou,village_road_gap,0.1323,,PLACEHOLDER - replace with Ministry of Transport rural-road statistics,n/a,true
+CN-YN,Yunnan,village_road_gap,0.2400,,PLACEHOLDER - replace with Ministry of Transport rural-road statistics,n/a,true
+CN-XZ,Tibet,village_road_gap,0.2630,,PLACEHOLDER - replace with Ministry of Transport rural-road statistics,n/a,true
+CN-SN,Shaanxi,village_road_gap,0.1136,,PLACEHOLDER - replace with Ministry of Transport rural-road statistics,n/a,true
+CN-GS,Gansu,village_road_gap,0.2279,,PLACEHOLDER - replace with Ministry of Transport rural-road statistics,n/a,true
+CN-QH,Qinghai,village_road_gap,0.1959,,PLACEHOLDER - replace with Ministry of Transport rural-road statistics,n/a,true
+CN-NX,Ningxia,village_road_gap,0.1997,,PLACEHOLDER - replace with Ministry of Transport rural-road statistics,n/a,true
+CN-XJ,Xinjiang,village_road_gap,0.1897,,PLACEHOLDER - replace with Ministry of Transport rural-road statistics,n/a,true
+CN-BJ,Beijing,village_clinic_gap,0.0261,,PLACEHOLDER - replace with China Health Statistics Yearbook (NHC),n/a,true
+CN-TJ,Tianjin,village_clinic_gap,0.0023,,PLACEHOLDER - replace with China Health Statistics Yearbook (NHC),n/a,true
+CN-HE,Hebei,village_clinic_gap,0.0646,,PLACEHOLDER - replace with China Health Statistics Yearbook (NHC),n/a,true
+CN-SX,Shanxi,village_clinic_gap,0.0726,,PLACEHOLDER - replace with China Health Statistics Yearbook (NHC),n/a,true
+CN-NM,Inner Mongolia,village_clinic_gap,0.0142,,PLACEHOLDER - replace with China Health Statistics Yearbook (NHC),n/a,true
+CN-LN,Liaoning,village_clinic_gap,0.0677,,PLACEHOLDER - replace with China Health Statistics Yearbook (NHC),n/a,true
+CN-JL,Jilin,village_clinic_gap,0.0267,,PLACEHOLDER - replace with China Health Statistics Yearbook (NHC),n/a,true
+CN-HL,Heilongjiang,village_clinic_gap,0.0873,,PLACEHOLDER - replace with China Health Statistics Yearbook (NHC),n/a,true
+CN-SH,Shanghai,village_clinic_gap,0.0556,,PLACEHOLDER - replace with China Health Statistics Yearbook (NHC),n/a,true
+CN-JS,Jiangsu,village_clinic_gap,0.0341,,PLACEHOLDER - replace with China Health Statistics Yearbook (NHC),n/a,true
+CN-ZJ,Zhejiang,village_clinic_gap,0.0157,,PLACEHOLDER - replace with China Health Statistics Yearbook (NHC),n/a,true
+CN-AH,Anhui,village_clinic_gap,0.0492,,PLACEHOLDER - replace with China Health Statistics Yearbook (NHC),n/a,true
+CN-FJ,Fujian,village_clinic_gap,0.0278,,PLACEHOLDER - replace with China Health Statistics Yearbook (NHC),n/a,true
+CN-JX,Jiangxi,village_clinic_gap,0.0875,,PLACEHOLDER - replace with China Health Statistics Yearbook (NHC),n/a,true
+CN-SD,Shandong,village_clinic_gap,0.0780,,PLACEHOLDER - replace with China Health Statistics Yearbook (NHC),n/a,true
+CN-HA,Henan,village_clinic_gap,0.0710,,PLACEHOLDER - replace with China Health Statistics Yearbook (NHC),n/a,true
+CN-HB,Hubei,village_clinic_gap,0.0541,,PLACEHOLDER - replace with China Health Statistics Yearbook (NHC),n/a,true
+CN-HN,Hunan,village_clinic_gap,0.0605,,PLACEHOLDER - replace with China Health Statistics Yearbook (NHC),n/a,true
+CN-GD,Guangdong,village_clinic_gap,0.0520,,PLACEHOLDER - replace with China Health Statistics Yearbook (NHC),n/a,true
+CN-GX,Guangxi,village_clinic_gap,0.0823,,PLACEHOLDER - replace with China Health Statistics Yearbook (NHC),n/a,true
+CN-HI,Hainan,village_clinic_gap,0.0460,,PLACEHOLDER - replace with China Health Statistics Yearbook (NHC),n/a,true
+CN-CQ,Chongqing,village_clinic_gap,0.0693,,PLACEHOLDER - replace with China Health Statistics Yearbook (NHC),n/a,true
+CN-SC,Sichuan,village_clinic_gap,0.0363,,PLACEHOLDER - replace with China Health Statistics Yearbook (NHC),n/a,true
+CN-GZ,Guizhou,village_clinic_gap,0.0934,,PLACEHOLDER - replace with China Health Statistics Yearbook (NHC),n/a,true
+CN-YN,Yunnan,village_clinic_gap,0.1590,,PLACEHOLDER - replace with China Health Statistics Yearbook (NHC),n/a,true
+CN-XZ,Tibet,village_clinic_gap,0.1181,,PLACEHOLDER - replace with China Health Statistics Yearbook (NHC),n/a,true
+CN-SN,Shaanxi,village_clinic_gap,0.0486,,PLACEHOLDER - replace with China Health Statistics Yearbook (NHC),n/a,true
+CN-GS,Gansu,village_clinic_gap,0.1281,,PLACEHOLDER - replace with China Health Statistics Yearbook (NHC),n/a,true
+CN-QH,Qinghai,village_clinic_gap,0.0843,,PLACEHOLDER - replace with China Health Statistics Yearbook (NHC),n/a,true
+CN-NX,Ningxia,village_clinic_gap,0.1178,,PLACEHOLDER - replace with China Health Statistics Yearbook (NHC),n/a,true
+CN-XJ,Xinjiang,village_clinic_gap,0.1207,,PLACEHOLDER - replace with China Health Statistics Yearbook (NHC),n/a,true
+CN-BJ,Beijing,school_facility_gap,0.0775,,PLACEHOLDER - replace with Ministry of Education statistical bulletin,n/a,true
+CN-TJ,Tianjin,school_facility_gap,0.0289,,PLACEHOLDER - replace with Ministry of Education statistical bulletin,n/a,true
+CN-HE,Hebei,school_facility_gap,0.1634,,PLACEHOLDER - replace with Ministry of Education statistical bulletin,n/a,true
+CN-SX,Shanxi,school_facility_gap,0.1709,,PLACEHOLDER - replace with Ministry of Education statistical bulletin,n/a,true
+CN-NM,Inner Mongolia,school_facility_gap,0.1602,,PLACEHOLDER - replace with Ministry of Education statistical bulletin,n/a,true
+CN-LN,Liaoning,school_facility_gap,0.1499,,PLACEHOLDER - replace with Ministry of Education statistical bulletin,n/a,true
+CN-JL,Jilin,school_facility_gap,0.2002,,PLACEHOLDER - replace with Ministry of Education statistical bulletin,n/a,true
+CN-HL,Heilongjiang,school_facility_gap,0.1849,,PLACEHOLDER - replace with Ministry of Education statistical bulletin,n/a,true
+CN-SH,Shanghai,school_facility_gap,0.0423,,PLACEHOLDER - replace with Ministry of Education statistical bulletin,n/a,true
+CN-JS,Jiangsu,school_facility_gap,0.1212,,PLACEHOLDER - replace with Ministry of Education statistical bulletin,n/a,true
+CN-ZJ,Zhejiang,school_facility_gap,0.0170,,PLACEHOLDER - replace with Ministry of Education statistical bulletin,n/a,true
+CN-AH,Anhui,school_facility_gap,0.1953,,PLACEHOLDER - replace with Ministry of Education statistical bulletin,n/a,true
+CN-FJ,Fujian,school_facility_gap,0.1258,,PLACEHOLDER - replace with Ministry of Education statistical bulletin,n/a,true
+CN-JX,Jiangxi,school_facility_gap,0.1996,,PLACEHOLDER - replace with Ministry of Education statistical bulletin,n/a,true
+CN-SD,Shandong,school_facility_gap,0.1642,,PLACEHOLDER - replace with Ministry of Education statistical bulletin,n/a,true
+CN-HA,Henan,school_facility_gap,0.1391,,PLACEHOLDER - replace with Ministry of Education statistical bulletin,n/a,true
+CN-HB,Hubei,school_facility_gap,0.1314,,PLACEHOLDER - replace with Ministry of Education statistical bulletin,n/a,true
+CN-HN,Hunan,school_facility_gap,0.1792,,PLACEHOLDER - replace with Ministry of Education statistical bulletin,n/a,true
+CN-GD,Guangdong,school_facility_gap,0.1079,,PLACEHOLDER - replace with Ministry of Education statistical bulletin,n/a,true
+CN-GX,Guangxi,school_facility_gap,0.2727,,PLACEHOLDER - replace with Ministry of Education statistical bulletin,n/a,true
+CN-HI,Hainan,school_facility_gap,0.1459,,PLACEHOLDER - replace with Ministry of Education statistical bulletin,n/a,true
+CN-CQ,Chongqing,school_facility_gap,0.1777,,PLACEHOLDER - replace with Ministry of Education statistical bulletin,n/a,true
+CN-SC,Sichuan,school_facility_gap,0.1436,,PLACEHOLDER - replace with Ministry of Education statistical bulletin,n/a,true
+CN-GZ,Guizhou,school_facility_gap,0.2410,,PLACEHOLDER - replace with Ministry of Education statistical bulletin,n/a,true
+CN-YN,Yunnan,school_facility_gap,0.2616,,PLACEHOLDER - replace with Ministry of Education statistical bulletin,n/a,true
+CN-XZ,Tibet,school_facility_gap,0.2863,,PLACEHOLDER - replace with Ministry of Education statistical bulletin,n/a,true
+CN-SN,Shaanxi,school_facility_gap,0.1337,,PLACEHOLDER - replace with Ministry of Education statistical bulletin,n/a,true
+CN-GS,Gansu,school_facility_gap,0.2939,,PLACEHOLDER - replace with Ministry of Education statistical bulletin,n/a,true
+CN-QH,Qinghai,school_facility_gap,0.2478,,PLACEHOLDER - replace with Ministry of Education statistical bulletin,n/a,true
+CN-NX,Ningxia,school_facility_gap,0.2067,,PLACEHOLDER - replace with Ministry of Education statistical bulletin,n/a,true
+CN-XJ,Xinjiang,school_facility_gap,0.1977,,PLACEHOLDER - replace with Ministry of Education statistical bulletin,n/a,true
+CN-BJ,Beijing,power_reliability_gap,0.0266,,PLACEHOLDER - replace with National Energy Administration rural-grid reports,n/a,true
+CN-TJ,Tianjin,power_reliability_gap,0.0281,,PLACEHOLDER - replace with National Energy Administration rural-grid reports,n/a,true
+CN-HE,Hebei,power_reliability_gap,0.0202,,PLACEHOLDER - replace with National Energy Administration rural-grid reports,n/a,true
+CN-SX,Shanxi,power_reliability_gap,0.0465,,PLACEHOLDER - replace with National Energy Administration rural-grid reports,n/a,true
+CN-NM,Inner Mongolia,power_reliability_gap,0.0000,,PLACEHOLDER - replace with National Energy Administration rural-grid reports,n/a,true
+CN-LN,Liaoning,power_reliability_gap,0.0657,,PLACEHOLDER - replace with National Energy Administration rural-grid reports,n/a,true
+CN-JL,Jilin,power_reliability_gap,0.0837,,PLACEHOLDER - replace with National Energy Administration rural-grid reports,n/a,true
+CN-HL,Heilongjiang,power_reliability_gap,0.0762,,PLACEHOLDER - replace with National Energy Administration rural-grid reports,n/a,true
+CN-SH,Shanghai,power_reliability_gap,0.0203,,PLACEHOLDER - replace with National Energy Administration rural-grid reports,n/a,true
+CN-JS,Jiangsu,power_reliability_gap,0.0610,,PLACEHOLDER - replace with National Energy Administration rural-grid reports,n/a,true
+CN-ZJ,Zhejiang,power_reliability_gap,0.0142,,PLACEHOLDER - replace with National Energy Administration rural-grid reports,n/a,true
+CN-AH,Anhui,power_reliability_gap,0.0382,,PLACEHOLDER - replace with National Energy Administration rural-grid reports,n/a,true
+CN-FJ,Fujian,power_reliability_gap,0.0000,,PLACEHOLDER - replace with National Energy Administration rural-grid reports,n/a,true
+CN-JX,Jiangxi,power_reliability_gap,0.0628,,PLACEHOLDER - replace with National Energy Administration rural-grid reports,n/a,true
+CN-SD,Shandong,power_reliability_gap,0.0725,,PLACEHOLDER - replace with National Energy Administration rural-grid reports,n/a,true
+CN-HA,Henan,power_reliability_gap,0.0662,,PLACEHOLDER - replace with National Energy Administration rural-grid reports,n/a,true
+CN-HB,Hubei,power_reliability_gap,0.0752,,PLACEHOLDER - replace with National Energy Administration rural-grid reports,n/a,true
+CN-HN,Hunan,power_reliability_gap,0.0000,,PLACEHOLDER - replace with National Energy Administration rural-grid reports,n/a,true
+CN-GD,Guangdong,power_reliability_gap,0.0297,,PLACEHOLDER - replace with National Energy Administration rural-grid reports,n/a,true
+CN-GX,Guangxi,power_reliability_gap,0.1327,,PLACEHOLDER - replace with National Energy Administration rural-grid reports,n/a,true
+CN-HI,Hainan,power_reliability_gap,0.0161,,PLACEHOLDER - replace with National Energy Administration rural-grid reports,n/a,true
+CN-CQ,Chongqing,power_reliability_gap,0.1232,,PLACEHOLDER - replace with National Energy Administration rural-grid reports,n/a,true
+CN-SC,Sichuan,power_reliability_gap,0.0688,,PLACEHOLDER - replace with National Energy Administration rural-grid reports,n/a,true
+CN-GZ,Guizhou,power_reliability_gap,0.0858,,PLACEHOLDER - replace with National Energy Administration rural-grid reports,n/a,true
+CN-YN,Yunnan,power_reliability_gap,0.1267,,PLACEHOLDER - replace with National Energy Administration rural-grid reports,n/a,true
+CN-XZ,Tibet,power_reliability_gap,0.0772,,PLACEHOLDER - replace with National Energy Administration rural-grid reports,n/a,true
+CN-SN,Shaanxi,power_reliability_gap,0.0000,,PLACEHOLDER - replace with National Energy Administration rural-grid reports,n/a,true
+CN-GS,Gansu,power_reliability_gap,0.0836,,PLACEHOLDER - replace with National Energy Administration rural-grid reports,n/a,true
+CN-QH,Qinghai,power_reliability_gap,0.0717,,PLACEHOLDER - replace with National Energy Administration rural-grid reports,n/a,true
+CN-NX,Ningxia,power_reliability_gap,0.1115,,PLACEHOLDER - replace with National Energy Administration rural-grid reports,n/a,true
+CN-XJ,Xinjiang,power_reliability_gap,0.0713,,PLACEHOLDER - replace with National Energy Administration rural-grid reports,n/a,true
+CN-BJ,Beijing,rural_waste_treatment,0.8703,,PLACEHOLDER - replace with MOHURD urban-rural construction statistical yearbook,n/a,true
+CN-TJ,Tianjin,rural_waste_treatment,0.9032,,PLACEHOLDER - replace with MOHURD urban-rural construction statistical yearbook,n/a,true
+CN-HE,Hebei,rural_waste_treatment,0.7429,,PLACEHOLDER - replace with MOHURD urban-rural construction statistical yearbook,n/a,true
+CN-SX,Shanxi,rural_waste_treatment,0.7314,,PLACEHOLDER - replace with MOHURD urban-rural construction statistical yearbook,n/a,true
+CN-NM,Inner Mongolia,rural_waste_treatment,0.8514,,PLACEHOLDER - replace with MOHURD urban-rural construction statistical yearbook,n/a,true
+CN-LN,Liaoning,rural_waste_treatment,0.7712,,PLACEHOLDER - replace with MOHURD urban-rural construction statistical yearbook,n/a,true
+CN-JL,Jilin,rural_waste_treatment,0.7434,,PLACEHOLDER - replace with MOHURD urban-rural construction statistical yearbook,n/a,true
+CN-HL,Heilongjiang,rural_waste_treatment,0.7336,,PLACEHOLDER - replace with MOHURD urban-rural construction statistical yearbook,n/a,true
+CN-SH,Shanghai,rural_waste_treatment,0.9527,,PLACEHOLDER - replace with MOHURD urban-rural construction statistical yearbook,n/a,true
+CN-JS,Jiangsu,rural_waste_treatment,0.9261,,PLACEHOLDER - replace with MOHURD urban-rural construction statistical yearbook,n/a,true
+CN-ZJ,Zhejiang,rural_waste_treatment,0.8881,,PLACEHOLDER - replace with MOHURD urban-rural construction statistical yearbook,n/a,true
+CN-AH,Anhui,rural_waste_treatment,0.7755,,PLACEHOLDER - replace with MOHURD urban-rural construction statistical yearbook,n/a,true
+CN-FJ,Fujian,rural_waste_treatment,0.8992,,PLACEHOLDER - replace with MOHURD urban-rural construction statistical yearbook,n/a,true
+CN-JX,Jiangxi,rural_waste_treatment,0.7758,,PLACEHOLDER - replace with MOHURD urban-rural construction statistical yearbook,n/a,true
+CN-SD,Shandong,rural_waste_treatment,0.7723,,PLACEHOLDER - replace with MOHURD urban-rural construction statistical yearbook,n/a,true
+CN-HA,Henan,rural_waste_treatment,0.7569,,PLACEHOLDER - replace with MOHURD urban-rural construction statistical yearbook,n/a,true
+CN-HB,Hubei,rural_waste_treatment,0.7953,,PLACEHOLDER - replace with MOHURD urban-rural construction statistical yearbook,n/a,true
+CN-HN,Hunan,rural_waste_treatment,0.7439,,PLACEHOLDER - replace with MOHURD urban-rural construction statistical yearbook,n/a,true
+CN-GD,Guangdong,rural_waste_treatment,0.9119,,PLACEHOLDER - replace with MOHURD urban-rural construction statistical yearbook,n/a,true
+CN-GX,Guangxi,rural_waste_treatment,0.6675,,PLACEHOLDER - replace with MOHURD urban-rural construction statistical yearbook,n/a,true
+CN-HI,Hainan,rural_waste_treatment,0.8337,,PLACEHOLDER - replace with MOHURD urban-rural construction statistical yearbook,n/a,true
+CN-CQ,Chongqing,rural_waste_treatment,0.7272,,PLACEHOLDER - replace with MOHURD urban-rural construction statistical yearbook,n/a,true
+CN-SC,Sichuan,rural_waste_treatment,0.7700,,PLACEHOLDER - replace with MOHURD urban-rural construction statistical yearbook,n/a,true
+CN-GZ,Guizhou,rural_waste_treatment,0.7283,,PLACEHOLDER - replace with MOHURD urban-rural construction statistical yearbook,n/a,true
+CN-YN,Yunnan,rural_waste_treatment,0.6514,,PLACEHOLDER - replace with MOHURD urban-rural construction statistical yearbook,n/a,true
+CN-XZ,Tibet,rural_waste_treatment,0.5882,,PLACEHOLDER - replace with MOHURD urban-rural construction statistical yearbook,n/a,true
+CN-SN,Shaanxi,rural_waste_treatment,0.7995,,PLACEHOLDER - replace with MOHURD urban-rural construction statistical yearbook,n/a,true
+CN-GS,Gansu,rural_waste_treatment,0.5767,,PLACEHOLDER - replace with MOHURD urban-rural construction statistical yearbook,n/a,true
+CN-QH,Qinghai,rural_waste_treatment,0.6473,,PLACEHOLDER - replace with MOHURD urban-rural construction statistical yearbook,n/a,true
+CN-NX,Ningxia,rural_waste_treatment,0.7080,,PLACEHOLDER - replace with MOHURD urban-rural construction statistical yearbook,n/a,true
+CN-XJ,Xinjiang,rural_waste_treatment,0.7040,,PLACEHOLDER - replace with MOHURD urban-rural construction statistical yearbook,n/a,true

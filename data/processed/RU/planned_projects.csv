@@ -1,0 +1,199 @@
+project_id,admin_code,sector,name,budget_m,currency,status,source,synthetic
+PP-RU-AD-water,RU-AD,water,"Water works, Adygea (synthetic)",163,RUB,delayed,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-RU-AD-sanitation,RU-AD,sanitation,"Sanitation works, Adygea (synthetic)",29,RUB,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-RU-AD-education,RU-AD,education,"Education works, Adygea (synthetic)",98,RUB,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-RU-AD-electricity,RU-AD,electricity,"Electricity works, Adygea (synthetic)",35,RUB,delayed,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-RU-AL-sanitation,RU-AL,sanitation,"Sanitation works, Altai Republic (synthetic)",186,RUB,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-RU-AL-roads,RU-AL,roads,"Roads works, Altai Republic (synthetic)",104,RUB,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-RU-AL-electricity,RU-AL,electricity,"Electricity works, Altai Republic (synthetic)",198,RUB,delayed,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-RU-ALT-sanitation,RU-ALT,sanitation,"Sanitation works, Altai Krai (synthetic)",163,RUB,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-RU-ALT-education,RU-ALT,education,"Education works, Altai Krai (synthetic)",82,RUB,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-RU-AMU-water,RU-AMU,water,"Water works, Amur Oblast (synthetic)",29,RUB,delayed,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-RU-AMU-electricity,RU-AMU,electricity,"Electricity works, Amur Oblast (synthetic)",115,RUB,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-RU-AMU-waste,RU-AMU,waste,"Waste works, Amur Oblast (synthetic)",166,RUB,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-RU-ARK-health,RU-ARK,health,"Health works, Arkhangelsk Oblast (synthetic)",105,RUB,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-RU-ARK-education,RU-ARK,education,"Education works, Arkhangelsk Oblast (synthetic)",113,RUB,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-RU-ARK-electricity,RU-ARK,electricity,"Electricity works, Arkhangelsk Oblast (synthetic)",64,RUB,delayed,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-RU-BA-sanitation,RU-BA,sanitation,"Sanitation works, Bashkortostan (synthetic)",36,RUB,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-RU-BA-roads,RU-BA,roads,"Roads works, Bashkortostan (synthetic)",40,RUB,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-RU-BA-education,RU-BA,education,"Education works, Bashkortostan (synthetic)",189,RUB,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-RU-BEL-water,RU-BEL,water,"Water works, Belgorod Oblast (synthetic)",118,RUB,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-RU-BEL-roads,RU-BEL,roads,"Roads works, Belgorod Oblast (synthetic)",146,RUB,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-RU-BEL-health,RU-BEL,health,"Health works, Belgorod Oblast (synthetic)",46,RUB,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-RU-BEL-electricity,RU-BEL,electricity,"Electricity works, Belgorod Oblast (synthetic)",190,RUB,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-RU-BRY-sanitation,RU-BRY,sanitation,"Sanitation works, Bryansk Oblast (synthetic)",182,RUB,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-RU-BRY-roads,RU-BRY,roads,"Roads works, Bryansk Oblast (synthetic)",33,RUB,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-RU-BRY-waste,RU-BRY,waste,"Waste works, Bryansk Oblast (synthetic)",188,RUB,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-RU-BU-health,RU-BU,health,"Health works, Buryatia (synthetic)",12,RUB,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-RU-CE-education,RU-CE,education,"Education works, Chechnya (synthetic)",175,RUB,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-RU-CE-electricity,RU-CE,electricity,"Electricity works, Chechnya (synthetic)",88,RUB,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-RU-CHE-water,RU-CHE,water,"Water works, Chelyabinsk Oblast (synthetic)",186,RUB,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-RU-CHE-health,RU-CHE,health,"Health works, Chelyabinsk Oblast (synthetic)",183,RUB,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-RU-CHU-sanitation,RU-CHU,sanitation,"Sanitation works, Chukotka Autonomous Okrug (synthetic)",167,RUB,delayed,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-RU-CHU-roads,RU-CHU,roads,"Roads works, Chukotka Autonomous Okrug (synthetic)",176,RUB,delayed,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-RU-CU-electricity,RU-CU,electricity,"Electricity works, Chuvashia (synthetic)",46,RUB,delayed,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-RU-CU-waste,RU-CU,waste,"Waste works, Chuvashia (synthetic)",23,RUB,delayed,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-RU-DA-health,RU-DA,health,"Health works, Dagestan (synthetic)",72,RUB,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-RU-DA-education,RU-DA,education,"Education works, Dagestan (synthetic)",44,RUB,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-RU-IN-roads,RU-IN,roads,"Roads works, Ingushetia (synthetic)",98,RUB,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-RU-IN-waste,RU-IN,waste,"Waste works, Ingushetia (synthetic)",25,RUB,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-RU-IRK-water,RU-IRK,water,"Water works, Irkutsk Oblast (synthetic)",28,RUB,delayed,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-RU-IRK-roads,RU-IRK,roads,"Roads works, Irkutsk Oblast (synthetic)",95,RUB,delayed,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-RU-IRK-education,RU-IRK,education,"Education works, Irkutsk Oblast (synthetic)",48,RUB,delayed,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-RU-IVA-roads,RU-IVA,roads,"Roads works, Ivanovo Oblast (synthetic)",29,RUB,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-RU-IVA-education,RU-IVA,education,"Education works, Ivanovo Oblast (synthetic)",69,RUB,delayed,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-RU-IVA-electricity,RU-IVA,electricity,"Electricity works, Ivanovo Oblast (synthetic)",120,RUB,delayed,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-RU-KAM-sanitation,RU-KAM,sanitation,"Sanitation works, Kamchatka Krai (synthetic)",140,RUB,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-RU-KAM-education,RU-KAM,education,"Education works, Kamchatka Krai (synthetic)",147,RUB,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-RU-KB-education,RU-KB,education,"Education works, Kabardino-Balkaria (synthetic)",81,RUB,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-RU-KC-education,RU-KC,education,"Education works, Karachay-Cherkessia (synthetic)",38,RUB,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-RU-KC-electricity,RU-KC,electricity,"Electricity works, Karachay-Cherkessia (synthetic)",132,RUB,delayed,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-RU-KC-waste,RU-KC,waste,"Waste works, Karachay-Cherkessia (synthetic)",107,RUB,delayed,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-RU-KDA-water,RU-KDA,water,"Water works, Krasnodar Krai (synthetic)",13,RUB,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-RU-KDA-electricity,RU-KDA,electricity,"Electricity works, Krasnodar Krai (synthetic)",158,RUB,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-RU-KEM-sanitation,RU-KEM,sanitation,"Sanitation works, Kemerovo Oblast (synthetic)",29,RUB,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-RU-KEM-education,RU-KEM,education,"Education works, Kemerovo Oblast (synthetic)",109,RUB,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-RU-KGD-sanitation,RU-KGD,sanitation,"Sanitation works, Kaliningrad Oblast (synthetic)",104,RUB,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-RU-KGD-roads,RU-KGD,roads,"Roads works, Kaliningrad Oblast (synthetic)",38,RUB,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-RU-KGD-health,RU-KGD,health,"Health works, Kaliningrad Oblast (synthetic)",67,RUB,delayed,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-RU-KGN-water,RU-KGN,water,"Water works, Kurgan Oblast (synthetic)",180,RUB,delayed,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-RU-KGN-health,RU-KGN,health,"Health works, Kurgan Oblast (synthetic)",105,RUB,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-RU-KGN-education,RU-KGN,education,"Education works, Kurgan Oblast (synthetic)",7,RUB,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-RU-KGN-electricity,RU-KGN,electricity,"Electricity works, Kurgan Oblast (synthetic)",87,RUB,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-RU-KHA-water,RU-KHA,water,"Water works, Khabarovsk Krai (synthetic)",179,RUB,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-RU-KHA-waste,RU-KHA,waste,"Waste works, Khabarovsk Krai (synthetic)",108,RUB,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-RU-KHM-sanitation,RU-KHM,sanitation,"Sanitation works, Khanty-Mansi Autonomous Okrug (synthetic)",40,RUB,delayed,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-RU-KHM-roads,RU-KHM,roads,"Roads works, Khanty-Mansi Autonomous Okrug (synthetic)",127,RUB,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-RU-KHM-education,RU-KHM,education,"Education works, Khanty-Mansi Autonomous Okrug (synthetic)",49,RUB,delayed,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-RU-KHM-electricity,RU-KHM,electricity,"Electricity works, Khanty-Mansi Autonomous Okrug (synthetic)",46,RUB,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-RU-KHM-waste,RU-KHM,waste,"Waste works, Khanty-Mansi Autonomous Okrug (synthetic)",167,RUB,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-RU-KIR-sanitation,RU-KIR,sanitation,"Sanitation works, Kirov Oblast (synthetic)",164,RUB,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-RU-KK-sanitation,RU-KK,sanitation,"Sanitation works, Khakassia (synthetic)",122,RUB,delayed,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-RU-KK-health,RU-KK,health,"Health works, Khakassia (synthetic)",16,RUB,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-RU-KK-education,RU-KK,education,"Education works, Khakassia (synthetic)",40,RUB,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-RU-KK-waste,RU-KK,waste,"Waste works, Khakassia (synthetic)",123,RUB,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-RU-KL-water,RU-KL,water,"Water works, Kalmykia (synthetic)",172,RUB,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-RU-KL-education,RU-KL,education,"Education works, Kalmykia (synthetic)",165,RUB,delayed,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-RU-KL-electricity,RU-KL,electricity,"Electricity works, Kalmykia (synthetic)",30,RUB,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-RU-KL-waste,RU-KL,waste,"Waste works, Kalmykia (synthetic)",139,RUB,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-RU-KLU-roads,RU-KLU,roads,"Roads works, Kaluga Oblast (synthetic)",164,RUB,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-RU-KLU-health,RU-KLU,health,"Health works, Kaluga Oblast (synthetic)",143,RUB,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-RU-KLU-electricity,RU-KLU,electricity,"Electricity works, Kaluga Oblast (synthetic)",187,RUB,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-RU-KO-roads,RU-KO,roads,"Roads works, Komi Republic (synthetic)",150,RUB,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-RU-KO-health,RU-KO,health,"Health works, Komi Republic (synthetic)",155,RUB,delayed,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-RU-KOS-roads,RU-KOS,roads,"Roads works, Kostroma Oblast (synthetic)",104,RUB,delayed,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-RU-KOS-health,RU-KOS,health,"Health works, Kostroma Oblast (synthetic)",139,RUB,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-RU-KOS-waste,RU-KOS,waste,"Waste works, Kostroma Oblast (synthetic)",109,RUB,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-RU-KR-water,RU-KR,water,"Water works, Republic of Karelia (synthetic)",187,RUB,delayed,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-RU-KRS-roads,RU-KRS,roads,"Roads works, Kursk Oblast (synthetic)",85,RUB,delayed,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-RU-KRS-electricity,RU-KRS,electricity,"Electricity works, Kursk Oblast (synthetic)",17,RUB,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-RU-KYA-roads,RU-KYA,roads,"Roads works, Krasnoyarsk Krai (synthetic)",185,RUB,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-RU-KYA-health,RU-KYA,health,"Health works, Krasnoyarsk Krai (synthetic)",21,RUB,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-RU-KYA-education,RU-KYA,education,"Education works, Krasnoyarsk Krai (synthetic)",46,RUB,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-RU-LEN-sanitation,RU-LEN,sanitation,"Sanitation works, Leningrad Oblast (synthetic)",170,RUB,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-RU-LEN-roads,RU-LEN,roads,"Roads works, Leningrad Oblast (synthetic)",75,RUB,delayed,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-RU-LEN-education,RU-LEN,education,"Education works, Leningrad Oblast (synthetic)",76,RUB,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-RU-LEN-waste,RU-LEN,waste,"Waste works, Leningrad Oblast (synthetic)",47,RUB,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-RU-LIP-education,RU-LIP,education,"Education works, Lipetsk Oblast (synthetic)",80,RUB,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-RU-LIP-electricity,RU-LIP,electricity,"Electricity works, Lipetsk Oblast (synthetic)",111,RUB,delayed,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-RU-MAG-water,RU-MAG,water,"Water works, Magadan Oblast (synthetic)",171,RUB,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-RU-MAG-health,RU-MAG,health,"Health works, Magadan Oblast (synthetic)",188,RUB,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-RU-ME-water,RU-ME,water,"Water works, Mari El (synthetic)",14,RUB,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-RU-ME-sanitation,RU-ME,sanitation,"Sanitation works, Mari El (synthetic)",160,RUB,delayed,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-RU-ME-health,RU-ME,health,"Health works, Mari El (synthetic)",184,RUB,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-RU-MO-electricity,RU-MO,electricity,"Electricity works, Mordovia (synthetic)",20,RUB,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-RU-MO-waste,RU-MO,waste,"Waste works, Mordovia (synthetic)",154,RUB,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-RU-MOS-sanitation,RU-MOS,sanitation,"Sanitation works, Moscow Oblast (synthetic)",117,RUB,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-RU-MOS-health,RU-MOS,health,"Health works, Moscow Oblast (synthetic)",108,RUB,delayed,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-RU-MOS-education,RU-MOS,education,"Education works, Moscow Oblast (synthetic)",9,RUB,delayed,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-RU-MOS-electricity,RU-MOS,electricity,"Electricity works, Moscow Oblast (synthetic)",125,RUB,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-RU-MOS-waste,RU-MOS,waste,"Waste works, Moscow Oblast (synthetic)",50,RUB,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-RU-MOW-water,RU-MOW,water,"Water works, Moscow (synthetic)",22,RUB,delayed,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-RU-MOW-electricity,RU-MOW,electricity,"Electricity works, Moscow (synthetic)",68,RUB,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-RU-MUR-water,RU-MUR,water,"Water works, Murmansk Oblast (synthetic)",128,RUB,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-RU-MUR-roads,RU-MUR,roads,"Roads works, Murmansk Oblast (synthetic)",62,RUB,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-RU-MUR-waste,RU-MUR,waste,"Waste works, Murmansk Oblast (synthetic)",175,RUB,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-RU-NEN-water,RU-NEN,water,"Water works, Nenets Autonomous Okrug (synthetic)",164,RUB,delayed,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-RU-NGR-water,RU-NGR,water,"Water works, Novgorod Oblast (synthetic)",61,RUB,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-RU-NGR-sanitation,RU-NGR,sanitation,"Sanitation works, Novgorod Oblast (synthetic)",90,RUB,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-RU-NGR-health,RU-NGR,health,"Health works, Novgorod Oblast (synthetic)",142,RUB,delayed,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-RU-NGR-education,RU-NGR,education,"Education works, Novgorod Oblast (synthetic)",103,RUB,delayed,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-RU-NGR-waste,RU-NGR,waste,"Waste works, Novgorod Oblast (synthetic)",70,RUB,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-RU-NIZ-sanitation,RU-NIZ,sanitation,"Sanitation works, Nizhny Novgorod Oblast (synthetic)",71,RUB,delayed,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-RU-OMS-sanitation,RU-OMS,sanitation,"Sanitation works, Omsk Oblast (synthetic)",190,RUB,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-RU-OMS-roads,RU-OMS,roads,"Roads works, Omsk Oblast (synthetic)",130,RUB,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-RU-OMS-education,RU-OMS,education,"Education works, Omsk Oblast (synthetic)",87,RUB,delayed,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-RU-ORE-sanitation,RU-ORE,sanitation,"Sanitation works, Orenburg Oblast (synthetic)",137,RUB,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-RU-ORE-electricity,RU-ORE,electricity,"Electricity works, Orenburg Oblast (synthetic)",26,RUB,delayed,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-RU-ORL-health,RU-ORL,health,"Health works, Oryol Oblast (synthetic)",178,RUB,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-RU-PER-water,RU-PER,water,"Water works, Perm Krai (synthetic)",191,RUB,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-RU-PER-sanitation,RU-PER,sanitation,"Sanitation works, Perm Krai (synthetic)",39,RUB,delayed,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-RU-PER-health,RU-PER,health,"Health works, Perm Krai (synthetic)",88,RUB,delayed,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-RU-PER-electricity,RU-PER,electricity,"Electricity works, Perm Krai (synthetic)",185,RUB,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-RU-PNZ-education,RU-PNZ,education,"Education works, Penza Oblast (synthetic)",82,RUB,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-RU-PNZ-electricity,RU-PNZ,electricity,"Electricity works, Penza Oblast (synthetic)",9,RUB,delayed,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-RU-PRI-water,RU-PRI,water,"Water works, Primorsky Krai (synthetic)",130,RUB,delayed,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-RU-PRI-roads,RU-PRI,roads,"Roads works, Primorsky Krai (synthetic)",25,RUB,delayed,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-RU-PRI-health,RU-PRI,health,"Health works, Primorsky Krai (synthetic)",177,RUB,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-RU-PRI-waste,RU-PRI,waste,"Waste works, Primorsky Krai (synthetic)",160,RUB,delayed,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-RU-PSK-sanitation,RU-PSK,sanitation,"Sanitation works, Pskov Oblast (synthetic)",199,RUB,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-RU-PSK-electricity,RU-PSK,electricity,"Electricity works, Pskov Oblast (synthetic)",98,RUB,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-RU-ROS-water,RU-ROS,water,"Water works, Rostov Oblast (synthetic)",145,RUB,delayed,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-RU-ROS-roads,RU-ROS,roads,"Roads works, Rostov Oblast (synthetic)",170,RUB,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-RU-ROS-electricity,RU-ROS,electricity,"Electricity works, Rostov Oblast (synthetic)",193,RUB,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-RU-RYA-health,RU-RYA,health,"Health works, Ryazan Oblast (synthetic)",84,RUB,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-RU-RYA-waste,RU-RYA,waste,"Waste works, Ryazan Oblast (synthetic)",67,RUB,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-RU-SA-sanitation,RU-SA,sanitation,"Sanitation works, Sakha (Yakutia) (synthetic)",130,RUB,delayed,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-RU-SA-education,RU-SA,education,"Education works, Sakha (Yakutia) (synthetic)",192,RUB,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-RU-SAK-roads,RU-SAK,roads,"Roads works, Sakhalin Oblast (synthetic)",42,RUB,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-RU-SAK-health,RU-SAK,health,"Health works, Sakhalin Oblast (synthetic)",181,RUB,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-RU-SAM-roads,RU-SAM,roads,"Roads works, Samara Oblast (synthetic)",60,RUB,delayed,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-RU-SAM-electricity,RU-SAM,electricity,"Electricity works, Samara Oblast (synthetic)",51,RUB,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-RU-SAR-roads,RU-SAR,roads,"Roads works, Saratov Oblast (synthetic)",88,RUB,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-RU-SAR-health,RU-SAR,health,"Health works, Saratov Oblast (synthetic)",16,RUB,delayed,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-RU-SAR-education,RU-SAR,education,"Education works, Saratov Oblast (synthetic)",168,RUB,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-RU-SAR-electricity,RU-SAR,electricity,"Electricity works, Saratov Oblast (synthetic)",145,RUB,delayed,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-RU-SE-health,RU-SE,health,"Health works, North Ossetia–Alania (synthetic)",164,RUB,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-RU-SMO-health,RU-SMO,health,"Health works, Smolensk Oblast (synthetic)",103,RUB,delayed,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-RU-SPE-electricity,RU-SPE,electricity,"Electricity works, Saint Petersburg (synthetic)",177,RUB,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-RU-STA-sanitation,RU-STA,sanitation,"Sanitation works, Stavropol Krai (synthetic)",75,RUB,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-RU-STA-roads,RU-STA,roads,"Roads works, Stavropol Krai (synthetic)",72,RUB,delayed,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-RU-SVE-water,RU-SVE,water,"Water works, Sverdlovsk Oblast (synthetic)",41,RUB,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-RU-SVE-roads,RU-SVE,roads,"Roads works, Sverdlovsk Oblast (synthetic)",85,RUB,delayed,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-RU-SVE-education,RU-SVE,education,"Education works, Sverdlovsk Oblast (synthetic)",91,RUB,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-RU-TA-water,RU-TA,water,"Water works, Tatarstan (synthetic)",180,RUB,delayed,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-RU-TA-waste,RU-TA,waste,"Waste works, Tatarstan (synthetic)",33,RUB,delayed,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-RU-TAM-sanitation,RU-TAM,sanitation,"Sanitation works, Tambov Oblast (synthetic)",162,RUB,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-RU-TAM-health,RU-TAM,health,"Health works, Tambov Oblast (synthetic)",193,RUB,delayed,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-RU-TAM-electricity,RU-TAM,electricity,"Electricity works, Tambov Oblast (synthetic)",63,RUB,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-RU-TOM-roads,RU-TOM,roads,"Roads works, Tomsk Oblast (synthetic)",135,RUB,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-RU-TOM-electricity,RU-TOM,electricity,"Electricity works, Tomsk Oblast (synthetic)",61,RUB,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-RU-TOM-waste,RU-TOM,waste,"Waste works, Tomsk Oblast (synthetic)",71,RUB,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-RU-TUL-water,RU-TUL,water,"Water works, Tula Oblast (synthetic)",80,RUB,delayed,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-RU-TVE-health,RU-TVE,health,"Health works, Tver Oblast (synthetic)",84,RUB,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-RU-TVE-education,RU-TVE,education,"Education works, Tver Oblast (synthetic)",89,RUB,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-RU-TVE-waste,RU-TVE,waste,"Waste works, Tver Oblast (synthetic)",152,RUB,delayed,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-RU-TY-water,RU-TY,water,"Water works, Tuva (synthetic)",79,RUB,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-RU-TY-health,RU-TY,health,"Health works, Tuva (synthetic)",141,RUB,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-RU-UD-sanitation,RU-UD,sanitation,"Sanitation works, Udmurtia (synthetic)",48,RUB,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-RU-UD-health,RU-UD,health,"Health works, Udmurtia (synthetic)",118,RUB,delayed,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-RU-UD-waste,RU-UD,waste,"Waste works, Udmurtia (synthetic)",117,RUB,delayed,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-RU-VGG-roads,RU-VGG,roads,"Roads works, Volgograd Oblast (synthetic)",38,RUB,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-RU-VGG-electricity,RU-VGG,electricity,"Electricity works, Volgograd Oblast (synthetic)",186,RUB,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-RU-VGG-waste,RU-VGG,waste,"Waste works, Volgograd Oblast (synthetic)",161,RUB,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-RU-VLA-waste,RU-VLA,waste,"Waste works, Vladimir Oblast (synthetic)",24,RUB,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-RU-VLG-roads,RU-VLG,roads,"Roads works, Vologda Oblast (synthetic)",39,RUB,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-RU-VLG-health,RU-VLG,health,"Health works, Vologda Oblast (synthetic)",119,RUB,delayed,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-RU-VLG-education,RU-VLG,education,"Education works, Vologda Oblast (synthetic)",140,RUB,delayed,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-RU-VOR-water,RU-VOR,water,"Water works, Voronezh Oblast (synthetic)",31,RUB,delayed,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-RU-VOR-sanitation,RU-VOR,sanitation,"Sanitation works, Voronezh Oblast (synthetic)",186,RUB,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-RU-VOR-health,RU-VOR,health,"Health works, Voronezh Oblast (synthetic)",71,RUB,delayed,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-RU-VOR-education,RU-VOR,education,"Education works, Voronezh Oblast (synthetic)",40,RUB,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-RU-VOR-waste,RU-VOR,waste,"Waste works, Voronezh Oblast (synthetic)",185,RUB,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-RU-YAN-electricity,RU-YAN,electricity,"Electricity works, Yamalo-Nenets Autonomous Okrug (synthetic)",173,RUB,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-RU-YAR-health,RU-YAR,health,"Health works, Yaroslavl Oblast (synthetic)",190,RUB,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-RU-YEV-education,RU-YEV,education,"Education works, Jewish Autonomous Oblast (synthetic)",63,RUB,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-RU-YEV-electricity,RU-YEV,electricity,"Electricity works, Jewish Autonomous Oblast (synthetic)",107,RUB,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-RU-YEV-waste,RU-YEV,waste,"Waste works, Jewish Autonomous Oblast (synthetic)",16,RUB,delayed,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-RU-ZAB-health,RU-ZAB,health,"Health works, Zabaykalsky Krai (synthetic)",101,RUB,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-RU-ZAB-education,RU-ZAB,education,"Education works, Zabaykalsky Krai (synthetic)",175,RUB,delayed,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true

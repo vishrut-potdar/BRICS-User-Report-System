@@ -8,3 +8,4 @@ data/store
 frontend/README.md
 docs
 backend/tests
+data/cache

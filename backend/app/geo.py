@@ -9,6 +9,7 @@ from __future__ import annotations
 import logging
 import math
 import re
+import unicodedata
 from typing import Sequence
 
 import h3
@@ -43,6 +44,20 @@ def _in_polygon(lon: float, lat: float, polygon: Polygon) -> bool:
     return bool(polygon) and _in_ring(lon, lat, polygon[0]) and not any(_in_ring(lon, lat, h) for h in polygon[1:])
 
 
+def _fold(text: str) -> str:
+    """Casefold and drop accents on Latin letters, so "Maceio" matches "Maceió" and "Sao Paulo" matches "São Paulo".
+    Marks on other scripts (Devanagari vowel signs, for instance) are kept."""
+    out, latin_base = [], False
+    for ch in unicodedata.normalize("NFKD", text.casefold()):
+        if unicodedata.combining(ch):
+            if latin_base:
+                continue
+        else:
+            latin_base = ch.isascii()
+        out.append(ch)
+    return unicodedata.normalize("NFC", "".join(out))
+
+
 def _km(lat1: float, lon1: float, lat2: float, lon2: float) -> float:
     p1, p2 = math.radians(lat1), math.radians(lat2)
     dp, dl = p2 - p1, math.radians(lon2 - lon1)
@@ -55,14 +70,19 @@ class GeoResolver:
         self._ctx = ctx
         self._maps_key = maps_api_key
         self._http = http or httpx.Client(timeout=10.0)
+        self._aliases = self._compile((a, code) for code, info in ctx.info.items() for a in info.aliases)
+        self._weak = self._compile((a, code) for code, info in ctx.info.items() for a in info.weak_aliases)
+
+    @staticmethod
+    def _compile(pairs) -> list[tuple[str, re.Pattern[str] | None, str]]:
         aliases = []
-        for code, info in ctx.info.items():
-            for alias in info.aliases:
-                folded = alias.casefold()
-                # Latin names need word boundaries ("Beed" must not match "breed"); Devanagari is matched as-is.
-                pattern = re.compile(rf"(?<![a-z]){re.escape(folded)}(?![a-z])") if folded.isascii() else None
-                aliases.append((folded, pattern, code))
-        self._aliases = sorted(aliases, key=lambda a: -len(a[0]))  # longest match wins: "Mumbai Suburban" > "Mumbai"
+        for alias, code in pairs:
+            folded = _fold(alias)
+            # Latin names need word boundaries ("Beed" must not match "breed"). Other scripts are matched as
+            # substrings: Chinese has no spaces, and Russian and Marathi inflect place names ("в Кызыле").
+            pattern = re.compile(rf"(?<![a-z]){re.escape(folded)}(?![a-z])") if folded.isascii() else None
+            aliases.append((folded, pattern, code))
+        return sorted(aliases, key=lambda a: -len(a[0]))  # longest match wins: "Mumbai Suburban" > "Mumbai"
 
     def district_for_point(self, lat: float, lon: float) -> str | None:
         if self._ctx.boundaries:
@@ -76,20 +96,25 @@ class GeoResolver:
             return None
         return best.admin_code
 
-    def match_gazetteer(self, texts: Sequence[str]) -> str | None:
+    def match_gazetteer(self, texts: Sequence[str], *, allow_weak: bool = False) -> str | None:
+        """First alias found. Weak aliases ("Pilar", "North West") are only tried when the texts are place
+        mentions or a district guess, never a free-text transcript."""
+        tables = [self._aliases, self._weak] if allow_weak else [self._aliases]
         for text in texts:
-            folded = (text or "").casefold()
+            folded = _fold(text or "")
             if not folded:
                 continue
-            for alias, pattern, code in self._aliases:
-                if (pattern.search(folded) if pattern else alias in folded):
-                    return code
+            for table in tables:
+                for alias, pattern, code in table:
+                    if (pattern.search(folded) if pattern else alias in folded):
+                        return code
         return None
 
     def _geocode(self, query: str) -> tuple[float, float, bool] | None:
         params = {
             "address": query,
-            "components": f"country:{self._ctx.country}|administrative_area:{self._ctx.region_name}",
+            "components": f"country:{self._ctx.country}"
+            + (f"|administrative_area:{self._ctx.region_name}" if self._ctx.level == "region" else ""),
             "key": self._maps_key,
         }
         try:
@@ -133,7 +158,7 @@ class GeoResolver:
         if lat is not None and lon is not None:
             return self._point_geo(lat, lon, confidence="A", method="gps", location_text=location_text)
 
-        gazetteer_code = self.match_gazetteer([district_guess or "", *mentions, transcript])
+        gazetteer_code = self.match_gazetteer([district_guess or "", *mentions], allow_weak=True) or self.match_gazetteer([transcript])
         if self._maps_key and mentions:
             query = ", ".join(mentions + ([self._ctx.info[gazetteer_code].name] if gazetteer_code else []))
             hit = self._geocode(query)

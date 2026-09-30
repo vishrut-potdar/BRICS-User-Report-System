@@ -1,27 +1,41 @@
-# frontend (owner: frontend and design)
+# frontend
 
-`index.html` is a single-file dashboard with no build step. The FastAPI app serves it at `/`, so it calls the
-API from the same origin (and the Cloud Run image ships both). Opened straight from disk, it tries
-`http://127.0.0.1:8000` and falls back to built-in demo data if the API is not running.
+Two static pages with no build step, served by the FastAPI app, so they call the API from the same origin. The Cloud
+Run image ships them with the API.
 
-What is live: rankings and score breakdowns, the heat map (cluster centroids), top issue per district, silent
-districts, headline counts, and the citizen-app preview, which files real requests through `POST /ingest` (text, or a
-recorded voice note, which needs Gemini). What is still on-screen only: "Simulate request", the spam-burst test,
-and status/approve/notify, because the API has no endpoints for them yet. The "Volume" preset uses client-side
-weights (demand-heavy) rather than the API's `volume_only` message count.
+| File | Route | For |
+|---|---|---|
+| `index.html` | `/` | Citizen complaint portal |
+| `admin.html` | `/admin` | Government dashboard |
+| `app.css` | `/static/app.css` | Shared tokens and components |
 
-The API contract it builds on (interactive docs at `/docs` on the backend):
+## Citizen portal
+
+- First visit: pick a country. The portal is locked to it (browser storage) until the citizen presses "Change country".
+- Pick the state, and the district or city where the country has district data. The choice is remembered as
+  "Your area" for next time.
+- Optional category, a description (text, or voice when the server runs Gemini) and optional GPS →
+  `POST /ingest {pack, admin_code, category, text | audio_base64, lat, lon, sender_id}`.
+- Shows the tracking ID and the acknowledgement in the citizen's language. `GET /track/{id}` shows status.
+- "Administrative side" in the header opens `/admin` for the same country.
+
+## Government dashboard
+
+- Country picker, then locked, as on the portal. State and district selections are remembered.
+- Picking a state zooms to it. When a pilot pack covers that state (`parent` in `/packs`), the map switches to its
+  district boundaries. Picking a district zooms again. Other units are dimmed; the heat map, pins, ranking and
+  counters show only the selected area. Clicking the map or the breadcrumb does the same.
+- Rankings are recomputed in the browser from each cluster's `components` with the same linear formula as the API,
+  so switching presets is instant. "Volume" uses demand-heavy weights for the comparison arrows.
+- Status and "Approve and forward" call `POST /clusters/{id}/status`, which updates every request in the cluster.
 
 | Screen | Endpoint |
 |---|---|
-| Ranked list and map | `GET /rankings?preset=balanced\|equity_first\|volume_only&limit=20` (+ `demand`, `need`, `equity`, `alignment`, `urgency` weight overrides) |
-| Weight slider / presets | same endpoint; `GET /meta` → `presets`, `components` |
-| Score waterfall | each ranking item: `contributions` (weight × component), `integrity_penalty`, `score` |
-| "Robust" badge | `robust: true` (stays top-10 under ±20% weight changes) |
-| Project detail | `GET /clusters/{cluster_id}` → redacted request summaries, integrity flags |
-| Volume vs equity headline | `GET /rankings/compare?a=volume_only&b=equity_first&k=10` |
-| Silent districts panel | `GET /districts/silent?k=5` |
-| District layer | `GET /districts`, `GET /export/aggregates.geojson?level=district\|h3` |
-| Synthetic labels | `synthetic_share` on items; `GET /meta` → `synthetic_indicators`, `placeholder_metrics` |
+| Country list, drill-down | `GET /packs` (`level`, `parent`), `GET /meta?pack=` → `units` |
+| Map | `GET /boundaries?pack=` (GeoJSON), `GET /rankings?pack=&preset=volume_only` for heat |
+| Ranking, score breakdown | `GET /rankings?pack=&preset=balanced&limit=5000&sensitivity=false` |
+| Counters | `GET /districts?pack=` (`n_requests`, `n_requesters`, `n_resolved`) |
+| Silent areas | `GET /districts/silent?pack=` |
+| Open data | `GET /export/aggregates.csv?pack=` |
 
-Every record in the demo dataset is synthetic. Show that on screen.
+Every record in the demo dataset is synthetic, and the pages say so.

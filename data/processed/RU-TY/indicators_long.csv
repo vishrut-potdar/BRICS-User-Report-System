@@ -1,0 +1,153 @@
+admin_code,district_name,metric,value,year,source,licence,placeholder
+RU-TY-KYZYL_CITY,Kyzyl,poverty_rate,0.0321,,"PLACEHOLDER - replace with Rosstat, 'Level of poverty by region' (rosstat.gov.ru)",n/a,true
+RU-TY-AK_DOVURAK,Ak-Dovurak,poverty_rate,0.1408,,"PLACEHOLDER - replace with Rosstat, 'Level of poverty by region' (rosstat.gov.ru)",n/a,true
+RU-TY-KYZYL_KOZHUUN,Kyzyl kozhuun,poverty_rate,0.1041,,"PLACEHOLDER - replace with Rosstat, 'Level of poverty by region' (rosstat.gov.ru)",n/a,true
+RU-TY-BAI_TAIGA,Bai-Taiga kozhuun,poverty_rate,0.2758,,"PLACEHOLDER - replace with Rosstat, 'Level of poverty by region' (rosstat.gov.ru)",n/a,true
+RU-TY-BARUN_KHEMCHIK,Barun-Khemchik kozhuun,poverty_rate,0.2086,,"PLACEHOLDER - replace with Rosstat, 'Level of poverty by region' (rosstat.gov.ru)",n/a,true
+RU-TY-CHAA_KHOL,Chaa-Khol kozhuun,poverty_rate,0.2412,,"PLACEHOLDER - replace with Rosstat, 'Level of poverty by region' (rosstat.gov.ru)",n/a,true
+RU-TY-CHEDI_KHOL,Chedi-Khol kozhuun,poverty_rate,0.1741,,"PLACEHOLDER - replace with Rosstat, 'Level of poverty by region' (rosstat.gov.ru)",n/a,true
+RU-TY-DZUN_KHEMCHIK,Dzun-Khemchik kozhuun,poverty_rate,0.1530,,"PLACEHOLDER - replace with Rosstat, 'Level of poverty by region' (rosstat.gov.ru)",n/a,true
+RU-TY-ERZIN,Erzin kozhuun,poverty_rate,0.2635,,"PLACEHOLDER - replace with Rosstat, 'Level of poverty by region' (rosstat.gov.ru)",n/a,true
+RU-TY-KAA_KHEM,Kaa-Khem kozhuun,poverty_rate,0.2035,,"PLACEHOLDER - replace with Rosstat, 'Level of poverty by region' (rosstat.gov.ru)",n/a,true
+RU-TY-MONGUN_TAIGA,Mongun-Taiga kozhuun,poverty_rate,0.2517,,"PLACEHOLDER - replace with Rosstat, 'Level of poverty by region' (rosstat.gov.ru)",n/a,true
+RU-TY-OVYUR,Ovyur kozhuun,poverty_rate,0.2312,,"PLACEHOLDER - replace with Rosstat, 'Level of poverty by region' (rosstat.gov.ru)",n/a,true
+RU-TY-PIY_KHEM,Piy-Khem kozhuun,poverty_rate,0.1571,,"PLACEHOLDER - replace with Rosstat, 'Level of poverty by region' (rosstat.gov.ru)",n/a,true
+RU-TY-SUT_KHOL,Sut-Khol kozhuun,poverty_rate,0.2713,,"PLACEHOLDER - replace with Rosstat, 'Level of poverty by region' (rosstat.gov.ru)",n/a,true
+RU-TY-TANDY,Tandy kozhuun,poverty_rate,0.1309,,"PLACEHOLDER - replace with Rosstat, 'Level of poverty by region' (rosstat.gov.ru)",n/a,true
+RU-TY-TERE_KHOL,Tere-Khol kozhuun,poverty_rate,0.2188,,"PLACEHOLDER - replace with Rosstat, 'Level of poverty by region' (rosstat.gov.ru)",n/a,true
+RU-TY-TES_KHEM,Tes-Khem kozhuun,poverty_rate,0.2750,,"PLACEHOLDER - replace with Rosstat, 'Level of poverty by region' (rosstat.gov.ru)",n/a,true
+RU-TY-TODZHA,Todzha kozhuun,poverty_rate,0.2287,,"PLACEHOLDER - replace with Rosstat, 'Level of poverty by region' (rosstat.gov.ru)",n/a,true
+RU-TY-ULUG_KHEM,Ulug-Khem kozhuun,poverty_rate,0.1733,,"PLACEHOLDER - replace with Rosstat, 'Level of poverty by region' (rosstat.gov.ru)",n/a,true
+RU-TY-KYZYL_CITY,Kyzyl,central_water_supply,0.9266,,PLACEHOLDER - replace with Rosstat housing-stock amenities (Жилищное хозяйство),n/a,true
+RU-TY-AK_DOVURAK,Ak-Dovurak,central_water_supply,0.7063,,PLACEHOLDER - replace with Rosstat housing-stock amenities (Жилищное хозяйство),n/a,true
+RU-TY-KYZYL_KOZHUUN,Kyzyl kozhuun,central_water_supply,0.7519,,PLACEHOLDER - replace with Rosstat housing-stock amenities (Жилищное хозяйство),n/a,true
+RU-TY-BAI_TAIGA,Bai-Taiga kozhuun,central_water_supply,0.5371,,PLACEHOLDER - replace with Rosstat housing-stock amenities (Жилищное хозяйство),n/a,true
+RU-TY-BARUN_KHEMCHIK,Barun-Khemchik kozhuun,central_water_supply,0.6868,,PLACEHOLDER - replace with Rosstat housing-stock amenities (Жилищное хозяйство),n/a,true
+RU-TY-CHAA_KHOL,Chaa-Khol kozhuun,central_water_supply,0.6435,,PLACEHOLDER - replace with Rosstat housing-stock amenities (Жилищное хозяйство),n/a,true
+RU-TY-CHEDI_KHOL,Chedi-Khol kozhuun,central_water_supply,0.7385,,PLACEHOLDER - replace with Rosstat housing-stock amenities (Жилищное хозяйство),n/a,true
+RU-TY-DZUN_KHEMCHIK,Dzun-Khemchik kozhuun,central_water_supply,0.7392,,PLACEHOLDER - replace with Rosstat housing-stock amenities (Жилищное хозяйство),n/a,true
+RU-TY-ERZIN,Erzin kozhuun,central_water_supply,0.6974,,PLACEHOLDER - replace with Rosstat housing-stock amenities (Жилищное хозяйство),n/a,true
+RU-TY-KAA_KHEM,Kaa-Khem kozhuun,central_water_supply,0.8239,,PLACEHOLDER - replace with Rosstat housing-stock amenities (Жилищное хозяйство),n/a,true
+RU-TY-MONGUN_TAIGA,Mongun-Taiga kozhuun,central_water_supply,0.5460,,PLACEHOLDER - replace with Rosstat housing-stock amenities (Жилищное хозяйство),n/a,true
+RU-TY-OVYUR,Ovyur kozhuun,central_water_supply,0.6109,,PLACEHOLDER - replace with Rosstat housing-stock amenities (Жилищное хозяйство),n/a,true
+RU-TY-PIY_KHEM,Piy-Khem kozhuun,central_water_supply,0.7662,,PLACEHOLDER - replace with Rosstat housing-stock amenities (Жилищное хозяйство),n/a,true
+RU-TY-SUT_KHOL,Sut-Khol kozhuun,central_water_supply,0.5251,,PLACEHOLDER - replace with Rosstat housing-stock amenities (Жилищное хозяйство),n/a,true
+RU-TY-TANDY,Tandy kozhuun,central_water_supply,0.7083,,PLACEHOLDER - replace with Rosstat housing-stock amenities (Жилищное хозяйство),n/a,true
+RU-TY-TERE_KHOL,Tere-Khol kozhuun,central_water_supply,0.5766,,PLACEHOLDER - replace with Rosstat housing-stock amenities (Жилищное хозяйство),n/a,true
+RU-TY-TES_KHEM,Tes-Khem kozhuun,central_water_supply,0.5877,,PLACEHOLDER - replace with Rosstat housing-stock amenities (Жилищное хозяйство),n/a,true
+RU-TY-TODZHA,Todzha kozhuun,central_water_supply,0.5805,,PLACEHOLDER - replace with Rosstat housing-stock amenities (Жилищное хозяйство),n/a,true
+RU-TY-ULUG_KHEM,Ulug-Khem kozhuun,central_water_supply,0.6850,,PLACEHOLDER - replace with Rosstat housing-stock amenities (Жилищное хозяйство),n/a,true
+RU-TY-KYZYL_CITY,Kyzyl,sewerage_share,0.9399,,PLACEHOLDER - replace with Rosstat housing-stock amenities,n/a,true
+RU-TY-AK_DOVURAK,Ak-Dovurak,sewerage_share,0.6604,,PLACEHOLDER - replace with Rosstat housing-stock amenities,n/a,true
+RU-TY-KYZYL_KOZHUUN,Kyzyl kozhuun,sewerage_share,0.6924,,PLACEHOLDER - replace with Rosstat housing-stock amenities,n/a,true
+RU-TY-BAI_TAIGA,Bai-Taiga kozhuun,sewerage_share,0.4609,,PLACEHOLDER - replace with Rosstat housing-stock amenities,n/a,true
+RU-TY-BARUN_KHEMCHIK,Barun-Khemchik kozhuun,sewerage_share,0.6592,,PLACEHOLDER - replace with Rosstat housing-stock amenities,n/a,true
+RU-TY-CHAA_KHOL,Chaa-Khol kozhuun,sewerage_share,0.5026,,PLACEHOLDER - replace with Rosstat housing-stock amenities,n/a,true
+RU-TY-CHEDI_KHOL,Chedi-Khol kozhuun,sewerage_share,0.6451,,PLACEHOLDER - replace with Rosstat housing-stock amenities,n/a,true
+RU-TY-DZUN_KHEMCHIK,Dzun-Khemchik kozhuun,sewerage_share,0.6493,,PLACEHOLDER - replace with Rosstat housing-stock amenities,n/a,true
+RU-TY-ERZIN,Erzin kozhuun,sewerage_share,0.5501,,PLACEHOLDER - replace with Rosstat housing-stock amenities,n/a,true
+RU-TY-KAA_KHEM,Kaa-Khem kozhuun,sewerage_share,0.6727,,PLACEHOLDER - replace with Rosstat housing-stock amenities,n/a,true
+RU-TY-MONGUN_TAIGA,Mongun-Taiga kozhuun,sewerage_share,0.4936,,PLACEHOLDER - replace with Rosstat housing-stock amenities,n/a,true
+RU-TY-OVYUR,Ovyur kozhuun,sewerage_share,0.4928,,PLACEHOLDER - replace with Rosstat housing-stock amenities,n/a,true
+RU-TY-PIY_KHEM,Piy-Khem kozhuun,sewerage_share,0.6351,,PLACEHOLDER - replace with Rosstat housing-stock amenities,n/a,true
+RU-TY-SUT_KHOL,Sut-Khol kozhuun,sewerage_share,0.4082,,PLACEHOLDER - replace with Rosstat housing-stock amenities,n/a,true
+RU-TY-TANDY,Tandy kozhuun,sewerage_share,0.6535,,PLACEHOLDER - replace with Rosstat housing-stock amenities,n/a,true
+RU-TY-TERE_KHOL,Tere-Khol kozhuun,sewerage_share,0.4639,,PLACEHOLDER - replace with Rosstat housing-stock amenities,n/a,true
+RU-TY-TES_KHEM,Tes-Khem kozhuun,sewerage_share,0.3472,,PLACEHOLDER - replace with Rosstat housing-stock amenities,n/a,true
+RU-TY-TODZHA,Todzha kozhuun,sewerage_share,0.5129,,PLACEHOLDER - replace with Rosstat housing-stock amenities,n/a,true
+RU-TY-ULUG_KHEM,Ulug-Khem kozhuun,sewerage_share,0.5816,,PLACEHOLDER - replace with Rosstat housing-stock amenities,n/a,true
+RU-TY-KYZYL_CITY,Kyzyl,road_substandard_share,0.3701,,PLACEHOLDER - replace with Rosavtodor / 'Safe Quality Roads' national project reports,n/a,true
+RU-TY-AK_DOVURAK,Ak-Dovurak,road_substandard_share,0.4918,,PLACEHOLDER - replace with Rosavtodor / 'Safe Quality Roads' national project reports,n/a,true
+RU-TY-KYZYL_KOZHUUN,Kyzyl kozhuun,road_substandard_share,0.4771,,PLACEHOLDER - replace with Rosavtodor / 'Safe Quality Roads' national project reports,n/a,true
+RU-TY-BAI_TAIGA,Bai-Taiga kozhuun,road_substandard_share,0.5928,,PLACEHOLDER - replace with Rosavtodor / 'Safe Quality Roads' national project reports,n/a,true
+RU-TY-BARUN_KHEMCHIK,Barun-Khemchik kozhuun,road_substandard_share,0.4985,,PLACEHOLDER - replace with Rosavtodor / 'Safe Quality Roads' national project reports,n/a,true
+RU-TY-CHAA_KHOL,Chaa-Khol kozhuun,road_substandard_share,0.6046,,PLACEHOLDER - replace with Rosavtodor / 'Safe Quality Roads' national project reports,n/a,true
+RU-TY-CHEDI_KHOL,Chedi-Khol kozhuun,road_substandard_share,0.4784,,PLACEHOLDER - replace with Rosavtodor / 'Safe Quality Roads' national project reports,n/a,true
+RU-TY-DZUN_KHEMCHIK,Dzun-Khemchik kozhuun,road_substandard_share,0.4781,,PLACEHOLDER - replace with Rosavtodor / 'Safe Quality Roads' national project reports,n/a,true
+RU-TY-ERZIN,Erzin kozhuun,road_substandard_share,0.5251,,PLACEHOLDER - replace with Rosavtodor / 'Safe Quality Roads' national project reports,n/a,true
+RU-TY-KAA_KHEM,Kaa-Khem kozhuun,road_substandard_share,0.4354,,PLACEHOLDER - replace with Rosavtodor / 'Safe Quality Roads' national project reports,n/a,true
+RU-TY-MONGUN_TAIGA,Mongun-Taiga kozhuun,road_substandard_share,0.5925,,PLACEHOLDER - replace with Rosavtodor / 'Safe Quality Roads' national project reports,n/a,true
+RU-TY-OVYUR,Ovyur kozhuun,road_substandard_share,0.5948,,PLACEHOLDER - replace with Rosavtodor / 'Safe Quality Roads' national project reports,n/a,true
+RU-TY-PIY_KHEM,Piy-Khem kozhuun,road_substandard_share,0.4356,,PLACEHOLDER - replace with Rosavtodor / 'Safe Quality Roads' national project reports,n/a,true
+RU-TY-SUT_KHOL,Sut-Khol kozhuun,road_substandard_share,0.6887,,PLACEHOLDER - replace with Rosavtodor / 'Safe Quality Roads' national project reports,n/a,true
+RU-TY-TANDY,Tandy kozhuun,road_substandard_share,0.4349,,PLACEHOLDER - replace with Rosavtodor / 'Safe Quality Roads' national project reports,n/a,true
+RU-TY-TERE_KHOL,Tere-Khol kozhuun,road_substandard_share,0.6239,,PLACEHOLDER - replace with Rosavtodor / 'Safe Quality Roads' national project reports,n/a,true
+RU-TY-TES_KHEM,Tes-Khem kozhuun,road_substandard_share,0.6094,,PLACEHOLDER - replace with Rosavtodor / 'Safe Quality Roads' national project reports,n/a,true
+RU-TY-TODZHA,Todzha kozhuun,road_substandard_share,0.5703,,PLACEHOLDER - replace with Rosavtodor / 'Safe Quality Roads' national project reports,n/a,true
+RU-TY-ULUG_KHEM,Ulug-Khem kozhuun,road_substandard_share,0.5711,,PLACEHOLDER - replace with Rosavtodor / 'Safe Quality Roads' national project reports,n/a,true
+RU-TY-KYZYL_CITY,Kyzyl,medical_post_gap,0.0973,,PLACEHOLDER - replace with Ministry of Health primary-care modernisation reports; Rosstat municipal database,n/a,true
+RU-TY-AK_DOVURAK,Ak-Dovurak,medical_post_gap,0.1780,,PLACEHOLDER - replace with Ministry of Health primary-care modernisation reports; Rosstat municipal database,n/a,true
+RU-TY-KYZYL_KOZHUUN,Kyzyl kozhuun,medical_post_gap,0.1716,,PLACEHOLDER - replace with Ministry of Health primary-care modernisation reports; Rosstat municipal database,n/a,true
+RU-TY-BAI_TAIGA,Bai-Taiga kozhuun,medical_post_gap,0.2810,,PLACEHOLDER - replace with Ministry of Health primary-care modernisation reports; Rosstat municipal database,n/a,true
+RU-TY-BARUN_KHEMCHIK,Barun-Khemchik kozhuun,medical_post_gap,0.1935,,PLACEHOLDER - replace with Ministry of Health primary-care modernisation reports; Rosstat municipal database,n/a,true
+RU-TY-CHAA_KHOL,Chaa-Khol kozhuun,medical_post_gap,0.2741,,PLACEHOLDER - replace with Ministry of Health primary-care modernisation reports; Rosstat municipal database,n/a,true
+RU-TY-CHEDI_KHOL,Chedi-Khol kozhuun,medical_post_gap,0.1934,,PLACEHOLDER - replace with Ministry of Health primary-care modernisation reports; Rosstat municipal database,n/a,true
+RU-TY-DZUN_KHEMCHIK,Dzun-Khemchik kozhuun,medical_post_gap,0.1671,,PLACEHOLDER - replace with Ministry of Health primary-care modernisation reports; Rosstat municipal database,n/a,true
+RU-TY-ERZIN,Erzin kozhuun,medical_post_gap,0.2772,,PLACEHOLDER - replace with Ministry of Health primary-care modernisation reports; Rosstat municipal database,n/a,true
+RU-TY-KAA_KHEM,Kaa-Khem kozhuun,medical_post_gap,0.1730,,PLACEHOLDER - replace with Ministry of Health primary-care modernisation reports; Rosstat municipal database,n/a,true
+RU-TY-MONGUN_TAIGA,Mongun-Taiga kozhuun,medical_post_gap,0.3161,,PLACEHOLDER - replace with Ministry of Health primary-care modernisation reports; Rosstat municipal database,n/a,true
+RU-TY-OVYUR,Ovyur kozhuun,medical_post_gap,0.3065,,PLACEHOLDER - replace with Ministry of Health primary-care modernisation reports; Rosstat municipal database,n/a,true
+RU-TY-PIY_KHEM,Piy-Khem kozhuun,medical_post_gap,0.1609,,PLACEHOLDER - replace with Ministry of Health primary-care modernisation reports; Rosstat municipal database,n/a,true
+RU-TY-SUT_KHOL,Sut-Khol kozhuun,medical_post_gap,0.3407,,PLACEHOLDER - replace with Ministry of Health primary-care modernisation reports; Rosstat municipal database,n/a,true
+RU-TY-TANDY,Tandy kozhuun,medical_post_gap,0.1582,,PLACEHOLDER - replace with Ministry of Health primary-care modernisation reports; Rosstat municipal database,n/a,true
+RU-TY-TERE_KHOL,Tere-Khol kozhuun,medical_post_gap,0.3550,,PLACEHOLDER - replace with Ministry of Health primary-care modernisation reports; Rosstat municipal database,n/a,true
+RU-TY-TES_KHEM,Tes-Khem kozhuun,medical_post_gap,0.2888,,PLACEHOLDER - replace with Ministry of Health primary-care modernisation reports; Rosstat municipal database,n/a,true
+RU-TY-TODZHA,Todzha kozhuun,medical_post_gap,0.3204,,PLACEHOLDER - replace with Ministry of Health primary-care modernisation reports; Rosstat municipal database,n/a,true
+RU-TY-ULUG_KHEM,Ulug-Khem kozhuun,medical_post_gap,0.2206,,PLACEHOLDER - replace with Ministry of Health primary-care modernisation reports; Rosstat municipal database,n/a,true
+RU-TY-KYZYL_CITY,Kyzyl,school_repair_need,0.0915,,PLACEHOLDER - replace with Ministry of Education school-modernisation programme; Rosstat,n/a,true
+RU-TY-AK_DOVURAK,Ak-Dovurak,school_repair_need,0.1621,,PLACEHOLDER - replace with Ministry of Education school-modernisation programme; Rosstat,n/a,true
+RU-TY-KYZYL_KOZHUUN,Kyzyl kozhuun,school_repair_need,0.1250,,PLACEHOLDER - replace with Ministry of Education school-modernisation programme; Rosstat,n/a,true
+RU-TY-BAI_TAIGA,Bai-Taiga kozhuun,school_repair_need,0.2587,,PLACEHOLDER - replace with Ministry of Education school-modernisation programme; Rosstat,n/a,true
+RU-TY-BARUN_KHEMCHIK,Barun-Khemchik kozhuun,school_repair_need,0.1925,,PLACEHOLDER - replace with Ministry of Education school-modernisation programme; Rosstat,n/a,true
+RU-TY-CHAA_KHOL,Chaa-Khol kozhuun,school_repair_need,0.2912,,PLACEHOLDER - replace with Ministry of Education school-modernisation programme; Rosstat,n/a,true
+RU-TY-CHEDI_KHOL,Chedi-Khol kozhuun,school_repair_need,0.1018,,PLACEHOLDER - replace with Ministry of Education school-modernisation programme; Rosstat,n/a,true
+RU-TY-DZUN_KHEMCHIK,Dzun-Khemchik kozhuun,school_repair_need,0.1625,,PLACEHOLDER - replace with Ministry of Education school-modernisation programme; Rosstat,n/a,true
+RU-TY-ERZIN,Erzin kozhuun,school_repair_need,0.2558,,PLACEHOLDER - replace with Ministry of Education school-modernisation programme; Rosstat,n/a,true
+RU-TY-KAA_KHEM,Kaa-Khem kozhuun,school_repair_need,0.1957,,PLACEHOLDER - replace with Ministry of Education school-modernisation programme; Rosstat,n/a,true
+RU-TY-MONGUN_TAIGA,Mongun-Taiga kozhuun,school_repair_need,0.2809,,PLACEHOLDER - replace with Ministry of Education school-modernisation programme; Rosstat,n/a,true
+RU-TY-OVYUR,Ovyur kozhuun,school_repair_need,0.2626,,PLACEHOLDER - replace with Ministry of Education school-modernisation programme; Rosstat,n/a,true
+RU-TY-PIY_KHEM,Piy-Khem kozhuun,school_repair_need,0.1838,,PLACEHOLDER - replace with Ministry of Education school-modernisation programme; Rosstat,n/a,true
+RU-TY-SUT_KHOL,Sut-Khol kozhuun,school_repair_need,0.3028,,PLACEHOLDER - replace with Ministry of Education school-modernisation programme; Rosstat,n/a,true
+RU-TY-TANDY,Tandy kozhuun,school_repair_need,0.1518,,PLACEHOLDER - replace with Ministry of Education school-modernisation programme; Rosstat,n/a,true
+RU-TY-TERE_KHOL,Tere-Khol kozhuun,school_repair_need,0.2415,,PLACEHOLDER - replace with Ministry of Education school-modernisation programme; Rosstat,n/a,true
+RU-TY-TES_KHEM,Tes-Khem kozhuun,school_repair_need,0.3028,,PLACEHOLDER - replace with Ministry of Education school-modernisation programme; Rosstat,n/a,true
+RU-TY-TODZHA,Todzha kozhuun,school_repair_need,0.2676,,PLACEHOLDER - replace with Ministry of Education school-modernisation programme; Rosstat,n/a,true
+RU-TY-ULUG_KHEM,Ulug-Khem kozhuun,school_repair_need,0.1942,,PLACEHOLDER - replace with Ministry of Education school-modernisation programme; Rosstat,n/a,true
+RU-TY-KYZYL_CITY,Kyzyl,grid_outage_share,0.0521,,PLACEHOLDER - replace with Minenergo / Rosseti reliability reports,n/a,true
+RU-TY-AK_DOVURAK,Ak-Dovurak,grid_outage_share,0.0992,,PLACEHOLDER - replace with Minenergo / Rosseti reliability reports,n/a,true
+RU-TY-KYZYL_KOZHUUN,Kyzyl kozhuun,grid_outage_share,0.1203,,PLACEHOLDER - replace with Minenergo / Rosseti reliability reports,n/a,true
+RU-TY-BAI_TAIGA,Bai-Taiga kozhuun,grid_outage_share,0.2003,,PLACEHOLDER - replace with Minenergo / Rosseti reliability reports,n/a,true
+RU-TY-BARUN_KHEMCHIK,Barun-Khemchik kozhuun,grid_outage_share,0.1250,,PLACEHOLDER - replace with Minenergo / Rosseti reliability reports,n/a,true
+RU-TY-CHAA_KHOL,Chaa-Khol kozhuun,grid_outage_share,0.1242,,PLACEHOLDER - replace with Minenergo / Rosseti reliability reports,n/a,true
+RU-TY-CHEDI_KHOL,Chedi-Khol kozhuun,grid_outage_share,0.1383,,PLACEHOLDER - replace with Minenergo / Rosseti reliability reports,n/a,true
+RU-TY-DZUN_KHEMCHIK,Dzun-Khemchik kozhuun,grid_outage_share,0.0840,,PLACEHOLDER - replace with Minenergo / Rosseti reliability reports,n/a,true
+RU-TY-ERZIN,Erzin kozhuun,grid_outage_share,0.1728,,PLACEHOLDER - replace with Minenergo / Rosseti reliability reports,n/a,true
+RU-TY-KAA_KHEM,Kaa-Khem kozhuun,grid_outage_share,0.1126,,PLACEHOLDER - replace with Minenergo / Rosseti reliability reports,n/a,true
+RU-TY-MONGUN_TAIGA,Mongun-Taiga kozhuun,grid_outage_share,0.2385,,PLACEHOLDER - replace with Minenergo / Rosseti reliability reports,n/a,true
+RU-TY-OVYUR,Ovyur kozhuun,grid_outage_share,0.1424,,PLACEHOLDER - replace with Minenergo / Rosseti reliability reports,n/a,true
+RU-TY-PIY_KHEM,Piy-Khem kozhuun,grid_outage_share,0.0959,,PLACEHOLDER - replace with Minenergo / Rosseti reliability reports,n/a,true
+RU-TY-SUT_KHOL,Sut-Khol kozhuun,grid_outage_share,0.1913,,PLACEHOLDER - replace with Minenergo / Rosseti reliability reports,n/a,true
+RU-TY-TANDY,Tandy kozhuun,grid_outage_share,0.0920,,PLACEHOLDER - replace with Minenergo / Rosseti reliability reports,n/a,true
+RU-TY-TERE_KHOL,Tere-Khol kozhuun,grid_outage_share,0.1469,,PLACEHOLDER - replace with Minenergo / Rosseti reliability reports,n/a,true
+RU-TY-TES_KHEM,Tes-Khem kozhuun,grid_outage_share,0.1793,,PLACEHOLDER - replace with Minenergo / Rosseti reliability reports,n/a,true
+RU-TY-TODZHA,Todzha kozhuun,grid_outage_share,0.1777,,PLACEHOLDER - replace with Minenergo / Rosseti reliability reports,n/a,true
+RU-TY-ULUG_KHEM,Ulug-Khem kozhuun,grid_outage_share,0.0713,,PLACEHOLDER - replace with Minenergo / Rosseti reliability reports,n/a,true
+RU-TY-KYZYL_CITY,Kyzyl,waste_collection_coverage,0.9717,,PLACEHOLDER - replace with Russian Ecological Operator (REO) territorial schemes,n/a,true
+RU-TY-AK_DOVURAK,Ak-Dovurak,waste_collection_coverage,0.7727,,PLACEHOLDER - replace with Russian Ecological Operator (REO) territorial schemes,n/a,true
+RU-TY-KYZYL_KOZHUUN,Kyzyl kozhuun,waste_collection_coverage,0.7667,,PLACEHOLDER - replace with Russian Ecological Operator (REO) territorial schemes,n/a,true
+RU-TY-BAI_TAIGA,Bai-Taiga kozhuun,waste_collection_coverage,0.7088,,PLACEHOLDER - replace with Russian Ecological Operator (REO) territorial schemes,n/a,true
+RU-TY-BARUN_KHEMCHIK,Barun-Khemchik kozhuun,waste_collection_coverage,0.7657,,PLACEHOLDER - replace with Russian Ecological Operator (REO) territorial schemes,n/a,true
+RU-TY-CHAA_KHOL,Chaa-Khol kozhuun,waste_collection_coverage,0.6829,,PLACEHOLDER - replace with Russian Ecological Operator (REO) territorial schemes,n/a,true
+RU-TY-CHEDI_KHOL,Chedi-Khol kozhuun,waste_collection_coverage,0.8103,,PLACEHOLDER - replace with Russian Ecological Operator (REO) territorial schemes,n/a,true
+RU-TY-DZUN_KHEMCHIK,Dzun-Khemchik kozhuun,waste_collection_coverage,0.8000,,PLACEHOLDER - replace with Russian Ecological Operator (REO) territorial schemes,n/a,true
+RU-TY-ERZIN,Erzin kozhuun,waste_collection_coverage,0.7725,,PLACEHOLDER - replace with Russian Ecological Operator (REO) territorial schemes,n/a,true
+RU-TY-KAA_KHEM,Kaa-Khem kozhuun,waste_collection_coverage,0.8698,,PLACEHOLDER - replace with Russian Ecological Operator (REO) territorial schemes,n/a,true
+RU-TY-MONGUN_TAIGA,Mongun-Taiga kozhuun,waste_collection_coverage,0.6797,,PLACEHOLDER - replace with Russian Ecological Operator (REO) territorial schemes,n/a,true
+RU-TY-OVYUR,Ovyur kozhuun,waste_collection_coverage,0.7761,,PLACEHOLDER - replace with Russian Ecological Operator (REO) territorial schemes,n/a,true
+RU-TY-PIY_KHEM,Piy-Khem kozhuun,waste_collection_coverage,0.8105,,PLACEHOLDER - replace with Russian Ecological Operator (REO) territorial schemes,n/a,true
+RU-TY-SUT_KHOL,Sut-Khol kozhuun,waste_collection_coverage,0.6800,,PLACEHOLDER - replace with Russian Ecological Operator (REO) territorial schemes,n/a,true
+RU-TY-TANDY,Tandy kozhuun,waste_collection_coverage,0.8586,,PLACEHOLDER - replace with Russian Ecological Operator (REO) territorial schemes,n/a,true
+RU-TY-TERE_KHOL,Tere-Khol kozhuun,waste_collection_coverage,0.6497,,PLACEHOLDER - replace with Russian Ecological Operator (REO) territorial schemes,n/a,true
+RU-TY-TES_KHEM,Tes-Khem kozhuun,waste_collection_coverage,0.6843,,PLACEHOLDER - replace with Russian Ecological Operator (REO) territorial schemes,n/a,true
+RU-TY-TODZHA,Todzha kozhuun,waste_collection_coverage,0.7079,,PLACEHOLDER - replace with Russian Ecological Operator (REO) territorial schemes,n/a,true
+RU-TY-ULUG_KHEM,Ulug-Khem kozhuun,waste_collection_coverage,0.7607,,PLACEHOLDER - replace with Russian Ecological Operator (REO) territorial schemes,n/a,true

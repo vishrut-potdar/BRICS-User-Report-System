@@ -1,0 +1,19 @@
+project_id,admin_code,sector,name,budget_m,currency,status,source,synthetic
+PP-ZA-EC-roads,ZA-EC,roads,"Roads works, Eastern Cape (synthetic)",172,ZAR,delayed,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-ZA-EC-electricity,ZA-EC,electricity,"Electricity works, Eastern Cape (synthetic)",70,ZAR,delayed,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-ZA-EC-waste,ZA-EC,waste,"Waste works, Eastern Cape (synthetic)",102,ZAR,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-ZA-FS-roads,ZA-FS,roads,"Roads works, Free State (synthetic)",138,ZAR,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-ZA-FS-electricity,ZA-FS,electricity,"Electricity works, Free State (synthetic)",137,ZAR,delayed,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-ZA-GP-sanitation,ZA-GP,sanitation,"Sanitation works, Gauteng (synthetic)",55,ZAR,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-ZA-KZN-water,ZA-KZN,water,"Water works, KwaZulu-Natal (synthetic)",72,ZAR,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-ZA-KZN-education,ZA-KZN,education,"Education works, KwaZulu-Natal (synthetic)",100,ZAR,delayed,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-ZA-LP-sanitation,ZA-LP,sanitation,"Sanitation works, Limpopo (synthetic)",126,ZAR,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-ZA-LP-electricity,ZA-LP,electricity,"Electricity works, Limpopo (synthetic)",178,ZAR,delayed,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-ZA-MP-water,ZA-MP,water,"Water works, Mpumalanga (synthetic)",28,ZAR,delayed,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-ZA-MP-electricity,ZA-MP,electricity,"Electricity works, Mpumalanga (synthetic)",46,ZAR,delayed,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-ZA-NC-sanitation,ZA-NC,sanitation,"Sanitation works, Northern Cape (synthetic)",140,ZAR,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-ZA-NC-education,ZA-NC,education,"Education works, Northern Cape (synthetic)",97,ZAR,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-ZA-NC-electricity,ZA-NC,electricity,"Electricity works, Northern Cape (synthetic)",50,ZAR,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-ZA-NW-waste,ZA-NW,waste,"Waste works, North West (synthetic)",145,ZAR,delayed,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-ZA-WC-water,ZA-WC,water,"Water works, Western Cape (synthetic)",180,ZAR,delayed,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true
+PP-ZA-WC-education,ZA-WC,education,"Education works, Western Cape (synthetic)",93,ZAR,funded,SYNTHETIC placeholder - replace with state budget / national infrastructure pipeline extracts,true

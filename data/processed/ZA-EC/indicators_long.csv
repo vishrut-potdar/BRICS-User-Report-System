@@ -1,0 +1,65 @@
+admin_code,district_name,metric,value,year,source,licence,placeholder
+ZA-EC-NELSON_MANDELA_BAY,Nelson Mandela Bay,mpi_headcount,0.0618,,PLACEHOLDER - replace with Stats SA South African MPI (Census 2011 / Community Survey 2016; Census 2022 when released),n/a,true
+ZA-EC-BUFFALO_CITY,Buffalo City,mpi_headcount,0.0383,,PLACEHOLDER - replace with Stats SA South African MPI (Census 2011 / Community Survey 2016; Census 2022 when released),n/a,true
+ZA-EC-SARAH_BAARTMAN,Sarah Baartman,mpi_headcount,0.0830,,PLACEHOLDER - replace with Stats SA South African MPI (Census 2011 / Community Survey 2016; Census 2022 when released),n/a,true
+ZA-EC-AMATHOLE,Amathole,mpi_headcount,0.1495,,PLACEHOLDER - replace with Stats SA South African MPI (Census 2011 / Community Survey 2016; Census 2022 when released),n/a,true
+ZA-EC-CHRIS_HANI,Chris Hani,mpi_headcount,0.1919,,PLACEHOLDER - replace with Stats SA South African MPI (Census 2011 / Community Survey 2016; Census 2022 when released),n/a,true
+ZA-EC-JOE_GQABI,Joe Gqabi,mpi_headcount,0.0747,,PLACEHOLDER - replace with Stats SA South African MPI (Census 2011 / Community Survey 2016; Census 2022 when released),n/a,true
+ZA-EC-OR_TAMBO,OR Tambo,mpi_headcount,0.1739,,PLACEHOLDER - replace with Stats SA South African MPI (Census 2011 / Community Survey 2016; Census 2022 when released),n/a,true
+ZA-EC-ALFRED_NZO,Alfred Nzo,mpi_headcount,0.2285,,PLACEHOLDER - replace with Stats SA South African MPI (Census 2011 / Community Survey 2016; Census 2022 when released),n/a,true
+ZA-EC-NELSON_MANDELA_BAY,Nelson Mandela Bay,piped_water_access,0.8304,,PLACEHOLDER - replace with Stats SA Census 2022 / General Household Survey,n/a,true
+ZA-EC-BUFFALO_CITY,Buffalo City,piped_water_access,0.7969,,PLACEHOLDER - replace with Stats SA Census 2022 / General Household Survey,n/a,true
+ZA-EC-SARAH_BAARTMAN,Sarah Baartman,piped_water_access,0.6632,,PLACEHOLDER - replace with Stats SA Census 2022 / General Household Survey,n/a,true
+ZA-EC-AMATHOLE,Amathole,piped_water_access,0.6680,,PLACEHOLDER - replace with Stats SA Census 2022 / General Household Survey,n/a,true
+ZA-EC-CHRIS_HANI,Chris Hani,piped_water_access,0.4204,,PLACEHOLDER - replace with Stats SA Census 2022 / General Household Survey,n/a,true
+ZA-EC-JOE_GQABI,Joe Gqabi,piped_water_access,0.5644,,PLACEHOLDER - replace with Stats SA Census 2022 / General Household Survey,n/a,true
+ZA-EC-OR_TAMBO,OR Tambo,piped_water_access,0.5447,,PLACEHOLDER - replace with Stats SA Census 2022 / General Household Survey,n/a,true
+ZA-EC-ALFRED_NZO,Alfred Nzo,piped_water_access,0.4935,,PLACEHOLDER - replace with Stats SA Census 2022 / General Household Survey,n/a,true
+ZA-EC-NELSON_MANDELA_BAY,Nelson Mandela Bay,flush_toilet_access,0.8029,,PLACEHOLDER - replace with Stats SA Census 2022,n/a,true
+ZA-EC-BUFFALO_CITY,Buffalo City,flush_toilet_access,0.7625,,PLACEHOLDER - replace with Stats SA Census 2022,n/a,true
+ZA-EC-SARAH_BAARTMAN,Sarah Baartman,flush_toilet_access,0.6840,,PLACEHOLDER - replace with Stats SA Census 2022,n/a,true
+ZA-EC-AMATHOLE,Amathole,flush_toilet_access,0.5769,,PLACEHOLDER - replace with Stats SA Census 2022,n/a,true
+ZA-EC-CHRIS_HANI,Chris Hani,flush_toilet_access,0.3330,,PLACEHOLDER - replace with Stats SA Census 2022,n/a,true
+ZA-EC-JOE_GQABI,Joe Gqabi,flush_toilet_access,0.5425,,PLACEHOLDER - replace with Stats SA Census 2022,n/a,true
+ZA-EC-OR_TAMBO,OR Tambo,flush_toilet_access,0.4688,,PLACEHOLDER - replace with Stats SA Census 2022,n/a,true
+ZA-EC-ALFRED_NZO,Alfred Nzo,flush_toilet_access,0.4045,,PLACEHOLDER - replace with Stats SA Census 2022,n/a,true
+ZA-EC-NELSON_MANDELA_BAY,Nelson Mandela Bay,road_unpaved_share,0.3395,,PLACEHOLDER - replace with Rural Road Asset Management Systems (RRAMS); municipal IDPs,n/a,true
+ZA-EC-BUFFALO_CITY,Buffalo City,road_unpaved_share,0.4912,,PLACEHOLDER - replace with Rural Road Asset Management Systems (RRAMS); municipal IDPs,n/a,true
+ZA-EC-SARAH_BAARTMAN,Sarah Baartman,road_unpaved_share,0.5224,,PLACEHOLDER - replace with Rural Road Asset Management Systems (RRAMS); municipal IDPs,n/a,true
+ZA-EC-AMATHOLE,Amathole,road_unpaved_share,0.5914,,PLACEHOLDER - replace with Rural Road Asset Management Systems (RRAMS); municipal IDPs,n/a,true
+ZA-EC-CHRIS_HANI,Chris Hani,road_unpaved_share,0.7780,,PLACEHOLDER - replace with Rural Road Asset Management Systems (RRAMS); municipal IDPs,n/a,true
+ZA-EC-JOE_GQABI,Joe Gqabi,road_unpaved_share,0.6336,,PLACEHOLDER - replace with Rural Road Asset Management Systems (RRAMS); municipal IDPs,n/a,true
+ZA-EC-OR_TAMBO,OR Tambo,road_unpaved_share,0.7115,,PLACEHOLDER - replace with Rural Road Asset Management Systems (RRAMS); municipal IDPs,n/a,true
+ZA-EC-ALFRED_NZO,Alfred Nzo,road_unpaved_share,0.6935,,PLACEHOLDER - replace with Rural Road Asset Management Systems (RRAMS); municipal IDPs,n/a,true
+ZA-EC-NELSON_MANDELA_BAY,Nelson Mandela Bay,clinic_distance_gap,0.0792,,PLACEHOLDER - replace with Stats SA General Household Survey; DHIS facility list,n/a,true
+ZA-EC-BUFFALO_CITY,Buffalo City,clinic_distance_gap,0.1404,,PLACEHOLDER - replace with Stats SA General Household Survey; DHIS facility list,n/a,true
+ZA-EC-SARAH_BAARTMAN,Sarah Baartman,clinic_distance_gap,0.1918,,PLACEHOLDER - replace with Stats SA General Household Survey; DHIS facility list,n/a,true
+ZA-EC-AMATHOLE,Amathole,clinic_distance_gap,0.2414,,PLACEHOLDER - replace with Stats SA General Household Survey; DHIS facility list,n/a,true
+ZA-EC-CHRIS_HANI,Chris Hani,clinic_distance_gap,0.3639,,PLACEHOLDER - replace with Stats SA General Household Survey; DHIS facility list,n/a,true
+ZA-EC-JOE_GQABI,Joe Gqabi,clinic_distance_gap,0.3422,,PLACEHOLDER - replace with Stats SA General Household Survey; DHIS facility list,n/a,true
+ZA-EC-OR_TAMBO,OR Tambo,clinic_distance_gap,0.3089,,PLACEHOLDER - replace with Stats SA General Household Survey; DHIS facility list,n/a,true
+ZA-EC-ALFRED_NZO,Alfred Nzo,clinic_distance_gap,0.3759,,PLACEHOLDER - replace with Stats SA General Household Survey; DHIS facility list,n/a,true
+ZA-EC-NELSON_MANDELA_BAY,Nelson Mandela Bay,school_infra_gap,0.0623,,"PLACEHOLDER - replace with NEIMS standard reports, Department of Basic Education",n/a,true
+ZA-EC-BUFFALO_CITY,Buffalo City,school_infra_gap,0.0786,,"PLACEHOLDER - replace with NEIMS standard reports, Department of Basic Education",n/a,true
+ZA-EC-SARAH_BAARTMAN,Sarah Baartman,school_infra_gap,0.1738,,"PLACEHOLDER - replace with NEIMS standard reports, Department of Basic Education",n/a,true
+ZA-EC-AMATHOLE,Amathole,school_infra_gap,0.2249,,"PLACEHOLDER - replace with NEIMS standard reports, Department of Basic Education",n/a,true
+ZA-EC-CHRIS_HANI,Chris Hani,school_infra_gap,0.3126,,"PLACEHOLDER - replace with NEIMS standard reports, Department of Basic Education",n/a,true
+ZA-EC-JOE_GQABI,Joe Gqabi,school_infra_gap,0.2708,,"PLACEHOLDER - replace with NEIMS standard reports, Department of Basic Education",n/a,true
+ZA-EC-OR_TAMBO,OR Tambo,school_infra_gap,0.2675,,"PLACEHOLDER - replace with NEIMS standard reports, Department of Basic Education",n/a,true
+ZA-EC-ALFRED_NZO,Alfred Nzo,school_infra_gap,0.3717,,"PLACEHOLDER - replace with NEIMS standard reports, Department of Basic Education",n/a,true
+ZA-EC-NELSON_MANDELA_BAY,Nelson Mandela Bay,electricity_access,0.8718,,PLACEHOLDER - replace with Stats SA Census 2022,n/a,true
+ZA-EC-BUFFALO_CITY,Buffalo City,electricity_access,0.9288,,PLACEHOLDER - replace with Stats SA Census 2022,n/a,true
+ZA-EC-SARAH_BAARTMAN,Sarah Baartman,electricity_access,0.9098,,PLACEHOLDER - replace with Stats SA Census 2022,n/a,true
+ZA-EC-AMATHOLE,Amathole,electricity_access,0.8471,,PLACEHOLDER - replace with Stats SA Census 2022,n/a,true
+ZA-EC-CHRIS_HANI,Chris Hani,electricity_access,0.7082,,PLACEHOLDER - replace with Stats SA Census 2022,n/a,true
+ZA-EC-JOE_GQABI,Joe Gqabi,electricity_access,0.8768,,PLACEHOLDER - replace with Stats SA Census 2022,n/a,true
+ZA-EC-OR_TAMBO,OR Tambo,electricity_access,0.8647,,PLACEHOLDER - replace with Stats SA Census 2022,n/a,true
+ZA-EC-ALFRED_NZO,Alfred Nzo,electricity_access,0.8785,,PLACEHOLDER - replace with Stats SA Census 2022,n/a,true
+ZA-EC-NELSON_MANDELA_BAY,Nelson Mandela Bay,refuse_removal_access,0.8041,,PLACEHOLDER - replace with Stats SA Census 2022,n/a,true
+ZA-EC-BUFFALO_CITY,Buffalo City,refuse_removal_access,0.7128,,PLACEHOLDER - replace with Stats SA Census 2022,n/a,true
+ZA-EC-SARAH_BAARTMAN,Sarah Baartman,refuse_removal_access,0.5998,,PLACEHOLDER - replace with Stats SA Census 2022,n/a,true
+ZA-EC-AMATHOLE,Amathole,refuse_removal_access,0.5276,,PLACEHOLDER - replace with Stats SA Census 2022,n/a,true
+ZA-EC-CHRIS_HANI,Chris Hani,refuse_removal_access,0.3176,,PLACEHOLDER - replace with Stats SA Census 2022,n/a,true
+ZA-EC-JOE_GQABI,Joe Gqabi,refuse_removal_access,0.4278,,PLACEHOLDER - replace with Stats SA Census 2022,n/a,true
+ZA-EC-OR_TAMBO,OR Tambo,refuse_removal_access,0.3112,,PLACEHOLDER - replace with Stats SA Census 2022,n/a,true
+ZA-EC-ALFRED_NZO,Alfred Nzo,refuse_removal_access,0.2656,,PLACEHOLDER - replace with Stats SA Census 2022,n/a,true
