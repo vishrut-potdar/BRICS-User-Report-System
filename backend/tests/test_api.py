@@ -103,3 +103,10 @@ def test_whatsapp_webhook_verify_and_ingest(client, settings, container):
     stored = container.repo.all()
     assert len(stored) == 1 and stored[0].channel == "whatsapp" and stored[0].geo.admin_code == "TS-AURANGABAD"
     assert "919800000000" not in stored[0].model_dump_json()
+
+
+def test_dashboard_served_at_root(client):
+    response = client.get("/")
+    assert response.status_code == 200
+    assert response.headers["content-type"].startswith("text/html")
+    assert "Vikas Vaani" in response.text

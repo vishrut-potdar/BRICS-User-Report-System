@@ -1,6 +1,16 @@
 # frontend (owner: frontend and design)
 
-React/Vite dashboard on Firebase Hosting. The API contract it builds on (interactive docs at `/docs` on the backend):
+`index.html` is a single-file dashboard with no build step. The FastAPI app serves it at `/`, so it calls the
+API from the same origin (and the Cloud Run image ships both). Opened straight from disk, it tries
+`http://127.0.0.1:8000` and falls back to built-in demo data if the API is not running.
+
+What is live: rankings and score breakdowns, the heat map (cluster centroids), top issue per district, silent
+districts, headline counts, and the citizen-app preview, which files real requests through `POST /ingest` (text, or a
+recorded voice note, which needs Gemini). What is still on-screen only: "Simulate request", the spam-burst test,
+and status/approve/notify, because the API has no endpoints for them yet. The "Volume" preset uses client-side
+weights (demand-heavy) rather than the API's `volume_only` message count.
+
+The API contract it builds on (interactive docs at `/docs` on the backend):
 
 | Screen | Endpoint |
 |---|---|

@@ -70,7 +70,7 @@ cd backend
 ..\.venv\Scripts\python -m uvicorn app.main:app --reload
 ```
 
-Open http://127.0.0.1:8000/docs. Run the tests with `..\.venv\Scripts\python -m pytest` from `backend/`.
+Open http://127.0.0.1:8000/ for the dashboard (served by the same app) and http://127.0.0.1:8000/docs for the API. Run the tests with `..\.venv\Scripts\python -m pytest` from `backend/`.
 Without `GEMINI_API_KEY`, the offline keyword stub is used: text only, no translation. Don't demo with it.
 
 ## API
@@ -135,5 +135,5 @@ data/raw/           real source extracts (you add these)
 data/processed/     built indicator tables and planned projects
 data/synthetic/     labelled synthetic requests + manifest
 docs/               schema and data sources
-frontend/           dashboard (see frontend/README.md for the API contract)
+frontend/           single-page dashboard, served by the API at / (see frontend/README.md)
 ```

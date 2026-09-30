@@ -16,14 +16,14 @@ from typing import Any
 
 from fastapi import BackgroundTasks, FastAPI, HTTPException, Query, Request, Response
 from fastapi.middleware.cors import CORSMiddleware
-from fastapi.responses import PlainTextResponse
+from fastapi.responses import FileResponse, PlainTextResponse
 from pydantic import BaseModel, Field
 
 from . import __version__
 from .channels import telegram, whatsapp
 from .channels.base import InboundMessage
 from .channels.messages import ack_message, welcome_message
-from .config import Settings, get_settings
+from .config import REPO_ROOT, Settings, get_settings
 from .container import Container, build_container
 from .models import public_view
 from .scoring import COMPONENTS, PRESETS, VOLUME_ONLY, Weights
@@ -31,6 +31,7 @@ from .taxonomy import SECTOR_DESCRIPTIONS
 
 log = logging.getLogger(__name__)
 
+DASHBOARD = REPO_ROOT / "frontend" / "index.html"
 AGGREGATE_FIELDS = ("admin_code", "district", "sector", "h3", "lat", "lon", "n_requests", "n_requesters", "share_urgent", "synthetic_share")
 
 
@@ -77,6 +78,15 @@ def create_app(settings: Settings | None = None, container: Container | None = N
         return holder["c"]  # type: ignore[return-value]
 
     app.state.container = c
+
+    # --- dashboard -------------------------------------------------------------------------------
+
+    @app.get("/", include_in_schema=False)
+    def dashboard() -> FileResponse:
+        """The single-page dashboard; it calls this API from the same origin."""
+        if not DASHBOARD.is_file():
+            raise HTTPException(404, "dashboard not bundled; see /docs for the API")
+        return FileResponse(DASHBOARD, media_type="text/html")
 
     # --- meta ------------------------------------------------------------------------------------
 

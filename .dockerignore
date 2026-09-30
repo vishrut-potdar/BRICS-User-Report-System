@@ -5,6 +5,6 @@
 .env
 data/raw
 data/store
-frontend
+frontend/README.md
 docs
 backend/tests

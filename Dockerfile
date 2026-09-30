@@ -13,6 +13,7 @@ COPY data/packs data/packs
 COPY data/reference data/reference
 COPY data/processed data/processed
 COPY data/synthetic data/synthetic
+COPY frontend/index.html frontend/index.html
 
 WORKDIR /srv/backend
 CMD exec uvicorn app.main:app --host 0.0.0.0 --port ${PORT:-8080}
