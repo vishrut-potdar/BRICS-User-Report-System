@@ -6,11 +6,14 @@
 
 from __future__ import annotations
 
+import logging
 import threading
 from pathlib import Path
 from typing import Iterable, Protocol
 
 from .models import CivicRequest
+
+log = logging.getLogger(__name__)
 
 FIRESTORE_BATCH = 400
 
@@ -46,9 +49,13 @@ class LocalRepository:
             for request in batch:
                 self._items[request.id] = request
             if self._path and batch:
-                self._path.parent.mkdir(parents=True, exist_ok=True)
-                with self._path.open("a", encoding="utf-8") as fh:
-                    fh.writelines(r.model_dump_json() + "\n" for r in batch)
+                try:
+                    self._path.parent.mkdir(parents=True, exist_ok=True)
+                    with self._path.open("a", encoding="utf-8") as fh:
+                        fh.writelines(r.model_dump_json() + "\n" for r in batch)
+                except OSError as exc:  # read-only or full disk: keep serving from memory rather than failing the request
+                    log.error("could not write %s (%s); keeping this and later requests in memory only", self._path, exc)
+                    self._path = None
         return len(batch)
 
     def get(self, request_id: str) -> CivicRequest | None:

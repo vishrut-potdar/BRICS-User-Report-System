@@ -3,6 +3,8 @@ mentions as schema-validated JSON."""
 
 from __future__ import annotations
 
+import logging
+
 from ..taxonomy import SECTOR_DESCRIPTIONS, SECTORS
 from .base import Extraction, ExtractionError
 
@@ -21,6 +23,24 @@ Sector guide:
 
 LANGUAGE_NAMES = {"mr": "Marathi", "hi": "Hindi", "en": "English", "hi-Latn": "Hinglish", "pt": "Portuguese", "ru": "Russian",
                   "zh": "Chinese", "af": "Afrikaans", "zu": "isiZulu", "xh": "isiXhosa"}
+
+
+log = logging.getLogger(__name__)
+
+# Google retires model versions and has short capacity spikes. These aliases always point at the current Flash and
+# Flash-Lite models; Flash-Lite has separate capacity, so it usually answers when Flash is busy.
+FALLBACK_MODEL = "gemini-flash-latest"
+BACKUP_MODELS = (FALLBACK_MODEL, "gemini-flash-lite-latest")
+
+
+def _model_gone(exc: Exception) -> bool:
+    text = str(exc)
+    return "NOT_FOUND" in text or "no longer available" in text or " 404" in text
+
+
+def _model_busy(exc: Exception) -> bool:
+    text = str(exc)
+    return any(s in text for s in ("503", "UNAVAILABLE", "429", "RESOURCE_EXHAUSTED", "high demand", "overloaded"))
 
 
 class GeminiProvider:
@@ -50,15 +70,11 @@ class GeminiProvider:
         if text:
             parts.append(f"Citizen message:\n{text}")
         try:
-            response = self._client.models.generate_content(
-                model=self._model,
-                contents=parts,
-                config=types.GenerateContentConfig(
-                    response_mime_type="application/json",
-                    response_schema=Extraction,
-                    temperature=0.1,
-                ),
-            )
+            response = self._generate(parts, types.GenerateContentConfig(
+                response_mime_type="application/json",
+                response_schema=Extraction,
+                temperature=0.1,
+            ))
             return Extraction.model_validate_json(response.text or "")
         except Exception as exc:  # network, quota, safety block or schema mismatch: all go to review
             raise ExtractionError(f"gemini extraction failed: {exc}") from exc
@@ -66,14 +82,32 @@ class GeminiProvider:
     def write(self, prompt: str, *, max_tokens: int = 700) -> str:
         """Free text for the assist features (briefs). Raises ExtractionError so callers can fall back."""
         try:
-            response = self._client.models.generate_content(
-                model=self._model,
-                contents=[prompt],
-                config=self._types.GenerateContentConfig(temperature=0.3, max_output_tokens=max_tokens),
-            )
+            response = self._generate([prompt], self._types.GenerateContentConfig(temperature=0.3, max_output_tokens=max_tokens))
         except Exception as exc:
             raise ExtractionError(f"gemini generation failed: {exc}") from exc
         text = (response.text or "").strip()
         if not text:
             raise ExtractionError("gemini returned no text")
         return text
+
+    def _generate(self, contents: list, config):
+        """Call the configured model. A retired model is replaced by the current Flash alias for good; a busy or
+        rate-limited one is skipped for this call only, trying the backups in order."""
+        candidates = [self._model, *[m for m in BACKUP_MODELS if m != self._model]]
+        last: Exception | None = None
+        for model in candidates:
+            try:
+                return self._client.models.generate_content(model=model, contents=contents, config=config)
+            except Exception as exc:
+                last = exc
+                if _model_gone(exc):
+                    if model == self._model and model not in BACKUP_MODELS:
+                        log.warning("Gemini model %r is no longer available; using %r from now on. Set GEMINI_MODEL "
+                                    "to silence this.", model, FALLBACK_MODEL)
+                        self._model = FALLBACK_MODEL
+                    continue
+                if _model_busy(exc):
+                    log.warning("Gemini model %r is busy (%s); trying the next one", model, str(exc)[:80])
+                    continue
+                raise
+        raise last  # type: ignore[misc]

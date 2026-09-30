@@ -3,7 +3,7 @@
 # (backend/tests/test_deploy.py checks this).
 [project]
 name = "vikas-vaani"
-version = "0.3.0"
+version = "0.3.1"
 description = "Citizen complaint portal and government dashboard ranking public works for BRICS countries"
 requires-python = ">=3.12"
 dependencies = [

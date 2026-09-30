@@ -161,3 +161,56 @@ def test_google_parsing_and_auto_selection():
     hit = geocoder.geocode("Jatiúca", "BR", "Alagoas")
     assert hit.precise and hit.lat == -9.64 and "administrative_area:Alagoas" in seen[0].url.params["components"]
     assert Geocoder("auto").name == "nominatim" and Geocoder("none").geocode("x", "IN") is None
+
+
+class _FakeModels:
+    """Stands in for google.genai's client.models: each model name maps to an error or a reply."""
+
+    def __init__(self, behaviour):
+        self.behaviour, self.calls = behaviour, []
+
+    def generate_content(self, *, model, contents, config):
+        self.calls.append(model)
+        outcome = self.behaviour.get(model, "ok")
+        if isinstance(outcome, Exception):
+            raise outcome
+        return type("Response", (), {"text": outcome})()
+
+
+def _gemini_with(behaviour, model="gemini-2.5-flash"):
+    from app.language.gemini import GeminiProvider
+
+    provider = GeminiProvider.__new__(GeminiProvider)  # skip the real client
+    provider._model, provider._types = model, type("T", (), {"GenerateContentConfig": lambda **kw: kw})
+    provider._client = type("C", (), {"models": _FakeModels(behaviour)})()
+    return provider
+
+
+def test_retired_model_switches_for_good():
+    gone = Exception("404 NOT_FOUND. This model models/gemini-2.5-flash is no longer available to new users")
+    provider = _gemini_with({"gemini-2.5-flash": gone, "gemini-flash-latest": "brief"})
+    assert provider.write("x") == "brief" and provider._model == "gemini-flash-latest"
+    assert provider.write("y") == "brief" and provider._client.models.calls == ["gemini-2.5-flash", "gemini-flash-latest", "gemini-flash-latest"]
+
+
+def test_busy_model_is_skipped_for_one_call_only():
+    busy = Exception("503 UNAVAILABLE. This model is currently experiencing high demand")
+    provider = _gemini_with({"gemini-flash-latest": busy, "gemini-flash-lite-latest": "lite reply"}, model="gemini-flash-latest")
+    assert provider.write("x") == "lite reply" and provider._model == "gemini-flash-latest"
+
+
+def test_other_errors_are_not_retried():
+    provider = _gemini_with({"gemini-flash-latest": Exception("400 INVALID_ARGUMENT")}, model="gemini-flash-latest")
+    with pytest.raises(ExtractionError):
+        provider.write("x")
+    assert provider._client.models.calls == ["gemini-flash-latest"]
+
+
+def test_local_store_write_failure_keeps_serving(tmp_path, monkeypatch):
+    from app.models import CivicRequest, Geo
+    from app.repository import LocalRepository
+
+    repo = LocalRepository(tmp_path / "store" / "requests.jsonl")
+    monkeypatch.setattr("pathlib.Path.open", lambda *a, **k: (_ for _ in ()).throw(OSError(30, "Read-only file system")))
+    request = CivicRequest(channel="web", lang="en", text_original="x", text_en="x", category="water", geo=Geo(), requester_hash="h")
+    assert repo.add_many([request]) == 1 and repo.get(request.id) is not None  # accepted, kept in memory

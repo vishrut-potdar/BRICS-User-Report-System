@@ -37,7 +37,7 @@ class Settings:
     packs: tuple[str, ...] = ()  # packs to serve; empty = every pack in data/packs whose indicators are built
     language_provider: str = "offline"  # gemini | offline
     gemini_api_key: str | None = None
-    gemini_model: str = "gemini-2.5-flash"
+    gemini_model: str = "gemini-flash-latest"  # alias for the current Flash model; retired names fall back to it
     repository: str = "local"  # local | memory | firestore
     seed_synthetic: bool = False  # preload each pack's synthetic complaints into memory (serverless demos)
     local_store_dir: Path = REPO_ROOT / "data" / "store"  # one <dir>/<pack>/requests.jsonl per pack
@@ -70,8 +70,10 @@ class Settings:
             language_provider=env("LANGUAGE_PROVIDER", "gemini" if gemini_key else "offline"),
             gemini_api_key=gemini_key,
             gemini_model=env("GEMINI_MODEL", cls.gemini_model),
-            # On Vercel the filesystem is read-only: default to memory, preloaded with the demo complaints.
-            repository=env("REPOSITORY", "memory" if os.environ.get("VERCEL") else "local"),
+            # On Vercel the filesystem is read-only and not kept between requests, so a local store cannot work:
+            # use memory preloaded with the demo complaints (or Firestore when asked for).
+            repository=("firestore" if env("REPOSITORY") == "firestore" else "memory") if os.environ.get("VERCEL")
+            else env("REPOSITORY", "local"),
             seed_synthetic=env("SEED_SYNTHETIC", "1" if os.environ.get("VERCEL") else "0").lower() in ("1", "true", "yes"),
             local_store_dir=_path(env("LOCAL_STORE_DIR", "data/store")),
             firestore_collection=env("FIRESTORE_COLLECTION", "requests"),

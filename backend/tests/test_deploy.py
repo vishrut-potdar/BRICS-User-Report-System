@@ -61,3 +61,14 @@ def test_vercel_bundle_excludes_nothing_the_app_needs():
     excluded = config["functions"]["index.py"]["excludeFiles"]
     for needed in ("frontend", "data/packs", "data/reference", "data/processed", "data/synthetic", "backend/app"):
         assert needed not in excluded
+
+
+def test_vercel_ignores_a_copied_local_store_setting(monkeypatch):
+    """Copying .env into Vercel brings REPOSITORY=local; the read-only disk cannot hold it, so memory wins."""
+    from app.config import Settings
+
+    monkeypatch.setenv("VERCEL", "1")
+    monkeypatch.setenv("REPOSITORY", "local")
+    assert Settings.from_env().repository == "memory"
+    monkeypatch.setenv("REPOSITORY", "firestore")
+    assert Settings.from_env().repository == "firestore"
