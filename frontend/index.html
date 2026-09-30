@@ -42,7 +42,23 @@ textarea::placeholder{color:var(--faint)}
 @keyframes blink{50%{opacity:.3}}
 .voicechip{display:inline-flex;align-items:center;gap:8px;margin-top:10px;background:var(--sel);color:var(--selText);border-radius:999px;padding:6px 8px 6px 12px;font-size:12.5px}
 .voicechip button{border:0;background:none;width:22px;height:22px;border-radius:999px;color:var(--selText)}
-.locrow{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.locrow{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.or{font-size:12.5px;color:var(--faint)}
+.locsearch{display:flex;gap:8px;flex:1;min-width:240px}
+.locsearch input{flex:1;min-width:0;height:40px;border:0;border-radius:12px;background:var(--inset);padding:0 14px;font-size:14px}
+.linkbtn{border:0;background:none;color:var(--periDeep);font-size:13px;padding:0;text-decoration:underline;text-underline-offset:3px}
+.locmap{position:relative;margin-top:10px;border-radius:14px;overflow:hidden;box-shadow:0 0 0 1px var(--line)}
+#locMap{height:260px}
+.maphint{position:absolute;left:10px;bottom:10px;z-index:500;background:rgba(255,255,255,.95);border-radius:8px;padding:4px 8px;font-size:11.5px;color:var(--muted)}
+.airow{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-top:10px}
+.aibtn{border:0;height:36px;border-radius:999px;padding:0 14px;font-size:13px;font-weight:500;color:#fff;background:linear-gradient(135deg,#5E51BD,#8B7FD6)}
+.aibtn:disabled{opacity:.6}
+.aicard{margin-top:10px;background:linear-gradient(180deg,#F4F1FE,#FBFAFF);box-shadow:0 0 0 1px #E1DAFB;border-radius:14px;padding:14px 16px;font-size:13.5px}
+.aicard .tag{font-size:11px;font-weight:600;color:var(--selText);letter-spacing:.02em}
+.aicard dl{display:grid;grid-template-columns:auto 1fr;gap:6px 14px;margin:10px 0 0}
+.aicard dt{color:var(--muted)}
+.aicard dd{margin:0}
+.aicard .applied{color:var(--mint);font-size:12px;margin-top:8px}
 .locstate{font-size:13px;color:var(--muted)}
 .locstate.ok{color:var(--mint)}
 .submit{margin-top:26px;display:flex;align-items:center;gap:14px;flex-wrap:wrap}
@@ -153,13 +169,26 @@ footer{max-width:760px;margin:0 auto;padding:0 24px 40px;color:var(--faint);font
           <button type="button" class="mic" id="mic" hidden aria-label="Record a voice note"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg><span>Voice</span></button>
         </div>
         <div class="voicechip" id="voiceChip" hidden><span id="voiceLabel">Voice note attached</span><button type="button" id="voiceDrop" aria-label="Remove voice note">✕</button></div>
+        <div class="airow"><button type="button" class="aibtn" id="aiCheck">✨ Check with AI</button>
+          <span class="sub" id="aiHint">Reads your complaint, detects the problem and place, and fills the form.</span></div>
+        <div class="aicard" id="aiCard" hidden aria-live="polite"></div>
       </div>
       <div class="field">
-        <div class="lbl"><span class="num">4</span>Location <small>optional, helps pinpoint the exact spot</small></div>
+        <div class="lbl"><span class="num">4</span>Exact location <small>optional, helps officials find the spot</small></div>
         <div class="locrow">
           <button type="button" class="pill" id="locBtn"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s7-6.5 7-12a7 7 0 0 0-14 0c0 5.5 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg>Use my current location</button>
+          <span class="or">or</span>
+          <div class="locsearch">
+            <label class="sr" for="locText">Type a place</label>
+            <input id="locText" maxlength="200" autocomplete="off" placeholder="Type a place: village, ward, street or landmark">
+            <button type="button" class="pill" id="locFind">Find</button>
+          </div>
+        </div>
+        <div class="locrow" style="margin-top:8px">
+          <button type="button" class="linkbtn" id="locPick">Pick the spot on a map</button>
           <span class="locstate" id="locState" aria-live="polite"></span>
         </div>
+        <div class="locmap" id="locMapWrap" hidden><div id="locMap"></div><span class="maphint">Drag the pin, or tap the map, to mark the exact spot.</span></div>
       </div>
       <div class="submit">
         <button type="submit" class="pill primary" id="submitBtn">Submit complaint</button>
@@ -203,6 +232,7 @@ footer{max-width:760px;margin:0 auto;padding:0 24px 40px;color:var(--faint);font
 
 <div class="toasts" id="toasts" aria-live="polite"></div>
 
+<script src="map.js"></script>
 <script>
 const $ = s => document.querySelector(s);
 const esc = t => String(t ?? '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
@@ -233,7 +263,7 @@ const EXAMPLE = {
 };
 const STATUS_STEPS = [['received','Received'],['forwarded','Forwarded to district'],['in_progress','Work in progress'],['resolved','Resolved']];
 
-const S = {packs:[], country:null, meta:{}, category:null, lat:null, lon:null, audio:null, mime:null, provider:'offline'};
+const S = {packs:[], country:null, meta:{}, category:null, lat:null, lon:null, locConf:null, audio:null, mime:null, provider:'offline'};
 
 /* ---------- country (locked once chosen) and area (remembered as the default) ---------- */
 const ORDER = ['BR', 'RU', 'IN', 'CN', 'ZA'];  // B-R-I-C-S
@@ -356,15 +386,82 @@ $('#mic').addEventListener('click', async () => {
 });
 $('#voiceDrop').addEventListener('click', () => { S.audio = S.mime = null; $('#voiceChip').hidden = true; });
 
-/* ---------- location ---------- */
+/* ---------- location: GPS, a typed place, or a pin on the map ---------- */
+let CONFIG = null, LOCMAP = null;
+async function config(){ return CONFIG ||= await api('/config').catch(() => ({maps:{provider:'osm'}, ai:{enabled:false}})); }
+async function locMap(){
+  $('#locMapWrap').hidden = false;
+  if (!LOCMAP){
+    LOCMAP = await VVMap.create($('#locMap'), await config());
+    LOCMAP.onMapClick((lat, lon) => setPin(lat, lon, 'B', 'Pin placed on the map.'));
+  }
+  LOCMAP.resize();
+  return LOCMAP;
+}
+function locState(msg, ok){ const st = $('#locState'); st.className = 'locstate' + (ok ? ' ok' : ''); st.textContent = msg; }
+async function setPin(lat, lon, conf, msg){
+  S.lat = +lat.toFixed(5); S.lon = +lon.toFixed(5); S.locConf = conf;
+  const m = await locMap();
+  m.setMarker({lat:S.lat, lon:S.lon, draggable:true, onMove:(a, b) => { S.lat = +a.toFixed(5); S.lon = +b.toFixed(5); S.locConf = 'B'; locState('✓ Pin moved to the exact spot.', true); }});
+  locState('✓ ' + msg, true);
+}
+function areaCentre(){
+  const st = $('#stateSel').value, un = $('#unitSel').value, pilot = pilotFor(st);
+  const find = (pack, code) => S.meta[pack]?.units.find(u => u.admin_code === code)?.centroid;
+  return (un && pilot && find(pilot.pack_id, un)) || (st && find(S.country, st)) || null;
+}
 $('#locBtn').addEventListener('click', () => {
-  const st = $('#locState');
-  if (!navigator.geolocation){ st.textContent = 'Location is not available in this browser.'; return; }
-  st.className = 'locstate'; st.textContent = 'Finding you…';
-  navigator.geolocation.getCurrentPosition(p => {
-    S.lat = +p.coords.latitude.toFixed(5); S.lon = +p.coords.longitude.toFixed(5);
-    st.className = 'locstate ok'; st.textContent = '✓ Location added (' + S.lat.toFixed(3) + ', ' + S.lon.toFixed(3) + ')';
-  }, () => { st.textContent = 'Could not get your location. The place you chose is enough.'; }, {timeout:10000, maximumAge:600000});
+  if (!navigator.geolocation){ locState('Location is not available in this browser.'); return; }
+  locState('Finding you…');
+  navigator.geolocation.getCurrentPosition(p => setPin(p.coords.latitude, p.coords.longitude, 'A', 'Your current location is marked. Drag the pin if it is off.'),
+    () => locState('Could not get your location. Type a place or pick it on the map instead.'), {timeout:10000, maximumAge:600000});
+});
+async function findPlace(){
+  const q = $('#locText').value.trim();
+  if (q.length < 2) return locState('Type a village, ward, street or landmark first.');
+  const state = $('#stateSel').value, unit = $('#unitSel').value;
+  locState('Searching…');
+  try {
+    const hit = await api('/geocode?' + new URLSearchParams({q, pack:S.country, ...(unit || state ? {admin_code:unit || state} : {})}));
+    await setPin(hit.lat, hit.lon, 'B', 'Found: ' + hit.label.split(',').slice(0, 3).join(',') + '. Drag the pin to the exact spot.');
+    if (unit && hit.admin_code && hit.admin_code !== unit) locState('Found it in ' + hit.district + ', not in your chosen area. Check the pin, or keep your text as a description.');
+  } catch (e) {
+    locState(e.status === 404 ? 'Could not find that place. It will still be sent with your complaint; you can also pick the spot on the map.' : 'Search is unavailable right now (' + e.message + ').');
+  }
+}
+$('#locFind').addEventListener('click', findPlace);
+$('#locText').addEventListener('keydown', e => { if (e.key === 'Enter'){ e.preventDefault(); findPlace(); } });
+$('#locPick').addEventListener('click', async () => {
+  const m = await locMap(), c = areaCentre();
+  if (S.lat != null) m.center(S.lat, S.lon, 15);
+  else if (c) m.center(c.lat, c.lon, $('#unitSel').value ? 11 : 7);
+  locState('Tap the map where the problem is.');
+});
+function resetLocation(){
+  S.lat = S.lon = null; S.locConf = null; $('#locText').value = ''; locState('');
+  if (LOCMAP) LOCMAP.clearMarker(); $('#locMapWrap').hidden = true;
+}
+
+/* ---------- generative AI: read the draft before it is filed ---------- */
+$('#aiCheck').addEventListener('click', async () => {
+  const text = $('#desc').value.trim(), card = $('#aiCard'), btn = $('#aiCheck');
+  if (!text){ card.hidden = false; card.innerHTML = 'Write your complaint first, in any language.'; return; }
+  btn.disabled = true; btn.textContent = '✨ Reading…';
+  try {
+    const r = await api('/assist/understand', {method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify({text, pack:S.country})});
+    const applied = [];
+    if (!S.category && r.category && r.category !== 'other'){ S.category = r.category; renderCats(); applied.push('category'); }
+    if (!$('#locText').value.trim() && r.places && r.places.length){ $('#locText').value = r.places[0]; applied.push('place'); }
+    card.hidden = false;
+    card.innerHTML = '<span class="tag">' + (r.ai ? '✨ READ BY GEMINI' : 'QUICK CHECK (OFFLINE, ADD A GEMINI KEY FOR FULL AI)') + '</span><dl>' +
+      '<dt>Language</dt><dd>' + esc(r.lang_name) + '</dd>' +
+      '<dt>Problem</dt><dd>' + esc(SECTOR_LABEL[r.category] || r.category) + '</dd>' +
+      '<dt>Urgency</dt><dd>' + (r.urgency === 'high' ? '<b style="color:var(--rust)">Urgent: risk to health or safety</b>' : esc(r.urgency)) + '</dd>' +
+      (r.text_en && r.lang !== 'en' ? '<dt>In English</dt><dd>' + esc(r.text_en) + '</dd>' : '') +
+      (r.places && r.places.length ? '<dt>Place</dt><dd>' + esc(r.places.join(', ')) + '</dd>' : '') +
+      '</dl>' + (applied.length ? '<div class="applied">✓ Filled in the ' + applied.join(' and ') + ' for you. Change anything that is wrong.</div>' : '');
+  } catch (e) { card.hidden = false; card.textContent = 'Could not check right now (' + e.message + '). You can still submit.'; }
+  finally { btn.disabled = false; btn.textContent = '✨ Check with AI'; }
 });
 
 /* ---------- submit ---------- */
@@ -383,6 +480,7 @@ $('#form').addEventListener('submit', async e => {
   try {
     const r = await api('/ingest', {method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify({
       text:text || null, audio_base64:S.audio, audio_mime:S.mime, sender_id:senderId(), lat:S.lat, lon:S.lon,
+      location_confidence:S.locConf || 'A', location_text:$('#locText').value.trim() || null,
       pack:S.country, admin_code:unit || state, category:S.category})});
     showDone(r);
   } catch (err) {
@@ -404,7 +502,7 @@ $('#copyId').addEventListener('click', async () => {
   try { await navigator.clipboard.writeText($('#ticketId').textContent); toast('Tracking ID copied.'); } catch (e) { toast('Select the ID to copy it.'); }
 });
 $('#another').addEventListener('click', () => {
-  $('#desc').value = ''; S.audio = S.mime = null; S.lat = S.lon = null; $('#voiceChip').hidden = true; $('#locState').textContent = '';
+  $('#desc').value = ''; S.audio = S.mime = null; resetLocation(); $('#voiceChip').hidden = true; $('#aiCard').hidden = true;
   S.category = null; renderCats(); showArea(true); $('#doneCard').hidden = true; $('#formCard').hidden = false; $('#desc').focus();
 });
 $('#trackThis').addEventListener('click', () => { $('#trackId').value = $('#ticketId').textContent; track(); $('#trackCard').scrollIntoView({behavior:'smooth'}); });

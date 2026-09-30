@@ -62,3 +62,18 @@ class GeminiProvider:
             return Extraction.model_validate_json(response.text or "")
         except Exception as exc:  # network, quota, safety block or schema mismatch: all go to review
             raise ExtractionError(f"gemini extraction failed: {exc}") from exc
+
+    def write(self, prompt: str, *, max_tokens: int = 700) -> str:
+        """Free text for the assist features (briefs). Raises ExtractionError so callers can fall back."""
+        try:
+            response = self._client.models.generate_content(
+                model=self._model,
+                contents=[prompt],
+                config=self._types.GenerateContentConfig(temperature=0.3, max_output_tokens=max_tokens),
+            )
+        except Exception as exc:
+            raise ExtractionError(f"gemini generation failed: {exc}") from exc
+        text = (response.text or "").strip()
+        if not text:
+            raise ExtractionError("gemini returned no text")
+        return text

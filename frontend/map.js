@@ -1,0 +1,172 @@
+/* Map adapter shared by the portal and the dashboard.
+   Google Maps when the server has a browser key (GET /config), otherwise Leaflet with OpenStreetMap-based tiles.
+   Both expose the same small API:
+     setAreas(geojson, {onClick(code), tip(code) -> text})   unit boundaries
+     styleAreas(fn(code) -> {fill, fillOpacity, stroke, weight, opacity})
+     fitCodes(codes | null)                                    zoom to some units, or all
+     setPoints([{lat, lon, color, r}])                         complaint locations
+     setPins([{id, lat, lon, label, cls, title, onClick}])     ranked problems
+     setMarker({lat, lon, draggable, onMove(lat, lon)}) / clearMarker()
+     onMapClick(fn(lat, lon)), center(lat, lon, zoom), resize()
+*/
+(function(){
+  const LEAFLET_CSS = 'https://unpkg.com/leaflet@1.9.4/dist/leaflet.css';
+  const LEAFLET_JS = 'https://unpkg.com/leaflet@1.9.4/dist/leaflet.js';
+  // Standard OpenStreetMap tiles: free with attribution for light use (https://operations.osmfoundation.org/policies/tiles/).
+  // For heavy traffic, point this at your own tile server or set a Google Maps key.
+  const TILES = 'https://tile.openstreetmap.org/{z}/{x}/{y}.png';
+  const ATTRIB = '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors';
+
+  const load = (tag, attrs) => new Promise((ok, fail) => {
+    const el = document.createElement(tag); Object.assign(el, attrs);
+    el.onload = ok; el.onerror = () => fail(new Error('could not load ' + (attrs.src || attrs.href)));
+    document.head.appendChild(el);
+  });
+  const polys = g => !g ? [] : g.type === 'Polygon' ? [g.coordinates] : g.type === 'MultiPolygon' ? g.coordinates : [];
+  const pinHtml = p => '<div class="pin ' + (p.cls || '') + '" title="' + (p.title || '').replace(/"/g, '&quot;') + '">' + p.label + '</div>';
+
+  /* ---------------- Leaflet (OpenStreetMap) ---------------- */
+  async function leaflet(el){
+    if (!window.L){ await load('link', {rel:'stylesheet', href:LEAFLET_CSS}); await load('script', {src:LEAFLET_JS}); }
+    const L = window.L;
+    const map = L.map(el, {preferCanvas:true, zoomSnap:.25, worldCopyJump:false, attributionControl:true});
+    L.tileLayer(TILES, {attribution:ATTRIB, maxZoom:19}).addTo(map);
+    map.setView([20, 78], 4);
+    let wrap = false, areas = null, byCode = {}, pointsLayer = L.layerGroup().addTo(map), pinsLayer = L.layerGroup().addTo(map), marker = null, styleFn = null;
+    const ll = (lat, lon) => [lat, wrap && lon < 0 ? lon + 360 : lon];  // keep Chukotka next to the rest of Russia
+    const api = {
+      provider:'osm',
+      setAreas(geo, {onClick, tip} = {}){
+        const lons = geo.features.flatMap(f => polys(f.geometry).flatMap(p => p[0].map(c => c[0])));
+        wrap = lons.some(x => x < -150) && lons.some(x => x > 150);
+        if (areas) areas.remove();
+        byCode = {};
+        areas = L.geoJSON(geo, {
+          coordsToLatLng: c => L.latLng(...ll(c[1], c[0])),
+          style: f => styleFn ? toLeaflet(styleFn(f.properties.admin_code)) : {},
+          onEachFeature: (f, layer) => {
+            const code = f.properties.admin_code; byCode[code] = layer;
+            if (tip) layer.bindTooltip(() => tip(code), {sticky:true, direction:'top', className:'vv-tip'});
+            if (onClick) layer.on('click', () => onClick(code));
+          }
+        }).addTo(map);
+        areas.bringToBack();
+      },
+      styleAreas(fn){ styleFn = fn; if (areas) areas.setStyle(f => toLeaflet(fn(f.properties.admin_code))); },
+      fitCodes(codes, animate = true){
+        const layers = codes ? codes.map(c => byCode[c]).filter(Boolean) : Object.values(byCode);
+        if (!layers.length) return;
+        map.invalidateSize();  // the container may have just been shown or resized
+        if (!el.clientWidth || !el.clientHeight){ requestAnimationFrame(() => api.fitCodes(codes, animate)); return; }
+        const b = L.featureGroup(layers).getBounds();
+        map.fitBounds(b, {padding:[24, 24], animate, duration:.6, maxZoom:14});
+        if (codes) layers.forEach(l => l.bringToFront());
+      },
+      setPoints(points){
+        pointsLayer.clearLayers();
+        points.forEach(p => L.circleMarker(ll(p.lat, p.lon), {radius:p.r || 4, stroke:false, fillColor:p.color, fillOpacity:.75, interactive:false}).addTo(pointsLayer));
+      },
+      setPins(pins){
+        pinsLayer.clearLayers();
+        pins.forEach(p => {
+          const m = L.marker(ll(p.lat, p.lon), {icon:L.divIcon({className:'vv-pin', html:pinHtml(p), iconSize:[0, 0]}), zIndexOffset:p.cls?.includes('on') ? 1000 : 0, keyboard:false});
+          if (p.onClick) m.on('click', p.onClick);
+          m.addTo(pinsLayer);
+        });
+      },
+      setMarker({lat, lon, draggable, onMove}){
+        if (!marker){
+          marker = L.marker(ll(lat, lon), {draggable, icon:L.divIcon({className:'vv-pin', html:'<div class="dropper"></div>', iconSize:[0, 0]})}).addTo(map);
+          marker.on('dragend', () => { const p = marker.getLatLng(); onMove && onMove(p.lat, p.lng > 180 ? p.lng - 360 : p.lng); });
+        } else marker.setLatLng(ll(lat, lon));
+        map.setView(ll(lat, lon), Math.max(map.getZoom(), 15));
+      },
+      clearMarker(){ if (marker){ marker.remove(); marker = null; } },
+      onMapClick(fn){ map.on('click', e => fn(e.latlng.lat, e.latlng.lng > 180 ? e.latlng.lng - 360 : e.latlng.lng)); },
+      center(lat, lon, zoom){ map.setView(ll(lat, lon), zoom || map.getZoom()); },
+      resize(){ map.invalidateSize(); }
+    };
+    return api;
+  }
+  const toLeaflet = s => ({fillColor:s.fill, fillOpacity:s.fillOpacity, color:s.stroke, weight:s.weight, opacity:s.opacity ?? 1});
+
+  /* ---------------- Google Maps ---------------- */
+  async function google(el, key){
+    if (!window.google?.maps?.Map){
+      await new Promise((ok, fail) => {
+        window.__vvMapsReady = ok;
+        load('script', {src:'https://maps.googleapis.com/maps/api/js?key=' + encodeURIComponent(key) + '&v=weekly&libraries=marker&loading=async&callback=__vvMapsReady', async:true}).catch(fail);
+      });
+    }
+    const g = window.google.maps;
+    const map = new g.Map(el, {center:{lat:20, lng:78}, zoom:4, mapId:'DEMO_MAP_ID', gestureHandling:'greedy',
+      streetViewControl:false, mapTypeControl:false, fullscreenControl:false, clickableIcons:false});
+    const points = new g.Data({map});
+    let pins = [], marker = null, styleFn = null, tipFn = null;
+    const tip = document.createElement('div'); tip.className = 'vv-tip vv-gtip'; el.appendChild(tip);
+    map.data.addListener('mousemove', e => {
+      if (!tipFn) return;
+      tip.textContent = tipFn(e.feature.getProperty('admin_code'));
+      const r = el.getBoundingClientRect(); tip.style.left = (e.domEvent.clientX - r.left + 12) + 'px'; tip.style.top = (e.domEvent.clientY - r.top + 12) + 'px';
+      tip.style.display = 'block';
+    });
+    map.data.addListener('mouseout', () => { tip.style.display = 'none'; });
+    const api = {
+      provider:'google',
+      setAreas(geo, {onClick, tip:t} = {}){
+        map.data.forEach(f => map.data.remove(f));
+        map.data.addGeoJson(geo); tipFn = t;
+        g.event.clearListeners(map.data, 'click');
+        if (onClick) map.data.addListener('click', e => onClick(e.feature.getProperty('admin_code')));
+      },
+      styleAreas(fn){
+        styleFn = fn;
+        map.data.setStyle(f => { const s = fn(f.getProperty('admin_code'));
+          return {fillColor:s.fill, fillOpacity:s.fillOpacity, strokeColor:s.stroke, strokeWeight:s.weight, strokeOpacity:s.opacity ?? 1, zIndex:s.weight > 1.5 ? 2 : 1}; });
+      },
+      fitCodes(codes){
+        const b = new g.LatLngBounds(); let any = false;
+        map.data.forEach(f => { if (!codes || codes.includes(f.getProperty('admin_code'))){ f.getGeometry().forEachLatLng(p => { b.extend(p); any = true; }); } });
+        if (any) map.fitBounds(b, 24);
+      },
+      setPoints(list){
+        points.forEach(f => points.remove(f));
+        points.addGeoJson({type:'FeatureCollection', features:list.map(p => ({type:'Feature', geometry:{type:'Point', coordinates:[p.lon, p.lat]}, properties:{c:p.color, r:p.r || 4}}))});
+        points.setStyle(f => ({clickable:false, icon:{path:g.SymbolPath.CIRCLE, scale:f.getProperty('r'), fillColor:f.getProperty('c'), fillOpacity:.75, strokeWeight:0}}));
+      },
+      setPins(list){
+        pins.forEach(m => m.map = null);
+        pins = list.map(p => {
+          const div = document.createElement('div'); div.innerHTML = pinHtml(p);
+          const m = new g.marker.AdvancedMarkerElement({map, position:{lat:p.lat, lng:p.lon}, content:div.firstChild, zIndex:p.cls?.includes('on') ? 1000 : 1});
+          if (p.onClick) m.addListener('click', p.onClick);
+          return m;
+        });
+      },
+      setMarker({lat, lon, draggable, onMove}){
+        if (!marker){
+          const div = document.createElement('div'); div.className = 'dropper';
+          marker = new g.marker.AdvancedMarkerElement({map, position:{lat, lng:lon}, gmpDraggable:!!draggable, content:div});
+          marker.addListener('dragend', () => { const p = marker.position; onMove && onMove(typeof p.lat === 'function' ? p.lat() : p.lat, typeof p.lng === 'function' ? p.lng() : p.lng); });
+        } else marker.position = {lat, lng:lon};
+        map.setCenter({lat, lng:lon}); if (map.getZoom() < 15) map.setZoom(15);
+      },
+      clearMarker(){ if (marker){ marker.map = null; marker = null; } },
+      onMapClick(fn){ map.addListener('click', e => fn(e.latLng.lat(), e.latLng.lng())); map.data.addListener('click', e => fn(e.latLng.lat(), e.latLng.lng())); },
+      center(lat, lon, zoom){ map.setCenter({lat, lng:lon}); if (zoom) map.setZoom(zoom); },
+      resize(){ g.event.trigger(map, 'resize'); }
+    };
+    return api;
+  }
+
+  window.VVMap = {
+    async create(el, config){
+      const key = config?.maps?.provider === 'google' && config.maps.browser_key;
+      if (key){
+        try { return await google(el, key); }
+        catch (e) { console.warn('Google Maps failed to load, using OpenStreetMap instead.', e); }
+      }
+      return leaflet(el);
+    }
+  };
+})();

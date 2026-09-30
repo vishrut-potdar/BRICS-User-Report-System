@@ -21,7 +21,8 @@ pytestmark = pytest.mark.skipif(len(PACKS) < 10, reason="run scripts.build_indic
 
 @pytest.fixture(scope="module")
 def real():
-    settings = Settings(data_dir=DATA, pack_id="IN", language_provider="offline", repository="memory", phone_hash_salt="t")
+    settings = Settings(data_dir=DATA, pack_id="IN", language_provider="offline", repository="memory", phone_hash_salt="t",
+                        geocoder="none")
     container = build_container(settings)
     return container, TestClient(create_app(settings, container))
 

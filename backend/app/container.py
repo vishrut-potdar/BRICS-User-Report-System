@@ -13,6 +13,7 @@ from .channels.telegram import TelegramClient
 from .channels.whatsapp import WhatsAppClient
 from .config import Settings
 from .geo import GeoResolver
+from .geocode import Geocoder, build_geocoder
 from .ingest import IngestService
 from .language import LanguageProvider, build_provider
 from .pack import PackContext, available_packs, load_pack, read_pack_config
@@ -48,6 +49,7 @@ class Container:
     pack_ids: tuple[str, ...]
     whatsapp: WhatsAppClient | None
     telegram: TelegramClient | None
+    geocoder: Geocoder = field(default_factory=lambda: Geocoder("none"))
     _regions: dict[str, Region] = field(default_factory=dict)
     _providers: dict[str, LanguageProvider] = field(default_factory=dict)
     _configs: dict[str, dict] = field(default_factory=dict)
@@ -72,7 +74,7 @@ class Container:
                 self._regions[pack_id] = Region(
                     ctx=ctx,
                     repo=repo,
-                    resolver=GeoResolver(ctx, maps_api_key=self.settings.google_maps_api_key),
+                    resolver=GeoResolver(ctx, geocoder=self.geocoder),
                     demand=DemandService(repo, ctx),
                 )
             return self._regions[pack_id]
@@ -136,4 +138,5 @@ def build_container(settings: Settings) -> Container:
         else None
     )
     telegram = TelegramClient(settings.telegram_bot_token) if settings.telegram_bot_token else None
-    return Container(settings=settings, pack_ids=pack_ids, whatsapp=whatsapp, telegram=telegram)
+    return Container(settings=settings, pack_ids=pack_ids, whatsapp=whatsapp, telegram=telegram,
+                     geocoder=build_geocoder(settings.geocoder, settings.google_maps_api_key))

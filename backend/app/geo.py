@@ -1,4 +1,4 @@
-"""Geo-resolution cascade: device GPS → geocoded landmark (Google Maps) → district-name gazetteer → unresolved.
+"""Geo-resolution cascade: device GPS or a pin → geocoded place (Google or OpenStreetMap) → gazetteer → unresolved.
 
 Confidence tiers: A = GPS pin, B = geocoded to locality or finer, C = district only.
 Only A and B get an H3 cell; C still counts at district level.
@@ -13,18 +13,13 @@ import unicodedata
 from typing import Sequence
 
 import h3
-import httpx
 
+from .geocode import Geocoder, GeocodeHit
 from .models import Geo
 from .pack import PackContext, Polygon, Ring
 
 log = logging.getLogger(__name__)
 
-GEOCODE_URL = "https://maps.googleapis.com/maps/api/geocode/json"
-PRECISE_TYPES = frozenset(
-    {"street_address", "premise", "route", "point_of_interest", "establishment", "neighborhood",
-     "sublocality", "sublocality_level_1", "sublocality_level_2", "locality"}
-)
 MAX_CENTROID_KM = 120.0
 
 
@@ -66,10 +61,9 @@ def _km(lat1: float, lon1: float, lat2: float, lon2: float) -> float:
 
 
 class GeoResolver:
-    def __init__(self, ctx: PackContext, maps_api_key: str | None = None, http: httpx.Client | None = None):
+    def __init__(self, ctx: PackContext, geocoder: Geocoder | None = None):
         self._ctx = ctx
-        self._maps_key = maps_api_key
-        self._http = http or httpx.Client(timeout=10.0)
+        self._geocoder = geocoder
         self._aliases = self._compile((a, code) for code, info in ctx.info.items() for a in info.aliases)
         self._weak = self._compile((a, code) for code, info in ctx.info.items() for a in info.weak_aliases)
 
@@ -110,26 +104,13 @@ class GeoResolver:
                         return code
         return None
 
-    def _geocode(self, query: str) -> tuple[float, float, bool] | None:
-        params = {
-            "address": query,
-            "components": f"country:{self._ctx.country}"
-            + (f"|administrative_area:{self._ctx.region_name}" if self._ctx.level == "region" else ""),
-            "key": self._maps_key,
-        }
-        try:
-            response = self._http.get(GEOCODE_URL, params=params)
-            response.raise_for_status()
-            data = response.json()
-        except (httpx.HTTPError, ValueError) as exc:
-            log.warning("geocoding failed: %s", exc)
+    def geocode(self, query: str, hint: Sequence[str] = ()) -> GeocodeHit | None:
+        """Search a typed place inside this pack's country (and state, for a pilot region)."""
+        if not self._geocoder or not self._geocoder.enabled:
             return None
-        if data.get("status") != "OK" or not data.get("results"):
-            return None
-        top = data["results"][0]
-        location = top["geometry"]["location"]
-        precise = bool(PRECISE_TYPES & set(top.get("types", [])))
-        return float(location["lat"]), float(location["lng"]), precise
+        region = self._ctx.region_name if self._ctx.level == "region" else None
+        full = ", ".join(dict.fromkeys(part for part in (query, *hint) if part and part != region))
+        return self._geocoder.geocode(full, self._ctx.country, region)
 
     def _point_geo(self, lat: float, lon: float, *, confidence: str, method: str, location_text: str | None) -> Geo:
         code = self.district_for_point(lat, lon)
@@ -152,18 +133,27 @@ class GeoResolver:
         mentions: Sequence[str] = (),
         district_guess: str | None = None,
         transcript: str = "",
+        typed_location: str | None = None,
+        hint: Sequence[str] = (),
+        point_confidence: str = "A",
     ) -> Geo:
+        """`typed_location` is what the citizen wrote in the location box; `hint` names the area they picked, to
+        narrow the search. `point_confidence` is A for device GPS, B for a pin they placed or a searched place."""
         mentions = [m for m in mentions if m and m.strip()]
-        location_text = "; ".join(mentions) or None
+        typed = (typed_location or "").strip()
+        location_text = "; ".join(dict.fromkeys([typed, *mentions] if typed else mentions)) or None
         if lat is not None and lon is not None:
-            return self._point_geo(lat, lon, confidence="A", method="gps", location_text=location_text)
+            method = "gps" if point_confidence == "A" else "pin"
+            return self._point_geo(lat, lon, confidence=point_confidence, method=method, location_text=location_text)
 
-        gazetteer_code = self.match_gazetteer([district_guess or "", *mentions], allow_weak=True) or self.match_gazetteer([transcript])
-        if self._maps_key and mentions:
-            query = ", ".join(mentions + ([self._ctx.info[gazetteer_code].name] if gazetteer_code else []))
-            hit = self._geocode(query)
-            if hit and hit[2]:
-                geo = self._point_geo(hit[0], hit[1], confidence="B", method="geocode", location_text=location_text)
+        gazetteer_code = (self.match_gazetteer([typed, district_guess or "", *mentions], allow_weak=True)
+                          or self.match_gazetteer([transcript]))
+        queries = ([typed] if typed else []) + ([", ".join(mentions)] if mentions else [])
+        for query in queries:
+            area = [self._ctx.info[gazetteer_code].name] if gazetteer_code else []
+            hit = self.geocode(query, [*area, *hint])
+            if hit and hit.precise:
+                geo = self._point_geo(hit.lat, hit.lon, confidence="B", method="geocode", location_text=location_text)
                 if geo.admin_code and (gazetteer_code is None or geo.admin_code == gazetteer_code):
                     return geo
 

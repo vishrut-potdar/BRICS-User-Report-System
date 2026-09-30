@@ -17,7 +17,7 @@ import io
 import json
 import logging
 import threading
-from typing import Any
+from typing import Any, Literal
 
 from fastapi import BackgroundTasks, FastAPI, HTTPException, Query, Request, Response
 from fastapi.middleware.cors import CORSMiddleware
@@ -25,7 +25,7 @@ from fastapi.responses import FileResponse, PlainTextResponse
 from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel, Field
 
-from . import __version__
+from . import __version__, assist
 from .channels import telegram, whatsapp
 from .channels.base import InboundMessage
 from .channels.messages import ack_message, welcome_message
@@ -55,6 +55,20 @@ class IngestIn(BaseModel):
     pack: str | None = Field(default=None, description="Pack the citizen is filing in; its country decides routing")
     admin_code: str | None = Field(default=None, description="State or district the citizen picked, e.g. BR-AL or BR-AL-MACEIO")
     category: Sector | None = Field(default=None, description="Sector the citizen picked; overrides automatic classification")
+    location_text: str | None = Field(default=None, max_length=200, description="Place the citizen typed: village, ward, landmark")
+    location_confidence: Literal["A", "B"] = Field(default="A", description="A = device GPS; B = a pin they placed or a searched place")
+
+
+class UnderstandIn(BaseModel):
+    text: str = Field(min_length=1, max_length=4000)
+    pack: str | None = None
+
+
+class BriefIn(BaseModel):
+    pack: str | None = None
+    cluster_id: str | None = Field(default=None, description="Brief one cluster; omit for the whole area")
+    admin_code: str | None = Field(default=None, description="Area to brief on (a unit of the pack); omit for the whole pack")
+    lang: str = Field(default="en", max_length=12)
 
 
 class StatusIn(BaseModel):
@@ -133,10 +147,12 @@ def create_app(settings: Settings | None = None, container: Container | None = N
             path = FRONTEND / name
             if not path.is_file():
                 raise HTTPException(404, "page not bundled; see /docs for the API")
-            return FileResponse(path, media_type=media_type)
+            # Revalidate every time so browsers never run an old copy of the page or its scripts after an update.
+            return FileResponse(path, media_type=media_type, headers={"Cache-Control": "no-cache"})
         return serve
 
     app.add_api_route("/app.css", page("app.css", "text/css"), methods=["GET"], include_in_schema=False)
+    app.add_api_route("/map.js", page("map.js", "text/javascript"), methods=["GET"], include_in_schema=False)
 
     for route, name in PAGES.items():
         app.add_api_route(route, page(name), methods=["GET"], include_in_schema=False)
@@ -175,6 +191,85 @@ def create_app(settings: Settings | None = None, container: Container | None = N
             "summary": region.demand.summary(),
         }
 
+    @app.get("/config")
+    def client_config() -> dict[str, Any]:
+        """What the pages need to pick a map and label AI features. The browser key is meant to be public
+        (restrict it by HTTP referrer in Google Cloud); the server geocoding key is never returned."""
+        key = settings.google_maps_browser_key
+        provider = c().provider_for(c().country_of(settings.pack_id)).name
+        return {
+            "maps": {"provider": "google" if key else "osm", "browser_key": key},
+            "geocoder": c().geocoder.name,
+            "ai": {"provider": provider, "enabled": provider == "gemini"},
+        }
+
+    def region_for(country_pack: str | None, admin_code: str | None) -> Region:
+        """The most detailed pack for a picked unit: the pilot if the unit is (inside) a pilot region."""
+        region = reg(country_pack)
+        if admin_code:
+            for pack_id in c().packs_for_country(region.ctx.country):
+                if admin_code == pack_id or admin_code.startswith(pack_id + "-"):
+                    if c().config(pack_id).get("level") == "region":
+                        return c().region(pack_id)
+        return region
+
+    @app.get("/geocode")
+    def geocode(q: str = Query(min_length=2, max_length=200), pack: str | None = None, admin_code: str | None = None) -> dict[str, Any]:
+        """Find a typed place near the unit the citizen picked, for the portal's map preview."""
+        region = region_for(pack, admin_code)
+        hint = [region.ctx.info[admin_code].name] if admin_code in region.ctx.info else []
+        hit = region.resolver.geocode(q, hint)
+        if hit is None:
+            raise HTTPException(404, "place not found")
+        code = region.resolver.district_for_point(hit.lat, hit.lon)
+        return {"lat": round(hit.lat, 6), "lon": round(hit.lon, 6), "label": hit.label, "precise": hit.precise,
+                "admin_code": code, "district": region.ctx.info[code].name if code else None,
+                "geocoder": c().geocoder.name}
+
+    @app.get("/points")
+    def points(pack: str | None = None, admin_code: str | None = None, limit: int = Query(5000, ge=1, le=20000)) -> dict[str, Any]:
+        """Where complaints were made: active requests with a GPS pin or a found place, rounded to about 100 m so
+        no home can be singled out. Fields: lat, lon, sector, urgency, status, admin_code."""
+        from .clustering import is_active
+
+        rows = []
+        for r in reg(pack).repo.all():
+            if r.geo.lat is None or not is_active(r) or (admin_code and r.geo.admin_code != admin_code):
+                continue
+            rows.append([round(r.geo.lat, 3), round(r.geo.lon, 3), r.category, r.urgency, r.status, r.geo.admin_code])
+            if len(rows) >= limit:
+                break
+        return {"fields": ["lat", "lon", "sector", "urgency", "status", "admin_code"], "points": rows}
+
+    # --- generative AI assist (Gemini when configured, templates otherwise) --------------------
+
+    @app.post("/assist/understand")
+    def assist_understand(body: UnderstandIn) -> dict[str, Any]:
+        """Read a draft complaint before it is filed: language, sector, urgency, English translation, places."""
+        region = reg(body.pack)
+        try:
+            return assist.understand(c().provider_for(region.ctx.country), body.text)
+        except Exception as exc:  # the provider could not read it; the citizen can still file
+            raise HTTPException(422, f"could not read the text: {exc}") from exc
+
+    @app.post("/assist/brief")
+    def assist_brief(body: BriefIn) -> dict[str, Any]:
+        """A short briefing for officials, on one cluster or on a whole area. It never changes the ranking."""
+        region = reg(body.pack)
+        provider = c().provider_for(region.ctx.country)
+        if body.admin_code and body.admin_code not in region.ctx.info:
+            raise HTTPException(404, "unknown area for this pack")
+        area = region.ctx.info[body.admin_code].name if body.admin_code else region.ctx.region_name
+        if body.cluster_id:
+            view = region.demand.cluster(body.cluster_id, PRESETS["balanced"])
+            if view is None:
+                raise HTTPException(404, "cluster not found")
+            return assist.cluster_brief(provider, view, area, body.lang) | {"scope": "cluster"}
+        items = region.demand.rankings(PRESETS["balanced"], admin_code=body.admin_code, limit=40, sensitivity=False)
+        rows = [d for d in region.demand.districts() if not body.admin_code or d["admin_code"] == body.admin_code]
+        silent = [] if body.admin_code else region.demand.silent_districts(4)
+        return assist.area_brief(provider, area, items, rows, silent, body.lang) | {"scope": "area"}
+
     @app.get("/boundaries")
     def boundaries(pack: str | None = None) -> FileResponse:
         """GeoJSON polygons of the pack's units (properties: admin_code, name, name_local)."""
@@ -208,6 +303,8 @@ def create_app(settings: Settings | None = None, container: Container | None = N
             pack=body.pack,
             admin_code=body.admin_code,
             category=body.category,
+            location_text=body.location_text,
+            location_confidence=body.location_confidence,
         )
         ack = ack_message(request, local_language(c(), c().country_of(next(iter(stored)))))
         return public_view(request) | {"ack": ack, "packs": {p: r.geo.admin_code for p, r in stored.items()}}

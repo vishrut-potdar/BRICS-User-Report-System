@@ -30,34 +30,16 @@ main.grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:14px;p
 .crumbs button:hover{background:var(--inset);color:var(--text)}
 .crumbs button[aria-current]{color:var(--text);font-weight:600}
 .crumbs span{color:var(--faint)}
-.map{position:relative;flex:1;border-radius:16px;overflow:hidden;background:var(--sea);touch-action:none;cursor:grab}
-.map.dragging{cursor:grabbing}
-.map svg,.map canvas{position:absolute;inset:0;width:100%;height:100%}
-.map canvas{pointer-events:none;transition:opacity .25s}
-.u{fill:var(--land);stroke:var(--landLine);stroke-width:.8;stroke-linejoin:round;transition:fill .2s,opacity .3s;cursor:pointer}
-.u:hover{fill:#EEEAF9}
-.u.on{fill:#FFFFFF;stroke:var(--periDeep);stroke-width:1.8}
-.u.dim{opacity:.35}
-.u.pilot{fill:#F1EDFD}
-#labels,#pins{position:absolute;inset:0;pointer-events:none}
-.lbl{position:absolute;transform:translate(-50%,-50%);font-size:11px;color:#6A6F82;white-space:nowrap;text-shadow:0 0 3px #fff,0 0 3px #fff;transition:opacity .2s}
-.lbl.big{font-size:12.5px;color:#454A5E;font-weight:500}
-.pin{position:absolute;pointer-events:auto;transform:translate(-50%,-100%);min-width:24px;height:24px;border-radius:999px 999px 999px 4px;border:2px solid #fff;background:var(--peri);color:#fff;font-size:11.5px;font-weight:600;display:grid;place-items:center;padding:0 5px;box-shadow:0 3px 8px rgba(38,43,64,.25);transition:transform .2s var(--ease)}
-.pin.top{background:var(--coral)}
-.pin.on{transform:translate(-50%,-100%) scale(1.25);z-index:2;background:var(--selText)}
-.ctrls{position:absolute;right:12px;top:12px;display:flex;flex-direction:column;gap:8px}
-.ctrls .grp{display:flex;flex-direction:column;background:#fff;border-radius:12px;box-shadow:0 2px 8px rgba(38,43,64,.12);overflow:hidden}
-.ctrls button{border:0;background:#fff;width:36px;height:36px;font-size:18px;display:grid;place-items:center}
-.ctrls button:hover{background:var(--inset)}
-.ctrls .solo{border-radius:12px;box-shadow:0 2px 8px rgba(38,43,64,.12)}
-.legend{position:absolute;left:12px;bottom:12px;background:rgba(255,255,255,.92);border-radius:10px;padding:6px 10px;font-size:11px;color:var(--muted);display:flex;align-items:center;gap:8px}
+.map{position:relative;flex:1;border-radius:16px;overflow:hidden;background:#EEF1F4}
+#mapCanvas{position:absolute;inset:0}
+.fitbtn{position:absolute;right:12px;top:12px;z-index:500;border:0;background:#fff;height:34px;border-radius:10px;padding:0 12px;
+  font-size:12.5px;box-shadow:0 2px 8px rgba(38,43,64,.18);display:inline-flex;align-items:center;gap:6px}
+.fitbtn:hover{background:var(--inset)}
+.legend{position:absolute;left:12px;bottom:26px;z-index:500;background:rgba(255,255,255,.95);border-radius:10px;padding:7px 10px;
+  font-size:11px;color:var(--muted);display:flex;align-items:center;gap:8px;flex-wrap:wrap;max-width:70%;box-shadow:0 1px 4px rgba(38,43,64,.12)}
+.legend i{width:8px;height:8px;border-radius:999px;display:inline-block;margin-right:3px;vertical-align:0}
 .legend b{width:90px;height:8px;border-radius:999px;background:linear-gradient(90deg,rgb(150,220,190),rgb(206,232,160),rgb(255,224,150),rgb(255,180,150),rgb(238,128,140))}
-.scale{position:absolute;right:12px;bottom:12px;font-size:11px;color:var(--muted);display:flex;flex-direction:column;align-items:flex-end;gap:3px}
-.scale i{display:block;height:4px;border:1.5px solid #8C90A0;border-top:0}
-.tip{position:absolute;pointer-events:none;background:#262B40;color:#fff;border-radius:10px;padding:8px 10px;font-size:12px;max-width:240px;opacity:0;transition:opacity .15s;z-index:3}
-.tip strong{display:block;font-size:12.5px;margin-bottom:2px}
-.tip.show{opacity:1}
-.maploading{position:absolute;inset:0;display:grid;place-items:center;background:rgba(233,238,247,.7);font-size:13px;color:var(--muted);z-index:4}
+.maploading{position:absolute;inset:0;display:grid;place-items:center;background:rgba(238,241,244,.75);font-size:13px;color:var(--muted);z-index:600}
 .chips{display:flex;gap:6px;flex-wrap:wrap;padding:12px 2px 0}
 
 /* ranking */
@@ -127,6 +109,20 @@ main.grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:14px;p
 .list button:hover{background:var(--sel)}
 .list button span:last-child{color:var(--muted);white-space:nowrap}
 .alert{box-shadow:0 0 0 1px #F2C9BD;background:#FFF8F5}
+.btn.ai{background:linear-gradient(135deg,#5E51BD,#8B7FD6);color:#fff}
+.btn.ai:hover{filter:brightness(1.06)}
+.linkai{border:0;background:var(--sel);color:var(--selText);height:30px;border-radius:999px;padding:0 12px;font-size:12px;font-weight:500;white-space:nowrap}
+.linkai:hover{background:var(--lilac)}
+dialog.brief{border:0;border-radius:22px;padding:0;width:min(620px,calc(100vw - 32px));box-shadow:0 24px 60px rgba(38,43,64,.3)}
+dialog.brief::backdrop{background:rgba(38,43,64,.35)}
+.brief .bh{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;padding:20px 22px 12px}
+.brief h2{font-size:21px;line-height:1.2}
+.brief .bc{padding:0 22px 20px}
+.brief .bt{background:var(--inset);border-radius:14px;padding:14px 16px;font-size:14.5px;line-height:1.55;white-space:pre-wrap;min-height:120px}
+.brief .bt.loading{color:var(--muted)}
+.brief .bf{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-top:12px}
+.brief .bf select{height:34px;border:0;border-radius:10px;background:var(--inset);padding:0 10px}
+.brief .x{border:0;background:var(--inset);width:34px;height:34px;border-radius:999px;font-size:15px;flex:none}
 .foot{grid-column:1/-1;display:flex;flex-wrap:wrap;gap:6px 18px;color:var(--faint);font-size:12px;padding:4px 4px 0}
 
 @media (max-width:1180px){
@@ -174,22 +170,14 @@ main.grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:14px;p
       <nav class="crumbs" id="crumbs" aria-label="Area"></nav>
       <div class="seg" id="layerSeg" role="group" aria-label="Map layer">
         <span class="thumb"></span>
-        <button type="button" data-v="demand">Reported demand</button>
+        <button type="button" data-v="demand">Complaints</button>
         <button type="button" data-v="need">Unmet need</button>
       </div>
     </div>
     <div class="map" id="map">
-      <svg id="svg" role="img" aria-label="Map of the selected area"><g id="gv"><g id="gUnits"></g></g></svg>
-      <canvas id="heat" aria-hidden="true"></canvas>
-      <div id="labels" aria-hidden="true"></div>
-      <div id="pins"></div>
-      <div class="ctrls">
-        <div class="grp"><button type="button" id="zin" aria-label="Zoom in">+</button><button type="button" id="zout" aria-label="Zoom out">−</button></div>
-        <button type="button" class="solo" id="zfit" aria-label="Fit the selected area"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></svg></button>
-      </div>
-      <div class="legend"><span>Fewer</span><b></b><span id="legendHi">More requests</span></div>
-      <div class="scale"><span id="scaleT"></span><i id="scaleB"></i></div>
-      <div class="tip" id="tip" role="status"></div>
+      <div id="mapCanvas" role="application" aria-label="Map of the selected area"></div>
+      <button type="button" class="fitbtn" id="zfit"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></svg>Fit area</button>
+      <div class="legend" id="legend"></div>
       <div class="maploading" id="mapLoading">Loading map…</div>
     </div>
     <div class="chips" id="chips" role="group" aria-label="Filter by issue"></div>
@@ -197,7 +185,8 @@ main.grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:14px;p
 
   <section class="tile t-rank" aria-label="Ranked problems">
     <div class="rhead">
-      <div><h2>Priority</h2><div class="sub" id="rankSub">Fixed formula, public weights</div></div>
+      <div><h2>Priority</h2><div class="sub" id="rankSub">Fixed formula, public weights</div>
+        <button type="button" class="linkai" id="aiArea" style="margin-top:8px">✨ Brief me on this area</button></div>
       <div class="seg" id="presetSeg" role="group" aria-label="Weighting">
         <span class="thumb"></span>
         <button type="button" data-v="volume">Volume</button>
@@ -220,6 +209,7 @@ main.grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:14px;p
     <div style="display:flex;align-items:flex-end;gap:10px"><span class="big" id="sScore">0</span><span class="sub" id="sRank" style="padding-bottom:6px"></span></div>
     <div class="bars" id="sBars"></div>
     <div class="why"><div id="sWhy"></div><small>Explained from the score inputs. AI reads the messages but never sets the rank.</small></div>
+    <div><button type="button" class="btn ai" id="aiCluster">✨ AI brief on this problem</button></div>
   </section>
 
   <section class="tile t-act" aria-label="Citizen voice and actions">
@@ -257,8 +247,22 @@ main.grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:14px;p
   </div>
 </main>
 
+<dialog class="brief" id="briefDlg" aria-labelledby="briefTitle">
+  <div class="bh"><div><span class="sub" id="briefKind">AI briefing</span><h2 id="briefTitle"></h2></div>
+    <button type="button" class="x" id="briefClose" aria-label="Close">✕</button></div>
+  <div class="bc">
+    <div class="bt" id="briefText" aria-live="polite"></div>
+    <div class="bf">
+      <span class="sub" id="briefBadge"></span>
+      <span style="display:flex;gap:8px;align-items:center"><label class="sr" for="briefLang">Language</label><select id="briefLang"></select>
+        <button type="button" class="btn ghost" id="briefAgain" style="height:34px">Rewrite</button></span>
+    </div>
+  </div>
+</dialog>
+
 <div class="toasts" id="toasts" aria-live="polite"></div>
 
+<script src="map.js"></script>
 <script>
 const RM = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 const $ = s => document.querySelector(s);
@@ -323,14 +327,15 @@ const areaCode = () => (S.view === S.country ? S.state : S.unit) || null;
 async function loadPack(id, force){
   if (CACHE[id] && !force) return CACHE[id];
   const q = 'pack=' + encodeURIComponent(id);
-  const [meta, geo, ranked, all, dists, silent] = await Promise.all([
+  const [meta, geo, ranked, all, dists, silent, points] = await Promise.all([
     api('/meta?' + q), CACHE[id]?.geo || api('/boundaries?' + q), api('/rankings?' + q + '&preset=balanced&limit=5000&sensitivity=false'),
-    api('/rankings?' + q + '&preset=volume_only&limit=5000&sensitivity=false'), api('/districts?' + q), api('/districts/silent?' + q + '&k=4')]);
+    api('/rankings?' + q + '&preset=volume_only&limit=5000&sensitivity=false'), api('/districts?' + q), api('/districts/silent?' + q + '&k=4'), api('/points?' + q)]);
   const d = {id, meta, geo, dists, silent, distBy:Object.fromEntries(dists.map(x => [x.admin_code, x])), unitBy:Object.fromEntries(meta.units.map(u => [u.admin_code, u]))};
   PRESETS.balanced.w = W8(meta.presets.balanced); PRESETS.equity.w = W8(meta.presets.equity_first);
   d.P = ranked.items.map((c, i) => fromCluster(c, i, d));
   d.byId = Object.fromEntries(d.P.map(p => [p.id, p]));
   d.all = all.items;
+  d.points = points.points;  // [lat, lon, sector, urgency, status, admin_code], rounded to ~100 m
   CACHE[id] = d; return d;
 }
 function fromCluster(c, i, d){
@@ -461,7 +466,7 @@ $('#aApprove').addEventListener('click', () => setStatus('forwarded'));
 function select(id, fromList){
   S.selected = id; renderRanking(); renderDetail(true); drawPins();
   const p = D().byId[id];
-  if (fromList && p && p.lon != null){ const [x, y] = project(p.lon, p.lat); if (!inView(x, y)) animateView({z:Math.max(V.z, 1.5), cx:x, cy:y}); }
+  if (fromList && p && p.lon != null && MAP) MAP.center(p.lat, p.lon);
 }
 
 /* ---------- KPIs, silent areas, integrity ---------- */
@@ -495,202 +500,80 @@ function renderSide(){
   $('#exportLink').href = '/export/aggregates.csv?pack=' + encodeURIComponent(S.view);
 }
 
-/* ---------- map ---------- */
-const mapEl = $('#map'), gv = $('#gv'), gU = $('#gUnits'), heat = $('#heat'), hctx = heat.getContext('2d');
-const alpha = document.createElement('canvas'), actx = alpha.getContext('2d', {willReadFrequently:true});
-const NS = 'http://www.w3.org/2000/svg';
-let WW = 1000, WH = 700, VW = 0, VH = 0, FIT = 1, PROJ = null, UNITS = {}, PTS = [], dragMoved = false;
-const V = {z:1, cx:500, cy:350};
-function project(lon, lat){
-  if (PROJ.wrap && lon < 0) lon += 360;
-  return [(lon - PROJ.minLon) * PROJ.kx * PROJ.s, (PROJ.maxLat - lat) * PROJ.s];
+/* ---------- map: Google Maps or OpenStreetMap (map.js) ---------- */
+let MAP = null, CONFIG = null;
+async function ensureMap(){
+  if (MAP) return MAP;
+  CONFIG = CONFIG || await api('/config').catch(() => ({maps:{provider:'osm'}, ai:{enabled:false}}));
+  MAP = await VVMap.create($('#mapCanvas'), CONFIG);
+  new ResizeObserver(() => MAP.resize()).observe($('#map'));
+  return MAP;
 }
-const scr = (x, y) => [(x - V.cx) * V.z * FIT + VW / 2, (y - V.cy) * V.z * FIT + VH / 2];
-const inView = (x, y) => { const [sx, sy] = scr(x, y); return sx > 30 && sy > 30 && sx < VW - 30 && sy < VH - 30; };
-const polys = g => g.type === 'Polygon' ? [g.coordinates] : g.type === 'MultiPolygon' ? g.coordinates : [];
-
-function buildMap(){
-  const d = D(), feats = d.geo.features;
-  let wrap = false, minLon = 1e9, maxLon = -1e9, minLat = 1e9, maxLat = -1e9;
-  feats.forEach(f => polys(f.geometry).forEach(p => p[0].forEach(([lo]) => { if (lo < -150) wrap = true; })));
-  wrap = wrap && feats.some(f => polys(f.geometry).some(p => p[0].some(([lo]) => lo > 150)));
-  feats.forEach(f => polys(f.geometry).forEach(p => p[0].forEach(([lo, la]) => {
-    if (wrap && lo < 0) lo += 360; minLon = Math.min(minLon, lo); maxLon = Math.max(maxLon, lo); minLat = Math.min(minLat, la); maxLat = Math.max(maxLat, la);
-  })));
-  const kx = Math.cos((minLat + maxLat) / 2 * Math.PI / 180), s = 1000 / ((maxLon - minLon) * kx);
-  PROJ = {minLon, maxLat, kx, s, wrap}; WW = 1000; WH = (maxLat - minLat) * s;
-  gU.innerHTML = ''; UNITS = {};
-  const pilots = new Set(S.packs.filter(p => p.parent === S.view).map(p => p.pack_id));
-  feats.forEach(f => {
-    const code = f.properties.admin_code; let dstr = '', x0 = 1e9, y0 = 1e9, x1 = -1e9, y1 = -1e9;
-    polys(f.geometry).forEach(poly => poly.forEach(ring => {
-      dstr += ring.map(([lo, la], i) => { const [x, y] = project(lo, la); x0 = Math.min(x0, x); x1 = Math.max(x1, x); y0 = Math.min(y0, y); y1 = Math.max(y1, y);
-        return (i ? 'L' : 'M') + x.toFixed(1) + ' ' + y.toFixed(1); }).join('') + 'Z';
-    }));
-    const el = document.createElementNS(NS, 'path'); el.setAttribute('d', dstr); el.setAttribute('class', 'u' + (pilots.has(code) ? ' pilot' : ''));
-    el.setAttribute('vector-effect', 'non-scaling-stroke'); el.setAttribute('fill-rule', 'evenodd');
-    const u = d.unitBy[code], c = u ? project(u.centroid.lon, u.centroid.lat) : [(x0 + x1) / 2, (y0 + y1) / 2];
-    UNITS[code] = {el, name:f.properties.name, bbox:[x0, y0, x1, y1], c};
-    el.addEventListener('mousemove', e => {
-      const r = d.distBy[code], top = topIssue(code), pilot = pilots.has(code);
-      showTip(e, f.properties.name, (r ? r.n_requests.toLocaleString('en-IN') + ' requests' : 'No data') + (top ? ' · top issue: ' + top.toLowerCase() : '') +
-        (pilot ? ' · district detail available' : '') + '. Click to focus.');
-    });
-    el.addEventListener('mouseleave', hideTip);
-    el.addEventListener('click', () => { if (!dragMoved) pickUnit(code); });
-    gU.appendChild(el);
-  });
-  $('#labels').innerHTML = '';
-  Object.values(UNITS).forEach(u => { u.lbl = document.createElement('div'); u.lbl.className = 'lbl'; u.lbl.textContent = u.name; $('#labels').appendChild(u.lbl); });
-  $('#pins').innerHTML = ''; Object.keys(pinEls).forEach(k => delete pinEls[k]);
-  buildHeat(); resize(); fitArea(false);
+const NEED_STOPS = [[0,[150,220,190]],[.4,[206,232,160]],[.6,[255,224,150]],[.8,[255,180,150]],[1,[238,128,140]]];
+function needColor(t){
+  let k = 1; while (k < NEED_STOPS.length - 1 && t > NEED_STOPS[k][0]) k++;
+  const a = NEED_STOPS[k - 1], b = NEED_STOPS[k], f = Math.max(0, Math.min(1, (t - a[0]) / (b[0] - a[0])));
+  return 'rgb(' + a[1].map((v, i) => Math.round(v + (b[1][i] - v) * f)).join(',') + ')';
+}
+function unitNeed(code){
+  const n = D().distBy[code]?.need || {};
+  if (S.cat !== 'all') return n[S.cat] ?? 0;
+  const v = Object.values(n); return v.length ? v.reduce((x, y) => x + y, 0) / v.length : 0;
 }
 function topIssue(code){
   const t = {}; D().all.forEach(c => { if (c.admin_code === code) t[c.sector] = (t[c.sector] || 0) + c.n_requesters; });
   const best = Object.entries(t).sort((a, b) => b[1] - a[1])[0]; return best ? SECTOR[best[0]][0] : null;
 }
-function buildHeat(){
-  const d = D(), a = areaCode(), spread = D().meta.level === 'country' ? .08 : .02;
-  PTS = [];
-  d.all.forEach(c => {
-    if (!c.centroid || (a && c.admin_code !== a) || (S.cat !== 'all' && c.sector !== S.cat)) return;
-    const need = (d.distBy[c.admin_code]?.need || {})[c.sector] ?? .5, n = Math.min(8, c.n_messages), sp = c.level === 'h3' ? spread : spread * 4;
-    let seed = [...c.cluster_id].reduce((h, ch) => (h * 31 + ch.charCodeAt(0)) | 0, 7);
-    const rnd = () => ((seed = (seed * 1103515245 + 12345) | 0) >>> 0) / 4294967296;
-    for (let i = 0; i < n; i++) PTS.push([...project(c.centroid.lon + (rnd() - .5) * sp, c.centroid.lat + (rnd() - .5) * sp), need]);
+function buildMap(){
+  const d = D(), pilots = new Set(S.packs.filter(p => p.parent === S.view).map(p => p.pack_id));
+  MAP.setAreas(d.geo, {
+    onClick: pickUnit,
+    tip: code => {
+      const r = d.distBy[code], top = topIssue(code);
+      return (d.unitBy[code]?.name || code) + ' · ' + (r ? r.n_requests.toLocaleString('en-IN') + ' requests' : 'no data') +
+        (top ? ' · top issue: ' + top.toLowerCase() : '') + (pilots.has(code) ? ' · district detail available' : '');
+    }
   });
+  highlight();
 }
 function highlight(){
+  const a = areaCode(), need = S.layer === 'need', pilots = new Set(S.packs.filter(p => p.parent === S.view).map(p => p.pack_id));
+  const vals = Object.keys(D().unitBy).map(unitNeed), lo = Math.min(...vals), hi = Math.max(...vals);
+  MAP.styleAreas(code => {
+    const on = code === a, dim = !!a && !on, t = hi > lo ? (unitNeed(code) - lo) / (hi - lo) : .5;
+    return {fill: need ? needColor(t) : pilots.has(code) ? '#8B7FD6' : '#5E51BD',
+      fillOpacity: need ? (dim ? .12 : .6) : (on ? .03 : dim ? 0 : .07),
+      stroke: on ? '#3B2F7A' : '#6C5FC7', weight: on ? 3 : .9, opacity: dim ? .3 : .85};
+  });
+  renderLegend();
+}
+function buildHeat(){  // complaint points: where people actually reported from
   const a = areaCode();
-  Object.entries(UNITS).forEach(([code, u]) => { u.el.classList.toggle('on', code === a); u.el.classList.toggle('dim', !!a && code !== a); });
-  if (a && UNITS[a]) gU.appendChild(UNITS[a].el);
+  if (S.layer === 'need'){ MAP.setPoints([]); return; }
+  MAP.setPoints((D().points || []).filter(p => (!a || p[5] === a) && (S.cat === 'all' || p[2] === S.cat))
+    .map(p => ({lat:p[0], lon:p[1], color:CATDOT[p[2]] || '#9A95A8', r:p[3] === 'high' ? 5 : 3.5})));
 }
-function showTip(e, t, s){
-  const r = mapEl.getBoundingClientRect(), tip = $('#tip');
-  tip.innerHTML = '<strong>' + esc(t) + '</strong>' + esc(s);
-  let x = e.clientX - r.left + 14, y = e.clientY - r.top + 14;
-  if (x > VW - 250) x -= 264; if (y > VH - 80) y -= 90;
-  tip.style.left = x + 'px'; tip.style.top = y + 'px'; tip.classList.add('show');
-}
-function hideTip(){ $('#tip').classList.remove('show'); }
-
-/* pins */
-const pinEls = {};
-function drawPins(){
-  if (!D()) return;
-  const r = rankOf(S.preset), want = new Set(r.list.slice(0, 10).map(x => x.p.id));
-  if (D().byId[S.selected] && inArea(D().byId[S.selected])) want.add(S.selected);
-  Object.keys(pinEls).forEach(id => { if (!want.has(id)){ pinEls[id].remove(); delete pinEls[id]; } });
-  want.forEach(id => {
-    const p = D().byId[id]; if (!p || p.lon == null) return;
-    let b = pinEls[id];
-    if (!b){
-      b = pinEls[id] = document.createElement('button'); b.type = 'button'; b.className = 'pin';
-      b.addEventListener('click', e => { e.stopPropagation(); select(id); });
-      b.addEventListener('pointerdown', e => e.stopPropagation());
-      $('#pins').appendChild(b);
-    }
-    const [x, y] = scr(...project(p.lon, p.lat));
-    b.style.left = x + 'px'; b.style.top = y + 'px'; b.textContent = r.map[id];
-    b.classList.toggle('top', r.map[id] <= 3); b.classList.toggle('on', id === S.selected);
-    b.setAttribute('aria-label', 'Rank ' + r.map[id] + ': ' + p.title);
-    b.style.visibility = x < -20 || y < -20 || x > VW + 20 || y > VH + 20 ? 'hidden' : 'visible';
-  });
-}
-
-/* heat */
-const STOPS = [[0,[150,220,190]],[.4,[206,232,160]],[.6,[255,224,150]],[.8,[255,180,150]],[1,[238,128,140]]];
-const PAL = new Uint8ClampedArray(256 * 4);
-for (let i = 0; i < 256; i++){
-  const t = i / 255; let k = 1; while (k < STOPS.length - 1 && t > STOPS[k][0]) k++;
-  const a = STOPS[k - 1], b = STOPS[k], f = Math.max(0, Math.min(1, (t - a[0]) / (b[0] - a[0])));
-  for (let c = 0; c < 3; c++) PAL[i*4 + c] = a[1][c] + (b[1][c] - a[1][c]) * f;
-  PAL[i*4 + 3] = Math.min(215, i * 2.4);
-}
-let sprite = null, spriteR = 0;
-function getSprite(r){
-  if (sprite && spriteR === r) return sprite;
-  sprite = document.createElement('canvas'); sprite.width = sprite.height = r * 2; spriteR = r;
-  const c = sprite.getContext('2d'), g = c.createRadialGradient(r, r, 0, r, r, r);
-  g.addColorStop(0, 'rgba(0,0,0,1)'); g.addColorStop(1, 'rgba(0,0,0,0)'); c.fillStyle = g; c.fillRect(0, 0, r * 2, r * 2); return sprite;
-}
-function drawHeat(){
-  const w = heat.width, h = heat.height; if (!w || !h) return;
-  actx.clearRect(0, 0, w, h);
-  const R = Math.round(Math.max(10, Math.min(46, 16 * Math.sqrt(V.z)))), spr = getSprite(R), boost = Math.min(2.5, 1 + (V.z - 1) * .3);
-  PTS.forEach(q => {
-    const [x, y] = scr(q[0], q[1]); if (x < -R || y < -R || x > w + R || y > h + R) return;
-    actx.globalAlpha = Math.min(1, (S.layer === 'need' ? q[2] * .22 : .12) * boost); actx.drawImage(spr, x - R, y - R);
-  });
-  const img = actx.getImageData(0, 0, w, h), d = img.data;
-  for (let i = 3; i < d.length; i += 4){ const a = d[i]; if (a < 6){ d[i] = 0; continue; } const j = a * 4; d[i-3] = PAL[j]; d[i-2] = PAL[j+1]; d[i-1] = PAL[j+2]; d[i] = PAL[j+3]; }
-  hctx.putImageData(img, 0, 0);
-}
-
-function draw(){
-  if (!PROJ) return;
-  gv.setAttribute('transform', 'translate(' + (VW/2 - V.cx*V.z*FIT) + ',' + (VH/2 - V.cy*V.z*FIT) + ') scale(' + (V.z*FIT) + ')');
-  const a = areaCode();
-  Object.entries(UNITS).forEach(([code, u]) => {
-    const [x, y] = scr(...u.c), bw = (u.bbox[2] - u.bbox[0]) * V.z * FIT, bh = (u.bbox[3] - u.bbox[1]) * V.z * FIT;
-    const vis = (bw > 70 && bh > 22 || code === a) && x > 30 && x < VW - 30 && y > 12 && y < VH - 12 && (!a || code === a || bw > 110);
-    u.lbl.style.left = x + 'px'; u.lbl.style.top = y + 'px'; u.lbl.style.opacity = vis ? 1 : 0; u.lbl.classList.toggle('big', code === a);
-  });
-  drawPins(); drawHeat();
-  const pxKm = PROJ.s * V.z * FIT / 111; let km = 1;
-  [1, 2, 5, 10, 20, 50, 100, 200, 500, 1000, 2000].forEach(n => { if (n * pxKm <= 90) km = n; });
-  $('#scaleT').textContent = km + ' km'; $('#scaleB').style.width = Math.round(km * pxKm) + 'px';
-}
-function resize(){
-  const r = mapEl.getBoundingClientRect(); VW = r.width; VH = r.height;
-  FIT = Math.min(VW / WW, VH / WH) * .94;
-  heat.width = alpha.width = Math.round(VW); heat.height = alpha.height = Math.round(VH);
-  draw();
-}
-new ResizeObserver(() => resize()).observe(mapEl);
-
-let anim = null;
-function animateView(t, dur = 650){
-  if (anim) cancelAnimationFrame(anim);
-  if (RM){ Object.assign(V, t); draw(); return; }
-  const f = {...V}, t0 = performance.now();
-  const step = now => {
-    const k = Math.min(1, (now - t0) / dur), e = k < .5 ? 4*k*k*k : 1 - Math.pow(-2*k + 2, 3) / 2;
-    V.z = Math.exp(Math.log(f.z) + (Math.log(t.z) - Math.log(f.z)) * e); V.cx = f.cx + (t.cx - f.cx) * e; V.cy = f.cy + (t.cy - f.cy) * e;
-    draw(); anim = k < 1 ? requestAnimationFrame(step) : null;
-  };
-  anim = requestAnimationFrame(step);
-}
-function fitArea(animate = true){
-  const a = areaCode(), u = a && UNITS[a];
-  let target = {z:1, cx:WW / 2, cy:WH / 2};
-  if (u){
-    const [x0, y0, x1, y1] = u.bbox, bw = Math.max(1, x1 - x0), bh = Math.max(1, y1 - y0);
-    target = {z:Math.max(1, Math.min(60, .8 * Math.min(VW / (bw * FIT), VH / (bh * FIT)))), cx:(x0 + x1) / 2, cy:(y0 + y1) / 2};
+function renderLegend(){
+  const lg = $('#legend');
+  if (S.layer === 'need'){
+    lg.innerHTML = '<span>Lower</span><b></b><span>Higher unmet need' + (S.cat !== 'all' ? ' (' + SECTOR[S.cat][0].toLowerCase() + ')' : '') + '</span>';
+  } else {
+    const cats = S.cat === 'all' ? Object.keys(SECTOR) : [S.cat];
+    lg.innerHTML = '<span>Each dot is a complaint (±100 m):</span>' + cats.map(k => '<span><i style="background:' + CATDOT[k] + '"></i>' + SECTOR[k][0] + '</span>').join('');
   }
-  animate ? animateView(target) : (Object.assign(V, target), draw());
 }
-const clampView = () => { V.cx = Math.max(0, Math.min(WW, V.cx)); V.cy = Math.max(0, Math.min(WH, V.cy)); };
-
-let drag = null;
-mapEl.addEventListener('pointerdown', e => { if (e.target.closest('.ctrls')) return; drag = {x:e.clientX, y:e.clientY, cx:V.cx, cy:V.cy}; dragMoved = false; });
-window.addEventListener('pointermove', e => {
-  if (!drag) return;
-  const dx = e.clientX - drag.x, dy = e.clientY - drag.y;
-  if (!dragMoved && Math.hypot(dx, dy) < 5) return;
-  if (!dragMoved){ dragMoved = true; mapEl.classList.add('dragging'); hideTip(); }
-  V.cx = drag.cx - dx / (V.z * FIT); V.cy = drag.cy - dy / (V.z * FIT); clampView(); draw();
-});
-window.addEventListener('pointerup', () => { if (drag){ drag = null; mapEl.classList.remove('dragging'); setTimeout(() => dragMoved = false, 0); } });
-mapEl.addEventListener('wheel', e => {
-  e.preventDefault();
-  const r = mapEl.getBoundingClientRect(), mx = e.clientX - r.left, my = e.clientY - r.top;
-  const wx = (mx - VW/2) / (V.z*FIT) + V.cx, wy = (my - VH/2) / (V.z*FIT) + V.cy;
-  const nz = Math.max(1, Math.min(80, V.z * Math.exp(-e.deltaY * .0016)));
-  V.z = nz; V.cx = wx - (mx - VW/2) / (nz*FIT); V.cy = wy - (my - VH/2) / (nz*FIT); clampView(); draw();
-}, {passive:false});
-$('#zin').addEventListener('click', () => animateView({z:Math.min(80, V.z * 1.7), cx:V.cx, cy:V.cy}, 400));
-$('#zout').addEventListener('click', () => { const nz = Math.max(1, V.z / 1.7); animateView({z:nz, cx:nz === 1 ? WW/2 : V.cx, cy:nz === 1 ? WH/2 : V.cy}, 400); });
+function drawPins(){
+  if (!D() || !MAP) return;
+  const r = rankOf(S.preset), list = r.list.slice(0, 10).map(x => x.p);
+  const sel = D().byId[S.selected]; if (sel && inArea(sel) && !list.includes(sel)) list.push(sel);
+  MAP.setPins(list.filter(p => p.lon != null).map(p => ({
+    id:p.id, lat:p.lat, lon:p.lon, label:r.map[p.id],
+    cls:(r.map[p.id] <= 3 ? 'top ' : '') + (p.id === S.selected ? 'on' : ''),
+    title:'Rank ' + r.map[p.id] + ': ' + p.title, onClick:() => select(p.id)
+  })));
+}
+function draw(){ drawPins(); }
+function fitArea(animate = true){ if (MAP){ const a = areaCode(); MAP.fitCodes(a ? [a] : null, animate); } }
 $('#zfit').addEventListener('click', () => fitArea());
 
 /* chips */
@@ -785,7 +668,7 @@ async function lockCountry(code){
   $('#portalLink').href = $('#portalLink2').href = '/#country=' + code;
   $('#picker').hidden = true; $('#app').hidden = false; $('#hbar').hidden = false; $('#portalLink2').hidden = true;
   $('#mapLoading').hidden = false;
-  try { await loadPack(code); } catch (e) { toast('Could not load ' + c.country_name + ': ' + e.message); return; }
+  try { await ensureMap(); await loadPack(code); } catch (e) { toast('Could not load ' + c.country_name + ': ' + e.message); return; }
   const saved = store.get('vv-admin-area-' + code, {}), hash = new URLSearchParams(location.hash.slice(1));
   const state = hash.get('state') || saved.state, unit = hash.get('unit') || saved.unit;
   const valid = state && CACHE[code].unitBy[state];
@@ -798,10 +681,39 @@ async function lockCountry(code){
 }
 $('#changeCountry').addEventListener('click', () => { S.view = null; showPicker(); });
 
+/* ---------- generative AI briefings (Gemini when configured, templates otherwise) ---------- */
+let BRIEF = null;
+function openBrief(clusterId){
+  const p = clusterId && D().byId[clusterId];
+  BRIEF = {cluster: clusterId || null, area: areaCode()};
+  $('#briefKind').textContent = clusterId ? 'Problem briefing' : 'Area briefing';
+  $('#briefTitle').textContent = p ? p.title : areaName();
+  const langs = ['en', ...(D().meta.languages || []).filter(l => l !== 'en' && l !== 'hi-Latn')];
+  const keep = $('#briefLang').value;
+  $('#briefLang').innerHTML = langs.map(l => '<option value="' + l + '">' + esc(LANGNAME[l] || l) + '</option>').join('');
+  if (langs.includes(keep)) $('#briefLang').value = keep;
+  $('#briefDlg').showModal(); runBrief();
+}
+async function runBrief(){
+  const box = $('#briefText'), badge = $('#briefBadge');
+  box.textContent = 'Writing the briefing…'; box.classList.add('loading'); badge.textContent = '';
+  try {
+    const r = await api('/assist/brief', {method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify({
+      pack:S.view, cluster_id:BRIEF.cluster, admin_code:BRIEF.cluster ? null : BRIEF.area, lang:$('#briefLang').value})});
+    box.textContent = r.text; box.classList.remove('loading');
+    badge.textContent = r.ai ? '✨ Written by Gemini from the complaint data. It does not change the ranking.'
+      : 'Template summary. Set GEMINI_API_KEY for AI-written briefings in any language.';
+  } catch (e) { box.textContent = 'Could not write the briefing: ' + e.message; box.classList.remove('loading'); }
+}
+$('#aiArea').addEventListener('click', () => openBrief(null));
+$('#aiCluster').addEventListener('click', () => { if (S.selected) openBrief(S.selected); });
+$('#briefAgain').addEventListener('click', runBrief);
+$('#briefLang').addEventListener('change', runBrief);
+$('#briefClose').addEventListener('click', () => $('#briefDlg').close());
+
 /* ---------- segmented controls ---------- */
 $('#presetSeg').addEventListener('click', e => { const b = e.target.closest('button'); if (!b) return; S.preset = b.dataset.v; segSet($('#presetSeg'), S.preset); renderRanking(); renderDetail(); drawPins(); });
-$('#layerSeg').addEventListener('click', e => { const b = e.target.closest('button'); if (!b) return; S.layer = b.dataset.v; segSet($('#layerSeg'), S.layer);
-  $('#legendHi').textContent = S.layer === 'need' ? 'Higher unmet need' : 'More requests'; drawHeat(); });
+$('#layerSeg').addEventListener('click', e => { const b = e.target.closest('button'); if (!b) return; S.layer = b.dataset.v; segSet($('#layerSeg'), S.layer); highlight(); buildHeat(); });
 window.addEventListener('resize', () => { segSet($('#presetSeg'), S.preset); segSet($('#layerSeg'), S.layer); });
 if (document.fonts) document.fonts.ready.then(() => { segSet($('#presetSeg'), S.preset); segSet($('#layerSeg'), S.layer); });
 

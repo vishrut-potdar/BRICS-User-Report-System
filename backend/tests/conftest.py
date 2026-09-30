@@ -67,7 +67,7 @@ def data_dir(tmp_path: Path) -> Path:
 
 @pytest.fixture
 def settings(data_dir: Path) -> Settings:
-    return Settings(data_dir=data_dir, pack_id="TS", language_provider="offline", repository="memory",
+    return Settings(data_dir=data_dir, pack_id="TS", language_provider="offline", repository="memory", geocoder="none",
                     phone_hash_salt="test-salt", export_min_requesters=5)
 
 

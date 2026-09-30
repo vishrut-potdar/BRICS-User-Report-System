@@ -71,7 +71,11 @@ class IngestService:
         country: str | None = None,
         admin_code: str | None = None,
         category: str | None = None,
+        location_text: str | None = None,
+        location_confidence: str = "A",
     ) -> tuple[CivicRequest, dict[str, CivicRequest]]:
+        """`location_text` is a place the citizen typed; `location_confidence` is A for device GPS and B for a pin
+        they placed on the map or a searched place."""
         c = self._c
         country = country or c.country_of(pack or c.settings.pack_id)
         pack_ids = c.packs_for_country(country) or [c.settings.pack_id]
@@ -90,7 +94,7 @@ class IngestService:
         stored: dict[str, CivicRequest] = {}
         for pack_id in pack_ids:
             region = c.region(pack_id)
-            geo = self._geo(region, extraction, text, lat, lon, admin_code)
+            geo = self._geo(region, extraction, text, lat, lon, admin_code, location_text, location_confidence)
             is_country = region.ctx.level == "country" or len(pack_ids) == 1
             if not geo.admin_code and not is_country:
                 continue  # outside this pilot region
@@ -126,14 +130,16 @@ class IngestService:
 
     @staticmethod
     def _geo(region: Region, extraction: Extraction | None, text: str | None, lat: float | None, lon: float | None,
-             admin_code: str | None) -> Geo:
+             admin_code: str | None, location_text: str | None = None, location_confidence: str = "A") -> Geo:
         selected = _selected_code(region, admin_code)
+        common = {"lat": lat, "lon": lon, "typed_location": location_text, "point_confidence": location_confidence,
+                  "hint": [region.ctx.info[selected].name] if selected else []}
         if extraction is None:
-            geo = region.resolver.resolve(lat=lat, lon=lon, transcript=text or "")
+            geo = region.resolver.resolve(transcript=text or "", **common)
         else:
             geo = region.resolver.resolve(
-                lat=lat, lon=lon, mentions=extraction.location_mentions, district_guess=extraction.district_guess,
-                transcript=extraction.transcript or text or "",
+                mentions=extraction.location_mentions, district_guess=extraction.district_guess,
+                transcript=extraction.transcript or text or "", **common,
             )
         if selected and geo.admin_code != selected:
             # The citizen's own choice beats text matching; a GPS pin elsewhere keeps its cell but not its district.

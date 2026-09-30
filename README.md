@@ -109,7 +109,32 @@ http://127.0.0.1:8000/docs for the API. Run the tests with `..\.venv\Scripts\pyt
 Settings come from environment variables or a repo-root `.env`: `GEMINI_API_KEY` and `PHONE_HASH_SALT` at minimum;
 `PACK_ID` (default pack, `IN`), `PACKS` (comma list to serve a subset), `REPOSITORY` (`local` | `memory` | `firestore`),
 `LOCAL_STORE_DIR` (default `data/store`, one `<PACK>/requests.jsonl` per pack). Without `GEMINI_API_KEY`, an offline
-keyword stub is used: text only, no translation, no voice. Don't demo with it.
+keyword stub is used: text only, no translation, no voice, and template briefings instead of AI ones. Don't demo with it.
+
+Maps and place search:
+
+| Setting | Effect |
+|---|---|
+| `GOOGLE_MAPS_BROWSER_KEY` | Google Maps in both pages (Maps JavaScript API). Restrict it by HTTP referrer. Falls back to `GOOGLE_MAPS_API_KEY` |
+| `GOOGLE_MAPS_API_KEY` | Server-side Google geocoding of typed places (Geocoding API). Never sent to the browser |
+| `GEOCODER` | `auto` (default: Google if keyed, else OpenStreetMap Nominatim), `google`, `nominatim` or `none` |
+
+With no Google key, maps use OpenStreetMap data (CARTO tiles, via Leaflet) and place search uses Nominatim, one request
+per second as its usage policy asks. Both are free for a prototype; use Google or your own tile and Nominatim server at
+scale.
+
+## Generative AI features (Gemini)
+
+| Where | Feature |
+|---|---|
+| Portal | **Check with AI**: reads the draft in any language, shows the detected language, problem, urgency, English translation and place, and fills in the category and location |
+| Portal | Voice notes transcribed and translated (Gemini is multimodal) |
+| Dashboard | **AI brief on this problem**: what residents report, how many and since when, urgency, a concrete next step and department, in English or the region's languages |
+| Dashboard | **Brief me on this area**: top priorities and why they rank high, silent areas needing outreach, suspected campaigns |
+| Everywhere | Every complaint is classified, translated and redacted into an English summary on intake |
+
+The model sees only redacted English summaries and score inputs, and is told not to invent facts or rank anything. The
+priority score stays a fixed public formula. Without a key, each feature falls back to a labelled template.
 
 `data/reference/` is committed. To rebuild it from the open sources (about 300 MB download, cached in `data/cache/`):
 `python -m scripts.build_reference --pack all`.
@@ -123,7 +148,12 @@ Every read endpoint takes `?pack=<PACK_ID>` (default `PACK_ID`).
 | GET | `/`, `/admin` | Citizen portal; government dashboard |
 | GET | `/health`, `/packs`, `/meta` | Status; the packs served; one pack's units, presets, provider, synthetic flags, counts |
 | GET | `/boundaries` | The pack's unit polygons (GeoJSON) |
-| POST | `/ingest` | Web intake: `{text?, audio_base64?, audio_mime?, sender_id?, lat?, lon?, pack?, admin_code?, category?}` |
+| GET | `/config` | Which map (Google or OpenStreetMap) and AI provider are active; the browser map key |
+| GET | `/geocode` | Find a typed place inside the picked area: `q`, `pack`, `admin_code` |
+| GET | `/points` | Complaint locations for the map, rounded to about 100 m |
+| POST | `/ingest` | Web intake: `{text?, audio_base64?, audio_mime?, sender_id?, lat?, lon?, location_text?, location_confidence?, pack?, admin_code?, category?}` |
+| POST | `/assist/understand` | AI read of a draft complaint: language, sector, urgency, translation, places |
+| POST | `/assist/brief` | AI briefing for officials on a cluster (`cluster_id`) or an area (`admin_code`), in `lang` |
 | GET | `/track/{id}` | Citizen lookup by tracking ID across packs |
 | GET/POST | `/webhooks/whatsapp` | Meta verification and inbound messages (text, voice, location), routed by calling code |
 | POST | `/webhooks/telegram` | Telegram bot updates (text, voice), default pack's country |
@@ -154,7 +184,10 @@ instead, which serves the shipped synthetic sets directly (the container disk is
 - Raw audio is never stored; it is passed to the language provider and dropped.
 - Phone numbers, emails and Aadhaar-shaped numbers are regex-redacted on top of Gemini's redacted summary.
 - The API never returns requester hashes or original text; exports are aggregates with k ≥ 5 suppression.
-- The LLM never computes or overrides a score; rankings are recommendations for human review.
+- The LLM never computes or overrides a score; rankings are recommendations for human review. AI briefings see only
+  redacted summaries and score inputs.
+- Complaint locations shown on maps are rounded to about 100 m. Typed places are sent to the geocoder (Google or
+  OpenStreetMap Nominatim) without any other complaint data.
 - Free-tier Gemini inputs may be used to improve Google's models: use only synthetic data on it; production would run
   on Vertex AI or a paid tier.
 

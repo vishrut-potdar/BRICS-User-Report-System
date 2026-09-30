@@ -42,7 +42,9 @@ class Settings:
     local_store_dir: Path = REPO_ROOT / "data" / "store"  # one <dir>/<pack>/requests.jsonl per pack
     firestore_collection: str = "requests"  # one collection per pack: <name>_<pack>
     phone_hash_salt: str = DEV_SALT
-    google_maps_api_key: str | None = None
+    google_maps_api_key: str | None = None  # server side: geocoding
+    google_maps_browser_key: str | None = None  # browser side: the Maps JavaScript API (restrict it by HTTP referrer)
+    geocoder: str = "auto"  # auto (Google if keyed, else OpenStreetMap Nominatim) | google | nominatim | none
     whatsapp_verify_token: str | None = None
     whatsapp_access_token: str | None = None
     whatsapp_phone_number_id: str | None = None
@@ -70,6 +72,8 @@ class Settings:
             firestore_collection=env("FIRESTORE_COLLECTION", "requests"),
             phone_hash_salt=env("PHONE_HASH_SALT", DEV_SALT),
             google_maps_api_key=env("GOOGLE_MAPS_API_KEY"),
+            google_maps_browser_key=env("GOOGLE_MAPS_BROWSER_KEY", env("GOOGLE_MAPS_API_KEY")),
+            geocoder=env("GEOCODER", "auto"),
             whatsapp_verify_token=env("WHATSAPP_VERIFY_TOKEN"),
             whatsapp_access_token=env("WHATSAPP_ACCESS_TOKEN"),
             whatsapp_phone_number_id=env("WHATSAPP_PHONE_NUMBER_ID"),
